@@ -41,6 +41,8 @@ Where technology and nature intertwine, and the body becomes a bridge between bo
 
 We played a game of surveillance, half of us became subjects, half became detectives. For thirty minutes, I was followed without knowing by whom, and for another thirty, I became the one who watched. The constant awareness of being seen changed the way I moved, the way I existed.
 
+<h3>Subject</h3>
+
 <div style="display: flex; align-items: center; gap: 2rem; margin: 2rem 0;">
   
   <!-- Imagen -->
@@ -57,4 +59,19 @@ We played a game of surveillance, half of us became subjects, half became detect
     </p>
   </div>
 
+<h3>Detective</h3>
+
+<p>
+As the detective, I tried to be discreet, to observe without being noticed.
+At 13:02, the subject was working intensely on the computer with Armin, probably something related to the webpage.
+At 13:11, the subject closed the laptop, packed a few things, and by 13:12 was gone. I lost the subject almost immediately, wandering through the building trying to find them again.
+
+When the subject suggested to continue the game, I followed once more.
+At 14:01, the subject joined a group on the terrace, Ayal, Max, Armin, talking, laughing, sharing songs.
+The subject recommended “Cosa sarà” for sad moments, “Cumbia japonesa” for cooking, “Ella baila sola” for parties, and chose bossa nova as their music for stress, though confessed they would rather play techno.
+
+Each song revealed a different version of the subject, a small window into how they move through moods and moments.
+Trying to document them felt strange, I didn’t want to intrude, yet every step I took made my presence more visible.
+In the end, being the observer felt just as exposed as being observed.
+<p>
 </div>
