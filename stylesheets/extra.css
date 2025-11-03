@@ -188,3 +188,37 @@
     transition: transform 0.2s ease-out;
     display: inline-block;
 }
+
+/* ===== EFECTO DE MIRADA QUE SIGUE EL CURSOR ===== */
+
+/* Efecto sutil de movimiento con hover */
+.md-content h1,
+.md-content h2, 
+.md-content h3,
+.md-content p {
+    transition: transform 0.3s ease;
+}
+
+.md-content h1:hover {
+    transform: translateX(3px) translateY(-1px);
+}
+
+.md-content h2:hover {
+    transform: translateX(2px) translateY(-0.5px);
+}
+
+.md-content h3:hover {
+    transform: translateX(1px);
+}
+
+.md-content p:hover {
+    transform: translateX(1px);
+}
+
+/* Efecto más sutil para no distraer */
+.md-content h1:hover,
+.md-content h2:hover, 
+.md-content h3:hover,
+.md-content p:hover {
+    cursor: default;
+}
