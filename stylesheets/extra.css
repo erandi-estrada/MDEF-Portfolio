@@ -125,6 +125,7 @@
     text-decoration: none;
     color: inherit;
     display: block;
+    padding: 1.5rem; /* ← ESPACIO INTERNO AÑADIDO AQUÍ */
 }
 
 /* EFECTO AL PASAR EL MOUSE */
