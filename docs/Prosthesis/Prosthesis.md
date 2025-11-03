@@ -86,31 +86,3 @@ Trying to document them felt strange, I didn't want to intrude, yet every step I
 In the end, being the observer felt just as exposed as being observed.
 </p>
 
----
-
-<script>
-// Efecto sutil de mirada que sigue el cursor
-document.addEventListener('DOMContentLoaded', function() {
-    const textElements = document.querySelectorAll('h1, h2, h3, p');
-    
-    textElements.forEach(el => {
-        el.style.transition = 'transform 0.2s ease-out';
-    });
-    
-    document.addEventListener('mousemove', function(e) {
-        const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-        const mouseY = (e.clientY / window.innerHeight - 0.5) * 1;
-        
-        textElements.forEach(el => {
-            const intensity = el.tagName === 'H1' ? 3 : 
-                            el.tagName === 'H2' ? 2 : 
-                            el.tagName === 'H3' ? 1.5 : 1;
-            
-            const moveX = mouseX * intensity;
-            const moveY = mouseY * (intensity * 0.5);
-            
-            el.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-    });
-});
-</script>
