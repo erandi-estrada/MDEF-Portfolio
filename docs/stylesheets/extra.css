@@ -182,3 +182,9 @@
         grid-template-columns: 1fr; /* Pasa a una sola columna */
     }
 }
+
+/* Efecto de mirada que sigue el cursor */
+.gaze-text {
+    transition: transform 0.2s ease-out;
+    display: inline-block;
+}
