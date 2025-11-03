@@ -23,6 +23,40 @@
     border-radius: 4px; /* Esquinas ligeramente redondeadas */
 }
 
+/* ELIMINAR LA TABLE OF CONTENTS */
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+/* MOVER EL MENÚ DE NAVEGACIÓN ARRIBA */
+.md-tabs {
+    justify-content: center !important;
+    margin-right: 0 !important;
+    margin-top: 1rem !important;
+}
+
+/* ESTILOS PARA LOS ELEMENTOS DEL MENÚ */
+.md-tabs__list {
+    display: flex !important;
+    gap: 2rem !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.md-tabs__link {
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+}
+
+/* OPACIONAL: Si quieres que el menú se vea más compacto y arriba */
+.md-header {
+    padding-bottom: 0 !important;
+}
+
+.md-tabs {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
 
 /* CONTENIDO DE TARJETAS GENERALES */
 .cardContent {
