@@ -331,34 +331,6 @@ Each song revealed a different version of the subject, a small window into how t
 Trying to document them felt strange, I didn't want to intrude, yet every step I took made my presence more visible.
 In the end, being the observer felt just as exposed as being observed.
 </p>
-
-<hr />
-<script>
-// Efecto sutil de mirada que sigue el cursor
-document.addEventListener('DOMContentLoaded', function() {
-    const textElements = document.querySelectorAll('h1, h2, h3, p');
-
-    textElements.forEach(el => {
-        el.style.transition = 'transform 0.2s ease-out';
-    });
-
-    document.addEventListener('mousemove', function(e) {
-        const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-        const mouseY = (e.clientY / window.innerHeight - 0.5) * 1;
-
-        textElements.forEach(el => {
-            const intensity = el.tagName === 'H1' ? 3 : 
-                            el.tagName === 'H2' ? 2 : 
-                            el.tagName === 'H3' ? 1.5 : 1;
-
-            const moveX = mouseX * intensity;
-            const moveY = mouseY * (intensity * 0.5);
-
-            el.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-    });
-});
-</script>
                 
                   
                     
@@ -367,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2025 23:03:50 UTC">November 3, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2025 23:05:23 UTC">November 3, 2025</span>
     
   </small>
 </div>
