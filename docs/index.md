@@ -1,7 +1,7 @@
 <div class="custom-header-menu">
-    <a href="../index.md">MDEF</a>
-    <a href="Portfolio.md">Projects</a>
-    <a href="../about/me.md">About me</a>
+    <a href="index.md">MDEF</a>
+    <a href="projects/Portfolio.md">Projects</a>
+    <a href="about/me.md">About me</a>
 </div>
 
 # MDEF Projects 
