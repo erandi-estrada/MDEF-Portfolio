@@ -30,6 +30,9 @@
     color: #000000 !important;
 }
 
+/* OCULTAR NAVEGACIÓN LATERAL PRINCIPAL */
+.md-nav--primary { display: none !important; }
+
 /* PESTAÑAS DE NAVEGACIÓN - FORZAR VISIBILIDAD */
 .md-tabs {
     display: flex !important;
