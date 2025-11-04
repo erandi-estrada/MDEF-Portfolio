@@ -37,7 +37,6 @@ theme:
   favicon: images/favicon.svg
   features:
     - navigation.tabs  # Esto habilita las pestañas horizontales
-    - navigation.path  # Muestra la ruta de navegación
     - navigation.top   # Botón para ir arriba
 
 plugins:
