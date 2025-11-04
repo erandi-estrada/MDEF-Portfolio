@@ -1,157 +1,90 @@
-:root>* {
-    --md-footer-bg-color: white;
-    --md-footer-fg-color: rgb(32, 32, 32);
-    --md-footer-bg-color--dark: white;
-    --md-footer-fg-color--lighter:  rgb(32, 32, 32);
-    --md-footer-fg-color--light:  rgb(32, 32, 32);
-    --mdc-typography-headline6-font-family: 'Be Vietnam', sans-serif;
-    --mdc-typography-font-family: 'Be Vietnam', sans-serif;
-    --md-typeset-a-color: rgb(32, 32, 32);
-    
-    /* NUEVO: COLORES PARA EL HEADER */
-    --md-primary-fg-color: white;
-    --md-primary-bg-color: rgb(32, 32, 32); /* Texto negro */
-    --md-default-fg-color: rgb(32, 32, 32); /* Texto negro general */
-}
-
-.hide-scroll-bar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.hide-scroll-bar::-webkit-scrollbar {
-    display: none;
-}
-
-.md-typeset .md-button--primary {
-    border-width: 1px;
-    border-color: rgb(219, 219, 219);
-    border-radius: 4px;
-}
-
-/* ELIMINAR LA TABLE OF CONTENTS */
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-/* OCULTAR NAVEGACIÓN LATERAL PRINCIPAL */
-.md-nav--primary {
-    display: none !important;
-}
-
-/* ENCABEZADO GENERAL - TEXTO NEGRO */
+/* RESET FUERTE PARA HEADER */
 .md-header {
-    background-color: white !important;
-    color: rgb(32, 32, 32) !important; /* Texto negro */
-    box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
-    padding-bottom: 0 !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
-/* TEXTO DEL HEADER EN NEGRO */
 .md-header__title {
-    color: rgb(32, 32, 32) !important; /* Texto negro */
+    color: #000000 !important;
     font-size: 1.5rem !important;
-    font-weight: 700;
+    font-weight: 700 !important;
     margin: 0 !important;
-    text-align: left;
-    width: auto !important;
-    padding-left: 1rem;
+    padding-left: 1rem !important;
 }
 
-.md-header__button {
-    color: rgb(32, 32, 32) !important; /* Íconos en negro */
+/* FORZAR TEXTO NEGRO EN TODO EL HEADER */
+.md-header * {
+    color: #000000 !important;
 }
 
-/* REPOSITORIO GITHUB - TEXTO NEGRO */
+/* REPOSITORIO GITHUB */
 .md-source {
-    color: rgb(32, 32, 32) !important;
+    color: #000000 !important;
 }
 
 .md-source__repository {
-    color: rgb(32, 32, 32) !important;
+    color: #000000 !important;
 }
 
-/* MENÚ HORIZONTAL - VISIBLE Y EN NEGRO */
+.md-source__icon {
+    color: #000000 !important;
+}
+
+/* PESTAÑAS DE NAVEGACIÓN - FORZAR VISIBILIDAD */
 .md-tabs {
-    display: block !important;
-    width: auto !important;
-    margin-left: auto !important;
-    margin-right: 1rem !important;
-    border-bottom: none !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     background-color: transparent !important;
+    margin-left: auto !important;
 }
 
 .md-tabs__list {
     display: flex !important;
     gap: 1.5rem !important;
-    justify-content: flex-end !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .md-tabs__item {
     display: block !important;
+    list-style: none !important;
 }
 
 .md-tabs__link {
     display: block !important;
+    color: #000000 !important;
     font-weight: 500 !important;
-    font-size: 1rem !important;
     padding: 0.5rem 1rem !important;
-    color: rgb(32, 32, 32) !important; /* Texto negro */
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    background-color: transparent !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
 }
 
 .md-tabs__link:hover {
-    color: var(--md-accent-fg-color) !important;
+    background-color: rgba(0,0,0,0.1) !important;
+    color: #000000 !important;
+}
+
+/* BARRA DE BÚSQUEDA */
+.md-search__input {
+    color: #000000 !important;
     background-color: rgba(0,0,0,0.05) !important;
 }
 
-/* Asegurar que las pestañas sean visibles */
-[data-md-component="tabs"] {
-    display: flex !important;
-    background-color: transparent !important;
-}
-
-/* BARRA DE BÚSQUEDA - TEXTO NEGRO */
-.md-search__input {
-    color: rgb(32, 32, 32) !important;
-}
-
 .md-search__input::placeholder {
-    color: rgba(32, 32, 32, 0.7) !important;
+    color: rgba(0,0,0,0.5) !important;
 }
 
-/* CONTENIDO DE TARJETAS GENERALES */
-.cardContent {
-    padding: 16px;
-    font-size: 16px;
-    color: rgb(32, 32, 32);
+/* ELIMINAR SIDEBAR */
+.md-sidebar--secondary {
+    display: none !important;
 }
 
-/* TÍTULOS (H2, BODY2, ETC.) */
-.md-typeset h2 {
-    font-weight: 500;
-    color: rgb(32, 32, 32);
+.md-nav--primary {
+    display: none !important;
 }
 
-.mdc-typography--body2 {
-    font-weight: 300;
-    font-size: 14px;
-    color: rgb(32, 32, 32);
-}
-
-/* ENLACES DE NAVEGACIÓN */
-.md-nav__link {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--md-default-fg-color);
-}
-
-.md-nav__link:hover {
-    color: var(--md-accent-fg-color);
-}
-
-/* ===== CSS PARA TARJETAS SIMPLIFICADAS ===== */
+/* TARJETAS (mantén tu CSS existente) */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -199,38 +132,22 @@
     text-align: center;
 }
 
-/* RESPONSIVE: EN MÓVIL */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .cards-grid {
         grid-template-columns: 1fr;
     }
     
     .md-header__inner {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .md-header__title {
-        text-align: center;
-        padding-left: 0;
-        font-size: 2rem !important;
-        margin-bottom: 0.5rem !important;
+        flex-direction: column !important;
     }
     
     .md-tabs {
         width: 100% !important;
         justify-content: center !important;
-        margin-right: 0 !important;
     }
     
     .md-tabs__list {
         justify-content: center !important;
-        margin-right: 0 !important;
-        gap: 1rem !important;
-    }
-    
-    .md-tabs__link {
-        padding: 0.4rem 0.8rem !important;
-        font-size: 0.9rem !important;
     }
 }
