@@ -33,6 +33,46 @@
 /* ELIMINAR LA TABLE OF CONTENTS */
 .md-sidebar--secondary { display: none !important; }
 
+
+/* MOSTRAR LAS PESTAÑAS HORIZONTALES (si no están visibles) */
+.md-tabs {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* FORZAR QUE EL CONTENIDO OCUPE TODO EL ANCHO */
+.md-main__inner {
+    margin-left: 0 !important;
+}
+
+.md-content {
+    margin-left: 0 !important;
+}
+
+/* AJUSTAR EL HEADER PARA QUE TODO QUEDE ARRIBA */
+.md-header__inner {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* POSICIONAR LAS PESTAÑAS A LA DERECHA */
+.md-tabs {
+    margin-left: auto !important;
+}
+
+/* RESPONSIVE - EN MÓVIL MOSTRAR MENÚ HAMBURGUESA */
+@media (max-width: 76.1875em) {
+    .md-nav--primary {
+        display: block !important; /* Mostrar menú hamburguesa en móvil */
+    }
+    
+    .md-tabs {
+        display: none !important; /* Ocultar pestañas en móvil */
+    }
+}
+
 /* PESTAÑAS DE NAVEGACIÓN - FORZAR VISIBILIDAD */
 .md-tabs {
     display: flex !important;
