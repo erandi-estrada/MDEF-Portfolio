@@ -28,39 +28,48 @@
     display: none !important;
 }
 
+/* OCULTAR NAVEGACIÓN LATERAL PRINCIPAL */
+.md-nav--primary {
+    display: none !important;
+}
+
 /* ENCABEZADO GENERAL */
 .md-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
     padding-bottom: 0 !important;
 }
 
 .md-header__inner {
-    justify-content: space-between;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 0.4rem 0;
 }
 
+/* TÍTULO A LA IZQUIERDA */
 .md-header__title {
-    font-size: 3rem;
+    font-size: 1.5rem !important;
     font-weight: 700;
-    margin: 1rem 0;
-    text-align: center;
-    width: 100%;
+    margin: 0 !important;
+    text-align: left;
+    width: auto !important;
+    padding-left: 1rem;
 }
 
-/* MENÚ DE NAVEGACIÓN SUPERIOR - ESTILOS UNIFICADOS */
+/* MENÚ HORIZONTAL DERECHO */
 .md-tabs {
-    justify-content: center !important; /* Centrado horizontal */
-    margin: 1rem 0 !important; /* Espacio arriba y abajo */
-    width: 100%;
-    border-bottom: 1px solid #e0e0e0 !important;
+    width: auto !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    justify-content: flex-end !important;
 }
 
 .md-tabs__list {
     display: flex !important;
-    gap: 2rem !important;
-    justify-content: center !important;
-    width: 100% !important;
+    gap: 1.5rem !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+    margin-right: 1rem !important;
 }
 
 .md-tabs__link {
@@ -68,15 +77,18 @@
     font-size: 1rem !important;
     padding: 0.5rem 1rem !important;
     color: var(--md-default-fg-color) !important;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .md-tabs__link:hover {
     color: var(--md-accent-fg-color) !important;
+    background-color: rgba(0,0,0,0.05);
 }
 
 /* ELIMINAR NAVEGACIÓN INTERNA CONFLICTIVA */
 .md-header-nav {
-    display: none !important; /* Oculta el menú duplicado */
+    display: none !important;
 }
 
 /* CONTENIDO DE TARJETAS GENERALES */
@@ -161,11 +173,31 @@
         grid-template-columns: 1fr;
     }
     
-    .md-tabs__list {
-        gap: 1rem !important;
+    .md-header__inner {
+        flex-direction: column;
+        align-items: center;
     }
     
     .md-header__title {
-        font-size: 2rem;
+        text-align: center;
+        padding-left: 0;
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .md-tabs {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .md-tabs__list {
+        justify-content: center !important;
+        margin-right: 0 !important;
+        gap: 1rem !important;
+    }
+    
+    .md-tabs__link {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.9rem !important;
     }
 }
