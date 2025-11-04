@@ -1,3 +1,47 @@
+/* ===== FORZAR VISIBILIDAD DE PESTAÑAS EN TODAS LAS PANTALLAS ===== */
+.md-header__nav {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.md-tabs {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
+    margin-left: auto !important;
+    width: auto !important;
+}
+
+/* OVERRIDE COMPLETO PARA PESTAÑAS - ESTO ES CLAVE */
+@media screen and (min-width: 76.25em) {
+    .md-tabs {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 76.25em) {
+    .md-tabs {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .md-header__nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/* OCULTAR BOTÓN DE MENÚ HAMBURGUESA */
+.md-header__button {
+    display: none !important;
+}
+
 /* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
 .md-header {
     background-color: #ffffff !important;
@@ -24,15 +68,6 @@
 }
 
 /* ===== PESTAÑAS DE NAVEGACIÓN HORIZONTAL ===== */
-.md-tabs {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background-color: transparent !important;
-    margin-left: auto !important;
-    width: auto !important;
-}
-
 .md-tabs__list {
     display: flex !important;
     gap: 1.5rem !important;
@@ -80,14 +115,14 @@
 .md-content {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    max-width: 900px !important; /* Ancho máximo del contenido */
+    max-width: 900px !important;
     width: 100% !important;
 }
 
 .md-content__inner {
     margin: 0 auto !important;
     padding: 2rem 1.5rem !important;
-    max-width: 800px !important; /* Centrado del texto */
+    max-width: 800px !important;
 }
 
 /* ===== OCULTAR TABLA DE CONTENIDOS DERECHA ===== */
