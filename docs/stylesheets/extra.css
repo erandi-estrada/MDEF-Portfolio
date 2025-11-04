@@ -14,6 +14,50 @@
     width: auto !important;
 }
 
+/* CREAR MENÚ HORIZONTAL MANUAL */
+.custom-header-menu {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    padding: 1rem 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    margin-bottom: 2rem !important;
+}
+
+.custom-header-menu a {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.custom-header-menu a:hover {
+    background-color: rgba(0,0,0,0.1) !important;
+}
+
+/* OCULTAR ELEMENTOS NO DESEADOS */
+.md-nav--primary {
+    display: none !important;
+}
+
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+.md-tabs {
+    display: none !important;
+}
+
+/* CONTENIDO CENTRADO */
+.md-content__inner {
+    margin: 0 auto !important;
+    max-width: 800px !important;
+    padding: 0 1rem !important;
+}
+
 /* OVERRIDE COMPLETO PARA PESTAÑAS - ESTO ES CLAVE */
 @media screen and (min-width: 76.25em) {
     .md-tabs {
@@ -95,7 +139,10 @@
     color: #000000 !important;
 }
 
-
+/* ===== OCULTAR SIDEBAR IZQUIERDA ===== */
+.md-nav--primary {
+    display: none !important;
+}
 
 /* ===== CONTENIDO CENTRADO ===== */
 .md-main {
