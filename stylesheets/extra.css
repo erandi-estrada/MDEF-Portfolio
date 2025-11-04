@@ -95,16 +95,6 @@
     display: block !important;
 }
 
-/* SOLO OCULTAR ELEMENTOS CONFLICTIVOS, NO LAS PESTAÑAS */
-.md-header .md-header-nav {
-    display: none !important;
-}
-
-/* ELIMINAR NAVEGACIÓN INTERNA CONFLICTIVA */
-.md-header-nav {
-    display: none !important;
-}
-
 /* CONTENIDO DE TARJETAS GENERALES */
 .cardContent {
     padding: 16px;
