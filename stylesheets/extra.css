@@ -75,14 +75,6 @@
     color: rgba(0,0,0,0.5) !important;
 }
 
-/* ELIMINAR SIDEBAR */
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-.md-nav--primary {
-    display: none !important;
-}
 
 /* TARJETAS (mantén tu CSS existente) */
 .cards-grid {
