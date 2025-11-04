@@ -7,6 +7,11 @@
     --mdc-typography-headline6-font-family: 'Be Vietnam', sans-serif;
     --mdc-typography-font-family: 'Be Vietnam', sans-serif;
     --md-typeset-a-color: rgb(32, 32, 32);
+    
+    /* NUEVO: COLORES PARA EL HEADER */
+    --md-primary-fg-color: white;
+    --md-primary-bg-color: rgb(32, 32, 32); /* Texto negro */
+    --md-default-fg-color: rgb(32, 32, 32); /* Texto negro general */
 }
 
 .hide-scroll-bar {
@@ -33,21 +38,17 @@
     display: none !important;
 }
 
-/* ENCABEZADO GENERAL */
+/* ENCABEZADO GENERAL - TEXTO NEGRO */
 .md-header {
-    background-color: white;
+    background-color: white !important;
+    color: rgb(32, 32, 32) !important; /* Texto negro */
     box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
     padding-bottom: 0 !important;
 }
 
-.md-header__inner {
-    justify-content: space-between !important;
-    align-items: center;
-    padding: 0.4rem 0;
-}
-
-/* TÍTULO A LA IZQUIERDA */
+/* TEXTO DEL HEADER EN NEGRO */
 .md-header__title {
+    color: rgb(32, 32, 32) !important; /* Texto negro */
     font-size: 1.5rem !important;
     font-weight: 700;
     margin: 0 !important;
@@ -56,13 +57,27 @@
     padding-left: 1rem;
 }
 
-/* MENÚ HORIZONTAL DERECHO - VISIBLE */
+.md-header__button {
+    color: rgb(32, 32, 32) !important; /* Íconos en negro */
+}
+
+/* REPOSITORIO GITHUB - TEXTO NEGRO */
+.md-source {
+    color: rgb(32, 32, 32) !important;
+}
+
+.md-source__repository {
+    color: rgb(32, 32, 32) !important;
+}
+
+/* MENÚ HORIZONTAL - VISIBLE Y EN NEGRO */
 .md-tabs {
     display: block !important;
     width: auto !important;
     margin-left: auto !important;
     margin-right: 1rem !important;
     border-bottom: none !important;
+    background-color: transparent !important;
 }
 
 .md-tabs__list {
@@ -71,28 +86,39 @@
     justify-content: flex-end !important;
 }
 
+.md-tabs__item {
+    display: block !important;
+}
+
 .md-tabs__link {
+    display: block !important;
     font-weight: 500 !important;
     font-size: 1rem !important;
     padding: 0.5rem 1rem !important;
-    color: rgb(32, 32, 32) !important; /* Letras negras */
+    color: rgb(32, 32, 32) !important; /* Texto negro */
     border-radius: 4px;
     transition: all 0.3s ease;
+    background-color: transparent !important;
 }
 
 .md-tabs__link:hover {
     color: var(--md-accent-fg-color) !important;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.05) !important;
 }
 
 /* Asegurar que las pestañas sean visibles */
 [data-md-component="tabs"] {
     display: flex !important;
+    background-color: transparent !important;
 }
 
-/* AÑADE ESTA LÍNEA NUEVA */
-.md-tabs__item {
-    display: block !important;
+/* BARRA DE BÚSQUEDA - TEXTO NEGRO */
+.md-search__input {
+    color: rgb(32, 32, 32) !important;
+}
+
+.md-search__input::placeholder {
+    color: rgba(32, 32, 32, 0.7) !important;
 }
 
 /* CONTENIDO DE TARJETAS GENERALES */
@@ -105,11 +131,13 @@
 /* TÍTULOS (H2, BODY2, ETC.) */
 .md-typeset h2 {
     font-weight: 500;
+    color: rgb(32, 32, 32);
 }
 
 .mdc-typography--body2 {
     font-weight: 300;
     font-size: 14px;
+    color: rgb(32, 32, 32);
 }
 
 /* ENLACES DE NAVEGACIÓN */
@@ -192,6 +220,7 @@
     .md-tabs {
         width: 100% !important;
         justify-content: center !important;
+        margin-right: 0 !important;
     }
     
     .md-tabs__list {
