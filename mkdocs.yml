@@ -36,10 +36,9 @@ theme:
     logo: material/memory
   favicon: images/favicon.svg
   features:
-    - navigation.tabs          # activa tabs horizontales
-    - navigation.top           # barra en la parte superior
-    - content.icons            # habilita iconos
-    
+    - navigation.tabs  # Esto habilita las pestañas horizontales
+    - navigation.path  # Muestra la ruta de navegación
+    - navigation.top   # Botón para ir arriba
 
 plugins:
   - search
