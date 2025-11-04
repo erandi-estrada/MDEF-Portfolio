@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # MDEF Projects 
 
 Welcome to my journey through the [**Master in Design for Emergent Futures (MDEF)**](https://mdef.fablabbcn.org/), a program by Fab Lab Barcelona and IAAC. This space documents the ideas, experiments, and reflections that shaped my learning process, from early prototypes to collective explorations. 
