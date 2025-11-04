@@ -90,6 +90,16 @@
     display: flex !important;
 }
 
+/* AÑADE ESTA LÍNEA NUEVA */
+.md-tabs__item {
+    display: block !important;
+}
+
+/* ELIMINAR NAVEGACIÓN INTERNA CONFLICTIVA */
+.md-header-nav {
+    display: none !important;
+}
+
 /* ELIMINAR NAVEGACIÓN INTERNA CONFLICTIVA */
 .md-header-nav {
     display: none !important;
