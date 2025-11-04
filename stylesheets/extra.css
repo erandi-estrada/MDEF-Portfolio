@@ -95,10 +95,7 @@
     color: #000000 !important;
 }
 
-/* ===== OCULTAR SIDEBAR IZQUIERDA ===== */
-.md-nav--primary {
-    display: none !important;
-}
+
 
 /* ===== CONTENIDO CENTRADO ===== */
 .md-main {
