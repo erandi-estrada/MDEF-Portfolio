@@ -95,8 +95,8 @@
     display: block !important;
 }
 
-/* ELIMINAR NAVEGACIÓN INTERNA CONFLICTIVA */
-.md-header-nav {
+/* SOLO OCULTAR ELEMENTOS CONFLICTIVOS, NO LAS PESTAÑAS */
+.md-header .md-header-nav {
     display: none !important;
 }
 
