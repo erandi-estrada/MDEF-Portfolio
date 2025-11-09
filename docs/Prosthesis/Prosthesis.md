@@ -11,18 +11,19 @@ To be the best version of ourselves once sounded like an act of progress, a clea
 
 A prosthesis is not only an addition, it is a negotiation, between the body and the world, between intimacy and distance, between control and surrender. The prosthesis taught me how to feel again, how to be present in my own body, aware of its limits and its connections.
 
-Each piece became a small experiment in relation and transformation. Through BookGrip, I relearned slowness, the intelligence of holding, of pausing, of thinking with the body. Through Listening Extensions, I imagined new ways of connecting to non-human rhythms, becoming part-plant, part-signal, part-ear. Through To Be Judged, I experienced the tension of surveillance, how the gaze of another can become an extension of both control and vulnerability.
+Each piece became a small experiment in relation and transformation. Through [BookGrip](#bookgrip), I relearned slowness, the intelligence of holding, of pausing, of thinking with the body. Through [Listening Extensions](#listening-extensions), I imagined new ways of connecting to non-human rhythms, becoming part-plant, part-signal, part-ear. Through [To Be Judged](#to-be-judge), I experienced the tension of surveillance, how the gaze of another can become an extension of both control and vulnerability.
 
 Each work became a question rather than a solution.
 What if to evolve is to hybridize?
 What if to become more is to dissolve the borders that keep us separate?
 
-Manel de Aguas speaks of becoming a cyborg, not as a distant future, but as a present condition, where new organs of perception redefine what it means to be human. Thomas Thwaites reminds us that “the body is the first tool we use to interact with the world.” If that is true, then every prosthesis, physical, digital, or emotional, continues that dialogue.
+Manel de Aguas speaks of becoming a cyborg, not as a distant future, but as a present condition, where new organs of perception redefine what it means to be human. Thomas Thwaites reminds us that "the body is the first tool we use to interact with the world." If that is true, then every prosthesis, physical, digital, or emotional, continues that dialogue.
 
 To be prosthetic is to exist in relation. To be human is already to be multiple: technological, biological, cultural, environmental.
 The best version of ourselves may not be the one that rises above, but the one that learns to attune, to evolve in empathy, to listen through the skin, to sense the invisible threads that bind us to everything else.
 
 ---
+<div id="bookgrip"></div>
 # BookGrip
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
@@ -36,7 +37,7 @@ BookGrip is a prosthesis that forces the body to hold a book again, to pause, to
 It reminds us that being the best version of ourselves isn't always about progress, but about remembering what we've forgotten.
 
 ---
-
+<div id="listening-extensions"></div>
 # Listening Extensions
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
@@ -51,7 +52,7 @@ It imagines a future where we grow with our surroundings instead of apart from t
 Where technology and nature intertwine, and the body becomes a bridge between both.
 
 ---
-
+<div id="to-be-judge"></div>
 # To be judge
 
 <img src="../../images/detective.jpg" 
@@ -105,4 +106,3 @@ Each song revealed a different version of the subject, a small window into how t
 Trying to document them felt strange, I didn't want to intrude, yet every step I took made my presence more visible.
 In the end, being the observer felt just as exposed as being observed.
 </p>
-
