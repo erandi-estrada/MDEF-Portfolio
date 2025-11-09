@@ -267,77 +267,6 @@
     </div>
 </div>
 
-<style>
-.observer-text {
-    position: relative;
-    transition: transform 0.1s ease;
-    display: inline-block;
-    cursor: default;
-}
-
-.observer-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 2rem;
-    border-radius: 12px;
-    margin: 2rem 0;
-    border-left: 4px solid #6c757d;
-    position: relative;
-    overflow: hidden;
-}
-
-.observer-section::before {
-    content: "👁️";
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    opacity: 0.1;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const observerTexts = document.querySelectorAll('.observer-text');
-    const observerSection = document.querySelector('.observer-section');
-
-    document.addEventListener('mousemove', function(e) {
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-
-        // Movimiento sutil del texto
-        observerTexts.forEach(text => {
-            const moveX = (mouseX - 0.5) * 10; // ±5px
-            const moveY = (mouseY - 0.5) * 8;  // ±4px
-            text.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-
-        // Efecto de sombra que sigue el cursor en la sección
-        if (observerSection) {
-            const rect = observerSection.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            observerSection.style.background = `
-                radial-gradient(circle at ${x}px ${y}px, 
-                    rgba(108, 117, 125, 0.05) 0%,
-                    #f8f9fa 50%,
-                    #e9ecef 100%)
-            `;
-        }
-    });
-
-    // Reset cuando el mouse sale de la ventana
-    document.addEventListener('mouseleave', function() {
-        observerTexts.forEach(text => {
-            text.style.transform = 'translate(0, 0)';
-        });
-        if (observerSection) {
-            observerSection.style.background = 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)';
-        }
-    });
-});
-</script>
-
 <h1 id="bookgrip">BookGrip<a class="headerlink" href="#bookgrip" title="Permanent link">&para;</a></h1>
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
   <source src="../../videos/BookGrip.mp4" type="video/mp4">
@@ -418,7 +347,7 @@ In the end, being the observer felt just as exposed as being observed.
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 9, 2025 20:16:54 UTC">November 9, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 9, 2025 20:20:29 UTC">November 9, 2025</span>
     
   </small>
 </div>
