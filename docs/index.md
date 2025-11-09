@@ -1,6 +1,5 @@
-<!-- Este div vacío empuja el menú a la derecha -->
-<div style="display: flex; justify-content: space-between; align-items: right; margin-bottom: 0; padding: 0;">
-    <div><!-- Espacio vacío a la izquierda --></div>
+<div class="menu-container">
+    <div class="site-title">Erandi Estrada - MDEF & Fab Lab Barcelona</div>
     <div class="custom-header-menu">
         <a href=".">MDEF</a>
         <a href="projects/Portfolio">Projects</a>
@@ -19,7 +18,6 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
 ## My Journey
 
 <div class="cards-grid">
-
 <a href="project/project/" class="card">
   <img src="images/initial-ideas.jpg" alt="Initial Ideas">
   <h3>Initial Ideas</h3>
@@ -49,5 +47,4 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
   <h3>Studio</h3> 
   <p>Design, experimentation, and material explorations.</p> 
 </a> 
-
 </div>
