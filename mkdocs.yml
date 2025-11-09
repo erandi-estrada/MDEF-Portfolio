@@ -2,12 +2,11 @@ site_name: Erandi Estrada - MDEF & Fab Lab Barcelona
 site_description: Master in Design for Emergent Futures
 site_author: Erandi Estrada
 copyright: Copyleft 2023 "Erandi Estrada" - GNU Free Documentation License
-repo_name: 'Erandi Estrada : MDEF Portfolio'
-site_url: https://fablabbcn.github.io/mdef-template/
-repo_url: 'https://github.com/fablabbcn/mdef-template'
+repo_url: 'https://github.com/erandi-estrada/MDEF-Portfolio'
+site_url: https://erandi-estrada.github.io/MDEF-Portfolio/
 
 nav:
-  - MDEF: index.md  # or whatever your main MDEF page is
+  - MDEF: index.md  
   - Projects: projects/Portfolio.md
   - About me: about/me.md
 
@@ -36,8 +35,8 @@ theme:
     logo: material/memory
   favicon: images/favicon.svg
   features:
-    - navigation.tabs  # Esto habilita las pestañas horizontales
-    - navigation.top   # Botón para ir arriba
+    - navigation.tabs
+    - navigation.top
 
 plugins:
   - search
@@ -50,39 +49,13 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - codehilite:
-      guess_lang: false
+  - codehilite
   - toc:
       permalink: true
   - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - md_in_html
-  - admonition
-  - codehilite
-  - footnotes
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      base_path: 'docs'
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+  - pymdownx.tasklist
   - attr_list
   - pymdownx.tabbed
 
 extra_css:
   - stylesheets/extra.css
-
-  
