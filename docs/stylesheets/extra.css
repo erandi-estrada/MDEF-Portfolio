@@ -1,3 +1,13 @@
+/* ===== ELIMINAR COMPLETAMENTE EL HEADER ORIGINAL ===== */
+.md-header {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
 /* ===== ELIMINAR MÁRGENES Y ESPACIOS ===== */
 body {
     margin: 0 !important;
@@ -7,30 +17,21 @@ body {
 .md-container {
     margin: 0 !important;
     padding: 0 !important;
+    padding-top: 0 !important;
 }
 
-/* ===== HEADER COMPLETAMENTE OCULTO ===== */
-.md-header {
-    display: none !important;
-}
-
-/* ===== MENÚ CENTRADO Y PEGADO ARRIBA ===== */
+/* ===== MENÚ PEGADO ARRIBA ===== */
 .menu-container {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 0.8rem 0 !important;
+    padding: 0.5rem 0 !important;
     background-color: #ffffff !important;
     border-bottom: 1px solid #e0e0e0 !important;
     position: relative !important;
     top: 0 !important;
-}
-
-/* Título OCULTO */
-.site-title {
-    display: none !important;
 }
 
 /* Menú centrado */
@@ -43,11 +44,11 @@ body {
 }
 
 .custom-header-menu a {
-    color: #000000 !important;  /* Texto negro */
+    color: #000000 !important;
     text-decoration: none !important;
     font-weight: 600 !important;
     font-size: 1rem !important;
-    padding: 0.5rem 0 !important;
+    padding: 0.3rem 0 !important;
     border-bottom: 2px solid transparent !important;
     transition: all 0.2s ease !important;
     white-space: nowrap !important;
@@ -58,7 +59,7 @@ body {
     border-bottom-color: #1976d2 !important;
 }
 
-/* ===== OCULTAR ELEMENTOS NO DESEADOS ===== */
+/* ===== OCULTAR TODOS LOS ELEMENTOS NO DESEADOS ===== */
 .md-sidebar {
     display: none !important;
 }
@@ -75,11 +76,21 @@ body {
     display: none !important;
 }
 
+.md-header__button {
+    display: none !important;
+}
+
 /* ===== CONTENIDO PRINCIPAL - SIN ESPACIO ARRIBA ===== */
 .md-main {
     flex: 1 !important;
     margin: 0 !important;
     padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.md-main__inner {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .md-content {
@@ -91,7 +102,7 @@ body {
 
 .md-content__inner {
     margin: 0 auto !important;
-    padding: 1.5rem 1rem 2rem 1rem !important;
+    padding: 1rem 1rem 2rem 1rem !important;
     max-width: 800px !important;
     width: 100% !important;
 }
@@ -162,9 +173,14 @@ body {
     
     .custom-header-menu a {
         font-size: 0.9rem !important;
+        padding: 0.2rem 0 !important;
+    }
+    
+    .menu-container {
+        padding: 0.4rem 0 !important;
     }
     
     .md-content__inner {
-        padding: 1rem 0.5rem !important;
+        padding: 0.8rem 0.5rem 1rem 0.5rem !important;
     }
 }
