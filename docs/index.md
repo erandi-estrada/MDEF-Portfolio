@@ -35,7 +35,7 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
   <p>Hands-on learning, rapid prototyping, and collaboration.</p> 
 </a> 
 
-<a href="term1/02-Atlas of Weak Signals/" class="card">
+<a href="term1/02-Atlas/" class="card">
   <img src="images/atlas.jpg" alt="Atlas of Weak Signals"> 
   <h3>Atlas of Weak Signals</h3> 
   <p>Researching emerging signals and future-oriented thinking.</p> 
