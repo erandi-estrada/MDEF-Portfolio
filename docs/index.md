@@ -1,5 +1,4 @@
 <div class="menu-container">
-    <div class="site-title">Erandi Estrada - MDEF & Fab Lab Barcelona</div>
     <div class="custom-header-menu">
         <a href=".">MDEF</a>
         <a href="projects/Portfolio">Projects</a>
