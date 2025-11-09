@@ -1,3 +1,11 @@
+<div class="menu-container">
+    <div class="custom-header-menu">
+        <a href="/MDEF-Portfolio/">MDEF</a>
+        <a href="projects/Portfolio">Projects</a>
+        <a href=".">About me</a>
+    </div>
+</div>
+
 # Erandi Estrada
 
 I’m an industrial designer passionate about how **technology, materials, and human experience** come together to create meaningful design. My work explores the balance between **craft and innovation**, from handmade processes to digital fabrication.
