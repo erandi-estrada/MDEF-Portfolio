@@ -6,9 +6,9 @@ repo_url: 'https://github.com/erandi-estrada/MDEF-Portfolio'
 site_url: https://erandi-estrada.github.io/MDEF-Portfolio/
 
 nav:
-  - MDEF: index.md  
+  - Home: index.md  
   - Projects: projects/Portfolio.md
-  - About me: about/me.md
+  - About: about/me.md
 
 extra:
   social:
@@ -37,6 +37,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+    - navigation.sections
 
 plugins:
   - search
@@ -44,18 +45,12 @@ plugins:
       fallback_to_build_date: true
 
 markdown_extensions:
-  - extra
-  - smarty
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - codehilite
   - toc:
       permalink: true
-  - def_list
-  - pymdownx.tasklist
-  - attr_list
+  - pymdownx.superfences
   - pymdownx.tabbed
+  - admonition
+  - pymdownx.details
 
 extra_css:
   - stylesheets/extra.css
