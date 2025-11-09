@@ -1,137 +1,63 @@
-/* ===== FORZAR VISIBILIDAD DE PESTAÑAS EN TODAS LAS PANTALLAS ===== */
-.md-header__nav {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.md-tabs {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background-color: transparent !important;
-    margin-left: auto !important;
-    width: auto !important;
-}
-
-/* CREAR MENÚ HORIZONTAL MANUAL */
-.custom-header-menu {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 2rem !important;
-    padding: 1rem 0 !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid #e0e0e0 !important;
-    margin-bottom: 2rem !important;
-}
-
-.custom-header-menu a {
-    color: #000000 !important;
-    text-decoration: none !important;
-    font-weight: 500 !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 4px !important;
-    transition: background-color 0.2s ease !important;
-}
-
-.custom-header-menu a:hover {
-    background-color: rgba(0,0,0,0.1) !important;
-}
-
-/* OCULTAR ELEMENTOS NO DESEADOS */
-.md-nav--primary {
-    display: none !important;
-}
-
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-.md-tabs {
-    display: none !important;
-}
-
-/* CONTENIDO CENTRADO */
-.md-content__inner {
-    margin: 0 auto !important;
-    max-width: 800px !important;
-    padding: 0 1rem !important;
-}
-
-/* OVERRIDE COMPLETO PARA PESTAÑAS - ESTO ES CLAVE */
-@media screen and (min-width: 76.25em) {
-    .md-tabs {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-}
-
-@media screen and (max-width: 76.25em) {
-    .md-tabs {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
-    .md-header__nav {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-}
-
-/* OCULTAR BOTÓN DE MENÚ HAMBURGUESA */
-.md-header__button {
-    display: none !important;
-}
-
-/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+/* ===== HEADER COMPACTO ===== */
 .md-header {
     background-color: #ffffff !important;
-    color: #000000 !important;
     border-bottom: 1px solid #e0e0e0 !important;
+    height: auto !important;
+    min-height: 60px !important;
+    padding: 0.5rem 0 !important;
 }
 
-/* ===== HEADER CON TÍTULO Y NAVEGACIÓN ===== */
 .md-header__inner {
     display: flex !important;
-    justify-content: space-between !important;
     align-items: center !important;
+    justify-content: space-between !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
     padding: 0 1rem !important;
+    height: auto !important;
+    min-height: 50px !important;
 }
 
 .md-header__title {
-    color: #000000 !important;
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     font-weight: 700 !important;
     margin: 0 !important;
-    flex-shrink: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
 }
 
-/* ===== PESTAÑAS DE NAVEGACIÓN HORIZONTAL ===== */
+/* ===== PESTAÑAS COMPACTAS ===== */
+.md-tabs {
+    display: flex !important;
+    background-color: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 40px !important;
+}
+
 .md-tabs__list {
     display: flex !important;
-    gap: 1.5rem !important;
+    gap: 0.5rem !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
 .md-tabs__item {
-    display: block !important;
-    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
 }
 
 .md-tabs__link {
-    display: block !important;
-    color: #000000 !important;
+    padding: 0.4rem 0.8rem !important;
+    margin: 0 !important;
+    font-size: 0.9rem !important;
     font-weight: 500 !important;
-    padding: 0.5rem 1rem !important;
-    text-decoration: none !important;
     border-radius: 4px !important;
     transition: background-color 0.2s ease !important;
+    color: #000000 !important;
+    text-decoration: none !important;
 }
 
 .md-tabs__link:hover {
@@ -139,62 +65,55 @@
     color: #000000 !important;
 }
 
-/* ===== OCULTAR SIDEBAR IZQUIERDA ===== */
+/* ===== ELIMINAR MENÚ PERSONALIZADO DUPLICADO ===== */
+.custom-header-menu {
+    display: none !important;
+}
+
+/* ===== OCULTAR ELEMENTOS NO NECESARIOS ===== */
 .md-nav--primary {
     display: none !important;
 }
 
-/* ===== CONTENIDO CENTRADO ===== */
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+.md-header__button[for="__drawer"] {
+    display: none !important;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
 .md-main {
     flex: 1 !important;
 }
 
 .md-main__inner {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
     display: flex !important;
     justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .md-content {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     max-width: 900px !important;
     width: 100% !important;
 }
 
 .md-content__inner {
     margin: 0 auto !important;
-    padding: 2rem 1.5rem !important;
+    padding: 1.5rem 1rem !important;
     max-width: 800px !important;
 }
 
-/* ===== OCULTAR TABLA DE CONTENIDOS DERECHA ===== */
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-/* ===== BARRA DE BÚSQUEDA ===== */
-.md-search {
-    margin-left: 1rem !important;
-}
-
-.md-search__input {
-    color: #000000 !important;
-    background-color: rgba(0,0,0,0.05) !important;
-    border: 1px solid rgba(0,0,0,0.1) !important;
-}
-
-.md-search__input::placeholder {
-    color: rgba(0,0,0,0.5) !important;
-}
-
-/* ===== TARJETAS CENTRADAS ===== */
+/* ===== TARJETAS MEJORADAS ===== */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0;
+    gap: 1.5rem;
+    margin: 2rem 0;
     justify-content: center;
 }
 
@@ -207,76 +126,79 @@
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 1.5rem;
+    padding: 1.2rem;
     text-align: center;
 }
 
 .cards-grid .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .cards-grid .card img {
     width: 100%;
-    height: 200px;
+    height: 160px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
+    border-radius: 6px;
 }
 
 .cards-grid .card h3 {
-    margin: 1.5rem 0 0.5rem 0;
+    margin: 1rem 0 0.5rem 0;
     color: rgb(32, 32, 32);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 .cards-grid .card p {
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
     color: #000000;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .cards-grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
+        max-width: 400px;
         margin-left: auto;
         margin-right: auto;
+        gap: 1rem;
     }
     
     .md-header__inner {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 1rem !important;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
     }
     
     .md-tabs {
-        margin-left: 0 !important;
-        width: 100% !important;
-        justify-content: center !important;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .md-tabs__list {
+        gap: 0.25rem;
+    }
+    
+    .md-tabs__link {
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.85rem !important;
     }
     
     .md-content__inner {
-        padding: 1rem !important;
+        padding: 1rem 0.5rem !important;
     }
 }
 
-/* ===== COLORES DE TEXTO ===== */
+/* ===== COLORES CONSISTENTES ===== */
 .md-header * {
     color: #000000 !important;
 }
 
-.md-source {
+.md-search__input {
     color: #000000 !important;
-}
-
-.md-source__repository {
-    color: #000000 !important;
-}
-
-.md-source__icon {
-    color: #000000 !important;
+    background-color: rgba(0,0,0,0.05) !important;
 }
