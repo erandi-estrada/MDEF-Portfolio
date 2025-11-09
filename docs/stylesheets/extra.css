@@ -1,10 +1,10 @@
-/* ===== HEADER COMPACTO ===== */
+/* ===== HEADER COMPACTO Y VISIBLE ===== */
 .md-header {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e0e0e0 !important;
     height: auto !important;
     min-height: 60px !important;
-    padding: 0.5rem 0 !important;
+    padding: 0 !important;
 }
 
 .md-header__inner {
@@ -13,9 +13,8 @@
     justify-content: space-between !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
-    padding: 0 1rem !important;
+    padding: 0.5rem 1rem !important;
     height: auto !important;
-    min-height: 50px !important;
 }
 
 .md-header__title {
@@ -26,61 +25,62 @@
     line-height: 1.2 !important;
 }
 
-/* ===== PESTAÑAS COMPACTAS ===== */
+/* ===== PESTAÑAS SIEMPRE VISIBLES ===== */
 .md-tabs {
     display: flex !important;
-    background-color: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #f8f8f8 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
     margin: 0 !important;
     padding: 0 !important;
     height: auto !important;
-    min-height: 40px !important;
+    min-height: 45px !important;
+    width: 100% !important;
 }
 
 .md-tabs__list {
     display: flex !important;
-    gap: 0.5rem !important;
-    margin: 0 !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
+    max-width: 1200px !important;
+    width: 100% !important;
 }
 
 .md-tabs__item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     margin: 0 !important;
     padding: 0 !important;
     height: auto !important;
+    flex: 0 0 auto !important;
 }
 
 .md-tabs__link {
-    padding: 0.4rem 0.8rem !important;
+    display: block !important;
+    padding: 0.8rem 1.5rem !important;
     margin: 0 !important;
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
     font-weight: 500 !important;
-    border-radius: 4px !important;
-    transition: background-color 0.2s ease !important;
     color: #000000 !important;
     text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    border-bottom: 2px solid transparent !important;
+    height: 100% !important;
 }
 
 .md-tabs__link:hover {
-    background-color: rgba(0,0,0,0.1) !important;
+    background-color: rgba(0,0,0,0.05) !important;
     color: #000000 !important;
+    border-bottom-color: #000000 !important;
 }
 
-/* ===== ELIMINAR MENÚ PERSONALIZADO DUPLICADO ===== */
-.custom-header-menu {
-    display: none !important;
-}
-
-/* ===== OCULTAR ELEMENTOS NO NECESARIOS ===== */
-.md-nav--primary {
-    display: none !important;
-}
-
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-.md-header__button[for="__drawer"] {
-    display: none !important;
+.md-tabs__link--active {
+    background-color: rgba(0,0,0,0.05) !important;
+    border-bottom-color: #1976d2 !important;
+    color: #1976d2 !important;
 }
 
 /* ===== CONTENIDO PRINCIPAL ===== */
@@ -90,13 +90,12 @@
 
 .md-main__inner {
     display: flex !important;
-    justify-content: center !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
 .md-content {
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
     max-width: 900px !important;
     width: 100% !important;
@@ -104,11 +103,11 @@
 
 .md-content__inner {
     margin: 0 auto !important;
-    padding: 1.5rem 1rem !important;
+    padding: 2rem 1rem !important;
     max-width: 800px !important;
 }
 
-/* ===== TARJETAS MEJORADAS ===== */
+/* ===== TARJETAS ===== */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -168,28 +167,13 @@
         gap: 1rem;
     }
     
-    .md-header__inner {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-    }
-    
-    .md-tabs {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .md-tabs__list {
-        gap: 0.25rem;
-    }
-    
     .md-tabs__link {
-        padding: 0.3rem 0.6rem !important;
-        font-size: 0.85rem !important;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
     }
     
     .md-content__inner {
-        padding: 1rem 0.5rem !important;
+        padding: 1.5rem 0.5rem !important;
     }
 }
 
