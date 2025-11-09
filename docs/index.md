@@ -1,7 +1,11 @@
-<div class="custom-header-menu">
-    <a href=".">MDEF</a>
-    <a href="projects/Portfolio">Projects</a>
-    <a href="about/me">About me</a>
+<!-- Este div vacío empuja el menú a la derecha -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; padding: 0;">
+    <div><!-- Espacio vacío a la izquierda --></div>
+    <div class="custom-header-menu">
+        <a href=".">MDEF</a>
+        <a href="projects/Portfolio">Projects</a>
+        <a href="about/me">About me</a>
+    </div>
 </div>
 
 # MDEF Projects 
