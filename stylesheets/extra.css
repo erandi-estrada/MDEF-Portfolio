@@ -1,18 +1,61 @@
-/* ===== HEADER COMPACTO ===== */
-.md-header {
-    background-color: #ffffff !important;
-    border-bottom: 1px solid #e0e0e0 !important;
-    min-height: 50px !important;
+/* ===== ELIMINAR MÁRGENES Y ESPACIOS ===== */
+body {
+    margin: 0 !important;
     padding: 0 !important;
 }
 
-.md-header__inner {
+.md-container {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ===== HEADER COMPLETAMENTE OCULTO ===== */
+.md-header {
+    display: none !important;
+}
+
+/* ===== MENÚ CENTRADO Y PEGADO ARRIBA ===== */
+.menu-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0.8rem 0 !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+/* Título OCULTO */
+.site-title {
+    display: none !important;
+}
+
+/* Menú centrado */
+.custom-header-menu {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0.3rem 1rem !important;
+    gap: 3rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.custom-header-menu a {
+    color: #000000 !important;  /* Texto negro */
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+.custom-header-menu a:hover {
+    color: #1976d2 !important;
+    border-bottom-color: #1976d2 !important;
 }
 
 /* ===== OCULTAR ELEMENTOS NO DESEADOS ===== */
@@ -32,56 +75,7 @@
     display: none !important;
 }
 
-.md-header__button[for="__drawer"] {
-    display: none !important;
-}
-
-/* ===== CONTENEDOR PARA MENÚ A LA DERECHA ===== */
-.menu-container {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-    margin: 0 auto 2rem auto !important;
-    padding: 1rem 0 0 0 !important;
-}
-
-/* Título a la izquierda */
-.site-title {
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    color: #000000 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Menú a la derecha */
-.custom-header-menu {
-    display: flex !important;
-    align-items: center !important;
-    gap: 2rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.custom-header-menu a {
-    color: #000000 !important;
-    text-decoration: none !important;
-    font-weight: 500 !important;
-    font-size: 1rem !important;
-    padding: 0.5rem 0 !important;
-    border-bottom: 2px solid transparent !important;
-    transition: all 0.2s ease !important;
-    white-space: nowrap !important;
-}
-
-.custom-header-menu a:hover {
-    color: #1976d2 !important;
-    border-bottom-color: #1976d2 !important;
-}
-
-/* ===== CONTENIDO PRINCIPAL ===== */
+/* ===== CONTENIDO PRINCIPAL - SIN ESPACIO ARRIBA ===== */
 .md-main {
     flex: 1 !important;
     margin: 0 !important;
@@ -97,7 +91,7 @@
 
 .md-content__inner {
     margin: 0 auto !important;
-    padding: 0 1rem 2rem 1rem !important;
+    padding: 1.5rem 1rem 2rem 1rem !important;
     max-width: 800px !important;
     width: 100% !important;
 }
@@ -162,12 +156,6 @@
         gap: 1rem;
     }
     
-    .menu-container {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    
     .custom-header-menu {
         gap: 1.5rem !important;
     }
@@ -177,6 +165,6 @@
     }
     
     .md-content__inner {
-        padding: 0 0.5rem 1rem 0.5rem !important;
+        padding: 1rem 0.5rem !important;
     }
 }
