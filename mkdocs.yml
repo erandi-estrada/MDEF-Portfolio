@@ -25,6 +25,7 @@ extra:
 
 theme:
   name: material
+  custom_dir: overrides    # ← AÑADE ESTA LÍNEA
   palette:
     primary: blue
     accent: purple
