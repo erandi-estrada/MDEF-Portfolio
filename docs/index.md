@@ -17,6 +17,12 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
 ## My Journey
 
 <div class="cards-grid">
+<a href="Prosthesis/Prosthesis.md" class="card">
+  <img src="images/prosthesis.jpg" alt="Prosthesis">
+  <h3>Prosthesis</h3>
+  <p>Exploring assistive technologies and wearable devices.</p>
+</a>
+
 <a href="project/project/" class="card">
   <img src="images/initial-ideas.jpg" alt="Initial Ideas">
   <h3>Initial Ideas</h3>
