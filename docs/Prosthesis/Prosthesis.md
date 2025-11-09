@@ -6,6 +6,23 @@
     </div>
 </div>
 
+# Becoming Prosthetic
+To be the best version of ourselves once sounded like an act of progress, a cleaner, faster, optimized human. Yet, as I explored what a prosthesis could be, that narrative began to dissolve. The more I extended the body, the less human it felt, and paradoxically, the more alive.
+
+A prosthesis is not only an addition, it is a negotiation, between the body and the world, between intimacy and distance, between control and surrender. The prosthesis taught me how to feel again, how to be present in my own body, aware of its limits and its connections.
+
+Each piece became a small experiment in relation and transformation. Through BookGrip, I relearned slowness, the intelligence of holding, of pausing, of thinking with the body. Through Listening Extensions, I imagined new ways of connecting to non-human rhythms, becoming part-plant, part-signal, part-ear. Through To Be Judged, I experienced the tension of surveillance, how the gaze of another can become an extension of both control and vulnerability.
+
+Each work became a question rather than a solution.
+What if to evolve is to hybridize?
+What if to become more is to dissolve the borders that keep us separate?
+
+Manel de Aguas speaks of becoming a cyborg, not as a distant future, but as a present condition, where new organs of perception redefine what it means to be human. Thomas Thwaites reminds us that “the body is the first tool we use to interact with the world.” If that is true, then every prosthesis, physical, digital, or emotional, continues that dialogue.
+
+To be prosthetic is to exist in relation. To be human is already to be multiple: technological, biological, cultural, environmental.
+The best version of ourselves may not be the one that rises above, but the one that learns to attune, to evolve in empathy, to listen through the skin, to sense the invisible threads that bind us to everything else.
+
+---
 # BookGrip
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
