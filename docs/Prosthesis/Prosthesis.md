@@ -6,11 +6,6 @@
     </div>
 </div>
 
----
-hide:
-    - toc
----
-
 # BookGrip
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
