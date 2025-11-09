@@ -4,10 +4,8 @@
     border-bottom: 1px solid #e0e0e0 !important;
     min-height: 50px !important;
     padding: 0 !important;
-    margin: 0 !important;
 }
 
-/* Contenedor principal del header */
 .md-header__inner {
     display: flex !important;
     align-items: center !important;
@@ -15,29 +13,15 @@
     max-width: 1200px !important;
     margin: 0 auto !important;
     padding: 0.3rem 1rem !important;
-    min-height: 40px !important;
-    width: 100% !important;
 }
 
-/* Título a la izquierda */
-.md-header__title {
-    font-size: 1.1rem !important;
-    font-weight: 700 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-shrink: 0 !important;
-}
-
-/* ===== MENÚ PERSONALIZADO EN LA DERECHA ===== */
+/* Menú a la derecha */
 .header-menu-container {
-    display: flex !important;
-    align-items: center !important;
     margin-left: auto !important;
 }
 
 .custom-header-menu {
     display: flex !important;
-    align-items: center !important;
     gap: 1.5rem !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -51,7 +35,6 @@
     padding: 0.3rem 0.5rem !important;
     border-bottom: 2px solid transparent !important;
     transition: all 0.2s ease !important;
-    white-space: nowrap !important;
 }
 
 .custom-header-menu a:hover {
