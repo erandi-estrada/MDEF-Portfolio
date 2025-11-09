@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block header %}
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid">
+    <div class="md-header__title">
+      <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" title="{{ config.site_name }}" class="md-header__button md-logo">
+        {% if config.theme.logo.icon %}
+          <i class="md-icon">{{ config.theme.logo.icon }}</i>
+        {% else %}
+          <img src="{{ config.theme.logo | url }}" width="24" height="24">
+        {% endif %}
+        {{ config.site_name }}
+      </a>
+    </div>
+    
+    <div class="header-menu-container">
+      <div class="custom-header-menu">
+        <a href="{{ nav.homepage.url | url }}">MDEF</a>
+        <a href="{{ 'projects/Portfolio.md' | url }}">Projects</a>
+        <a href="{{ 'about/me.md' | url }}">About me</a>
+      </div>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+{% block tabs %}
+{% endblock %}
