@@ -17,7 +17,7 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
 ## My Journey
 
 <div class="cards-grid">
-<a href="Prosthesis/Prosthesis.md" class="card">
+<a href="Prosthesis/Prosthesis" class="card">
   <img src="images/prosthesis.jpg" alt="Prosthesis">
   <h3>Prosthesis</h3>
   <p>Exploring assistive technologies and wearable devices.</p>
