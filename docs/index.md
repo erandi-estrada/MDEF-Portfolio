@@ -18,62 +18,37 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
 
 <div class="cards-grid">
 <a href="Prosthesis/Prosthesis" class="card">
-  <div class="card-front">
-    <img src="images/prosthesis.jpg" alt="Prosthesis">
-  </div>
-  <div class="card-back">
-    <h3>Prosthesis</h3>
-    <p>Exploring assistive technologies and wearable devices.</p>
-  </div>
+  <img src="images/prosthesis.jpg" alt="Prosthesis">
+  <h3>Prosthesis</h3>
+  <p>Exploring assistive technologies and wearable devices.</p>
 </a>
 
 <a href="project/project/" class="card">
-  <div class="card-front">
-    <img src="images/initial-ideas.jpg" alt="Initial Ideas">
-  </div>
-  <div class="card-back">
-    <h3>Initial Ideas</h3>
-    <p>Early explorations that became the foundation of future projects.</p>
-  </div>
+  <img src="images/initial-ideas.jpg" alt="Initial Ideas">
+  <h3>Initial Ideas</h3>
+  <p>Early explorations that became the foundation of future projects.</p>
 </a>
 
 <a href="term1/01-Bootcamp/" class="card">
-  <div class="card-front">
-    <img src="images/bootcamp.jpg" alt="Bootcamp">
-  </div>
-  <div class="card-back">
-    <h3>Bootcamp</h3>
-    <p>Hands-on learning, rapid prototyping, and collaboration.</p>
-  </div>
-</a>
+  <img src="images/bootcamp.jpg" alt="Bootcamp"> 
+  <h3>Bootcamp</h3> 
+  <p>Hands-on learning, rapid prototyping, and collaboration.</p> 
+</a> 
 
 <a href="term1/02-Atlas/" class="card">
-  <div class="card-front">
     <img src="images/atlas.jpg" alt="Atlas of Weak Signals">
-  </div>
-  <div class="card-back">
     <h3>Atlas of Weak Signals</h3>
     <p>Researching emerging signals and future-oriented thinking.</p>
-  </div>
 </a>
 
 <a href="digi/digi/" class="card">
-  <div class="card-front">
     <img src="images/digi.jpg" alt="Digi">
-  </div>
-  <div class="card-back">
     <h3>Digi</h3>
     <p>Digital tools and interactive systems.</p>
-  </div>
 </a>
 
 <a href="studio/studio/" class="card">
-  <div class="card-front">
     <img src="images/studio.jpg" alt="Studio">
-  </div>
-  <div class="card-back">
     <h3>Studio</h3>
     <p>Design, experimentation, and material explorations.</p>
-  </div>
 </a>
-</div>
