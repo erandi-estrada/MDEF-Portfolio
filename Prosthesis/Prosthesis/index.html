@@ -353,6 +353,98 @@ Each song revealed a different version of the subject, a small window into how t
 Trying to document them felt strange, I didn't want to intrude, yet every step I took made my presence more visible.
 In the end, being the observer felt just as exposed as being observed.
 </p>
+
+<style>
+.eye-follower {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 10000;
+    transition: all 0.15s ease;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+    opacity: 0;
+}
+
+.eye {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.pupil {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.08s ease;
+}
+
+/* Mostrar ojo solo cuando el cursor está en la sección To be judge */
+#to-be-judge:hover ~ .eye-follower,
+.eye-follower:hover {
+    opacity: 1;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Crear el ojo
+    const eyeContainer = document.createElement('div');
+    eyeContainer.className = 'eye-follower';
+    eyeContainer.innerHTML = '<div class="eye"><div class="pupil"></div></div>';
+    document.body.appendChild(eyeContainer);
+
+    const pupil = eyeContainer.querySelector('.pupil');
+
+    let isInSection = false;
+
+    // Detectar cuando el cursor entra/sale de la sección
+    const toBeJudgeSection = document.getElementById('to-be-judge');
+
+    toBeJudgeSection.addEventListener('mouseenter', function() {
+        isInSection = true;
+        eyeContainer.style.opacity = '1';
+    });
+
+    toBeJudgeSection.addEventListener('mouseleave', function() {
+        isInSection = false;
+        eyeContainer.style.opacity = '0';
+    });
+
+    // Mover el ojo
+    document.addEventListener('mousemove', function(e) {
+        if (!isInSection) return;
+
+        // Mover el ojo al cursor con un pequeño offset
+        eyeContainer.style.left = (e.clientX - 25) + 'px';
+        eyeContainer.style.top = (e.clientY - 25) + 'px';
+
+        // Mover la pupila dentro del ojo (efecto de seguimiento)
+        const eyeRect = eyeContainer.getBoundingClientRect();
+        const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+        const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+
+        const deltaX = e.clientX - eyeCenterX;
+        const deltaY = e.clientY - eyeCenterY;
+        const distance = Math.min(Math.sqrt(deltaX * deltaX + deltaY * deltaY), 12);
+
+        const angle = Math.atan2(deltaY, deltaX);
+        const moveX = Math.cos(angle) * distance;
+        const moveY = Math.sin(angle) * distance;
+
+        pupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+    });
+});
+</script>
                 
                   
                     
@@ -361,7 +453,7 @@ In the end, being the observer felt just as exposed as being observed.
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 10, 2025 22:31:42 UTC">November 10, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 10, 2025 22:46:38 UTC">November 10, 2025</span>
     
   </small>
 </div>
