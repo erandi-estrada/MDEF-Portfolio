@@ -114,8 +114,8 @@ In the end, being the observer felt just as exposed as being observed.
     height: 60px;
     pointer-events: none;
     z-index: 10000;
-    transition: opacity 0.3s ease;
     opacity: 0;
+    transition: opacity 0.2s ease;
     display: block;
 }
 
@@ -127,109 +127,84 @@ In the end, being the observer felt just as exposed as being observed.
     position: relative;
     overflow: hidden;
     border: 3px solid #333;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 
 .pupil {
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: white;
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.1s ease;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 
 .eye-visible {
     opacity: 1 !important;
 }
 
-/* Brillo en el ojo para mejor visibilidad */
-.eye::before {
+/* Efecto de brillo para hacerlo más visible */
+.eye::after {
     content: '';
     position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 15px;
-    height: 15px;
-    background: rgba(255,255,255,0.3);
+    top: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.4);
     border-radius: 50%;
-    z-index: 2;
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('=== INICIANDO SCRIPT DEL OJO ===');
+    console.log('👁️ Iniciando ojo seguidor...');
     
     // Crear el ojo
     const eyeContainer = document.createElement('div');
     eyeContainer.className = 'eye-follower';
-    eyeContainer.id = 'cursor-eye'; // Añadir ID para debug
     eyeContainer.innerHTML = '<div class="eye"><div class="pupil"></div></div>';
     document.body.appendChild(eyeContainer);
-
-    console.log('✅ Ojo creado con ID:', eyeContainer.id);
-    console.log('✅ Ojo añadido al DOM');
 
     const pupil = eyeContainer.querySelector('.pupil');
     const toBeJudgeSection = document.getElementById('to-be-judge');
     
-    // Verificar que la sección existe
     if (!toBeJudgeSection) {
-        console.error('❌ NO se encontró el elemento con id "to-be-judge"');
-        // Mostrar todos los IDs disponibles para debug
-        const allIds = Array.from(document.querySelectorAll('[id]')).map(el => el.id);
-        console.log('📋 IDs disponibles:', allIds);
+        console.error('No se encontró la sección "to-be-judge"');
         return;
     }
     
-    console.log('✅ Sección "to-be-judge" encontrada:', toBeJudgeSection);
-    
-    // Hacer el ojo visible temporalmente para debug
-    setTimeout(() => {
-        eyeContainer.style.opacity = '1';
-        eyeContainer.style.background = 'rgba(255,0,0,0.3)'; // Fondo rojo para ver posición
-        console.log('🔴 Ojo hecho visible temporalmente para debug');
-        
-        setTimeout(() => {
-            eyeContainer.style.opacity = '0';
-            eyeContainer.style.background = 'transparent';
-            console.log('⚫ Ojo ocultado nuevamente');
-        }, 2000);
-    }, 1000);
+    console.log('✅ Sección encontrada, ojo listo');
     
     // Detectar cuando el cursor entra/sale de la sección
-    toBeJudgeSection.addEventListener('mouseenter', function(e) {
-        console.log('🟢 Cursor ENTRÓ en la sección To be judge');
+    toBeJudgeSection.addEventListener('mouseenter', function() {
+        console.log('🎯 Cursor entró - mostrando ojo');
         eyeContainer.classList.add('eye-visible');
     });
     
-    toBeJudgeSection.addEventListener('mouseleave', function(e) {
-        console.log('🔴 Cursor SALIÓ de la sección To be judge');
+    toBeJudgeSection.addEventListener('mouseleave', function() {
+        console.log('🚪 Cursor salió - ocultando ojo');
         eyeContainer.classList.remove('eye-visible');
     });
     
-    // Mover el ojo
+    // Mover el ojo inmediatamente con el cursor
     document.addEventListener('mousemove', function(e) {
-        const isVisible = eyeContainer.classList.contains('eye-visible');
-        
-        if (isVisible) {
-            // Mover el ojo al cursor
+        if (eyeContainer.classList.contains('eye-visible')) {
+            // Posicionar el ojo exactamente en el cursor
             eyeContainer.style.left = (e.clientX - 30) + 'px';
             eyeContainer.style.top = (e.clientY - 30) + 'px';
             
-            // Mover la pupila dentro del ojo
+            // Mover la pupila para que mire hacia el centro del ojo
             const eyeRect = eyeContainer.getBoundingClientRect();
-            const eyeCenterX = eyeRect.left + eyeRect.width / 2;
-            const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+            const eyeCenterX = eyeRect.left + 30;
+            const eyeCenterY = eyeRect.top + 30;
             
             const deltaX = e.clientX - eyeCenterX;
             const deltaY = e.clientY - eyeCenterY;
-            const distance = Math.min(Math.sqrt(deltaX * deltaX + deltaY * deltaY), 15);
+            const distance = Math.min(Math.sqrt(deltaX * deltaX + deltaY * deltaY), 12);
             
             const angle = Math.atan2(deltaY, deltaX);
             const moveX = Math.cos(angle) * distance;
@@ -238,19 +213,5 @@ document.addEventListener('DOMContentLoaded', function() {
             pupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
         }
     });
-
-    console.log('🎯 Ojo seguidor inicializado. Mueve el cursor sobre "To be judge"');
 });
-
-// Función de emergencia para forzar visibilidad del ojo
-function showEyeDebug() {
-    const eye = document.getElementById('cursor-eye');
-    if (eye) {
-        eye.style.opacity = '1';
-        eye.style.background = 'rgba(0,255,0,0.5)';
-        console.log('🟢 Ojo forzado a ser visible');
-    }
-}
-
-// Ejecutar en consola: showEyeDebug()
 </script>
