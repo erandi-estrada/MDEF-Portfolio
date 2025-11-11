@@ -388,10 +388,8 @@ In the end, being the observer felt just as exposed as being observed.
     transition: all 0.08s ease;
 }
 
-/* Mostrar ojo solo cuando el cursor está en la sección To be judge */
-#to-be-judge:hover ~ .eye-follower,
-.eye-follower:hover {
-    opacity: 1;
+.eye-visible {
+    opacity: 1 !important;
 }
 </style>
 
@@ -404,31 +402,26 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(eyeContainer);
 
     const pupil = eyeContainer.querySelector('.pupil');
-
-    let isInSection = false;
-
-    // Detectar cuando el cursor entra/sale de la sección
     const toBeJudgeSection = document.getElementById('to-be-judge');
 
+    // Detectar cuando el cursor entra/sale de la sección
     toBeJudgeSection.addEventListener('mouseenter', function() {
-        isInSection = true;
-        eyeContainer.style.opacity = '1';
+        eyeContainer.classList.add('eye-visible');
     });
 
     toBeJudgeSection.addEventListener('mouseleave', function() {
-        isInSection = false;
-        eyeContainer.style.opacity = '0';
+        eyeContainer.classList.remove('eye-visible');
     });
 
     // Mover el ojo
     document.addEventListener('mousemove', function(e) {
-        if (!isInSection) return;
+        if (!eyeContainer.classList.contains('eye-visible')) return;
 
-        // Mover el ojo al cursor con un pequeño offset
+        // Mover el ojo al cursor
         eyeContainer.style.left = (e.clientX - 25) + 'px';
         eyeContainer.style.top = (e.clientY - 25) + 'px';
 
-        // Mover la pupila dentro del ojo (efecto de seguimiento)
+        // Mover la pupila dentro del ojo
         const eyeRect = eyeContainer.getBoundingClientRect();
         const eyeCenterX = eyeRect.left + eyeRect.width / 2;
         const eyeCenterY = eyeRect.top + eyeRect.height / 2;
@@ -453,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 10, 2025 22:46:38 UTC">November 10, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2025 12:55:18 UTC">November 11, 2025</span>
     
   </small>
 </div>
