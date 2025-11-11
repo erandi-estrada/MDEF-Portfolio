@@ -108,26 +108,71 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-#debug-eye {
+#surveillance-eye {
     position: fixed;
     width: 50px;
     height: 50px;
-    background: red;
+    background: #000;
     border-radius: 50%;
     z-index: 10000;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#surveillance-eye::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#surveillance-eye::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    top: 12px;
+    left: 12px;
 }
 </style>
 
 <script>
-document.addEventListener('mousemove', function(e) {
-    let eye = document.getElementById('debug-eye');
-    if (!eye) {
-        eye = document.createElement('div');
-        eye.id = 'debug-eye';
-        document.body.appendChild(eye);
+document.addEventListener('DOMContentLoaded', function() {
+    // Crear el ojo
+    const eye = document.createElement('div');
+    eye.id = 'surveillance-eye';
+    document.body.appendChild(eye);
+
+    const toBeJudgeSection = document.getElementById('to-be-judge');
+    
+    if (!toBeJudgeSection) {
+        console.log('No se encontró la sección to-be-judge');
+        return;
     }
-    eye.style.left = (e.clientX - 25) + 'px';
-    eye.style.top = (e.clientY - 25) + 'px';
+    
+    // Mostrar/ocultar ojo cuando el cursor entra/sale de la sección
+    toBeJudgeSection.addEventListener('mouseenter', function() {
+        eye.style.opacity = '1';
+    });
+    
+    toBeJudgeSection.addEventListener('mouseleave', function() {
+        eye.style.opacity = '0';
+    });
+    
+    // Mover el ojo con el cursor
+    document.addEventListener('mousemove', function(e) {
+        eye.style.left = (e.clientX - 25) + 'px';
+        eye.style.top = (e.clientY - 25) + 'px';
+    });
 });
 </script>
