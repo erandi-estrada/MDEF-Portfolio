@@ -108,111 +108,26 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-.eye-follower {
+#debug-eye {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
     z-index: 10000;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    display: block;
-}
-
-.eye {
-    width: 100%;
-    height: 100%;
-    background: #000;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid #333;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-}
-
-.pupil {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-
-.eye-visible {
-    opacity: 1 !important;
-}
-
-/* Efecto de brillo para hacerlo más visible */
-.eye::after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 12px;
-    height: 12px;
-    background: rgba(255,255,255,0.4);
-    border-radius: 50%;
+    pointer-events: none;
 }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('👁️ Iniciando ojo seguidor...');
-    
-    // Crear el ojo
-    const eyeContainer = document.createElement('div');
-    eyeContainer.className = 'eye-follower';
-    eyeContainer.innerHTML = '<div class="eye"><div class="pupil"></div></div>';
-    document.body.appendChild(eyeContainer);
-
-    const pupil = eyeContainer.querySelector('.pupil');
-    const toBeJudgeSection = document.getElementById('to-be-judge');
-    
-    if (!toBeJudgeSection) {
-        console.error('No se encontró la sección "to-be-judge"');
-        return;
+document.addEventListener('mousemove', function(e) {
+    let eye = document.getElementById('debug-eye');
+    if (!eye) {
+        eye = document.createElement('div');
+        eye.id = 'debug-eye';
+        document.body.appendChild(eye);
     }
-    
-    console.log('✅ Sección encontrada, ojo listo');
-    
-    // Detectar cuando el cursor entra/sale de la sección
-    toBeJudgeSection.addEventListener('mouseenter', function() {
-        console.log('🎯 Cursor entró - mostrando ojo');
-        eyeContainer.classList.add('eye-visible');
-    });
-    
-    toBeJudgeSection.addEventListener('mouseleave', function() {
-        console.log('🚪 Cursor salió - ocultando ojo');
-        eyeContainer.classList.remove('eye-visible');
-    });
-    
-    // Mover el ojo inmediatamente con el cursor
-    document.addEventListener('mousemove', function(e) {
-        if (eyeContainer.classList.contains('eye-visible')) {
-            // Posicionar el ojo exactamente en el cursor
-            eyeContainer.style.left = (e.clientX - 30) + 'px';
-            eyeContainer.style.top = (e.clientY - 30) + 'px';
-            
-            // Mover la pupila para que mire hacia el centro del ojo
-            const eyeRect = eyeContainer.getBoundingClientRect();
-            const eyeCenterX = eyeRect.left + 30;
-            const eyeCenterY = eyeRect.top + 30;
-            
-            const deltaX = e.clientX - eyeCenterX;
-            const deltaY = e.clientY - eyeCenterY;
-            const distance = Math.min(Math.sqrt(deltaX * deltaX + deltaY * deltaY), 12);
-            
-            const angle = Math.atan2(deltaY, deltaX);
-            const moveX = Math.cos(angle) * distance;
-            const moveY = Math.sin(angle) * distance;
-            
-            pupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
-        }
-    });
+    eye.style.left = (e.clientX - 25) + 'px';
+    eye.style.top = (e.clientY - 25) + 'px';
 });
 </script>
-
