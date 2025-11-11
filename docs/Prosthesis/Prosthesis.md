@@ -108,31 +108,41 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-#simple-eye {
+#eye-emoji {
     position: fixed;
-    font-size: 30px;
-    z-index: 99999; /* MUY ALTO */
+    font-size: 35px;
+    z-index: 10000;
     pointer-events: none;
-    opacity: 1;
-    color: red; /* Color forzado */
-    font-weight: bold;
-    background: rgba(255,255,0,0.5); /* Fondo amarillo para debug */
-    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Sombra para mejor visibilidad */
 }
 </style>
 
 <script>
-// Versión con texto en lugar de emoji
 document.addEventListener('mousemove', function(e) {
-    let eye = document.getElementById('simple-eye');
+    let eye = document.getElementById('eye-emoji');
     if (!eye) {
         eye = document.createElement('div');
-        eye.id = 'simple-eye';
-        eye.textContent = 'OYE'; // Texto en lugar de emoji
+        eye.id = 'eye-emoji';
+        eye.textContent = '👁️';
         document.body.appendChild(eye);
-        console.log('📝 Ojo de texto creado');
     }
-    eye.style.left = (e.clientX - 15) + 'px';
-    eye.style.top = (e.clientY - 15) + 'px';
+    
+    // Verificar si estamos en la sección "to-be-judge"
+    const toBeJudgeSection = document.getElementById('to-be-judge');
+    const isInSection = toBeJudgeSection && 
+                       e.clientX >= toBeJudgeSection.getBoundingClientRect().left &&
+                       e.clientX <= toBeJudgeSection.getBoundingClientRect().right &&
+                       e.clientY >= toBeJudgeSection.getBoundingClientRect().top &&
+                       e.clientY <= toBeJudgeSection.getBoundingClientRect().bottom;
+    
+    if (isInSection) {
+        eye.style.opacity = '1';
+        eye.style.left = (e.clientX - 18) + 'px';
+        eye.style.top = (e.clientY - 18) + 'px';
+    } else {
+        eye.style.opacity = '0';
+    }
 });
 </script>
