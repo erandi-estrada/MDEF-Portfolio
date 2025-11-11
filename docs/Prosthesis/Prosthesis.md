@@ -108,29 +108,31 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-#eye-emoji {
+#simple-eye {
     position: fixed;
-    font-size: 40px; /* Más grande */
-    z-index: 10000;
+    font-size: 30px;
+    z-index: 99999; /* MUY ALTO */
     pointer-events: none;
-    opacity: 1; /* Siempre visible para debug */
-    background: yellow; /* Fondo para ver el área */
-    padding: 5px;
+    opacity: 1;
+    color: red; /* Color forzado */
+    font-weight: bold;
+    background: rgba(255,255,0,0.5); /* Fondo amarillo para debug */
+    padding: 10px;
 }
 </style>
 
 <script>
-// Código simple con emoji
+// Versión con texto en lugar de emoji
 document.addEventListener('mousemove', function(e) {
-    let eye = document.getElementById('eye-emoji');
+    let eye = document.getElementById('simple-eye');
     if (!eye) {
         eye = document.createElement('div');
-        eye.id = 'eye-emoji';
-        eye.textContent = '👁️';
+        eye.id = 'simple-eye';
+        eye.textContent = 'OYE'; // Texto en lugar de emoji
         document.body.appendChild(eye);
-        console.log('👁️ Emoji creado');
+        console.log('📝 Ojo de texto creado');
     }
-    eye.style.left = (e.clientX - 20) + 'px';
-    eye.style.top = (e.clientY - 20) + 'px';
+    eye.style.left = (e.clientX - 15) + 'px';
+    eye.style.top = (e.clientY - 15) + 'px';
 });
 </script>
