@@ -20,7 +20,7 @@ Join me as I navigate the projects, collaborations, and discoveries that defined
 <a href="Prosthesis/Prosthesis" class="card">
   <img src="images/prosthesis.jpg" alt="Prosthesis">
   <h3>Prosthesis</h3>
-  <p>Exploring assistive technologies and wearable devices.</p>
+  <p>A research on extensions that question what it means to be human in a hybrid world.</p>
 </a>
 
 <a href="project/project/" class="card">
