@@ -112,63 +112,58 @@ In the end, being the observer felt just as exposed as being observed.
     position: fixed;
     width: 60px;
     height: 60px;
-    background: radial-gradient(circle at 30% 30%, #444, #000);
+    background: RED; /* TEMPORAL: Rojo para ver si se crea */
     border-radius: 50%;
     z-index: 10000;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border: 3px solid #222;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-}
-
-#surveillance-eye::before {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: radial-gradient(circle at 35% 35%, #fff, #aaa);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-
-#surveillance-eye::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: rgba(255,255,255,0.4);
-    border-radius: 50%;
-    top: 15px;
-    left: 15px;
+    opacity: 1; /* TEMPORAL: Siempre visible para debug */
+    border: 3px solid #000;
 }
 </style>
 
 <script>
-// El mismo JavaScript de arriba
-document.addEventListener('DOMContentLoaded', function() {
-    const eye = document.createElement('div');
-    eye.id = 'surveillance-eye';
-    document.body.appendChild(eye);
+// DEBUG: Verificar que el script se ejecuta
+console.log('🚨 SCRIPT EJECUTÁNDOSE');
 
+// Crear el ojo INMEDIATAMENTE (sin esperar DOMContentLoaded)
+const eye = document.createElement('div');
+eye.id = 'surveillance-eye';
+eye.innerHTML = '👁️'; // Texto temporal para ver si se crea
+document.body.appendChild(eye);
+
+console.log('✅ Ojo creado:', eye);
+
+// Mover el ojo con el cursor (SIEMPRE, para debug)
+document.addEventListener('mousemove', function(e) {
+    eye.style.left = (e.clientX - 30) + 'px';
+    eye.style.top = (e.clientY - 30) + 'px';
+    console.log('🖱️ Moviendo ojo a:', e.clientX, e.clientY);
+});
+
+// Verificar la sección después de que cargue la página
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📄 DOM cargado');
+    
     const toBeJudgeSection = document.getElementById('to-be-judge');
+    console.log('🔍 Buscando sección:', toBeJudgeSection);
     
-    if (!toBeJudgeSection) return;
+    if (!toBeJudgeSection) {
+        console.error('❌ NO se encontró to-be-judge');
+        return;
+    }
     
+    console.log('✅ Sección encontrada');
+    
+    // Mostrar/ocultar ojo cuando el cursor entra/sale
     toBeJudgeSection.addEventListener('mouseenter', function() {
+        console.log('🎯 Cursor ENTRÓ en la sección');
         eye.style.opacity = '1';
+        eye.style.background = 'GREEN'; // Cambiar color para confirmar
     });
     
     toBeJudgeSection.addEventListener('mouseleave', function() {
+        console.log('🚪 Cursor SALIÓ de la sección');
         eye.style.opacity = '0';
-    });
-    
-    document.addEventListener('mousemove', function(e) {
-        eye.style.left = (e.clientX - 30) + 'px';
-        eye.style.top = (e.clientY - 30) + 'px';
     });
 });
 </script>
