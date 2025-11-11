@@ -360,12 +360,13 @@ In the end, being the observer felt just as exposed as being observed.
     font-size: 40px;
     z-index: 10000;
     pointer-events: none;
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.3s ease;
+    opacity: 1;
+    padding: 5px;
 }
 </style>
 
 <script>
+// Código simple con emoji - SOLO CAMBIÉ ESTO
 document.addEventListener('mousemove', function(e) {
     let eye = document.getElementById('eye-emoji');
     if (!eye) {
@@ -375,25 +376,16 @@ document.addEventListener('mousemove', function(e) {
         document.body.appendChild(eye);
     }
 
-    // Verificar si el cursor está en la sección "to-be-judge"
-    const toBeJudgeSection = document.getElementById('to-be-judge');
-    let isInSection = false;
+    // SOLO ESTAS 4 LÍNEAS NUEVAS
+    const section = document.getElementById('to-be-judge');
+    const rect = section.getBoundingClientRect();
+    const inSection = e.clientX >= rect.left && e.clientX <= rect.right && 
+                     e.clientY >= rect.top && e.clientY <= rect.bottom;
 
-    if (toBeJudgeSection) {
-        const rect = toBeJudgeSection.getBoundingClientRect();
-        isInSection = e.clientX >= rect.left && 
-                     e.clientX <= rect.right &&
-                     e.clientY >= rect.top && 
-                     e.clientY <= rect.bottom;
-    }
-
-    // Mostrar u ocultar el ojo
-    if (isInSection) {
-        eye.style.opacity = '1';
+    // Mover el ojo solo si está en la sección
+    if (inSection) {
         eye.style.left = (e.clientX - 20) + 'px';
         eye.style.top = (e.clientY - 20) + 'px';
-    } else {
-        eye.style.opacity = '0';
     }
 });
 </script>
@@ -405,7 +397,7 @@ document.addEventListener('mousemove', function(e) {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2025 19:35:34 UTC">November 11, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 11, 2025 19:39:36 UTC">November 11, 2025</span>
     
   </small>
 </div>
