@@ -114,7 +114,6 @@ In the end, being the observer felt just as exposed as being observed.
     z-index: 10000;
     pointer-events: none;
     opacity: 1; /* Siempre visible para debug */
-    background: yellow; /* Fondo para ver el área */
     padding: 5px;
 }
 </style>
