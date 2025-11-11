@@ -110,16 +110,15 @@ In the end, being the observer felt just as exposed as being observed.
 <style>
 #eye-emoji {
     position: fixed;
-    font-size: 40px; /* Más grande */
+    font-size: 40px;
     z-index: 10000;
     pointer-events: none;
-    opacity: 1; /* Siempre visible para debug */
-    padding: 5px;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease;
 }
 </style>
 
 <script>
-// Código simple con emoji
 document.addEventListener('mousemove', function(e) {
     let eye = document.getElementById('eye-emoji');
     if (!eye) {
@@ -127,9 +126,27 @@ document.addEventListener('mousemove', function(e) {
         eye.id = 'eye-emoji';
         eye.textContent = '👁️';
         document.body.appendChild(eye);
-        console.log('👁️ Emoji creado');
     }
-    eye.style.left = (e.clientX - 20) + 'px';
-    eye.style.top = (e.clientY - 20) + 'px';
+    
+    // Verificar si el cursor está en la sección "to-be-judge"
+    const toBeJudgeSection = document.getElementById('to-be-judge');
+    let isInSection = false;
+    
+    if (toBeJudgeSection) {
+        const rect = toBeJudgeSection.getBoundingClientRect();
+        isInSection = e.clientX >= rect.left && 
+                     e.clientX <= rect.right &&
+                     e.clientY >= rect.top && 
+                     e.clientY <= rect.bottom;
+    }
+    
+    // Mostrar u ocultar el ojo
+    if (isInSection) {
+        eye.style.opacity = '1';
+        eye.style.left = (e.clientX - 20) + 'px';
+        eye.style.top = (e.clientY - 20) + 'px';
+    } else {
+        eye.style.opacity = '0';
+    }
 });
-</script>  solo quiero este solo que el fondo sea transparente
+</script>
