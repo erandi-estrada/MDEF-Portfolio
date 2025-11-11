@@ -16,7 +16,7 @@ A prosthesis is not only an addition, it is a negotiation, between the body and 
 </p>
 
 <p style="text-align: justify;">
-Each piece became a small experiment in relation and transformation. Through [BookGrip](#bookgrip), I relearned slowness, the intelligence of holding, of pausing, of thinking with the body. Through [Listening Extensions](#listening-extensions), I imagined new ways of connecting to non-human rhythms, becoming part-plant, part-signal, part-ear. Through [To Be Judged](#to-be-judge), I experienced the tension of surveillance, how the gaze of another can become an extension of both control and vulnerability.
+Each piece became a small experiment in relation and transformation. Through <a href="#bookgrip">BookGrip</a>, I relearned slowness, the intelligence of holding, of pausing, of thinking with the body. Through <a href="#listening-extensions">Listening Extensions</a>, I imagined new ways of connecting to non-human rhythms, becoming part-plant, part-signal, part-ear. Through <a href="#to-be-judge">To Be Judged</a>, I experienced the tension of surveillance, how the gaze of another can become an extension of both control and vulnerability.
 </p>
 
 <p style="text-align: justify;">
@@ -94,13 +94,15 @@ I became the one who watched. The constant awareness of being seen changed the w
     </p>
   </div>
 
+  <h3>Subject</h3>
+
   <!-- Párrafos del medio con imagen -->
   <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
     <img src="../../images/hide.jpg" 
          alt="Hide" 
          style="width: 35%; border-radius: 8px; object-fit: cover; height: auto;">
     
-  <div style="width: 65%; text-align: justify;">
+    <div style="width: 65%; text-align: justify;">
       <p style="text-align: justify;">
         The surveillance started at 12:17. Some of us went to the rooftop, but the sun was too bright so after a few minutes I went downstairs, trying to shake off the feeling of being observed. My original plan was to stay still, to be boring and pretend it was a normal day, but the discomfort pushed me to move. So I ran away from my detective and wandered without direction, not knowing where to go.
       </p>
@@ -112,7 +114,7 @@ I became the one who watched. The constant awareness of being seen changed the w
 
   <!-- Último párrafo - texto completo -->
   <div style="text-align: justify;">
-    <p>
+    <p style="text-align: justify;">
       Even though I know my phone listens, that cameras watch from every corner, that I'm theoretically being observed all the time, knowing that someone was actually following me was completely different. It made the abstract fear tangible. I felt panic rise in moments I couldn't explain, and even after I lost my Detective, I couldn't shake the feeling of being pursued.
     </p>
   </div>
@@ -125,7 +127,7 @@ As the detective, I tried to be discreet, to observe without being noticed, but 
 </p>
 
 <p style="text-align: justify;">
-Since the subject suggested continuing the game, I followed once more. At 14:01, she joined a group on the terrace with Ayal, Max, and Armin, excited to try a new game of Armin’s. She ate some pasta, and throughout those moments, she shared music, recommending “Cosa sarà” for sad moments, “Cumbia japonesa” for cooking, “Ella baila sola” for parties, and choosing bossa nova to manage stress, even though she confessed she would have preferred techno. Each song revealed a different version of the subject, a small window into her moods, habits, and how she navigates everyday life.
+Since the subject suggested continuing the game, I followed once more. At 14:01, she joined a group on the terrace with Ayal, Max, and Armin, excited to try a new game of Armin's. She ate some pasta, and throughout those moments, she shared music, recommending "Cosa sarà" for sad moments, "Cumbia japonesa" for cooking, "Ella baila sola" for parties, and choosing bossa nova to manage stress, even though she confessed she would have preferred techno. Each song revealed a different version of the subject, a small window into her moods, habits, and how she navigates everyday life.
 </p>
 
 <p style="text-align: justify;">
@@ -135,16 +137,25 @@ Trying not to be obvious, I attempted to stay discreet, but the subject quickly 
 <style>
 #eye-emoji {
     position: fixed;
-    font-size: 40px; /* Más grande */
+    font-size: 40px;
     z-index: 10000;
     pointer-events: none;
-    opacity: 1; /* Siempre visible para debug */
+    opacity: 1;
     padding: 5px;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 </style>
 
 <script>
-// Código simple con emoji
 document.addEventListener('mousemove', function(e) {
     let eye = document.getElementById('eye-emoji');
     if (!eye) {
@@ -152,9 +163,8 @@ document.addEventListener('mousemove', function(e) {
         eye.id = 'eye-emoji';
         eye.textContent = '👁️';
         document.body.appendChild(eye);
-        console.log('👁️ Emoji creado');
     }
     eye.style.left = (e.clientX - 20) + 'px';
     eye.style.top = (e.clientY - 20) + 'px';
 });
-</script> 
+</script>
