@@ -69,21 +69,31 @@ the way I existed.
 
 <h3>Subject</h3>
 
-<div style="display: flex; align-items: center; gap: 2rem; margin: 2rem 0;">
-  <img src="../../images/hide.jpg" 
-       alt="Hide" 
-       style="width: 45%; border-radius: 8px; object-fit: cover;">
-  
-  <div style="width: 55%; text-align: justify;">
-   <p>
-    My prototype was my own hair. I usually keep it tied with a hair clip, but this time I let it loose, it became my prosthesis, my shield. The idea of someone following me made me feel anxious, so hiding from my own Detective behind myself seemed like the only thing I could control.
+<div style="margin: 2rem 0;">
+  <!-- Primer párrafo - texto completo -->
+  <div style="text-align: justify; margin-bottom: 2rem;">
+    <p>
+      My prototype was my own hair. I usually keep it tied with a hair clip, but this time I let it loose, it became my prosthesis, my shield. The idea of someone following me made me feel anxious, so hiding from my own Detective behind myself seemed like the only thing I could control.
+    </p>
+  </div>
 
-    The surveillance started at 12:17. Some of us went to the rooftop, but the sun was too bright so after a few minutes I went downstairs, trying to shake off the feeling of being observed. My original plan was to stay still, to be boring and pretend it was a normal day, but the discomfort pushed me to move. So I ran away from my detective and wandered without direction, not knowing where to go.
-
-    By 12:40, I returned to IAAC and ran into Ale and Aishwarya. We walked together toward the coffee shop and then back to the classroom.
-
-    Even though I know my phone listens, that cameras watch from every corner, that I’m theoretically being observed all the time, knowing that someone was actually following me was completely different. It made the abstract fear tangible. I felt panic rise in moments I couldn’t explain, and even after I lost my Detective, I couldn’t shake the feeling of being pursued.
-  </p>
+  <!-- Segundo párrafo - imagen y texto lado a lado -->
+  <div style="display: flex; align-items: flex-start; gap: 2rem;">
+    <img src="../../images/hide.jpg" 
+         alt="Hide" 
+         style="width: 45%; border-radius: 8px; object-fit: cover;">
+    
+    <div style="width: 55%; text-align: justify;">
+      <p>
+        The surveillance started at 12:17. Some of us went to the rooftop, but the sun was too bright so after a few minutes I went downstairs, trying to shake off the feeling of being observed. My original plan was to stay still, to be boring and pretend it was a normal day, but the discomfort pushed me to move. So I ran away from my detective and wandered without direction, not knowing where to go.
+      </p>
+      <p>
+        By 12:40, I returned to IAAC and ran into Ale and Aishwarya. We walked together toward the coffee shop and then back to the classroom.
+      </p>
+      <p>
+        Even though I know my phone listens, that cameras watch from every corner, that I'm theoretically being observed all the time, knowing that someone was actually following me was completely different. It made the abstract fear tangible. I felt panic rise in moments I couldn't explain, and even after I lost my Detective, I couldn't shake the feeling of being pursued.
+      </p>
+    </div>
   </div>
 </div>
 
