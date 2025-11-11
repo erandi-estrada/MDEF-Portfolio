@@ -108,29 +108,29 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-/* TEMPORAL: Círculo rojo para debug */
-#debug-eye {
+#eye-emoji {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    background: red;
-    border-radius: 50%;
+    font-size: 40px; /* Más grande */
     z-index: 10000;
     pointer-events: none;
+    opacity: 1; /* Siempre visible para debug */
+    background: yellow; /* Fondo para ver el área */
+    padding: 5px;
 }
 </style>
 
 <script>
-// Código SIMPLE que SÍ funciona
+// Código simple con emoji
 document.addEventListener('mousemove', function(e) {
-    let eye = document.getElementById('debug-eye');
+    let eye = document.getElementById('eye-emoji');
     if (!eye) {
         eye = document.createElement('div');
-        eye.id = 'debug-eye';
+        eye.id = 'eye-emoji';
+        eye.textContent = '👁️';
         document.body.appendChild(eye);
-        console.log('🔴 Círculo rojo creado');
+        console.log('👁️ Emoji creado');
     }
-    eye.style.left = (e.clientX - 25) + 'px';
-    eye.style.top = (e.clientY - 25) + 'px';
+    eye.style.left = (e.clientX - 20) + 'px';
+    eye.style.top = (e.clientY - 20) + 'px';
 });
 </script>
