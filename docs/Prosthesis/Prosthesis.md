@@ -108,41 +108,38 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-#debug-eye {
+#eye-emoji {
     position: fixed;
     font-size: 30px;
     z-index: 10000;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 </style>
 
 <script>
+// Crear el ojo inmediatamente
+const eye = document.createElement('div');
+eye.id = 'eye-emoji';
+eye.textContent = '👁️';
+eye.style.opacity = '0'; // Inicialmente invisible
+document.body.appendChild(eye);
+
+// Mover el ojo y controlar visibilidad
 document.addEventListener('mousemove', function(e) {
-    let eye = document.getElementById('debug-eye');
-    if (!eye) {
-        eye = document.createElement('div');
-        eye.id = 'debug-eye';
-        eye.textContent = '👁️'; // Solo el emoji del ojo
-        document.body.appendChild(eye);
-        console.log('✅ Ojo emoji creado');
-    }
+    // Mover siempre el ojo
+    eye.style.left = (e.clientX - 15) + 'px';
+    eye.style.top = (e.clientY - 15) + 'px';
     
     // Verificar si estamos en la sección "to-be-judge"
     const toBeJudgeSection = document.getElementById('to-be-judge');
-    const isInSection = toBeJudgeSection && 
-                       e.clientX >= toBeJudgeSection.getBoundingClientRect().left &&
-                       e.clientX <= toBeJudgeSection.getBoundingClientRect().right &&
-                       e.clientY >= toBeJudgeSection.getBoundingClientRect().top &&
-                       e.clientY <= toBeJudgeSection.getBoundingClientRect().bottom;
-    
-    if (isInSection) {
-        eye.style.opacity = '1';
-        eye.style.left = (e.clientX - 15) + 'px';
-        eye.style.top = (e.clientY - 15) + 'px';
-    } else {
-        eye.style.opacity = '0';
+    if (toBeJudgeSection) {
+        const rect = toBeJudgeSection.getBoundingClientRect();
+        const isInSection = e.clientX >= rect.left && 
+                           e.clientX <= rect.right &&
+                           e.clientY >= rect.top && 
+                           e.clientY <= rect.bottom;
+        
+        eye.style.opacity = isInSection ? '1' : '0';
     }
 });
 </script>
