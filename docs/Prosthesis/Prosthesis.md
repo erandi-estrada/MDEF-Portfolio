@@ -108,38 +108,29 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-#eye-emoji {
+/* TEMPORAL: Círculo rojo para debug */
+#debug-eye {
     position: fixed;
-    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
     z-index: 10000;
     pointer-events: none;
 }
 </style>
 
 <script>
-// Crear el ojo inmediatamente
-const eye = document.createElement('div');
-eye.id = 'eye-emoji';
-eye.textContent = '👁️';
-eye.style.opacity = '0'; // Inicialmente invisible
-document.body.appendChild(eye);
-
-// Mover el ojo y controlar visibilidad
+// Código SIMPLE que SÍ funciona
 document.addEventListener('mousemove', function(e) {
-    // Mover siempre el ojo
-    eye.style.left = (e.clientX - 15) + 'px';
-    eye.style.top = (e.clientY - 15) + 'px';
-    
-    // Verificar si estamos en la sección "to-be-judge"
-    const toBeJudgeSection = document.getElementById('to-be-judge');
-    if (toBeJudgeSection) {
-        const rect = toBeJudgeSection.getBoundingClientRect();
-        const isInSection = e.clientX >= rect.left && 
-                           e.clientX <= rect.right &&
-                           e.clientY >= rect.top && 
-                           e.clientY <= rect.bottom;
-        
-        eye.style.opacity = isInSection ? '1' : '0';
+    let eye = document.getElementById('debug-eye');
+    if (!eye) {
+        eye = document.createElement('div');
+        eye.id = 'debug-eye';
+        document.body.appendChild(eye);
+        console.log('🔴 Círculo rojo creado');
     }
+    eye.style.left = (e.clientX - 25) + 'px';
+    eye.style.top = (e.clientY - 25) + 'px';
 });
 </script>
