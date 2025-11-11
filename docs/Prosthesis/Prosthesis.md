@@ -108,49 +108,41 @@ In the end, being the observer felt just as exposed as being observed.
 </p>
 
 <style>
-#surveillance-eye {
+#debug-eye {
     position: fixed;
-    font-size: 30px; /* Tamaño del emoji */
+    font-size: 30px;
     z-index: 10000;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra para mejor visibilidad */
 }
 </style>
 
 <script>
-console.log('👁️ Iniciando ojo de vigilancia...');
-
-// Crear el ojo (solo el emoji)
-const eye = document.createElement('div');
-eye.id = 'surveillance-eye';
-eye.textContent = '👁️'; // Solo el emoji
-document.body.appendChild(eye);
-
-console.log('✅ Ojo emoji creado');
-
-// Mover el ojo con el cursor
 document.addEventListener('mousemove', function(e) {
-    eye.style.left = (e.clientX - 15) + 'px'; // Ajuste para centrar el emoji
-    eye.style.top = (e.clientY - 15) + 'px';
-});
-
-// Controlar visibilidad en la sección
-document.addEventListener('DOMContentLoaded', function() {
-    const toBeJudgeSection = document.getElementById('to-be-judge');
-    
-    if (!toBeJudgeSection) {
-        console.error('❌ No se encontró la sección to-be-judge');
-        return;
+    let eye = document.getElementById('debug-eye');
+    if (!eye) {
+        eye = document.createElement('div');
+        eye.id = 'debug-eye';
+        eye.textContent = '👁️'; // Solo el emoji del ojo
+        document.body.appendChild(eye);
+        console.log('✅ Ojo emoji creado');
     }
     
-    toBeJudgeSection.addEventListener('mouseenter', function() {
-        eye.style.opacity = '1';
-    });
+    // Verificar si estamos en la sección "to-be-judge"
+    const toBeJudgeSection = document.getElementById('to-be-judge');
+    const isInSection = toBeJudgeSection && 
+                       e.clientX >= toBeJudgeSection.getBoundingClientRect().left &&
+                       e.clientX <= toBeJudgeSection.getBoundingClientRect().right &&
+                       e.clientY >= toBeJudgeSection.getBoundingClientRect().top &&
+                       e.clientY <= toBeJudgeSection.getBoundingClientRect().bottom;
     
-    toBeJudgeSection.addEventListener('mouseleave', function() {
+    if (isInSection) {
+        eye.style.opacity = '1';
+        eye.style.left = (e.clientX - 15) + 'px';
+        eye.style.top = (e.clientY - 15) + 'px';
+    } else {
         eye.style.opacity = '0';
-    });
+    }
 });
 </script>
