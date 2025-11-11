@@ -110,12 +110,11 @@ In the end, being the observer felt just as exposed as being observed.
 <style>
 #eye-emoji {
     position: fixed;
-    font-size: 35px;
+    font-size: 40px;
     z-index: 10000;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Sombra para mejor visibilidad */
 }
 </style>
 
@@ -139,8 +138,8 @@ document.addEventListener('mousemove', function(e) {
     
     if (isInSection) {
         eye.style.opacity = '1';
-        eye.style.left = (e.clientX - 18) + 'px';
-        eye.style.top = (e.clientY - 18) + 'px';
+        eye.style.left = (e.clientX - 20) + 'px';
+        eye.style.top = (e.clientY - 20) + 'px';
     } else {
         eye.style.opacity = '0';
     }
