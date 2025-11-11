@@ -110,59 +110,46 @@ In the end, being the observer felt just as exposed as being observed.
 <style>
 #surveillance-eye {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    background: RED; /* TEMPORAL: Rojo para ver si se crea */
-    border-radius: 50%;
+    font-size: 30px; /* Tamaño del emoji */
     z-index: 10000;
     pointer-events: none;
-    opacity: 1; /* TEMPORAL: Siempre visible para debug */
-    border: 3px solid #000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra para mejor visibilidad */
 }
 </style>
 
 <script>
-// DEBUG: Verificar que el script se ejecuta
-console.log('🚨 SCRIPT EJECUTÁNDOSE');
+console.log('👁️ Iniciando ojo de vigilancia...');
 
-// Crear el ojo INMEDIATAMENTE (sin esperar DOMContentLoaded)
+// Crear el ojo (solo el emoji)
 const eye = document.createElement('div');
 eye.id = 'surveillance-eye';
-eye.innerHTML = '👁️'; // Texto temporal para ver si se crea
+eye.textContent = '👁️'; // Solo el emoji
 document.body.appendChild(eye);
 
-console.log('✅ Ojo creado:', eye);
+console.log('✅ Ojo emoji creado');
 
-// Mover el ojo con el cursor (SIEMPRE, para debug)
+// Mover el ojo con el cursor
 document.addEventListener('mousemove', function(e) {
-    eye.style.left = (e.clientX - 30) + 'px';
-    eye.style.top = (e.clientY - 30) + 'px';
-    console.log('🖱️ Moviendo ojo a:', e.clientX, e.clientY);
+    eye.style.left = (e.clientX - 15) + 'px'; // Ajuste para centrar el emoji
+    eye.style.top = (e.clientY - 15) + 'px';
 });
 
-// Verificar la sección después de que cargue la página
+// Controlar visibilidad en la sección
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('📄 DOM cargado');
-    
     const toBeJudgeSection = document.getElementById('to-be-judge');
-    console.log('🔍 Buscando sección:', toBeJudgeSection);
     
     if (!toBeJudgeSection) {
-        console.error('❌ NO se encontró to-be-judge');
+        console.error('❌ No se encontró la sección to-be-judge');
         return;
     }
     
-    console.log('✅ Sección encontrada');
-    
-    // Mostrar/ocultar ojo cuando el cursor entra/sale
     toBeJudgeSection.addEventListener('mouseenter', function() {
-        console.log('🎯 Cursor ENTRÓ en la sección');
         eye.style.opacity = '1';
-        eye.style.background = 'GREEN'; // Cambiar color para confirmar
     });
     
     toBeJudgeSection.addEventListener('mouseleave', function() {
-        console.log('🚪 Cursor SALIÓ de la sección');
         eye.style.opacity = '0';
     });
 });
