@@ -117,6 +117,7 @@ In the end, being the observer felt just as exposed as being observed.
     transition: all 0.15s ease;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
     opacity: 0;
+    display: block;
 }
 
 .eye {
@@ -156,6 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const pupil = eyeContainer.querySelector('.pupil');
     const toBeJudgeSection = document.getElementById('to-be-judge');
+    
+    // Verificar que la sección existe
+    if (!toBeJudgeSection) {
+        console.error('No se encontró el elemento con id "to-be-judge"');
+        return;
+    }
     
     // Detectar cuando el cursor entra/sale de la sección
     toBeJudgeSection.addEventListener('mouseenter', function() {
