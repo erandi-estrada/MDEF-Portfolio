@@ -74,8 +74,8 @@ I became the one who watched. The constant awareness of being seen changed the w
     </p>
   </div>
 
-  <!-- Segundo párrafo - imagen más pequeña para igualar altura -->
-  <div style="display: flex; align-items: flex-start; gap: 2rem;">
+  <!-- Párrafos del medio con imagen -->
+  <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
     <img src="../../images/hide.jpg" 
          alt="Hide" 
          style="width: 35%; border-radius: 8px; object-fit: cover; height: auto;">
@@ -87,10 +87,14 @@ I became the one who watched. The constant awareness of being seen changed the w
       <p>
         By 12:40, I returned to IAAC and ran into Ale and Aishwarya. We walked together toward the coffee shop and then back to the classroom.
       </p>
-      <p>
-        Even though I know my phone listens, that cameras watch from every corner, that I'm theoretically being observed all the time, knowing that someone was actually following me was completely different. It made the abstract fear tangible. I felt panic rise in moments I couldn't explain, and even after I lost my Detective, I couldn't shake the feeling of being pursued.
-      </p>
     </div>
+  </div>
+
+  <!-- Último párrafo - texto completo -->
+  <div style="text-align: justify;">
+    <p>
+      Even though I know my phone listens, that cameras watch from every corner, that I'm theoretically being observed all the time, knowing that someone was actually following me was completely different. It made the abstract fear tangible. I felt panic rise in moments I couldn't explain, and even after I lost my Detective, I couldn't shake the feeling of being pursued.
+    </p>
   </div>
 </div>
 
