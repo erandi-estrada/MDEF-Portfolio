@@ -106,37 +106,30 @@ body {
     width: 100% !important;
 }
 
-/* ===== LAYOUT DE DOS COLUMNAS PARA EL ENCABEZADO ===== */
+/* ===== ENCABEZADO COMPACTO ===== */
 .header-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-    margin: 2rem 0 3rem 0;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto 0 auto !important;
     padding: 0 2rem;
 }
 
-/* Título grande a la izquierda */
 .main-title {
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
     font-weight: 800 !important;
     color: #2d3748 !important;
     text-align: left !important;
-    margin: 0 !important;
+    margin: 0 0 0.5rem 0 !important;
     line-height: 1.1 !important;
 }
 
-/* Texto de bienvenida a la derecha */
+/* Texto de bienvenida más ancho */
 .welcome-text {
     color: #4a5568 !important;
     font-size: 1.1rem !important;
     line-height: 1.7 !important;
     text-align: left !important;
-    margin: 0 !important;
-    padding-top: 0.5rem !important;
+    margin: 0 0 1rem 0 !important;
+    max-width: 900px !important; /* 3/4 del espacio */
 }
 
 .welcome-text p {
@@ -144,45 +137,38 @@ body {
     margin-bottom: 1rem !important;
 }
 
-/* ===== LÍNEA SEPARADORA ===== */
+/* ===== LÍNEA SEPARADORA PEGADA ===== */
 hr {
     border: none !important;
     height: 1px !important;
     background: #e8dfd0 !important;
-    margin: 2rem auto !important;
+    margin: 0 auto 2rem auto !important;
     max-width: 1200px !important;
     width: calc(100% - 4rem) !important;
 }
 
-/* ===== TÍTULO "MY JOURNEY" ===== */
-.journey-title {
-    color: #2d3748 !important;
-    font-size: 1.8rem !important;
-    font-weight: 600 !important;
-    text-align: left !important;
-    margin: 2rem 0 1rem 0 !important;
+/* ===== CARRUSEL DE TARJETAS (ESTILO IMAGEN) ===== */
+.cards-carousel {
+    display: flex;
+    gap: 0 !important; /* Sin espacio entre tarjetas */
+    margin: 0 !important;
+    padding: 0 2rem !important;
     max-width: 1200px;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding: 0 2rem !important;
+    overflow-x: auto; /* Scroll horizontal */
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
-/* ===== TARJETAS CON COLORES DIFERENTES AL HOVER ===== */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-    justify-content: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
+.cards-carousel::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 
-.cards-grid .card {
+.cards-carousel .card {
     background: white;
-    border-radius: 16px;
+    border-radius: 0 !important; /* Sin bordes redondeados */
     overflow: hidden;
     transition: all 0.4s ease;
     border: none;
@@ -190,16 +176,19 @@ hr {
     color: inherit;
     display: block;
     position: relative;
-    height: 300px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Más altas */
+    min-width: 300px; /* Ancho fijo para el carrusel */
+    flex-shrink: 0; /* No se encogen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 0 !important;
 }
 
-.cards-grid .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+.cards-carousel .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.cards-grid .card img {
+.cards-carousel .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -207,56 +196,56 @@ hr {
     transition: all 0.4s ease;
 }
 
-/* Colores diferentes para cada tarjeta al hover */
-.cards-grid .card:nth-child(1):hover::before {
-    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9) 0%, rgba(33, 150, 243, 0.8) 100%) !important;
+/* Colores diferentes para cada tarjeta al hover (más sutiles) */
+.cards-carousel .card:nth-child(1):hover::before {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.85) 0%, rgba(33, 150, 243, 0.75) 100%) !important;
 }
 
-.cards-grid .card:nth-child(2):hover::before {
-    background: linear-gradient(135deg, rgba(156, 39, 176, 0.9) 0%, rgba(186, 104, 200, 0.8) 100%) !important;
+.cards-carousel .card:nth-child(2):hover::before {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.85) 0%, rgba(186, 104, 200, 0.75) 100%) !important;
 }
 
-.cards-grid .card:nth-child(3):hover::before {
-    background: linear-gradient(135deg, rgba(0, 150, 136, 0.9) 0%, rgba(77, 182, 172, 0.8) 100%) !important;
+.cards-carousel .card:nth-child(3):hover::before {
+    background: linear-gradient(135deg, rgba(0, 150, 136, 0.85) 0%, rgba(77, 182, 172, 0.75) 100%) !important;
 }
 
-.cards-grid .card:nth-child(4):hover::before {
-    background: linear-gradient(135deg, rgba(255, 87, 34, 0.9) 0%, rgba(255, 138, 101, 0.8) 100%) !important;
+.cards-carousel .card:nth-child(4):hover::before {
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.85) 0%, rgba(255, 138, 101, 0.75) 100%) !important;
 }
 
-.cards-grid .card:nth-child(5):hover::before {
-    background: linear-gradient(135deg, rgba(121, 85, 72, 0.9) 0%, rgba(161, 136, 127, 0.8) 100%) !important;
+.cards-carousel .card:nth-child(5):hover::before {
+    background: linear-gradient(135deg, rgba(121, 85, 72, 0.85) 0%, rgba(161, 136, 127, 0.75) 100%) !important;
 }
 
-.cards-grid .card:nth-child(6):hover::before {
-    background: linear-gradient(135deg, rgba(96, 125, 139, 0.9) 0%, rgba(144, 164, 174, 0.8) 100%) !important;
+.cards-carousel .card:nth-child(6):hover::before {
+    background: linear-gradient(135deg, rgba(96, 125, 139, 0.85) 0%, rgba(144, 164, 174, 0.75) 100%) !important;
 }
 
 /* Superposición base */
-.cards-grid .card::before {
+.cards-carousel .card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: all 0.4s ease;
     z-index: 1;
 }
 
-.cards-grid .card:hover::before {
+.cards-carousel .card:hover::before {
     opacity: 0.9;
 }
 
-.cards-grid .card:hover img {
+.cards-carousel .card:hover img {
     transform: scale(1.05);
 }
 
 /* Texto de tarjetas centrado */
-.cards-grid .card h3,
-.cards-grid .card p {
+.cards-carousel .card h3,
+.cards-carousel .card p {
     position: absolute;
     left: 0;
     width: 100%;
@@ -264,75 +253,84 @@ hr {
     z-index: 2;
     opacity: 0;
     transition: all 0.4s ease;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     color: #ffffff !important;
 }
 
-.cards-grid .card h3 {
-    top: 35%;
-    font-size: 1.5rem !important;
+.cards-carousel .card h3 {
+    top: 40%;
+    font-size: 1.4rem !important;
     font-weight: 700;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.cards-grid .card p {
-    top: 55%;
-    font-size: 1rem !important;
-    line-height: 1.6;
+.cards-carousel .card p {
+    top: 60%;
+    font-size: 0.95rem !important;
+    line-height: 1.5;
     margin: 0;
     font-weight: 400;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.cards-grid .card:hover h3,
-.cards-grid .card:hover p {
+.cards-carousel .card:hover h3,
+.cards-carousel .card:hover p {
     opacity: 1;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 968px) {
     .header-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
+        padding: 0 1.5rem;
     }
     
     .main-title {
-        font-size: 3rem !important;
-        text-align: center !important;
+        font-size: 2.8rem !important;
     }
     
     .welcome-text {
-        text-align: center !important;
+        max-width: 100% !important;
     }
     
-    .welcome-text p {
-        text-align: center !important;
+    .cards-carousel {
+        padding: 0 1.5rem !important;
+    }
+    
+    .cards-carousel .card {
+        height: 350px;
+        min-width: 280px;
     }
 }
 
 @media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-    
-    .cards-grid .card {
-        height: 250px;
-    }
-    
     .header-container {
         padding: 0 1rem;
     }
     
     .main-title {
-        font-size: 2.5rem !important;
+        font-size: 2.2rem !important;
     }
     
-    .journey-title {
+    .welcome-text {
+        font-size: 1rem !important;
+    }
+    
+    .cards-carousel {
         padding: 0 1rem !important;
+    }
+    
+    .cards-carousel .card {
+        height: 300px;
+        min-width: 250px;
+    }
+    
+    .cards-carousel .card h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .cards-carousel .card p {
+        font-size: 0.85rem !important;
     }
     
     hr {
