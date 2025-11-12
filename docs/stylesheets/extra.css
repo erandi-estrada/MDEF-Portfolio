@@ -1,40 +1,27 @@
-/* ===== ELIMINAR COMPLETAMENTE EL HEADER ORIGINAL ===== */
-.md-header {
-    display: none !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-}
-
-/* ===== ELIMINAR MÁRGENES Y ESPACIOS ===== */
+/* ===== FONDO Y TIPOGRAFÍA ===== */
 body {
     margin: 0 !important;
     padding: 0 !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    font-family: 'Be Vietnam', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-.md-container {
-    margin: 0 !important;
-    padding: 0 !important;
-    padding-top: 0 !important;
-}
-
-/* ===== MENÚ PEGADO ARRIBA ===== */
+/* ===== MENÚ MÁS ELEGANTE ===== */
 .menu-container {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 0.5rem 0 !important;
-    background-color: #ffffff !important;
-    border-bottom: 1px solid #e0e0e0 !important;
-    position: relative !important;
+    padding: 1rem 0 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    position: sticky !important;
     top: 0 !important;
+    z-index: 1000 !important;
 }
 
-/* Menú centrado */
 .custom-header-menu {
     display: flex !important;
     align-items: center !important;
@@ -44,95 +31,69 @@ body {
 }
 
 .custom-header-menu a {
-    color: #000000 !important;
+    color: #2d3748 !important;
     text-decoration: none !important;
     font-weight: 600 !important;
-    font-size: 1rem !important;
-    padding: 0.3rem 0 !important;
+    font-size: 1.1rem !important;
+    padding: 0.5rem 0 !important;
     border-bottom: 2px solid transparent !important;
-    transition: all 0.2s ease !important;
-    white-space: nowrap !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
 }
 
 .custom-header-menu a:hover {
     color: #1976d2 !important;
-    border-bottom-color: #1976d2 !important;
 }
 
-/* ===== OCULTAR TODOS LOS ELEMENTOS NO DESEADOS ===== */
-.md-sidebar {
-    display: none !important;
+.custom-header-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1976d2;
+    transition: width 0.3s ease;
 }
 
-.md-sidebar--primary {
-    display: none !important;
+.custom-header-menu a:hover::after {
+    width: 100%;
 }
 
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-.md-tabs {
-    display: none !important;
-}
-
-.md-header__button {
-    display: none !important;
-}
-
-/* ===== CONTENIDO PRINCIPAL - SIN ESPACIO ARRIBA ===== */
-.md-main {
-    flex: 1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-top: 0 !important;
-}
-
-.md-main__inner {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-.md-content {
-    margin: 0 auto !important;
-    padding: 0 !important;
-    max-width: 900px !important;
-    width: 100% !important;
-}
-
+/* ===== CONTENIDO PRINCIPAL ===== */
 .md-content__inner {
     margin: 0 auto !important;
-    padding: 1rem 1rem 2rem 1rem !important;
-    max-width: 800px !important;
+    padding: 3rem 1rem 4rem 1rem !important;
+    max-width: 1000px !important;
     width: 100% !important;
 }
 
-/* ===== TARJETAS CON IMAGEN COMPLETA Y VELO ===== */
+/* ===== TARJETAS REDISEÑADAS ===== */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin: 4rem 0;
     justify-content: center;
 }
 
 .cards-grid .card {
     background: white;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    transition: all 0.4s ease;
-    border: 1px solid #e0e0e0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
     text-decoration: none;
     color: inherit;
     display: block;
     position: relative;
-    height: 280px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    height: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .cards-grid .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .cards-grid .card img {
@@ -140,10 +101,11 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
+    filter: brightness(0.9);
 }
 
-/* Velo blanco y texto */
+/* Efecto de superposición mejorado */
 .cards-grid .card::before {
     content: '';
     position: absolute;
@@ -151,19 +113,26 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0);
+    background: linear-gradient(
+        135deg,
+        rgba(25, 118, 210, 0.9) 0%,
+        rgba(156, 39, 176, 0.8) 100%
+    );
+    opacity: 0;
     transition: all 0.4s ease;
     z-index: 1;
 }
 
 .cards-grid .card:hover::before {
-    background: rgba(255, 255, 255, 0.9);
+    opacity: 0.95;
 }
 
 .cards-grid .card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    filter: brightness(0.7);
 }
 
+/* Texto de las tarjetas */
 .cards-grid .card h3,
 .cards-grid .card p {
     position: absolute;
@@ -173,40 +142,86 @@ body {
     z-index: 2;
     opacity: 0;
     transition: all 0.4s ease;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
+    transform: translateY(20px);
 }
 
 .cards-grid .card h3 {
-    top: 40%;
-    transform: translateY(-50%);
-    color: #000000;
-    font-size: 1.4rem;
+    top: 35%;
+    color: #ffffff;
+    font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cards-grid .card p {
-    top: 60%;
-    transform: translateY(-50%);
-    color: #333333;
-    font-size: 1rem;
-    line-height: 1.5;
+    top: 55%;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin: 0;
+    font-weight: 400;
 }
 
 .cards-grid .card:hover h3,
 .cards-grid .card:hover p {
     opacity: 1;
+    transform: translateY(0);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== TÍTULOS Y TEXTO ===== */
+.md-content h1 {
+    color: #1a202c !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+    background: linear-gradient(135deg, #1976d2, #7b1fa2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.md-content h2 {
+    color: #2d3748 !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin: 3rem 0 1.5rem 0 !important;
+    text-align: center !important;
+}
+
+.md-content p {
+    color: #4a5568 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.7 !important;
+    text-align: center !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ===== LÍNEA SEPARADORA ===== */
+hr {
+    border: none !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, #1976d2, transparent) !important;
+    margin: 3rem auto !important;
+    max-width: 200px !important;
+}
+
+/* ===== RESPONSIVE MEJORADO ===== */
 @media (max-width: 768px) {
     .cards-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+    
+    .cards-grid .card {
+        height: 280px;
         max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        gap: 1rem;
+        margin: 0 auto;
     }
     
     .custom-header-menu {
@@ -214,15 +229,19 @@ body {
     }
     
     .custom-header-menu a {
-        font-size: 0.9rem !important;
-        padding: 0.2rem 0 !important;
+        font-size: 1rem !important;
     }
     
-    .menu-container {
-        padding: 0.4rem 0 !important;
+    .md-content h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .md-content p {
+        font-size: 1.1rem !important;
+        padding: 0 1rem !important;
     }
     
     .md-content__inner {
-        padding: 0.8rem 0.5rem 1rem 0.5rem !important;
+        padding: 2rem 1rem 3rem 1rem !important;
     }
 }
