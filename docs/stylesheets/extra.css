@@ -49,7 +49,7 @@ body {
     color: #2d3748 !important;
     text-decoration: none !important;
     font-weight: 600 !important;
-    font-size: 1.2rem !important;
+    font-size: 1rem !important; /* Tamaño normal */
     padding: 0.5rem 0 !important;
     border-bottom: 2px solid transparent !important;
     transition: all 0.3s ease !important;
@@ -182,7 +182,7 @@ body {
 
 .cards-grid .card h3 {
     top: 35%;
-    font-size: 1.8rem; /* Más grande */
+    font-size: 1.5rem !important; /* Tamaño normal */
     font-weight: 700;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -190,7 +190,7 @@ body {
 
 .cards-grid .card p {
     top: 55%;
-    font-size: 1.2rem; /* Más grande */
+    font-size: 1rem !important; /* Tamaño normal */
     line-height: 1.6;
     margin: 0;
     font-weight: 400;
@@ -202,31 +202,32 @@ body {
     opacity: 1;
 }
 
-/* ===== TÍTULOS Y TEXTO ===== */
+/* ===== TÍTULOS Y TEXTO - ALINEACIÓN IZQUIERDA Y JUSTIFICADA ===== */
 .md-content h1 {
     color: #2d3748 !important;
-    font-size: 2.8rem !important;
+    font-size: 2rem !important; /* Tamaño normal */
     font-weight: 700 !important;
-    text-align: center !important;
+    text-align: left !important; /* Alineado a la izquierda */
     margin-bottom: 1.5rem !important;
 }
 
 .md-content h2 {
     color: #2d3748 !important;
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important; /* Tamaño normal */
     font-weight: 600 !important;
     margin: 2rem 0 1rem 0 !important;
-    text-align: center !important;
+    text-align: left !important; /* Alineado a la izquierda */
 }
 
 .md-content p {
     color: #4a5568 !important;
-    font-size: 1.2rem !important;
-    line-height: 1.7 !important;
-    text-align: center !important;
-    max-width: 800px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    font-size: 1rem !important; /* Tamaño normal */
+    line-height: 1.6 !important;
+    text-align: justify !important; /* Texto justificado */
+    max-width: 100% !important; /* Ocupa todo el ancho */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-justify: inter-word !important;
 }
 
 /* ===== LÍNEA SEPARADORA ===== */
@@ -234,8 +235,9 @@ hr {
     border: none !important;
     height: 1px !important;
     background: #e8dfd0 !important;
-    margin: 2rem auto !important;
-    max-width: 300px !important;
+    margin: 2rem 0 !important; /* Sin centrado */
+    max-width: none !important;
+    width: 100% !important;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -256,16 +258,20 @@ hr {
     }
     
     .custom-header-menu a {
-        font-size: 1.1rem !important;
+        font-size: 0.9rem !important;
     }
     
     .md-content h1 {
-        font-size: 2.2rem !important;
+        font-size: 1.8rem !important;
+    }
+    
+    .md-content h2 {
+        font-size: 1.3rem !important;
     }
     
     .md-content p {
-        font-size: 1.1rem !important;
-        padding: 0 1rem !important;
+        font-size: 0.95rem !important;
+        text-align: left !important; /* En móvil mejor left que justify */
     }
     
     .md-content__inner {
@@ -283,10 +289,10 @@ hr {
     }
     
     .cards-grid .card h3 {
-        font-size: 1.5rem !important;
+        font-size: 1.3rem !important;
     }
     
     .cards-grid .card p {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
     }
 }
