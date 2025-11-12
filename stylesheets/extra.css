@@ -1,23 +1,42 @@
-/* ===== FONDO CREMITA ===== */
+/* ===== ELIMINAR COMPLETAMENTE EL HEADER ORIGINAL ===== */
+.md-header {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+/* ===== ELIMINAR MÁRGENES Y ESPACIOS ===== */
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background: #fefaf0 !important; /* Color cremita suave */
+    background: #fefaf0 !important; /* Fondo cremita */
     font-family: 'Be Vietnam', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-/* ===== MENÚ SIMPLE Y LIMPIO ===== */
+.md-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* ===== MENÚ PEGADO ARRIBA ===== */
 .menu-container {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 1.5rem 0 !important;
-    background: #fefaf0 !important;
+    padding: 1rem 0 !important;
+    background-color: #fefaf0 !important; /* Mismo fondo cremita */
     border-bottom: 1px solid #e8dfd0 !important;
+    position: relative !important;
+    top: 0 !important;
 }
 
+/* Menú centrado */
 .custom-header-menu {
     display: flex !important;
     align-items: center !important;
@@ -41,11 +60,44 @@ body {
     border-bottom-color: #1976d2 !important;
 }
 
-/* ===== CONTENIDO MÁS ANCHO ===== */
+/* ===== OCULTAR TODOS LOS ELEMENTOS NO DESEADOS ===== */
+.md-sidebar {
+    display: none !important;
+}
+
+.md-sidebar--primary {
+    display: none !important;
+}
+
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+.md-tabs {
+    display: none !important;
+}
+
+.md-header__button {
+    display: none !important;
+}
+
+/* ===== CONTENIDO PRINCIPAL - SIN ESPACIO ARRIBA ===== */
+.md-main {
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.md-main__inner {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 .md-content {
     margin: 0 auto !important;
     padding: 0 !important;
-    max-width: 1200px !important; /* Mucho más ancho */
+    max-width: 1200px !important; /* Más ancho */
     width: 100% !important;
 }
 
