@@ -274,7 +274,7 @@ body {
 }
 
 .cards-carousel .card h3 {
-    top: 45% !important; /* Más arriba */
+    top: 35% !important; /* Más arriba */
     font-size: 1.5rem !important;
     font-weight: 700;
     margin: 0 0 0.8rem 0 !important; /* Más espacio entre título y descripción */
@@ -283,7 +283,7 @@ body {
 }
 
 .cards-carousel .card p {
-    top: 35% !important; /* Más centrado */
+    top: 40% !important; /* Más centrado */
     font-size: 1rem !important;
     line-height: 1.4;
     margin: 0;
@@ -294,7 +294,7 @@ body {
 .cards-carousel .card:hover h3,
 .cards-carousel .card:hover p {
     opacity: 1;
-}
+} 
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1480px) {
