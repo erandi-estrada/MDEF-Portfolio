@@ -109,7 +109,7 @@ body {
 /* ===== ENCABEZADO COMPACTO ===== */
 .header-container {
     max-width: 1200px;
-    margin: 1rem auto 0 auto !important;
+    margin: 1rem auto 3rem auto !important;
     padding: 0 2rem;
 }
 
@@ -129,7 +129,7 @@ body {
     line-height: 1.7 !important;
     text-align: left !important;
     margin: 0 0 1rem 0 !important;
-    max-width: 900px !important; /* 3/4 del espacio */
+    max-width: 900px !important;
 }
 
 .welcome-text p {
@@ -137,38 +137,39 @@ body {
     margin-bottom: 1rem !important;
 }
 
-/* ===== LÍNEA SEPARADORA PEGADA ===== */
-hr {
-    border: none !important;
-    height: 1px !important;
-    background: #e8dfd0 !important;
-    margin: 0 auto 2rem auto !important;
-    max-width: 1200px !important;
-    width: calc(100% - 4rem) !important;
+/* ===== CARRUSEL INTERACTIVO ===== */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 0 2rem;
 }
 
-/* ===== CARRUSEL DE TARJETAS (ESTILO IMAGEN) ===== */
 .cards-carousel {
     display: flex;
-    gap: 0 !important; /* Sin espacio entre tarjetas */
+    gap: 0 !important;
     margin: 0 !important;
-    padding: 0 2rem !important;
-    max-width: 1200px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow-x: auto; /* Scroll horizontal */
+    padding: 0 !important;
+    overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+}
+
+.cards-carousel:active {
+    cursor: grabbing;
 }
 
 .cards-carousel::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
 }
 
+/* Todas las tarjetas del mismo tamaño */
 .cards-carousel .card {
     background: white;
-    border-radius: 0 !important; /* Sin bordes redondeados */
+    border-radius: 0 !important;
     overflow: hidden;
     transition: all 0.4s ease;
     border: none;
@@ -176,11 +177,12 @@ hr {
     color: inherit;
     display: block;
     position: relative;
-    height: 400px; /* Más altas */
-    min-width: 300px; /* Ancho fijo para el carrusel */
-    flex-shrink: 0; /* No se encogen */
+    height: 400px;
+    min-width: 320px; /* Mismo ancho para todas */
+    flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-right: 0 !important;
+    scroll-snap-align: start;
 }
 
 .cards-carousel .card:hover {
@@ -196,7 +198,7 @@ hr {
     transition: all 0.4s ease;
 }
 
-/* Colores diferentes para cada tarjeta al hover (más sutiles) */
+/* Colores diferentes para cada tarjeta al hover */
 .cards-carousel .card:nth-child(1):hover::before {
     background: linear-gradient(135deg, rgba(25, 118, 210, 0.85) 0%, rgba(33, 150, 243, 0.75) 100%) !important;
 }
@@ -279,6 +281,57 @@ hr {
     opacity: 1;
 }
 
+/* Efectos de desplazamiento con el cursor */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-container::before {
+    left: 2rem;
+    background: linear-gradient(90deg, rgba(254, 250, 240, 0.8) 0%, transparent 100%);
+}
+
+.carousel-container::after {
+    right: 2rem;
+    background: linear-gradient(270deg, rgba(254, 250, 240, 0.8) 0%, transparent 100%);
+}
+
+.carousel-container:hover::before,
+.carousel-container:hover::after {
+    opacity: 1;
+}
+
+/* Indicadores de scroll (puntos) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #1976d2;
+    transform: scale(1.2);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 968px) {
     .header-container {
@@ -293,13 +346,26 @@ hr {
         max-width: 100% !important;
     }
     
-    .cards-carousel {
-        padding: 0 1.5rem !important;
+    .carousel-container {
+        padding: 0 1.5rem;
     }
     
     .cards-carousel .card {
         height: 350px;
         min-width: 280px;
+    }
+    
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 60px;
+    }
+    
+    .carousel-container::before {
+        left: 1.5rem;
+    }
+    
+    .carousel-container::after {
+        right: 1.5rem;
     }
 }
 
@@ -316,8 +382,8 @@ hr {
         font-size: 1rem !important;
     }
     
-    .cards-carousel {
-        padding: 0 1rem !important;
+    .carousel-container {
+        padding: 0 1rem;
     }
     
     .cards-carousel .card {
@@ -333,7 +399,16 @@ hr {
         font-size: 0.85rem !important;
     }
     
-    hr {
-        width: calc(100% - 2rem) !important;
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 40px;
+    }
+    
+    .carousel-container::before {
+        left: 1rem;
+    }
+    
+    .carousel-container::after {
+        right: 1rem;
     }
 }
