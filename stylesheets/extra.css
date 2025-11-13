@@ -272,7 +272,7 @@ body {
 }
 
 .cards-carousel .card h3 {
-    top: 35% !important; /* Más arriba */
+    top: 30% !important; /* Más arriba */
     font-size: 1.5rem !important;
     font-weight: 700;
     margin: 0 0 0.8rem 0 !important; /* Más espacio entre título y descripción */
