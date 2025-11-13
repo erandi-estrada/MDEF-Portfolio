@@ -257,7 +257,7 @@ body {
     transform: scale(1.05);
 }
 
-/* TEXTO CENTRADO VERTICAL Y HORIZONTALMENTE */
+/* TEXTO CENTRADO VERTICAL Y HORIZONTALMENTE CON MEJOR ESPACIADO */
 .cards-carousel .card h3,
 .cards-carousel .card p {
     position: absolute;
@@ -269,24 +269,25 @@ body {
     transition: all 0.4s ease;
     padding: 0 1.5rem;
     color: #ffffff !important;
-    transform: translateY(-50%);
 }
 
 .cards-carousel .card h3 {
-    top: 45% !important; /* Centrado vertical */
+    top: 40% !important; /* Más arriba */
     font-size: 1.5rem !important;
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 0.5rem 0 !important; /* Espacio abajo */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2 !important;
 }
 
 .cards-carousel .card p {
-    top: 60% !important; /* Centrado vertical */
+    top: 55% !important; /* Más separado del título */
     font-size: 1rem !important;
     line-height: 1.4;
     margin: 0;
     font-weight: 400;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding-top: 0.5rem !important; /* Espacio extra arriba */
 }
 
 .cards-carousel .card:hover h3,
