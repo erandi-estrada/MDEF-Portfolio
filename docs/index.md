@@ -15,10 +15,6 @@
 </div>
 
 <div class="carousel-container">
-    <!-- Zonas de desplazamiento automático -->
-    <div class="carousel-scroll-zone left" id="scrollLeft"></div>
-    <div class="carousel-scroll-zone right" id="scrollRight"></div>
-    
     <div class="cards-carousel" id="cardsCarousel">
         <a href="Prosthesis/Prosthesis" class="card">
             <img src="images/prosthesis.jpg" alt="Prosthesis">
@@ -59,56 +55,48 @@
 </div>
 
 <script>
-// Carrusel con desplazamiento automático al acercar el cursor
+// Carrusel automático continuo
 const carousel = document.getElementById('cardsCarousel');
-const scrollLeftZone = document.getElementById('scrollLeft');
-const scrollRightZone = document.getElementById('scrollRight');
 const cards = document.querySelectorAll('.cards-carousel .card');
-const cardWidth = cards[0].offsetWidth;
-let scrollInterval;
+const cardWidth = 350; // Mismo ancho que en CSS
 
-function scrollToNext() {
-    const currentScroll = carousel.scrollLeft;
-    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-    
-    if (currentScroll < maxScroll) {
-        carousel.scrollTo({
-            left: currentScroll + cardWidth,
-            behavior: 'smooth'
-        });
-    }
+// Duplicar las tarjetas para efecto infinito
+cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    carousel.appendChild(clone);
+});
+
+let autoScrollInterval;
+let currentScroll = 0;
+const scrollSpeed = 1; // Velocidad de desplazamiento (píxeles por frame)
+
+function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+        currentScroll += scrollSpeed;
+        carousel.scrollLeft = currentScroll;
+        
+        // Reiniciar scroll cuando llegue al final (efecto infinito)
+        if (currentScroll >= carousel.scrollWidth / 2) {
+            currentScroll = 0;
+            carousel.scrollLeft = 0;
+        }
+    }, 16); // ~60fps
 }
 
-function scrollToPrev() {
-    const currentScroll = carousel.scrollLeft;
-    
-    if (currentScroll > 0) {
-        carousel.scrollTo({
-            left: currentScroll - cardWidth,
-            behavior: 'smooth'
-        });
-    }
+function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
 }
 
-// Desplazamiento automático cuando el cursor está en las zonas
-scrollRightZone.addEventListener('mouseenter', () => {
-    scrollInterval = setInterval(scrollToNext, 1000); // Se mueve cada segundo
-});
+// Iniciar automáticamente al cargar la página
+startAutoScroll();
 
-scrollLeftZone.addEventListener('mouseenter', () => {
-    scrollInterval = setInterval(scrollToPrev, 1000);
-});
+// Pausar al hacer hover sobre el carrusel
+carousel.addEventListener('mouseenter', stopAutoScroll);
+carousel.addEventListener('mouseleave', startAutoScroll);
 
-// Detener el desplazamiento cuando el cursor sale
-scrollRightZone.addEventListener('mouseleave', () => {
-    clearInterval(scrollInterval);
+// También pausar al hacer hover sobre una tarjeta específica
+cards.forEach(card => {
+    card.addEventListener('mouseenter', stopAutoScroll);
+    card.addEventListener('mouseleave', startAutoScroll);
 });
-
-scrollLeftZone.addEventListener('mouseleave', () => {
-    clearInterval(scrollInterval);
-});
-
-// También desplazamiento con clic en las zonas (por si acaso)
-scrollRightZone.addEventListener('click', scrollToNext);
-scrollLeftZone.addEventListener('click', scrollToPrev);
 </script>
