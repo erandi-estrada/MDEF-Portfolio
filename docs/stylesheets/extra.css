@@ -106,47 +106,58 @@ body {
     width: 100% !important;
 }
 
-/* ===== ENCABEZADO SIN BORDES LATERALES ===== */
-.header-container {
-    max-width: none !important; /* Sin límite de ancho */
-    margin: 2rem 0 3rem 0 !important;
-    padding: 0 4rem !important; /* Más padding como Portfolio */
+/* ===== CONTENEDOR PRINCIPAL CON MISMO ANCHO QUE CARRUSEL ===== */
+.content-wrapper {
+    max-width: 1400px; /* Mismo ancho máximo para todo */
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Título más grande como Portfolio */
-.main-title {
-    font-size: 3.5rem !important; /* Más grande */
-    font-weight: 800 !important;
-    color: #2d3748 !important;
-    text-align: left !important;
-    margin: 0 0 1.5rem 0 !important; /* Más espacio abajo */
-    line-height: 1.1 !important;
+/* ===== ENCABEZADO CON MISMO ANCHO ===== */
+.header-container {
+    max-width: none !important;
+    margin: 2rem 0 3rem 0 !important;
     padding: 0 !important;
 }
 
-/* Texto de bienvenida justificado y más ancho */
+/* Título más grande */
+.main-title {
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    color: #2d3748 !important;
+    text-align: left !important;
+    margin: 0 0 1.5rem 0 !important;
+    line-height: 1.1 !important;
+    padding: 0 !important;
+    max-width: 1400px; /* Mismo ancho que carrusel */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Texto de bienvenida con MISMO ANCHO que carrusel */
 .welcome-text {
     color: #4a5568 !important;
-    font-size: 1.2rem !important; /* Un poco más grande */
+    font-size: 1.2rem !important;
     line-height: 1.7 !important;
-    text-align: justify !important; /* Texto justificado */
-    margin: 0 !important;
-    max-width: none !important;
+    text-align: justify !important;
+    margin: 0 auto !important; /* Centrado */
+    max-width: 1400px !important; /* MISMO ANCHO QUE CARRUSEL */
     text-justify: inter-word !important;
+    padding: 0 !important;
 }
 
 .welcome-text p {
-    text-align: justify !important; /* Párrafos justificados */
+    text-align: justify !important;
     margin-bottom: 1.5rem !important;
     text-justify: inter-word !important;
 }
 
-/* ===== CARRUSEL SIN BORDES LATERALES ===== */
+/* ===== CARRUSEL CON MISMO ANCHO QUE TEXTO ===== */
 .carousel-container {
     position: relative;
-    max-width: none !important; /* Sin límite de ancho */
-    margin: 0 0 4rem 0 !important; /* Sin márgenes laterales */
-    padding: 0 !important; /* Sin padding lateral */
+    max-width: 1400px !important; /* MISMO ANCHO QUE TEXTO */
+    margin: 0 auto 4rem auto !important; /* Centrado */
+    padding: 0 !important;
     overflow: hidden;
 }
 
@@ -160,6 +171,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: pointer;
+    width: 100%;
 }
 
 .cards-carousel::-webkit-scrollbar {
@@ -177,8 +189,8 @@ body {
     color: inherit;
     display: block;
     position: relative;
-    height: 400px; /* Misma altura para todas */
-    width: 380px !important; /* MISMO ANCHO FIJO PARA TODAS */
+    height: 400px;
+    width: 380px !important;
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-right: 0 !important;
@@ -282,17 +294,43 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1480px) {
+    .content-wrapper {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    
+    .main-title {
+        max-width: 1200px !important;
+    }
+    
+    .welcome-text {
+        max-width: 1200px !important;
+    }
+    
+    .carousel-container {
+        max-width: 1200px !important;
+    }
+}
+
 @media (max-width: 968px) {
-    .header-container {
-        padding: 0 2rem !important;
+    .content-wrapper {
+        max-width: 100%;
+        padding: 0 1.5rem;
     }
     
     .main-title {
         font-size: 2.8rem !important;
+        max-width: 100% !important;
     }
     
     .welcome-text {
         font-size: 1.1rem !important;
+        max-width: 100% !important;
+    }
+    
+    .carousel-container {
+        max-width: 100% !important;
     }
     
     .cards-carousel .card {
@@ -302,8 +340,8 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header-container {
-        padding: 0 1.5rem !important;
+    .content-wrapper {
+        padding: 0 1rem;
     }
     
     .main-title {
@@ -312,7 +350,7 @@ body {
     
     .welcome-text {
         font-size: 1rem !important;
-        text-align: left !important; /* En móvil mejor left que justify */
+        text-align: left !important;
     }
     
     .welcome-text p {
@@ -330,20 +368,5 @@ body {
     
     .cards-carousel .card p {
         font-size: 0.9rem !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-container {
-        padding: 0 1rem !important;
-    }
-    
-    .main-title {
-        font-size: 2rem !important;
-    }
-    
-    .cards-carousel .card {
-        height: 250px;
-        width: 240px !important;
     }
 }
