@@ -113,8 +113,9 @@ body {
     padding: 0 2rem;
 }
 
+/* Título más pequeño */
 .main-title {
-    font-size: 3.5rem !important;
+    font-size: 2.8rem !important; /* Reducido de 3.5rem */
     font-weight: 800 !important;
     color: #2d3748 !important;
     text-align: left !important;
@@ -137,12 +138,13 @@ body {
     margin-bottom: 1rem !important;
 }
 
-/* ===== CARRUSEL INTERACTIVO CON DESPLAZAMIENTO AUTOMÁTICO ===== */
+/* ===== CARRUSEL AUTOMÁTICO ===== */
 .carousel-container {
     position: relative;
     max-width: 1200px;
     margin: 0 auto 3rem auto;
     padding: 0 2rem;
+    overflow: hidden;
 }
 
 .cards-carousel {
@@ -150,19 +152,18 @@ body {
     gap: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: auto;
+    overflow-x: hidden; /* Ocultar scrollbar */
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: pointer;
-    scroll-snap-type: x mandatory;
 }
 
 .cards-carousel::-webkit-scrollbar {
     display: none;
 }
 
-/* Todas las tarjetas del mismo tamaño */
+/* Todas las tarjetas del MISMO tamaño */
 .cards-carousel .card {
     background: white;
     border-radius: 0 !important;
@@ -173,12 +174,11 @@ body {
     color: inherit;
     display: block;
     position: relative;
-    height: 400px;
-    min-width: 320px; /* Mismo ancho para todas */
+    height: 380px; /* Misma altura para todas */
+    width: 350px !important; /* MISMO ANCHO FIJO PARA TODAS */
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-right: 0 !important;
-    scroll-snap-align: start;
 }
 
 .cards-carousel .card:hover {
@@ -278,46 +278,6 @@ body {
     opacity: 1;
 }
 
-/* Áreas de detección para el desplazamiento automático */
-.carousel-scroll-zone {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    z-index: 3;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: #1976d2;
-    font-weight: bold;
-}
-
-.carousel-scroll-zone.left {
-    left: 2rem;
-    background: linear-gradient(90deg, rgba(25, 118, 210, 0.1) 0%, transparent 100%);
-}
-
-.carousel-scroll-zone.right {
-    right: 2rem;
-    background: linear-gradient(270deg, rgba(25, 118, 210, 0.1) 0%, transparent 100%);
-}
-
-.carousel-scroll-zone:hover {
-    opacity: 1;
-}
-
-.carousel-scroll-zone::after {
-    content: '‹';
-    position: absolute;
-}
-
-.carousel-scroll-zone.right::after {
-    content: '›';
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 968px) {
     .header-container {
@@ -325,7 +285,7 @@ body {
     }
     
     .main-title {
-        font-size: 2.8rem !important;
+        font-size: 2.2rem !important;
     }
     
     .welcome-text {
@@ -337,20 +297,8 @@ body {
     }
     
     .cards-carousel .card {
-        height: 350px;
-        min-width: 280px;
-    }
-    
-    .carousel-scroll-zone {
-        width: 60px;
-    }
-    
-    .carousel-scroll-zone.left {
-        left: 1.5rem;
-    }
-    
-    .carousel-scroll-zone.right {
-        right: 1.5rem;
+        height: 320px;
+        width: 280px !important;
     }
 }
 
@@ -360,7 +308,7 @@ body {
     }
     
     .main-title {
-        font-size: 2.2rem !important;
+        font-size: 2rem !important;
     }
     
     .welcome-text {
@@ -372,20 +320,8 @@ body {
     }
     
     .cards-carousel .card {
-        height: 300px;
-        min-width: 250px;
-    }
-    
-    .carousel-scroll-zone {
-        width: 40px;
-    }
-    
-    .carousel-scroll-zone.left {
-        left: 1rem;
-    }
-    
-    .carousel-scroll-zone.right {
-        right: 1rem;
+        height: 280px;
+        width: 240px !important;
     }
     
     .cards-carousel .card h3 {
