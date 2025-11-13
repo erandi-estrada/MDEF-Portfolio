@@ -263,6 +263,10 @@
 </div>
 
 <div class="carousel-container">
+    <!-- Zonas de desplazamiento automático -->
+    <div class="carousel-scroll-zone left" id="scrollLeft"></div>
+    <div class="carousel-scroll-zone right" id="scrollRight"></div>
+
     <div class="cards-carousel" id="cardsCarousel">
         <a href="Prosthesis/Prosthesis" class="card">
             <img src="images/prosthesis.jpg" alt="Prosthesis">
@@ -300,75 +304,61 @@
             <p>Design, experimentation, and material explorations.</p>
         </a>
     </div>
-
-    <div class="carousel-indicators" id="carouselIndicators">
-        <!-- Los indicadores se generan con JavaScript -->
-    </div>
 </div>
 
 <script>
-// Carrusel interactivo
+// Carrusel con desplazamiento automático al acercar el cursor
 const carousel = document.getElementById('cardsCarousel');
-const indicatorsContainer = document.getElementById('carouselIndicators');
+const scrollLeftZone = document.getElementById('scrollLeft');
+const scrollRightZone = document.getElementById('scrollRight');
 const cards = document.querySelectorAll('.cards-carousel .card');
-let isDragging = false;
-let startX;
-let scrollLeft;
+const cardWidth = cards[0].offsetWidth;
+let scrollInterval;
 
-// Crear indicadores
-cards.forEach((_, index) => {
-    const indicator = document.createElement('div');
-    indicator.className = 'carousel-indicator' + (index === 0 ? ' active' : '');
-    indicator.addEventListener('click', () => {
-        scrollToCard(index);
-    });
-    indicatorsContainer.appendChild(indicator);
-});
+function scrollToNext() {
+    const currentScroll = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
 
-// Scroll suave al hacer clic en indicadores
-function scrollToCard(index) {
-    const card = cards[index];
-    carousel.scrollTo({
-        left: card.offsetLeft - carousel.offsetLeft,
-        behavior: 'smooth'
-    });
+    if (currentScroll < maxScroll) {
+        carousel.scrollTo({
+            left: currentScroll + cardWidth,
+            behavior: 'smooth'
+        });
+    }
 }
 
-// Actualizar indicadores activos
-carousel.addEventListener('scroll', () => {
-    const scrollPosition = carousel.scrollLeft + carousel.offsetWidth / 2;
-    const activeIndex = Math.floor(scrollPosition / cards[0].offsetWidth);
+function scrollToPrev() {
+    const currentScroll = carousel.scrollLeft;
 
-    document.querySelectorAll('.carousel-indicator').forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === activeIndex);
-    });
+    if (currentScroll > 0) {
+        carousel.scrollTo({
+            left: currentScroll - cardWidth,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Desplazamiento automático cuando el cursor está en las zonas
+scrollRightZone.addEventListener('mouseenter', () => {
+    scrollInterval = setInterval(scrollToNext, 1000); // Se mueve cada segundo
 });
 
-// Drag para desplazamiento
-carousel.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-    carousel.style.cursor = 'grabbing';
+scrollLeftZone.addEventListener('mouseenter', () => {
+    scrollInterval = setInterval(scrollToPrev, 1000);
 });
 
-carousel.addEventListener('mouseleave', () => {
-    isDragging = false;
-    carousel.style.cursor = 'grab';
+// Detener el desplazamiento cuando el cursor sale
+scrollRightZone.addEventListener('mouseleave', () => {
+    clearInterval(scrollInterval);
 });
 
-carousel.addEventListener('mouseup', () => {
-    isDragging = false;
-    carousel.style.cursor = 'grab';
+scrollLeftZone.addEventListener('mouseleave', () => {
+    clearInterval(scrollInterval);
 });
 
-carousel.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carousel.scrollLeft = scrollLeft - walk;
-});
+// También desplazamiento con clic en las zonas (por si acaso)
+scrollRightZone.addEventListener('click', scrollToNext);
+scrollLeftZone.addEventListener('click', scrollToPrev);
 </script>
                 
                   
@@ -378,7 +368,7 @@ carousel.addEventListener('mousemove', (e) => {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2025 09:51:33 UTC">November 13, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2025 10:15:02 UTC">November 13, 2025</span>
     
   </small>
 </div>
