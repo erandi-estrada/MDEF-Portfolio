@@ -259,7 +259,7 @@ body {
     transform: scale(1.07);
 }
 
-/* TEXTO MÁS CENTRADO VERTICALMENTE */
+/* TEXTO MEJOR ESPACIADO Y CENTRADO */
 .cards-carousel .card h3,
 .cards-carousel .card p {
     position: absolute;
@@ -268,33 +268,35 @@ body {
     text-align: center !important;
     z-index: 2;
     opacity: 0;
-    transition: all 0.4s ease;
-    padding: 0 1.5rem;
+    transition: all 0.7s ease;
+    padding: 0 2rem; /* Más padding lateral */
     color: #ffffff !important;
+    box-sizing: border-box;
 }
 
 .cards-carousel .card h3 {
-    top: 35% !important; /* Más arriba */
-    font-size: 1.5rem !important;
+    top: 30% !important; /* Más arriba */
+    font-size: 1.6rem !important; /* Un poco más grande */
     font-weight: 700;
-    margin: 0 0 0.8rem 0 !important; /* Más espacio entre título y descripción */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    line-height: 1.2 !important;
+    margin: 0 !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    line-height: 1.3 !important;
 }
 
 .cards-carousel .card p {
-    top: 40% !important; /* Más centrado */
-    font-size: 1rem !important;
-    line-height: 1.4;
+    top: 50% !important; /* Más separado del título */
+    font-size: 1.1rem !important; /* Un poco más grande */
+    line-height: 1.5 !important; /* Mejor interlineado */
     margin: 0;
     font-weight: 400;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    padding-top: 1rem !important; /* Espacio extra arriba del párrafo */
 }
 
 .cards-carousel .card:hover h3,
 .cards-carousel .card:hover p {
     opacity: 1;
-} 
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1480px) {
