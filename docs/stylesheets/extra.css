@@ -106,44 +106,47 @@ body {
     width: 100% !important;
 }
 
-/* ===== ENCABEZADO COMPACTO ===== */
+/* ===== ENCABEZADO SIN BORDES LATERALES ===== */
 .header-container {
-    max-width: 1200px;
-    margin: 1rem auto 3rem auto !important;
-    padding: 0 2rem;
+    max-width: none !important; /* Sin límite de ancho */
+    margin: 2rem 0 3rem 0 !important;
+    padding: 0 4rem !important; /* Más padding como Portfolio */
 }
 
-/* Título más pequeño */
+/* Título más grande como Portfolio */
 .main-title {
-    font-size: 2.8rem !important; /* Reducido de 3.5rem */
+    font-size: 3.5rem !important; /* Más grande */
     font-weight: 800 !important;
     color: #2d3748 !important;
     text-align: left !important;
-    margin: 0 0 0.5rem 0 !important;
+    margin: 0 0 1.5rem 0 !important; /* Más espacio abajo */
     line-height: 1.1 !important;
+    padding: 0 !important;
 }
 
-/* Texto de bienvenida más ancho */
+/* Texto de bienvenida justificado y más ancho */
 .welcome-text {
     color: #4a5568 !important;
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important; /* Un poco más grande */
     line-height: 1.7 !important;
-    text-align: left !important;
-    margin: 0 0 1rem 0 !important;
-    max-width: 900px !important;
+    text-align: justify !important; /* Texto justificado */
+    margin: 0 !important;
+    max-width: none !important;
+    text-justify: inter-word !important;
 }
 
 .welcome-text p {
-    text-align: left !important;
-    margin-bottom: 1rem !important;
+    text-align: justify !important; /* Párrafos justificados */
+    margin-bottom: 1.5rem !important;
+    text-justify: inter-word !important;
 }
 
-/* ===== CARRUSEL AUTOMÁTICO ===== */
+/* ===== CARRUSEL SIN BORDES LATERALES ===== */
 .carousel-container {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto 3rem auto;
-    padding: 0 2rem;
+    max-width: none !important; /* Sin límite de ancho */
+    margin: 0 0 4rem 0 !important; /* Sin márgenes laterales */
+    padding: 0 !important; /* Sin padding lateral */
     overflow: hidden;
 }
 
@@ -152,7 +155,7 @@ body {
     gap: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: hidden; /* Ocultar scrollbar */
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -174,8 +177,8 @@ body {
     color: inherit;
     display: block;
     position: relative;
-    height: 380px; /* Misma altura para todas */
-    width: 350px !important; /* MISMO ANCHO FIJO PARA TODAS */
+    height: 400px; /* Misma altura para todas */
+    width: 380px !important; /* MISMO ANCHO FIJO PARA TODAS */
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-right: 0 !important;
@@ -258,7 +261,7 @@ body {
 
 .cards-carousel .card h3 {
     top: 40%;
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
     font-weight: 700;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -266,7 +269,7 @@ body {
 
 .cards-carousel .card p {
     top: 60%;
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
     line-height: 1.5;
     margin: 0;
     font-weight: 400;
@@ -281,54 +284,66 @@ body {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 968px) {
     .header-container {
-        padding: 0 1.5rem;
+        padding: 0 2rem !important;
     }
     
     .main-title {
-        font-size: 2.2rem !important;
+        font-size: 2.8rem !important;
     }
     
     .welcome-text {
-        max-width: 100% !important;
-    }
-    
-    .carousel-container {
-        padding: 0 1.5rem;
+        font-size: 1.1rem !important;
     }
     
     .cards-carousel .card {
-        height: 320px;
-        width: 280px !important;
+        height: 350px;
+        width: 320px !important;
     }
 }
 
 @media (max-width: 768px) {
     .header-container {
-        padding: 0 1rem;
+        padding: 0 1.5rem !important;
+    }
+    
+    .main-title {
+        font-size: 2.3rem !important;
+    }
+    
+    .welcome-text {
+        font-size: 1rem !important;
+        text-align: left !important; /* En móvil mejor left que justify */
+    }
+    
+    .welcome-text p {
+        text-align: left !important;
+    }
+    
+    .cards-carousel .card {
+        height: 300px;
+        width: 280px !important;
+    }
+    
+    .cards-carousel .card h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .cards-carousel .card p {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 1rem !important;
     }
     
     .main-title {
         font-size: 2rem !important;
     }
     
-    .welcome-text {
-        font-size: 1rem !important;
-    }
-    
-    .carousel-container {
-        padding: 0 1rem;
-    }
-    
     .cards-carousel .card {
-        height: 280px;
+        height: 250px;
         width: 240px !important;
-    }
-    
-    .cards-carousel .card h3 {
-        font-size: 1.2rem !important;
-    }
-    
-    .cards-carousel .card p {
-        font-size: 0.85rem !important;
     }
 }
