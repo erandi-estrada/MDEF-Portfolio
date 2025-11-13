@@ -10,7 +10,7 @@
     <div class="header-container">
         <h1 class="main-title">MDEF Projects</h1>
         <div class="welcome-text">
-            <p>Welcome to my journey through the <strong>Master in Design for Emergent Futures (MDEF)</strong>, a program by Fab Lab Barcelona and IAAC. This space documents the ideas, experiments, and reflections that shaped my learning process, from early prototypes to collective explorations.</p>
+           <p>Welcome to my journey through the <a href="https://mdef.fablabbcn.org/" target="_blank" style="font-weight: bold; color: #1976d2; text-decoration: none;">Master in Design for Emergent Futures (MDEF)</a>, a program by Fab Lab Barcelona and IAAC. This space documents the ideas, experiments, and reflections that shaped my learning process, from early prototypes to collective explorations.</p>
             <p>Join me as I navigate the projects, collaborations, and discoveries that defined this stage of my path as a designer.</p>
         </div>
     </div>
