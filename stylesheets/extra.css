@@ -120,9 +120,9 @@ body {
     padding: 0 !important;
 }
 
-/* Título más grande */
+/* Título más pequeño */
 .main-title {
-    font-size: 3.5rem !important;
+    font-size: 2.5rem !important; /* Reducido de 3.5rem */
     font-weight: 800 !important;
     color: #2d3748 !important;
     text-align: left !important;
@@ -134,11 +134,11 @@ body {
     margin-right: auto !important;
 }
 
-/* Texto de bienvenida con MISMO ANCHO que carrusel */
+/* Texto de bienvenida más pequeño */
 .welcome-text {
     color: #4a5568 !important;
-    font-size: 1.2rem !important;
-    line-height: 1.7 !important;
+    font-size: 1rem !important; /* Reducido de 1.2rem */
+    line-height: 1.6 !important;
     text-align: justify !important;
     margin: 0 auto !important; /* Centrado */
     max-width: 1400px !important; /* MISMO ANCHO QUE CARRUSEL */
@@ -257,7 +257,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Texto de tarjetas centrado */
+/* TEXTO CENTRADO VERTICAL Y HORIZONTALMENTE */
 .cards-carousel .card h3,
 .cards-carousel .card p {
     position: absolute;
@@ -269,10 +269,11 @@ body {
     transition: all 0.4s ease;
     padding: 0 1.5rem;
     color: #ffffff !important;
+    transform: translateY(-50%);
 }
 
 .cards-carousel .card h3 {
-    top: 40%;
+    top: 45% !important; /* Centrado vertical */
     font-size: 1.5rem !important;
     font-weight: 700;
     margin: 0;
@@ -280,9 +281,9 @@ body {
 }
 
 .cards-carousel .card p {
-    top: 60%;
+    top: 60% !important; /* Centrado vertical */
     font-size: 1rem !important;
-    line-height: 1.5;
+    line-height: 1.4;
     margin: 0;
     font-weight: 400;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -320,12 +321,12 @@ body {
     }
     
     .main-title {
-        font-size: 2.8rem !important;
+        font-size: 2.2rem !important;
         max-width: 100% !important;
     }
     
     .welcome-text {
-        font-size: 1.1rem !important;
+        font-size: 0.95rem !important;
         max-width: 100% !important;
     }
     
@@ -337,6 +338,16 @@ body {
         height: 350px;
         width: 320px !important;
     }
+    
+    .cards-carousel .card h3 {
+        font-size: 1.3rem !important;
+        top: 45% !important;
+    }
+    
+    .cards-carousel .card p {
+        font-size: 0.9rem !important;
+        top: 60% !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -345,11 +356,11 @@ body {
     }
     
     .main-title {
-        font-size: 2.3rem !important;
+        font-size: 2rem !important;
     }
     
     .welcome-text {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
         text-align: left !important;
     }
     
@@ -363,10 +374,12 @@ body {
     }
     
     .cards-carousel .card h3 {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
+        top: 45% !important;
     }
     
     .cards-carousel .card p {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
+        top: 60% !important;
     }
 }
