@@ -201,9 +201,4 @@ setInterval(() => {
 }
 </style>
 
-<iframe 
-    src="https://www.google.com/maps/d/embed?mid=1cYE6_Lf4Sq2wB6SzEsGL7Q&ehbc=FFFFFF" 
-    width="100%" 
-    height="500" 
-    style="border: none; border-radius: 8px; margin: 2rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-</iframe>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1aVPI-EiJDlN64G27HXOK_gfYgXcnRNc&ehbc=2E312F" width="640" height="480"></iframe>
