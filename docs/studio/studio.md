@@ -202,3 +202,38 @@ setInterval(() => {
 </style>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1aVPI-EiJDlN64G27HXOK_gfYgXcnRNc&ehbc=2E312F" width="640" height="480"></iframe>
+
+<!-- Map and Manifesto Section -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; align-items: start;">
+    
+<!-- Map on the left -->
+<div>
+        <iframe 
+            src="https://www.google.com/maps/d/u/0/embed?mid=1aVPI-EiJDlN64G27HXOK_gfYgXcnRNc&ehbc=2E312F" 
+            width="100%" 
+            height="400"
+            style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </iframe>
+    </div>
+    
+<!-- Manifesto on the right -->
+ <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 4px solid #dc3545;">
+        <h2 style="margin-top: 0; color: #333; font-size: 1.5rem;">Manifesto: Beauty as Violence</h2>
+        <div style="line-height: 1.6; color: #555; font-style: italic;">
+            <p>Beauty has become a form of control.</p>
+            <p>Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems.</p>
+            <p>Benches deny rest, walls erase voices, and spikes replace sanctuary.</p>
+            <p>This is not design for people; it is design against life.</p>
+            <br>
+            <p>It decides who belongs, and who must disappear.</p>
+            <p>It defines what is clean by violently excluding what it calls dirty.</p>
+            <br>
+            <p>We must see this order for what it is:</p>
+            <p><strong>violence disguised as aesthetics.</strong></p>
+            <br>
+            <p>If beauty requires exclusion, then it is not beauty.</p>
+            <p>It is a system of erasure.</p>
+            <p>Comfort for a few always requires discomfort for the many.</p>
+        </div>
+    </div>
+</div>
