@@ -201,7 +201,6 @@ setInterval(() => {
 }
 </style>
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1aVPI-EiJDlN64G27HXOK_gfYgXcnRNc&ehbc=2E312F" width="640" height="480"></iframe>
 
 <!-- Map and Manifesto Section -->
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; align-items: start;">
@@ -216,20 +215,15 @@ setInterval(() => {
         </iframe>
     </div>
     
-    
 <!-- Manifesto on the right -->
 <div>
-        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem;">Manifesto: Beauty as Violence</h2>
+        <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Manifesto: Beauty as Violence</h2>
         <div style="line-height: 1.6;">
-        <p>Beauty has become a form of control.</p>
-
-<p>Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems. Benches deny rest, walls erase voices, and spikes replace sanctuary.This is not design for people; it is design against life.</p>
-
-<p>It decides who belongs, and who must disappear. It declares what is clean by violently excluding what it calls dirty.</p>
-
-<p>Therefore, we must see this order for what it is: violence disguised as aesthetics. If beauty requires exclusion, then it is not beauty. It is a system of exclusion.</p>
-
-<p>Comfort for a few always requires discomfort for the many.</p>
+            <p>Beauty has become a form of control.</p>
+            <p>Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems. Benches deny rest, walls erase voices, and spikes replace sanctuary.This is not design for people; it is design against life.</p>
+            <p>It decides who belongs, and who must disappear. It declares what is clean by violently excluding what it calls dirty.</p>
+            <p>Therefore, we must see this order for what it is: violence disguised as aesthetics. If beauty requires exclusion, then it is not beauty. It is a system of exclusion.</p>
+            <p>Comfort for a few always requires discomfort for the many.</p>
+        </div>
     </div>
-</div>
 </div>
