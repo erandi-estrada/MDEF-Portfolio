@@ -202,7 +202,7 @@ setInterval(() => {
 </style>
 
 <iframe 
-    src="https://www.google.com/maps/d/embed?mid=1c3u5vQYhX8v7q9yW6wK9Q7aX8X8&ehbc=FFFFFF" 
+    src="https://www.google.com/maps/d/embed?mid=1cYE6_Lf4Sq2wB6SzEsGL7Q&ehbc=FFFFFF" 
     width="100%" 
     height="500" 
     style="border: none; border-radius: 8px; margin: 2rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
