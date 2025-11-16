@@ -39,7 +39,7 @@ The best version of ourselves may not be the one that rises above, but the one t
 # BookGrip
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
-  <source src="../videos/Book.mp4" type="video/mp4">
+  <source src="../../videos/Book.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -57,7 +57,7 @@ It reminds us that being the best version of ourselves isn't always about progre
 # Listening Extensions
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
-  <source src="../videos/Listening.mp4" type="video/mp4">
+  <source src="../../videos/Listening.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
