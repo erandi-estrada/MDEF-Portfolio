@@ -19,8 +19,8 @@ This project investigates how beauty, order, and cleanliness in Barcelona’s pu
 
 <div class="slideshow-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #000;">
     
-    <!-- Slides -->
-    <div class="slide fade">
+<!-- Slides -->
+<div class="slide fade">
         <img src="../../images/Beauty-excludes/1.jpg" style="width:100%; display: block;">
     </div>
     <div class="slide fade">
@@ -109,8 +109,8 @@ This project investigates how beauty, order, and cleanliness in Barcelona’s pu
     <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0;">❮</a>
     <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 5px 0 0 5px;">❯</a>
 
-    <!-- Dots indicator -->
-    <div style="text-align: center; padding: 15px; position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.5);">
+<!-- Dots indicator -->
+<div style="text-align: center; padding: 15px; position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.5);">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
@@ -216,24 +216,34 @@ setInterval(() => {
         </iframe>
     </div>
     
+<!-- Map and Manifesto Section -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; align-items: start;">
+    
+<!-- Map on the left -->
+<div>
+        <iframe 
+            src="https://www.google.com/maps/d/u/0/embed?mid=1aVPI-EiJDlN64G27HXOK_gfYgXcnRNc&ehbc=2E312F" 
+            width="100%" 
+            height="400"
+            style="border: none; border-radius: 8px;">
+        </iframe>
+    </div>
+    
 <!-- Manifesto on the right -->
- <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 4px solid #dc3545;">
-        <h2 style="margin-top: 0; color: #333; font-size: 1.5rem;">Manifesto: Beauty as Violence</h2>
-        <div style="line-height: 1.6; color: #555; font-style: italic;">
-            <p>Beauty has become a form of control.</p>
-            <p>Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems.</p>
-            <p>Benches deny rest, walls erase voices, and spikes replace sanctuary.</p>
-            <p>This is not design for people; it is design against life.</p>
-            <br>
-            <p>It decides who belongs, and who must disappear.</p>
-            <p>It defines what is clean by violently excluding what it calls dirty.</p>
-            <br>
-            <p>We must see this order for what it is:</p>
-            <p><strong>violence disguised as aesthetics.</strong></p>
-            <br>
-            <p>If beauty requires exclusion, then it is not beauty.</p>
-            <p>It is a system of erasure.</p>
-            <p>Comfort for a few always requires discomfort for the many.</p>
+<div>
+        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem;">Manifesto: Beauty as Violence</h2>
+        <div style="line-height: 1.6;">
+            Beauty has become a form of control.
+            
+            Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems. Benches deny rest, walls erase voices, and spikes replace sanctuary.
+            This is not design for people; it is design against life.
+
+            It decides who belongs, and who must disappear. It declares what is clean by violently excluding what it calls dirty.
+
+            Therefore, we must see this order for what it is: violence disguised as aesthetics.
+            If beauty requires exclusion, then it is not beauty. It is a system of exclusion.
+
+            Comfort for a few always requires discomfort for the many.
         </div>
     </div>
 </div>
