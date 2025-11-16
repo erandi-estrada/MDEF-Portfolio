@@ -236,3 +236,29 @@ setInterval(() => {
     
 <p>The objective is not to fix the city, but to reveal its underlying logic: beauty as discipline, and life as resistance.</p>
 </div>
+
+## Action 1: The Prohibited Rest
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
+    
+<!-- Imagen a la izquierda -->
+   <div>
+        <img src="../../images/action1.jpg" 
+             alt="The Prohibited Rest" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+    </div>
+    
+<!-- Texto a la derecha -->
+<div>
+        <h3 style="margin-top: 0;">WHY</h3>
+        <p>To expose how public space quietly discourages rest by transforming design into a mechanism of control. By placing my body in spaces intentionally made uncomfortable, I test how beauty operates as a disciplinary tool that sanitizes the city by removing undesired presence.</p>
+        
+<h3>WHERE</h3>
+        <p>Ledges with spikes and other anti-rest modifications found outside hotels, shops, and restaurants, areas where maintaining a "clean" and orderly image is prioritized for customers and tourists. These sites make visible how private commercial interests shape the public experience of the city.</p>
+    </div>
+</div>
+
+<!-- HOW debajo -->
+<h3>HOW</h3>
+<p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
