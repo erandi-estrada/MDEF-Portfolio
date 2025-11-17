@@ -264,10 +264,10 @@ setInterval(() => {
 
 ## PROTOCOL — Action 1: The Prohibited Rest
 
-<div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #f8f9fa; padding: 2rem;">
+<div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
- <!-- Tarjetas -->
-   <div class="protocol-card active">
+    <!-- Tarjetas -->
+    <div class="protocol-card active">
         <h3 style="color: #333; margin-top: 0;">1. Site Selection (strategic choice)</h3>
         <p>Choose locations where hostile design is used to expel both humans and nonhuman life.</p>
         <p><strong>In this action, the focus is on:</strong></p>
@@ -287,7 +287,7 @@ setInterval(() => {
         <p>These locations maximize friction between "beauty," control, and everyday behavior.</p>
     </div>
 
-   <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">2. Pre-Observation (context study)</h3>
         <p>Before sitting, visit each site to observe:</p>
         <ul>
@@ -299,7 +299,7 @@ setInterval(() => {
         <p>Note mentally how the architecture shapes acceptable behavior.</p>
     </div>
 
- <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">3. Preparation (logistics + documentation)</h3>
         <ul>
             <li>Wear neutral clothing to avoid performing a character</li>
@@ -311,7 +311,7 @@ setInterval(() => {
         </ul>
     </div>
 
-  <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">4. Action Implementation (embodied presence)</h3>
         <ul>
             <li>Sit directly on or beside surfaces where spikes are installed</li>
@@ -323,7 +323,7 @@ setInterval(() => {
         <p><em>Your body becomes a test instrument.</em></p>
     </div>
 
- <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">5. Documentation (strategic)</h3>
         <ul>
             <li>Time-lapse video capturing your presence in a hostile space</li>
@@ -340,7 +340,7 @@ setInterval(() => {
         <p>All documentation focuses on revealing the contrast between beauty and exclusion.</p>
     </div>
 
-  <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">6. Post-Action Reflection (after the site visit)</h3>
         <p><strong>Guiding questions:</strong></p>
         <ul>
@@ -353,19 +353,19 @@ setInterval(() => {
         <p>Reflect on how violence can be aesthetic, normalized, and unnoticed.</p>
     </div>
 
- <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">7. Reflection</h3>
         <p>Very few people noticed me. Most walked past indifferently, as if my presence didn't belong or wasn't worth registering. When someone did look, it was quickly, more confusion than concern.</p>
         <p><em>The architecture succeeded: I felt out of place. My presence revealed that hostility does not need enforcement; design performs its own violence quietly.</em></p>
     </div>
 
-<!-- Navegación -->
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+    <!-- Navegación -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
         <button class="protocol-prev" onclick="plusProtocol(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             ← Previous
         </button>
         
- <div class="protocol-dots" style="display: flex; gap: 10px;">
+        <div class="protocol-dots" style="display: flex; gap: 10px;">
             <span class="protocol-dot active" onclick="currentProtocol(1)">1</span>
             <span class="protocol-dot" onclick="currentProtocol(2)">2</span>
             <span class="protocol-dot" onclick="currentProtocol(3)">3</span>
@@ -375,7 +375,7 @@ setInterval(() => {
             <span class="protocol-dot" onclick="currentProtocol(7)">7</span>
         </div>
         
- <button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+        <button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             Next →
         </button>
     </div>
@@ -416,10 +416,11 @@ function showProtocol(n) {
 <style>
 .protocol-card {
     display: none;
-    padding: 1.5rem;
+    padding: 2rem;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    border: 1px solid #e1e4e8;
 }
 .protocol-card.active {
     display: block;
@@ -428,6 +429,7 @@ function showProtocol(n) {
     cursor: pointer;
     height: 12px;
     width: 12px;
+    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease;
