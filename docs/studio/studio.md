@@ -446,3 +446,176 @@ function showProtocol(n) {
   <source src="../../videos/Action1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+## Action 2: Returning Life
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
+    
+    <!-- Imagen a la izquierda -->
+    <div>
+        <img src="../../images/Actions/Accion2.jpg" 
+             alt="Returning Life" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+    </div>
+    
+    <!-- Texto a la derecha -->
+    <div>
+        <h3 style="margin-top: 0;">WHY</h3>
+        <p>To challenge the idea that beauty depends on controlling or sterilizing nature. By reintroducing small, resilient plants into spaces designed to exclude life, I test how a gentle biological intervention can shift the meaning of "cleanliness," "care," and "maintenance" in the city.</p>
+        
+        <h3>WHERE</h3>
+        <p>Empty or dried planters, hyper-urbanized streets with only concrete, lifeless corners near restaurants or hotels, and areas where nature is restricted to decorative formats. These sites emphasize the contrast between decorative nature and spontaneous life.</p>
+
+        <h3>HOW</h3>
+        <p>Using cuttings of Kalanchoe beharensis, a plant capable of propagating from fallen leaves, I discreetly place small pieces in locations where vegetation has been removed or cannot thrive. The action is symbolic and subtle. I document placements with photographs before and after, noting how even a small form of life reconfigures the space's atmosphere and meaning.</p>
+    </div>
+</div>
+
+## PROTOCOL — Action 2: Returning Life
+
+<div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
+    
+ <!-- Tarjetas -->
+   <div class="protocol-card active">
+        <h3 style="color: #333; margin-top: 0;">1. Site Selection (strategic choice)</h3>
+        <p>Select urban spaces where life has been removed or suppressed for aesthetic or commercial reasons:</p>
+        <ul>
+            <li>Empty planters (especially those maintained by restaurants or hotels)</li>
+            <li>Entrances of hotels and terraces</li>
+            <li>Concrete-dominated sidewalks with no vegetation</li>
+            <li>Corners, cracks, and edges where spontaneous plants are regularly eliminated</li>
+        </ul>
+        <p>These sites make visible the tension between aesthetic maintenance and biological persistence.</p>
+    </div>
+
+<div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">2. Plant Selection (symbolic decision)</h3>
+        <p>I used Kalanchoe beharensis, a plant known for propagating from its own leaves.</p>
+        <p>Its biology makes it a metaphor for resistance: life that reappears even when removed.</p>
+        <p><strong>I carried:</strong></p>
+        <ul>
+            <li>a small cup with soil</li>
+            <li>several leaves/cuttings from the plant</li>
+            <li>my phone for documentation</li>
+        </ul>
+    </div>
+
+ <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">3. Preparation (simple but intentional)</h3>
+        <ul>
+            <li>I walked with the plant pieces and the soil cup inside my bag</li>
+            <li>During the walk, I chose a few specific sites based on their sterility or performative cleanliness</li>
+            <li>I limited the number of plants I placed because I didn't want to harm the mother plant</li>
+            <li>The action remained discreet and minimal, aligned with the fragility of the gesture</li>
+        </ul>
+    </div>
+
+<div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">4. Action Implementation (the planting gesture)</h3>
+        <p>At each chosen site:</p>
+        <ul>
+            <li>I looked for a small corner where the plant might survive</li>
+            <li>I poured a small amount of soil using the cup</li>
+            <li>I placed one Kalanchoe leaf into the soil</li>
+            <li>I took before and after photos with my phone</li>
+            <li>I stayed for a while to observe how people interacted with the space</li>
+        </ul>
+        <p><em>The action introduced life where life had been rejected, not as decoration, but as quiet defiance.</em></p>
+    </div>
+
+<div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">5. Documentation (what actually happened)</h3>
+        <ul>
+            <li>Before image: barren, hard, or neglected space</li>
+            <li>After image: a single plant disrupting the sterility</li>
+            <li><strong>Return visit (next day):</strong></li>
+            <ul>
+                <li>The plant placed outside a hotel had disappeared</li>
+                <li>The plant in the empty planter was pushed to the corner, without soil, surrounded by cigarette butts</li>
+                <li>Four other plants remained intact and strong</li>
+                <li>At the empty planter, I observed several people notice the plant and deliberately avoid stepping on it</li>
+            </ul>
+        </ul>
+        <p>This documentation reveals social and spatial hierarchies of tolerance toward nonhuman life.</p>
+    </div>
+
+ <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">6. Post-Action Reflection</h3>
+        <ul>
+            <li>The hotel entrance immediately removed the plant, making clear its intolerance toward unscripted nature and its prioritization of a controlled aesthetic</li>
+            <li>The planter filled with cigarette butts showed how public neglect coexists with aesthetic regulation—life is allowed only when ornamental</li>
+            <li>The four surviving plants demonstrated that nature persists despite infrastructural hostility</li>
+            <li>Most strikingly, some passersby instinctively protected the plant, subtly shifting their movement. A tiny piece of life changed how bodies navigated space, revealing an empathy that the architecture itself denies</li>
+        </ul>
+    </div>
+
+<div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">7. Result</h3>
+        <p>This action exposed how urban beauty is selective:</p>
+        <ul>
+            <li>It protects certain forms of life,</li>
+            <li>erases others,</li>
+            <li>and remains indifferent to the rest.</li>
+        </ul>
+        <p><em>Planting a single leaf became a method for revealing what the city immediately rejects, what it tolerates, and what it unconsciously protects.</em></p>
+    </div>
+
+<!-- Navegación -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+        <button class="protocol-prev" onclick="plusProtocol2(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            ← Previous
+        </button>
+        
+<div class="protocol-dots" style="display: flex; gap: 10px;">
+            <span class="protocol-dot2 active" onclick="currentProtocol2(1)">1</span>
+            <span class="protocol-dot2" onclick="currentProtocol2(2)">2</span>
+            <span class="protocol-dot2" onclick="currentProtocol2(3)">3</span>
+            <span class="protocol-dot2" onclick="currentProtocol2(4)">4</span>
+            <span class="protocol-dot2" onclick="currentProtocol2(5)">5</span>
+            <span class="protocol-dot2" onclick="currentProtocol2(6)">6</span>
+            <span class="protocol-dot2" onclick="currentProtocol2(7)">7</span>
+        </div>
+        
+<button class="protocol-next" onclick="plusProtocol2(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Next →
+        </button>
+    </div>
+</div>
+
+<script>
+let protocolIndex2 = 1;
+showProtocol2(protocolIndex2);
+
+function plusProtocol2(n) {
+    showProtocol2(protocolIndex2 += n);
+}
+
+function currentProtocol2(n) {
+    showProtocol2(protocolIndex2 = n);
+}
+
+function showProtocol2(n) {
+    let i;
+    let cards = document.getElementsByClassName("protocol-card");
+    let dots = document.getElementsByClassName("protocol-dot2");
+    
+    if (n > cards.length) {protocolIndex2 = 1}
+    if (n < 1) {protocolIndex2 = cards.length}
+    
+    for (i = 0; i < cards.length; i++) {
+        cards[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    cards[protocolIndex2-1].style.display = "block";
+    dots[protocolIndex2-1].className += " active";
+}
+</script>
+
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/Action2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
