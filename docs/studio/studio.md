@@ -471,12 +471,37 @@ function showProtocol(n) {
     </div>
 </div>
 
+## Action 2: Returning Life
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
+    
+    <!-- Imagen a la izquierda -->
+    <div>
+        <img src="../../images/Actions/Accion2.jpg" 
+             alt="Returning Life" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+    </div>
+    
+<!-- Texto a la derecha -->
+<div>
+        <h3 style="margin-top: 0;">WHY</h3>
+        <p>To challenge the idea that beauty depends on controlling or sterilizing nature. By reintroducing small, resilient plants into spaces designed to exclude life, I test how a gentle biological intervention can shift the meaning of "cleanliness," "care," and "maintenance" in the city.</p>
+        
+<h3>WHERE</h3>
+        <p>Empty or dried planters, hyper-urbanized streets with only concrete, lifeless corners near restaurants or hotels, and areas where nature is restricted to decorative formats. These sites emphasize the contrast between decorative nature and spontaneous life.</p>
+
+<h3>HOW</h3>
+        <p>Using cuttings of Kalanchoe beharensis, a plant capable of propagating from fallen leaves, I discreetly place small pieces in locations where vegetation has been removed or cannot thrive. The action is symbolic and subtle. I document placements with photographs before and after, noting how even a small form of life reconfigures the space's atmosphere and meaning.</p>
+    </div>
+</div>
+
 ## PROTOCOL — Action 2: Returning Life
 
-<div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
+<div class="protocol-container-2" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
- <!-- Tarjetas -->
-   <div class="protocol-card active">
+<!-- Tarjetas -->
+<div class="protocol-card-2 active-2">
         <h3 style="color: #333; margin-top: 0;">1. Site Selection (strategic choice)</h3>
         <p>Select urban spaces where life has been removed or suppressed for aesthetic or commercial reasons:</p>
         <ul>
@@ -488,7 +513,7 @@ function showProtocol(n) {
         <p>These sites make visible the tension between aesthetic maintenance and biological persistence.</p>
     </div>
 
-<div class="protocol-card">
+<div class="protocol-card-2">
         <h3 style="color: #333; margin-top: 0;">2. Plant Selection (symbolic decision)</h3>
         <p>I used Kalanchoe beharensis, a plant known for propagating from its own leaves.</p>
         <p>Its biology makes it a metaphor for resistance: life that reappears even when removed.</p>
@@ -500,7 +525,7 @@ function showProtocol(n) {
         </ul>
     </div>
 
- <div class="protocol-card">
+<div class="protocol-card-2">
         <h3 style="color: #333; margin-top: 0;">3. Preparation (simple but intentional)</h3>
         <ul>
             <li>I walked with the plant pieces and the soil cup inside my bag</li>
@@ -510,7 +535,7 @@ function showProtocol(n) {
         </ul>
     </div>
 
-<div class="protocol-card">
+<div class="protocol-card-2">
         <h3 style="color: #333; margin-top: 0;">4. Action Implementation (the planting gesture)</h3>
         <p>At each chosen site:</p>
         <ul>
@@ -523,7 +548,7 @@ function showProtocol(n) {
         <p><em>The action introduced life where life had been rejected, not as decoration, but as quiet defiance.</em></p>
     </div>
 
-<div class="protocol-card">
+<div class="protocol-card-2">
         <h3 style="color: #333; margin-top: 0;">5. Documentation (what actually happened)</h3>
         <ul>
             <li>Before image: barren, hard, or neglected space</li>
@@ -539,7 +564,7 @@ function showProtocol(n) {
         <p>This documentation reveals social and spatial hierarchies of tolerance toward nonhuman life.</p>
     </div>
 
- <div class="protocol-card">
+<div class="protocol-card-2">
         <h3 style="color: #333; margin-top: 0;">6. Post-Action Reflection</h3>
         <ul>
             <li>The hotel entrance immediately removed the plant, making clear its intolerance toward unscripted nature and its prioritization of a controlled aesthetic</li>
@@ -549,7 +574,7 @@ function showProtocol(n) {
         </ul>
     </div>
 
-<div class="protocol-card">
+<div class="protocol-card-2">
         <h3 style="color: #333; margin-top: 0;">7. Result</h3>
         <p>This action exposed how urban beauty is selective:</p>
         <ul>
@@ -562,21 +587,21 @@ function showProtocol(n) {
 
 <!-- Navegación -->
 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
-        <button class="protocol-prev" onclick="plusProtocol2(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+        <button class="protocol-prev-2" onclick="plusProtocol2(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             ← Previous
         </button>
         
-<div class="protocol-dots" style="display: flex; gap: 10px;">
-            <span class="protocol-dot2 active" onclick="currentProtocol2(1)">1</span>
-            <span class="protocol-dot2" onclick="currentProtocol2(2)">2</span>
-            <span class="protocol-dot2" onclick="currentProtocol2(3)">3</span>
-            <span class="protocol-dot2" onclick="currentProtocol2(4)">4</span>
-            <span class="protocol-dot2" onclick="currentProtocol2(5)">5</span>
-            <span class="protocol-dot2" onclick="currentProtocol2(6)">6</span>
-            <span class="protocol-dot2" onclick="currentProtocol2(7)">7</span>
+<div class="protocol-dots-2" style="display: flex; gap: 10px;">
+            <span class="protocol-dot-2 active-2" onclick="currentProtocol2(1)">1</span>
+            <span class="protocol-dot-2" onclick="currentProtocol2(2)">2</span>
+            <span class="protocol-dot-2" onclick="currentProtocol2(3)">3</span>
+            <span class="protocol-dot-2" onclick="currentProtocol2(4)">4</span>
+            <span class="protocol-dot-2" onclick="currentProtocol2(5)">5</span>
+            <span class="protocol-dot-2" onclick="currentProtocol2(6)">6</span>
+            <span class="protocol-dot-2" onclick="currentProtocol2(7)">7</span>
         </div>
         
-<button class="protocol-next" onclick="plusProtocol2(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+<button class="protocol-next-2" onclick="plusProtocol2(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             Next →
         </button>
     </div>
@@ -596,8 +621,8 @@ function currentProtocol2(n) {
 
 function showProtocol2(n) {
     let i;
-    let cards = document.getElementsByClassName("protocol-card");
-    let dots = document.getElementsByClassName("protocol-dot2");
+    let cards = document.getElementsByClassName("protocol-card-2");
+    let dots = document.getElementsByClassName("protocol-dot-2");
     
     if (n > cards.length) {protocolIndex2 = 1}
     if (n < 1) {protocolIndex2 = cards.length}
@@ -606,13 +631,46 @@ function showProtocol2(n) {
         cards[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active-2", "");
     }
     
-    cards[protocolIndex2-1].style.display = "block";
-    dots[protocolIndex2-1].className += " active";
+    if (cards[protocolIndex2-1]) {
+        cards[protocolIndex2-1].style.display = "block";
+    }
+    if (dots[protocolIndex2-1]) {
+        dots[protocolIndex2-1].className += " active-2";
+    }
 }
 </script>
+
+<style>
+.protocol-card-2 {
+    display: none;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    border: 1px solid #e1e4e8;
+}
+.protocol-card-2.active-2 {
+    display: block;
+}
+.protocol-dot-2 {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.protocol-dot-2.active-2 {
+    background-color: #333;
+}
+.protocol-dot-2:hover {
+    background-color: #666;
+}
+</style>
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
   <source src="../../videos/Action2.mp4" type="video/mp4">
