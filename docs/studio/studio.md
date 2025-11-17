@@ -266,8 +266,8 @@ setInterval(() => {
 
 <div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
-    <!-- Tarjetas -->
-    <div class="protocol-card active">
+ <!-- Tarjetas -->
+<div class="protocol-card active">
         <h3 style="color: #333; margin-top: 0;">1. Site Selection (strategic choice)</h3>
         <p>Choose locations where hostile design is used to expel both humans and nonhuman life.</p>
         <p><strong>In this action, the focus is on:</strong></p>
@@ -287,7 +287,7 @@ setInterval(() => {
         <p>These locations maximize friction between "beauty," control, and everyday behavior.</p>
     </div>
 
-    <div class="protocol-card">
+<div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">2. Pre-Observation (context study)</h3>
         <p>Before sitting, visit each site to observe:</p>
         <ul>
@@ -299,7 +299,7 @@ setInterval(() => {
         <p>Note mentally how the architecture shapes acceptable behavior.</p>
     </div>
 
-    <div class="protocol-card">
+<div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">3. Preparation (logistics + documentation)</h3>
         <ul>
             <li>Wear neutral clothing to avoid performing a character</li>
@@ -311,7 +311,7 @@ setInterval(() => {
         </ul>
     </div>
 
-    <div class="protocol-card">
+<div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">4. Action Implementation (embodied presence)</h3>
         <ul>
             <li>Sit directly on or beside surfaces where spikes are installed</li>
@@ -320,10 +320,10 @@ setInterval(() => {
             <li>Do not engage with passersby unless approached</li>
             <li>Let the body become the site of tension between design and presence</li>
         </ul>
-        <p><em>Your body becomes a test instrument.</em></p>
-    </div>
+        
+ </div>
 
-    <div class="protocol-card">
+<div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">5. Documentation (strategic)</h3>
         <ul>
             <li>Time-lapse video capturing your presence in a hostile space</li>
@@ -340,7 +340,7 @@ setInterval(() => {
         <p>All documentation focuses on revealing the contrast between beauty and exclusion.</p>
     </div>
 
-    <div class="protocol-card">
+<div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">6. Post-Action Reflection (after the site visit)</h3>
         <p><strong>Guiding questions:</strong></p>
         <ul>
@@ -353,19 +353,19 @@ setInterval(() => {
         <p>Reflect on how violence can be aesthetic, normalized, and unnoticed.</p>
     </div>
 
-    <div class="protocol-card">
+ <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">7. Reflection</h3>
         <p>Very few people noticed me. Most walked past indifferently, as if my presence didn't belong or wasn't worth registering. When someone did look, it was quickly, more confusion than concern.</p>
         <p><em>The architecture succeeded: I felt out of place. My presence revealed that hostility does not need enforcement; design performs its own violence quietly.</em></p>
     </div>
 
-    <!-- Navegación -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+<!-- Navegación -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
         <button class="protocol-prev" onclick="plusProtocol(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             ← Previous
         </button>
         
-        <div class="protocol-dots" style="display: flex; gap: 10px;">
+  <div class="protocol-dots" style="display: flex; gap: 10px;">
             <span class="protocol-dot active" onclick="currentProtocol(1)">1</span>
             <span class="protocol-dot" onclick="currentProtocol(2)">2</span>
             <span class="protocol-dot" onclick="currentProtocol(3)">3</span>
@@ -375,7 +375,7 @@ setInterval(() => {
             <span class="protocol-dot" onclick="currentProtocol(7)">7</span>
         </div>
         
-        <button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+<button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             Next →
         </button>
     </div>
@@ -450,8 +450,7 @@ function showProtocol(n) {
 ## Action 2: Returning Life
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
-    
-    <!-- Imagen a la izquierda -->
+     <!-- Imagen a la izquierda -->
     <div>
         <img src="../../images/Actions/Accion2.jpg" 
              alt="Returning Life" 
@@ -459,15 +458,15 @@ function showProtocol(n) {
              style="border-radius: 8px; object-fit: cover;">
     </div>
     
-    <!-- Texto a la derecha -->
-    <div>
+ <!-- Texto a la derecha -->
+   <div>
         <h3 style="margin-top: 0;">WHY</h3>
         <p>To challenge the idea that beauty depends on controlling or sterilizing nature. By reintroducing small, resilient plants into spaces designed to exclude life, I test how a gentle biological intervention can shift the meaning of "cleanliness," "care," and "maintenance" in the city.</p>
         
-        <h3>WHERE</h3>
+ <h3>WHERE</h3>
         <p>Empty or dried planters, hyper-urbanized streets with only concrete, lifeless corners near restaurants or hotels, and areas where nature is restricted to decorative formats. These sites emphasize the contrast between decorative nature and spontaneous life.</p>
 
-        <h3>HOW</h3>
+<h3>HOW</h3>
         <p>Using cuttings of Kalanchoe beharensis, a plant capable of propagating from fallen leaves, I discreetly place small pieces in locations where vegetation has been removed or cannot thrive. The action is symbolic and subtle. I document placements with photographs before and after, noting how even a small form of life reconfigures the space's atmosphere and meaning.</p>
     </div>
 </div>
