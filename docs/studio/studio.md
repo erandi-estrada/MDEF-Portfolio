@@ -441,3 +441,7 @@ function showProtocol(n) {
 }
 </style>
 
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/Action1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
