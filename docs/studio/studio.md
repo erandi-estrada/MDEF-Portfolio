@@ -658,31 +658,6 @@ function showProtocol2(n) {
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
 <!-- Imagen a la izquierda -->
-   <div>
-        <img src="../../images/Actions/Accion3.jpg" 
-             alt="Wearing Hostility" 
-             width="100%" 
-             style="border-radius: 8px; object-fit: cover;">
-    </div>
-    
- <!-- Texto a la derecha -->
-   <div>
-        <h3 style="margin-top: 0;">WHY</h3>
-        <p>To make visible the violence embedded in hostile architecture by translating it onto the human body. Spikes, ties, and deterrent mechanisms often go unnoticed when placed on buildings, but become unsettling when worn by a person. By embodying these hostile forms, the action reveals how normalized, and invisible, architectural violence has become, and how differently it is perceived when directed at a human body rather than an unwanted presence.</p>
-        
- <h3>WHERE</h3>
-        <p>The action was carried out along La Rambla, Parc de la Ciutadella, and the surrounding pedestrian and touristic areas, spaces where visibility, movement, and aesthetic control converge. These highly circulated zones, curated for tourism and public display, become ideal sites for confronting the contrast between architectural hostility and human vulnerability.</p>
-
- <h3>HOW</h3>
-        <p>I modified a dress by attaching zip ties along the sleeves, waist, front, and back, echoing the visual language of anti-homeless barriers and anti-pigeon deterrents. Wearing this outfit, I walked at a normal pace through La Rambla, Parc de la Ciutadella, and nearby pedestrian streets. My presence was not performative; the outfit itself generated the friction.</p>
-    </div>
-</div>
-
-## Action 3: Wearing Hostility
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
-    
-<!-- Imagen a la izquierda -->
 <div>
         <img src="../../images/Actions/Accion3.jpg" 
              alt="Wearing Hostility" 
