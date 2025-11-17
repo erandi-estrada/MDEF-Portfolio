@@ -242,15 +242,15 @@ setInterval(() => {
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
 <!-- Imagen a la izquierda -->
-   <div>
-        <img src="../../images/action1.jpg" 
+ <div>
+        <img src="../../images/Actions/Accion1.jpg" 
              alt="The Prohibited Rest" 
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
     </div>
     
 <!-- Texto a la derecha -->
-<div>
+   <div>
         <h3 style="margin-top: 0;">WHY</h3>
         <p>To expose how public space quietly discourages rest by transforming design into a mechanism of control. By placing my body in spaces intentionally made uncomfortable, I test how beauty operates as a disciplinary tool that sanitizes the city by removing undesired presence.</p>
         
