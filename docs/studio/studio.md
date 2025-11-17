@@ -256,9 +256,10 @@ setInterval(() => {
         
 <h3>WHERE</h3>
         <p>Ledges with spikes and other anti-rest modifications found outside hotels, shops, and restaurants, areas where maintaining a "clean" and orderly image is prioritized for customers and tourists. These sites make visible how private commercial interests shape the public experience of the city.</p>
+
+<h3>HOW</h3>
+    <p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
     </div>
 </div>
 
-<!-- HOW debajo -->
-<h3>HOW</h3>
-<p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
+
