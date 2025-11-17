@@ -262,4 +262,182 @@ setInterval(() => {
     </div>
 </div>
 
+## PROTOCOL — Action 1: The Prohibited Rest
+
+<div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #f8f9fa; padding: 2rem;">
+    
+ <!-- Tarjetas -->
+   <div class="protocol-card active">
+        <h3 style="color: #333; margin-top: 0;">1. Site Selection (strategic choice)</h3>
+        <p>Choose locations where hostile design is used to expel both humans and nonhuman life.</p>
+        <p><strong>In this action, the focus is on:</strong></p>
+        <ul>
+            <li>Ledges and surfaces with spikes for people (anti-rest architecture)</li>
+            <li>Edges and structures with spikes for pigeons (anti-animal architecture)</li>
+            <li>Places where both types of spikes coexist</li>
+            <li>Sites with high visibility and continuous flow of people</li>
+        </ul>
+        <p><strong>Selected areas:</strong></p>
+        <ul>
+            <li>La Rambla (tourist corridor, high circulation)</li>
+            <li>Parc de la Ciutadella (public leisure space)</li>
+            <li>Plazas and busy intersections</li>
+            <li>Entrances of hotels, shops, and restaurants that prioritize "clean image"</li>
+        </ul>
+        <p>These locations maximize friction between "beauty," control, and everyday behavior.</p>
+    </div>
+
+   <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">2. Pre-Observation (context study)</h3>
+        <p>Before sitting, visit each site to observe:</p>
+        <ul>
+            <li>How people move through the space</li>
+            <li>Whether anyone uses the surface despite the spikes</li>
+            <li>How spikes are incorporated into the aesthetic of the building</li>
+            <li>How human and nonhuman presence is regulated</li>
+        </ul>
+        <p>Note mentally how the architecture shapes acceptable behavior.</p>
+    </div>
+
+ <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">3. Preparation (logistics + documentation)</h3>
+        <ul>
+            <li>Wear neutral clothing to avoid performing a character</li>
+            <li>Choose a discreet angle to place the phone for time-lapse recording</li>
+            <li>Identify exact spots where spikes are present</li>
+            <li>Decide on a fixed duration: 10 minutes per site</li>
+            <li>Plan to write reflections immediately after each action</li>
+            <li>No notebooks, props, or conspicuous recording tools</li>
+        </ul>
+    </div>
+
+  <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">4. Action Implementation (embodied presence)</h3>
+        <ul>
+            <li>Sit directly on or beside surfaces where spikes are installed</li>
+            <li>Keep a relaxed, natural posture, simply be there</li>
+            <li>Remain in place for 10 minutes, regardless of discomfort</li>
+            <li>Do not engage with passersby unless approached</li>
+            <li>Let the body become the site of tension between design and presence</li>
+        </ul>
+        <p><em>Your body becomes a test instrument.</em></p>
+    </div>
+
+ <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">5. Documentation (strategic)</h3>
+        <ul>
+            <li>Time-lapse video capturing your presence in a hostile space</li>
+            <li>Close-up photos of spikes intended for humans and pigeons</li>
+            <li>Wide shots of the site to contextualize its beauty/performance</li>
+            <li>Quick field notes after each action (written in your phone):</li>
+            <ul>
+                <li>Emotional reactions</li>
+                <li>Physical discomfort</li>
+                <li>Social reactions (glances, avoidance, indifference)</li>
+                <li>Environmental context (noise, flow, weather)</li>
+            </ul>
+        </ul>
+        <p>All documentation focuses on revealing the contrast between beauty and exclusion.</p>
+    </div>
+
+  <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">6. Post-Action Reflection (after the site visit)</h3>
+        <p><strong>Guiding questions:</strong></p>
+        <ul>
+            <li>Did anyone notice or react? How?</li>
+            <li>Did the discomfort remain invisible to most people?</li>
+            <li>How does hostility hide behind "cleanliness"?</li>
+            <li>What forms of exclusion remain unquestioned in daily life?</li>
+            <li>What did the spikes communicate about who belongs in that space?</li>
+        </ul>
+        <p>Reflect on how violence can be aesthetic, normalized, and unnoticed.</p>
+    </div>
+
+ <div class="protocol-card">
+        <h3 style="color: #333; margin-top: 0;">7. Reflection</h3>
+        <p>Very few people noticed me. Most walked past indifferently, as if my presence didn't belong or wasn't worth registering. When someone did look, it was quickly, more confusion than concern.</p>
+        <p><em>The architecture succeeded: I felt out of place. My presence revealed that hostility does not need enforcement; design performs its own violence quietly.</em></p>
+    </div>
+
+<!-- Navegación -->
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+        <button class="protocol-prev" onclick="plusProtocol(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            ← Previous
+        </button>
+        
+ <div class="protocol-dots" style="display: flex; gap: 10px;">
+            <span class="protocol-dot active" onclick="currentProtocol(1)">1</span>
+            <span class="protocol-dot" onclick="currentProtocol(2)">2</span>
+            <span class="protocol-dot" onclick="currentProtocol(3)">3</span>
+            <span class="protocol-dot" onclick="currentProtocol(4)">4</span>
+            <span class="protocol-dot" onclick="currentProtocol(5)">5</span>
+            <span class="protocol-dot" onclick="currentProtocol(6)">6</span>
+            <span class="protocol-dot" onclick="currentProtocol(7)">7</span>
+        </div>
+        
+ <button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Next →
+        </button>
+    </div>
+</div>
+
+<script>
+let protocolIndex = 1;
+showProtocol(protocolIndex);
+
+function plusProtocol(n) {
+    showProtocol(protocolIndex += n);
+}
+
+function currentProtocol(n) {
+    showProtocol(protocolIndex = n);
+}
+
+function showProtocol(n) {
+    let i;
+    let cards = document.getElementsByClassName("protocol-card");
+    let dots = document.getElementsByClassName("protocol-dot");
+    
+    if (n > cards.length) {protocolIndex = 1}
+    if (n < 1) {protocolIndex = cards.length}
+    
+    for (i = 0; i < cards.length; i++) {
+        cards[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    cards[protocolIndex-1].style.display = "block";
+    dots[protocolIndex-1].className += " active";
+}
+</script>
+
+<style>
+.protocol-card {
+    display: none;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.protocol-card.active {
+    display: block;
+}
+.protocol-dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.protocol-dot.active {
+    background-color: #333;
+}
+.protocol-dot:hover {
+    background-color: #666;
+}
+</style>
 
