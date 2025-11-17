@@ -428,7 +428,6 @@ function showProtocol(n) {
     cursor: pointer;
     height: 12px;
     width: 12px;
-    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease;
