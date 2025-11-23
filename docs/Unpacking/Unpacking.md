@@ -872,6 +872,9 @@ setInterval(() => {
                 "Interesting how small technology can be, with high capacity." - Ivan
             </blockquote>
             <blockquote style="border-left: 4px solid #333; padding-left: 1rem; margin: 1rem 0; font-style: italic;">
+                "The number of components packed inside the computer was surprising. Computers used to be thicker and had more ports and connectors. Now, I’m really curious to see a modern computer to compare how they have evolved." -Erandi
+            </blockquote>
+            <blockquote style="border-left: 4px solid #333; padding-left: 1rem; margin: 1rem 0; font-style: italic;">
                 "A deceptively complex internal structure compared to the user-friendly interface." - Heba
             </blockquote>
         </div>
