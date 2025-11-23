@@ -691,9 +691,9 @@ setInterval(() => {
             <p>The MacBook is a portable computing device designed to process information, display visual output, and allow users to interact with digital content through its screen, keyboard, camera, trackpad, and built-in media and connectivity ports.</p>
             
    <h3>How does it work?</h3>
-            <p><strong>Mechanical:</strong> The MacBook's mechanical systems support and protect its internal components through hinges, pressure switches, and cooling systems.</p>
-            <p><strong>Electrical:</strong> Power flows from the battery through voltage regulators to the logic board, enabling communication between all components.</p>
-            <p><strong>Digital:</strong> Firmware and software translate user actions into computational tasks through the operating system and embedded controllers.</p>
+            <p><strong>Mechanical:</strong> The MacBook’s mechanical systems support and protect its internal components. The hinge allows the screen to open and close, the keyboard uses pressure switches to register input, the trackpad uses a rigid surface over a sensor layer, and the cooling system uses a fan and to move heat away from the processor. The case holds all components in alignment and enables physical interaction.</p>
+            <p><strong>Electrical:</strong> The MacBook operates through interconnected electrical systems. Power flows from the battery and power adapter through voltage regulators to the logic board, where circuits distribute energy to the CPU, memory, storage, display, and other parts of the computer. Electrical signals move between components via buses, connectors, and wiring, enabling communication between sensors, input devices, and processing hardware.</p>
+            <p><strong>Digital:</strong> Digital operation is handled by firmware and software that translate user actions into computational tasks. The operating system coordinates memory, processes input, manages storage, and controls the display. Embedded controllers interpret keyboard and trackpad signals, while system firmware initializes hardware and manages low-level logic. Together, these digital layers enable the MacBook to run applications, process data, and execute user commands.</p>
         </div>
     </div>
     
@@ -702,10 +702,12 @@ setInterval(() => {
         <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Construction & Failure</h2>
         <div style="line-height: 1.6;">
             <h3>How is it built?</h3>
-            <p>The MacBook is assembled primarily with small screws securing plastic cases to an internal frame. The top case integrates keyboard and trackpad, while internal layers contain optical drive, battery, RAM, and logic board with all I/O ports.</p>
+            <p>The MacBook is assembled primarily with small screws that secure a plastic top and bottom cases to an internal frame. The top case integrates the keyboard and trackpad as a single unit mounted above the main internal components.</p>
+            <p>Inside, beneath the keyboard and trackpad, are the optical drive, battery, RAM modules, fan, and hard-drive bay. The lowest layer contains the logic board, wireless cards, and the cooling system, with everything connected through cables and board-to-board connectors. The logic board also holds all external input/output ports, such as USB, audio, Ethernet, power, and video-out, which are accessible along the side of the chassis.</p>
+            <p>The display assembly consists of the LCD panel, backlight, camera module, and wiring harness enclosed within the lid. This assembly is wired to the logic board through the edges of the computer, which was incredibly frustrating to remove without breaking it.</p>
             
  <h3>Why did it fail?</h3>
-            <p>Our investigation suggests battery failure as the primary cause of obsolescence. The battery showed swelling in one cell and measured 0V. Internal dust accumulation may have contributed to performance degradation.</p>
+            <p>Our best guess is that the computer became obsolete because the batteries stopped working. We weren’t able to get a power cable to try charging it, but when we separated the battery from the computer, we noticed it was slightly swollen. We decided to open it to check the components, and it turned out that only 1 of the 6 cells was swollen. We tried measuring the voltage with a multimeter and, as expected, the cells were no longer functioning. We also found a lot of lint and dust inside the computer, which may have contributed to a decrease in performance.</p>
         </div>
     </div>
 </div>
