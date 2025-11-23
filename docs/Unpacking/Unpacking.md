@@ -747,7 +747,7 @@ setInterval(() => {
     
 <!-- Left Column -->
 <div>
-        <img src="https://hackmd.io/_uploads/HJsKTJ6gbl.png" 
+        <img src="https://hackmd.io/dpL_RwwtT1ytSJxxy6_43w" 
              alt="Fan Control Setup" 
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
@@ -780,7 +780,7 @@ setInterval(() => {
 <!-- Right Column -->
 <div>
         <h3 style="margin-top: 0;">WHY</h3>
-        <p>To convert the MacBook trackpad into a standalone USB input device, exploring component repurposing.</p>
+        <p>To convert the MacBook trackpad into an USB USB trackpad, exploring component repurposing.</p>
         
 <h3>HOW</h3>
         <p>Followed online tutorials to identify pins and solder USB cable directly to the trackpad board.</p>
