@@ -24,6 +24,7 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
             <p><strong>Case Identifier:</strong> Forensics of the Obsolescence</p>
             <p><strong>Date of Receipt:</strong> 19/11/2025</p>
             <p><strong>Date of Report:</strong> 21/11/2025</p>
+            <p><strong>Examiners:</strong> Ayal, Heba, Ivan, Beste, Erandi, Madlen</p>
         </div>
     </div>
     
@@ -39,31 +40,308 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
     </div>
 </div>
 
-## Component Inventory
+## Complete Component Inventory
 
-<div class="slideshow-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #000;">
-    
-<!-- Slides -->
-<div class="slide fade">
-        <img src="https://hackmd.io/_uploads/BJGf6sTxbe.png" style="width:100%; display: block;">
-        <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; padding: 1rem; width: 100%; text-align: center;">MacBook Rechargeable Battery</div>
-    </div>
-    <div class="slide fade">
-        <img src="https://hackmd.io/_uploads/BklP1Oox-g.jpg" style="width:100%; display: block;">
-        <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; padding: 1rem; width: 100%; text-align: center;">Hard Drive - 160GB Fujitsu</div>
-    </div>
-    <div class="slide fade">
-        <img src="https://hackmd.io/_uploads/HkjupiTeWg.png" style="width:100%; display: block;">
-        <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; padding: 1rem; width: 100%; text-align: center;">Super Multi DVD Rewriter</div>
-    </div>
-    <div class="slide fade">
-        <img src="https://hackmd.io/_uploads/SkajJ3alZl.png" style="width:100%; display: block;">
-        <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; padding: 1rem; width: 100%; text-align: center;">Optical Drive Flex Cable</div>
-    </div>
-    <div class="slide fade">
-        <img src="https://hackmd.io/_uploads/rkeJTipe-e.png" style="width:100%; display: block;">
-        <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; padding: 1rem; width: 100%; text-align: center;">DC Brushless Fan</div>
-    </div>
+<div style="overflow-x: auto; margin: 2rem 0;">
+    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+        <thead style="background: #333; color: white;">
+            <tr>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Picture</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Part Name</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Serial Number</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Quantity</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Model No.</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Specifications</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Made In</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Brand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/BJGf6sTxbe.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">MacBook Rechargeable Battery</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">9G8280BTEWY2A</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">A1185</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Li-ion; no mercury; 10.8V DC 55Wh</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China (Assembly)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Apple</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/BklP1Oox-g.jpg" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Hard Drive</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">K43AT88319M4</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">MHY2160BH</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">160GB</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Thailand</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Fujitsu</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HkjupiTeWg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Super Multi DVD Rewriter</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">DVDRW S10NA 678-0565A</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">GSA-S10N</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">5V DC</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Korea</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/SkajJ3alZl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Optical Drive Flex Cable</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">K36 ODD FPC</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">821-0590-A</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">2007</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Foxconn</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rkeJTipe-e.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">DC Brushless Fan</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">8909W8R</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">KSB0405HBF0D</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">5V DC</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/BJJ7pipebg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Keyboard</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">815.9751.G FX</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">922-8359</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Taiwan</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rkCEAi6gWl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Display</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">N133I1-L01</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">N133I1 – L01</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">13.3" 1280×800, CCFL backlight</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China (CMO)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/H1PFajaeZl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">CPU/GPU Heatsink</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">80812FoX</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rJ5vaj6xZg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">LCD Inverter</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">287W12604AA</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">PWB-IV16112T/C2-AG-LF</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">112 x 16mm, 13.3" WXGA</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Sumida</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HkRZCipgbx.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Display Sensor</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">810-0668-A</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rJe_RjaeZl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Intel Core 2 Duo 2.26GHz</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">EC80577T8300</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">3MB L2 cache</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/r1f8CjplWl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">SDRAM</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">W8834C7E0P1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">2</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">2GB (2x1GB) 1066MHz DDR3</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/r1130s6e-g.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Exterior Case Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Type: Phillips #00</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">8</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">3x14mm, 3x3mm, 2x7mm</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Taiwan/China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Lian Li</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/B1960sagZg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Inside Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">46</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/BkuyJ3TeZx.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Battery Exterior Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">4</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HkJbJ3TeZg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Battery Inside Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">10</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/SkkHJ36xWl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Screen Case Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">4</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rkfUJh6gbg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">RAM Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">8</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HJwPk2peWg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Case Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">9</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HkLjy2alWl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Display Screws</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">21</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/Skkke3aeZg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">WLAN Wifi Card</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">7C83309SDZUFA</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">BCM94321MC</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">China</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Apple</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/BJiGlhplWg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Camera Cable</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Camera, Airport, Bluetooth, Light Sensor</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HJkR6ipgZg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Speaker</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">2</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/HyBngnaebl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Inductor</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">4.7μH, power filtering</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rJuTy36xZe.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Flexures</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Multiple</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rk64ynTxWl.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Bottom Case</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rytP1hpg-l.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Screen Case</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><img src="https://hackmd.io/_uploads/rkgEe12TgWg.png" width="60" style="border-radius: 4px;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Top Chassis</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">815-9599</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">A1181 LCD White Back Cover</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Apple</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- El resto del contenido se mantiene igual que antes -->
 
  <!-- Navigation buttons -->
  <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0;">❮</a>
