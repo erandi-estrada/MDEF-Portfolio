@@ -297,6 +297,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#display-screen-testing" class="md-nav__link">
+    Display Screen Testing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1082,10 +1089,10 @@ setInterval(() => {
 
 <!-- Left Column -->
 <div>
-        <img src="https://hackmd.io/dpL_RwwtT1ytSJxxy6_43w" 
-             alt="Fan Control Setup" 
-             width="100%" 
-             style="border-radius: 8px; object-fit: cover;">
+        <video controls autoplay muted loop width="100%" style="border-radius: 8px;">
+            <source src="https://hackmd.io/_uploads/kmq2awfl__I" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
 <!-- Right Column -->
@@ -1121,6 +1128,31 @@ setInterval(() => {
 
  <h3>RESULT</h3>
         <p>Despite proper soldering, the trackpad wasn't recognized by computers. Provided valuable soldering practice and component understanding.</p>
+    </div>
+</div>
+
+<h3 id="display-screen-testing">Display Screen Testing<a class="headerlink" href="#display-screen-testing" title="Permanent link">&para;</a></h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
+
+<!-- Left Column -->
+<div>
+        <img src="https://hackmd.io/_uploads/B10d9o6e-x.png" 
+             alt="Display Screen Testing" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+    </div>
+
+<!-- Right Column -->
+<div>
+        <h3 style="margin-top: 0;">WHY</h3>
+        <p>Despite knowing through research and advice from instructors that the display screen would be relatively difficult to hack into, we still wanted to give it a try since it was one of the components we were most excited about its potential.</p>
+
+<h3>HOW</h3>
+        <p>We started by trying to connect the inverter board to a power source to attempt to light up the screen. The inverter board converts low-voltage DC to high-voltage AC, provides constant current to the CCFL tube and controls on/off and brightness.</p>
+        <p>We discovered the screen uses Cold Cathode Fluorescent Lamp (CCFL) not LED, so the inverter board had 4 identical wires for GND, power input, BL_ENABLE (on/off), and BL_DIM (brightness) which needed 2 power supplies and trial to identify which wire is for which.</p>
+
+ <h3>RESULT</h3>
+        <p>After connecting the inverter to the power source we tried every cable with 12V, but unfortunately it didn't turn on. The complexity of CCFL technology and the specific voltage requirements made this component particularly challenging to reactivate.</p>
     </div>
 </div>
 
@@ -1190,7 +1222,7 @@ setInterval(() => {
 
 <p><img alt="All Components Laid Out" src="https://hackmd.io/_uploads/BkwRGPolWx.jpg" />  </p>
 <h2 id="documentation-references">Documentation &amp; References<a class="headerlink" href="#documentation-references" title="Permanent link">&para;</a></h2>
-<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Component Datasheets</h2>
 
  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
@@ -1206,13 +1238,20 @@ setInterval(() => {
     </div>
 </div>
 
-<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">References</h2>
-    <ul>
-        <li>Apple Inc. (2009). MacBook 13-inch: Late 2009 service manual</li>
-        <li>Technical Specifications: support.apple.com/en-us/112623</li>
-        <li>Delta Fan Datasheet: KSB0405HBF0D</li>
-        <li>Various online maker tutorials and forums</li>
+    <ul style="line-height: 1.6;">
+        <li>Apple Inc. (2009). <em>MacBook 13-inch: Late 2009 service manual</em> [PDF]. Retrieved from <a href="https://www.informaticanapoli.it/download/MANUALI/APPLE/macbook_p13_mid09.pdf" style="color: #333; text-decoration: underline;">https://www.informaticanapoli.it/download/MANUALI/APPLE/macbook_p13_mid09.pdf</a></li>
+
+ <li>Apple Inc. (2009). <em>MacBook (13-inch, Late 2009) - Technical Specifications</em>. Retrieved from <a href="https://support.apple.com/en-us/112623" style="color: #333; text-decoration: underline;">https://support.apple.com/en-us/112623</a></li>
+
+<li>Attempted Maker. (2012, October 28). <em>Converting MacBook keyboard/touch pad into USB keyboard/touch pad</em>. Retrieved from <a href="https://attemptedmaker.blogspot.com/2012/10/converting-macbook-keyboardtouch-pad.html" style="color: #333; text-decoration: underline;">https://attemptedmaker.blogspot.com/2012/10/converting-macbook-keyboardtouch-pad.html</a></li>
+
+<li>Delta Electronics. <em>DC Brushless Laptop Fan Datasheet: KSB0405HBF0D</em>. Retrieved from <a href="https://www.delta-fan.com/Download/Spec/KSB0405HBF0D.pdf" style="color: #333; text-decoration: underline;">https://www.delta-fan.com/Download/Spec/KSB0405HBF0D.pdf</a></li>
+
+<li>SEMTECH ELEC. <em>2N2222 Transistor Datasheet</em>. Retrieved from <a href="https://www.alldatasheet.es/datasheet-pdf/pdf/888490/SEMTECH_ELEC/2N2222.html" style="color: #333; text-decoration: underline;">https://www.alldatasheet.es/datasheet-pdf/pdf/888490/SEMTECH_ELEC/2N2222.html</a></li>
+
+<li>StackExchange. (2020). <em>Using 2N2222 Transistor as a switch</em>. Retrieved from <a href="https://electronics.stackexchange.com/questions/488337/2n2222-as-a-switch" style="color: #333; text-decoration: underline;">https://electronics.stackexchange.com/questions/488337/2n2222-as-a-switch</a></li>
     </ul>
 </div>
 
@@ -1229,7 +1268,7 @@ setInterval(() => {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 23, 2025 22:28:01 UTC">November 23, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 23, 2025 22:35:48 UTC">November 23, 2025</span>
     
   </small>
 </div>
