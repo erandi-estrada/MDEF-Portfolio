@@ -19,7 +19,7 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
 <!-- Left Column -->
 <div>
         <h3 style="margin-top: 0;">Case Information</h3>
-        <div style="background: #f9eccbff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
+        <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
             <p><strong>Reporting Agency:</strong> MDEF</p>
             <p><strong>Case Identifier:</strong> Forensics of the Obsolescence</p>
             <p><strong>Date of Receipt:</strong> 19/11/2025</p>
@@ -31,7 +31,7 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
 <!-- Right Column -->
 <div>
         <h3 style="margin-top: 0;">Device Specifications</h3>
-        <div style="background: #f9eccbff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
+        <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
             <p><strong>Model:</strong> MacBook (13-inch, Late 2009) A1181</p>
             <p><strong>Serial Number:</strong> 9G8280BTEWY2A</p>
             <p><strong>Color:</strong> White</p>
@@ -792,7 +792,7 @@ setInterval(() => {
 
 ## Technical Findings
 
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Key Discoveries</h2>
     
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
@@ -860,7 +860,7 @@ setInterval(() => {
 
 ## Documentation & References
 
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Component Datasheets</h2>
     
  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
@@ -876,7 +876,7 @@ setInterval(() => {
     </div>
 </div>
 
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">References</h2>
     <ul>
         <li>Apple Inc. (2009). MacBook 13-inch: Late 2009 service manual</li>
