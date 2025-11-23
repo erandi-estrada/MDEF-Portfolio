@@ -747,10 +747,10 @@ setInterval(() => {
     
 <!-- Left Column -->
 <div>
-        <video controls autoplay muted loop width="100%" style="border-radius: 8px;">
-            <source src="https://hackmd.io/_uploads/kmq2awfl__I" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <img src="https://hackmd.io/_uploads/rJY3TZTx-x.jpg" 
+             alt="Fan Control Setup" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
     </div>
     
 <!-- Right Column -->
@@ -885,7 +885,7 @@ setInterval(() => {
 
 ## Documentation & References
 
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Component Datasheets</h2>
     
  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
@@ -901,7 +901,7 @@ setInterval(() => {
     </div>
 </div>
 
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">References</h2>
     <ul style="line-height: 1.6;">
         <li>Apple Inc. (2009). <em>MacBook 13-inch: Late 2009 service manual</em> [PDF]. Retrieved from <a href="https://www.informaticanapoli.it/download/MANUALI/APPLE/macbook_p13_mid09.pdf" style="color: #333; text-decoration: underline;">https://www.informaticanapoli.it/download/MANUALI/APPLE/macbook_p13_mid09.pdf</a></li>
