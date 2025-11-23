@@ -10,6 +10,15 @@
 
 A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence, component reuse, and the hidden complexity behind Apple's design.
 
+## Personal Introduction
+
+This forensic analysis looks inside a 2009 Apple MacBook to understand how it was built and why it stopped working. What we found was surprising - computers from this time were made very differently from today's models. They had more ports, more parts you could replace, and were easier to repair.
+
+We think the main reason it failed was a swollen battery, but it was also made obsolete by newer software and technology. The most surprising discovery was that even though the laptop seemed completely broken, the hard drive still worked perfectly. We were able to recover all the personal files and information from it, which shows how important it is to properly erase devices before throwing them away.
+
+> **Note:** This is my personal documentation of the project. The complete group report with all team contributions can be found here:  
+> **[Full Group Report →](https://hackmd.io/pONF3MmaScOIxqd7tCS_6A?view)**
+
 ![Macbook Bird's Eye View](https://hackmd.io/_uploads/SkvUWDoxZl.jpg)
 
 ## Case Details
