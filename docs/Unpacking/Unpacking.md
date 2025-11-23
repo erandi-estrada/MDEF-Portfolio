@@ -19,7 +19,7 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
 <!-- Left Column -->
 <div>
         <h3 style="margin-top: 0;">Case Information</h3>
-        <div style="background: #f8edd1ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
+        <div style="background: #f9eccbff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
             <p><strong>Reporting Agency:</strong> MDEF</p>
             <p><strong>Case Identifier:</strong> Forensics of the Obsolescence</p>
             <p><strong>Date of Receipt:</strong> 19/11/2025</p>
@@ -31,7 +31,7 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
 <!-- Right Column -->
 <div>
         <h3 style="margin-top: 0;">Device Specifications</h3>
-        <div style="background: #f8edd1ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
+        <div style="background: #f9eccbff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
             <p><strong>Model:</strong> MacBook (13-inch, Late 2009) A1181</p>
             <p><strong>Serial Number:</strong> 9G8280BTEWY2A</p>
             <p><strong>Color:</strong> White</p>
@@ -578,8 +578,8 @@ A detailed teardown and analysis of a Late 2009 MacBook, exploring obsolescence,
     </div>
 
 <!-- Navigation buttons -->
-   <a class="component-prev" onclick="plusComponents(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: #333; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: #f8edd1ff); border-radius: 0 5px 5px 0;">❮</a>
-    <a class="component-next" onclick="plusComponents(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 20px; color: #333; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: #f8edd1ff; border-radius: 5px 0 0 5px;">❯</a>
+   <a class="component-prev" onclick="plusComponents(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: #333; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(255,255,255,0.8); border-radius: 0 5px 5px 0;">❮</a>
+    <a class="component-next" onclick="plusComponents(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 20px; color: #333; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(255,255,255,0.8); border-radius: 5px 0 0 5px;">❯</a>
 
 <!-- Dots indicator -->
    <div style="text-align: center; padding: 20px;">
