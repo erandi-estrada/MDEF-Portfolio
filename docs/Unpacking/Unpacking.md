@@ -855,13 +855,9 @@ setInterval(() => {
 <div>
         <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">What We Learned</h2>
         <div style="line-height: 1.6;">
-            <p>The disassembly revealed Apple's complex internal architecture contrasting with their minimalist external design. We discovered:</p>
-            <ul>
-                <li>Extensive use of screws and intricate sub-components</li>
-                <li>Contrast between user-friendly interface and complex internals</li>
-                <li>Varying "hackability" of different components</li>
-                <li>Practical skills in soldering, coding, and component testing</li>
-            </ul>
+            <p>The disassembly process revealed how much more complex the internal architecture of a MacBook laptop is compared to what is visible to our eyes from the outside. From the large number of screws that are used to secure the casing to the intricate breakdown of each part into even smaller sub-components, the level of engineering detail became apparent.</p>
+            <p>Despite Apple marketing itself as user friendly and intuitive, the internal composition of their devices proves otherwise.</p>
+            <p>Through this process, we gained a deeper understanding of the relative 'hackability' of different components of a MacBook and the range of techniques that can enable certain parts to be controlled or manipulated for reuse, including coding, computing, soldering, and other techniques.</p>
         </div>
     </div>
     
