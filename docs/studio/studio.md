@@ -470,6 +470,11 @@ function showProtocol(n) {
 
 ## Action 2: Returning Life
 
+<h3>Hypothesis</h3>
+<p>If beauty depends on controlling nature, then reintroducing small forms of life can expose this illusion of cleanliness.</p>
+<h3>Prototype</h3>
+<p>I planted small cuttings of Kalanchoe beharensis in highly controlled spaces: dried planters, concrete corners, hotel entrances. I visited the sites 24 hours later to observe their fate.</p>
+
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
 <!-- Imagen a la izquierda -->
@@ -673,6 +678,9 @@ function showProtocol2(n) {
   <source src="../../videos/Action2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+<h3>Critical Evaluation</h3>
+<p>The results varied: some plants remained untouched and subtly protected by pedestrians, while others were removed within hours. This contrast revealed how maintenance practices prioritize cleanliness over spontaneous life. The intervention exposed the fragility of non-human presence in hyper-controlled environments. To expand its critical potential, future iterations could introduce life directly into more “forbidden” surfaces, such as spikes or tight architectural gaps, revealing how design suppresses even the possibility of growth.</p>
 
 ## Action 3: Wearing Hostility
 
