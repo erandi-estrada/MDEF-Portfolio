@@ -684,6 +684,11 @@ function showProtocol2(n) {
 
 ## Action 3: Wearing Hostility
 
+<h3>Hypothesis</h3>
+<p>If hostile architecture is invisible on buildings, then translating its form to the body will expose its violence.</p>
+<h3>Prototype</h3>
+<p>I modified a dress using zip-ties to mimic anti-homeless and anti-pigeon design. I walked through busy urban areas to document reactions.</p>
+
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
 <!-- Imagen a la izquierda -->
@@ -879,3 +884,6 @@ function showProtocol3(n) {
   <source src="../../videos/Action3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+<h3>Critical Evaluation</h3>
+<p>This prototype generated the strongest reactions. The gesture of embodying hostility made the violence of urban design visible, producing discomfort, glances, and avoidance from strangers. It showed how hostility is tolerated when directed at non-human bodies but becomes unsettling when applied to a human one. The action opens possibilities for deeper engagement, sustained presence, slower movement, or indirect forms of interaction, that could intensify the social friction and expose more clearly the relational dynamics of exclusion.</p>
