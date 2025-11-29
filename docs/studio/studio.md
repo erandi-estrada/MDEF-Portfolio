@@ -280,9 +280,6 @@ setInterval(() => {
     </div>
 </div>
 
-<h3>Critical Evaluation</h3>
-<p>The action produced a noticeable discomfort, but the short duration limited the depth of the experience. Most passersby ignored my presence, revealing how normalized these hostile elements are in the urban landscape. While the prototype exposed indifference and raised questions about belonging in public space, the intervention could be strengthened by extending the time, allowing the body to accumulate visible fatigue, and increasing the friction between the human body and the architectural hostility.</p>
-
 ## PROTOCOL — Action 1: The Prohibited Rest
 
 <div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
@@ -467,6 +464,9 @@ function showProtocol(n) {
   <source src="../../videos/Action1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+<h3>Critical Evaluation</h3>
+<p>The action produced a noticeable discomfort, but the short duration limited the depth of the experience. Most passersby ignored my presence, revealing how normalized these hostile elements are in the urban landscape. While the prototype exposed indifference and raised questions about belonging in public space, the intervention could be strengthened by extending the time, allowing the body to accumulate visible fatigue, and increasing the friction between the human body and the architectural hostility.</p>
 
 ## Action 2: Returning Life
 
