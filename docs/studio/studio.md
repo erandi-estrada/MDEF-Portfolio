@@ -252,6 +252,11 @@ setInterval(() => {
 
 ## Action 1: The Prohibited Rest
 
+<h3>Hypothesis</h3>
+<p>If beauty operates through the denial of rest, then placing my body in spaces designed to repel it will reveal how comfort and exclusion are distributed.</p>
+<h3>Prototype</h3>
+<p>I attempted to rest for 10 minutes on surfaces modified with spikes designed to prevent people from sitting. I documented the action through time-lapse videos and notes written immediately afterward.</p>
+
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
 <!-- Imagen a la izquierda -->
@@ -274,6 +279,9 @@ setInterval(() => {
     <p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
     </div>
 </div>
+
+<h3>Critical Evaluation</h3>
+<p>The action produced a noticeable discomfort, but the short duration limited the depth of the experience. Most passersby ignored my presence, revealing how normalized these hostile elements are in the urban landscape. While the prototype exposed indifference and raised questions about belonging in public space, the intervention could be strengthened by extending the time, allowing the body to accumulate visible fatigue, and increasing the friction between the human body and the architectural hostility.</p>
 
 ## PROTOCOL — Action 1: The Prohibited Rest
 
