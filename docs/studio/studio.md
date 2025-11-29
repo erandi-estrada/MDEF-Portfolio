@@ -17,6 +17,19 @@ An embodied research on hostile design, urban aesthetics, and the politics of be
 
 This project investigates how beauty, order, and cleanliness in Barcelona’s public space often rely on quiet forms of exclusion. Through walking as a method, mapping, filming, and embodied interventions, I explore how design regulates who may rest, who may appear, and what forms of life are allowed to exist. What looks “beautiful” frequently hides a subtle violence.
 
+<h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Methodology</h2>
+
+<h3>How</h3>
+<p>Walking became my primary method of inquiry. I explored the city through 1PP (first-person perspective) documentation, using my body, my phone, and direct sensory observation as tools for detecting exclusion. I photographed, filmed, and paused in spaces where beauty, order, and hostility intersect. Every time I encountered spikes, barriers, anti-rest benches, or decorative nature trapped in controlled formats, I documented them and added the location to a shared map.</p>
+
+<p>This systematic process resulted in a detailed map of hostile design across Barcelona, built through repeated walks and embodied encounters. The map served both as a research log and as a spatial portrait of the city’s politics of beauty.</p>
+
+<h3>Where</h3>
+<p>My walks concentrated on areas where aesthetics, tourism, and regulation collide: La Rambla, El Born, Eixample, Poble Nou, Parc de la Ciutadella, and circulation corridors around hotels, restaurants, museums, and commercial façades. These areas sustain Barcelona’s “perfect city” image and therefore reveal the strongest tensions between order and exclusion.</p>
+
+<h3>Why</h3>
+<p>Hostile design hides in plain sight. It becomes invisible precisely because it is normalized as “maintenance,” “cleanliness,” or “urban order.” Walking the city allowed me to sense this violence not as a concept but as an experience: through discomfort, interruption, proximity, and embodied friction. Mapping the findings made visible a network of micro-violences that collectively shape who may rest, who may appear, and which forms of life the city is willing to host.</p>
+
 <div class="slideshow-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #000;">
     
 <!-- Slides -->
@@ -105,8 +118,8 @@ This project investigates how beauty, order, and cleanliness in Barcelona’s pu
         <img src="../../images/Beauty-excludes/28.jpg" style="width:100%; display: block;">
     </div>
 
-    <!-- Navigation buttons -->
-    <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0;">❮</a>
+<!-- Navigation buttons -->
+  <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0;">❮</a>
     <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 5px 0 0 5px;">❯</a>
 
 <!-- Dots indicator -->
