@@ -890,16 +890,16 @@ function showProtocol3(n) {
 
 ## ACT COLLECTIVELY 
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Conceptual Statement</h2>
+<h3 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Conceptual Statement</h3>
 <p>This collective action investigates how exclusion operates not only on humans but on other species whose presence has been systematically discouraged in the city. Hostile architecture in Barcelona, especially spikes, have reshaped the behavior and movement of pigeons, pushing them out of commercial streets and central urban infrastructures.</p>
 
-<p>This action asks:<strong>What happens when hospitality is reintroduced into a space historically designed to reject non-human life?</strong></p>
+<p>This action asks:<strong> What happens when hospitality is reintroduced into a space historically designed to reject non-human life?</strong></p>
 
 <p>Through a two-phase intervention on a public bench in Passeig de Gràcia, I test whether human-designed hostility can be reversed, and whether pigeons, treated as “urban pests”, can reclaim a space made temporarily welcoming. The project seeks not to force interaction but to observe relational dynamics: trust, avoidance, memory, and the long-term effects of spatial violence.</p>
 
 <p>The objective is to understand coexistence not as something humans grant, but as a process that requires time, reciprocity, and the agency of non-human partners</p>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Action Strategy</h2>
+<h3 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Action Strategy</h3>
 
 <p>The collective action unfolds in two contrasting phases, revealing how design shapes multispecies relationships.</p>
 
