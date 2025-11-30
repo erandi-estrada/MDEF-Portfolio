@@ -250,8 +250,7 @@ setInterval(() => {
 <p>The objective is not to fix the city, but to reveal its underlying logic: beauty as discipline, and life as resistance.</p>
 </div>
 
-## Action 1: The Prohibited Rest
-
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action 1: The Prohibited Rest</h2>
 <h4>Hypothesis</h4>
 <p>If beauty operates through the denial of rest, then placing my body in spaces designed to repel it will reveal how comfort and exclusion are distributed.</p>
 <h4>Prototype</h4>
@@ -468,7 +467,7 @@ function showProtocol(n) {
 <h3>Critical Evaluation</h3>
 <p>The action produced a noticeable discomfort, but the short duration limited the depth of the experience. Most passersby ignored my presence, revealing how normalized these hostile elements are in the urban landscape. While the prototype exposed indifference and raised questions about belonging in public space, the intervention could be strengthened by extending the time, allowing the body to accumulate visible fatigue, and increasing the friction between the human body and the architectural hostility.</p>
 
-## Action 2: Returning Life
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action 2: Returning Life</h2>
 
 <h4>Hypothesis</h4>
 <p>If beauty depends on controlling nature, then reintroducing small forms of life can expose this illusion of cleanliness.</p>
@@ -682,7 +681,7 @@ function showProtocol2(n) {
 <h3>Critical Evaluation</h3>
 <p>The results varied: some plants remained untouched and subtly protected by pedestrians, while others were removed within hours. This contrast revealed how maintenance practices prioritize cleanliness over spontaneous life. The intervention exposed the fragility of non-human presence in hyper-controlled environments. To expand its critical potential, future iterations could introduce life directly into more “forbidden” surfaces, such as spikes or tight architectural gaps, revealing how design suppresses even the possibility of growth.</p>
 
-## Action 3: Wearing Hostility
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action 3: Wearing Hostility</h2>
 
 <h4>Hypothesis</h4>
 <p>If hostile architecture is invisible on buildings, then translating its form to the body will expose its violence.</p>
@@ -888,8 +887,13 @@ function showProtocol3(n) {
 <h3>Critical Evaluation</h3>
 <p>This prototype generated the strongest reactions. The gesture of embodying hostility made the violence of urban design visible, producing discomfort, glances, and avoidance from strangers. It showed how hostility is tolerated when directed at non-human bodies but becomes unsettling when applied to a human one. The action opens possibilities for deeper engagement, sustained presence, slower movement, or indirect forms of interaction, that could intensify the social friction and expose more clearly the relational dynamics of exclusion.</p>
 
-## ACT COLLECTIVELY 
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">ACT COLLECTIVELY</h2>
 
+<img src="../../images/collective.jpg" 
+     alt="Collective Action" 
+     width="100%" 
+     style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">
+     
 <h3 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Conceptual Statement</h3>
 <p>This collective action investigates how exclusion operates not only on humans but on other species whose presence has been systematically discouraged in the city. Hostile architecture in Barcelona, especially spikes, have reshaped the behavior and movement of pigeons, pushing them out of commercial streets and central urban infrastructures.</p>
 
