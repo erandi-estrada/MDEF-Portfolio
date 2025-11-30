@@ -1146,15 +1146,12 @@ function showProtocol4(n) {
 </div>
 
 <!-- How I contribute -->
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">How I contribute</h3>
-    <ul style="margin: 0;">
+ <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">How I contribute</h3>
         <li>By transforming a bench into a temporary site of hospitality, I challenge the urban logic that treats pigeons as undesirable</li>
         <li>I create a space where pigeons might feel safe again, without forcing their participation</li>
         <li>I document their reactions (or refusals) as a legitimate form of agency and communication</li>
         <li>I acknowledge that coexistence requires time and trust, not just design gestures</li>
-    </ul>
-</div>
+
 
 <!-- Why they need this activation -->
 <div style="margin: 2rem 0;">
@@ -1164,14 +1161,10 @@ function showProtocol4(n) {
 </div>
 
 <!-- Collective objectives -->
-<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Collective objectives (not only mine)</h3>
-    <ul style="margin: 0;">
+<h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Collective objectives (not only mine)</h3>
         <li>To create temporary multispecies spaces where pigeons are not repelled</li>
         <li>To foster awareness of the ecological and ethical implications of hostile design</li>
         <li>To recognize pigeons' agency in deciding whether to engage</li>
         <li>To question the anthropocentric assumption that hospitality can be instantly restored</li>
         <li>To build relational sensitivity between humans and urban non-human species</li>
-    </ul>
     <p style="margin: 1rem 0 0 0; font-style: italic;"><strong>This is not an aesthetic intervention, it is an invitation to reconsider coexistence.</strong></p>
-</div>
