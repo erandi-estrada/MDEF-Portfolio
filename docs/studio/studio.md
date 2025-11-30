@@ -1120,12 +1120,13 @@ function showProtocol4(n) {
 <h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Activation of an Affective Relationship with the Collective</h2>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
-      <!-- Texto a la izquierda -->
+    
+    <!-- Texto a la izquierda -->
     <div>
         <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Why pigeons?</h3>
         <p>Pigeons are one of the most heavily excluded species in Barcelona's urban landscape. Spikes, nets, sloped surfaces, chemical deterrents, and architectural modifications are designed specifically to reduce their presence, despite their long history of coexistence with humans.</p>
         
- <p><strong>Pigeons are:</strong></p>
+        <p><strong>Pigeons are:</strong></p>
         <ul style="margin: 1rem 0;">
             <li>Resilient urban dwellers</li>
             <li>Deeply affected by hostile design</li>
@@ -1133,10 +1134,10 @@ function showProtocol4(n) {
             <li>A species whose presence reflects the ecological health of cities</li>
         </ul>
         
- <p><em>They are not a metaphor for exclusion, they experience it daily.</em></p>
+        <p><em>They are not a metaphor for exclusion, they experience it daily.</em></p>
     </div>
     
- <!-- Imagen a la derecha -->
+    <!-- Imagen a la derecha -->
     <div>
         <img src="../../images/palomas.jpg" 
              alt="Pigeons in urban environment" 
@@ -1146,12 +1147,15 @@ function showProtocol4(n) {
 </div>
 
 <!-- How I contribute -->
- <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">How I contribute</h3>
+<div style="margin: 2rem 0;">
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">How I contribute</h3>
+    <ul style="margin: 0;">
         <li>By transforming a bench into a temporary site of hospitality, I challenge the urban logic that treats pigeons as undesirable</li>
         <li>I create a space where pigeons might feel safe again, without forcing their participation</li>
         <li>I document their reactions (or refusals) as a legitimate form of agency and communication</li>
         <li>I acknowledge that coexistence requires time and trust, not just design gestures</li>
-
+    </ul>
+</div>
 
 <!-- Why they need this activation -->
 <div style="margin: 2rem 0;">
@@ -1161,10 +1165,14 @@ function showProtocol4(n) {
 </div>
 
 <!-- Collective objectives -->
-<h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Collective objectives (not only mine)</h3>
+<div style="margin: 2rem 0;">
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Collective objectives (not only mine)</h3>
+    <ul style="margin: 0;">
         <li>To create temporary multispecies spaces where pigeons are not repelled</li>
         <li>To foster awareness of the ecological and ethical implications of hostile design</li>
         <li>To recognize pigeons' agency in deciding whether to engage</li>
         <li>To question the anthropocentric assumption that hospitality can be instantly restored</li>
         <li>To build relational sensitivity between humans and urban non-human species</li>
+    </ul>
     <p style="margin: 1rem 0 0 0; font-style: italic;"><strong>This is not an aesthetic intervention, it is an invitation to reconsider coexistence.</strong></p>
+</div>
