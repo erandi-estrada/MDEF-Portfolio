@@ -6,34 +6,34 @@
     </div>
 </div>
 
-<h1 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 1rem 0;">Beauty That Excludes</h1>
+<h1 style="font-size: 2.8rem; font-weight: bold; margin: 0 0 1rem 0;">Beauty That Excludes</h1>
 
-An embodied research on hostile design, urban aesthetics, and the politics of beauty in Barcelona. 
+<p style="font-size: 1.3rem; color: #666; margin-bottom: 2rem;">An embodied research on hostile design, urban aesthetics, and the politics of beauty in Barcelona.</p>
 
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
   <source src="../../videos/Perfect.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-This project investigates how beauty, order, and cleanliness in Barcelona’s public space often rely on quiet forms of exclusion. Through walking as a method, mapping, filming, and embodied interventions, I explore how design regulates who may rest, who may appear, and what forms of life are allowed to exist. What looks “beautiful” frequently hides a subtle violence.
+<p>This project investigates how beauty, order, and cleanliness in Barcelona's public space often rely on quiet forms of exclusion. Through walking as a method, mapping, filming, and embodied interventions, I explore how design regulates who may rest, who may appear, and what forms of life are allowed to exist. What looks "beautiful" frequently hides a subtle violence.</p>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">Methodology</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0;">Methodology</h2>
 
-<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">How</h3>
+<h3 style="font-size: 2rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">How</h3>
 <p>Walking became my primary method of inquiry. I explored the city through 1PP (first-person perspective) documentation, using my body, my phone, and direct sensory observation as tools for detecting exclusion. I photographed, filmed, and paused in spaces where beauty, order, and hostility intersect. Every time I encountered spikes, barriers, anti-rest benches, or decorative nature trapped in controlled formats, I documented them and added the location to a shared map.</p>
 
-<p>This systematic process resulted in a detailed map of hostile design across Barcelona, built through repeated walks and embodied encounters. The map served both as a research log and as a spatial portrait of the city’s politics of beauty.</p>
+<p>This systematic process resulted in a detailed map of hostile design across Barcelona, built through repeated walks and embodied encounters. The map served both as a research log and as a spatial portrait of the city's politics of beauty.</p>
 
-<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Where</h3>
-<p>My walks focused on the central areas of Barcelona where tourism, circulation, and urban aesthetics collide. I moved through La Rambla, Parc de la Ciutadella, nearby plazas, pedestrian streets, and the surrounding commercial corridors,spaces where beauty is carefully staged and where the pressure to maintain a “clean” and orderly image is strongest. These are the places where hostile design appears most intensely: at the entrances of hotels and restaurants, along busy sidewalks, around benches and resting points, and in spots where people and non-human species are subtly discouraged from stopping.</p>
+<h3 style="font-size: 2rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Where</h3>
+<p>My walks focused on the central areas of Barcelona where tourism, circulation, and urban aesthetics collide. I moved through La Rambla, Parc de la Ciutadella, nearby plazas, pedestrian streets, and the surrounding commercial corridors, spaces where beauty is carefully staged and where the pressure to maintain a "clean" and orderly image is strongest. These are the places where hostile design appears most intensely: at the entrances of hotels and restaurants, along busy sidewalks, around benches and resting points, and in spots where people and non-human species are subtly discouraged from stopping.</p>
 
-<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Why</h3>
-<p>Hostile design hides in plain sight. It becomes invisible precisely because it is normalized as “maintenance,” “cleanliness,” or “urban order.” Walking the city allowed me to sense this violence not as a concept but as an experience: through discomfort, interruption, proximity, and embodied friction. Mapping the findings made visible a network of micro-violences that collectively shape who may rest, who may appear, and which forms of life the city is willing to host.</p>
+<h3 style="font-size: 2rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Why</h3>
+<p>Hostile design hides in plain sight. It becomes invisible precisely because it is normalized as "maintenance," "cleanliness," or "urban order." Walking the city allowed me to sense this violence not as a concept but as an experience: through discomfort, interruption, proximity, and embodied friction. Mapping the findings made visible a network of micro-violences that collectively shape who may rest, who may appear, and which forms of life the city is willing to host.</p>
 
 <div class="slideshow-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #000;">
     
-<!-- Slides -->
-<div class="slide fade">
+    <!-- Slides -->
+    <div class="slide fade">
         <img src="../../images/Beauty-excludes/1.jpg" style="width:100%; display: block;">
     </div>
     <div class="slide fade">
@@ -118,12 +118,12 @@ This project investigates how beauty, order, and cleanliness in Barcelona’s pu
         <img src="../../images/Beauty-excludes/28.jpg" style="width:100%; display: block;">
     </div>
 
-<!-- Navigation buttons -->
-  <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0;">❮</a>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0;">❮</a>
     <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 5px 0 0 5px;">❯</a>
 
-<!-- Dots indicator -->
-<div style="text-align: center; padding: 15px; position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.5);">
+    <!-- Dots indicator -->
+    <div style="text-align: center; padding: 15px; position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.5);">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
@@ -186,7 +186,7 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 
-// Auto-advance every 5 seconds (opcional)
+// Auto-advance every 5 seconds
 setInterval(() => {
     plusSlides(1);
 }, 5000);
@@ -214,12 +214,11 @@ setInterval(() => {
 }
 </style>
 
-
 <!-- Map and Manifesto Section -->
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; align-items: start;">
     
-<!-- Map on the left -->
-<div>
+    <!-- Map on the left -->
+    <div>
         <iframe 
             src="https://www.google.com/maps/d/u/0/embed?mid=1aVPI-EiJDlN64G27HXOK_gfYgXcnRNc&ehbc=2E312F" 
             width="100%" 
@@ -228,9 +227,9 @@ setInterval(() => {
         </iframe>
     </div>
     
-<!-- Manifesto on the right -->
-<div>
-        <h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">Manifesto: Beauty as Violence</h2>
+    <!-- Manifesto on the right -->
+    <div>
+        <h2 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 1rem 0;">Manifesto: Beauty as Violence</h2>
         <div style="line-height: 1.6;">
             <p>Beauty has become a form of control.</p>
             <p>Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems. Benches deny rest, walls erase voices, and spikes replace sanctuary.This is not design for people; it is design against life.</p>
@@ -241,49 +240,52 @@ setInterval(() => {
     </div>
 </div>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">Conceptual Definition</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0;">Conceptual Definition</h2>
+<div style="line-height: 1.6;">
     <p>Urban beauty often appears neutral: clean lines, polished surfaces, controlled vegetation. However, this project argues that such beauty operates as a system of exclusion. In Barcelona, benches, facades, and even landscaping participate in a spatial order that determines who may sit, pause, appear, or exist. Violence here is subtle: not physical force, but the systematic removal of discomfort, disorder, and "undesired" beings, humans, plants or birds.</p>
     
-<p>This work intervenes in those silent boundaries. Through embodied actions, I test what happens when the excluded returns: a body resting where it shouldn't, a plant growing where it isn't allowed, a person wearing the hostile architecture meant to repel them.</p>
+    <p>This work intervenes in those silent boundaries. Through embodied actions, I test what happens when the excluded returns: a body resting where it shouldn't, a plant growing where it isn't allowed, a person wearing the hostile architecture meant to repel them.</p>
     
-<p>The objective is not to fix the city, but to reveal its underlying logic: beauty as discipline, and life as resistance.</p>
+    <p>The objective is not to fix the city, but to reveal its underlying logic: beauty as discipline, and life as resistance.</p>
 </div>
 
 <h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">Action 1: The Prohibited Rest</h1>
-<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Hypothesis</h3>
+
+<h3 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Hypothesis</h3>
 <p>If beauty operates through the denial of rest, then placing my body in spaces designed to repel it will reveal how comfort and exclusion are distributed.</p>
-<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Prototype</h3>
+
+<h3 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Prototype</h3>
 <p>I attempted to rest for 10 minutes on surfaces modified with spikes designed to prevent people from sitting. I documented the action through time-lapse videos and notes written immediately afterward.</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
-<!-- Imagen a la izquierda -->
- <div>
+    <!-- Imagen a la izquierda -->
+    <div>
         <img src="../../images/Actions/Accion1.jpg" 
              alt="The Prohibited Rest" 
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
     </div>
     
-<!-- Texto a la derecha -->
-   <div>
-        <h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHY</h4>
+    <!-- Texto a la derecha -->
+    <div>
+        <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">WHY</h4>
         <p>To expose how public space quietly discourages rest by transforming design into a mechanism of control. By placing my body in spaces intentionally made uncomfortable, I test how beauty operates as a disciplinary tool that sanitizes the city by removing undesired presence.</p>
         
-<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHERE</h4>
+        <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">WHERE</h4>
         <p>Ledges with spikes and other anti-rest modifications found outside hotels, shops, and restaurants, areas where maintaining a "clean" and orderly image is prioritized for customers and tourists. These sites make visible how private commercial interests shape the public experience of the city.</p>
 
-<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">HOW</h4>
-    <p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
+        <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">HOW</h4>
+        <p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
     </div>
 </div>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">PROTOCOL — Action 1: The Prohibited Rest</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0;">PROTOCOL — Action 1: The Prohibited Rest</h2>
 
 <div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
- <!-- Tarjetas -->
-<div class="protocol-card active">
+    <!-- Tarjetas -->
+    <div class="protocol-card active">
         <h3 style="color: #333; margin-top: 0;">1. Site Selection (strategic choice)</h3>
         <p>Choose locations where hostile design is used to expel both humans and nonhuman life.</p>
         <p><strong>In this action, the focus is on:</strong></p>
@@ -303,7 +305,7 @@ setInterval(() => {
         <p>These locations maximize friction between "beauty," control, and everyday behavior.</p>
     </div>
 
-<div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">2. Pre-Observation (context study)</h3>
         <p>Before sitting, visit each site to observe:</p>
         <ul>
@@ -315,7 +317,7 @@ setInterval(() => {
         <p>Note mentally how the architecture shapes acceptable behavior.</p>
     </div>
 
-<div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">3. Preparation (logistics + documentation)</h3>
         <ul>
             <li>Wear neutral clothing to avoid performing a character</li>
@@ -327,7 +329,7 @@ setInterval(() => {
         </ul>
     </div>
 
-<div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">4. Action Implementation (embodied presence)</h3>
         <ul>
             <li>Sit directly on or beside surfaces where spikes are installed</li>
@@ -336,10 +338,9 @@ setInterval(() => {
             <li>Do not engage with passersby unless approached</li>
             <li>Let the body become the site of tension between design and presence</li>
         </ul>
-        
- </div>
+    </div>
 
-<div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">5. Documentation (strategic)</h3>
         <ul>
             <li>Time-lapse video capturing your presence in a hostile space</li>
@@ -356,7 +357,7 @@ setInterval(() => {
         <p>All documentation focuses on revealing the contrast between beauty and exclusion.</p>
     </div>
 
-<div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">6. Post-Action Reflection (after the site visit)</h3>
         <p><strong>Guiding questions:</strong></p>
         <ul>
@@ -369,19 +370,19 @@ setInterval(() => {
         <p>Reflect on how violence can be aesthetic, normalized, and unnoticed.</p>
     </div>
 
- <div class="protocol-card">
+    <div class="protocol-card">
         <h3 style="color: #333; margin-top: 0;">7. Reflection</h3>
         <p>Very few people noticed me. Most walked past indifferently, as if my presence didn't belong or wasn't worth registering. When someone did look, it was quickly, more confusion than concern.</p>
         <p><em>The architecture succeeded: I felt out of place. My presence revealed that hostility does not need enforcement; design performs its own violence quietly.</em></p>
     </div>
 
-<!-- Navegación -->
-<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+    <!-- Navegación -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
         <button class="protocol-prev" onclick="plusProtocol(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             ← Previous
         </button>
         
-  <div class="protocol-dots" style="display: flex; gap: 10px;">
+        <div class="protocol-dots" style="display: flex; gap: 10px;">
             <span class="protocol-dot active" onclick="currentProtocol(1)">1</span>
             <span class="protocol-dot" onclick="currentProtocol(2)">2</span>
             <span class="protocol-dot" onclick="currentProtocol(3)">3</span>
@@ -391,7 +392,7 @@ setInterval(() => {
             <span class="protocol-dot" onclick="currentProtocol(7)">7</span>
         </div>
         
-<button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+        <button class="protocol-next" onclick="plusProtocol(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             Next →
         </button>
     </div>
@@ -463,8 +464,9 @@ function showProtocol(n) {
   Your browser does not support the video tag.
 </video>
 
-<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Critical Evaluation</h3>
+<h3 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Critical Evaluation</h3>
 <p>The action produced a noticeable discomfort, but the short duration limited the depth of the experience. Most passersby ignored my presence, revealing how normalized these hostile elements are in the urban landscape. While the prototype exposed indifference and raised questions about belonging in public space, the intervention could be strengthened by extending the time, allowing the body to accumulate visible fatigue, and increasing the friction between the human body and the architectural hostility.</p>
+
 
 <h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">Action 2: Returning Life</h1>
 
