@@ -893,7 +893,7 @@ function showProtocol3(n) {
      alt="Collective Action" 
      width="100%" 
      style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">
-     
+
 <h3 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Conceptual Statement</h3>
 <p>This collective action investigates how exclusion operates not only on humans but on other species whose presence has been systematically discouraged in the city. Hostile architecture in Barcelona, especially spikes, have reshaped the behavior and movement of pigeons, pushing them out of commercial streets and central urban infrastructures.</p>
 
@@ -1116,3 +1116,62 @@ function showProtocol4(n) {
     background-color: #666;
 }
 </style>
+
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Activation of an Affective Relationship with the Collective</h2>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
+      <!-- Texto a la izquierda -->
+    <div>
+        <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Why pigeons?</h3>
+        <p>Pigeons are one of the most heavily excluded species in Barcelona's urban landscape. Spikes, nets, sloped surfaces, chemical deterrents, and architectural modifications are designed specifically to reduce their presence, despite their long history of coexistence with humans.</p>
+        
+ <p><strong>Pigeons are:</strong></p>
+        <ul style="margin: 1rem 0;">
+            <li>Resilient urban dwellers</li>
+            <li>Deeply affected by hostile design</li>
+            <li>Socially intelligent animals with complex navigation and learning behaviors</li>
+            <li>A species whose presence reflects the ecological health of cities</li>
+        </ul>
+        
+ <p><em>They are not a metaphor for exclusion, they experience it daily.</em></p>
+    </div>
+    
+ <!-- Imagen a la derecha -->
+    <div>
+        <img src="../../images/palomas.jpg" 
+             alt="Pigeons in urban environment" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+    </div>
+</div>
+
+<!-- How I contribute -->
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">How I contribute</h3>
+    <ul style="margin: 0;">
+        <li>By transforming a bench into a temporary site of hospitality, I challenge the urban logic that treats pigeons as undesirable</li>
+        <li>I create a space where pigeons might feel safe again, without forcing their participation</li>
+        <li>I document their reactions (or refusals) as a legitimate form of agency and communication</li>
+        <li>I acknowledge that coexistence requires time and trust, not just design gestures</li>
+    </ul>
+</div>
+
+<!-- Why they need this activation -->
+<div style="margin: 2rem 0;">
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Why they need this activation</h3>
+    <p>The action highlights how deeply exclusion has shaped their behavior. Even when offered food and a safe surface, pigeons in hostile zones may no longer approach the ground. Hostile design has altered not only where they move, but how they perceive human-made objects.</p>
+    <p><strong>This activation is needed not to "help pigeons," but to make visible their learned avoidance, their adaptations, and their survival strategies.</strong></p>
+</div>
+
+<!-- Collective objectives -->
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Collective objectives (not only mine)</h3>
+    <ul style="margin: 0;">
+        <li>To create temporary multispecies spaces where pigeons are not repelled</li>
+        <li>To foster awareness of the ecological and ethical implications of hostile design</li>
+        <li>To recognize pigeons' agency in deciding whether to engage</li>
+        <li>To question the anthropocentric assumption that hospitality can be instantly restored</li>
+        <li>To build relational sensitivity between humans and urban non-human species</li>
+    </ul>
+    <p style="margin: 1rem 0 0 0; font-style: italic;"><strong>This is not an aesthetic intervention, it is an invitation to reconsider coexistence.</strong></p>
+</div>
