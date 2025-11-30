@@ -6,7 +6,7 @@
     </div>
 </div>
 
-# Beauty That Excludes
+<h1 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 1rem 0;">Beauty That Excludes</h1>
 
 An embodied research on hostile design, urban aesthetics, and the politics of beauty in Barcelona. 
 
@@ -17,17 +17,17 @@ An embodied research on hostile design, urban aesthetics, and the politics of be
 
 This project investigates how beauty, order, and cleanliness in Barcelona’s public space often rely on quiet forms of exclusion. Through walking as a method, mapping, filming, and embodied interventions, I explore how design regulates who may rest, who may appear, and what forms of life are allowed to exist. What looks “beautiful” frequently hides a subtle violence.
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Methodology</h2>
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">Methodology</h2>
 
-<h4>How</h4>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">How</h3>
 <p>Walking became my primary method of inquiry. I explored the city through 1PP (first-person perspective) documentation, using my body, my phone, and direct sensory observation as tools for detecting exclusion. I photographed, filmed, and paused in spaces where beauty, order, and hostility intersect. Every time I encountered spikes, barriers, anti-rest benches, or decorative nature trapped in controlled formats, I documented them and added the location to a shared map.</p>
 
 <p>This systematic process resulted in a detailed map of hostile design across Barcelona, built through repeated walks and embodied encounters. The map served both as a research log and as a spatial portrait of the city’s politics of beauty.</p>
 
-<h4>Where</h4>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Where</h3>
 <p>My walks focused on the central areas of Barcelona where tourism, circulation, and urban aesthetics collide. I moved through La Rambla, Parc de la Ciutadella, nearby plazas, pedestrian streets, and the surrounding commercial corridors,spaces where beauty is carefully staged and where the pressure to maintain a “clean” and orderly image is strongest. These are the places where hostile design appears most intensely: at the entrances of hotels and restaurants, along busy sidewalks, around benches and resting points, and in spots where people and non-human species are subtly discouraged from stopping.</p>
 
-<h4>Why</h4>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Why</h3>
 <p>Hostile design hides in plain sight. It becomes invisible precisely because it is normalized as “maintenance,” “cleanliness,” or “urban order.” Walking the city allowed me to sense this violence not as a concept but as an experience: through discomfort, interruption, proximity, and embodied friction. Mapping the findings made visible a network of micro-violences that collectively shape who may rest, who may appear, and which forms of life the city is willing to host.</p>
 
 <div class="slideshow-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden; background: #000;">
@@ -230,7 +230,7 @@ setInterval(() => {
     
 <!-- Manifesto on the right -->
 <div>
-        <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Manifesto: Beauty as Violence</h2>
+        <h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">Manifesto: Beauty as Violence</h2>
         <div style="line-height: 1.6;">
             <p>Beauty has become a form of control.</p>
             <p>Our public spaces perform perfection while silencing life. They are stage sets, not ecosystems. Benches deny rest, walls erase voices, and spikes replace sanctuary.This is not design for people; it is design against life.</p>
@@ -241,8 +241,7 @@ setInterval(() => {
     </div>
 </div>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem;">Conceptual Definition</h2>
-<div style="line-height: 1.6;">
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">Conceptual Definition</h2>
     <p>Urban beauty often appears neutral: clean lines, polished surfaces, controlled vegetation. However, this project argues that such beauty operates as a system of exclusion. In Barcelona, benches, facades, and even landscaping participate in a spatial order that determines who may sit, pause, appear, or exist. Violence here is subtle: not physical force, but the systematic removal of discomfort, disorder, and "undesired" beings, humans, plants or birds.</p>
     
 <p>This work intervenes in those silent boundaries. Through embodied actions, I test what happens when the excluded returns: a body resting where it shouldn't, a plant growing where it isn't allowed, a person wearing the hostile architecture meant to repel them.</p>
@@ -250,10 +249,10 @@ setInterval(() => {
 <p>The objective is not to fix the city, but to reveal its underlying logic: beauty as discipline, and life as resistance.</p>
 </div>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action 1: The Prohibited Rest</h2>
-<h4>Hypothesis</h4>
+<h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">Action 1: The Prohibited Rest</h1>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Hypothesis</h3>
 <p>If beauty operates through the denial of rest, then placing my body in spaces designed to repel it will reveal how comfort and exclusion are distributed.</p>
-<h4>Prototype</h4>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Prototype</h3>
 <p>I attempted to rest for 10 minutes on surfaces modified with spikes designed to prevent people from sitting. I documented the action through time-lapse videos and notes written immediately afterward.</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
@@ -268,18 +267,18 @@ setInterval(() => {
     
 <!-- Texto a la derecha -->
    <div>
-        <h3 style="margin-top: 0;">WHY</h3>
+        <h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHY</h4>
         <p>To expose how public space quietly discourages rest by transforming design into a mechanism of control. By placing my body in spaces intentionally made uncomfortable, I test how beauty operates as a disciplinary tool that sanitizes the city by removing undesired presence.</p>
         
-<h3>WHERE</h3>
+<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHERE</h4>
         <p>Ledges with spikes and other anti-rest modifications found outside hotels, shops, and restaurants, areas where maintaining a "clean" and orderly image is prioritized for customers and tourists. These sites make visible how private commercial interests shape the public experience of the city.</p>
 
-<h3>HOW</h3>
+<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">HOW</h4>
     <p>I sit for a fixed period of 10 minutes in each location, placing my body in direct friction with surfaces designed to repel it. I document the action using time-lapse video and photographs, observing both my own discomfort and the reactions, often indifference, of passersby. My body becomes a temporary disruption in a space optimized for circulation, not rest.</p>
     </div>
 </div>
 
-## PROTOCOL — Action 1: The Prohibited Rest
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">PROTOCOL — Action 1: The Prohibited Rest</h2>
 
 <div class="protocol-container" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
@@ -464,14 +463,13 @@ function showProtocol(n) {
   Your browser does not support the video tag.
 </video>
 
-<h3>Critical Evaluation</h3>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Critical Evaluation</h3>
 <p>The action produced a noticeable discomfort, but the short duration limited the depth of the experience. Most passersby ignored my presence, revealing how normalized these hostile elements are in the urban landscape. While the prototype exposed indifference and raised questions about belonging in public space, the intervention could be strengthened by extending the time, allowing the body to accumulate visible fatigue, and increasing the friction between the human body and the architectural hostility.</p>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action 2: Returning Life</h2>
+<h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">Action 2: Returning Life</h1>
 
-<h4>Hypothesis</h4>
-<p>If beauty depends on controlling nature, then reintroducing small forms of life can expose this illusion of cleanliness.</p>
-<h4>Prototype</h4>
+<h4>Hypothesis</h4><h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Hypothesis</h3><p>If beauty depends on controlling nature, then reintroducing small forms of life can expose this illusion of cleanliness.</p>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Prototype</h3>
 <p>I planted small cuttings of Kalanchoe beharensis in highly controlled spaces: dried planters, concrete corners, hotel entrances. I visited the sites 24 hours later to observe their fate.</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
@@ -486,18 +484,18 @@ function showProtocol(n) {
     
 <!-- Texto a la derecha -->
 <div>
-        <h3 style="margin-top: 0;">WHY</h3>
+        <h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHY</h4>
         <p>To challenge the idea that beauty depends on controlling or sterilizing nature. By reintroducing small, resilient plants into spaces designed to exclude life, I test how a gentle biological intervention can shift the meaning of "cleanliness," "care," and "maintenance" in the city.</p>
         
-<h3>WHERE</h3>
+<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHERE</h4>
         <p>Empty or dried planters, hyper-urbanized streets with only concrete, lifeless corners near restaurants or hotels, and areas where nature is restricted to decorative formats. These sites emphasize the contrast between decorative nature and spontaneous life.</p>
 
-<h3>HOW</h3>
+<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">HOW</h4>
         <p>Using cuttings of Kalanchoe beharensis, a plant capable of propagating from fallen leaves, I discreetly place small pieces in locations where vegetation has been removed or cannot thrive. The action is symbolic and subtle. I document placements with photographs before and after, noting how even a small form of life reconfigures the space's atmosphere and meaning.</p>
     </div>
 </div>
 
-## PROTOCOL — Action 2: Returning Life
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">PROTOCOL — Action 2: Returning Life</h2>
 
 <div class="protocol-container-2" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
@@ -678,14 +676,14 @@ function showProtocol2(n) {
   Your browser does not support the video tag.
 </video>
 
-<h3>Critical Evaluation</h3>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Critical Evaluation</h3>
 <p>The results varied: some plants remained untouched and subtly protected by pedestrians, while others were removed within hours. This contrast revealed how maintenance practices prioritize cleanliness over spontaneous life. The intervention exposed the fragility of non-human presence in hyper-controlled environments. To expand its critical potential, future iterations could introduce life directly into more “forbidden” surfaces, such as spikes or tight architectural gaps, revealing how design suppresses even the possibility of growth.</p>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action 3: Wearing Hostility</h2>
+<h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">Action 3: Wearing Hostility</h1>
 
-<h4>Hypothesis</h4>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Hypothesis</h3>
 <p>If hostile architecture is invisible on buildings, then translating its form to the body will expose its violence.</p>
-<h4>Prototype</h4>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Prototype</h3>
 <p>I modified a dress using zip-ties to mimic anti-homeless and anti-pigeon design. I walked through busy urban areas to document reactions.</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
@@ -700,19 +698,18 @@ function showProtocol2(n) {
     
 <!-- Texto a la derecha -->
  <div>
-   <h3 style="margin-top: 0;">WHY</h3>
+  <h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHY</h4>
         <p>To make visible the violence embedded in hostile architecture by translating it onto the human body. Spikes, ties, and deterrent mechanisms often go unnoticed when placed on buildings, but become unsettling when worn by a person. By embodying these hostile forms, the action reveals how normalized, and invisible, architectural violence has become, and how differently it is perceived when directed at a human body rather than an unwanted presence.</p>
         
-  <h3>WHERE</h3>
+<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">WHERE</h4>
         <p>The action was carried out along La Rambla, Parc de la Ciutadella, and the surrounding pedestrian and touristic areas, spaces where visibility, movement, and aesthetic control converge. These highly circulated zones, curated for tourism and public display, become ideal sites for confronting the contrast between architectural hostility and human vulnerability.</p>
 
-  <h3>HOW</h3>
+<h4 style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0 0.5rem 0;">HOW</h4>
         <p>I modified a dress by attaching zip ties along the sleeves, waist, front, and back, echoing the visual language of anti-homeless barriers and anti-pigeon deterrents. Wearing this outfit, I walked at a normal pace through La Rambla, Parc de la Ciutadella, and nearby pedestrian streets. My presence was not performative; the outfit itself generated the friction.</p>
     </div>
 </div>
 
-## PROTOCOL — Action 3: Wearing Hostility
-
+<h2 style="font-size: 1.8rem; font-weight: bold; margin: 3rem 0 1rem 0;">PROTOCOL — Action 3: Wearing Hostility</h2>
 <div class="protocol-container-3" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
  <!-- Tarjetas -->
@@ -884,17 +881,17 @@ function showProtocol3(n) {
   Your browser does not support the video tag.
 </video>
 
-<h3>Critical Evaluation</h3>
+<h3 style="font-size: 1.4rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Critical Evaluation</h3>
 <p>This prototype generated the strongest reactions. The gesture of embodying hostility made the violence of urban design visible, producing discomfort, glances, and avoidance from strangers. It showed how hostility is tolerated when directed at non-human bodies but becomes unsettling when applied to a human one. The action opens possibilities for deeper engagement, sustained presence, slower movement, or indirect forms of interaction, that could intensify the social friction and expose more clearly the relational dynamics of exclusion.</p>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">ACT COLLECTIVELY</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0;">ACT COLLECTIVELY</h2
 
 <img src="../../images/collective.jpg" 
      alt="Collective Action" 
      width="100%" 
      style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">
 
-<h3 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Conceptual Statement</h3>
+<h3 style="font-size: 2rem; font-weight: bold; margin: 2rem 0 1rem 0;">Conceptual Statement</h3>
 <p>This collective action investigates how exclusion operates not only on humans but on other species whose presence has been systematically discouraged in the city. Hostile architecture in Barcelona, especially spikes, have reshaped the behavior and movement of pigeons, pushing them out of commercial streets and central urban infrastructures.</p>
 
 <p>This action asks:<strong> What happens when hospitality is reintroduced into a space historically designed to reject non-human life?</strong></p>
@@ -903,7 +900,7 @@ function showProtocol3(n) {
 
 <p>The objective is to understand coexistence not as something humans grant, but as a process that requires time, reciprocity, and the agency of non-human partners</p>
 
-<h3 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Action Strategy</h3>
+<h3 style="font-size: 2rem; font-weight: bold; margin: 2rem 0 1rem 0;">Action Strategy</h3>
 
 <p>The collective action unfolds in two contrasting phases, revealing how design shapes multispecies relationships.</p>
 
@@ -944,7 +941,7 @@ function showProtocol3(n) {
 
 <p>This approach centers <strong>horizontal multispecies ethics</strong>: no coercion, no forcing of participation, no extraction. The pigeons choose their response, and their choice becomes the core of the action.</p>
 
-## PROTOCOL — Collective Action
+<h3 style="font-size: 2rem; font-weight: bold; margin: 2rem 0 1rem 0;">PROTOCOL — Collective Action</h3>
 
 <div class="protocol-container-4" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
@@ -1117,16 +1114,16 @@ function showProtocol4(n) {
 }
 </style>
 
-<h2 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Activation of an Affective Relationship with the Collective</h2>
+<h3 style="font-size: 2rem; font-weight: bold; margin: 2rem 0 1rem 0;">Activation of an Affective Relationship with the Collective</h3>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
-    <!-- Texto a la izquierda -->
-    <div>
-        <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Why pigeons?</h3>
+ <!-- Texto a la izquierda -->
+<div>
+        <h4 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Why pigeons?</h4>
         <p>Pigeons are one of the most heavily excluded species in Barcelona's urban landscape. Spikes, nets, sloped surfaces, chemical deterrents, and architectural modifications are designed specifically to reduce their presence, despite their long history of coexistence with humans.</p>
         
-        <p><strong>Pigeons are:</strong></p>
+   <p><strong>Pigeons are:</strong></p>
         <ul style="margin: 1rem 0;">
             <li>Resilient urban dwellers</li>
             <li>Deeply affected by hostile design</li>
@@ -1134,11 +1131,11 @@ function showProtocol4(n) {
             <li>A species whose presence reflects the ecological health of cities</li>
         </ul>
         
-        <p><em>They are not a metaphor for exclusion, they experience it daily.</em></p>
+ <p><em>They are not a metaphor for exclusion, they experience it daily.</em></p>
     </div>
-    
-    <!-- Imagen a la derecha -->
-    <div>
+
+<!-- Imagen a la derecha -->
+ <div>
         <img src="../../images/palomas.jpg" 
              alt="Pigeons in urban environment" 
              width="100%" 
@@ -1148,7 +1145,7 @@ function showProtocol4(n) {
 
 <!-- How I contribute -->
 <div style="margin: 2rem 0;">
-    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">How I contribute</h3>
+   <h4 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">How I contribute</h4>
     <ul style="margin: 0;">
         <li>By transforming a bench into a temporary site of hospitality, I challenge the urban logic that treats pigeons as undesirable</li>
         <li>I create a space where pigeons might feel safe again, without forcing their participation</li>
@@ -1159,14 +1156,14 @@ function showProtocol4(n) {
 
 <!-- Why they need this activation -->
 <div style="margin: 2rem 0;">
-    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Why they need this activation</h3>
+   <h4 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Why they need this activation</h4>
     <p>The action highlights how deeply exclusion has shaped their behavior. Even when offered food and a safe surface, pigeons in hostile zones may no longer approach the ground. Hostile design has altered not only where they move, but how they perceive human-made objects.</p>
     <p><strong>This activation is needed not to "help pigeons," but to make visible their learned avoidance, their adaptations, and their survival strategies.</strong></p>
 </div>
 
 <!-- Collective objectives -->
 <div style="margin: 2rem 0;">
-    <h3 style="font-size: 1.5rem; font-weight: bold; margin: 0 0 1rem 0;">Collective objectives (not only mine)</h3>
+    <h4 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Collective objectives (not only mine)</h4>
     <ul style="margin: 0;">
         <li>To create temporary multispecies spaces where pigeons are not repelled</li>
         <li>To foster awareness of the ecological and ethical implications of hostile design</li>
