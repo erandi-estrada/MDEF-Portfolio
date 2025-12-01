@@ -119,7 +119,7 @@ I became the one who watched. The constant awareness of being seen changed the w
 </div>
     
   <!-- Imagen a la derecha (30% del ancho) -->
-  <img src="../../images/hide.jpg" 
+  <img src="../../images/hide.jpeg" 
          alt="Hide" 
          style="width: 30%; border-radius: 8px; object-fit: cover; height: auto;">
          
