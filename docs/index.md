@@ -20,7 +20,7 @@
     <div class="carousel-container">
         <div class="cards-carousel" id="cardsCarousel">
             <a href="Prosthesis/Prosthesis" class="card">
-                <img src="images/prosthesis.jpg" alt="Prosthesis">
+                <img src="images/prosthesis.jpeg" alt="Prosthesis">
                 <h3>Prosthesis</h3>
                 <p>A research on extensions that question what it means to be human in a hybrid world.</p>
             </a>
