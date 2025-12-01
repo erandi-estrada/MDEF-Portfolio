@@ -891,7 +891,7 @@ function showProtocol3(n) {
 
 <h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">ACT COLLECTIVELY</h1>
 
-<img src="../../images/collective.jpg" 
+<img src="../../images/collective.jpeg" 
      alt="Collective Action" 
      width="100%" 
      style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">
@@ -916,7 +916,7 @@ function showProtocol3(n) {
         <p>Placed on a public bench, the object generates discomfort, confusion, and curiosity among passersby. The goal is to expose the violence embedded in familiar urban objects once their comfort is removed.</p>
     </div>
     <div>
-        <img src="../../images/alambre.jpg" 
+        <img src="../../images/alambre.jpeg" 
              alt="Cushion with metal wire spikes" 
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
@@ -925,7 +925,7 @@ function showProtocol3(n) {
 
 <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin: 1.5rem 0; align-items: start;">
     <div>
-        <img src="../../images/boronas.jpg" 
+        <img src="../../images/boronas.jpeg" 
              alt="Cushion with breadcrumbs for pigeons" 
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
@@ -1143,7 +1143,7 @@ function showProtocol4(n) {
 
 <!-- Imagen a la derecha -->
 <div>
-        <img src="../../images/palomas.jpg" 
+        <img src="../../images/palomas.jpeg" 
              alt="Pigeons in urban environment" 
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
