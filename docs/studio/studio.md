@@ -1180,3 +1180,27 @@ function showProtocol4(n) {
     </ul>
     <p style="margin: 1rem 0 0 0; font-style: italic;"><strong>This is not an aesthetic intervention, it is an invitation to reconsider coexistence.</strong></p>
 </div>
+
+<!-- Video -->
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/Collective.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Reflection -->
+<div style="margin: 2rem 0;">
+    <h3 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Final Reflection</h3>
+
+<p>This collective action revealed something unexpected: that hospitality cannot simply be “switched on” after years of exclusion. I entered the project believing that removing the wire and offering softness, food, and a safe surface might be enough to re-open a space for pigeons, one of the most excluded species in Barcelona’s urban landscape. But their refusal to approach, even when the bench was inviting, showed me that design does not only shape bodies; it shapes memory, behavior, and trust.</p>
+
+<p>The pigeons became my collective not because they could perform something for the project, but because they already live inside the violence I am studying. Their everyday routes are marked by spikes, nets, slope systems and deterrents that have gradually redefined what is safe for them. In this sense, they were not subjects of my experiment, they were partners whose decisions revealed truths that humans often overlook.</p>
+
+<p>Their absence in Phase 2 was not a failure; it was a message. A response. A form of communication.</p>
+
+<p>It showed that exclusion accumulates. That being welcomed once does not erase years of being pushed away. That coexistence demands more than design gestures; it requires continuity, patience, and relational repair. It also reminded me that non-human agency does not always appear as interaction. Sometimes it appears as withdrawal, caution, or doubt.</p>
+
+<p>Through this action, I learned to recognize pigeons not as symbols of urban “dirt” but as sentient urban inhabitants navigating a city structured against them. Their behavior made visible the long-term impact of hostile architecture in a way that no human-focused intervention could. The collective objective, then, was not to make pigeons “return,” but to reveal how the city has taught them not to.</p>
+
+<p>The action ends with an unanswered invitation, a cushion that remained soft, full of food, yet untouched. And that unanswered space is meaningful: it is the gap between intention and trust, between a gesture of hospitality and the lived memory of violence.</p>
+
+<p>This project does not conclude with success or failure. It concludes with a deeper understanding: that to act collectively with non-human partners is to listen to their silences, respect their decisions, and recognize that care is a slow process, not a spectacle. Coexistence is not granted by design, it is negotiated over time, through attention, vulnerability, and an ethics of more-than-human respect.</p>
