@@ -241,23 +241,30 @@
                 
                   <h1>Conceptual</h1>
                 
-                <div class="menu-container">
-    <div class="custom-header-menu">
-        <a href="../..">MDEF</a>
-        <a href="../../projects/Portfolio">Projects</a>
-        <a href="../../about/me">About me</a>
-    </div>
-</div>
-<!DOCTYPE html>
+                <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constellation Map</title>
+    <title>THE INVISIBLE CITY - Constellation Map</title>
     <style>
         /* =============================================== */
-        /* MAPA CONSTELACIÓN - VERSIÓN ELEGANTE CORREGIDA */
+        /* MAPA PANTALLA COMPLETA - OBJETOS GIGANTES */
         /* =============================================== */
+
+        /* RESET Y BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #050509;
+        }
 
         /* ESTÉTICA GLOBAL - FONDO ESPACIAL LIMPIO */
         :root {
@@ -274,66 +281,26 @@
             --fog-white: #F2F2F2;
             --emergent-blue: #00D4FF;
 
-            /* Tamaños de órbitas - AUMENTADOS 35% */
-            --orbit-intuitions: 220px;    /* +37.5% */
-            --orbit-questions: 380px;     /* +35.7% */
-            --orbit-themes: 560px;        /* +33.3% */
-            --orbit-actions: 760px;       /* +31.0% */
-            --orbit-futures: 1000px;      /* +31.6% */
+            /* TAMAÑOS DE ÓRBITAS EN PORCENTAJE - MUCHO MÁS GRANDES */
+            --orbit-intuitions: 20vh;     /* Orbits en viewport height */
+            --orbit-questions: 35vh;
+            --orbit-themes: 50vh;
+            --orbit-actions: 65vh;
+            --orbit-futures: 80vh;
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: var(--space-black);
-            font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
-            color: var(--fog-white);
-            padding: 20px;
-        }
-
-        /* MENU SIMPLIFICADO */
-        .menu-container {
-            margin-bottom: 2rem;
-        }
-
-        .custom-header-menu {
-            display: flex;
-            gap: 2rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .custom-header-menu a {
-            color: var(--fog-white);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .custom-header-menu a:hover {
-            background: rgba(28, 100, 242, 0.2);
-            color: var(--data-blue);
-        }
-
-        /* CONTENEDOR PRINCIPAL - FONDO ELEGANTE */
+        /* CONTENEDOR PRINCIPAL - 100% PANTALLA */
         .galaxy-constellation {
-            position: relative;
-            width: 100%;
-            height: 1200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background: var(--space-black);
             overflow: hidden;
-            border-radius: 20px;
-            margin: 2rem 0;
+            font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
             font-weight: 600;
         }
 
@@ -345,14 +312,14 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(1px 1px at 10% 15%, rgba(255, 255, 255, 0.05) 1px, transparent 0),
-                radial-gradient(1px 1px at 20% 45%, rgba(255, 221, 0, 0.03) 1px, transparent 0),
-                radial-gradient(1px 1px at 30% 75%, rgba(138, 63, 252, 0.04) 1px, transparent 0),
-                radial-gradient(1px 1px at 40% 25%, rgba(28, 100, 242, 0.05) 1px, transparent 0),
-                radial-gradient(2px 2px at 50% 55%, rgba(255, 255, 255, 0.03) 1px, transparent 0),
-                radial-gradient(1px 1px at 60% 85%, rgba(255, 46, 136, 0.04) 1px, transparent 0),
-                radial-gradient(1px 1px at 70% 35%, rgba(0, 212, 255, 0.03) 1px, transparent 0),
-                radial-gradient(1px 1px at 80% 65%, rgba(0, 196, 154, 0.05) 1px, transparent 0);
+                radial-gradient(2px 2px at 10% 15%, rgba(255, 255, 255, 0.05) 2px, transparent 0),
+                radial-gradient(2px 2px at 20% 45%, rgba(255, 221, 0, 0.03) 2px, transparent 0),
+                radial-gradient(2px 2px at 30% 75%, rgba(138, 63, 252, 0.04) 2px, transparent 0),
+                radial-gradient(2px 2px at 40% 25%, rgba(28, 100, 242, 0.05) 2px, transparent 0),
+                radial-gradient(3px 3px at 50% 55%, rgba(255, 255, 255, 0.03) 3px, transparent 0),
+                radial-gradient(2px 2px at 60% 85%, rgba(255, 46, 136, 0.04) 2px, transparent 0),
+                radial-gradient(2px 2px at 70% 35%, rgba(0, 212, 255, 0.03) 2px, transparent 0),
+                radial-gradient(2px 2px at 80% 65%, rgba(0, 196, 154, 0.05) 2px, transparent 0);
             background-size: 500px 500px;
             animation: star-twinkle 25s infinite alternate;
             z-index: 1;
@@ -371,7 +338,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            border: 0.5px solid;
+            border: 1px solid;
             opacity: 0.03;
             z-index: 2;
         }
@@ -382,7 +349,7 @@
         .orbit-4 { width: var(--orbit-actions); height: var(--orbit-actions); border-color: var(--amber-hostility); }
         .orbit-5 { width: var(--orbit-futures); height: var(--orbit-futures); border-color: var(--emergent-blue); }
 
-        /* ===== SISTEMA DE NODOS - TAMAÑOS AUMENTADOS 40% ===== */
+        /* ===== SISTEMA DE NODOS - TAMAÑOS GIGANTES ===== */
 
         /* CLASE BASE PARA TODOS LOS NODOS */
         .cosmic-node {
@@ -396,10 +363,11 @@
             text-align: center;
             font-weight: 600;
             animation: cosmic-float 10s ease-in-out infinite;
-            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
-            padding: 15px;
+            filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
+            padding: 20px;
             box-sizing: border-box;
             overflow: hidden;
+            transform: translate(-50%, -50%);
         }
 
         @keyframes cosmic-float {
@@ -407,7 +375,7 @@
             50% { transform: translate(-50%, -50%) scale(1.02); }
         }
 
-        /* CONTENEDOR DE CONTENIDO - PADDING AMPLIO */
+        /* CONTENEDOR DE CONTENIDO */
         .node-content {
             position: relative;
             z-index: 3;
@@ -417,39 +385,40 @@
             justify-content: center;
             width: 100%;
             height: 100%;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
             color: var(--fog-white);
-            font-size: 0.95rem;
-            line-height: 1.3;
-            letter-spacing: 0.01em;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
-            padding: 10px;
+            padding: 15px;
         }
 
         /* LÍMITE DE CARACTERES POR LÍNEA */
         .node-title {
             font-weight: 700;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
             max-width: 100%;
             word-break: break-word;
+            font-size: 1.3rem;
         }
 
         .node-subtitle {
-            font-size: 0.85rem;
+            font-size: 1rem;
             opacity: 0.9;
             font-weight: 500;
             max-width: 100%;
             word-break: break-word;
         }
 
-        /* ===== TIPOS DE NODOS - TAMAÑOS AUMENTADOS ===== */
+        /* ===== TIPOS DE NODOS - TAMAÑOS ENORMES ===== */
 
-        /* 🌞 NÚCLEO - CÍRCULO GRANDE (+45%) */
+        /* 🌞 NÚCLEO - CÍRCULO GIGANTE */
         .node-type-core {
-            width: 220px;
-            height: 220px;
+            width: 300px !important;
+            height: 300px !important;
             border-radius: 50%;
             background: radial-gradient(
                 circle at center,
@@ -459,28 +428,28 @@
                 transparent 100%
             );
             box-shadow: 
-                inset 0 0 40px rgba(255, 255, 255, 0.3),
-                0 0 80px rgba(28, 100, 242, 0.4);
+                inset 0 0 60px rgba(255, 255, 255, 0.4),
+                0 0 120px rgba(28, 100, 242, 0.6);
             animation: core-pulse 8s ease-in-out infinite;
         }
 
         @keyframes core-pulse {
             0%, 100% { 
                 box-shadow: 
-                    inset 0 0 40px rgba(255, 255, 255, 0.3),
-                    0 0 80px rgba(28, 100, 242, 0.4);
+                    inset 0 0 60px rgba(255, 255, 255, 0.4),
+                    0 0 120px rgba(28, 100, 242, 0.6);
             }
             50% { 
                 box-shadow: 
-                    inset 0 0 50px rgba(255, 255, 255, 0.4),
-                    0 0 100px rgba(28, 100, 242, 0.5);
+                    inset 0 0 80px rgba(255, 255, 255, 0.5),
+                    0 0 160px rgba(28, 100, 242, 0.8);
             }
         }
 
-        /* 💎 INTUICIONES - ROMBOS (+40%) */
+        /* 💎 INTUICIONES - ROMBOS GRANDES */
         .node-type-intuition {
-            width: 140px;
-            height: 140px;
+            width: 180px !important;
+            height: 180px !important;
             background: radial-gradient(
                 circle at center,
                 var(--magenta-intuition) 0%,
@@ -490,14 +459,14 @@
             );
             clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
             box-shadow: 
-                inset 0 0 20px rgba(255, 255, 255, 0.2),
-                0 0 40px rgba(181, 30, 255, 0.3);
+                inset 0 0 30px rgba(255, 255, 255, 0.3),
+                0 0 60px rgba(181, 30, 255, 0.4);
         }
 
-        /* 🧠 PREGUNTAS - HEXÁGONOS (+44%) */
+        /* 🧠 PREGUNTAS - HEXÁGONOS GRANDES */
         .node-type-question {
-            width: 130px;
-            height: 130px;
+            width: 170px !important;
+            height: 170px !important;
             background: radial-gradient(
                 circle at center,
                 rgba(242, 242, 242, 0.95) 0%,
@@ -508,56 +477,56 @@
             clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
             color: var(--space-black);
             box-shadow: 
-                inset 0 0 20px rgba(255, 255, 255, 0.3),
-                0 0 35px rgba(242, 242, 242, 0.3);
+                inset 0 0 30px rgba(255, 255, 255, 0.4),
+                0 0 50px rgba(242, 242, 242, 0.4);
         }
 
-        /* 🟣 CAMPOS TEÓRICOS - CÍRCULOS GRANDES (+42%) */
+        /* 🟣 CAMPOS TEÓRICOS - CÍRCULOS GRANDES */
         .node-type-theme {
-            width: 170px;
-            height: 170px;
+            width: 220px !important;
+            height: 220px !important;
             border-radius: 50%;
             box-shadow: 
-                inset 0 0 30px rgba(255, 255, 255, 0.25),
-                0 0 50px currentColor;
+                inset 0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 80px currentColor;
             background: radial-gradient(
                 circle at center,
                 currentColor 0%,
                 currentColor 40%,
-                rgba(255, 255, 255, 0.1) 70%,
+                rgba(255, 255, 255, 0.15) 70%,
                 transparent 100%
             );
         }
 
-        /* ◉ ACCIONES - CÍRCULO DOBLE BORDE (+36%) */
+        /* ◉ ACCIONES - CÍRCULO DOBLE BORDE GRANDE */
         .node-type-action {
-            width: 150px;
-            height: 150px;
+            width: 200px !important;
+            height: 200px !important;
             border-radius: 50%;
             background: transparent;
-            border: 3px solid;
+            border: 4px solid;
             box-shadow: 
-                inset 0 0 30px rgba(255, 255, 255, 0.2),
-                0 0 50px currentColor;
+                inset 0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 80px currentColor;
             position: relative;
         }
 
         .node-type-action::before {
             content: '';
             position: absolute;
-            top: 15%;
-            left: 15%;
-            right: 15%;
-            bottom: 15%;
+            top: 20%;
+            left: 20%;
+            right: 20%;
+            bottom: 20%;
             border-radius: 50%;
-            border: 2px solid;
+            border: 3px solid;
             opacity: 0.4;
         }
 
-        /* ⭐ FUTUROS - ESTRELLAS (+50%) */
+        /* ⭐ FUTUROS - ESTRELLAS GRANDES */
         .node-type-future {
-            width: 150px;
-            height: 150px;
+            width: 200px !important;
+            height: 200px !important;
             background: radial-gradient(
                 circle at center,
                 var(--emergent-blue) 0%,
@@ -567,8 +536,8 @@
             );
             clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
             box-shadow: 
-                inset 0 0 25px rgba(255, 255, 255, 0.25),
-                0 0 40px rgba(0, 212, 255, 0.3);
+                inset 0 0 35px rgba(255, 255, 255, 0.3),
+                0 0 60px rgba(0, 212, 255, 0.4);
             animation: star-sparkle 6s ease-in-out infinite;
         }
 
@@ -577,10 +546,10 @@
             50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
         }
 
-        /* ✦ MICRO-NODOS (+33%) */
+        /* ✦ MICRO-NODOS MÁS GRANDES */
         .node-type-micro {
-            width: 26px;
-            height: 26px;
+            width: 40px !important;
+            height: 40px !important;
             border-radius: 50%;
             background: radial-gradient(
                 circle at center,
@@ -589,16 +558,16 @@
                 transparent 80%
             );
             font-size: 0;
-            box-shadow: 0 0 12px currentColor;
+            box-shadow: 0 0 20px currentColor;
             animation: micro-pulse 3s ease-in-out infinite;
         }
 
         @keyframes micro-pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.9; }
         }
 
-        /* ===== COLORES ESPECÍFICOS CON DEGRADADOS LIMPIOS ===== */
+        /* ===== COLORES ESPECÍFICOS ===== */
 
         /* Temas teóricos */
         .theme-urban { color: var(--violet-injustice); }
@@ -634,26 +603,26 @@
 
         .cosmic-node:hover {
             z-index: 100 !important;
-            transform: translate(-50%, -50%) scale(1.1) !important;
-            filter: brightness(1.2) drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
+            transform: translate(-50%, -50%) scale(1.15) !important;
+            filter: brightness(1.3) drop-shadow(0 0 40px rgba(255, 255, 255, 0.3));
         }
 
         .node-type-core:hover {
             box-shadow: 
-                inset 0 0 60px rgba(255, 255, 255, 0.4),
-                0 0 120px rgba(28, 100, 242, 0.6);
+                inset 0 0 80px rgba(255, 255, 255, 0.5),
+                0 0 160px rgba(28, 100, 242, 0.8);
         }
 
         .node-type-future:hover {
-            animation: star-sparkle-hover 1.5s ease-in-out infinite;
+            animation: star-sparkle-hover 1s ease-in-out infinite;
         }
 
         @keyframes star-sparkle-hover {
-            0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1) rotate(0deg); }
-            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(5deg); }
+            0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(0deg); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2) rotate(5deg); }
         }
 
-        /* ===== CONEXIONES - CURVAS BÉZIER SUAVES ===== */
+        /* ===== CONEXIONES - MÁS GRUESAS ===== */
 
         .cosmic-connection {
             position: absolute;
@@ -673,22 +642,22 @@
 
         .cosmic-tooltip {
             position: fixed;
-            background: rgba(5, 5, 9, 0.92);
-            border: 1px solid rgba(242, 242, 242, 0.12);
-            border-radius: 12px;
-            padding: 1.5rem;
-            max-width: 320px;
+            background: rgba(5, 5, 9, 0.95);
+            border: 1px solid rgba(242, 242, 242, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 400px;
             z-index: 1000;
             pointer-events: none;
             opacity: 0;
-            transform: translateY(15px) scale(0.98);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px) scale(0.98);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 
-                0 12px 48px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(28, 100, 242, 0.1);
-            backdrop-filter: blur(12px);
-            font-size: 0.95rem;
-            line-height: 1.5;
+                0 20px 60px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(28, 100, 242, 0.15);
+            backdrop-filter: blur(15px);
+            font-size: 1.1rem;
+            line-height: 1.6;
             font-weight: 400;
         }
 
@@ -700,64 +669,62 @@
         .tooltip-title {
             color: var(--data-blue);
             font-weight: 700;
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            letter-spacing: 0.03em;
         }
 
         .tooltip-content {
             opacity: 0.9;
             font-weight: 300;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         /* ===== LEYENDA DISCRETA ===== */
 
         .galaxy-legend {
-            position: absolute;
+            position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: rgba(5, 5, 9, 0.75);
-            border: 1px solid rgba(242, 242, 242, 0.08);
-            border-radius: 16px;
-            padding: 1.25rem;
+            background: rgba(5, 5, 9, 0.85);
+            border: 1px solid rgba(242, 242, 242, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
             z-index: 50;
-            backdrop-filter: blur(15px);
-            max-width: 240px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            max-width: 280px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
             transition: all 0.3s ease;
             opacity: 0.9;
         }
 
         .legend-title {
-            color: rgba(242, 242, 242, 0.8);
-            font-size: 0.85rem;
+            color: rgba(242, 242, 242, 0.9);
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            opacity: 0.9;
         }
 
         .legend-toggle {
             background: none;
             border: none;
-            color: rgba(242, 242, 242, 0.6);
-            opacity: 0.7;
+            color: rgba(242, 242, 242, 0.7);
             cursor: pointer;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             line-height: 1;
-            padding: 0.25rem;
-            border-radius: 4px;
+            padding: 0.3rem;
+            border-radius: 6px;
             transition: all 0.2s ease;
         }
 
         .legend-toggle:hover {
-            background: rgba(242, 242, 242, 0.1);
-            opacity: 1;
+            background: rgba(242, 242, 242, 0.15);
+            color: var(--fog-white);
         }
 
         .legend-content {
@@ -767,150 +734,176 @@
         .legend-item {
             display: flex;
             align-items: center;
-            margin-bottom: 0.7rem;
-            font-size: 0.8rem;
-            opacity: 0.85;
-            color: rgba(242, 242, 242, 0.9);
+            margin-bottom: 0.9rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: rgba(242, 242, 242, 0.95);
         }
 
         .legend-shape {
-            width: 20px;
-            height: 20px;
-            margin-right: 0.75rem;
+            width: 24px;
+            height: 24px;
+            margin-right: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 4px;
+            border-radius: 6px;
             flex-shrink: 0;
         }
 
-        /* ===== RESPONSIVE OPTIMIZADO ===== */
-
-        @media (max-width: 1400px) {
-            :root {
-                --orbit-intuitions: 200px;
-                --orbit-questions: 340px;
-                --orbit-themes: 500px;
-                --orbit-actions: 680px;
-                --orbit-futures: 900px;
-            }
-
-            .galaxy-constellation {
-                height: 1000px;
-            }
-
-            .node-type-core { width: 200px; height: 200px; }
-            .node-type-intuition { width: 125px; height: 125px; }
-            .node-type-question { width: 115px; height: 115px; }
-            .node-type-theme { width: 150px; height: 150px; }
-            .node-type-action { width: 135px; height: 135px; }
-            .node-type-future { width: 135px; height: 135px; }
-
-            .node-content {
-                font-size: 0.9rem;
-            }
+        /* ===== BOTÓN FULLSCREEN ===== */
+        .fullscreen-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(5, 5, 9, 0.8);
+            border: 1px solid rgba(242, 242, 242, 0.15);
+            border-radius: 12px;
+            padding: 0.8rem 1.2rem;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            color: var(--fog-white);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
+        .fullscreen-toggle:hover {
+            background: rgba(28, 100, 242, 0.3);
+            border-color: var(--data-blue);
+        }
+
+        /* ===== RESPONSIVE PARA PANTALLAS PEQUEÑAS ===== */
+
         @media (max-width: 1024px) {
-            .galaxy-constellation {
-                height: 900px;
-            }
-
             :root {
-                --orbit-intuitions: 180px;
-                --orbit-questions: 300px;
-                --orbit-themes: 440px;
-                --orbit-actions: 600px;
-                --orbit-futures: 800px;
+                --orbit-intuitions: 18vh;
+                --orbit-questions: 30vh;
+                --orbit-themes: 42vh;
+                --orbit-actions: 55vh;
+                --orbit-futures: 70vh;
             }
 
-            .node-type-core { width: 180px; height: 180px; }
-            .node-type-intuition { width: 110px; height: 110px; }
-            .node-type-question { width: 100px; height: 100px; }
-            .node-type-theme { width: 130px; height: 130px; }
-            .node-type-action { width: 120px; height: 120px; }
-            .node-type-future { width: 120px; height: 120px; }
+            .node-type-core { width: 250px !important; height: 250px !important; }
+            .node-type-intuition { width: 150px !important; height: 150px !important; }
+            .node-type-question { width: 140px !important; height: 140px !important; }
+            .node-type-theme { width: 180px !important; height: 180px !important; }
+            .node-type-action { width: 160px !important; height: 160px !important; }
+            .node-type-future { width: 160px !important; height: 160px !important; }
 
             .node-content {
-                font-size: 0.85rem;
+                font-size: 1rem;
+                padding: 12px;
             }
 
-            .galaxy-legend {
-                max-width: 200px;
-                padding: 1rem;
-                right: 1rem;
-                bottom: 1rem;
+            .node-title {
+                font-size: 1.1rem;
+            }
+
+            .node-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .cosmic-tooltip {
+                max-width: 350px;
+                padding: 1.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            .galaxy-constellation {
-                height: 700px;
-            }
-
             :root {
-                --orbit-intuitions: 150px;
-                --orbit-questions: 250px;
-                --orbit-themes: 370px;
-                --orbit-actions: 500px;
-                --orbit-futures: 650px;
+                --orbit-intuitions: 15vh;
+                --orbit-questions: 25vh;
+                --orbit-themes: 35vh;
+                --orbit-actions: 45vh;
+                --orbit-futures: 60vh;
             }
 
-            .node-type-core { width: 160px; height: 160px; }
-            .node-type-intuition { width: 95px; height: 95px; }
-            .node-type-question { width: 85px; height: 85px; }
-            .node-type-theme { width: 110px; height: 110px; }
-            .node-type-action { width: 100px; height: 100px; }
-            .node-type-future { width: 100px; height: 100px; }
+            .node-type-core { width: 200px !important; height: 200px !important; }
+            .node-type-intuition { width: 120px !important; height: 120px !important; }
+            .node-type-question { width: 110px !important; height: 110px !important; }
+            .node-type-theme { width: 140px !important; height: 140px !important; }
+            .node-type-action { width: 130px !important; height: 130px !important; }
+            .node-type-future { width: 130px !important; height: 130px !important; }
+
+            .node-content {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            .node-title {
+                font-size: 1rem;
+            }
+
+            .node-subtitle {
+                font-size: 0.85rem;
+            }
+
+            .galaxy-legend {
+                max-width: 220px;
+                padding: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+            }
+
+            .fullscreen-toggle {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --orbit-intuitions: 12vh;
+                --orbit-questions: 20vh;
+                --orbit-themes: 28vh;
+                --orbit-actions: 38vh;
+                --orbit-futures: 50vh;
+            }
+
+            .node-type-core { width: 160px !important; height: 160px !important; }
+            .node-type-intuition { width: 100px !important; height: 100px !important; }
+            .node-type-question { width: 90px !important; height: 90px !important; }
+            .node-type-theme { width: 110px !important; height: 110px !important; }
+            .node-type-action { width: 100px !important; height: 100px !important; }
+            .node-type-future { width: 100px !important; height: 100px !important; }
 
             .node-content {
                 font-size: 0.8rem;
                 padding: 8px;
             }
 
+            .node-title {
+                font-size: 0.9rem;
+            }
+
+            .node-subtitle {
+                font-size: 0.75rem;
+            }
+
             .galaxy-legend {
                 display: none;
             }
-        }
 
-        @media (max-width: 480px) {
-            .galaxy-constellation {
-                height: 600px;
+            .cosmic-tooltip {
+                max-width: 300px;
+                padding: 1.2rem;
+                font-size: 0.9rem;
             }
 
-            :root {
-                --orbit-intuitions: 130px;
-                --orbit-questions: 220px;
-                --orbit-themes: 320px;
-                --orbit-actions: 430px;
-                --orbit-futures: 550px;
-            }
-
-            .node-type-core { width: 140px; height: 140px; }
-            .node-type-intuition { width: 85px; height: 85px; }
-            .node-type-question { width: 75px; height: 75px; }
-            .node-type-theme { width: 95px; height: 95px; }
-            .node-type-action { width: 85px; height: 85px; }
-            .node-type-future { width: 85px; height: 85px; }
-
-            .node-content {
-                font-size: 0.75rem;
-                padding: 6px;
+            .tooltip-title {
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="menu-container">
-        <div class="custom-header-menu">
-            <a href="../..">MDEF</a>
-            <a href="../../projects/Portfolio">Projects</a>
-            <a href="../../about/me">About me</a>
-        </div>
-    </div>
-
     <!-- =============================================== -->
-    <!-- MAPA GALÁCTICO ELEGANTE -->
+    <!-- MAPA GALÁCTICO PANTALLA COMPLETA -->
     <!-- =============================================== -->
 
     <div class="galaxy-constellation" id="galaxyMap">
@@ -947,35 +940,38 @@
             </div>
             <div class="legend-content" id="legendContent">
                 <div class="legend-item">
-                    <div class="legend-shape node-type-core" style="transform: scale(0.5);"></div>
+                    <div class="legend-shape node-type-core" style="transform: scale(0.6);"></div>
                     <span>Core Concept</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-shape node-type-intuition" style="transform: scale(0.6);"></div>
+                    <div class="legend-shape node-type-intuition" style="transform: scale(0.7);"></div>
                     <span>Intuitions</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-shape node-type-question" style="transform: scale(0.6);"></div>
+                    <div class="legend-shape node-type-question" style="transform: scale(0.7);"></div>
                     <span>Motor Questions</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-shape node-type-theme theme-urban" style="transform: scale(0.6);"></div>
+                    <div class="legend-shape node-type-theme theme-urban" style="transform: scale(0.7);"></div>
                     <span>Thematic Fields</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-shape node-type-action action-amber" style="transform: scale(0.6);"></div>
+                    <div class="legend-shape node-type-action action-amber" style="transform: scale(0.7);"></div>
                     <span>Actions as Knowledge</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-shape node-type-future" style="transform: scale(0.6);"></div>
+                    <div class="legend-shape node-type-future" style="transform: scale(0.7);"></div>
                     <span>Emergent Futures</span>
                 </div>
             </div>
         </div>
+
+        <!-- Botón Fullscreen -->
+        <button class="fullscreen-toggle" id="fullscreenToggle">Fullscreen</button>
     </div>
 
     <script>
-        // ===== CONFIGURACIÓN DE NODOS - TEXTO OPTIMIZADO =====
+        // ===== CONFIGURACIÓN DE NODOS =====
         const galaxyData = {
             core: {
                 id: "core",
@@ -1243,6 +1239,10 @@
             const nodesContainer = document.getElementById('cosmicNodes');
             const microContainer = document.getElementById('microNodes');
 
+            // Limpiar contenedores
+            nodesContainer.innerHTML = '';
+            microContainer.innerHTML = '';
+
             // Crear nodo central
             createNode(galaxyData.core, nodesContainer, 0);
 
@@ -1273,6 +1273,7 @@
             node.className = `cosmic-node node-type-${nodeData.type}`;
             node.dataset.id = nodeData.id;
             node.dataset.type = nodeData.type;
+            node.style.animationDelay = `${index * 0.1}s`;
 
             // Añadir clase de color
             if (nodeData.colorClass) {
@@ -1285,16 +1286,30 @@
                 x = 50;
                 y = 50;
             } else {
-                const orbit = getOrbitRadius(nodeData.orbit);
-                const angle = (nodeData.angle * Math.PI) / 180;
-                x = 50 + (orbit * Math.cos(angle));
-                y = 50 + (orbit * Math.sin(angle));
+                // Calcular posición basada en órbita y ángulo
+                const orbitPercentage = nodeData.orbit;
+                const angleRad = (nodeData.angle * Math.PI) / 180;
+
+                // Convertir órbita a porcentaje de pantalla
+                const orbitMap = {
+                    1: 20,  // 20% del viewport height
+                    2: 35,  // 35% del viewport height
+                    3: 50,  // 50% del viewport height
+                    4: 65,  // 65% del viewport height
+                    5: 80   // 80% del viewport height
+                };
+
+                const orbitRadius = orbitMap[orbitPercentage] || 0;
+
+                // Calcular posición en porcentaje
+                x = 50 + (orbitRadius * Math.cos(angleRad));
+                y = 50 + (orbitRadius * Math.sin(angleRad));
             }
 
             node.style.left = `${x}%`;
             node.style.top = `${y}%`;
 
-            // Contenido con texto optimizado
+            // Contenido
             const content = document.createElement('div');
             content.className = 'node-content';
 
@@ -1316,17 +1331,6 @@
             setupNodeInteractions(node, nodeData);
         }
 
-        function getOrbitRadius(orbitNumber) {
-            const orbitValues = {
-                1: 22,   // 220px / 1000px * 100%
-                2: 38,   // 380px / 1000px * 100%
-                3: 56,   // 560px / 1000px * 100%
-                4: 76,   // 760px / 1000px * 100%
-                5: 100   // 1000px / 1000px * 100%
-            };
-            return orbitValues[orbitNumber] || 0;
-        }
-
         // ===== CONEXIONES =====
         function createAllConnections() {
             const connectionsContainer = document.getElementById('cosmicConnections');
@@ -1338,6 +1342,9 @@
             createBezierConnection("core", "theme2", "normal");
             createBezierConnection("intuition1", "question3", "normal");
             createBezierConnection("theme2", "question1", "normal");
+            createBezierConnection("theme3", "action2", "normal");
+            createBezierConnection("theme5", "future1", "normal");
+            createBezierConnection("theme6", "future3", "normal");
         }
 
         function createBezierConnection(sourceId, targetId, strength) {
@@ -1351,7 +1358,7 @@
             const svg = document.createElementNS(svgNS, "svg");
             svg.classList.add("cosmic-connection");
 
-            // Obtener posiciones
+            // Obtener posiciones en porcentaje
             const x1 = parseFloat(source.style.left);
             const y1 = parseFloat(source.style.top);
             const x2 = parseFloat(target.style.left);
@@ -1361,7 +1368,7 @@
             const dx = x2 - x1;
             const dy = y2 - y1;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            const curvature = distance * 0.15;
+            const curvature = distance * 0.2;
 
             const cx1 = x1 + dx * 0.3 + curvature;
             const cy1 = y1 + dy * 0.3 - curvature;
@@ -1375,17 +1382,38 @@
             path.setAttribute("fill", "none");
 
             // Estilo según fuerza
-            switch(strength) {
-                case "strong":
-                    path.setAttribute("stroke", "url(#gradient-strong)");
-                    path.setAttribute("stroke-width", "2.5");
-                    path.setAttribute("opacity", "0.4");
-                    break;
-                case "normal":
-                    path.setAttribute("stroke", "rgba(242, 242, 242, 0.35)");
-                    path.setAttribute("stroke-width", "1");
-                    path.setAttribute("opacity", "0.35");
-                    break;
+            if (strength === "strong") {
+                path.setAttribute("stroke", "url(#gradient-strong)");
+                path.setAttribute("stroke-width", "3");
+                path.setAttribute("opacity", "0.5");
+
+                // Crear gradiente si no existe
+                if (!document.getElementById('gradient-strong')) {
+                    const defs = document.createElementNS(svgNS, "defs");
+                    const gradient = document.createElementNS(svgNS, "linearGradient");
+                    gradient.setAttribute("id", "gradient-strong");
+                    gradient.setAttribute("x1", "0%");
+                    gradient.setAttribute("y1", "0%");
+                    gradient.setAttribute("x2", "100%");
+                    gradient.setAttribute("y2", "0%");
+
+                    const stop1 = document.createElementNS(svgNS, "stop");
+                    stop1.setAttribute("offset", "0%");
+                    stop1.setAttribute("stop-color", "#8A3FFC");
+
+                    const stop2 = document.createElementNS(svgNS, "stop");
+                    stop2.setAttribute("offset", "100%");
+                    stop2.setAttribute("stop-color", "#00D4FF");
+
+                    gradient.appendChild(stop1);
+                    gradient.appendChild(stop2);
+                    defs.appendChild(gradient);
+                    svg.appendChild(defs);
+                }
+            } else {
+                path.setAttribute("stroke", "rgba(242, 242, 242, 0.4)");
+                path.setAttribute("stroke-width", "1.5");
+                path.setAttribute("opacity", "0.4");
             }
 
             svg.appendChild(path);
@@ -1403,14 +1431,25 @@
             });
 
             node.addEventListener('mouseleave', handleNodeLeave);
+
+            node.addEventListener('click', () => {
+                // Animación de clic
+                node.style.transform = 'translate(-50%, -50%) scale(1.3)';
+                setTimeout(() => {
+                    node.style.transform = 'translate(-50%, -50%) scale(1.15)';
+                }, 200);
+
+                // Mostrar info detallada en consola
+                console.log(`Nodo clickeado: ${nodeData.title}`, nodeData);
+            });
         }
 
         function handleNodeHover(event, nodeData) {
             tooltipTitle.textContent = nodeData.title;
             tooltipContent.textContent = nodeData.tooltip;
 
-            tooltip.style.left = `${event.clientX + 20}px`;
-            tooltip.style.top = `${event.clientY + 20}px`;
+            tooltip.style.left = `${event.clientX + 25}px`;
+            tooltip.style.top = `${event.clientY + 25}px`;
             tooltip.classList.add('active');
         }
 
@@ -1425,12 +1464,13 @@
             micro.dataset.id = microData.id;
             micro.style.left = `${microData.x}%`;
             micro.style.top = `${microData.y}%`;
+            micro.style.animationDelay = `${index * 0.2}s`;
 
             micro.addEventListener('mouseenter', (e) => {
                 tooltipTitle.textContent = microData.word;
                 tooltipContent.textContent = `Conceptual thread: ${microData.word} as a lens for reading urban relations and violence.`;
-                tooltip.style.left = `${e.clientX + 15}px`;
-                tooltip.style.top = `${e.clientY + 15}px`;
+                tooltip.style.left = `${e.clientX + 20}px`;
+                tooltip.style.top = `${e.clientY + 20}px`;
                 tooltip.classList.add('active');
             });
 
@@ -1458,20 +1498,79 @@
             }
         });
 
+        // ===== FULLSCREEN FUNCTIONALITY =====
+        const fullscreenToggle = document.getElementById('fullscreenToggle');
+
+        fullscreenToggle.addEventListener('click', () => {
+            const element = document.documentElement;
+
+            if (!document.fullscreenElement) {
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.mozRequestFullScreen) { /* Firefox */
+                    element.mozRequestFullScreen();
+                } else if (element.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    element.webkitRequestFullscreen();
+                } else if (element.msRequestFullscreen) { /* IE/Edge */
+                    element.msRequestFullscreen();
+                }
+                fullscreenToggle.textContent = 'Exit Fullscreen';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+                fullscreenToggle.textContent = 'Fullscreen';
+            }
+        });
+
+        // Escuchar cambios en fullscreen
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                fullscreenToggle.textContent = 'Fullscreen';
+            }
+        });
+
         // ===== INICIALIZACIÓN =====
         document.addEventListener('DOMContentLoaded', () => {
             createGalaxy();
 
             // Ajustar conexiones al redimensionar
+            let resizeTimeout;
             window.addEventListener('resize', () => {
-                setTimeout(createAllConnections, 100);
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    createAllConnections();
+                }, 200);
             });
 
             // Mover tooltip con el mouse
             document.addEventListener('mousemove', (e) => {
                 if (tooltip.classList.contains('active')) {
-                    tooltip.style.left = `${e.clientX + 20}px`;
-                    tooltip.style.top = `${e.clientY + 20}px`;
+                    tooltip.style.left = `${e.clientX + 25}px`;
+                    tooltip.style.top = `${e.clientY + 25}px`;
+                }
+            });
+
+            // Zoom con scroll (opcional)
+            let scale = 1;
+            const galaxyMap = document.getElementById('galaxyMap');
+
+            galaxyMap.addEventListener('wheel', (e) => {
+                e.preventDefault();
+
+                if (e.ctrlKey) {
+                    // Zoom con Ctrl + Scroll
+                    scale += e.deltaY * -0.01;
+                    scale = Math.min(Math.max(0.5, scale), 3);
+
+                    galaxyMap.style.transform = `scale(${scale})`;
+                    galaxyMap.style.transformOrigin = `${e.clientX / window.innerWidth * 100}% ${e.clientY / window.innerHeight * 100}%`;
                 }
             });
         });
@@ -1486,7 +1585,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 23:16:04 UTC">December 2, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 23:26:18 UTC">December 2, 2025</span>
     
   </small>
 </div>
