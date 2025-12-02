@@ -7,16 +7,14 @@
 </div>
 
 <!-- =============================================== -->
-<!-- MAPA CONSTELACIÓN COMPLETO - ESTÉTICA ESPACIAL -->
+<!-- MAPA CONSTELACIÓN - VERSIÓN ELEGANTE CORREGIDA -->
 <!-- =============================================== -->
 
 <style>
-    /* ESTÉTICA GLOBAL - ESPACIO PROFUNDO */
+    /* ESTÉTICA GLOBAL - FONDO ESPACIAL LIMPIO */
     :root {
-        /* Paleta cósmica completa */
+        /* Paleta cósmica refinada */
         --space-black: #050509;
-        --nebula-blue: rgba(28, 100, 242, 0.1);
-        --nebula-magenta: rgba(181, 30, 255, 0.08);
         --core-gradient: linear-gradient(135deg, #1C64F2 0%, #FFDD00 100%);
         --magenta-intuition: #B51EFF;
         --violet-injustice: #8A3FFC;
@@ -28,32 +26,31 @@
         --fog-white: #F2F2F2;
         --emergent-blue: #00D4FF;
         
-        /* Tamaños de órbitas - 5 niveles */
-        --orbit-core: 0px;
-        --orbit-intuitions: 160px;
-        --orbit-questions: 280px;
-        --orbit-themes: 420px;
-        --orbit-actions: 580px;
-        --orbit-futures: 760px;
+        /* Tamaños de órbitas - AUMENTADOS 35% */
+        --orbit-intuitions: 220px;    /* +37.5% */
+        --orbit-questions: 380px;     /* +35.7% */
+        --orbit-themes: 560px;        /* +33.3% */
+        --orbit-actions: 760px;       /* +31.0% */
+        --orbit-futures: 1000px;      /* +31.6% */
     }
     
-    /* CONTENEDOR PRINCIPAL - FONDO ESPACIAL */
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+    
+    /* CONTENEDOR PRINCIPAL - FONDO ELEGANTE */
     .galaxy-constellation {
         position: relative;
         width: 100%;
-        height: 130vh;
-        min-height: 1100px;
-        background: 
-            radial-gradient(circle at 20% 30%, var(--nebula-blue) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, var(--nebula-magenta) 0%, transparent 50%),
-            var(--space-black);
+        height: 140vh;
+        min-height: 1200px;
+        background: var(--space-black);
         overflow: hidden;
         border-radius: 20px;
         margin: 4rem 0;
         font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+        font-weight: 600;
     }
     
-    /* TEXTURA DE ESTRELLAS - MULTICAPA */
+    /* TEXTURA DE ESTRELLAS SUBTIL */
     .star-field {
         position: absolute;
         top: 0;
@@ -61,48 +58,44 @@
         width: 100%;
         height: 100%;
         background-image: 
-            radial-gradient(1px 1px at 10% 15%, rgba(255, 255, 255, 0.07) 1px, transparent 0),
-            radial-gradient(1px 1px at 20% 45%, rgba(255, 221, 0, 0.05) 1px, transparent 0),
-            radial-gradient(1.5px 1.5px at 30% 75%, rgba(138, 63, 252, 0.06) 1px, transparent 0),
-            radial-gradient(2px 2px at 40% 25%, rgba(28, 100, 242, 0.07) 1px, transparent 0),
-            radial-gradient(1px 1px at 50% 55%, rgba(255, 255, 255, 0.04) 1px, transparent 0),
-            radial-gradient(1.5px 1.5px at 60% 85%, rgba(255, 46, 136, 0.06) 1px, transparent 0),
-            radial-gradient(2px 2px at 70% 35%, rgba(0, 212, 255, 0.05) 1px, transparent 0),
-            radial-gradient(1px 1px at 80% 65%, rgba(0, 196, 154, 0.07) 1px, transparent 0),
-            radial-gradient(1.5px 1.5px at 90% 15%, rgba(255, 159, 28, 0.06) 1px, transparent 0),
-            radial-gradient(3px 3px at 15% 85%, rgba(181, 30, 255, 0.03) 2px, transparent 0);
-        background-size: 400px 400px;
-        animation: star-twinkle 20s infinite alternate;
+            radial-gradient(1px 1px at 10% 15%, rgba(255, 255, 255, 0.05) 1px, transparent 0),
+            radial-gradient(1px 1px at 20% 45%, rgba(255, 221, 0, 0.03) 1px, transparent 0),
+            radial-gradient(1px 1px at 30% 75%, rgba(138, 63, 252, 0.04) 1px, transparent 0),
+            radial-gradient(1px 1px at 40% 25%, rgba(28, 100, 242, 0.05) 1px, transparent 0),
+            radial-gradient(2px 2px at 50% 55%, rgba(255, 255, 255, 0.03) 1px, transparent 0),
+            radial-gradient(1px 1px at 60% 85%, rgba(255, 46, 136, 0.04) 1px, transparent 0),
+            radial-gradient(1px 1px at 70% 35%, rgba(0, 212, 255, 0.03) 1px, transparent 0),
+            radial-gradient(1px 1px at 80% 65%, rgba(0, 196, 154, 0.05) 1px, transparent 0);
+        background-size: 500px 500px;
+        animation: star-twinkle 25s infinite alternate;
         z-index: 1;
-        opacity: 0.7;
+        opacity: 0.6;
     }
     
     @keyframes star-twinkle {
-        0%, 100% { opacity: 0.5; }
-        25% { opacity: 0.8; }
-        50% { opacity: 0.6; }
-        75% { opacity: 0.9; }
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
     }
     
-    /* ÓRBITAS - LÍNEAS CIRCULARES TENUES */
+    /* ÓRBITAS - MUY TENUES */
     .galaxy-orbit {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        border: 1px solid;
-        opacity: 0.05;
+        border: 0.5px solid;
+        opacity: 0.03;
         z-index: 2;
     }
     
     .orbit-1 { width: var(--orbit-intuitions); height: var(--orbit-intuitions); border-color: var(--magenta-intuition); }
     .orbit-2 { width: var(--orbit-questions); height: var(--orbit-questions); border-color: var(--fog-white); }
-    .orbit-3 { width: var(--orbit-themes); height: var(--orbit-themes); border-color: var(--data-blue); opacity: 0.08; }
+    .orbit-3 { width: var(--orbit-themes); height: var(--orbit-themes); border-color: var(--data-blue); }
     .orbit-4 { width: var(--orbit-actions); height: var(--orbit-actions); border-color: var(--amber-hostility); }
-    .orbit-5 { width: var(--orbit-futures); height: var(--orbit-futures); border-color: var(--emergent-blue); opacity: 0.06; }
+    .orbit-5 { width: var(--orbit-futures); height: var(--orbit-futures); border-color: var(--emergent-blue); }
     
-    /* ===== SISTEMA DE NODOS - ESTILO PLANETARIO ===== */
+    /* ===== SISTEMA DE NODOS - TAMAÑOS AUMENTADOS 40% ===== */
     
     /* CLASE BASE PARA TODOS LOS NODOS */
     .cosmic-node {
@@ -115,8 +108,9 @@
         justify-content: center;
         text-align: center;
         font-weight: 600;
-        animation: cosmic-float 8s ease-in-out infinite;
+        animation: cosmic-float 10s ease-in-out infinite;
         animation-delay: calc(var(--node-index) * 0.1s);
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
     }
     
     @keyframes cosmic-float {
@@ -124,123 +118,126 @@
         50% { transform: translate(-50%, -50%) scale(1.02); }
     }
     
-    /* CONTENEDOR DE CONTENIDO */
+    /* CONTENEDOR DE CONTENIDO - PADDING AMPLIO */
     .node-content {
         position: relative;
         z-index: 3;
-        padding: 1rem;
+        padding: 24px; /* 24px padding interno */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 100%;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        color: var(--fog-white);
+        font-size: 0.95rem;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
     }
     
-    /* ===== TIPOS DE NODOS ESPECÍFICOS ===== */
+    /* LÍMITE DE CARACTERES POR LÍNEA */
+    .node-content div {
+        max-width: 90%;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
     
-    /* 🌞 NÚCLEO - CÍRCULO GRANDE */
+    /* ===== TIPOS DE NODOS - TAMAÑOS AUMENTADOS ===== */
+    
+    /* 🌞 NÚCLEO - CÍRCULO GRANDE (+45%) */
     .node-type-core {
-        width: 180px;
-        height: 180px;
+        width: 220px; /* +45% */
+        height: 220px;
         border-radius: 50%;
         background: radial-gradient(
-            circle at 30% 30%,
+            circle at center,
             #1C64F2 0%,
-            #0A4BCF 15%,
-            #003399 35%,
-            #001F5C 60%,
-            transparent 85%
+            #1C64F2 40%,
+            rgba(28, 100, 242, 0.2) 70%,
+            transparent 100%
         );
         box-shadow: 
-            inset 0 0 60px rgba(255, 255, 255, 0.4),
-            0 0 120px rgba(28, 100, 242, 0.6),
-            0 0 40px rgba(255, 221, 0, 0.3);
-        color: var(--fog-white);
-        font-size: 1.1rem;
-        animation: core-pulse 6s ease-in-out infinite;
+            inset 0 0 40px rgba(255, 255, 255, 0.3),
+            0 0 80px rgba(28, 100, 242, 0.4);
+        animation: core-pulse 8s ease-in-out infinite;
     }
     
     @keyframes core-pulse {
         0%, 100% { 
             box-shadow: 
-                inset 0 0 60px rgba(255, 255, 255, 0.4),
-                0 0 120px rgba(28, 100, 242, 0.6),
-                0 0 40px rgba(255, 221, 0, 0.3);
+                inset 0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 80px rgba(28, 100, 242, 0.4);
         }
         50% { 
             box-shadow: 
-                inset 0 0 80px rgba(255, 255, 255, 0.5),
-                0 0 160px rgba(28, 100, 242, 0.8),
-                0 0 60px rgba(255, 221, 0, 0.4);
+                inset 0 0 50px rgba(255, 255, 255, 0.4),
+                0 0 100px rgba(28, 100, 242, 0.5);
         }
     }
     
-    /* 💎 INTUICIONES - ROMBOS */
+    /* 💎 INTUICIONES - ROMBOS (+40%) */
     .node-type-intuition {
-        width: 100px;
-        height: 100px;
+        width: 140px; /* +40% */
+        height: 140px;
         background: radial-gradient(
-            circle at 30% 30%,
+            circle at center,
             var(--magenta-intuition) 0%,
-            #9C1AE6 25%,
-            #7A00CC 50%,
-            #5800A3 75%,
+            var(--magenta-intuition) 40%,
+            rgba(181, 30, 255, 0.2) 70%,
             transparent 100%
         );
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        color: var(--fog-white);
-        font-size: 0.85rem;
         box-shadow: 
-            inset 0 0 30px rgba(255, 255, 255, 0.3),
-            0 0 50px rgba(181, 30, 255, 0.5);
+            inset 0 0 20px rgba(255, 255, 255, 0.2),
+            0 0 40px rgba(181, 30, 255, 0.3);
     }
     
-    /* 🧠 PREGUNTAS - HEXÁGONOS */
+    /* 🧠 PREGUNTAS - HEXÁGONOS (+44%) */
     .node-type-question {
-        width: 90px;
-        height: 90px;
+        width: 130px; /* +44% */
+        height: 130px;
         background: radial-gradient(
-            circle at 30% 30%,
+            circle at center,
             rgba(242, 242, 242, 0.95) 0%,
-            rgba(217, 217, 217, 0.8) 30%,
-            rgba(191, 191, 191, 0.6) 60%,
-            rgba(140, 140, 140, 0.4) 90%,
+            rgba(242, 242, 242, 0.95) 40%,
+            rgba(242, 242, 242, 0.2) 70%,
             transparent 100%
         );
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         color: var(--space-black);
-        font-size: 0.8rem;
         box-shadow: 
-            inset 0 0 25px rgba(255, 255, 255, 0.4),
-            0 0 40px rgba(242, 242, 242, 0.4);
+            inset 0 0 20px rgba(255, 255, 255, 0.3),
+            0 0 35px rgba(242, 242, 242, 0.3);
     }
     
-    /* 🟣 CAMPOS TEÓRICOS - CÍRCULOS GRANDES */
+    /* 🟣 CAMPOS TEÓRICOS - CÍRCULOS GRANDES (+42%) */
     .node-type-theme {
-        width: 120px;
-        height: 120px;
+        width: 170px; /* +42% */
+        height: 170px;
         border-radius: 50%;
-        color: var(--fog-white);
-        font-size: 0.9rem;
         box-shadow: 
-            inset 0 0 40px rgba(255, 255, 255, 0.3),
-            0 0 60px currentColor;
+            inset 0 0 30px rgba(255, 255, 255, 0.25),
+            0 0 50px currentColor;
+        background: radial-gradient(
+            circle at center,
+            currentColor 0%,
+            currentColor 40%,
+            rgba(255, 255, 255, 0.1) 70%,
+            transparent 100%
+        );
     }
     
-    /* ◉ ACCIONES - CÍRCULO DOBLE BORDE */
+    /* ◉ ACCIONES - CÍRCULO DOBLE BORDE (+36%) */
     .node-type-action {
-        width: 110px;
-        height: 110px;
+        width: 150px; /* +36% */
+        height: 150px;
         border-radius: 50%;
         background: transparent;
         border: 3px solid;
         box-shadow: 
-            inset 0 0 40px rgba(255, 255, 255, 0.3),
-            0 0 60px currentColor;
-        color: var(--fog-white);
-        font-size: 0.85rem;
+            inset 0 0 30px rgba(255, 255, 255, 0.2),
+            0 0 50px currentColor;
         position: relative;
     }
     
@@ -253,71 +250,70 @@
         bottom: 15%;
         border-radius: 50%;
         border: 2px solid;
-        opacity: 0.6;
+        opacity: 0.4;
     }
     
-    /* ⭐ FUTUROS - ESTRELLAS */
+    /* ⭐ FUTUROS - ESTRELLAS (+50%) */
     .node-type-future {
-        width: 100px;
-        height: 100px;
+        width: 150px; /* +50% */
+        height: 150px;
         background: radial-gradient(
-            circle at 30% 30%,
+            circle at center,
             var(--emergent-blue) 0%,
-            #00B8E6 20%,
-            #009CCC 40%,
-            #007FB3 60%,
-            transparent 85%
+            var(--emergent-blue) 40%,
+            rgba(0, 212, 255, 0.2) 70%,
+            transparent 100%
         );
         clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        color: var(--fog-white);
-        font-size: 0.85rem;
         box-shadow: 
-            inset 0 0 30px rgba(255, 255, 255, 0.3),
-            0 0 50px rgba(0, 212, 255, 0.5);
-        animation: star-sparkle 4s ease-in-out infinite;
+            inset 0 0 25px rgba(255, 255, 255, 0.25),
+            0 0 40px rgba(0, 212, 255, 0.3);
+        animation: star-sparkle 6s ease-in-out infinite;
     }
     
     @keyframes star-sparkle {
-        0%, 100% { opacity: 0.9; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
-        50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1) rotate(5deg); }
+        0%, 100% { opacity: 0.95; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+        50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
     }
     
-    /* ✦ MICRO-NODOS */
+    /* ✦ MICRO-NODOS (+33%) */
     .node-type-micro {
-        width: 20px;
-        height: 20px;
+        width: 26px; /* +30% */
+        height: 26px;
         border-radius: 50%;
         background: radial-gradient(
-            circle at 30% 30%,
+            circle at center,
             var(--fog-white) 0%,
-            rgba(242, 242, 242, 0.6) 50%,
+            var(--fog-white) 50%,
             transparent 80%
         );
         font-size: 0;
-        box-shadow: 0 0 15px currentColor;
-        animation: micro-pulse 2s ease-in-out infinite;
+        box-shadow: 0 0 12px currentColor;
+        animation: micro-pulse 3s ease-in-out infinite;
         animation-delay: calc(var(--micro-index) * 0.2s);
     }
     
     @keyframes micro-pulse {
-        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-        50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+        50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
     }
     
-    /* ===== COLORES ESPECÍFICOS ===== */
+    /* ===== COLORES ESPECÍFICOS CON DEGRADADOS LIMPIOS ===== */
     
     /* Temas teóricos */
-    .theme-urban { color: var(--violet-injustice); box-shadow: 0 0 60px rgba(138, 63, 252, 0.4); }
+    .theme-urban { color: var(--violet-injustice); }
     .theme-urban .node-content { color: var(--fog-white); }
     
-    .theme-hostile { color: var(--amber-hostility); box-shadow: 0 0 60px rgba(255, 159, 28, 0.4); }
+    .theme-hostile { color: var(--amber-hostility); }
+    .theme-hostile .node-content { color: var(--space-black); }
     
-    .theme-species { color: var(--pollen-yellow); box-shadow: 0 0 60px rgba(255, 221, 0, 0.4); }
+    .theme-species { color: var(--pollen-yellow); }
+    .theme-species .node-content { color: var(--space-black); }
     
-    .theme-research { color: var(--eco-green); box-shadow: 0 0 60px rgba(0, 196, 154, 0.4); }
+    .theme-research { color: var(--eco-green); }
     .theme-research .node-content { color: var(--fog-white); }
     
-    .theme-sensory { color: var(--toxicity-red); box-shadow: 0 0 60px rgba(225, 29, 72, 0.4); }
+    .theme-sensory { color: var(--toxicity-red); }
     .theme-sensory .node-content { color: var(--fog-white); }
     
     /* Acciones */
@@ -334,144 +330,136 @@
     .micro-vulnerability { color: var(--magenta-intuition); }
     .micro-coexistence { color: var(--pollen-yellow); }
     
-    /* ===== EFECTOS HOVER ===== */
+    /* ===== EFECTOS HOVER REFINADOS ===== */
     
     .cosmic-node:hover {
         z-index: 100 !important;
-        transform: translate(-50%, -50%) scale(1.12) !important;
-        filter: brightness(1.3) !important;
+        transform: translate(-50%, -50%) scale(1.1) !important;
+        filter: brightness(1.2) drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
     }
     
     .node-type-core:hover {
         box-shadow: 
-            inset 0 0 100px rgba(255, 255, 255, 0.5),
-            0 0 180px rgba(28, 100, 242, 0.9),
-            0 0 80px rgba(255, 221, 0, 0.5);
-    }
-    
-    .node-type-intuition:hover {
-        box-shadow: 
-            inset 0 0 40px rgba(255, 255, 255, 0.4),
-            0 0 70px rgba(181, 30, 255, 0.7);
+            inset 0 0 60px rgba(255, 255, 255, 0.4),
+            0 0 120px rgba(28, 100, 242, 0.6);
     }
     
     .node-type-future:hover {
-        animation: star-sparkle-hover 1s ease-in-out infinite;
+        animation: star-sparkle-hover 1.5s ease-in-out infinite;
     }
     
     @keyframes star-sparkle-hover {
-        0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(0deg); }
-        50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2) rotate(10deg); }
+        0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1) rotate(0deg); }
+        50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(5deg); }
     }
     
-    /* ===== CONEXIONES - 3 TIPOS ===== */
+    /* ===== CONEXIONES - CURVAS BÉZIER SUAVES ===== */
     
     .cosmic-connection {
         position: absolute;
-        height: 2px;
-        transform-origin: 0 0;
         z-index: 4;
         transition: all 0.3s ease;
+        pointer-events: none;
     }
     
-    /* Línea fuerte */
+    /* Línea fuerte - Solo 3-5 de estas */
     .connection-strong {
-        height: 3px;
+        height: 2.5px;
         background: linear-gradient(90deg, 
             var(--violet-injustice) 0%,
             var(--emergent-blue) 100%);
         opacity: 0.4;
-        box-shadow: 0 0 15px rgba(138, 63, 252, 0.4);
+        filter: drop-shadow(0 0 8px rgba(138, 63, 252, 0.3));
     }
     
-    /* Línea moderada */
-    .connection-moderate {
-        height: 2px;
-        background: linear-gradient(90deg, 
-            var(--amber-hostility) 0%,
-            var(--pollen-yellow) 100%);
-        opacity: 0.3;
-        border-radius: 50%;
-    }
-    
-    /* Línea débil */
-    .connection-weak {
+    /* Línea normal - Grosor reducido, opacidad 35% */
+    .connection-normal {
         height: 1px;
         background: linear-gradient(90deg, 
-            rgba(242, 242, 242, 0.5) 0%,
-            transparent 100%);
-        opacity: 0.2;
-        border-style: dashed;
-        border-width: 0;
+            currentColor 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+        opacity: 0.35;
+        border-radius: 1px;
+    }
+    
+    /* Línea débil - Punteada sutil */
+    .connection-weak {
+        height: 0.5px;
+        border: none;
         background-image: repeating-linear-gradient(
             90deg,
             transparent,
-            transparent 5px,
-            rgba(242, 242, 242, 0.3) 5px,
-            rgba(242, 242, 242, 0.3) 10px
+            transparent 4px,
+            rgba(242, 242, 242, 0.2) 4px,
+            rgba(242, 242, 242, 0.2) 8px
         );
+        opacity: 0.2;
     }
     
-    /* ===== TOOLTIP ===== */
+    /* ===== TOOLTIP ELEGANTE ===== */
     
     .cosmic-tooltip {
-        position: absolute;
-        background: rgba(5, 5, 9, 0.95);
-        border: 1px solid rgba(242, 242, 242, 0.15);
+        position: fixed;
+        background: rgba(5, 5, 9, 0.92);
+        border: 1px solid rgba(242, 242, 242, 0.12);
         border-radius: 12px;
-        padding: 1.2rem 1.5rem;
-        max-width: 300px;
+        padding: 1.5rem;
+        max-width: 320px;
         z-index: 1000;
         pointer-events: none;
         opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
+        transform: translateY(15px) scale(0.98);
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 
-            0 10px 40px rgba(0, 0, 0, 0.5),
-            0 0 30px rgba(28, 100, 242, 0.2);
-        backdrop-filter: blur(10px);
+            0 12px 48px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(28, 100, 242, 0.1);
+        backdrop-filter: blur(12px);
         color: var(--fog-white);
         font-size: 0.95rem;
         line-height: 1.5;
+        font-weight: 400;
     }
     
     .cosmic-tooltip.active {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
     
     .tooltip-title {
         color: var(--data-blue);
         font-weight: 700;
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
     }
     
     .tooltip-content {
         opacity: 0.9;
         font-weight: 300;
+        font-size: 0.9rem;
     }
     
-    /* ===== LEYENDA INTERACTIVA ===== */
+    /* ===== LEYENDA DISCRETA ===== */
     
     .galaxy-legend {
         position: absolute;
         bottom: 2rem;
         right: 2rem;
-        background: rgba(5, 5, 9, 0.9);
-        border: 1px solid rgba(242, 242, 242, 0.1);
+        background: rgba(5, 5, 9, 0.75); /* Opacidad reducida */
+        border: 1px solid rgba(242, 242, 242, 0.08);
         border-radius: 16px;
-        padding: 1.5rem;
+        padding: 1.25rem;
         z-index: 50;
-        backdrop-filter: blur(10px);
-        max-width: 250px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(15px); /* Efecto frosted glass */
+        max-width: 240px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease;
+        opacity: 0.9;
     }
     
     .legend-title {
-        color: var(--data-blue);
-        font-size: 0.9rem;
+        color: rgba(242, 242, 242, 0.8); /* Color más neutro */
+        font-size: 0.85rem;
         font-weight: 600;
         margin-bottom: 1rem;
         text-transform: uppercase;
@@ -479,16 +467,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        opacity: 0.9;
     }
     
     .legend-toggle {
         background: none;
         border: none;
-        color: var(--fog-white);
-        opacity: 0.6;
+        color: rgba(242, 242, 242, 0.6);
+        opacity: 0.7;
         cursor: pointer;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1;
+        padding: 0.25rem;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+    
+    .legend-toggle:hover {
+        background: rgba(242, 242, 242, 0.1);
+        opacity: 1;
     }
     
     .legend-content {
@@ -498,31 +495,149 @@
     .legend-item {
         display: flex;
         align-items: center;
-        margin-bottom: 0.8rem;
-        font-size: 0.85rem;
-        opacity: 0.9;
+        margin-bottom: 0.7rem;
+        font-size: 0.8rem;
+        opacity: 0.85;
+        color: rgba(242, 242, 242, 0.9);
     }
     
     .legend-shape {
-        width: 22px;
-        height: 22px;
-        margin-right: 0.8rem;
+        width: 20px;
+        height: 20px;
+        margin-right: 0.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 4px;
+        flex-shrink: 0;
+    }
+    
+    /* ===== RESPONSIVE OPTIMIZADO ===== */
+    
+    @media (max-width: 1400px) {
+        :root {
+            --orbit-intuitions: 200px;
+            --orbit-questions: 340px;
+            --orbit-themes: 500px;
+            --orbit-actions: 680px;
+            --orbit-futures: 900px;
+        }
+        
+        .node-type-core { width: 200px; height: 200px; }
+        .node-type-intuition { width: 125px; height: 125px; }
+        .node-type-question { width: 115px; height: 115px; }
+        .node-type-theme { width: 150px; height: 150px; }
+        .node-type-action { width: 135px; height: 135px; }
+        .node-type-future { width: 135px; height: 135px; }
+        
+        .node-content {
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        .galaxy-constellation {
+            height: 120vh;
+            min-height: 1000px;
+        }
+        
+        :root {
+            --orbit-intuitions: 180px;
+            --orbit-questions: 300px;
+            --orbit-themes: 440px;
+            --orbit-actions: 600px;
+            --orbit-futures: 800px;
+        }
+        
+        .node-type-core { width: 180px; height: 180px; font-size: 0.9rem; }
+        .node-type-intuition { width: 110px; height: 110px; }
+        .node-type-question { width: 100px; height: 100px; font-size: 0.8rem; }
+        .node-type-theme { width: 130px; height: 130px; font-size: 0.85rem; }
+        .node-type-action { width: 120px; height: 120px; }
+        .node-type-future { width: 120px; height: 120px; }
+        
+        .node-content {
+            padding: 18px;
+            font-size: 0.85rem;
+        }
+        
+        .galaxy-legend {
+            max-width: 200px;
+            padding: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .galaxy-constellation {
+            height: 100vh;
+            min-height: 800px;
+        }
+        
+        :root {
+            --orbit-intuitions: 150px;
+            --orbit-questions: 250px;
+            --orbit-themes: 370px;
+            --orbit-actions: 500px;
+            --orbit-futures: 650px;
+        }
+        
+        .node-type-core { width: 160px; height: 160px; font-size: 0.85rem; }
+        .node-type-intuition { width: 95px; height: 95px; font-size: 0.75rem; }
+        .node-type-question { width: 85px; height: 85px; font-size: 0.75rem; }
+        .node-type-theme { width: 110px; height: 110px; font-size: 0.8rem; }
+        .node-type-action { width: 100px; height: 100px; font-size: 0.75rem; }
+        .node-type-future { width: 100px; height: 100px; font-size: 0.75rem; }
+        
+        .node-content {
+            padding: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .galaxy-legend {
+            display: none; /* Ocultar en móviles para más espacio */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .galaxy-constellation {
+            height: 90vh;
+            min-height: 700px;
+        }
+        
+        :root {
+            --orbit-intuitions: 130px;
+            --orbit-questions: 220px;
+            --orbit-themes: 320px;
+            --orbit-actions: 430px;
+            --orbit-futures: 550px;
+        }
+        
+        .node-type-core { width: 140px; height: 140px; font-size: 0.8rem; }
+        .node-type-intuition { width: 85px; height: 85px; font-size: 0.7rem; }
+        .node-type-question { width: 75px; height: 75px; font-size: 0.7rem; }
+        .node-type-theme { width: 95px; height: 95px; font-size: 0.75rem; }
+        .node-type-action { width: 85px; height: 85px; font-size: 0.7rem; }
+        .node-type-future { width: 85px; height: 85px; font-size: 0.7rem; }
+        
+        .node-content {
+            padding: 12px;
+            font-size: 0.75rem;
+        }
     }
 </style>
 
 <!-- =============================================== -->
-<!-- HTML DEL MAPA GALÁCTICO -->
+<!-- HTML DEL MAPA GALÁCTICO ELEGANTE -->
 <!-- =============================================== -->
 
 <div class="galaxy-constellation" id="galaxyMap">
-    <!-- Fondo estrellado -->
+    <!-- Fondo estrellado sutil -->
     <div class="star-field"></div>
     
-    <!-- Órbitas -->
+    <!-- Órbitas muy tenues -->
     <div class="galaxy-orbit orbit-1"></div>
     <div class="galaxy-orbit orbit-2"></div>
     <div class="galaxy-orbit orbit-3"></div>
@@ -538,41 +653,41 @@
     <!-- Contenedor de micro-nodos -->
     <div id="microNodes"></div>
     
-    <!-- Tooltip -->
+    <!-- Tooltip elegante -->
     <div class="cosmic-tooltip" id="cosmicTooltip">
         <div class="tooltip-title" id="tooltipTitle"></div>
         <div class="tooltip-content" id="tooltipContent"></div>
     </div>
     
-    <!-- Leyenda -->
+    <!-- Leyenda discreta -->
     <div class="galaxy-legend" id="galaxyLegend">
         <div class="legend-title">
-            <span>GALAXY MAP KEY</span>
+            <span>MAP LEGEND</span>
             <button class="legend-toggle" id="legendToggle">−</button>
         </div>
         <div class="legend-content" id="legendContent">
             <div class="legend-item">
-                <div class="legend-shape node-type-core" style="transform: scale(0.6);"></div>
+                <div class="legend-shape node-type-core" style="transform: scale(0.5);"></div>
                 <span>Core Concept</span>
             </div>
             <div class="legend-item">
-                <div class="legend-shape node-type-intuition" style="transform: scale(0.7);"></div>
+                <div class="legend-shape node-type-intuition" style="transform: scale(0.6);"></div>
                 <span>Intuitions</span>
             </div>
             <div class="legend-item">
-                <div class="legend-shape node-type-question" style="transform: scale(0.7);"></div>
+                <div class="legend-shape node-type-question" style="transform: scale(0.6);"></div>
                 <span>Motor Questions</span>
             </div>
             <div class="legend-item">
-                <div class="legend-shape node-type-theme theme-urban" style="transform: scale(0.7);"></div>
+                <div class="legend-shape node-type-theme theme-urban" style="transform: scale(0.6);"></div>
                 <span>Thematic Fields</span>
             </div>
             <div class="legend-item">
-                <div class="legend-shape node-type-action action-amber" style="transform: scale(0.7);"></div>
+                <div class="legend-shape node-type-action action-amber" style="transform: scale(0.6);"></div>
                 <span>Actions as Knowledge</span>
             </div>
             <div class="legend-item">
-                <div class="legend-shape node-type-future" style="transform: scale(0.7);"></div>
+                <div class="legend-shape node-type-future" style="transform: scale(0.6);"></div>
                 <span>Emergent Futures</span>
             </div>
         </div>
@@ -580,11 +695,11 @@
 </div>
 
 <!-- =============================================== -->
-<!-- JAVASCRIPT COMPLETO DEL MAPA -->
+<!-- JAVASCRIPT OPTIMIZADO PARA CONEXIONES CURVAS -->
 <!-- =============================================== -->
 
 <script>
-// ===== DATOS COMPLETOS DE LA CONSTELACIÓN =====
+// ===== CONFIGURACIÓN DE NODOS - TEXTO OPTIMIZADO =====
 
 const galaxyData = {
     // 🌞 NÚCLEO
@@ -592,106 +707,106 @@ const galaxyData = {
         id: "core",
         type: "core",
         title: "THE INVISIBLE CITY",
-        subtitle: "How beauty hides violence, and how other species inhabit it",
-        content: "The central intuition: urban aesthetics systematically conceal violence against both human and non-human life.",
-        tooltip: "The gravitational center of your research universe. Where aesthetic pleasure meets systemic exclusion, where visible beauty hides invisible violence.",
+        subtitle: "Beauty hides violence",
+        content: "Urban aesthetics conceal systemic violence against human and non-human life.",
+        tooltip: "The central intuition: what we call beautiful in cities often systematically excludes certain lives and species.",
         x: 50,
         y: 50,
-        connections: ["intuition1", "intuition2", "theme1", "theme2"]
+        connections: ["intuition1", "theme1", "theme2", "question3"]
     },
     
-    // 💎 INTUICIONES
+    // 💎 INTUICIONES - TEXTO BREVE
     intuitions: [
         {
             id: "intuition1",
             type: "intuition",
-            title: "Beauty that excludes",
-            content: "The realization that what we call 'beautiful' in cities often systematically excludes certain lives.",
-            tooltip: "Aesthetic standards as tools of power: clean spaces, curated nature, orderly facades that make some lives 'dirt' and others 'proper'.",
+            title: "Beauty excludes",
+            content: "Aesthetic standards as tools of power",
+            tooltip: "Clean spaces, curated nature, orderly facades that make some lives 'dirt' and others 'proper'.",
             angle: 0,
             orbit: 1
         },
         {
             id: "intuition2",
             type: "intuition",
-            title: "Violence hidden in aesthetics",
-            content: "How aesthetic pleasure masks structural violence.",
-            tooltip: "The violence of absence: what is systematically removed, erased, or made invisible in the name of beauty and order.",
+            title: "Violence hidden",
+            content: "Aesthetics mask structural harm",
+            tooltip: "The violence of absence: what is systematically removed or made invisible in the name of beauty.",
             angle: 90,
             orbit: 1
         },
         {
             id: "intuition3",
             type: "intuition",
-            title: "Nature expelled from the city",
-            content: "The systematic removal of non-curated life from urban spaces.",
-            tooltip: "Plants as decoration, animals as pests, ecosystems as 'mess' to be cleaned. The urban hierarchy of life forms.",
+            title: "Nature expelled",
+            content: "Non-curated life removed",
+            tooltip: "Plants as decoration, animals as pests, ecosystems as 'mess' to be cleaned from urban spaces.",
             angle: 180,
             orbit: 1
         },
         {
             id: "intuition4",
             type: "intuition",
-            title: "Order disguised as care",
-            content: "How control mechanisms are presented as protection or improvement.",
-            tooltip: "Safety measures that exclude, cleanliness that erases, maintenance that displaces. The rhetoric of care as political tool.",
+            title: "Order as control",
+            content: "Disguised as care, enacted as power",
+            tooltip: "Safety measures that exclude, cleanliness that erases, maintenance that displaces vulnerable lives.",
             angle: 270,
             orbit: 1
         }
     ],
     
-    // 🧠 PREGUNTAS MOTORAS
+    // 🧠 PREGUNTAS - TEXTO CONCISO
     questions: [
         {
             id: "question1",
             type: "question",
-            title: "What bodies are allowed to rest?",
-            content: "Investigating who can pause, sit, sleep in public space.",
-            tooltip: "Questioning the politics of rest: benches designed against sleeping, surfaces that deny comfort, temporal restrictions on presence.",
+            title: "Who can rest?",
+            content: "Politics of pause in public space",
+            tooltip: "Questioning benches designed against sleeping, surfaces that deny comfort, temporal restrictions on presence.",
             angle: 0,
             orbit: 2
         },
         {
             id: "question2",
             type: "question",
-            title: "Whose lives are permitted in the city?",
-            content: "Examining the hierarchy of urban citizenship.",
-            tooltip: "From homeless humans to pigeons, from street vendors to wild plants: which lives are welcomed, tolerated, or actively eliminated?",
+            title: "Whose lives matter?",
+            content: "Hierarchy of urban citizenship",
+            tooltip: "From homeless humans to pigeons: which lives are welcomed, tolerated, or actively eliminated in cities?",
             angle: 60,
             orbit: 2
         },
         {
             id: "question3",
             type: "question",
-            title: "How does beauty justify exclusion?",
-            content: "The aesthetic rationale for removal and control.",
-            tooltip: "How visual pleasure becomes an alibi for systemic violence. The politics of 'cleaning up', 'beautifying', 'renovating'.",
+            title: "Beauty justifies?",
+            content: "Aesthetic rationale for exclusion",
+            tooltip: "How visual pleasure becomes an alibi for systemic violence in urban 'improvement' projects.",
             angle: 120,
             orbit: 2
         },
         {
             id: "question4",
             type: "question",
-            title: "Can design generate empathy?",
-            content: "Exploring design's potential for cross-species understanding.",
-            tooltip: "Could interfaces, installations, or experiences help humans feel what other species feel in urban environments?",
+            title: "Design empathy?",
+            content: "Cross-species understanding",
+            tooltip: "Can interfaces, installations, or experiences help humans feel what other species feel in cities?",
             angle: 180,
             orbit: 2
         },
         {
             id: "question5",
             type: "question",
-            title: "What violence have we normalized?",
-            content: "Identifying invisible systemic harm.",
-            tooltip: "The violence of spikes on ledges, of smooth benches, of pesticide spraying, of constant noise and light pollution.",
+            title: "Normalized violence?",
+            content: "Invisible systemic harm",
+            tooltip: "The violence of spikes on ledges, smooth benches, pesticide spraying, constant noise pollution.",
             angle: 240,
             orbit: 2
         },
         {
             id: "question6",
             type: "question",
-            title: "How would species design cities?",
-            content: "Imagining urban planning from non-human perspectives.",
+            title: "Species design?",
+            content: "Non-human urban planning",
             tooltip: "What would a pigeon's ideal plaza look like? A bee's transportation system? A tree's housing development?",
             angle: 300,
             orbit: 2
@@ -705,8 +820,8 @@ const galaxyData = {
             type: "theme",
             title: "Urban Aesthetics",
             colorClass: "theme-urban",
-            content: "The politics of beauty in city design.",
-            tooltip: "How aesthetic standards in urban design serve to normalize exclusion and control. Beauty as ideology, cleanliness as political tool.",
+            content: "Politics of beauty",
+            tooltip: "How aesthetic standards in urban design serve to normalize exclusion and control. Beauty as ideology.",
             angle: 0,
             orbit: 3,
             connections: ["intuition1", "question3", "action1"]
@@ -716,55 +831,55 @@ const galaxyData = {
             type: "theme",
             title: "Hostile Design",
             colorClass: "theme-hostile",
-            content: "Architecture that subtly expels unwanted bodies.",
-            tooltip: "Anti-homeless benches, pigeon spikes, seating deterrents, smooth surfaces. Violence normalized through everyday design.",
+            content: "Architecture expels",
+            tooltip: "Anti-homeless benches, pigeon spikes, seating deterrents. Violence normalized through design.",
             angle: 60,
             orbit: 3,
-            connections: ["intuition4", "question1", "action1", "action3"]
+            connections: ["intuition4", "question1", "action1"]
         },
         {
             id: "theme3",
             type: "theme",
             title: "Multispecies Justice",
             colorClass: "theme-species",
-            content: "Expanding urban rights beyond the human.",
-            tooltip: "Questioning the anthropocentric city. Rights to shelter, food, movement, and community for all species.",
+            content: "Beyond human rights",
+            tooltip: "Questioning anthropocentric cities. Rights to shelter, food, movement for all species.",
             angle: 120,
             orbit: 3,
-            connections: ["intuition3", "question2", "question6", "action2"]
+            connections: ["intuition3", "question2", "action2"]
         },
         {
             id: "theme4",
             type: "theme",
             title: "Embodied Research",
             colorClass: "theme-research",
-            content: "Using the body as method and sensor.",
-            tooltip: "Walking, sitting, wearing, performing. First-person ethnography to reveal what statistics and observation miss.",
+            content: "Body as method",
+            tooltip: "Walking, sitting, wearing, performing. First-person ethnography to reveal hidden urban violence.",
             angle: 180,
             orbit: 3,
-            connections: ["question4", "action1", "action3", "future1"]
+            connections: ["question4", "action1", "action3"]
         },
         {
             id: "theme5",
             type: "theme",
             title: "Sensory Translation",
             colorClass: "theme-sensory",
-            content: "Translating urban experience across species.",
-            tooltip: "Interfaces and methods for perceiving pollution, noise, vibration, chemical signals as other species might.",
+            content: "Cross-species perception",
+            tooltip: "Interfaces for perceiving pollution, noise, vibration as other species might experience them.",
             angle: 240,
             orbit: 3,
-            connections: ["question4", "question6", "future1", "future2"]
+            connections: ["question4", "question6", "future1"]
         },
         {
             id: "theme6",
             type: "theme",
             title: "Environmental Empathy",
             colorClass: "theme-urban",
-            content: "Feeling-with urban ecosystems.",
-            tooltip: "Developing emotional and cognitive connections to non-human urban residents and their conditions.",
+            content: "Feeling-with ecosystems",
+            tooltip: "Developing emotional connections to non-human urban residents and their living conditions.",
             angle: 300,
             orbit: 3,
-            connections: ["question4", "future3", "future4"]
+            connections: ["question4", "future3"]
         }
     ],
     
@@ -773,10 +888,10 @@ const galaxyData = {
         {
             id: "action1",
             type: "action",
-            title: "Sitting on hostile architecture",
+            title: "Sitting hostile",
             colorClass: "action-amber",
-            content: "Embodied investigation of exclusionary design.",
-            tooltip: "Using the body as sensor to experience and reveal the normalized violence of urban furniture designed to deny rest.",
+            content: "Body as sensor",
+            tooltip: "Using the body to experience and reveal the normalized violence of exclusionary urban furniture.",
             angle: 45,
             orbit: 4,
             connections: ["theme2", "theme4"]
@@ -784,10 +899,10 @@ const galaxyData = {
         {
             id: "action2",
             type: "action",
-            title: "Returning Life interventions",
+            title: "Returning Life",
             colorClass: "action-green",
-            content: "Small acts of rewilding urban spaces.",
-            tooltip: "Soil deposits, seed bombs, moss graffiti. Reintroducing non-curated life into controlled urban environments.",
+            content: "Rewilding acts",
+            tooltip: "Soil deposits, seed bombs, moss graffiti. Reintroducing non-curated life into controlled spaces.",
             angle: 135,
             orbit: 4,
             connections: ["theme3", "future4"]
@@ -797,8 +912,8 @@ const galaxyData = {
             type: "action",
             title: "Wearing Hostility",
             colorClass: "action-red",
-            content: "Material translation of architectural violence.",
-            tooltip: "Turning anti-pigeon spikes into clothing. Making visible on the body what is normalized on buildings.",
+            content: "Material translation",
+            tooltip: "Turning anti-pigeon spikes into clothing. Making architectural violence visible on the body.",
             angle: 225,
             orbit: 4,
             connections: ["theme2", "theme4"]
@@ -808,11 +923,11 @@ const galaxyData = {
             type: "action",
             title: "Sensory experiments",
             colorClass: "action-blue",
-            content: "Testing perception interfaces.",
-            tooltip: "Prototyping devices and experiences that translate urban conditions across sensory modalities and species boundaries.",
+            content: "Perception interfaces",
+            tooltip: "Prototyping devices that translate urban conditions across sensory modalities and species.",
             angle: 315,
             orbit: 4,
-            connections: ["theme5", "future1", "future2"]
+            connections: ["theme5", "future1"]
         }
     ],
     
@@ -821,9 +936,9 @@ const galaxyData = {
         {
             id: "future1",
             type: "future",
-            title: "Multispecies Perception Interfaces",
-            content: "Tools for cross-species urban sensing.",
-            tooltip: "Wearables, installations, and apps that help humans perceive pollution, vibration, chemical signals as other species do.",
+            title: "Multispecies perception",
+            content: "Cross-sensing tools",
+            tooltip: "Wearables and installations that help humans perceive pollution, vibration, signals as other species do.",
             angle: 45,
             orbit: 5,
             connections: ["theme5", "action4"]
@@ -831,9 +946,9 @@ const galaxyData = {
         {
             id: "future2",
             type: "future",
-            title: "Embodied Environmental Translation",
-            content: "Full-body experiences of ecological data.",
-            tooltip: "Haptic suits, olfactory displays, thermal interfaces that make environmental conditions tangibly felt.",
+            title: "Embodied translation",
+            content: "Full-body ecology",
+            tooltip: "Haptic suits, olfactory displays that make environmental conditions tangibly felt by humans.",
             angle: 135,
             orbit: 5,
             connections: ["theme5", "action4"]
@@ -841,9 +956,9 @@ const galaxyData = {
         {
             id: "future3",
             type: "future",
-            title: "Empathy-driven Design Futures",
-            content: "Methodologies for compassionate urban planning.",
-            tooltip: "Design processes that center multispecies wellbeing, sensory justice, and ecological empathy from concept to implementation.",
+            title: "Empathy-driven design",
+            content: "Compassionate planning",
+            tooltip: "Design processes centering multispecies wellbeing, sensory justice, and ecological empathy.",
             angle: 225,
             orbit: 5,
             connections: ["theme6", "future4"]
@@ -851,12 +966,12 @@ const galaxyData = {
         {
             id: "future4",
             type: "future",
-            title: "Urban Coexistence Rewriting",
-            content: "Reimagining cities as multispecies communities.",
-            tooltip: "Policy, architecture, and social practices that recognize all urban residents as citizens with rights and needs.",
+            title: "Urban coexistence",
+            content: "Multispecies community",
+            tooltip: "Reimagining cities where all residents are recognized as citizens with rights and needs.",
             angle: 315,
             orbit: 5,
-            connections: ["theme6", "action2", "future3"]
+            connections: ["theme6", "action2"]
         }
     ],
     
@@ -867,13 +982,11 @@ const galaxyData = {
         {id: "micro3", word: "presence", colorClass: "micro-presence", x: 85, y: 45},
         {id: "micro4", word: "erasure", colorClass: "micro-erasure", x: 75, y: 75},
         {id: "micro5", word: "vulnerability", colorClass: "micro-vulnerability", x: 45, y: 85},
-        {id: "micro6", word: "coexistence", colorClass: "micro-coexistence", x: 20, y: 70},
-        {id: "micro7", word: "denial", colorClass: "micro-erasure", x: 15, y: 45},
-        {id: "micro8", word: "sensory burden", colorClass: "micro-friction", x: 40, y: 15}
+        {id: "micro6", word: "coexistence", colorClass: "micro-coexistence", x: 20, y: 70}
     ]
 };
 
-// ===== FUNCIONES DE CONSTRUCCIÓN =====
+// ===== FUNCIONES DE CONSTRUCCIÓN OPTIMIZADAS =====
 
 function createGalaxy() {
     const nodesContainer = document.getElementById('cosmicNodes');
@@ -883,19 +996,28 @@ function createGalaxy() {
     // Crear nodo central
     createNode(galaxyData.core, nodesContainer, 0);
     
-    // Crear todos los nodos por categoría
-    [...galaxyData.intuitions, ...galaxyData.questions, ...galaxyData.themes, ...galaxyData.actions, ...galaxyData.futures]
-        .forEach((node, index) => {
-            createNode(node, nodesContainer, index + 1);
-        });
+    // Crear todos los nodos
+    const allNodes = [
+        ...galaxyData.intuitions,
+        ...galaxyData.questions,
+        ...galaxyData.themes,
+        ...galaxyData.actions,
+        ...galaxyData.futures
+    ];
+    
+    allNodes.forEach((node, index) => {
+        createNode(node, nodesContainer, index + 1);
+    });
     
     // Crear micro-nodos
     galaxyData.microNodes.forEach((micro, index) => {
         createMicroNode(micro, microContainer, index);
     });
     
-    // Crear conexiones
-    createAllConnections(connectionsContainer);
+    // Crear conexiones curvas
+    setTimeout(() => {
+        createAllConnections(connectionsContainer);
+    }, 100);
 }
 
 function createNode(nodeData, container, index) {
@@ -905,7 +1027,7 @@ function createNode(nodeData, container, index) {
     node.dataset.type = nodeData.type;
     node.style.setProperty('--node-index', index);
     
-    // Calcular posición
+    // Calcular posición con separación adecuada
     let x, y;
     if (nodeData.type === 'core') {
         x = 50;
@@ -920,114 +1042,90 @@ function createNode(nodeData, container, index) {
     node.style.left = `${x}%`;
     node.style.top = `${y}%`;
     
-    // Añadir clase de color si existe
+    // Añadir clase de color
     if (nodeData.colorClass) {
         node.classList.add(nodeData.colorClass);
     }
     
-    // Contenido
+    // Contenido con texto optimizado
     const content = document.createElement('div');
     content.className = 'node-content';
     
     const title = document.createElement('div');
     title.textContent = nodeData.title;
     title.style.fontWeight = '700';
-    title.style.marginBottom = nodeData.subtitle ? '0.2rem' : '0';
+    title.style.marginBottom = '0.3rem';
+    title.style.fontSize = nodeData.type === 'core' ? '1.1rem' : '0.95rem';
+    
+    const subtitle = document.createElement('div');
+    subtitle.textContent = nodeData.content;
+    subtitle.style.fontSize = '0.85rem';
+    subtitle.style.opacity = '0.9';
+    subtitle.style.fontWeight = '500';
     
     content.appendChild(title);
-    
-    if (nodeData.subtitle) {
-        const subtitle = document.createElement('div');
-        subtitle.textContent = nodeData.subtitle;
-        subtitle.style.fontSize = '0.75rem';
-        subtitle.style.opacity = '0.8';
-        content.appendChild(subtitle);
-    }
-    
+    content.appendChild(subtitle);
     node.appendChild(content);
+    
     container.appendChild(node);
     
     // Event listeners
-    node.addEventListener('mouseenter', handleNodeHover);
-    node.addEventListener('mouseleave', handleNodeLeave);
-    node.addEventListener('click', handleNodeClick);
-}
-
-function createMicroNode(microData, container, index) {
-    const micro = document.createElement('div');
-    micro.className = `cosmic-node node-type-micro ${microData.colorClass}`;
-    micro.dataset.id = microData.id;
-    micro.dataset.word = microData.word;
-    micro.style.setProperty('--micro-index', index);
-    micro.style.left = `${microData.x}%`;
-    micro.style.top = `${microData.y}%`;
-    
-    // Tooltip básico para micro-nodos
-    micro.addEventListener('mouseenter', (e) => {
-        showTooltip(microData.word, 
-            `Conceptual thread: ${microData.word} as a lens for reading urban relations.`, 
-            e);
-    });
-    
-    micro.addEventListener('mouseleave', hideTooltip);
-    
-    container.appendChild(micro);
+    setupNodeInteractions(node, nodeData);
 }
 
 function getOrbitRadius(orbitNumber) {
     const orbits = {
-        1: 16,   // 160px / 1000px * 100%
-        2: 28,   // 280px / 1000px * 100%
-        3: 42,   // 420px / 1000px * 100%
-        4: 58,   // 580px / 1000px * 100%
-        5: 76    // 760px / 1000px * 100%
+        1: 22,   // 220px / 1000px * 100%
+        2: 38,   // 380px / 1000px * 100%
+        3: 56,   // 560px / 1000px * 100%
+        4: 76,   // 760px / 1000px * 100%
+        5: 100   // 1000px / 1000px * 100%
     };
     return orbits[orbitNumber] || 0;
 }
 
-// ===== CONEXIONES =====
+// ===== CONEXIONES CURVAS BÉZIER =====
 
 function createAllConnections(container) {
-    // Conexiones fuertes
-    createConnection("theme1", "intuition1", "strong", container);
-    createConnection("theme2", "action1", "strong", container);
-    createConnection("theme3", "action2", "strong", container);
-    createConnection("theme5", "future1", "strong", container);
+    // Solo 4-5 líneas fuertes
+    createBezierConnection("core", "intuition1", "strong", container);
+    createBezierConnection("theme1", "action1", "strong", container);
+    createBezierConnection("theme3", "action2", "strong", container);
+    createBezierConnection("theme5", "future1", "strong", container);
     
-    // Conexiones moderadas
-    createConnection("intuition3", "theme1", "moderate", container);
-    createConnection("intuition4", "theme2", "moderate", container);
-    createConnection("theme4", "action1", "moderate", container);
-    createConnection("theme6", "future3", "moderate", container);
+    // Conexiones normales (reducidas)
+    createBezierConnection("core", "theme1", "normal", container);
+    createBezierConnection("core", "theme2", "normal", container);
+    createBezierConnection("intuition1", "question3", "normal", container);
+    createBezierConnection("theme2", "question1", "normal", container);
+    createBezierConnection("theme4", "action3", "normal", container);
+    createBezierConnection("theme6", "future3", "normal", container);
     
-    // Conexiones del núcleo
-    createConnection("core", "intuition1", "strong", container);
-    createConnection("core", "intuition2", "strong", container);
-    createConnection("core", "theme1", "strong", container);
-    createConnection("core", "theme2", "strong", container);
-    
-    // Conexiones adicionales desde los datos
-    [...galaxyData.themes, ...galaxyData.actions, ...galaxyData.futures].forEach(node => {
-        if (node.connections) {
-            node.connections.forEach(targetId => {
-                createConnection(node.id, targetId, "moderate", container);
-            });
-        }
-    });
+    // Conexiones débiles (mínimas)
+    createBezierConnection("micro1", "theme3", "weak", container);
+    createBezierConnection("micro4", "theme2", "weak", container);
 }
 
-function createConnection(sourceId, targetId, strength, container) {
+function createBezierConnection(sourceId, targetId, strength, container) {
     const source = document.querySelector(`[data-id="${sourceId}"]`);
     const target = document.querySelector(`[data-id="${targetId}"]`);
     
     if (!source || !target) return;
     
-    const connection = document.createElement('div');
-    connection.className = `cosmic-connection connection-${strength}`;
-    connection.dataset.source = sourceId;
-    connection.dataset.target = targetId;
+    // Crear elemento SVG para curva Bézier
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.classList.add("cosmic-connection");
+    svg.style.position = "absolute";
+    svg.style.top = "0";
+    svg.style.left = "0";
+    svg.style.width = "100%";
+    svg.style.height = "100%";
+    svg.style.pointerEvents = "none";
+    svg.style.zIndex = "4";
+    svg.style.overflow = "visible";
     
-    // Posicionamiento
+    // Coordenadas de los nodos
     const sourceRect = source.getBoundingClientRect();
     const targetRect = target.getBoundingClientRect();
     const containerRect = document.getElementById('galaxyMap').getBoundingClientRect();
@@ -1037,165 +1135,144 @@ function createConnection(sourceId, targetId, strength, container) {
     const x2 = targetRect.left + targetRect.width/2 - containerRect.left;
     const y2 = targetRect.top + targetRect.height/2 - containerRect.top;
     
+    // Puntos de control para curva Bézier
     const dx = x2 - x1;
     const dy = y2 - y1;
     const distance = Math.sqrt(dx * dx + dy * dy);
-    const angle = Math.atan2(dy, dx) * 180 / Math.PI;
     
-    // Curvatura para conexiones moderadas
-    let curve = 0;
-    if (strength === "moderate") {
-        curve = distance * 0.1;
-        connection.style.borderRadius = `${curve}px`;
+    // Curvatura proporcional a la distancia
+    const curvature = distance * 0.15;
+    
+    const cx1 = x1 + dx * 0.3 + curvature;
+    const cy1 = y1 + dy * 0.3 - curvature;
+    const cx2 = x1 + dx * 0.7 - curvature;
+    const cy2 = y1 + dy * 0.7 + curvature;
+    
+    // Crear path Bézier
+    const path = document.createElementNS(svgNS, "path");
+    const d = `M ${x1} ${y1} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${x2} ${y2}`;
+    path.setAttribute("d", d);
+    path.setAttribute("fill", "none");
+    
+    // Estilos según fuerza
+    switch(strength) {
+        case "strong":
+            path.setAttribute("stroke", "url(#gradient-strong)");
+            path.setAttribute("stroke-width", "2.5");
+            path.setAttribute("opacity", "0.4");
+            break;
+        case "normal":
+            path.setAttribute("stroke", "rgba(242, 242, 242, 0.35)");
+            path.setAttribute("stroke-width", "1");
+            path.setAttribute("opacity", "0.35");
+            break;
+        case "weak":
+            path.setAttribute("stroke", "rgba(242, 242, 242, 0.2)");
+            path.setAttribute("stroke-width", "0.5");
+            path.setAttribute("stroke-dasharray", "4,4");
+            path.setAttribute("opacity", "0.2");
+            break;
     }
     
-    connection.style.width = `${distance}px`;
-    connection.style.left = `${x1}px`;
-    connection.style.top = `${y1}px`;
-    connection.style.transform = `rotate(${angle}deg)`;
+    // Definir gradiente para líneas fuertes
+    if (strength === "strong") {
+        const defs = document.createElementNS(svgNS, "defs");
+        const gradient = document.createElementNS(svgNS, "linearGradient");
+        gradient.setAttribute("id", "gradient-strong");
+        gradient.setAttribute("x1", "0%");
+        gradient.setAttribute("y1", "0%");
+        gradient.setAttribute("x2", "100%");
+        gradient.setAttribute("y2", "0%");
+        
+        const stop1 = document.createElementNS(svgNS, "stop");
+        stop1.setAttribute("offset", "0%");
+        stop1.setAttribute("stop-color", "#8A3FFC");
+        stop1.setAttribute("stop-opacity", "0.8");
+        
+        const stop2 = document.createElementNS(svgNS, "stop");
+        stop2.setAttribute("offset", "100%");
+        stop2.setAttribute("stop-color", "#00D4FF");
+        stop2.setAttribute("stop-opacity", "0.8");
+        
+        gradient.appendChild(stop1);
+        gradient.appendChild(stop2);
+        defs.appendChild(gradient);
+        svg.appendChild(defs);
+    }
     
-    container.appendChild(connection);
+    svg.appendChild(path);
+    container.appendChild(svg);
+    
+    return svg;
 }
 
-// ===== INTERACCIÓN =====
+// ===== INTERACCIÓN REFINADA =====
 
 const tooltip = document.getElementById('cosmicTooltip');
 const tooltipTitle = document.getElementById('tooltipTitle');
 const tooltipContent = document.getElementById('tooltipContent');
 
-function showTooltip(title, content, event) {
-    tooltipTitle.textContent = title;
-    tooltipContent.textContent = content;
+function setupNodeInteractions(node, nodeData) {
+    node.addEventListener('mouseenter', (e) => {
+        handleNodeHover(e, nodeData);
+    });
     
-    tooltip.style.left = `${event.clientX + 15}px`;
-    tooltip.style.top = `${event.clientY + 15}px`;
+    node.addEventListener('mouseleave', handleNodeLeave);
+    node.addEventListener('click', () => handleNodeClick(nodeData));
+}
+
+function handleNodeHover(event, nodeData) {
+    // Mostrar tooltip
+    tooltipTitle.textContent = nodeData.title;
+    tooltipContent.textContent = nodeData.tooltip || nodeData.content;
+    
+    tooltip.style.left = `${event.clientX + 20}px`;
+    tooltip.style.top = `${event.clientY + 20}px`;
     tooltip.classList.add('active');
-}
-
-function hideTooltip() {
-    tooltip.classList.remove('active');
-}
-
-function handleNodeHover(event) {
-    const node = event.currentTarget;
-    const nodeId = node.dataset.id;
     
-    // Encontrar datos del nodo
-    let nodeData = null;
+    // Resaltar conexiones relacionadas
+    document.querySelectorAll('.cosmic-connection path').forEach(path => {
+        path.style.opacity = '0.15';
+        path.style.transition = 'opacity 0.3s ease';
+    });
     
-    if (nodeId === "core") {
-        nodeData = galaxyData.core;
-    } else {
-        const allNodes = [
-            ...galaxyData.intuitions,
-            ...galaxyData.questions,
-            ...galaxyData.themes,
-            ...galaxyData.actions,
-            ...galaxyData.futures
-        ];
-        nodeData = allNodes.find(n => n.id === nodeId);
-    }
-    
-    if (nodeData) {
-        showTooltip(nodeData.title, nodeData.tooltip || nodeData.content, event);
-    }
-    
-    // Resaltar conexiones
+    // Buscar y resaltar conexiones de este nodo
+    const nodeId = nodeData.id;
     document.querySelectorAll('.cosmic-connection').forEach(conn => {
-        if (conn.dataset.source === nodeId || conn.dataset.target === nodeId) {
-            conn.style.opacity = '0.8';
-            conn.style.filter = 'brightness(1.5)';
-        } else {
-            conn.style.opacity = '0.2';
+        const path = conn.querySelector('path');
+        if (path && (conn.dataset.source === nodeId || conn.dataset.target === nodeId)) {
+            path.style.opacity = '0.7';
+            path.style.filter = 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))';
         }
     });
 }
 
 function handleNodeLeave() {
-    hideTooltip();
+    tooltip.classList.remove('active');
     
     // Restaurar conexiones
-    document.querySelectorAll('.cosmic-connection').forEach(conn => {
-        conn.style.opacity = '';
-        conn.style.filter = '';
+    document.querySelectorAll('.cosmic-connection path').forEach(path => {
+        path.style.opacity = '';
+        path.style.filter = '';
     });
 }
 
-function handleNodeClick(event) {
-    const node = event.currentTarget;
-    const nodeId = node.dataset.id;
+function handleNodeClick(nodeData) {
+    // Aquí podrías integrar con tu sistema de modales
+    console.log(`Nodo clickeado: ${nodeData.title}`, nodeData);
     
-    // Encontrar datos del nodo
-    let nodeData = null;
-    let nodeType = "";
-    
-    if (nodeId === "core") {
-        nodeData = galaxyData.core;
-        nodeType = "Core Concept";
-    } else {
-        const allNodes = [
-            ...galaxyData.intuitions,
-            ...galaxyData.questions,
-            ...galaxyData.themes,
-            ...galaxyData.actions,
-            ...galaxyData.futures
-        ];
-        nodeData = allNodes.find(n => n.id === nodeId);
+    // Mostrar información en consola o integrar con tu UI
+    const info = `
+        ${nodeData.title}
+        ${nodeData.type.toUpperCase()}
         
-        // Determinar tipo
-        if (galaxyData.intuitions.find(n => n.id === nodeId)) nodeType = "Intuition";
-        else if (galaxyData.questions.find(n => n.id === nodeId)) nodeType = "Motor Question";
-        else if (galaxyData.themes.find(n => n.id === nodeId)) nodeType = "Thematic Field";
-        else if (galaxyData.actions.find(n => n.id === nodeId)) nodeType = "Action as Knowledge";
-        else if (galaxyData.futures.find(n => n.id === nodeId)) nodeType = "Emergent Future";
+        ${nodeData.tooltip || nodeData.content}
+    `;
+    
+    // Opción: mostrar un alert más elegante o integrar con tu sistema
+    if (window.innerWidth > 768) {
+        alert(info);
     }
-    
-    if (nodeData) {
-        // Mostrar modal o expandir información
-        const modalContent = `
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <div style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--data-blue);">${nodeData.title}</div>
-                <div style="font-size: 0.9rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">${nodeType}</div>
-            </div>
-            <div style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">${nodeData.tooltip || nodeData.content}</div>
-            <div style="background: rgba(242, 242, 242, 0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--data-blue);">
-                <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--data-blue);">Connected to:</div>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    ${getConnectedNodes(nodeId).map(id => `<span style="background: rgba(28, 100, 242, 0.2); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.9rem;">${getNodeTitle(id)}</span>`).join('')}
-                </div>
-            </div>
-        `;
-        
-        // Aquí podrías integrar con tu sistema de modales existente
-        alert(`✨ ${nodeData.title}\n\n${nodeData.tooltip || nodeData.content}`);
-    }
-}
-
-function getConnectedNodes(nodeId) {
-    const connections = [];
-    
-    // Buscar conexiones donde este nodo es source o target
-    document.querySelectorAll('.cosmic-connection').forEach(conn => {
-        if (conn.dataset.source === nodeId) connections.push(conn.dataset.target);
-        if (conn.dataset.target === nodeId) connections.push(conn.dataset.source);
-    });
-    
-    return [...new Set(connections)]; // Eliminar duplicados
-}
-
-function getNodeTitle(nodeId) {
-    if (nodeId === "core") return galaxyData.core.title;
-    
-    const allNodes = [
-        ...galaxyData.intuitions,
-        ...galaxyData.questions,
-        ...galaxyData.themes,
-        ...galaxyData.actions,
-        ...galaxyData.futures
-    ];
-    
-    const node = allNodes.find(n => n.id === nodeId);
-    return node ? node.title : nodeId;
 }
 
 // ===== LEYENDA INTERACTIVA =====
@@ -1216,15 +1293,62 @@ legendToggle.addEventListener('click', () => {
     }
 });
 
+// ===== MICRO-NODOS =====
+
+function createMicroNode(microData, container, index) {
+    const micro = document.createElement('div');
+    micro.className = `cosmic-node node-type-micro ${microData.colorClass}`;
+    micro.dataset.id = microData.id;
+    micro.dataset.word = microData.word;
+    micro.style.setProperty('--micro-index', index);
+    micro.style.left = `${microData.x}%`;
+    micro.style.top = `${microData.y}%`;
+    
+    micro.addEventListener('mouseenter', (e) => {
+        showTooltip(microData.word, 
+            `Conceptual thread: ${microData.word} as a lens for reading urban relations and violence.`, 
+            e);
+    });
+    
+    micro.addEventListener('mouseleave', hideTooltip);
+    
+    container.appendChild(micro);
+}
+
+function showTooltip(title, content, event) {
+    tooltipTitle.textContent = title;
+    tooltipContent.textContent = content;
+    
+    tooltip.style.left = `${event.clientX + 15}px`;
+    tooltip.style.top = `${event.clientY + 15}px`;
+    tooltip.classList.add('active');
+}
+
+function hideTooltip() {
+    tooltip.classList.remove('active');
+}
+
 // ===== INICIALIZACIÓN =====
 
 document.addEventListener('DOMContentLoaded', () => {
     createGalaxy();
     
-    // Ajustar conexiones al redimensionar
+    // Ajustar al redimensionar
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-        document.getElementById('cosmicConnections').innerHTML = '';
-        createAllConnections(document.getElementById('cosmicConnections'));
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            document.getElementById('cosmicConnections').innerHTML = '';
+            createAllConnections(document.getElementById('cosmicConnections'));
+        }, 250);
+    });
+    
+    // Mover tooltip con el mouse
+    document.addEventListener('mousemove', (e) => {
+        if (tooltip.classList.contains('active')) {
+            tooltip.style.left = `${e.clientX + 20}px`;
+            tooltip.style.top = `${e.clientY + 20}px`;
+        }
     });
 });
 </script>
