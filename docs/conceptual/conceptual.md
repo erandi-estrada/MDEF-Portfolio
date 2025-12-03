@@ -1,5 +1,5 @@
 <!-- =============================================== -->
-<!-- MAPA CONCEPTUAL - VERSIÓN COMPLETA VISIBLE -->
+<!-- MAPA CONCEPTUAL - VERSIÓN MEJORADA -->
 <!-- =============================================== -->
 
 <style>
@@ -31,19 +31,19 @@
         max-width: 900px !important;
     }
 
-    /* ===== CONTENEDOR DEL MAPA - TAMAÑO OPTIMIZADO ===== */
+    /* ===== CONTENEDOR DEL MAPA ===== */
     .map-wrapper {
         position: relative;
         width: 100%;
-        max-width: 900px; /* REDUCIDO para que quepa */
-        height: 900px;
+        max-width: 1000px; /* AUMENTADO */
+        height: 1000px; /* AUMENTADO */
         margin: 0 auto 4rem auto;
         background: #fefaf0;
         border-radius: 50%;
         overflow: visible;
     }
 
-    /* ANILLOS CONCÉNTRICOS MÁS VISIBLES */
+    /* ANILLOS CONCÉNTRICOS */
     .concentric-ring {
         position: absolute;
         top: 50%;
@@ -54,38 +54,38 @@
         pointer-events: none;
     }
 
-    /* TAMAÑOS AJUSTADOS */
-    .ring-1 { width: 140px; height: 140px; }
-    .ring-2 { width: 280px; height: 280px; }
-    .ring-3 { width: 420px; height: 420px; }
-    .ring-4 { width: 560px; height: 560px; }
-    .ring-5 { width: 700px; height: 700px; }
-    .ring-6 { width: 840px; height: 840px; }
+    /* TAMAÑOS AUMENTADOS */
+    .ring-1 { width: 200px; height: 200px; }
+    .ring-2 { width: 350px; height: 350px; }
+    .ring-3 { width: 500px; height: 500px; }
+    .ring-4 { width: 650px; height: 650px; }
+    .ring-5 { width: 800px; height: 800px; }
+    .ring-6 { width: 950px; height: 950px; }
 
     /* ETIQUETAS DE CAPA */
     .layer-label {
         position: absolute;
         color: #718096;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.8px;
         pointer-events: none;
         opacity: 0.7;
         background: rgba(254, 250, 240, 0.9);
-        padding: 0.2rem 0.5rem;
-        border-radius: 3px;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
     }
 
-    /* ===== NÚCLEO CENTRAL ===== */
+    /* ===== NÚCLEO CENTRAL GRANDE ===== */
     .core-circle {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 130px;
-        height: 130px;
-        background: linear-gradient(135deg, #1976d2, #2196f3);
+        width: 180px; /* AUMENTADO */
+        height: 180px;
+        background: radial-gradient(circle, #1976d2 0%, #1976d2 40%, rgba(25, 118, 210, 0.7) 70%, rgba(25, 118, 210, 0.3) 100%);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -93,29 +93,30 @@
         text-align: center;
         color: white;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 1rem; /* Texto igual */
         line-height: 1.2;
-        padding: 1.5rem;
+        padding: 2rem;
         cursor: pointer;
         z-index: 20;
         box-shadow: 
-            0 10px 30px rgba(25, 118, 210, 0.3),
-            0 0 0 2px rgba(255, 255, 255, 0.2) inset;
+            0 15px 40px rgba(25, 118, 210, 0.3),
+            0 0 0 2px rgba(255, 255, 255, 0.3) inset;
         transition: all 0.3s ease;
+        border: 3px solid rgba(255, 255, 255, 0.4);
     }
 
     .core-circle:hover {
         transform: translate(-50%, -50%) scale(1.08);
         box-shadow: 
-            0 15px 40px rgba(25, 118, 210, 0.4),
-            0 0 0 3px rgba(255, 255, 255, 0.3) inset;
+            0 20px 50px rgba(25, 118, 210, 0.4),
+            0 0 0 3px rgba(255, 255, 255, 0.5) inset;
     }
 
-    /* ===== NODOS DE CAPA - MÁS PEQUEÑOS ===== */
+    /* ===== NODOS DE CAPA - MÁS GRANDES ===== */
     .layer-node {
         position: absolute;
-        width: 100px;
-        height: 100px;
+        width: 140px; /* AUMENTADO */
+        height: 140px; /* AUMENTADO */
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -123,43 +124,155 @@
         text-align: center;
         color: white;
         font-weight: 600;
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Texto igual */
         line-height: 1.1;
-        padding: 0.8rem;
+        padding: 1rem;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 10;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.3);
     }
 
-    /* COLORES MÁS SUAVES */
-    .node-intuition { background: linear-gradient(135deg, #e91e63, #f06292); }
-    .node-question { background: linear-gradient(135deg, #2196f3, #64b5f6); }
-    .node-theme { background: linear-gradient(135deg, #ff9800, #ffb74d); }
-    .node-action { background: linear-gradient(135deg, #4caf50, #81c784); }
-    .node-bee { background: linear-gradient(135deg, #ffc107, #ffd54f); }
-    .node-future { background: linear-gradient(135deg, #9c27b0, #ba68c8); }
+    /* COLORES CON DEGRADADO RADIAL - SÓLIDO AL CENTRO, TRANSPARENTE AL EXTERIOR */
+    .node-intuition { 
+        background: radial-gradient(circle, #e91e63 0%, #e91e63 40%, rgba(233, 30, 99, 0.7) 70%, rgba(233, 30, 99, 0.3) 100%); 
+    }
+    .node-question { 
+        background: radial-gradient(circle, #2196f3 0%, #2196f3 40%, rgba(33, 150, 243, 0.7) 70%, rgba(33, 150, 243, 0.3) 100%); 
+    }
+    .node-theme { 
+        background: radial-gradient(circle, #ff9800 0%, #ff9800 40%, rgba(255, 152, 0, 0.7) 70%, rgba(255, 152, 0, 0.3) 100%); 
+    }
+    .node-action { 
+        background: radial-gradient(circle, #4caf50 0%, #4caf50 40%, rgba(76, 175, 80, 0.7) 70%, rgba(76, 175, 80, 0.3) 100%); 
+    }
+    .node-bee { 
+        background: radial-gradient(circle, #ffc107 0%, #ffc107 40%, rgba(255, 193, 7, 0.7) 70%, rgba(255, 193, 7, 0.3) 100%); 
+    }
+    .node-future { 
+        background: radial-gradient(circle, #9c27b0 0%, #9c27b0 40%, rgba(156, 39, 176, 0.7) 70%, rgba(156, 39, 176, 0.3) 100%); 
+    }
 
     .layer-node:hover {
-        transform: scale(1.12);
+        transform: scale(1.15);
         z-index: 100;
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        border-color: rgba(255, 255, 255, 0.6);
     }
 
     /* CONTENIDO DENTRO DE LOS NODOS */
     .node-title {
         font-weight: 700;
         margin-bottom: 0.3rem;
-        font-size: 0.85rem;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        font-size: 0.85rem; /* Texto igual */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .node-subtitle {
-        font-size: 0.7rem;
+        font-size: 0.7rem; /* Texto igual */
         opacity: 0.95;
         font-weight: 400;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ===== TOOLTIP FLOTANTE - TRANSPARENTE ===== */
+    .floating-tooltip {
+        position: fixed;
+        background: rgba(25, 25, 35, 0.95); /* Oscuro y transparente */
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 1.5rem;
+        width: 300px;
+        max-width: 300px;
+        z-index: 1000;
+        pointer-events: none;
+        opacity: 0;
+        transform: translate(-50%, -120%) scale(0.95);
+        transition: all 0.2s ease;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        color: #f0f0f0;
+    }
+
+    .floating-tooltip.active {
+        opacity: 1;
+        transform: translate(-50%, -120%) scale(1);
+    }
+
+    .tooltip-header {
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .tooltip-type {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        margin-bottom: 0.8rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .tooltip-content {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        opacity: 0.9;
+    }
+
+    /* ===== LEYENDA AL LADO ===== */
+    .side-legend {
+        position: absolute;
+        left: -220px; /* Fuera del círculo, a la izquierda */
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        width: 200px;
+        z-index: 50;
+    }
+
+    .legend-title {
+        color: #2d3748;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .legend-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        color: #4a5568;
+    }
+
+    .legend-color {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 0.7rem;
+        flex-shrink: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     /* ===== CONEXIONES ===== */
@@ -174,182 +287,97 @@
     }
 
     .connection-line {
-        stroke: rgba(0, 0, 0, 0.08);
-        stroke-width: 1.2;
+        stroke: rgba(0, 0, 0, 0.1);
+        stroke-width: 1.5;
         fill: none;
         stroke-linecap: round;
     }
 
-    /* ===== PANEL DE INFORMACIÓN (AHORA ABAJO) ===== */
-    .info-section {
-        max-width: 900px;
-        margin: 3rem auto 0 auto;
-        background: white;
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-    }
-
-    .info-header {
-        color: #2d3748;
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid #1976d2;
-    }
-
-    .info-content {
-        color: #4a5568;
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-
-    .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-    }
-
-    .info-card {
-        background: #f8f9fa;
-        border-radius: 10px;
-        padding: 1.5rem;
-        border-left: 4px solid #1976d2;
-    }
-
-    .info-card h4 {
-        color: #2d3748;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-
-    .info-card p {
-        color: #4a5568;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    /* ===== LEYENDA ===== */
-    .map-legend {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: white;
-        border-radius: 12px;
-        padding: 1.25rem;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        width: 200px;
-        z-index: 50;
-    }
-
-    .legend-title {
-        color: #2d3748;
-        font-size: 0.85rem;
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .legend-items {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .legend-item {
-        display: flex;
-        align-items: center;
-        font-size: 0.8rem;
-        color: #4a5568;
-    }
-
-    .legend-color {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        margin-right: 0.6rem;
-        flex-shrink: 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         .map-wrapper {
-            max-width: 750px;
-            height: 750px;
+            max-width: 900px;
+            height: 900px;
         }
         
-        .concentric-ring.ring-1 { width: 120px; height: 120px; }
-        .concentric-ring.ring-2 { width: 240px; height: 240px; }
-        .concentric-ring.ring-3 { width: 360px; height: 360px; }
-        .concentric-ring.ring-4 { width: 480px; height: 480px; }
-        .concentric-ring.ring-5 { width: 600px; height: 600px; }
-        .concentric-ring.ring-6 { width: 750px; height: 750px; }
-        
-        .layer-node {
-            width: 85px;
-            height: 85px;
-            font-size: 0.75rem;
-            padding: 0.6rem;
+        .side-legend {
+            left: -200px;
         }
         
-        .core-circle {
-            width: 110px;
-            height: 110px;
-            font-size: 0.85rem;
-            padding: 1.2rem;
-        }
+        .concentric-ring.ring-1 { width: 180px; height: 180px; }
+        .concentric-ring.ring-2 { width: 320px; height: 320px; }
+        .concentric-ring.ring-3 { width: 460px; height: 460px; }
+        .concentric-ring.ring-4 { width: 600px; height: 600px; }
+        .concentric-ring.ring-5 { width: 740px; height: 740px; }
+        .concentric-ring.ring-6 { width: 900px; height: 900px; }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1100px) {
         .map-wrapper {
-            max-width: 600px;
-            height: 600px;
+            max-width: 800px;
+            height: 800px;
+            margin-left: 220px; /* Espacio para la leyenda */
         }
         
-        .concentric-ring.ring-1 { width: 100px; height: 100px; }
-        .concentric-ring.ring-2 { width: 200px; height: 200px; }
-        .concentric-ring.ring-3 { width: 300px; height: 300px; }
-        .concentric-ring.ring-4 { width: 400px; height: 400px; }
-        .concentric-ring.ring-5 { width: 500px; height: 500px; }
-        .concentric-ring.ring-6 { width: 600px; height: 600px; }
-        
-        .layer-node {
-            width: 70px;
-            height: 70px;
-            font-size: 0.7rem;
-            padding: 0.5rem;
-        }
-        
-        .core-circle {
-            width: 90px;
-            height: 90px;
-            font-size: 0.8rem;
-            padding: 1rem;
-        }
-        
-        .map-legend {
+        .side-legend {
             position: relative;
+            left: 0;
             top: auto;
-            right: auto;
-            width: 100%;
-            max-width: 400px;
+            transform: none;
+            width: 200px;
             margin: 2rem auto;
+            float: left;
         }
         
-        .info-grid {
-            grid-template-columns: 1fr;
+        .concentric-ring.ring-1 { width: 160px; height: 160px; }
+        .concentric-ring.ring-2 { width: 280px; height: 280px; }
+        .concentric-ring.ring-3 { width: 400px; height: 400px; }
+        .concentric-ring.ring-4 { width: 520px; height: 520px; }
+        .concentric-ring.ring-5 { width: 640px; height: 640px; }
+        .concentric-ring.ring-6 { width: 800px; height: 800px; }
+        
+        .layer-node {
+            width: 120px;
+            height: 120px;
+        }
+        
+        .core-circle {
+            width: 160px;
+            height: 160px;
         }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
+        .map-wrapper {
+            max-width: 700px;
+            height: 700px;
+            margin-left: 0;
+        }
+        
+        .concentric-ring.ring-1 { width: 140px; height: 140px; }
+        .concentric-ring.ring-2 { width: 240px; height: 240px; }
+        .concentric-ring.ring-3 { width: 340px; height: 340px; }
+        .concentric-ring.ring-4 { width: 440px; height: 440px; }
+        .concentric-ring.ring-5 { width: 540px; height: 540px; }
+        .concentric-ring.ring-6 { width: 700px; height: 700px; }
+        
+        .layer-node {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .core-circle {
+            width: 140px;
+            height: 140px;
+        }
+        
+        .floating-tooltip {
+            width: 250px;
+            max-width: 250px;
+        }
+    }
+
+    @media (max-width: 768px) {
         .constellation-page {
             padding: 0 1rem 2rem 1rem !important;
         }
@@ -358,81 +386,67 @@
             font-size: 2rem !important;
         }
         
-        .page-subtitle {
-            font-size: 1rem !important;
+        .map-wrapper {
+            max-width: 600px;
+            height: 600px;
         }
         
+        .concentric-ring.ring-1 { width: 120px; height: 120px; }
+        .concentric-ring.ring-2 { width: 210px; height: 210px; }
+        .concentric-ring.ring-3 { width: 300px; height: 300px; }
+        .concentric-ring.ring-4 { width: 390px; height: 390px; }
+        .concentric-ring.ring-5 { width: 480px; height: 480px; }
+        .concentric-ring.ring-6 { width: 600px; height: 600px; }
+        
+        .layer-node {
+            width: 85px;
+            height: 85px;
+        }
+        
+        .core-circle {
+            width: 120px;
+            height: 120px;
+            font-size: 0.9rem;
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 600px) {
         .map-wrapper {
             max-width: 500px;
             height: 500px;
         }
         
-        .concentric-ring.ring-1 { width: 80px; height: 80px; }
-        .concentric-ring.ring-2 { width: 160px; height: 160px; }
-        .concentric-ring.ring-3 { width: 240px; height: 240px; }
-        .concentric-ring.ring-4 { width: 320px; height: 320px; }
+        .concentric-ring.ring-1 { width: 100px; height: 100px; }
+        .concentric-ring.ring-2 { width: 175px; height: 175px; }
+        .concentric-ring.ring-3 { width: 250px; height: 250px; }
+        .concentric-ring.ring-4 { width: 325px; height: 325px; }
         .concentric-ring.ring-5 { width: 400px; height: 400px; }
         .concentric-ring.ring-6 { width: 500px; height: 500px; }
         
         .layer-node {
-            width: 60px;
-            height: 60px;
-            font-size: 0.65rem;
-            padding: 0.4rem;
-        }
-        
-        .core-circle {
-            width: 75px;
-            height: 75px;
+            width: 70px;
+            height: 70px;
             font-size: 0.75rem;
             padding: 0.8rem;
         }
         
-        .info-section {
-            padding: 1.5rem;
-        }
-        
-        .info-header {
-            font-size: 1.3rem;
-        }
-    }
-
-    @media (max-width: 500px) {
-        .map-wrapper {
-            max-width: 400px;
-            height: 400px;
-        }
-        
-        .concentric-ring.ring-1 { width: 60px; height: 60px; }
-        .concentric-ring.ring-2 { width: 120px; height: 120px; }
-        .concentric-ring.ring-3 { width: 180px; height: 180px; }
-        .concentric-ring.ring-4 { width: 240px; height: 240px; }
-        .concentric-ring.ring-5 { width: 300px; height: 300px; }
-        .concentric-ring.ring-6 { width: 400px; height: 400px; }
-        
-        .layer-node {
-            width: 50px;
-            height: 50px;
-            font-size: 0.6rem;
-            padding: 0.3rem;
-        }
-        
         .core-circle {
-            width: 60px;
-            height: 60px;
-            font-size: 0.65rem;
-            padding: 0.6rem;
+            width: 100px;
+            height: 100px;
+            font-size: 0.85rem;
+            padding: 1.2rem;
         }
         
-        .layer-label {
-            font-size: 0.6rem;
-            padding: 0.1rem 0.3rem;
+        .side-legend {
+            width: 180px;
+            padding: 1.2rem;
         }
     }
 </style>
 
 <!-- =============================================== -->
-<!-- HTML - MAPA CONCEPTUAL COMPLETO -->
+<!-- HTML - MAPA CONCEPTUAL MEJORADO -->
 <!-- =============================================== -->
 
 <div class="constellation-page">
@@ -440,34 +454,34 @@
     <!-- Título de página -->
     <h1 class="page-title">Mapa Conceptual: La Ciudad Invisible</h1>
     <div class="page-subtitle">
-        Una exploración visual de cómo la belleza urbana oculta violencias estructurales contra especies humanas y no humanas. Interactúa con los nodos para descubrir las conexiones conceptuales.
+        Una exploración visual de cómo la belleza urbana oculta violencias estructurales contra especies humanas y no humanas. Pasa el cursor sobre los nodos para ver información detallada.
     </div>
     
     <!-- Contenedor del mapa circular -->
     <div class="map-wrapper" id="emotionMap">
         
-        <!-- Leyenda -->
-        <div class="map-legend">
+        <!-- Leyenda al lado izquierdo -->
+        <div class="side-legend">
             <div class="legend-title">Capas del Mapa</div>
             <div class="legend-items">
                 <div class="legend-item">
-                    <div class="legend-color" style="background: #e91e63;"></div>
+                    <div class="legend-color node-intuition"></div>
                     <span>Intuiciones (12)</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-color" style="background: #2196f3;"></div>
+                    <div class="legend-color node-question"></div>
                     <span>Preguntas Motor</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-color" style="background: #ff9800;"></div>
+                    <div class="legend-color node-theme"></div>
                     <span>Campos Temáticos</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-color" style="background: #4caf50;"></div>
+                    <div class="legend-color node-action"></div>
                     <span>Acciones</span>
                 </div>
                 <div class="legend-item">
-                    <div class="legend-color" style="background: #ffc107;"></div>
+                    <div class="legend-color node-bee"></div>
                     <span>Proyecto Abeja</span>
                 </div>
             </div>
@@ -482,11 +496,11 @@
         <div class="concentric-ring ring-6"></div>
         
         <!-- Etiquetas de capa -->
-        <div class="layer-label" style="top: 50%; left: calc(50% + 150px);">Intuiciones</div>
-        <div class="layer-label" style="top: 50%; left: calc(50% + 220px);">Preguntas</div>
-        <div class="layer-label" style="top: 50%; left: calc(50% + 290px);">Temas</div>
-        <div class="layer-label" style="top: 50%; left: calc(50% + 360px);">Acciones</div>
-        <div class="layer-label" style="top: 50%; left: calc(50% + 430px);">Abejas</div>
+        <div class="layer-label" style="top: 50%; left: calc(50% + 180px);">Intuiciones</div>
+        <div class="layer-label" style="top: 50%; left: calc(50% + 260px);">Preguntas</div>
+        <div class="layer-label" style="top: 50%; left: calc(50% + 340px);">Temas</div>
+        <div class="layer-label" style="top: 50%; left: calc(50% + 420px);">Acciones</div>
+        <div class="layer-label" style="top: 50%; left: calc(50% + 500px);">Abejas</div>
         
         <!-- Núcleo central -->
         <div class="core-circle" id="coreNode">
@@ -501,141 +515,115 @@
         
     </div>
     
-    <!-- Sección de información -->
-    <div class="info-section" id="infoSection">
-        <h2 class="info-header">Mapa Conceptual</h2>
-        <div class="info-content">
-            Explora las capas concéntricas del sistema: desde las intuiciones centrales hasta los futuros emergentes. Cada capa representa un nivel de análisis diferente de la Ciudad Invisible.
-            
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Núcleo Central</h4>
-                    <p>La ciudad aparece limpia y ordenada, pero esta belleza oculta violencia estructural contra especies humanas y no humanas.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Intuiciones (12)</h4>
-                    <p>Insights emocionales y poéticos que guían la investigación: hacer visible lo invisible, sentir como otras especies, etc.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Preguntas Motor</h4>
-                    <p>Cuestionamientos que impulsan la investigación: ¿qué vidas están permitidas? ¿cómo se traducen sentidos no humanos?</p>
-                </div>
-                <div class="info-card">
-                    <h4>Campos Temáticos</h4>
-                    <p>Áreas conceptuales de análisis: estética urbana, diseño hostil, justicia multiespecies, etc.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Tooltip flotante -->
+    <div class="floating-tooltip" id="floatingTooltip">
+        <div class="tooltip-header" id="tooltipHeader"></div>
+        <div class="tooltip-type" id="tooltipType"></div>
+        <div class="tooltip-content" id="tooltipContent"></div>
     </div>
     
 </div>
 
 <script>
-// ===== DATOS DEL SISTEMA - MÁS ORGANIZADOS =====
+// ===== DATOS DEL SISTEMA =====
 
 const constellationData = {
     core: {
         id: "core",
         title: "LA CIUDAD INVISIBLE",
-        subtitle: "Beauty hides violence",
-        content: "La ciudad aparece limpia, hermosa y ordenada, pero esta belleza a menudo oculta violencia estructural contra especies humanas y no humanas. Al exponer infraestructuras ocultas de exclusión, podemos pasar de la conciencia → empatía → futuros multiespecies.",
-        tooltip: "Concepto central: Cómo la belleza urbana esconde violencias sistémicas"
+        type: "Concepto Central",
+        content: "La ciudad aparece limpia, hermosa y ordenada, pero esta belleza a menudo oculta violencia estructural contra especies humanas y no humanas. Al exponer infraestructuras ocultas de exclusión, podemos pasar de la conciencia → empatía → futuros multiespecies."
     },
     
-    // 💎 CAPA 1: INTUICIONES (12 nodos - Rosa)
     intuitions: [
-        { id: "i1", title: "Hacer visible", subtitle: "Lo invisible", angle: 0, radius: 2,
-          content: "Urban beauty hides infrastructures of violence. Make the invisible visible." },
-        { id: "i2", title: "Sentir otros", subtitle: "Empatía", angle: 30, radius: 2,
-          content: "Empathy requires temporarily inhabiting sensory vulnerabilities." },
-        { id: "i3", title: "Belleza engaña", subtitle: "Orden estético", angle: 60, radius: 2,
-          content: "Aesthetic order often disguises exclusion. The city feels wrong." },
-        { id: "i4", title: "Violencia silente", subtitle: "Arquitectónica", angle: 90, radius: 2,
-          content: "Violence can be architectural, aesthetic, silent. Appears as 'cleanliness'." },
-        { id: "i5", title: "Vidas borradas", subtitle: "Cuerpos excluidos", angle: 120, radius: 2,
-          content: "Some forms of life are allowed; others are erased by cities." },
-        { id: "i6", title: "Naturaleza control", subtitle: "Decoración", angle: 150, radius: 2,
-          content: "Nature permitted only as decoration. Spontaneous life is undesirable." },
-        { id: "i7", title: "Vida regresa", subtitle: "Cuando invitada", angle: 180, radius: 2,
-          content: "Life returns when invited back. Plants, pigeons, bees persist." },
-        { id: "i8", title: "Empatía corporal", subtitle: "No información", angle: 210, radius: 2,
-          content: "Empathy through embodiment, not information. Sensory experience matters." },
-        { id: "i9", title: "Diseño humano", subtitle: "Ignora otros", angle: 240, radius: 2,
-          content: "Human design ignores nonhuman sensory worlds. Urban space is anthropocentric." },
-        { id: "i10", title: "Sentir diferente", subtitle: "¿Actuaríamos?", angle: 270, radius: 2,
-          content: "If humans could sense like other species, would we act differently?" },
-        { id: "i11", title: "Control oculto", subtitle: "Tras belleza", angle: 300, radius: 2,
-          content: "City hides control infrastructures behind beauty. 'Safe' can be hostile." },
-        { id: "i12", title: "Pequeños actos", subtitle: "Sistemas grandes", angle: 330, radius: 2,
-          content: "Tiny interventions reveal huge systems. Micro-actions uncover macro-patterns." }
+        { id: "i1", title: "Hacer visible lo invisible", subtitle: "Belleza oculta violencia", angle: 0, radius: 2,
+          content: "La belleza urbana esconde infraestructuras de violencia hacia humanos, animales y ecosistemas. Hacer visible lo invisible." },
+        { id: "i2", title: "Sentir lo que otros sienten", subtitle: "Empatía requiere vulnerabilidad", angle: 30, radius: 2,
+          content: "La empatía requiere habitar temporalmente vulnerabilidades sensoriales que normalmente no percibimos." },
+        { id: "i3", title: "Belleza que engaña", subtitle: "Orden estético disfraza", angle: 60, radius: 2,
+          content: "La ciudad es hermosa, pero algo se siente mal. El orden estético a menudo disfraza exclusión." },
+        { id: "i4", title: "Violencia silenciosa", subtitle: "Arquitectónica, estética", angle: 90, radius: 2,
+          content: "La violencia no es solo física, puede ser arquitectónica, estética, silenciosa." },
+        { id: "i5", title: "Vidas permitidas, vidas borradas", subtitle: "Cuerpos excluidos", angle: 120, radius: 2,
+          content: "Algunas formas de vida están permitidas, otras son borradas. Las ciudades deciden qué cuerpos habitan." },
+        { id: "i6", title: "Naturaleza como decoración", subtitle: "Vida espontánea indeseable", angle: 150, radius: 2,
+          content: "La naturaleza solo es permitida como decoración. La vida espontánea es considerada indeseable." },
+        { id: "i7", title: "La vida regresa", subtitle: "Cuando la invitamos", angle: 180, radius: 2,
+          content: "La vida regresa cuando la invitamos de vuelta. Plantas, palomas, abejas persisten." },
+        { id: "i8", title: "Empatía a través del cuerpo", subtitle: "No a través de información", angle: 210, radius: 2,
+          content: "La empatía emerge a través de la corporeidad, no de la información. La experiencia sensorial importa." },
+        { id: "i9", title: "Diseño antropocéntrico", subtitle: "Ignora otros mundos", angle: 240, radius: 2,
+          content: "El diseño humano ignora mundos sensoriales no humanos. El espacio urbano es antropocéntrico." },
+        { id: "i10", title: "Sentir como otra especie", subtitle: "¿Actuaríamos diferente?", angle: 270, radius: 2,
+          content: "Si los humanos pudiéramos sentir como otras especies, ¿actuaríamos diferente?" },
+        { id: "i11", title: "Control tras la belleza", subtitle: "Lo 'seguro' puede ser hostil", angle: 300, radius: 2,
+          content: "La ciudad esconde infraestructuras de control tras la belleza. Lo 'seguro' puede ser hostil." },
+        { id: "i12", title: "Pequeños actos", subtitle: "Revelan sistemas grandes", angle: 330, radius: 2,
+          content: "Intervenciones pequeñas revelan sistemas grandes. Micro-acciones descubren macro-patrones." }
     ],
     
-    // ⚪ CAPA 2: PREGUNTAS (8 nodos - Azul)
     questions: [
-        { id: "q1", title: "¿Vidas permitidas?", subtitle: "En la ciudad", angle: 0, radius: 3,
-          content: "What lives are allowed in the city? What bodies can rest?" },
-        { id: "q2", title: "Violencia estética", subtitle: "Sanitizada", angle: 45, radius: 3,
-          content: "How is violence sanitized through aesthetics? Species design differences?" },
+        { id: "q1", title: "¿Qué vidas están permitidas?", subtitle: "En la ciudad", angle: 0, radius: 3,
+          content: "¿Qué vidas están permitidas en la ciudad? ¿Qué cuerpos pueden descansar?" },
+        { id: "q2", title: "Violencia estetizada", subtitle: "Sanitizada por belleza", angle: 45, radius: 3,
+          content: "¿Cómo se sanitiza la violencia a través de la estética? ¿Diseñarían diferente otras especies?" },
         { id: "q3", title: "Traducir sentidos", subtitle: "Mundos no humanos", angle: 90, radius: 3,
-          content: "How translate nonhuman sensory worlds? Embodied experience reveals?" },
-        { id: "q4", title: "Conciencia → acción", subtitle: "Camino", angle: 135, radius: 3,
-          content: "How move from awareness → empathy → action? Create multispecies empathy?" },
-        { id: "q5", title: "Sistemas ocultos", subtitle: "Hacer visibles", angle: 180, radius: 3,
-          content: "Make invisible control infrastructures visible through design." },
-        { id: "q6", title: "Justicia especies", subtitle: "Coexistencia", angle: 225, radius: 3,
-          content: "Justice for nonhuman residents? Design for multispecies coexistence." },
-        { id: "q7", title: "Métodos traducción", subtitle: "Herramientas", angle: 270, radius: 3,
-          content: "Methods to translate bee vision, vibration, signals for humans." },
-        { id: "q8", title: "Empatía → cambio", subtitle: "Transformación", angle: 315, radius: 3,
-          content: "How does embodied empathy translate to systemic urban change?" }
+          content: "¿Cómo traducir mundos sensoriales no humanos? ¿La experiencia corpórea revela?" },
+        { id: "q4", title: "Conciencia → acción", subtitle: "Camino de transformación", angle: 135, radius: 3,
+          content: "¿Cómo pasar de conciencia → empatía → acción? ¿Crear empatía multiespecies?" },
+        { id: "q5", title: "Sistemas ocultos", subtitle: "Hacerlos visibles", angle: 180, radius: 3,
+          content: "Hacer visibles infraestructuras de control ocultas a través del diseño." },
+        { id: "q6", title: "Justicia multiespecies", subtitle: "Coexistencia urbana", angle: 225, radius: 3,
+          content: "¿Justicia para residentes no humanos? Diseñar para coexistencia multiespecies." },
+        { id: "q7", title: "Métodos de traducción", subtitle: "Herramientas sensoriales", angle: 270, radius: 3,
+          content: "Métodos para traducir visión UV, vibraciones, señales químicas para humanos." },
+        { id: "q8", title: "Empatía → cambio", subtitle: "Transformación urbana", angle: 315, radius: 3,
+          content: "¿Cómo traduce la empatía corpórea en cambio sistémico urbano?" }
     ],
     
-    // 🟠 CAPA 3: TEMAS (6 nodos - Naranja)
     themes: [
-        { id: "t1", title: "Estética Urbana", subtitle: "Belleza política", angle: 0, radius: 4,
-          content: "Beauty, order, cleanliness as political tools. Tourism-driven control." },
-        { id: "t2", title: "Diseño Hostil", subtitle: "Expulsa", angle: 60, radius: 4,
-          content: "Anti-homeless architecture. Pigeon spikes. Surfaces deny rest." },
-        { id: "t3", title: "Justicia especies", subtitle: "Derechos", angle: 120, radius: 4,
-          content: "Rights to presence, rest, shelter. Nonhuman citizenship. Shared vulnerabilities." },
-        { id: "t4", title: "Investigación Cuerpo", subtitle: "Sensor", angle: 180, radius: 4,
-          content: "Body as sensor. Ethnographic walking. Feeling architecture." },
+        { id: "t1", title: "Estética Urbana", subtitle: "Belleza como política", angle: 0, radius: 4,
+          content: "Belleza, orden, limpieza como herramientas políticas. Control visual impulsado por turismo." },
+        { id: "t2", title: "Diseño Hostil", subtitle: "Arquitectura que expulsa", angle: 60, radius: 4,
+          content: "Arquitectura anti-personas sin hogar. Picos anti-palomas. Superficies que niegan descanso." },
+        { id: "t3", title: "Justicia Multiespecies", subtitle: "Derechos más allá humanos", angle: 120, radius: 4,
+          content: "Derecho a presencia, descanso, refugio. Ciudadanía no humana. Vulnerabilidades compartidas." },
+        { id: "t4", title: "Investigación Corpórea", subtitle: "Cuerpo como sensor", angle: 180, radius: 4,
+          content: "El cuerpo como sensor. Caminata etnográfica. Sentir la arquitectura." },
         { id: "t5", title: "Traducción Sensorial", subtitle: "Entre especies", angle: 240, radius: 4,
-          content: "Translating nonhuman senses. Interfaces for multispecies understanding." },
-        { id: "t6", title: "Empatía Ambiental", subtitle: "Sentir-con", angle: 300, radius: 4,
-          content: "Empathy towards ecosystems. Cross-species communication. Emotional connection." }
+          content: "Traducir sentidos no humanos. Interfaces para comprensión multiespecies." },
+        { id: "t6", title: "Empatía Ambiental", subtitle: "Sentir-con ecosistemas", angle: 300, radius: 4,
+          content: "Empatía hacia ecosistemas. Comunicación entre especies. Conexión emocional." }
     ],
     
-    // 🌙 CAPA 4: ACCIONES (6 nodos - Verde)
     actions: [
-        { id: "a1", title: "Sentarse Hostil", subtitle: "Cuerpo sensor", angle: 30, radius: 5,
-          content: "Sitting on hostile architecture. Revealing micro-violence through body." },
-        { id: "a2", title: "Vestir Hostilidad", subtitle: "Traducción", angle: 90, radius: 5,
-          content: "Transferring anti-pigeon spikes to human body. Making violence wearable." },
-        { id: "a3", title: "Devolver Vida", subtitle: "Renaturalizar", angle: 150, radius: 5,
-          content: "Planting spontaneous life in concrete. Soil, seeds, moss graffiti." },
-        { id: "a4", title: "Belleza Excluye", subtitle: "Documentar", angle: 210, radius: 5,
-          content: "Documenting aesthetic erasure. Urban Violence Photography Map." },
-        { id: "a5", title: "Infraestructuras", subtitle: "Patrones", angle: 270, radius: 5,
-          content: "Documenting hidden infrastructures. Patterns of control in tourist zones." },
-        { id: "a6", title: "Experimentos", subtitle: "Interfaces", angle: 330, radius: 5,
-          content: "Prototyping sensory translation devices across modalities and species." }
+        { id: "a1", title: "Sentarse en lo Hostil", subtitle: "Cuerpo como sensor", angle: 30, radius: 5,
+          content: "Sentarse en arquitectura hostil. Revelar micro-violencia a través del cuerpo." },
+        { id: "a2", title: "Vestir la Hostilidad", subtitle: "Traducción material", angle: 90, radius: 5,
+          content: "Transferir picos anti-palomas al cuerpo humano. Hacer visible la violencia arquitectónica." },
+        { id: "a3", title: "Devolver la Vida", subtitle: "Actos de renaturalización", angle: 150, radius: 5,
+          content: "Plantar vida espontánea en concreto. Tierra, semillas, graffiti de musgo." },
+        { id: "a4", title: "Belleza que Excluye", subtitle: "Documentar el borrado", angle: 210, radius: 5,
+          content: "Documentar borrado estético. Mapa de Fotografía de Violencia Urbana." },
+        { id: "a5", title: "Infraestructuras Ocultas", subtitle: "Patrones de control", angle: 270, radius: 5,
+          content: "Documentar infraestructuras ocultas. Patrones de control en zonas turísticas." },
+        { id: "a6", title: "Experimentos Sensoriales", subtitle: "Interfaces de percepción", angle: 330, radius: 5,
+          content: "Prototipar dispositivos de traducción sensorial entre modalidades y especies." }
     ],
     
-    // 🐝 CAPA 5: PROYECTO ABEJA (6 nodos - Amarillo)
     beeProject: [
-        { id: "b1", title: "Vulnerabilidades", subtitle: "Pesticidas", angle: 0, radius: 6,
-          content: "Pesticides, habitat fragmentation, urban monoculture, heat islands." },
-        { id: "b2", title: "Mundo Sensorial", subtitle: "UV, vibraciones", angle: 60, radius: 6,
-          content: "UV vision, vibrational communication, chemical signaling, memory." },
-        { id: "b3", title: "Conflictos", subtitle: "Remoción", angle: 120, radius: 6,
-          content: "Beehives removed for aesthetics. Fear-driven extermination." },
-        { id: "b4", title: "Violencia Sistémica", subtitle: "Sistemas", angle: 180, radius: 6,
-          content: "Corporate agriculture, industrial pesticides, urban 'beautification'." },
-        { id: "b5", title: "Traducción", subtitle: "Métodos", angle: 240, radius: 6,
-          content: "Sensors convert vibrations to sound. UV mapping. Temperature pulses." },
-        { id: "b6", title: "Camino Empatía", subtitle: "Conciencia → acción", angle: 300, radius: 6,
-          content: "Awareness → Embodied Experience → Multispecies Empathy → Action." }
+        { id: "b1", title: "Vulnerabilidades", subtitle: "Pesticidas, hábitat", angle: 0, radius: 6,
+          content: "Pesticidas, fragmentación de hábitat, monocultivos urbanos, islas de calor." },
+        { id: "b2", title: "Mundo Sensorial", subtitle: "Visión UV, vibraciones", angle: 60, radius: 6,
+          content: "Visión UV, comunicación vibratoria, señalización química, memoria espacial." },
+        { id: "b3", title: "Conflictos", subtitle: "Remoción estética", angle: 120, radius: 6,
+          content: "Colmenas removidas por estética. Exterminio impulsado por miedo." },
+        { id: "b4", title: "Violencia Sistémica", subtitle: "Sistemas agrícolas", angle: 180, radius: 6,
+          content: "Agricultura corporativa, pesticidas industriales, 'embellecimiento' urbano." },
+        { id: "b5", title: "Traducción", subtitle: "Métodos tecnológicos", angle: 240, radius: 6,
+          content: "Sensores que convierten vibraciones en sonido. Mapeo UV. Pulsos hápticos." },
+        { id: "b6", title: "Camino de Empatía", subtitle: "Conciencia → acción", angle: 300, radius: 6,
+          content: "Conciencia → Experiencia Corpórea → Empatía Multiespecies → Acción." }
     ]
 };
 
@@ -650,11 +638,11 @@ function buildConstellationMap() {
     connectionsContainer.innerHTML = '';
     
     // Construir todas las capas
-    buildLayer(constellationData.intuitions, 'intuition', container);
-    buildLayer(constellationData.questions, 'question', container);
-    buildLayer(constellationData.themes, 'theme', container);
-    buildLayer(constellationData.actions, 'action', container);
-    buildLayer(constellationData.beeProject, 'bee', container);
+    buildLayer(constellationData.intuitions, 'intuition', 'Intuición');
+    buildLayer(constellationData.questions, 'question', 'Pregunta Motor');
+    buildLayer(constellationData.themes, 'theme', 'Campo Temático');
+    buildLayer(constellationData.actions, 'action', 'Acción como Conocimiento');
+    buildLayer(constellationData.beeProject, 'bee', 'Proyecto Abeja');
     
     // Configurar núcleo
     setupCoreNode();
@@ -665,13 +653,14 @@ function buildConstellationMap() {
     }, 100);
 }
 
-function buildLayer(nodes, type, container) {
-    const centerX = 50; // Porcentaje
+function buildLayer(nodes, type, typeName) {
+    const container = document.getElementById('layerNodes');
+    const centerX = 50;
     const centerY = 50;
     
     nodes.forEach(node => {
         // Calcular posición radial
-        const radiusPercent = node.radius * 13; // 13% por capa
+        const radiusPercent = node.radius * 13;
         const angleRad = (node.angle * Math.PI) / 180;
         
         const x = centerX + (radiusPercent * Math.cos(angleRad));
@@ -684,6 +673,7 @@ function buildLayer(nodes, type, container) {
         nodeElement.style.top = `${y}%`;
         nodeElement.dataset.id = node.id;
         nodeElement.dataset.type = type;
+        nodeElement.dataset.typeName = typeName;
         
         // Contenido
         const content = document.createElement('div');
@@ -701,13 +691,18 @@ function buildLayer(nodes, type, container) {
         content.appendChild(subtitle);
         nodeElement.appendChild(content);
         
-        // Eventos
+        // Eventos para tooltip flotante
         nodeElement.addEventListener('mouseenter', (e) => {
-            showNodeInfo(node, type);
+            showFloatingTooltip(node, typeName, e);
             highlightNode(nodeElement);
         });
         
+        nodeElement.addEventListener('mousemove', (e) => {
+            updateTooltipPosition(e);
+        });
+        
         nodeElement.addEventListener('mouseleave', () => {
+            hideFloatingTooltip();
             resetNode(nodeElement);
         });
         
@@ -717,39 +712,52 @@ function buildLayer(nodes, type, container) {
 
 function setupCoreNode() {
     const coreNode = document.getElementById('coreNode');
-    const infoSection = document.getElementById('infoSection');
     
-    coreNode.addEventListener('mouseenter', () => {
-        infoSection.innerHTML = `
-            <h2 class="info-header">LA CIUDAD INVISIBLE</h2>
-            <div class="info-content">
-                <p><strong>Concepto central:</strong> La ciudad aparece limpia, hermosa y ordenada, pero esta belleza a menudo oculta violencia estructural contra especies humanas y no humanas.</p>
-                <p>Al exponer infraestructuras ocultas de exclusión, podemos pasar de:</p>
-                <p><strong>CONCIENCIA → EMPATÍA → FUTUROS MULTIESPECIES</strong></p>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h4>Belleza que oculta</h4>
-                        <p>La estética urbana como fachada que esconde sistemas de exclusión y violencia.</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Violencia estructural</h4>
-                        <p>Contra humanos (sin hogar) y no humanos (palomas, abejas, plantas espontáneas).</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Infraestructuras ocultas</h4>
-                        <p>Sistemas de control disfrazados de mantenimiento, seguridad o limpieza.</p>
-                    </div>
-                </div>
-            </div>
-        `;
+    coreNode.addEventListener('mouseenter', (e) => {
+        showFloatingTooltip(constellationData.core, 'Concepto Central', e);
         coreNode.style.transform = 'translate(-50%, -50%) scale(1.1)';
     });
     
+    coreNode.addEventListener('mousemove', (e) => {
+        updateTooltipPosition(e);
+    });
+    
     coreNode.addEventListener('mouseleave', () => {
+        hideFloatingTooltip();
         coreNode.style.transform = 'translate(-50%, -50%)';
-        resetInfoSection();
     });
 }
+
+// ===== TOOLTIP FLOTANTE =====
+
+const tooltip = document.getElementById('floatingTooltip');
+const tooltipHeader = document.getElementById('tooltipHeader');
+const tooltipType = document.getElementById('tooltipType');
+const tooltipContent = document.getElementById('tooltipContent');
+
+function showFloatingTooltip(node, typeName, event) {
+    tooltipHeader.textContent = node.title;
+    tooltipType.textContent = typeName;
+    tooltipContent.textContent = node.content;
+    
+    updateTooltipPosition(event);
+    tooltip.classList.add('active');
+}
+
+function updateTooltipPosition(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    
+    // Posicionar tooltip arriba del cursor
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
+}
+
+function hideFloatingTooltip() {
+    tooltip.classList.remove('active');
+}
+
+// ===== CONEXIONES =====
 
 function createConnections(container) {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -758,11 +766,12 @@ function createConnections(container) {
     svg.style.width = "100%";
     svg.style.height = "100%";
     
-    // Conexiones principales (menos para más limpieza)
+    // Conexiones principales
     const connections = [
         ['core', 'i1'], ['core', 'i10'], ['core', 't3'],
         ['t5', 'b2'], ['t4', 'a1'], ['t6', 'b6'],
-        ['i1', 'q1'], ['i4', 'q5'], ['i10', 'b2']
+        ['i1', 'q1'], ['i4', 'q5'], ['i10', 'b2'],
+        ['t3', 'b1'], ['t2', 'a4'], ['t1', 'q2']
     ];
     
     connections.forEach(([sourceId, targetId]) => {
@@ -801,78 +810,20 @@ function connectNodes(svg, sourceId, targetId) {
     svg.appendChild(line);
 }
 
-function showNodeInfo(node, type) {
-    const infoSection = document.getElementById('infoSection');
-    const typeNames = {
-        'intuition': 'Intuición',
-        'question': 'Pregunta Motor',
-        'theme': 'Campo Temático',
-        'action': 'Acción como Conocimiento',
-        'bee': 'Proyecto Abeja'
-    };
-    
-    infoSection.innerHTML = `
-        <h2 class="info-header">${node.title}</h2>
-        <div class="info-content">
-            <p><strong>${typeNames[type]}</strong>: ${node.subtitle}</p>
-            <p>${node.content}</p>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Conexiones principales</h4>
-                    <p>Relacionado con otros nodos del sistema conceptual.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Nivel de análisis</h4>
-                    <p>Parte de la capa de ${typeNames[type]} en el mapa.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Aplicación práctica</h4>
-                    <p>Se traduce en intervenciones, investigaciones o prototipos.</p>
-                </div>
-            </div>
-        </div>
-    `;
-}
+// ===== EFECTOS VISUALES =====
 
 function highlightNode(node) {
     node.style.transform = 'scale(1.2)';
     node.style.zIndex = '100';
-    node.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.25)';
+    node.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.3)';
+    node.style.borderColor = 'rgba(255, 255, 255, 0.7)';
 }
 
 function resetNode(node) {
     node.style.transform = '';
     node.style.zIndex = '';
     node.style.boxShadow = '';
-}
-
-function resetInfoSection() {
-    const infoSection = document.getElementById('infoSection');
-    infoSection.innerHTML = `
-        <h2 class="info-header">Mapa Conceptual</h2>
-        <div class="info-content">
-            Explora las capas concéntricas del sistema: desde las intuiciones centrales hasta los futuros emergentes. Cada capa representa un nivel de análisis diferente de la Ciudad Invisible.
-            
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Núcleo Central</h4>
-                    <p>La ciudad aparece limpia y ordenada, pero esta belleza oculta violencia estructural contra especies humanas y no humanas.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Intuiciones (12)</h4>
-                    <p>Insights emocionales y poéticos que guían la investigación: hacer visible lo invisible, sentir como otras especies, etc.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Preguntas Motor</h4>
-                    <p>Cuestionamientos que impulsan la investigación: ¿qué vidas están permitidas? ¿cómo se traducen sentidos no humanos?</p>
-                </div>
-                <div class="info-card">
-                    <h4>Campos Temáticos</h4>
-                    <p>Áreas conceptuales de análisis: estética urbana, diseño hostil, justicia multiespecies, etc.</p>
-                </div>
-            </div>
-        </div>
-    `;
+    node.style.borderColor = '';
 }
 
 // ===== INICIALIZACIÓN =====
@@ -887,6 +838,13 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeTimeout = setTimeout(() => {
             buildConstellationMap();
         }, 250);
+    });
+    
+    // Mover tooltip con el mouse globalmente
+    document.addEventListener('mousemove', (e) => {
+        if (tooltip.classList.contains('active')) {
+            updateTooltipPosition(e);
+        }
     });
 });
 </script>
