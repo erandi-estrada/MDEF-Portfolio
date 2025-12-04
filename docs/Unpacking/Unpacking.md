@@ -18,7 +18,7 @@ We think the main reason it failed was a swollen battery, but it was also made o
 
 > **Note:** This is my personal documentation of the project. The complete group report with all team contributions can be found here:  
 > **[Full Group Report →](https://hackmd.io/pONF3MmaScOIxqd7tCS_6A?view)**
-> **[Group Documentation: →] (https://drive.google.com/drive/folders/1CiTxKkY0GmlPol0duvbu6VkMMtMGJUlu?usp=drive_link)**
+> **[Documentation →](https://drive.google.com/drive/folders/1CiTxKkY0GmlPol0duvbu6VkMMtMGJUlu?usp=drive_link)**
 
 ![Macbook Bird's Eye View](https://hackmd.io/_uploads/SkvUWDoxZl.jpg)
 
