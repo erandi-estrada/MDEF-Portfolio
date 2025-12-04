@@ -38,15 +38,15 @@
             </a> 
 
   <a href="Unpacking/Unpacking/" class="card">
-                <img src="images/unpacking.jpg" alt="Atlas of Weak Signals">
+                <img src="images/unpacking.jpg" alt="Unpacking Technologies">
                 <h3>Unpacking Technologies</h3>
                 <p>To examine our relation with technology.</p>
             </a>
 
-  <a href="digi/digi/" class="card">
-                <img src="images/digi.jpg" alt="Digi">
-                <h3>Digi</h3>
-                <p>Digital tools and interactive systems.</p>
+  <a href="Machine/Machine/" class="card">
+                <img src="images/machine.jpg" alt="The Machine Paradox">
+                <h3>Machine Paradox</h3>
+                <p>To expand the notion of what a machine might be.</p>
             </a>
 
   <a href="studio/studio/" class="card">
