@@ -37,10 +37,10 @@
                 <p>Hands-on learning, rapid prototyping, and collaboration.</p> 
             </a> 
 
-  <a href="term1/02-Atlas/" class="card">
-                <img src="images/atlas.jpg" alt="Atlas of Weak Signals">
-                <h3>Atlas of Weak Signals</h3>
-                <p>Researching emerging signals and future-oriented thinking.</p>
+  <a href="Unpacking/Unpacking/" class="card">
+                <img src="images/unpacking.jpg" alt="Atlas of Weak Signals">
+                <h3>Unpacking Technologies</h3>
+                <p>To examine our relation with technology.</p>
             </a>
 
   <a href="digi/digi/" class="card">
