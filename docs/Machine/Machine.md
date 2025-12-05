@@ -171,11 +171,15 @@ loop:
             <p style="margin-bottom: 1.5rem;">
                 This shift opened an unexpected kind of creative freedom. Without the pressure to be practical, the process became more playful and experimental. We could explore ideas that might normally feel "wrong," experiment with timing, lights, and messages, and embrace imperfections as part of the character of the machine. The absurdity of a device that prioritizes beauty and deception over function made the process fun, unpredictable, and deeply engaging.
             </p>
-            <p style="margin-bottom: 1.5rem;">
-                In the end, Meluza feels complete not because it solves a problem or serves a practical purpose, but because it embodies the concepts it set out to explore: self-centeredness, allure, and the joy of doing nothing. The project reminded me that sometimes the most valuable lessons in design come from letting go of utility and allowing space for creativity, humor, and experimentation.
-            </p>
         </div>
     </div>
+</div>
+
+<!-- Full width paragraph -->
+<div style="width: 100%; margin: 2rem 0 4rem 0;">
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #444; max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+        In the end, Meluza feels complete not because it solves a problem or serves a practical purpose, but because it embodies the concepts it set out to explore: self-centeredness, allure, and the joy of doing nothing. The project reminded me that sometimes the most valuable lessons in design come from letting go of utility and allowing space for creativity, humor, and experimentation.
+    </p>
 </div>
 
 <!-- Slideshow and Zine Section -->
