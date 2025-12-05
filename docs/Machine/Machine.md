@@ -8,17 +8,20 @@
 
 # Meluza: The Deceptive Machine
 
-A collaborative project exploring deceptive interfaces, human-machine interaction, and the psychology of user engagement through an intentionally misleading device.
+A project about a self-centered machine that uses beauty to deceive.
 
 ## Project Introduction
 
-Meluza is an interactive machine designed to deceive its users. It invites interaction with promises of functionality, only to deliberately disappoint and confuse. This project explores themes of trust, expectation, and the psychological impact of technology that doesn't behave as anticipated.
+Meluza was born from three simple ideas: a machine that tricks you, a machine that only cares about itself, and a machine designed to be pretty above all else.
 
-> **Note:** This documentation details the Meluza project. For collaborative context and additional resources, visit:
+Our interest in transparency, both literal and metaphorical, began when we found glasses and started thinking about how things appear versus how they actually work. Using parts from a disassembled MacBook, we built a device that looks attractive and inviting, but behaves in a selfish and deceptive way.
+
+The machine draws you in with its appearance, then frustrates you with messages of rejection and disinterest. It's beautiful, but useless, a mirror that doesn't reflect you back, only its own perfect image.
+
+> **Note:** This documentation is a personal reflexion about the Meluza project. For collaborative context and additional resources, visit:
 > 
-> **[Full Group Documentation →]()**  
-> 
-> **[Project Repository →]()**
+> **[Full Group Documentation →](https://drive.google.com/drive/folders/1SaJp7rSrbgC6_TBm4SuqNJTPU5xxVxo5?usp=drive_link)**  
+
 
 ## Concept Overview
 
