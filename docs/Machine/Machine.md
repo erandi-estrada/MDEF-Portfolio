@@ -62,6 +62,16 @@ Meluza Machine Concept
 ## Design Process
 
 First Prototype
+<img src="../../images/prototype.jpg" 
+             alt="Prototype" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+
+Preparing for laser
+<img src="../../images/rhino.jpg" 
+             alt="Rhino file" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
 
 ### Design Elements
 
