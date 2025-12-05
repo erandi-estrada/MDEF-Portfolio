@@ -186,7 +186,7 @@ loop:
 <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
     <!-- Left Column: Slideshow -->
     <div>
-        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">Project Documentation</h2>
+        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">Digital Zine</h2>
         <div style="position: relative; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
             <!-- Slideshow Container -->
             <div id="meluza-slideshow" style="width: 100%; height: 600px; background: #f0f0f0;">
@@ -207,7 +207,7 @@ loop:
     
     <!-- Right Column: Zine -->
     <div>
-        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">Project Zine</h2>
+        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">Zine</h2>
         <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
             <img src="../../images/zine.jpg" 
                  alt="Meluza Project Zine" 
