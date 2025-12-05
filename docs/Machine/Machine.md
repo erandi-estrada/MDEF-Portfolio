@@ -10,6 +10,11 @@
 
 A project about a self-centered machine that uses beauty to deceive.
 
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/Meluza.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Project Introduction
 
 Meluza was born from three simple ideas: a machine that tricks you, a machine that only cares about itself, and a machine designed to be pretty above all else.
@@ -48,52 +53,43 @@ The machine draws you in with its appearance, then frustrates you with messages 
     </div>
 </div>
 
-![Meluza Machine Concept](images/meluza_concept.jpg)
+Meluza Machine Concept
+<img src="../../images/meluza-concept.jpg" 
+             alt="Meluza Concept" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
 
 ## Design Process
 
-### Conceptual Framework
-
-<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-    <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Design Philosophy</h2>
-    
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
-        <div>
-            <h3>THE PRETTY WELL LIVING MATERIALS</h3>
-            <ul>
-                <li>Primary involved standards</li>
-                <li>Multicircularity</li>
-                <li>Thriving design approach</li>
-                <li>Financing considerations</li>
-            </ul>
-        </div>
-        
-<div>
-            <h3>THE SELF-CENTERED MATTERS</h3>
-            <ul>
-                <li>Maximum expectations by human</li>
-                <li>Maximum final work and own agency</li>
-                <li>Mediums constrained by human interaction</li>
-                <li>Sustained tension and agency</li>
-            </ul>
-        </div>
-    </div>
-</div>
+First Prototype
 
 ### Design Elements
 
 <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333; margin: 2rem 0;">
     <h3 style="margin-top: 0;">Key Design Components</h3>
-    <p><strong>POLING BIGGER MACHINE:</strong> Honesty/lying machine, sincere discomfort, making interaction intentionally unpleasant</p>
-    <p><strong>GIVE PRETTY MATERIALS:</strong> Showing what everyone wants, being pretty as the main way to attract users</p>
-    <p><strong>FUNCTIONAL ELEMENTS:</strong> Display messaging, political/emotional picking up and moving</p>
+    <p><strong>Ultrasonic Sensor HC-SR04</strong> Measures distance to detect when users approach the machine, triggering the deceptive interaction sequence.</p>
+    <p><strong>LCD Display 2004 I2C</strong> Shows the machine's selfish messages, inviting users in only to reject them with words like "Ur not worthy to look at me."</p>
+    <p><strong>5V recessed LED spotlight with built-in resistor</strong> Creates the blinding light sequence that confuses and disorients users during interaction.</p>
+    <p><strong>Protoboard</strong> Used to connect and organize all electronic components.</p>
+    <p><strong>Barduino</strong> The main microcontroller that runs the deceptive logic, controlling sensors, lights, and display messages.</p>
+    <p><strong>MOSFET IRFZ44N</strong> Controls the power to the bright LEDs, enabling the intense blinking patterns that overwhelm users.</p>
 </div>
 
 ## Technical Implementation
 
 ### System Architecture
 
-![System Diagram](images/system_diagram.jpg)
+Schematic Diagram
+<img src="../../images/electric-components.jpg" 
+             alt="Electric Components" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+
+System Diagram 
+<img src="../../images/electric-diagram.jpg" 
+             alt="Electric Diagram" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
 
 ### Coding Logic
 
