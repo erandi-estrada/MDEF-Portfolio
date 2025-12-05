@@ -177,7 +177,7 @@ loop:
 
 <!-- Full width paragraph -->
 <div style="width: 100%; margin: 2rem 0 4rem 0;">
-    <p style="font-size: 1.1rem; line-height: 1.7; color: #444; max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+    <p>
         In the end, Meluza feels complete not because it solves a problem or serves a practical purpose, but because it embodies the concepts it set out to explore: self-centeredness, allure, and the joy of doing nothing. The project reminded me that sometimes the most valuable lessons in design come from letting go of utility and allowing space for creativity, humor, and experimentation.
     </p>
 </div>
