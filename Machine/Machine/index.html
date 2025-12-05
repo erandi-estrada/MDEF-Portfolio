@@ -270,13 +270,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conceptual-framework" class="md-nav__link">
-    Conceptual Framework
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#design-elements" class="md-nav__link">
     Design Elements
   </a>
@@ -352,6 +345,11 @@
 
 <h1 id="meluza-the-deceptive-machine">Meluza: The Deceptive Machine<a class="headerlink" href="#meluza-the-deceptive-machine" title="Permanent link">&para;</a></h1>
 <p>A project about a self-centered machine that uses beauty to deceive.</p>
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/Meluza.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 <h2 id="project-introduction">Project Introduction<a class="headerlink" href="#project-introduction" title="Permanent link">&para;</a></h2>
 <p>Meluza was born from three simple ideas: a machine that tricks you, a machine that only cares about itself, and a machine designed to be pretty above all else.</p>
 <p>Our interest in transparency, both literal and metaphorical, began when we found glasses and started thinking about how things appear versus how they actually work. Using parts from a disassembled MacBook, we built a device that looks attractive and inviting, but behaves in a selfish and deceptive way.</p>
@@ -384,46 +382,36 @@
     </div>
 </div>
 
-<p><img alt="Meluza Machine Concept" src="images/meluza_concept.jpg" /></p>
+<p>Meluza Machine Concept
+<img src="../../images/meluza-concept.jpg" 
+             alt="Meluza Concept" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;"></p>
 <h2 id="design-process">Design Process<a class="headerlink" href="#design-process" title="Permanent link">&para;</a></h2>
-<h3 id="conceptual-framework">Conceptual Framework<a class="headerlink" href="#conceptual-framework" title="Permanent link">&para;</a></h3>
-<div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-    <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Design Philosophy</h2>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
-        <div>
-            <h3>THE PRETTY WELL LIVING MATERIALS</h3>
-            <ul>
-                <li>Primary involved standards</li>
-                <li>Multicircularity</li>
-                <li>Thriving design approach</li>
-                <li>Financing considerations</li>
-            </ul>
-        </div>
-
-<div>
-            <h3>THE SELF-CENTERED MATTERS</h3>
-            <ul>
-                <li>Maximum expectations by human</li>
-                <li>Maximum final work and own agency</li>
-                <li>Mediums constrained by human interaction</li>
-                <li>Sustained tension and agency</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<p>First Prototype</p>
 <h3 id="design-elements">Design Elements<a class="headerlink" href="#design-elements" title="Permanent link">&para;</a></h3>
 <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333; margin: 2rem 0;">
     <h3 style="margin-top: 0;">Key Design Components</h3>
-    <p><strong>POLING BIGGER MACHINE:</strong> Honesty/lying machine, sincere discomfort, making interaction intentionally unpleasant</p>
-    <p><strong>GIVE PRETTY MATERIALS:</strong> Showing what everyone wants, being pretty as the main way to attract users</p>
-    <p><strong>FUNCTIONAL ELEMENTS:</strong> Display messaging, political/emotional picking up and moving</p>
+    <p><strong>Ultrasonic Sensor HC-SR04</strong> Measures distance to detect when users approach the machine, triggering the deceptive interaction sequence.</p>
+    <p><strong>LCD Display 2004 I2C</strong> Shows the machine's selfish messages, inviting users in only to reject them with words like "Ur not worthy to look at me."</p>
+    <p><strong>5V recessed LED spotlight with built-in resistor</strong> Creates the blinding light sequence that confuses and disorients users during interaction.</p>
+    <p><strong>Protoboard</strong> Used to connect and organize all electronic components.</p>
+    <p><strong>Barduino</strong> The main microcontroller that runs the deceptive logic, controlling sensors, lights, and display messages.</p>
+    <p><strong>MOSFET IRFZ44N</strong> Controls the power to the bright LEDs, enabling the intense blinking patterns that overwhelm users.</p>
 </div>
 
 <h2 id="technical-implementation">Technical Implementation<a class="headerlink" href="#technical-implementation" title="Permanent link">&para;</a></h2>
 <h3 id="system-architecture">System Architecture<a class="headerlink" href="#system-architecture" title="Permanent link">&para;</a></h3>
-<p><img alt="System Diagram" src="images/system_diagram.jpg" /></p>
+<p>Schematic Diagram
+<img src="../../images/electric-components.jpg" 
+             alt="Electric Components" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;"></p>
+<p>System Diagram 
+<img src="../../images/electric-diagram.jpg" 
+             alt="Electric Diagram" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;"></p>
 <h3 id="coding-logic">Coding Logic<a class="headerlink" href="#coding-logic" title="Permanent link">&para;</a></h3>
 <div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
     <h2 style="font-size: 1.8rem; font-weight: bold; margin-top: 0;">Flow Chart Sequence</h2>
@@ -473,7 +461,7 @@ if sequence finished: reset everything to OFF
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 5, 2025 00:27:58 UTC">December 5, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 5, 2025 00:40:16 UTC">December 5, 2025</span>
     
   </small>
 </div>
