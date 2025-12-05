@@ -73,6 +73,12 @@ Preparing for laser
              width="100%" 
              style="border-radius: 8px; object-fit: cover;">
 
+Iteration Process
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/process.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### Design Elements
 
 <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333; margin: 2rem 0;">
