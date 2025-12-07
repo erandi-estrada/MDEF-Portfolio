@@ -31,7 +31,7 @@
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
 
-  <a href="term1/01-Bootcamp/" class="card">
+  <a href="Otherness/Other-intelligences/" class="card">
                 <img src="images/bootcamp.jpg" alt="Bootcamp"> 
                 <h3>Bootcamp</h3> 
                 <p>Hands-on learning, rapid prototyping, and collaboration.</p> 
