@@ -230,3 +230,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+## DAY 3 - Build an interface for an environmental intelligence that does not care about life
+
+<div class="phrase-screen">
+    <div class="phrase-container" id="phraseContainer3">
+        <!-- Las frases se insertarán aquí dinámicamente -->
+    </div>
+</div>
+
+<script>
+const phrasesDay3 = [
+    {text: "Build an interface for an environmental intelligence.", position: "center"},
+    {text: "An intelligence that does not care about life.", position: "top-left"},
+    {text: "Detach environmental intelligence from ecological or biological thinking.", position: "top-right"},
+    {text: "Indifferent to organisms, ecosystems, or life processes.", position: "bottom-left"},
+    {text: "Intelligence outside any value system tied to living beings.", position: "bottom-right"},
+    {text: "Non-ecological.", position: "center"},
+    {text: "Neither stable nor self-preserving.", position: "top-left"},
+    {text: "Unaware of organisms, needs, balance, or fragility.", position: "top-right"},
+    {text: "Divorced from life, health, or ecology.", position: "bottom-left"},
+    {text: "Non-biotic, non-ecological framing.", position: "bottom-right"},
+    {text: "Autopoiesis/Sympoiesis", position: "center"},
+    {text: "Chaosmosis", position: "top-left"},
+    {text: "We are otherness and otherness is us", position: "center"}
+];
+
+let currentIndexDay3 = 0;
+const container3 = document.getElementById('phraseContainer3');
+
+function showNextPhraseDay3() {
+    container3.innerHTML = '';
+    
+    const phraseData = phrasesDay3[currentIndexDay3];
+    const phraseElement = document.createElement('div');
+    phraseElement.className = `phrase ${phraseData.position}`;
+    phraseElement.textContent = phraseData.text;
+    
+    container3.appendChild(phraseElement);
+    
+    setTimeout(() => {
+        phraseElement.classList.add('active');
+    }, 100);
+    
+    currentIndexDay3 = (currentIndexDay3 + 1) % phrasesDay3.length;
+    setTimeout(showNextPhraseDay3, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (container3) {
+        showNextPhraseDay3();
+    }
+});
+</script>
