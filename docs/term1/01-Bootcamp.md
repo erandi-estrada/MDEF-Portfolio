@@ -169,3 +169,64 @@ document.addEventListener('DOMContentLoaded', showNextPhrase);
     transform: translateY(0);
 }
 </style>
+
+## DAY 2 - Support a collective/grupal intelligence that does not locate itself in individuals
+
+<div class="phrase-screen">
+    <div class="phrase-container" id="phraseContainer2">
+        <!-- Las frases se insertarán aquí dinámicamente -->
+    </div>
+</div>
+
+<script>
+const phrasesDay2 = [
+    {text: "Support a collective/grupal intelligence.", position: "center"},
+    {text: "An intelligence that does not locate itself in individuals.", position: "top-left"},
+    {text: "Forget that intelligence can be owned by persons.", position: "top-right"},
+    {text: "An intelligence that forms between, not within.", position: "bottom-left"},
+    {text: "Not composed of individuals.", position: "bottom-right"},
+    {text: "Not a sum of minds.", position: "center"},
+    {text: "Not defined by personalities or skills.", position: "top-left"},
+    {text: "Not seeking alignment or agreement.", position: "top-right"},
+    {text: "Not concerned with individual benefit.", position: "bottom-left"},
+    {text: "Non-individualistic thinking.", position: "bottom-right"},
+    {text: "Detaching intelligence from persons.", position: "center"},
+    {text: "Universal Bias / False Universality", position: "top-left"},
+    {text: "Embodied Design / Corporeality", position: "top-right"},
+    {text: "Invisible Norms", position: "bottom-left"},
+    {text: "Design as a Political Agent", position: "bottom-right"},
+    {text: "Decolonizing Design", position: "center"},
+    {text: "Situated Knowledge", position: "top-left"},
+    {text: "Materializing Inequality", position: "top-right"},
+    {text: "Infrastructural Power", position: "bottom-left"},
+    {text: "Counter-Narratives", position: "bottom-right"},
+    {text: "Design Justice", position: "center"}
+];
+
+let currentIndexDay2 = 0;
+const container2 = document.getElementById('phraseContainer2');
+
+function showNextPhraseDay2() {
+    container2.innerHTML = '';
+    
+    const phraseData = phrasesDay2[currentIndexDay2];
+    const phraseElement = document.createElement('div');
+    phraseElement.className = `phrase ${phraseData.position}`;
+    phraseElement.textContent = phraseData.text;
+    
+    container2.appendChild(phraseElement);
+    
+    setTimeout(() => {
+        phraseElement.classList.add('active');
+    }, 100);
+    
+    currentIndexDay2 = (currentIndexDay2 + 1) % phrasesDay2.length;
+    setTimeout(showNextPhraseDay2, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (container2) {
+        showNextPhraseDay2();
+    }
+});
+</script>
