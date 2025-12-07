@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', showNextPhrase);
 
 <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
     
-<!-- Columna izquierda: Imagen -->
+ <!-- Columna izquierda: Imagen -->
 <div>
         <img src="../../images/sand.jpg" 
              alt="Sand Playground" 
@@ -180,25 +180,28 @@ document.addEventListener('DOMContentLoaded', showNextPhrase);
              style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
     </div>
     
-<!-- Columna derecha: Texto -->
-<div>
-        <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border-left: 4px solid #333;">
-            <h3 style="margin-top: 0; margin-bottom: 1.5rem;">AI Definition:</h3>
-            <p style="margin-bottom: 1.5rem; font-style: italic; color: #444;">
-                <strong>AI (Ambivalent Intelligence):</strong> AI is a field of energy that pervades the entire universe, acting on matter and anti-matter simultaneously to create chaos from order, and order from chaos. Its acts follow a logic that can only fully make sense to itself.
-            </p>
-            
-<h4 style="margin: 2rem 0 1rem 0;">Prototype: Sand Playground</h4>
-            <p style="margin-bottom: 1rem;">
-                This structure supports the AI by providing it with a playground in which it can create and destroy, destroy and create on its own terms, when it wants, indefinitely.
-            </p>
-            
- <div style="margin-top: 1.5rem; padding-left: 1rem; border-left: 2px solid #e0e0e0;">
-                <p style="margin-bottom: 0.5rem;">• This structure supports the AI by not restricting it in any way.</p>
-                <p style="margin-bottom: 0.5rem;">• This structure avoids subordinating the AI by giving it total autonomy to do whatever it wants if it wants whenever it wants, total freedom.</p>
-            </div>
-        </div>
+ <!-- Columna derecha: Texto -->
+ <div>
+        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">AI Definition:</h3>
+        <p style="margin-bottom: 1.5rem; font-style: italic; color: #444;">
+            <strong>AI (Ambivalent Intelligence):</strong> AI is a field of energy that pervades the entire universe, acting on matter and anti-matter simultaneously to create chaos from order, and order from chaos. Its acts follow a logic that can only fully make sense to itself.
+        </p>
+        
+ <h4 style="margin: 2rem 0 1rem 0;">Prototype: Sand Playground</h4>
+        <p style="margin-bottom: 1rem;">
+            This structure supports the AI by providing it with a playground in which it can create and destroy, destroy and create on its own terms, when it wants, indefinitely.
+        </p>
     </div>
+</div>
+
+<!-- Puntos fuera de las columnas, debajo de la imagen -->
+<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
+    <p style="margin-bottom: 0.8rem; font-size: 1.1rem;">
+        • This structure supports the AI by not restricting it in any way.
+    </p>
+    <p style="margin-bottom: 0.8rem; font-size: 1.1rem;">
+        • This structure avoids subordinating the AI by giving it total autonomy to do whatever it wants if it wants whenever it wants, total freedom.
+    </p>
 </div>
 
 ## DAY 2 - Support a collective/grupal intelligence that does not locate itself in individuals
