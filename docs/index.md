@@ -19,7 +19,7 @@
 <div class="content-wrapper">
     <div class="carousel-container">
         <div class="cards-carousel" id="cardsCarousel">
-            <a href="Prosthesis/Prosthesis" class="card">
+            <a href="Otherness/Prosthesis" class="card">
                 <img src="images/prosthesis.jpeg" alt="Prosthesis">
                 <h3>Prosthesis</h3>
                 <p>A research on extensions that question what it means to be human in a hybrid world.</p>
