@@ -241,15 +241,79 @@
                 
                   <h1>Conceptual</h1>
                 
-                <div class="menu-container">
-    <div class="custom-header-menu">
-        <a href="../..">MDEF</a>
-        <a href="../../projects/Portfolio">Projects</a>
-        <a href="../../about/me">About me</a>
-    </div>
-</div>
+                <style>
+    /* ==== REGLAS PARA INTEGRARSE CON TU CSS EXISTENTE ==== */
 
-<style>
+    /* 1. OCULTAR CUALQUIER ELEMENTO "CONCEPTUAL" que ya exista */
+    h1:first-of-type:not(.main-title):not(.central-node-title):not(.panel-title),
+    h1.conceptual,
+    h1[class*="conceptual"],
+    h1:contains("CONCEPTUAL"),
+    h1:contains("Conceptual") {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        opacity: 0 !important;
+        border: none !important;
+        overflow: hidden !important;
+    }
+
+    /* 2. Asegurarse que nuestro mapa no sea afectado por tu CSS */
+    #galaxy-map-container {
+        all: initial !important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    #galaxy-map-container * {
+        all: unset !important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    /* 3. Resetear estilos para nuestro contenedor específico */
+    .galaxy-map-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        position: relative !important;
+        background: #0a0e17 !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        overflow: hidden !important;
+        z-index: 1 !important;
+        display: block !important;
+    }
+
+    /* 4. Prevenir que tu CSS afecte nuestros elementos */
+    .galaxy-map-wrapper h1,
+    .galaxy-map-wrapper h2,
+    .galaxy-map-wrapper h3,
+    .galaxy-map-wrapper h4,
+    .galaxy-map-wrapper p,
+    .galaxy-map-wrapper div,
+    .galaxy-map-wrapper span {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: 'Montserrat', sans-serif !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        max-width: none !important;
+        color: inherit !important;
+    }
+
+    /* 5. Ocultar cualquier título grande que no sea nuestro */
+    .md-content h1:first-child:not(.central-node-title) {
+        display: none !important;
+    }
+
+    /* ==== ESTILOS DEL MAPA GALAXIA (SIN CAMBIAR) ==== */
+
     * {
         margin: 0;
         padding: 0;
@@ -280,6 +344,24 @@
         display: flex;
         flex-direction: column;
         position: relative;
+    }
+
+    /* MENÚ - ARRIBA */
+    .menu-container {
+        width: 100%;
+        background: rgba(10, 14, 23, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        position: relative;
+        padding: 15px 40px;
+    }
+
+    .custom-header-menu {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .custom-header-menu a {
@@ -314,15 +396,15 @@
     }
 
     /* Contenedor principal - DEBAJO DEL MENÚ */
-    .main-container {
+    .galaxy-map-wrapper {
         flex: 1;
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: calc(100vh - 70px); /* Restar altura del menú */
+        height: calc(100vh - 70px);
     }
 
-    /* Fondo cósmico con estrellas - SOLO EN EL ÁREA DEL MAPA */
+    /* Fondo cósmico con estrellas */
     #stars {
         position: absolute;
         top: 0;
@@ -346,7 +428,7 @@
         50% { opacity: 0.8; }
     }
 
-    /* Viewport para navegación - DENTRO DEL CONTENEDOR PRINCIPAL */
+    /* Viewport para navegación */
     .viewport {
         position: absolute;
         top: 0;
@@ -385,7 +467,7 @@
         pointer-events: none;
     }
 
-    /* Nodo central - ENORMEMENTE GRANDE */
+    /* Nodo central */
     .central-node {
         position: absolute;
         top: 50%;
@@ -436,7 +518,7 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Nodos - ENORMES */
+    /* Nodos */
     .node {
         position: absolute;
         width: 220px;
@@ -507,7 +589,7 @@
     /* Panel de contenido */
     .content-panel {
         position: fixed;
-        top: 100px; /* Debajo del menú */
+        top: 100px;
         right: 20px;
         width: 400px;
         background: rgba(10, 14, 23, 0.95);
@@ -600,116 +682,20 @@
         max-width: 250px;
         backdrop-filter: blur(5px);
     }
-
-    /* Responsive */
-    @media (max-width: 1200px) {
-        #galaxy {
-            width: 2500px;
-            height: 2500px;
-        }
-
-        .central-node {
-            width: 350px;
-            height: 350px;
-        }
-
-        .node {
-            width: 200px;
-            height: 200px;
-        }
-
-        .content-panel {
-            width: 350px;
-        }
-
-        .menu-container {
-            padding: 15px 20px;
-        }
-    }
-
-    @media (max-width: 900px) {
-        #galaxy {
-            width: 2000px;
-            height: 2000px;
-        }
-
-        .central-node {
-            width: 300px;
-            height: 300px;
-        }
-
-        .node {
-            width: 180px;
-            height: 180px;
-        }
-
-        .content-panel {
-            width: calc(100% - 40px);
-            max-width: 400px;
-            top: 90px;
-        }
-
-        .instructions {
-            display: none;
-        }
-
-        .custom-header-menu {
-            gap: 20px;
-        }
-
-        .custom-header-menu a {
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .main-container {
-            height: calc(100vh - 60px);
-        }
-
-        .menu-container {
-            padding: 12px 15px;
-        }
-
-        .custom-header-menu {
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .custom-header-menu a {
-            font-size: 0.85rem;
-        }
-
-        .content-panel {
-            left: 10px;
-            right: 10px;
-            max-width: none;
-            top: 80px;
-        }
-
-        .central-node {
-            width: 250px;
-            height: 250px;
-        }
-
-        .node {
-            width: 150px;
-            height: 150px;
-        }
-
-        .central-node-title {
-            font-size: 2rem;
-        }
-
-        .node-title {
-            font-size: 1rem;
-            padding: 10px;
-        }
-    }
 </style>
 
-<!-- CONTENEDOR PRINCIPAL (CON EL MAPA) -->
-<div class="main-container">
+<!-- ===== CÓDIGO HTML ===== -->
+<!-- MENÚ (ARRIBA) -->
+<div class="menu-container">
+    <div class="custom-header-menu">
+        <a href="../..">MDEF</a>
+        <a href="../../projects/Portfolio">Projects</a>
+        <a href="../../about/me">About me</a>
+    </div>
+</div>
+
+<!-- CONTENEDOR PRINCIPAL DEL MAPA (con clases específicas para evitar conflictos) -->
+<div class="galaxy-map-wrapper" id="galaxy-map-container">
     <div id="stars"></div>
 
     <!-- Viewport para navegación -->
@@ -745,7 +731,7 @@
 </div>
 
 <script>
-    // Datos para todos los nodos
+    // JavaScript con limpieza adicional para eliminar elementos no deseados
     const nodesData = {
         central: {
             id: "central",
@@ -815,7 +801,6 @@
         ]
     };
 
-    // Variables globales
     let canvas, ctx;
     let scale = 0.4;
     let offsetX = 0, offsetY = 0;
@@ -824,7 +809,52 @@
     let galaxy = document.getElementById('galaxy');
     let viewport = document.getElementById('viewport');
 
-    // Inicializar estrellas
+    // Función para limpiar elementos no deseados (incluyendo "CONCEPTUAL")
+    function cleanupExistingPage() {
+        console.log("Limpiando elementos existentes de la página...");
+
+        // 1. Buscar y eliminar títulos "CONCEPTUAL"
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(el => {
+            if (el.textContent && (
+                el.textContent.includes('CONCEPTUAL') || 
+                el.textContent.includes('Conceptual') ||
+                el.textContent.trim() === 'Conceptual'
+            )) {
+                console.log("Encontrado y eliminando:", el);
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+                el.style.height = '0';
+                el.style.margin = '0';
+                el.style.padding = '0';
+                el.style.opacity = '0';
+                el.style.border = 'none';
+                el.style.overflow = 'hidden';
+            }
+        });
+
+        // 2. Eliminar cualquier h1 que no sea nuestro
+        const allH1s = document.querySelectorAll('h1');
+        allH1s.forEach(h1 => {
+            if (!h1.classList.contains('central-node-title') && 
+                !h1.classList.contains('panel-title') &&
+                !h1.parentElement.classList.contains('central-node-content')) {
+                h1.style.display = 'none';
+                h1.style.height = '0';
+                h1.style.margin = '0';
+                h1.style.padding = '0';
+            }
+        });
+
+        // 3. Limpiar contenedores principales
+        const mainContainers = document.querySelectorAll('.md-content, .md-main__inner, .md-article');
+        mainContainers.forEach(container => {
+            container.style.padding = '0';
+            container.style.margin = '0';
+            container.style.maxWidth = 'none';
+        });
+    }
+
     function initStars() {
         const starsContainer = document.getElementById('stars');
         starsContainer.innerHTML = '';
@@ -844,7 +874,6 @@
         }
     }
 
-    // Crear nodos orbitales
     function createOrbitalNodes() {
         const orbits = [
             {radius: 600, nodes: nodesData.intuitions, className: 'intuition-node'},
@@ -898,7 +927,6 @@
         });
     }
 
-    // Mostrar contenido del nodo
     function showNodeContent(nodeData) {
         const panel = document.getElementById('contentPanel');
         const panelTitle = document.getElementById('panelTitle');
@@ -927,12 +955,10 @@
         panel.classList.add('active');
     }
 
-    // Cerrar panel
     document.getElementById('closePanel').addEventListener('click', () => {
         document.getElementById('contentPanel').classList.remove('active');
     });
 
-    // Inicializar canvas para conexiones
     function initCanvas() {
         canvas = document.getElementById('galaxy-canvas');
         ctx = canvas.getContext('2d');
@@ -947,7 +973,6 @@
         resizeCanvas();
     }
 
-    // Dibujar conexiones
     function drawConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -983,13 +1008,11 @@
         ctx.stroke();
     }
 
-    // Actualizar transformación de la galaxia
     function updateTransform() {
         galaxy.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})`;
         drawConnections();
     }
 
-    // Manejar zoom
     function handleWheel(e) {
         e.preventDefault();
 
@@ -1012,7 +1035,6 @@
         updateTransform();
     }
 
-    // Manejar arrastre
     function handleMouseDown(e) {
         if (e.target === viewport || e.target.classList.contains('orbit')) {
             isDragging = true;
@@ -1038,7 +1060,6 @@
         viewport.classList.remove('grabbing');
     }
 
-    // Resetear vista al centro
     function resetView() {
         scale = 0.4;
         offsetX = 0;
@@ -1048,15 +1069,21 @@
 
     // Inicializar la página
     document.addEventListener('DOMContentLoaded', () => {
+        // 1. Primero limpiar elementos existentes
+        cleanupExistingPage();
+
+        // 2. Inicializar nuestro mapa
         initStars();
         createOrbitalNodes();
         initCanvas();
         updateTransform();
 
+        // 3. Mostrar contenido inicial
         setTimeout(() => {
             showNodeContent(nodesData.central);
         }, 1000);
 
+        // 4. Configurar eventos
         viewport.addEventListener('wheel', handleWheel);
         viewport.addEventListener('mousedown', handleMouseDown);
         document.addEventListener('mousemove', handleMouseMove);
@@ -1074,6 +1101,11 @@
         });
 
         document.getElementById('closePanel').addEventListener('mousedown', (e) => e.stopPropagation());
+
+        // 5. Limpieza adicional después de que todo cargue
+        setTimeout(() => {
+            cleanupExistingPage();
+        }, 2000);
     });
 </script>
                 
@@ -1084,7 +1116,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 20:49:35 UTC">December 8, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 20:57:18 UTC">December 8, 2025</span>
     
   </small>
 </div>
