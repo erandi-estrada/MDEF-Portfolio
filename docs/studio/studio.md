@@ -961,7 +961,7 @@ function showProtocol3(n) {
 </div>
 
 
-<h2 style="font-size: 2.5rem; font-weight: bold; margin: 2rem 0 1rem 0;">PROTOCOL — Collective Action</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 2rem 0 1rem 0;">PROTOCOL</h2>
 
 <div class="protocol-container-4" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
