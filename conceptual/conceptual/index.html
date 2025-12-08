@@ -251,98 +251,90 @@
     }
 
     :root {
-        --core-color: #0066cc;
-        --intuitions-color: #8a2be2;
-        --questions-color: #333333;
-        --thematic-color: #ff8c00;
-        --actions-color: #ff3366;
-        --bee-color: #00cc99;
-        --fieldwork-color: #ff6b35;
+        --core-color: #00c6ff;
+        --intuitions-color: #b967ff;
+        --questions-color: #ffffff;
+        --thematic-color: #ffb347;
+        --actions-color: #ff5e7d;
+        --bee-color: #00d8a7;
+        --fieldwork-color: #ff8a65;
+        --bg-dark: #0a0e17;
+        --text-light: #f0f4ff;
     }
 
     body {
         font-family: 'Montserrat', sans-serif;
-        background: transparent !important;
-        color: #333333;
+        background-color: var(--bg-dark);
+        color: var(--text-light);
         margin: 0;
         padding: 0;
         height: 100vh;
         overflow: hidden;
-        position: relative;
     }
 
-    /* ===== OCULTAR HEADER "CONCEPTUAL" Y OTROS TEXTOS ===== */
-    h1, h2, h3, h4, h5, h6 {
-        display: none !important;
-    }
-
-    /* Ocultar cualquier elemento que contenga "Conceptual" (con C mayúscula o minúscula) */
-    *:contains("Conceptual"),
-    *:contains("conceptual") {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        opacity: 0 !important;
-    }
-
-    /* ===== MENÚ SIMPLE - SOLO ESTE DEBE VERSE ===== */
+    /* ===== MENÚ SIMPLE ===== */
     .menu-container {
         width: 100%;
-        background: transparent;
-        padding: 20px 40px;
+        background: rgba(10, 14, 23, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 40px;
         position: relative;
         z-index: 1000;
     }
 
     .custom-header-menu {
         display: flex;
-        gap: 40px;
+        gap: 30px;
         max-width: 1200px;
         margin: 0 auto;
     }
 
     .custom-header-menu a {
-        color: #333333;
+        color: var(--text-light);
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1rem;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         padding: 8px 0;
         position: relative;
         transition: all 0.3s ease;
-        opacity: 0.8;
     }
 
     .custom-header-menu a:hover {
-        opacity: 1;
         color: var(--core-color);
-    }
-
-    .custom-header-menu a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--core-color);
-        transition: width 0.3s ease;
-    }
-
-    .custom-header-menu a:hover::after {
-        width: 100%;
     }
 
     /* ===== CONTENEDOR DEL MAPA ===== */
     .map-container {
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 73px); /* Altura total menos menú */
         position: relative;
         overflow: hidden;
-        background: transparent;
+        background: var(--bg-dark);
+    }
+
+    /* ===== FONDO DE ESTRELLAS ===== */
+    #stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .star {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: twinkle 5s infinite;
+    }
+
+    @keyframes twinkle {
+        0%, 100% { opacity: 0.1; }
+        50% { opacity: 0.8; }
     }
 
     /* ===== GALAXIA Y CANVAS ===== */
@@ -368,7 +360,7 @@
         z-index: 3;
     }
 
-    /* ===== NODO CENTRAL CON EFECTO GLOW/BLUR ===== */
+    /* ===== NODO CENTRAL ===== */
     .central-node {
         position: absolute;
         top: 50%;
@@ -377,58 +369,25 @@
         width: 400px;
         height: 400px;
         border-radius: 50%;
-        background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 102, 204, 0.4) 70%, transparent 100%);
-        box-shadow: 
-            0 0 60px 30px rgba(0, 102, 204, 0.3),
-            0 0 120px 60px rgba(0, 102, 204, 0.15),
-            0 0 180px 90px rgba(0, 102, 204, 0.08),
-            inset 0 0 40px rgba(255, 255, 255, 0.2);
+        background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.4) 70%, transparent 100%);
+        box-shadow: 0 0 100px rgba(0, 198, 255, 0.8);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         z-index: 10;
-        transition: all 0.5s ease;
-        filter: blur(0.5px);
-        border: 1px solid rgba(0, 102, 204, 0.2);
+        transition: all 0.3s ease;
     }
 
     .central-node:hover {
-        transform: translate(-50%, -50%) scale(1.08);
-        box-shadow: 
-            0 0 80px 40px rgba(0, 102, 204, 0.4),
-            0 0 160px 80px rgba(0, 102, 204, 0.2),
-            0 0 240px 120px rgba(0, 102, 204, 0.1),
-            inset 0 0 60px rgba(255, 255, 255, 0.3);
-        filter: blur(0.3px);
-    }
-
-    .central-node::before {
-        content: '';
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        right: -20px;
-        bottom: -20px;
-        background: radial-gradient(circle, var(--core-color) 0%, transparent 70%);
-        border-radius: 50%;
-        z-index: -1;
-        opacity: 0.2;
-        filter: blur(25px);
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-        0%, 100% { opacity: 0.2; transform: scale(1); }
-        50% { opacity: 0.3; transform: scale(1.05); }
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 150px rgba(0, 198, 255, 1);
     }
 
     .central-node-content {
         text-align: center;
         padding: 30px;
         width: 100%;
-        position: relative;
-        z-index: 2;
     }
 
     .central-node-title {
@@ -437,14 +396,9 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-bottom: 15px;
-        color: #ffffff;
-        text-shadow: 
-            0 2px 10px rgba(0, 0, 0, 0.3),
-            0 0 15px rgba(0, 102, 204, 0.4);
+        color: #000000;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
         line-height: 1.2;
-        /* SIN BLUR EN EL TEXTO */
-        filter: none !important;
-        -webkit-filter: none !important;
     }
 
     /* ===== ÓRBITAS Y NODOS ===== */
@@ -454,9 +408,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        /* SIN BLUR EN LAS ÓRBITAS */
-        filter: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .node {
@@ -468,36 +420,9 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         z-index: 5;
         overflow: hidden;
-        /* BLUR SOLO EN EL FONDO DEL CÍRCULO */
-        filter: blur(1.5px);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .node::before {
-        content: '';
-        position: absolute;
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-        border-radius: 50%;
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        filter: blur(15px);
-    }
-
-    .node:hover {
-        transform: scale(1.15) translate(-50%, -50%);
-        z-index: 20;
-        filter: blur(0.8px);
-    }
-
-    .node:hover::before {
-        opacity: 0.4;
     }
 
     .node-title {
@@ -507,87 +432,48 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 15px;
-        color: #ffffff;
-        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        color: #000000;
+        text-shadow: 0 2px 3px rgba(255, 255, 255, 0.7);
         line-height: 1.3;
         width: 100%;
         word-wrap: break-word;
-        position: relative;
-        z-index: 2;
-        /* TEXTO SIN BLUR - CLARO Y NÍTIDO */
-        filter: none !important;
-        -webkit-filter: none !important;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Colores de nodos con efectos GLOW/BLUR - SOLO EN EL FONDO */
+    /* Colores de nodos */
     .intuition-node {
-        background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(138, 43, 226, 0.8) 70%, transparent 100%);
-        box-shadow: 
-            0 0 40px 20px rgba(138, 43, 226, 0.3),
-            0 0 80px 40px rgba(138, 43, 226, 0.15);
-    }
-
-    .intuition-node::before {
-        background: radial-gradient(circle, var(--intuitions-color) 0%, transparent 70%);
+        background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(185, 103, 255, 0.9);
     }
 
     .question-node {
-        background: radial-gradient(circle, var(--questions-color) 0%, rgba(51, 51, 51, 0.9) 70%, transparent 100%);
-        box-shadow: 
-            0 0 40px 20px rgba(51, 51, 51, 0.3),
-            0 0 80px 40px rgba(51, 51, 51, 0.15);
-        border: 1px solid rgba(0, 0, 0, 0.2);
-    }
-
-    .question-node::before {
-        background: radial-gradient(circle, var(--questions-color) 0%, transparent 70%);
+        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
     }
 
     .thematic-node {
-        background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 140, 0, 0.8) 70%, transparent 100%);
-        box-shadow: 
-            0 0 40px 20px rgba(255, 140, 0, 0.3),
-            0 0 80px 40px rgba(255, 140, 0, 0.15);
-    }
-
-    .thematic-node::before {
-        background: radial-gradient(circle, var(--thematic-color) 0%, transparent 70%);
+        background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 179, 71, 0.9);
     }
 
     .action-node {
-        background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 51, 102, 0.8) 70%, transparent 100%);
-        box-shadow: 
-            0 0 40px 20px rgba(255, 51, 102, 0.3),
-            0 0 80px 40px rgba(255, 51, 102, 0.15);
-    }
-
-    .action-node::before {
-        background: radial-gradient(circle, var(--actions-color) 0%, transparent 70%);
+        background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 94, 125, 0.9);
     }
 
     .bee-node {
-        background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 204, 153, 0.8) 70%, transparent 100%);
-        box-shadow: 
-            0 0 40px 20px rgba(0, 204, 153, 0.3),
-            0 0 80px 40px rgba(0, 204, 153, 0.15);
-    }
-
-    .bee-node::before {
-        background: radial-gradient(circle, var(--bee-color) 0%, transparent 70%);
+        background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(0, 216, 167, 0.9);
     }
 
     .fieldwork-node {
-        background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 107, 53, 0.8) 70%, transparent 100%);
-        box-shadow: 
-            0 0 40px 20px rgba(255, 107, 53, 0.3),
-            0 0 80px 40px rgba(255, 107, 53, 0.15);
+        background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 138, 101, 0.9);
     }
 
-    .fieldwork-node::before {
-        background: radial-gradient(circle, var(--fieldwork-color) 0%, transparent 70%);
+    .node:hover {
+        transform: scale(1.15);
+        z-index: 20;
+        box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
     }
 
     /* ===== PANEL DE INFORMACIÓN ===== */
@@ -596,12 +482,12 @@
         top: 100px;
         right: 20px;
         width: 400px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
+        background: rgba(10, 14, 23, 0.95);
+        backdrop-filter: blur(15px);
         border-radius: 15px;
         padding: 25px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 1000;
         display: none;
     }
@@ -622,7 +508,7 @@
         margin-bottom: 15px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: #333333;
+        color: #ffffff;
         line-height: 1.3;
     }
 
@@ -633,14 +519,14 @@
         border-radius: 20px;
         margin-bottom: 20px;
         font-weight: 700;
-        color: #ffffff;
+        color: #000000;
         text-transform: uppercase;
     }
 
     .panel-text {
         font-size: 1.05rem;
         line-height: 1.7;
-        color: #666666;
+        color: #a0a8c9;
         margin-bottom: 25px;
     }
 
@@ -648,9 +534,9 @@
         position: absolute;
         top: 15px;
         right: 15px;
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(255, 255, 255, 0.1);
         border: none;
-        color: #666666;
+        color: #a0a8c9;
         font-size: 1.5rem;
         cursor: pointer;
         width: 40px;
@@ -659,42 +545,33 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(5px);
     }
 
     .panel-close:hover {
-        background: rgba(0, 0, 0, 0.1);
-        color: #333333;
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
         transform: rotate(90deg);
     }
 
-    /* ===== INSTRUCCIONES (más discreto) ===== */
+    /* ===== INSTRUCCIONES ===== */
     .instructions {
         position: fixed;
         bottom: 20px;
         right: 20px;
         text-align: right;
-        font-size: 0.8rem;
-        color: rgba(0, 0, 0, 0.5);
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
         z-index: 1000;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(10, 14, 23, 0.3);
         padding: 10px 15px;
         border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        max-width: 220px;
-        backdrop-filter: blur(15px);
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-    }
-
-    .instructions:hover {
-        opacity: 1;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        max-width: 250px;
+        backdrop-filter: blur(5px);
     }
 </style>
 
 <!-- ===== HTML ===== -->
-<!-- Solo el menú principal - Sin header con "CONCEPTUAL" -->
 <div class="menu-container">
     <div class="custom-header-menu">
         <a href="../..">MDEF</a>
@@ -703,8 +580,9 @@
     </div>
 </div>
 
-<!-- Contenido principal del mapa -->
 <div class="map-container">
+    <div id="stars"></div>
+
     <div id="galaxy">
         <canvas id="galaxy-canvas"></canvas>
 
@@ -725,7 +603,7 @@
     <p class="panel-text" id="panelText">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
 </div>
 
-<!-- Instrucciones (más discreto) -->
+<!-- Instrucciones -->
 <div class="instructions">
     Haz clic en cualquier nodo para ver detalles<br>
     Usa la rueda del ratón para hacer zoom<br>
@@ -812,6 +690,26 @@
     let galaxy = document.getElementById('galaxy');
     let mapContainer = document.querySelector('.map-container');
 
+    // Inicializar estrellas
+    function initStars() {
+        const starsContainer = document.getElementById('stars');
+        starsContainer.innerHTML = '';
+
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+
+            const size = Math.random() * 3 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+
+            starsContainer.appendChild(star);
+        }
+    }
+
     // Crear nodos
     function createOrbitalNodes() {
         const orbits = [
@@ -879,18 +777,18 @@
 
         let color = '';
         switch(nodeData.category) {
-            case 'Core Concept': color = '#0066cc'; break;
-            case 'Intuitions': color = '#8a2be2'; break;
-            case 'Motor Questions': color = '#333333'; break;
-            case 'Thematic Fields': color = '#ff8c00'; break;
-            case 'Actions': color = '#ff3366'; break;
-            case 'Bee Project': color = '#00cc99'; break;
-            case 'Urban Fieldwork': color = '#ff6b35'; break;
-            default: color = '#0066cc';
+            case 'Core Concept': color = '#00c6ff'; break;
+            case 'Intuitions': color = '#b967ff'; break;
+            case 'Motor Questions': color = '#ffffff'; break;
+            case 'Thematic Fields': color = '#ffb347'; break;
+            case 'Actions': color = '#ff5e7d'; break;
+            case 'Bee Project': color = '#00d8a7'; break;
+            case 'Urban Fieldwork': color = '#ff8a65'; break;
+            default: color = '#00c6ff';
         }
 
         panelCategory.style.backgroundColor = color;
-        panelCategory.style.color = '#ffffff';
+        panelCategory.style.color = '#000000';
 
         panel.classList.add('active');
     }
@@ -930,16 +828,15 @@
             const nodeX = (rect.left + rect.width/2 - galaxyRect.left) / scale;
             const nodeY = (rect.top + rect.height/2 - galaxyRect.top) / scale;
 
-            let color = 'rgba(0, 0, 0, 0.08)';
-            if (node.classList.contains('thematic-node')) color = 'rgba(255, 140, 0, 0.15)';
-            else if (node.classList.contains('intuition-node')) color = 'rgba(138, 43, 226, 0.12)';
-            else if (node.classList.contains('action-node')) color = 'rgba(255, 51, 102, 0.12)';
+            let color = 'rgba(255, 255, 255, 0.2)';
+            if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.3)';
+            else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.2)';
 
             ctx.beginPath();
             ctx.moveTo(centerX, centerY);
             ctx.lineTo(nodeX, nodeY);
             ctx.strokeStyle = color;
-            ctx.lineWidth = 1.5;
+            ctx.lineWidth = 2;
             ctx.stroke();
         });
     }
@@ -994,31 +891,10 @@
 
     // Inicializar
     document.addEventListener('DOMContentLoaded', () => {
-        // Crear nodos
+        initStars();
         createOrbitalNodes();
-
-        // Inicializar canvas
         initCanvas();
         updateTransform();
-
-        // Limpiar cualquier texto extra que pueda aparecer
-        setTimeout(() => {
-            // Ocultar headers que contengan "Conceptual"
-            const allElements = document.querySelectorAll('*');
-            allElements.forEach(el => {
-                if (el.textContent && (
-                    el.textContent.includes('Conceptual') || 
-                    el.textContent.includes('CONCEPTUAL') ||
-                    el.textContent.includes('conceptual')
-                )) {
-                    el.style.display = 'none';
-                    el.style.visibility = 'hidden';
-                    el.style.height = '0';
-                    el.style.margin = '0';
-                    el.style.padding = '0';
-                }
-            });
-        }, 100);
 
         setTimeout(() => {
             showNodeContent(nodesData.central);
@@ -1047,7 +923,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 22:01:43 UTC">December 8, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 22:04:10 UTC">December 8, 2025</span>
     
   </small>
 </div>
