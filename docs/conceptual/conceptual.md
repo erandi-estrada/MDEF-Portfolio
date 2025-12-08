@@ -25,15 +25,17 @@
         color: var(--text-light);
         overflow: hidden;
         height: 100vh;
+        margin: 0;
         position: relative;
     }
 
     /* Fondo cósmico con estrellas */
     #stars {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         z-index: -1;
+        pointer-events: none;
     }
 
     .star {
@@ -49,24 +51,32 @@
         50% { opacity: 0.8; }
     }
 
-    /* Contenedor principal - AHORA ES DESPLAZABLE */
-    .container {
-        width: 200%; /* Más ancho para permitir scroll */
-        height: 200%; /* Más alto para permitir scroll */
-        position: relative;
-        transform-origin: 0 0;
-        transform: scale(1);
-        transition: transform 0.3s ease;
-    }
-
-    /* Galaxia ahora ocupa toda la pantalla */
-    #galaxy {
+    /* Contenedor principal - AHORA ES UN VIEWPORT */
+    .viewport {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        overflow: visible;
+        overflow: hidden;
+        cursor: grab;
+    }
+
+    .viewport.grabbing {
+        cursor: grabbing;
+    }
+
+    /* Galaxia - AHORA ES MÁS GRANDE Y CENTRADA */
+    #galaxy {
+        position: absolute;
+        width: 3000px;  /* MUCHO más ancho */
+        height: 3000px; /* MUCHO más alto */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.4); /* Centrado y con zoom inicial */
+        transform-origin: center center;
+        transition: transform 0.1s ease;
+        will-change: transform;
     }
 
     /* Canvas para la galaxia radial */
@@ -79,42 +89,45 @@
         pointer-events: none;
     }
 
-    /* Nodo central - MÁS GRANDE */
+    /* Nodo central - ENORMEMENTE GRANDE */
     .central-node {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 200px; /* Aumentado de 120px */
-        height: 200px; /* Aumentado de 120px */
+        width: 400px; /* ENORME */
+        height: 400px; /* ENORME */
         border-radius: 50%;
-        background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 60px rgba(0, 198, 255, 0.7);
+        background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.4) 70%, transparent 100%);
+        box-shadow: 0 0 100px rgba(0, 198, 255, 0.8);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        z-index: 2;
+        z-index: 10;
         transition: all 0.3s ease;
     }
 
     .central-node:hover {
         transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 80px rgba(0, 198, 255, 0.9);
+        box-shadow: 0 0 150px rgba(0, 198, 255, 1);
     }
 
     .central-node-content {
         text-align: center;
-        padding: 20px;
+        padding: 30px;
+        width: 100%;
     }
 
     .central-node-title {
-        font-weight: 700;
-        font-size: 1.6rem; /* Aumentado */
+        font-weight: 800;
+        font-size: 2.5rem; /* MUY grande */
         text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        color: #000000; /* TEXTO NEGRO */
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        color: #000000;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+        line-height: 1.2;
     }
 
     /* Contenedor de nodos orbitales */
@@ -124,84 +137,90 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Nodos - MUCHO MÁS GRANDES */
+    /* Nodos - ENORMES */
     .node {
         position: absolute;
-        width: 120px; /* Aumentado de 60px */
-        height: 120px; /* Aumentado de 60px */
+        width: 220px; /* ENORME */
+        height: 220px; /* ENORME */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s ease;
-        z-index: 1;
+        z-index: 5;
+        overflow: hidden;
     }
 
     .node-title {
-        font-weight: 600;
-        font-size: 0.9rem; /* Aumentado */
+        font-weight: 700;
+        font-size: 1.2rem; /* Más grande */
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        padding: 0 10px;
-        color: #000000; /* TEXTO NEGRO - Cambiado de blanco */
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* Sombra para mejor legibilidad */
+        letter-spacing: 1px;
+        padding: 15px;
+        color: #000000;
+        text-shadow: 0 2px 3px rgba(255, 255, 255, 0.7);
+        line-height: 1.3;
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     /* Colores de nodos según categoría - MÁS BRILLANTES */
     .intuition-node {
-        background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.6) 70%, transparent 100%);
-        box-shadow: 0 0 30px rgba(185, 103, 255, 0.7);
+        background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(185, 103, 255, 0.9);
     }
 
     .question-node {
-        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.6) 70%, transparent 100%);
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
     }
 
     .thematic-node {
-        background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.6) 70%, transparent 100%);
-        box-shadow: 0 0 30px rgba(255, 179, 71, 0.7);
+        background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 179, 71, 0.9);
     }
 
     .action-node {
-        background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.6) 70%, transparent 100%);
-        box-shadow: 0 0 30px rgba(255, 94, 125, 0.7);
+        background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 94, 125, 0.9);
     }
 
     .bee-node {
-        background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.6) 70%, transparent 100%);
-        box-shadow: 0 0 30px rgba(0, 216, 167, 0.7);
+        background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(0, 216, 167, 0.9);
     }
 
     .fieldwork-node {
-        background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.6) 70%, transparent 100%);
-        box-shadow: 0 0 30px rgba(255, 138, 101, 0.7);
+        background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.8) 70%, transparent 100%);
+        box-shadow: 0 0 50px rgba(255, 138, 101, 0.9);
     }
 
     /* Efectos hover en nodos */
     .node:hover {
-        transform: scale(1.2); /* Efecto hover más pronunciado */
-        z-index: 3;
+        transform: scale(1.15);
+        z-index: 20;
+        box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
     }
 
     /* Panel de contenido */
     .content-panel {
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 20px;
-        width: 350px;
-        background: rgba(10, 14, 23, 0.9);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
+        width: 400px;
+        background: rgba(10, 14, 23, 0.95);
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
         padding: 25px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        z-index: 100; /* Mayor z-index para que esté encima de todo */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
         display: none;
         transition: all 0.4s ease;
     }
@@ -217,45 +236,56 @@
     }
 
     .panel-title {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
         color: #ffffff;
+        line-height: 1.3;
     }
 
     .panel-category {
         display: inline-block;
-        font-size: 0.8rem;
-        padding: 4px 12px;
+        font-size: 0.9rem;
+        padding: 6px 15px;
         border-radius: 20px;
-        margin-bottom: 15px;
-        font-weight: 600;
-        color: #000000; /* Texto negro en etiquetas */
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .panel-text {
-        font-size: 0.95rem;
-        line-height: 1.6;
+        font-size: 1.05rem;
+        line-height: 1.7;
         color: var(--text-muted);
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .panel-close {
         position: absolute;
         top: 15px;
         right: 15px;
-        background: none;
+        background: rgba(255, 255, 255, 0.1);
         border: none;
         color: var(--text-muted);
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         cursor: pointer;
-        transition: color 0.3s;
+        transition: all 0.3s;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .panel-close:hover {
+        background: rgba(255, 255, 255, 0.2);
         color: var(--text-light);
+        transform: rotate(90deg);
     }
 
     /* Leyenda */
@@ -263,42 +293,44 @@
         position: fixed;
         bottom: 20px;
         left: 20px;
-        background: rgba(10, 14, 23, 0.9);
-        backdrop-filter: blur(5px);
-        border-radius: 10px;
-        padding: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        z-index: 100;
-        max-width: 300px;
+        background: rgba(10, 14, 23, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        max-width: 350px;
     }
 
     .legend-title {
-        font-size: 0.9rem;
-        font-weight: 600;
-        margin-bottom: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 15px;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
         color: #ffffff;
     }
 
     .legend-items {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 10px;
     }
 
     .legend-item {
         display: flex;
         align-items: center;
-        margin-bottom: 5px;
-        font-size: 0.8rem;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        flex: 0 0 calc(50% - 10px);
     }
 
     .legend-color {
-        width: 12px;
-        height: 12px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
-        margin-right: 8px;
+        margin-right: 12px;
+        flex-shrink: 0;
     }
 
     /* Instrucciones */
@@ -307,13 +339,20 @@
         bottom: 20px;
         right: 20px;
         text-align: right;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: var(--text-muted);
-        z-index: 100;
-        background: rgba(10, 14, 23, 0.7);
-        padding: 10px 15px;
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 1000;
+        background: rgba(10, 14, 23, 0.9);
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 350px;
+    }
+
+    .instructions h3 {
+        margin-bottom: 10px;
+        color: var(--core-color);
+        font-size: 1rem;
     }
 
     /* Controles de navegación */
@@ -321,83 +360,133 @@
         position: fixed;
         top: 20px;
         left: 20px;
-        z-index: 100;
+        z-index: 1000;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
     .nav-button {
-        background: rgba(10, 14, 23, 0.8);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(10, 14, 23, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         color: white;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .nav-button:hover {
-        background: rgba(0, 198, 255, 0.3);
-        transform: scale(1.1);
+        background: rgba(0, 198, 255, 0.4);
+        transform: scale(1.15);
+        box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+    }
+
+    /* Indicador de zoom */
+    .zoom-level {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: rgba(10, 14, 23, 0.9);
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        display: none;
     }
 
     /* Responsive */
     @media (max-width: 1200px) {
-        .content-panel {
-            width: 300px;
-        }
-        
-        .legend {
-            max-width: 250px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .content-panel {
-            width: calc(100% - 40px);
-            right: 20px;
-            left: 20px;
-        }
-        
-        .legend {
-            max-width: 200px;
-            bottom: 10px;
-            left: 10px;
-        }
-        
-        .instructions {
-            display: none;
+        #galaxy {
+            width: 2500px;
+            height: 2500px;
         }
         
         .central-node {
-            width: 150px;
-            height: 150px;
+            width: 350px;
+            height: 350px;
         }
         
         .node {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        #galaxy {
+            width: 2000px;
+            height: 2000px;
+        }
+        
+        .central-node {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .node {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .content-panel {
+            width: calc(100% - 40px);
+            max-width: 400px;
+        }
+        
+        .legend {
+            max-width: 300px;
+        }
+        
+        .instructions {
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .navigation-controls {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .nav-button {
+            width: 45px;
+            height: 45px;
+            font-size: 1.3rem;
+        }
+        
+        .content-panel, .legend, .instructions {
+            left: 10px;
+            right: 10px;
+            max-width: none;
+        }
+        
+        .instructions {
+            text-align: left;
         }
     }
 </style>
 
-<!-- Aquí empieza el HTML que debes insertar en tu página -->
+<!-- Aquí empieza el HTML -->
 <div id="stars"></div>
 
 <!-- Controles de navegación -->
 <div class="navigation-controls">
-    <button class="nav-button" id="zoomIn">+</button>
-    <button class="nav-button" id="zoomOut">-</button>
-    <button class="nav-button" id="resetView">↺</button>
+    <button class="nav-button" id="zoomIn" title="Zoom In">+</button>
+    <button class="nav-button" id="zoomOut" title="Zoom Out">-</button>
+    <button class="nav-button" id="resetView" title="Reset View">↺</button>
+    <button class="nav-button" id="centerView" title="Center View">⌖</button>
 </div>
 
-<div class="container" id="mainContainer">
+<!-- Viewport para navegación -->
+<div class="viewport" id="viewport">
     <div id="galaxy">
         <canvas id="galaxy-canvas"></canvas>
         
@@ -423,7 +512,7 @@
 
 <!-- Leyenda -->
 <div class="legend">
-    <div class="legend-title">Categorías</div>
+    <div class="legend-title">CATEGORÍAS</div>
     <div class="legend-items">
         <div class="legend-item">
             <div class="legend-color" style="background-color: var(--core-color);"></div>
@@ -457,26 +546,27 @@
 </div>
 
 <div class="instructions">
-    • Haz clic en cualquier nodo para ver detalles<br>
-    • Usa la rueda del ratón para hacer zoom<br>
-    • Arrastra para mover el mapa<br>
-    • Usa los botones + - para controlar el zoom
+    <h3>CONTROLES DE NAVEGACIÓN</h3>
+    • <strong>Haz clic</strong> en cualquier nodo para ver detalles<br>
+    • <strong>Rueda del ratón</strong> para hacer zoom<br>
+    • <strong>Arrastra</strong> para mover el mapa<br>
+    • <strong>Botones + -</strong> para controlar el zoom<br>
+    • <strong>Botón ↺</strong> para resetear vista<br>
+    • <strong>Botón ⌖</strong> para centrar
 </div>
 
 <script>
     // Datos para todos los nodos
     const nodesData = {
-        // Nodo central
         central: {
             id: "central",
             title: "The Invisible City",
             text: "How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.",
             category: "Core Concept",
             color: "var(--core-color)",
-            connections: ["intuitions", "thematic", "actions"]
+            connections: ["intuitions", "thematic", "actions", "questions", "bee", "fieldwork"]
         },
         
-        // Intuiciones
         intuitions: [
             {id: "intuition1", title: "Make the invisible visible", text: "Urban beauty hides systems of exclusion.", category: "Intuitions"},
             {id: "intuition2", title: "Humans should feel what other species feel", text: "Embodied empathy is more powerful than awareness.", category: "Intuitions"},
@@ -492,7 +582,6 @@
             {id: "intuition12", title: "Small actions expose big systems", text: "Sitting, planting, wearing — micro-actions reveal macro-political structures.", category: "Intuitions"}
         ],
         
-        // Preguntas motor
         questions: [
             {id: "question1", title: "What lives are allowed?", text: "Investigating which lives are welcomed and which are excluded in urban spaces.", category: "Motor Questions"},
             {id: "question2", title: "How does beauty justify exclusion?", text: "Exploring how aesthetic decisions mask systems of control.", category: "Motor Questions"},
@@ -504,7 +593,6 @@
             {id: "question8", title: "How does pollution reshape more-than-human life?", text: "Investigating the impact of urban pollution on non-human life.", category: "Motor Questions"}
         ],
         
-        // Campos temáticos
         thematic: [
             {id: "thematic1", title: "Urban Aesthetics", text: "Beauty as control; order as exclusion.", category: "Thematic Fields"},
             {id: "thematic2", title: "Hostile Design", text: "Architecture that denies presence, rest, or habitation.", category: "Thematic Fields"},
@@ -514,7 +602,6 @@
             {id: "thematic6", title: "Environmental Empathy", text: "Understanding pollution through the sensory worlds of bees.", category: "Thematic Fields"}
         ],
         
-        // Acciones
         actions: [
             {id: "action1", title: "Sitting on Hostile Architecture", text: "Revealing micro-violence through your body.", category: "Actions"},
             {id: "action2", title: "Returning Life Interventions", text: "Reintroducing plants where nature has been erased.", category: "Actions"},
@@ -522,7 +609,6 @@
             {id: "action4", title: "Sensory Experiments", text: "Building tools that translate pollution into sensory experience.", category: "Actions"}
         ],
         
-        // Proyecto abeja
         bee: [
             {id: "bee1", title: "Pollution Translation", text: "How environmental toxins distort bee perception.", category: "Bee Project"},
             {id: "bee2", title: "Urban Threat Mapping", text: "Light, chemicals, noise, temperature stress.", category: "Bee Project"},
@@ -532,7 +618,6 @@
             {id: "bee6", title: "Species-Level Vulnerability", text: "How pollution destabilizes bee navigation, memory, hive health.", category: "Bee Project"}
         ],
         
-        // Trabajo de campo
         fieldwork: [
             {id: "fieldwork1", title: "Hostile Aesthetics Mapping", text: "Photos + notes of spikes, anti-homeless architecture, barriers.", category: "Urban Fieldwork"},
             {id: "fieldwork2", title: "City-as-Performance", text: "Barcelona as spectacle; bodies curated for tourism.", category: "Urban Fieldwork"},
@@ -543,53 +628,43 @@
 
     // Variables globales
     let canvas, ctx;
-    let stars = [];
-    let nodes = [];
-    let connections = [];
-    let selectedNode = null;
-    let zoom = 0.8; // Zoom inicial más pequeño para ver más
+    let scale = 0.4; // Zoom inicial
     let offsetX = 0, offsetY = 0;
     let isDragging = false;
-    let dragStartX = 0, dragStartY = 0;
-    let initialOffsetX = 0, initialOffsetY = 0;
+    let lastX = 0, lastY = 0;
+    let galaxy = document.getElementById('galaxy');
+    let viewport = document.getElementById('viewport');
 
     // Inicializar estrellas
     function initStars() {
         const starsContainer = document.getElementById('stars');
         starsContainer.innerHTML = '';
         
-        for (let i = 0; i < 200; i++) { // Más estrellas
+        for (let i = 0; i < 300; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
             
-            // Tamaño aleatorio
             const size = Math.random() * 4 + 1;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
-            
-            // Posición aleatoria
             star.style.left = `${Math.random() * 100}%`;
             star.style.top = `${Math.random() * 100}%`;
-            
-            // Retraso de animación aleatorio
             star.style.animationDelay = `${Math.random() * 5}s`;
             
             starsContainer.appendChild(star);
         }
     }
 
-    // Crear nodos orbitales - CON ÓRBITAS MÁS GRANDES
+    // Crear nodos orbitales - CON MÁS ESPACIO
     function createOrbitalNodes() {
-        const galaxy = document.getElementById('galaxy');
-        
-        // Crear órbitas - RADIOS MÁS GRANDES PARA MÁS ESPACIO
+        // Radios MUY grandes para mucho espacio
         const orbits = [
-            {radius: 250, nodes: nodesData.intuitions, className: 'intuition-node'}, // Aumentado de 120
-            {radius: 400, nodes: nodesData.questions, className: 'question-node'}, // Aumentado de 200
-            {radius: 550, nodes: nodesData.thematic, className: 'thematic-node'}, // Aumentado de 300
-            {radius: 700, nodes: nodesData.actions, className: 'action-node'}, // Aumentado de 400
-            {radius: 850, nodes: nodesData.bee, className: 'bee-node'}, // Aumentado de 500
-            {radius: 1000, nodes: nodesData.fieldwork, className: 'fieldwork-node'} // Aumentado de 600
+            {radius: 600, nodes: nodesData.intuitions, className: 'intuition-node'},
+            {radius: 900, nodes: nodesData.questions, className: 'question-node'},
+            {radius: 1200, nodes: nodesData.thematic, className: 'thematic-node'},
+            {radius: 1500, nodes: nodesData.actions, className: 'action-node'},
+            {radius: 1800, nodes: nodesData.bee, className: 'bee-node'},
+            {radius: 2100, nodes: nodesData.fieldwork, className: 'fieldwork-node'}
         ];
         
         orbits.forEach((orbit, orbitIndex) => {
@@ -619,12 +694,10 @@
                 node.style.top = `calc(50% + ${y}px)`;
                 node.style.transform = 'translate(-50%, -50%)';
                 
-                // Añadir título - CON TEXTO NEGRO
+                // Añadir título
                 const titleElement = document.createElement('div');
                 titleElement.classList.add('node-title');
                 titleElement.textContent = nodeData.title;
-                titleElement.style.color = '#000000'; // Texto negro
-                titleElement.style.textShadow = '0 1px 3px rgba(255, 255, 255, 0.7)'; // Sombra blanca para contraste
                 node.appendChild(titleElement);
                 
                 // Añadir evento de clic
@@ -650,9 +723,7 @@
         const panelTitle = document.getElementById('panelTitle');
         const panelText = document.getElementById('panelText');
         const panelCategory = document.getElementById('panelCategory');
-        const panelConnections = document.getElementById('panelConnections');
         
-        // Establecer contenido
         panelTitle.textContent = nodeData.title;
         panelText.textContent = nodeData.text;
         panelCategory.textContent = nodeData.category;
@@ -671,41 +742,14 @@
         }
         
         panelCategory.style.backgroundColor = color;
-        panelCategory.style.color = '#000000'; // Texto negro en etiqueta
+        panelCategory.style.color = '#000000';
         
-        // Mostrar conexiones relevantes
-        panelConnections.innerHTML = '';
-        if (nodeData.connections) {
-            const connectionsTitle = document.createElement('div');
-            connectionsTitle.textContent = 'Conectado con:';
-            connectionsTitle.style.fontWeight = '600';
-            connectionsTitle.style.marginBottom = '10px';
-            connectionsTitle.style.color = 'var(--text-light)';
-            panelConnections.appendChild(connectionsTitle);
-            
-            nodeData.connections.forEach(connection => {
-                const connectionItem = document.createElement('div');
-                connectionItem.textContent = connection;
-                connectionItem.style.padding = '5px 10px';
-                connectionItem.style.marginBottom = '5px';
-                connectionItem.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-                connectionItem.style.borderRadius = '4px';
-                connectionItem.style.fontSize = '0.85rem';
-                panelConnections.appendChild(connectionItem);
-            });
-        }
-        
-        // Mostrar panel
         panel.classList.add('active');
-        
-        // Actualizar nodo seleccionado
-        selectedNode = nodeData.id;
     }
 
     // Cerrar panel
     document.getElementById('closePanel').addEventListener('click', () => {
         document.getElementById('contentPanel').classList.remove('active');
-        selectedNode = null;
     });
 
     // Inicializar canvas para conexiones
@@ -713,100 +757,45 @@
         canvas = document.getElementById('galaxy-canvas');
         ctx = canvas.getContext('2d');
         
-        // Ajustar tamaño del canvas
         function resizeCanvas() {
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
+            canvas.width = galaxy.offsetWidth;
+            canvas.height = galaxy.offsetHeight;
             drawConnections();
         }
         
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
-        
-        // Añadir eventos de zoom y arrastre al documento completo
-        document.addEventListener('wheel', handleWheel);
-        canvas.addEventListener('mousedown', handleMouseDown);
-        document.addEventListener('mousemove', handleMouseMove);
-        document.addEventListener('mouseup', handleMouseUp);
-        
-        // Agregar controles de zoom
-        document.getElementById('zoomIn').addEventListener('click', () => adjustZoom(0.1));
-        document.getElementById('zoomOut').addEventListener('click', () => adjustZoom(-0.1));
-        document.getElementById('resetView').addEventListener('click', resetView);
     }
 
-    // Ajustar zoom
-    function adjustZoom(factor) {
-        zoom = Math.max(0.3, Math.min(2, zoom + factor));
-        applyTransform();
-        drawConnections();
-    }
-
-    // Resetear vista
-    function resetView() {
-        zoom = 0.8;
-        offsetX = 0;
-        offsetY = 0;
-        applyTransform();
-        drawConnections();
-    }
-
-    // Aplicar transformación al contenedor
-    function applyTransform() {
-        const container = document.getElementById('mainContainer');
-        container.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${zoom})`;
-    }
-
-    // Dibujar conexiones entre nodos
+    // Dibujar conexiones
     function drawConnections() {
-        // Limpiar canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        // Dibujar conexiones desde el nodo central a todos los nodos temáticos
-        const centralNode = document.querySelector('.central-node');
-        if (!centralNode) return;
         
         const centerX = canvas.width / 2;
         const centerY = canvas.height / 2;
         
-        // Conexión a campos temáticos
-        const thematicNodes = document.querySelectorAll('.thematic-node');
-        thematicNodes.forEach(node => {
+        // Conectar nodo central con todos los demás nodos
+        const allNodes = document.querySelectorAll('.node:not(.central-node)');
+        allNodes.forEach(node => {
             const rect = node.getBoundingClientRect();
-            const canvasRect = canvas.getBoundingClientRect();
+            const galaxyRect = galaxy.getBoundingClientRect();
             
-            const nodeX = rect.left + rect.width / 2 - canvasRect.left;
-            const nodeY = rect.top + rect.height / 2 - canvasRect.top;
+            const nodeX = (rect.left + rect.width/2 - galaxyRect.left) / scale;
+            const nodeY = (rect.top + rect.height/2 - galaxyRect.top) / scale;
             
-            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(255, 179, 71, 0.4)');
-        });
-        
-        // Conexión a intuiciones
-        const intuitionNodes = document.querySelectorAll('.intuition-node');
-        intuitionNodes.forEach(node => {
-            const rect = node.getBoundingClientRect();
-            const canvasRect = canvas.getBoundingClientRect();
+            // Determinar color según categoría
+            let color = 'rgba(255, 255, 255, 0.2)';
+            if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.3)';
+            else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.2)';
+            else if (node.classList.contains('question-node')) color = 'rgba(255, 255, 255, 0.25)';
+            else if (node.classList.contains('action-node')) color = 'rgba(255, 94, 125, 0.2)';
+            else if (node.classList.contains('bee-node')) color = 'rgba(0, 216, 167, 0.2)';
+            else if (node.classList.contains('fieldwork-node')) color = 'rgba(255, 138, 101, 0.2)';
             
-            const nodeX = rect.left + rect.width / 2 - canvasRect.left;
-            const nodeY = rect.top + rect.height / 2 - canvasRect.top;
-            
-            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(185, 103, 255, 0.3)');
-        });
-        
-        // Conexión a acciones
-        const actionNodes = document.querySelectorAll('.action-node');
-        actionNodes.forEach(node => {
-            const rect = node.getBoundingClientRect();
-            const canvasRect = canvas.getBoundingClientRect();
-            
-            const nodeX = rect.left + rect.width / 2 - canvasRect.left;
-            const nodeY = rect.top + rect.height / 2 - canvasRect.top;
-            
-            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(255, 94, 125, 0.3)');
+            drawConnectionLine(centerX, centerY, nodeX, nodeY, color);
         });
     }
 
-    // Dibujar una línea de conexión
     function drawConnectionLine(x1, y1, x2, y2, color) {
         ctx.beginPath();
         ctx.moveTo(x1, y1);
@@ -814,67 +803,86 @@
         ctx.strokeStyle = color;
         ctx.lineWidth = 2;
         ctx.stroke();
-        
-        // Añadir efecto de brillo
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.strokeStyle = color.replace('0.3', '0.1').replace('0.4', '0.15');
-        ctx.lineWidth = 6;
-        ctx.stroke();
     }
 
-    // Manejar zoom con rueda del ratón
+    // Actualizar transformación de la galaxia
+    function updateTransform() {
+        galaxy.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})`;
+        drawConnections();
+    }
+
+    // Manejar zoom
     function handleWheel(e) {
         e.preventDefault();
         
         const zoomFactor = 0.1;
-        const oldZoom = zoom;
+        const oldScale = scale;
         
         if (e.deltaY < 0) {
-            // Zoom in
-            zoom = Math.min(zoom + zoomFactor, 2);
+            scale = Math.min(scale + zoomFactor, 1.5);
         } else {
-            // Zoom out
-            zoom = Math.max(zoom - zoomFactor, 0.3);
+            scale = Math.max(scale - zoomFactor, 0.2);
         }
         
-        applyTransform();
-        drawConnections();
+        // Ajustar offset para hacer zoom hacia el cursor
+        const rect = viewport.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        offsetX -= (x - rect.width/2) * (scale - oldScale) / oldScale;
+        offsetY -= (y - rect.height/2) * (scale - oldScale) / oldScale;
+        
+        updateTransform();
     }
 
     // Manejar arrastre
     function handleMouseDown(e) {
-        // Solo arrastrar si se hace clic en el canvas o en un área vacía
-        if (e.target === canvas || e.target.id === 'galaxy' || e.target.classList.contains('orbit')) {
+        if (e.target === viewport || e.target.classList.contains('orbit')) {
             isDragging = true;
-            dragStartX = e.clientX;
-            dragStartY = e.clientY;
-            initialOffsetX = offsetX;
-            initialOffsetY = offsetY;
-            
-            document.body.style.cursor = 'grabbing';
+            lastX = e.clientX;
+            lastY = e.clientY;
+            viewport.classList.add('grabbing');
         }
     }
 
     function handleMouseMove(e) {
         if (!isDragging) return;
         
-        offsetX = initialOffsetX + (e.clientX - dragStartX);
-        offsetY = initialOffsetY + (e.clientY - dragStartY);
+        offsetX += (e.clientX - lastX);
+        offsetY += (e.clientY - lastY);
+        lastX = e.clientX;
+        lastY = e.clientY;
         
-        // Limitar desplazamiento
-        const maxOffset = 800; // Más desplazamiento permitido
-        offsetX = Math.max(Math.min(offsetX, maxOffset), -maxOffset);
-        offsetY = Math.max(Math.min(offsetY, maxOffset), -maxOffset);
-        
-        applyTransform();
-        drawConnections();
+        updateTransform();
     }
 
     function handleMouseUp() {
         isDragging = false;
-        document.body.style.cursor = 'default';
+        viewport.classList.remove('grabbing');
+    }
+
+    // Controladores de botones
+    function zoomIn() {
+        scale = Math.min(scale + 0.1, 1.5);
+        updateTransform();
+    }
+
+    function zoomOut() {
+        scale = Math.max(scale - 0.1, 0.2);
+        updateTransform();
+    }
+
+    function resetView() {
+        scale = 0.4;
+        offsetX = 0;
+        offsetY = 0;
+        updateTransform();
+    }
+
+    function centerView() {
+        offsetX = 0;
+        offsetY = 0;
+        updateTransform();
     }
 
     // Inicializar la página
@@ -882,26 +890,38 @@
         initStars();
         createOrbitalNodes();
         initCanvas();
-        applyTransform(); // Aplicar transformación inicial
+        updateTransform();
         
         // Mostrar contenido del nodo central al cargar
         setTimeout(() => {
             showNodeContent(nodesData.central);
         }, 1000);
         
+        // Eventos
+        viewport.addEventListener('wheel', handleWheel);
+        viewport.addEventListener('mousedown', handleMouseDown);
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+        
+        // Botones
+        document.getElementById('zoomIn').addEventListener('click', zoomIn);
+        document.getElementById('zoomOut').addEventListener('click', zoomOut);
+        document.getElementById('resetView').addEventListener('click', resetView);
+        document.getElementById('centerView').addEventListener('click', centerView);
+        
         // Cerrar panel al hacer clic fuera
         document.addEventListener('click', (e) => {
             const panel = document.getElementById('contentPanel');
-            const centralNode = document.getElementById('centralNode');
-            const isNode = e.target.closest('.node') || e.target === centralNode || e.target.closest('.central-node');
+            const isNode = e.target.closest('.node') || e.target.closest('.central-node');
             
             if (!isNode && !panel.contains(e.target) && panel.classList.contains('active')) {
                 panel.classList.remove('active');
-                selectedNode = null;
             }
         });
         
-        // Aplicar transformación inicial
-        applyTransform();
+        // Prevenir arrastre en botones
+        document.querySelectorAll('.nav-button, .panel-close').forEach(btn => {
+            btn.addEventListener('mousedown', (e) => e.stopPropagation());
+        });
     });
 </script>
