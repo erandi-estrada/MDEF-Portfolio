@@ -1167,7 +1167,7 @@ function showProtocol4(n) {
 <h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">COLLECTIVE ACTION</h1>
 
 <!-- Imagen completa -->
-<img src="../../images/collective-main.jpg" 
+<img src="../../images/pigeons.jpg" 
      alt="Multispecies fieldwork with pigeons" 
      width="100%" 
      style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">
