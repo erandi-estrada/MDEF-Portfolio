@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', showNextPhrase);
 
 <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
     
- <!-- Columna izquierda: Imagen -->
+<!-- Columna izquierda: Imagen -->
 <div>
         <img src="../../images/sand.jpg" 
              alt="Sand Playground" 
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', showNextPhrase);
              style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
     </div>
     
- <!-- Columna derecha: Texto -->
+<!-- Columna derecha: Texto -->
  <div>
         <h3 style="margin-top: 0; margin-bottom: 1.5rem;">AI Definition:</h3>
         <p style="margin-bottom: 1.5rem; font-style: italic; color: #444;">
@@ -191,17 +191,13 @@ document.addEventListener('DOMContentLoaded', showNextPhrase);
         <p style="margin-bottom: 1rem;">
             This structure supports the AI by providing it with a playground in which it can create and destroy, destroy and create on its own terms, when it wants, indefinitely.
         </p>
+        
+<!-- Puntos movidos aquí dentro de la columna -->
+<div style="margin: 1.5rem 0 0 0;">
+            <p style="margin-bottom: 0.5rem;">• This structure supports the AI by not restricting it in any way.</p>
+            <p style="margin-bottom: 0.5rem;">• This structure avoids subordinating the AI by giving it total autonomy to do whatever it wants if it wants whenever it wants, total freedom.</p>
+        </div>
     </div>
-</div>
-
-<!-- Puntos fuera de las columnas, debajo de la imagen -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.8rem; font-size: 1.1rem;">
-        • This structure supports the AI by not restricting it in any way.
-    </p>
-    <p style="margin-bottom: 0.8rem; font-size: 1.1rem;">
-        • This structure avoids subordinating the AI by giving it total autonomy to do whatever it wants if it wants whenever it wants, total freedom.
-    </p>
 </div>
 
 ## DAY 2 - Support a collective/grupal intelligence that does not locate itself in individuals
