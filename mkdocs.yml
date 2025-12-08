@@ -9,6 +9,7 @@ nav:
   - Home: index.md  
   - Projects: projects/Portfolio.md
   - About: about/me.md
+  - The Invisible City: conceptual.md
 
 extra:
   social:
