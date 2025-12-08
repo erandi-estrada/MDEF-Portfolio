@@ -253,7 +253,26 @@
                 
                   <h1>Conceptual</h1>
                 
-                <p><link rel="stylesheet" href="../stylesheets/mapa-galaxia.css"></p>
+                <p>/<em> ===== FORZAR MENÚ VISIBLE ===== </em>/
+.menu-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+}</p>
+<p>/<em> Ocultar CUALQUIER cosa que esté encima del menú </em>/
+body &gt; *:not(.menu-container):not(.main-container):not(.content-panel):not(.instructions) {
+    position: relative !important;
+    z-index: 1 !important;
+}</p>
+<p>.menu-container ~ * {
+    z-index: 1 !important;
+}
+<link rel="stylesheet" href="../stylesheets/mapa-galaxia.css"></p>
 <style>
     * {
         margin: 0;
@@ -1116,7 +1135,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 22:39:30 UTC">December 8, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 22:52:53 UTC">December 8, 2025</span>
     
   </small>
 </div>
