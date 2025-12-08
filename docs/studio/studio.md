@@ -902,16 +902,24 @@ function showProtocol3(n) {
 <h3 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Prototype</h3>
 <p>I modified a cushion to first become an uncomfortable, unwelcoming object (Phase 1), and then restored it to a hospitable, inviting surface (Phase 2). The cushion was placed on a public bench in Passeig de Gràcia while I observed and recorded reactions from both humans and pigeons.</p>
 
-<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin: 1.5rem 0; align-items: start;">
+ <!-- Imagen a la izquierda -->
+<div>
+         <img src="../../images/alambre.jpeg" 
+             alt="Cushion with metal wire spikes" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
+    </div>
+    
+<!-- Texto a la derecha -->
     <div>
-        <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">WHY</h4>
+ <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">WHY</h4>
         <p>To investigate how the presence of hostile design affects not only physical interaction, but also memory and trust, especially among non-human urban species. By alternating between discomfort and welcome, this action examines whether hospitality can be restored through design alone, or whether behavioral patterns shaped by long-term exclusion persist.</p>
-
+        
 <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">WHERE</h4>
         <p>The action took place in Jardins de la Reina Victòria, along Passeig de Gràcia—a location that combines: benches frequently used by pedestrians, visible examples of hostile architecture, moderate but continuous flows of people, pigeons that occasionally visit this area but avoid built surfaces. This site allows the intervention to be observed without obstructing public space, while ensuring proximity to non-human life.</p>
 
-<h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">HOW</h4>
-        <p>Across both phases:</p>
+  <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">HOW</h4>
+       <p>Across both phases:</p>
 
 <ul style="margin: 1rem 0 1.5rem 0;">
      <li>I placed the cushion in the same central position on the bench</li>
@@ -923,13 +931,9 @@ function showProtocol3(n) {
 </ul>
 <p>Although I noticed some glances while carrying and installing the object, these moments were not filmed; the documentation focuses on the behavior around the bench during both phases.</p>
     </div>
-    <div>
-        <img src="../../images/alambre.jpeg" 
-             alt="Cushion with metal wire spikes" 
-             width="100%" 
-             style="border-radius: 8px; object-fit: cover;">
-    </div>
 </div>
+
+
 
 <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin: 1.5rem 0; align-items: start;">
     <div>
@@ -942,8 +946,6 @@ function showProtocol3(n) {
         <h3 style="font-size: 1.8rem; font-weight: bold; margin: 0 0 0.5rem 0;">Phase 1 — Softness Interrupted</h3>
         <p>A soft cushion is transformed into a hostile object using metal wire.Instead of sharp spikes, I shaped the wire into small arch-like forms that disrupt comfort without causing damage to the fabric. At a glance, the cushion appears normal, but once approached closely or sat upon, the discomfort becomes visible.</p>
         <p>Placed at the center of a public bench, the object produced hesitation, confusion, and avoidance. Humans approached but did not touch it; pigeons kept distance from both the bench and the ground beneath it.</p>
-    </div>
-       <div>
         <h3 style="font-size: 1.8rem; font-weight: bold; margin: 0 0 0.5rem 0;">Phase 2 — Softness Restored</h3>
         <p>The wire is removed. Breadcrumbs are placed gently on the cushion, turning it into a symbolic invitation for pigeons to rest and feed.</p>
         <p>This phase tests whether temporary hospitality can counteract long-term exclusion, and whether pigeons feel safe enough to accept the invitation.</p>
@@ -1155,3 +1157,26 @@ it revealed how deeply exclusion has been internalized, and how trust is not aut
   Your browser does not support the video tag.
 </video>
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
+    
+  <!-- Texto a la izquierda -->
+  <div>
+    <p>The cushion produced different kinds of friction in each phase. During Phase 1, humans kept distance, puzzled by the object's altered softness. Pigeons did not approach the bench or the ground beneath it, signaling the effectiveness of subtle discomfort.</p>
+    <p>During Phase 2, the full restoration of softness and the presence of food did not lead pigeons to engage with the cushion. They maintained significant distance, rarely landing nearby. Their avoidance suggests that hospitality cannot be instantly restored through design gestures. Years of spikes, deterrents, and hostile surfaces have shaped their perception of benches as unsafe.</p>
+    <p>Their absence became meaningful: it revealed how deeply exclusion has been internalized, and how trust is not automatically regained even when softness returns.</p>
+  </div>
+
+  <!-- Imagen a la derecha -->
+  <div>
+    <img src="../../images/palomas.jpeg" 
+         alt="Pigeons in urban environment" 
+         width="100%" 
+         style="border-radius: 8px; object-fit: cover;">
+  </div>
+</div>
+
+<!-- Video debajo -->
+<video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/Collective.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
