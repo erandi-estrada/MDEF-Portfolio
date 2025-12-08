@@ -1,11 +1,3 @@
-<div class="menu-container">
-    <div class="custom-header-menu">
-        <a href="../..">MDEF</a>
-        <a href="../../projects/Portfolio">Projects</a>
-        <a href="../../about/me">About me</a>
-    </div>
-</div>
-
 <style>
     * {
         margin: 0;
@@ -57,70 +49,47 @@
         50% { opacity: 0.8; }
     }
 
-    /* Contenedor principal */
+    /* Contenedor principal - AHORA ES DESPLAZABLE */
     .container {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
+        width: 200%; /* Más ancho para permitir scroll */
+        height: 200%; /* Más alto para permitir scroll */
         position: relative;
+        transform-origin: 0 0;
+        transform: scale(1);
+        transition: transform 0.3s ease;
     }
 
-    /* Encabezado */
-    header {
-        padding: 20px 40px;
-        text-align: center;
-        z-index: 10;
-        background: rgba(10, 14, 23, 0.8);
-        backdrop-filter: blur(5px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
-        background: linear-gradient(to right, var(--core-color), var(--bee-color));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-        color: var(--text-muted);
-        font-weight: 300;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    /* Canvas para la galaxia radial */
+    /* Galaxia ahora ocupa toda la pantalla */
     #galaxy {
-        flex-grow: 1;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #galaxy-canvas {
-        width: 100%;
-        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
     }
 
-    /* Nodo central */
+    /* Canvas para la galaxia radial */
+    #galaxy-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    /* Nodo central - MÁS GRANDE */
     .central-node {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 120px;
-        height: 120px;
+        width: 200px; /* Aumentado de 120px */
+        height: 200px; /* Aumentado de 120px */
         border-radius: 50%;
         background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(0, 198, 255, 0.7);
+        box-shadow: 0 0 60px rgba(0, 198, 255, 0.7);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -131,20 +100,21 @@
 
     .central-node:hover {
         transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 60px rgba(0, 198, 255, 0.9);
+        box-shadow: 0 0 80px rgba(0, 198, 255, 0.9);
     }
 
     .central-node-content {
         text-align: center;
-        padding: 15px;
+        padding: 20px;
     }
 
     .central-node-title {
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 1.6rem; /* Aumentado */
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        color: #000000; /* TEXTO NEGRO */
     }
 
     /* Contenedor de nodos orbitales */
@@ -157,10 +127,11 @@
         border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
+    /* Nodos - MUCHO MÁS GRANDES */
     .node {
         position: absolute;
-        width: 60px;
-        height: 60px;
+        width: 120px; /* Aumentado de 60px */
+        height: 120px; /* Aumentado de 60px */
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -172,47 +143,49 @@
 
     .node-title {
         font-weight: 600;
-        font-size: 0.7rem;
+        font-size: 0.9rem; /* Aumentado */
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        padding: 0 5px;
+        padding: 0 10px;
+        color: #000000; /* TEXTO NEGRO - Cambiado de blanco */
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* Sombra para mejor legibilidad */
     }
 
-    /* Colores de nodos según categoría */
+    /* Colores de nodos según categoría - MÁS BRILLANTES */
     .intuition-node {
-        background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 20px rgba(185, 103, 255, 0.5);
+        background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.6) 70%, transparent 100%);
+        box-shadow: 0 0 30px rgba(185, 103, 255, 0.7);
     }
 
     .question-node {
-        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.6) 70%, transparent 100%);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
     }
 
     .thematic-node {
-        background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 20px rgba(255, 179, 71, 0.5);
+        background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.6) 70%, transparent 100%);
+        box-shadow: 0 0 30px rgba(255, 179, 71, 0.7);
     }
 
     .action-node {
-        background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 20px rgba(255, 94, 125, 0.5);
+        background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.6) 70%, transparent 100%);
+        box-shadow: 0 0 30px rgba(255, 94, 125, 0.7);
     }
 
     .bee-node {
-        background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 20px rgba(0, 216, 167, 0.5);
+        background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.6) 70%, transparent 100%);
+        box-shadow: 0 0 30px rgba(0, 216, 167, 0.7);
     }
 
     .fieldwork-node {
-        background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.3) 70%, transparent 100%);
-        box-shadow: 0 0 20px rgba(255, 138, 101, 0.5);
+        background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.6) 70%, transparent 100%);
+        box-shadow: 0 0 30px rgba(255, 138, 101, 0.7);
     }
 
     /* Efectos hover en nodos */
     .node:hover {
-        transform: scale(1.15);
+        transform: scale(1.2); /* Efecto hover más pronunciado */
         z-index: 3;
     }
 
@@ -222,13 +195,13 @@
         top: 20px;
         right: 20px;
         width: 350px;
-        background: rgba(10, 14, 23, 0.85);
+        background: rgba(10, 14, 23, 0.9);
         backdrop-filter: blur(10px);
         border-radius: 12px;
         padding: 25px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         border: 1px solid rgba(255, 255, 255, 0.08);
-        z-index: 10;
+        z-index: 100; /* Mayor z-index para que esté encima de todo */
         display: none;
         transition: all 0.4s ease;
     }
@@ -249,6 +222,7 @@
         margin-bottom: 10px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        color: #ffffff;
     }
 
     .panel-category {
@@ -258,6 +232,7 @@
         border-radius: 20px;
         margin-bottom: 15px;
         font-weight: 600;
+        color: #000000; /* Texto negro en etiquetas */
     }
 
     .panel-text {
@@ -285,15 +260,15 @@
 
     /* Leyenda */
     .legend {
-        position: absolute;
+        position: fixed;
         bottom: 20px;
         left: 20px;
-        background: rgba(10, 14, 23, 0.8);
+        background: rgba(10, 14, 23, 0.9);
         backdrop-filter: blur(5px);
         border-radius: 10px;
         padding: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        z-index: 10;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 100;
         max-width: 300px;
     }
 
@@ -303,6 +278,7 @@
         margin-bottom: 10px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        color: #ffffff;
     }
 
     .legend-items {
@@ -327,13 +303,48 @@
 
     /* Instrucciones */
     .instructions {
-        position: absolute;
+        position: fixed;
         bottom: 20px;
         right: 20px;
         text-align: right;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         color: var(--text-muted);
-        z-index: 10;
+        z-index: 100;
+        background: rgba(10, 14, 23, 0.7);
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Controles de navegación */
+    .navigation-controls {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-button {
+        background: rgba(10, 14, 23, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-button:hover {
+        background: rgba(0, 198, 255, 0.3);
+        transform: scale(1.1);
     }
 
     /* Responsive */
@@ -348,14 +359,6 @@
     }
 
     @media (max-width: 768px) {
-        header {
-            padding: 15px 20px;
-        }
-        
-        h1 {
-            font-size: 1.6rem;
-        }
-        
         .content-panel {
             width: calc(100% - 40px);
             right: 20px;
@@ -373,8 +376,13 @@
         }
         
         .central-node {
-            width: 90px;
-            height: 90px;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .node {
+            width: 100px;
+            height: 100px;
         }
     }
 </style>
@@ -382,12 +390,14 @@
 <!-- Aquí empieza el HTML que debes insertar en tu página -->
 <div id="stars"></div>
 
-<div class="container">
-    <header>
-        <h1>ATLAS OF EMOTIONS: THE INVISIBLE CITY</h1>
-        <p class="subtitle">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
-    </header>
-    
+<!-- Controles de navegación -->
+<div class="navigation-controls">
+    <button class="nav-button" id="zoomIn">+</button>
+    <button class="nav-button" id="zoomOut">-</button>
+    <button class="nav-button" id="resetView">↺</button>
+</div>
+
+<div class="container" id="mainContainer">
     <div id="galaxy">
         <canvas id="galaxy-canvas"></canvas>
         
@@ -400,55 +410,57 @@
         
         <!-- Nodos serán generados por JavaScript -->
     </div>
-    
-    <!-- Panel de contenido -->
-    <div class="content-panel" id="contentPanel">
-        <button class="panel-close" id="closePanel"><i class="fas fa-times"></i></button>
-        <div class="panel-category" id="panelCategory">Core Concept</div>
-        <h2 class="panel-title" id="panelTitle">The Invisible City</h2>
-        <p class="panel-text" id="panelText">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
-        <div id="panelConnections"></div>
-    </div>
-    
-    <!-- Leyenda -->
-    <div class="legend">
-        <div class="legend-title">Categorías</div>
-        <div class="legend-items">
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--core-color);"></div>
-                <span>Concepto Central</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--intuitions-color);"></div>
-                <span>Intuiciones</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--questions-color);"></div>
-                <span>Preguntas Motor</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--thematic-color);"></div>
-                <span>Campos Temáticos</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--actions-color);"></div>
-                <span>Acciones</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--bee-color);"></div>
-                <span>Proyecto Abeja</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: var(--fieldwork-color);"></div>
-                <span>Trabajo de Campo</span>
-            </div>
+</div>
+
+<!-- Panel de contenido -->
+<div class="content-panel" id="contentPanel">
+    <button class="panel-close" id="closePanel">×</button>
+    <div class="panel-category" id="panelCategory">Core Concept</div>
+    <h2 class="panel-title" id="panelTitle">The Invisible City</h2>
+    <p class="panel-text" id="panelText">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
+    <div id="panelConnections"></div>
+</div>
+
+<!-- Leyenda -->
+<div class="legend">
+    <div class="legend-title">Categorías</div>
+    <div class="legend-items">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--core-color);"></div>
+            <span>Concepto Central</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--intuitions-color);"></div>
+            <span>Intuiciones</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--questions-color);"></div>
+            <span>Preguntas Motor</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--thematic-color);"></div>
+            <span>Campos Temáticos</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--actions-color);"></div>
+            <span>Acciones</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--bee-color);"></div>
+            <span>Proyecto Abeja</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--fieldwork-color);"></div>
+            <span>Trabajo de Campo</span>
         </div>
     </div>
-    
-    <div class="instructions">
-        Haz clic en cualquier nodo para ver detalles<br>
-        Desplázate para acercar/alejar la vista
-    </div>
+</div>
+
+<div class="instructions">
+    • Haz clic en cualquier nodo para ver detalles<br>
+    • Usa la rueda del ratón para hacer zoom<br>
+    • Arrastra para mover el mapa<br>
+    • Usa los botones + - para controlar el zoom
 </div>
 
 <script>
@@ -482,14 +494,14 @@
         
         // Preguntas motor
         questions: [
-            {id: "question1", title: "What lives are allowed?", text: "", category: "Motor Questions"},
-            {id: "question2", title: "How does beauty justify exclusion?", text: "", category: "Motor Questions"},
-            {id: "question3", title: "What bodies can rest?", text: "", category: "Motor Questions"},
-            {id: "question4", title: "What violence have we normalized?", text: "", category: "Motor Questions"},
-            {id: "question5", title: "Can design generate empathy?", text: "", category: "Motor Questions"},
-            {id: "question6", title: "How would another species design the city?", text: "", category: "Motor Questions"},
-            {id: "question7", title: "What sensory worlds are we ignoring?", text: "", category: "Motor Questions"},
-            {id: "question8", title: "How does pollution reshape more-than-human life?", text: "", category: "Motor Questions"}
+            {id: "question1", title: "What lives are allowed?", text: "Investigating which lives are welcomed and which are excluded in urban spaces.", category: "Motor Questions"},
+            {id: "question2", title: "How does beauty justify exclusion?", text: "Exploring how aesthetic decisions mask systems of control.", category: "Motor Questions"},
+            {id: "question3", title: "What bodies can rest?", text: "Examining who is allowed to inhabit and rest in public spaces.", category: "Motor Questions"},
+            {id: "question4", title: "What violence have we normalized?", text: "Uncovering the everyday violence hidden in urban design.", category: "Motor Questions"},
+            {id: "question5", title: "Can design generate empathy?", text: "Questioning whether design can foster multispecies empathy.", category: "Motor Questions"},
+            {id: "question6", title: "How would another species design the city?", text: "Imagining urban spaces from non-human perspectives.", category: "Motor Questions"},
+            {id: "question7", title: "What sensory worlds are we ignoring?", text: "Exploring the sensory experiences of other species in cities.", category: "Motor Questions"},
+            {id: "question8", title: "How does pollution reshape more-than-human life?", text: "Investigating the impact of urban pollution on non-human life.", category: "Motor Questions"}
         ],
         
         // Campos temáticos
@@ -535,7 +547,7 @@
     let nodes = [];
     let connections = [];
     let selectedNode = null;
-    let zoom = 1;
+    let zoom = 0.8; // Zoom inicial más pequeño para ver más
     let offsetX = 0, offsetY = 0;
     let isDragging = false;
     let dragStartX = 0, dragStartY = 0;
@@ -546,12 +558,12 @@
         const starsContainer = document.getElementById('stars');
         starsContainer.innerHTML = '';
         
-        for (let i = 0; i < 150; i++) {
+        for (let i = 0; i < 200; i++) { // Más estrellas
             const star = document.createElement('div');
             star.classList.add('star');
             
             // Tamaño aleatorio
-            const size = Math.random() * 3 + 1;
+            const size = Math.random() * 4 + 1;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
             
@@ -566,18 +578,18 @@
         }
     }
 
-    // Crear nodos orbitales
+    // Crear nodos orbitales - CON ÓRBITAS MÁS GRANDES
     function createOrbitalNodes() {
         const galaxy = document.getElementById('galaxy');
         
-        // Crear órbitas
+        // Crear órbitas - RADIOS MÁS GRANDES PARA MÁS ESPACIO
         const orbits = [
-            {radius: 120, nodes: nodesData.intuitions, className: 'intuition-node'},
-            {radius: 200, nodes: nodesData.questions, className: 'question-node'},
-            {radius: 300, nodes: nodesData.thematic, className: 'thematic-node'},
-            {radius: 400, nodes: nodesData.actions, className: 'action-node'},
-            {radius: 500, nodes: nodesData.bee, className: 'bee-node'},
-            {radius: 600, nodes: nodesData.fieldwork, className: 'fieldwork-node'}
+            {radius: 250, nodes: nodesData.intuitions, className: 'intuition-node'}, // Aumentado de 120
+            {radius: 400, nodes: nodesData.questions, className: 'question-node'}, // Aumentado de 200
+            {radius: 550, nodes: nodesData.thematic, className: 'thematic-node'}, // Aumentado de 300
+            {radius: 700, nodes: nodesData.actions, className: 'action-node'}, // Aumentado de 400
+            {radius: 850, nodes: nodesData.bee, className: 'bee-node'}, // Aumentado de 500
+            {radius: 1000, nodes: nodesData.fieldwork, className: 'fieldwork-node'} // Aumentado de 600
         ];
         
         orbits.forEach((orbit, orbitIndex) => {
@@ -597,7 +609,7 @@
                 node.dataset.text = nodeData.text;
                 node.dataset.category = nodeData.category;
                 
-                // Calcular posición angular
+                // Calcular posición angular con distribución más espaciada
                 const angle = (nodeIndex / orbit.nodes.length) * 2 * Math.PI;
                 const x = orbit.radius * Math.cos(angle);
                 const y = orbit.radius * Math.sin(angle);
@@ -607,10 +619,12 @@
                 node.style.top = `calc(50% + ${y}px)`;
                 node.style.transform = 'translate(-50%, -50%)';
                 
-                // Añadir título
+                // Añadir título - CON TEXTO NEGRO
                 const titleElement = document.createElement('div');
                 titleElement.classList.add('node-title');
                 titleElement.textContent = nodeData.title;
+                titleElement.style.color = '#000000'; // Texto negro
+                titleElement.style.textShadow = '0 1px 3px rgba(255, 255, 255, 0.7)'; // Sombra blanca para contraste
                 node.appendChild(titleElement);
                 
                 // Añadir evento de clic
@@ -657,7 +671,7 @@
         }
         
         panelCategory.style.backgroundColor = color;
-        panelCategory.style.color = '#050811';
+        panelCategory.style.color = '#000000'; // Texto negro en etiqueta
         
         // Mostrar conexiones relevantes
         panelConnections.innerHTML = '';
@@ -709,12 +723,38 @@
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
         
-        // Añadir eventos de zoom y arrastre
-        canvas.addEventListener('wheel', handleWheel);
+        // Añadir eventos de zoom y arrastre al documento completo
+        document.addEventListener('wheel', handleWheel);
         canvas.addEventListener('mousedown', handleMouseDown);
-        canvas.addEventListener('mousemove', handleMouseMove);
-        canvas.addEventListener('mouseup', handleMouseUp);
-        canvas.addEventListener('mouseleave', handleMouseUp);
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+        
+        // Agregar controles de zoom
+        document.getElementById('zoomIn').addEventListener('click', () => adjustZoom(0.1));
+        document.getElementById('zoomOut').addEventListener('click', () => adjustZoom(-0.1));
+        document.getElementById('resetView').addEventListener('click', resetView);
+    }
+
+    // Ajustar zoom
+    function adjustZoom(factor) {
+        zoom = Math.max(0.3, Math.min(2, zoom + factor));
+        applyTransform();
+        drawConnections();
+    }
+
+    // Resetear vista
+    function resetView() {
+        zoom = 0.8;
+        offsetX = 0;
+        offsetY = 0;
+        applyTransform();
+        drawConnections();
+    }
+
+    // Aplicar transformación al contenedor
+    function applyTransform() {
+        const container = document.getElementById('mainContainer');
+        container.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${zoom})`;
     }
 
     // Dibujar conexiones entre nodos
@@ -726,31 +766,43 @@
         const centralNode = document.querySelector('.central-node');
         if (!centralNode) return;
         
-        const centerX = canvas.width / 2 + offsetX;
-        const centerY = canvas.height / 2 + offsetY;
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
         
         // Conexión a campos temáticos
         const thematicNodes = document.querySelectorAll('.thematic-node');
         thematicNodes.forEach(node => {
             const rect = node.getBoundingClientRect();
-            const galaxyRect = canvas.getBoundingClientRect();
+            const canvasRect = canvas.getBoundingClientRect();
             
-            const nodeX = rect.left + rect.width / 2 - galaxyRect.left;
-            const nodeY = rect.top + rect.height / 2 - galaxyRect.top;
+            const nodeX = rect.left + rect.width / 2 - canvasRect.left;
+            const nodeY = rect.top + rect.height / 2 - canvasRect.top;
             
-            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(255, 179, 71, 0.3)');
+            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(255, 179, 71, 0.4)');
         });
         
         // Conexión a intuiciones
         const intuitionNodes = document.querySelectorAll('.intuition-node');
         intuitionNodes.forEach(node => {
             const rect = node.getBoundingClientRect();
-            const galaxyRect = canvas.getBoundingClientRect();
+            const canvasRect = canvas.getBoundingClientRect();
             
-            const nodeX = rect.left + rect.width / 2 - galaxyRect.left;
-            const nodeY = rect.top + rect.height / 2 - galaxyRect.top;
+            const nodeX = rect.left + rect.width / 2 - canvasRect.left;
+            const nodeY = rect.top + rect.height / 2 - canvasRect.top;
             
-            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(185, 103, 255, 0.2)');
+            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(185, 103, 255, 0.3)');
+        });
+        
+        // Conexión a acciones
+        const actionNodes = document.querySelectorAll('.action-node');
+        actionNodes.forEach(node => {
+            const rect = node.getBoundingClientRect();
+            const canvasRect = canvas.getBoundingClientRect();
+            
+            const nodeX = rect.left + rect.width / 2 - canvasRect.left;
+            const nodeY = rect.top + rect.height / 2 - canvasRect.top;
+            
+            drawConnectionLine(centerX, centerY, nodeX, nodeY, 'rgba(255, 94, 125, 0.3)');
         });
     }
 
@@ -760,15 +812,15 @@
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
         ctx.strokeStyle = color;
-        ctx.lineWidth = 1;
+        ctx.lineWidth = 2;
         ctx.stroke();
         
         // Añadir efecto de brillo
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
-        ctx.strokeStyle = color.replace('0.2', '0.05').replace('0.3', '0.1');
-        ctx.lineWidth = 5;
+        ctx.strokeStyle = color.replace('0.3', '0.1').replace('0.4', '0.15');
+        ctx.lineWidth = 6;
         ctx.stroke();
     }
 
@@ -784,25 +836,25 @@
             zoom = Math.min(zoom + zoomFactor, 2);
         } else {
             // Zoom out
-            zoom = Math.max(zoom - zoomFactor, 0.5);
+            zoom = Math.max(zoom - zoomFactor, 0.3);
         }
         
-        // Aplicar zoom al canvas y a los nodos
-        const galaxy = document.getElementById('galaxy');
-        galaxy.style.transform = `scale(${zoom})`;
-        
+        applyTransform();
         drawConnections();
     }
 
     // Manejar arrastre
     function handleMouseDown(e) {
-        isDragging = true;
-        dragStartX = e.clientX;
-        dragStartY = e.clientY;
-        initialOffsetX = offsetX;
-        initialOffsetY = offsetY;
-        
-        canvas.style.cursor = 'grabbing';
+        // Solo arrastrar si se hace clic en el canvas o en un área vacía
+        if (e.target === canvas || e.target.id === 'galaxy' || e.target.classList.contains('orbit')) {
+            isDragging = true;
+            dragStartX = e.clientX;
+            dragStartY = e.clientY;
+            initialOffsetX = offsetX;
+            initialOffsetY = offsetY;
+            
+            document.body.style.cursor = 'grabbing';
+        }
     }
 
     function handleMouseMove(e) {
@@ -812,16 +864,17 @@
         offsetY = initialOffsetY + (e.clientY - dragStartY);
         
         // Limitar desplazamiento
-        const maxOffset = 200;
+        const maxOffset = 800; // Más desplazamiento permitido
         offsetX = Math.max(Math.min(offsetX, maxOffset), -maxOffset);
         offsetY = Math.max(Math.min(offsetY, maxOffset), -maxOffset);
         
+        applyTransform();
         drawConnections();
     }
 
     function handleMouseUp() {
         isDragging = false;
-        canvas.style.cursor = 'default';
+        document.body.style.cursor = 'default';
     }
 
     // Inicializar la página
@@ -829,6 +882,7 @@
         initStars();
         createOrbitalNodes();
         initCanvas();
+        applyTransform(); // Aplicar transformación inicial
         
         // Mostrar contenido del nodo central al cargar
         setTimeout(() => {
@@ -839,12 +893,15 @@
         document.addEventListener('click', (e) => {
             const panel = document.getElementById('contentPanel');
             const centralNode = document.getElementById('centralNode');
-            const isNode = e.target.closest('.node') || e.target === centralNode;
+            const isNode = e.target.closest('.node') || e.target === centralNode || e.target.closest('.central-node');
             
             if (!isNode && !panel.contains(e.target) && panel.classList.contains('active')) {
                 panel.classList.remove('active');
                 selectedNode = null;
             }
         });
+        
+        // Aplicar transformación inicial
+        applyTransform();
     });
 </script>
