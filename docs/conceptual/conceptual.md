@@ -59,7 +59,7 @@ body {
     background-color: #fefaf0;
     border-bottom: 1px solid #e8dfd0;
     position: fixed;
-    top: 20px; /* Añadir espacio arriba */
+    top: 60px; /* Añadir espacio arriba */
     left: 0;
     z-index: 1000;
     height: 60px;
