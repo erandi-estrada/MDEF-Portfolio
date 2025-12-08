@@ -55,7 +55,7 @@ body {
     background-color: #fefaf0;
     border-bottom: 1px solid #e8dfd0;
     position: relative;
-    padding: 1rem 0;
+    padding: 1rem 0; /* Usa 1rem, no 0.5rem */
     margin: 0;
 }
 
@@ -82,23 +82,28 @@ body {
     border-bottom-color: #1976d2;
 }
 
-/* Contenedor principal - AJUSTADO */
+/* ==== SOLO UN .main-container ==== */
 .main-container {
     flex: 1;
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: calc(100vh - 70px); /* Ajusta según el tamaño del menú */
+    height: calc(100vh - 80px); /* Ajusta según el menú */
 }
 
-/* Contenedor principal - DEBAJO DEL MENÚ */
-.main-container {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: calc(100vh - 60px); /* Restar altura del menú */
-    margin-top: 20px; /* Espacio para el menú fijo */
+/* ==== AÑADE ESTO PARA OCULTAR "CONCEPTUAL" ==== */
+<style>
+/* ESTO VA DESPUÉS DEL LINK Y ANTES DE TU CSS */
+.md-header,
+.md-tabs,
+.md-sidebar,
+.md-nav__title,
+h1:first-of-type {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Fondo cósmico con estrellas - SOLO EN EL ÁREA DEL MAPA */
@@ -500,20 +505,20 @@ body {
 <div class="main-container">
     <div id="stars"></div>
     
-    <!-- Viewport para navegación -->
-    <div class="viewport" id="viewport">
+<!-- Viewport para navegación -->
+ <div class="viewport" id="viewport">
         <div id="galaxy">
             <canvas id="galaxy-canvas"></canvas>
             
-            <!-- Nodo central -->
-            <div class="central-node" id="centralNode">
+ <!-- Nodo central -->
+<div class="central-node" id="centralNode">
                 <div class="central-node-content">
                     <div class="central-node-title">The Invisible City</div>
                 </div>
             </div>
             
-            <!-- Nodos serán generados por JavaScript -->
-        </div>
+<!-- Nodos serán generados por JavaScript -->
+</div>
     </div>
 </div>
 
