@@ -1,6 +1,6 @@
-/* docs/stylesheets/mapa-galaxia.css */
+/* docs/stylesheets/mapa-galaxia.css - VERSIÓN MÁS FUERTE */
 
-/* ELIMINAR TODO LO DE MKDOCS */
+/* ==== ELIMINAR ABSOLUTAMENTE TODO ==== */
 .md-header,
 .md-tabs,
 .md-sidebar,
@@ -10,7 +10,14 @@
 .md-nav--primary,
 .md-nav__list,
 .md-header__button,
-.md-footer {
+.md-footer,
+.md-footer-meta,
+.md-footer-nav,
+.md-copyright,
+.md-banner,
+.md-announce,
+.md-search,
+.md-logo {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -20,9 +27,12 @@
     border: none !important;
     overflow: hidden !important;
     opacity: 0 !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
 
-/* Ocultar título "CONCEPTUAL" */
+/* ==== ELIMINAR TÍTULOS ==== */
 .md-typeset h1:first-of-type,
 .md-content h1:first-of-type,
 h1:first-of-type {
@@ -35,8 +45,10 @@ h1:first-of-type {
     line-height: 0 !important;
 }
 
-/* Resetear márgenes */
+/* ==== RESET COMPLETO ==== */
 body {
+    margin: 0 !important;
+    padding: 0 !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
     overflow: hidden !important;
@@ -49,11 +61,15 @@ body {
 }
 
 .md-main {
+    margin: 0 !important;
+    padding: 0 !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
 .md-main__inner {
+    margin: 0 !important;
+    padding: 0 !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
     min-height: 100vh !important;
@@ -65,4 +81,10 @@ body {
     padding: 0 !important;
     max-width: none !important;
     width: 100% !important;
+}
+
+/* ==== ELIMINAR CUALQUIER TEXTO MKDOCS ==== */
+.md-typeset,
+.md-typeset > * {
+    display: none !important;
 }
