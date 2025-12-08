@@ -28,15 +28,29 @@
         position: relative;
     }
 
-    /* ===== MENÚ SIMPLE ===== */
+    /* ===== OCULTAR HEADER "CONCEPTUAL" Y OTROS TEXTOS ===== */
+    h1, h2, h3, h4, h5, h6 {
+        display: none !important;
+    }
+    
+    /* Ocultar cualquier elemento que contenga "Conceptual" (con C mayúscula o minúscula) */
+    *:contains("Conceptual"),
+    *:contains("conceptual") {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+    }
+
+    /* ===== MENÚ SIMPLE - SOLO ESTE DEBE VERSE ===== */
     .menu-container {
         width: 100%;
-        background: rgba(255, 255, 255, 0.9);
+        background: transparent;
         padding: 20px 40px;
         position: relative;
         z-index: 1000;
-        backdrop-filter: blur(5px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .custom-header-menu {
@@ -185,6 +199,9 @@
             0 2px 10px rgba(0, 0, 0, 0.3),
             0 0 15px rgba(0, 102, 204, 0.4);
         line-height: 1.2;
+        /* SIN BLUR EN EL TEXTO */
+        filter: none !important;
+        -webkit-filter: none !important;
     }
 
     /* ===== ÓRBITAS Y NODOS ===== */
@@ -195,7 +212,8 @@
         transform: translate(-50%, -50%);
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.05);
-        filter: blur(0.3px);
+        /* SIN BLUR EN LAS ÓRBITAS */
+        filter: none;
     }
 
     .node {
@@ -210,6 +228,7 @@
         transition: all 0.5s ease;
         z-index: 5;
         overflow: hidden;
+        /* BLUR SOLO EN EL FONDO DEL CÍRCULO */
         filter: blur(1.5px);
         border: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -252,9 +271,15 @@
         word-wrap: break-word;
         position: relative;
         z-index: 2;
+        /* TEXTO SIN BLUR - CLARO Y NÍTIDO */
+        filter: none !important;
+        -webkit-filter: none !important;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Colores de nodos con efectos GLOW/BLUR - colores más oscuros para contraste */
+    /* Colores de nodos con efectos GLOW/BLUR - SOLO EN EL FONDO */
     .intuition-node {
         background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(138, 43, 226, 0.8) 70%, transparent 100%);
         box-shadow: 
@@ -733,12 +758,21 @@
         initCanvas();
         updateTransform();
         
-        // Ocultar manualmente elementos con "CONCEPTUAL"
+        // Limpiar cualquier texto extra que pueda aparecer
         setTimeout(() => {
-            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
-                if (el.textContent && el.textContent.includes('CONCEPTUAL')) {
+            // Ocultar headers que contengan "Conceptual"
+            const allElements = document.querySelectorAll('*');
+            allElements.forEach(el => {
+                if (el.textContent && (
+                    el.textContent.includes('Conceptual') || 
+                    el.textContent.includes('CONCEPTUAL') ||
+                    el.textContent.includes('conceptual')
+                )) {
                     el.style.display = 'none';
                     el.style.visibility = 'hidden';
+                    el.style.height = '0';
+                    el.style.margin = '0';
+                    el.style.padding = '0';
                 }
             });
         }, 100);
