@@ -1670,7 +1670,7 @@ function showEvalCollective(n) {
 
 <!-- Tarjeta de introducción SIN FONDO -->
 <div style="margin: 2rem 0;">
-    <p style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+    <p style="font-size: 1 rem; line-height: 1.6; margin: 0;">
         This project began as an exploration of hostile design in Barcelona, but it unfolded into something far more complex: a confrontation with the limits of aesthetic order, with the politics of public space, and with my own assumptions about agency, participation, and care.
     </p>
 </div>
@@ -1783,7 +1783,7 @@ function showEvalCollective(n) {
 <!-- Columna derecha -->
  <div style="background: #f0e8f8; border-radius: 8px; padding: 2rem;">
             <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #2c3e50;">Horizontal Participation</h4>
-            <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.5rem;">
+            <p style="font-size: 1 rem; line-height: 1.5; margin-bottom: 1.5rem;">
                 This was the first moment in the project where participation felt truly horizontal.
                 Not because pigeons interacted with my prototype, but because <strong>I interacted with their world</strong>, through attention, patience, and relational humility.
             </p>
@@ -1798,9 +1798,8 @@ function showEvalCollective(n) {
 
 <!-- Cita importante -->
 <div style="text-align: center; margin: 3rem 0; padding: 2.5rem; border-radius: 12px; position: relative;">
-    <div style="font-size: 5rem; position: absolute; top: -10px; left: 20px;">"</div>
-    <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 300; margin: 0 0 1rem 0; ">
-        Through this, I learned that collective action does not require interaction; it requires <span style="font-weight: bold;">responsiveness</span>.
+    <p style="font-size: 1.3rem; line-height: 1.6; font-weight: 300; margin: 0 0 1rem 0; ">
+        Through this, I learned that collective action does not require interaction; it requires 
     </p>
     <p style="font-size: 1.3rem;">
         And responsiveness begins with observation, not intervention.
@@ -1833,7 +1832,7 @@ function showEvalCollective(n) {
             </div>
             <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">Design Shapes Memory</h4>
             <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
-                Hostile design shapes more than space—it shapes memory, movement, and trust across species.
+                Hostile design shapes more than space, it shapes memory, movement, and trust across species.
             </p>
         </div>
         
@@ -1859,7 +1858,7 @@ function showEvalCollective(n) {
             </div>
             <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">Agency as Withdrawal</h4>
             <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
-                Non-human agency often appears as withdrawal, silence, or hesitation—forms of resistance that must be learned to recognize.
+                Non-human agency often appears as withdrawal, silence, or hesitation, forms of resistance that must be learned to recognize.
             </p>
         </div>
         
@@ -1886,7 +1885,7 @@ function showEvalCollective(n) {
                 If the earlier actions exposed violence, the final collective action taught me about <strong>repair</strong>.
             </p>
             <p style="font-size: 1.1rem; line-height: 1.6;">
-                Not the romantic idea of "inviting nature back," but the more honest recognition that trust cannot be manufactured instantly, and that care is a slow, subtle, and unfinished process.
+                Not the romantic idea of "inviting nature back", but the more honest recognition that trust cannot be manufactured instantly, and that care is a slow, subtle, and unfinished process.
             </p>
         </div>
         <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f1c40f;">
