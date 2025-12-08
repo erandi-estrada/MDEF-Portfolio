@@ -15,14 +15,15 @@
         --actions-color: #ff5e7d;
         --bee-color: #00d8a7;
         --fieldwork-color: #ff8a65;
-        --bg-dark: #0a0e17;
-        --text-light: #f0f4ff;
+        --bg-light: #f8fafc;
+        --text-dark: #1a1a1a;
+        --border-light: #e2e8f0;
     }
 
     body {
         font-family: 'Montserrat', sans-serif;
-        background-color: var(--bg-dark);
-        color: var(--text-light);
+        background-color: var(--bg-light);
+        color: var(--text-dark);
         margin: 0;
         padding: 0;
         height: 100vh;
@@ -32,11 +33,12 @@
     /* ===== MENÚ SIMPLE ===== */
     .menu-container {
         width: 100%;
-        background: rgba(10, 14, 23, 0.95);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: white;
+        border-bottom: 1px solid var(--border-light);
         padding: 15px 40px;
         position: relative;
         z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     .custom-header-menu {
@@ -47,7 +49,7 @@
     }
 
     .custom-header-menu a {
-        color: var(--text-light);
+        color: var(--text-dark);
         text-decoration: none;
         font-weight: 500;
         font-size: 1rem;
@@ -68,30 +70,7 @@
         height: calc(100vh - 73px); /* Altura total menos menú */
         position: relative;
         overflow: hidden;
-        background: var(--bg-dark);
-    }
-
-    /* ===== FONDO DE ESTRELLAS ===== */
-    #stars {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-
-    .star {
-        position: absolute;
-        background-color: white;
-        border-radius: 50%;
-        opacity: 0;
-        animation: twinkle 5s infinite;
-    }
-
-    @keyframes twinkle {
-        0%, 100% { opacity: 0.1; }
-        50% { opacity: 0.8; }
+        background: var(--bg-light);
     }
 
     /* ===== GALAXIA Y CANVAS ===== */
@@ -127,7 +106,7 @@
         height: 400px;
         border-radius: 50%;
         background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.4) 70%, transparent 100%);
-        box-shadow: 0 0 100px rgba(0, 198, 255, 0.8);
+        box-shadow: 0 0 60px rgba(0, 198, 255, 0.4);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -138,7 +117,7 @@
 
     .central-node:hover {
         transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 150px rgba(0, 198, 255, 1);
+        box-shadow: 0 0 100px rgba(0, 198, 255, 0.6);
     }
 
     .central-node-content {
@@ -165,7 +144,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .node {
@@ -199,38 +178,39 @@
     /* Colores de nodos */
     .intuition-node {
         background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 50px rgba(185, 103, 255, 0.9);
+        box-shadow: 0 0 40px rgba(185, 103, 255, 0.6);
     }
 
     .question-node {
-        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
+        background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.9) 70%, transparent 100%);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .thematic-node {
         background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 50px rgba(255, 179, 71, 0.9);
+        box-shadow: 0 0 40px rgba(255, 179, 71, 0.6);
     }
 
     .action-node {
         background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 50px rgba(255, 94, 125, 0.9);
+        box-shadow: 0 0 40px rgba(255, 94, 125, 0.6);
     }
 
     .bee-node {
         background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 50px rgba(0, 216, 167, 0.9);
+        box-shadow: 0 0 40px rgba(0, 216, 167, 0.6);
     }
 
     .fieldwork-node {
         background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 50px rgba(255, 138, 101, 0.9);
+        box-shadow: 0 0 40px rgba(255, 138, 101, 0.6);
     }
 
     .node:hover {
-        transform: scale(1.15);
+        transform: scale(1.15) translate(-50%, -50%);
         z-index: 20;
-        box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
     }
 
     /* ===== PANEL DE INFORMACIÓN ===== */
@@ -239,12 +219,11 @@
         top: 100px;
         right: 20px;
         width: 400px;
-        background: rgba(10, 14, 23, 0.95);
-        backdrop-filter: blur(15px);
+        background: white;
         border-radius: 15px;
         padding: 25px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-light);
         z-index: 1000;
         display: none;
     }
@@ -265,7 +244,7 @@
         margin-bottom: 15px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: #ffffff;
+        color: var(--text-dark);
         line-height: 1.3;
     }
 
@@ -283,7 +262,7 @@
     .panel-text {
         font-size: 1.05rem;
         line-height: 1.7;
-        color: #a0a8c9;
+        color: #4a5568;
         margin-bottom: 25px;
     }
 
@@ -291,9 +270,9 @@
         position: absolute;
         top: 15px;
         right: 15px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.05);
         border: none;
-        color: #a0a8c9;
+        color: #718096;
         font-size: 1.5rem;
         cursor: pointer;
         width: 40px;
@@ -305,8 +284,8 @@
     }
 
     .panel-close:hover {
-        background: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
+        background: rgba(0, 0, 0, 0.1);
+        color: var(--text-dark);
         transform: rotate(90deg);
     }
 
@@ -317,14 +296,14 @@
         right: 20px;
         text-align: right;
         font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(0, 0, 0, 0.6);
         z-index: 1000;
-        background: rgba(10, 14, 23, 0.3);
+        background: white;
         padding: 10px 15px;
         border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-light);
         max-width: 250px;
-        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 </style>
 
@@ -338,8 +317,6 @@
 </div>
 
 <div class="map-container">
-    <div id="stars"></div>
-    
     <div id="galaxy">
         <canvas id="galaxy-canvas"></canvas>
         
@@ -447,26 +424,6 @@
     let galaxy = document.getElementById('galaxy');
     let mapContainer = document.querySelector('.map-container');
 
-    // Inicializar estrellas
-    function initStars() {
-        const starsContainer = document.getElementById('stars');
-        starsContainer.innerHTML = '';
-        
-        for (let i = 0; i < 150; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            
-            const size = Math.random() * 3 + 1;
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.animationDelay = `${Math.random() * 5}s`;
-            
-            starsContainer.appendChild(star);
-        }
-    }
-
     // Crear nodos
     function createOrbitalNodes() {
         const orbits = [
@@ -536,7 +493,7 @@
         switch(nodeData.category) {
             case 'Core Concept': color = '#00c6ff'; break;
             case 'Intuitions': color = '#b967ff'; break;
-            case 'Motor Questions': color = '#ffffff'; break;
+            case 'Motor Questions': color = '#333333'; break;
             case 'Thematic Fields': color = '#ffb347'; break;
             case 'Actions': color = '#ff5e7d'; break;
             case 'Bee Project': color = '#00d8a7'; break;
@@ -585,9 +542,10 @@
             const nodeX = (rect.left + rect.width/2 - galaxyRect.left) / scale;
             const nodeY = (rect.top + rect.height/2 - galaxyRect.top) / scale;
             
-            let color = 'rgba(255, 255, 255, 0.2)';
-            if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.3)';
-            else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.2)';
+            let color = 'rgba(0, 0, 0, 0.08)';
+            if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.2)';
+            else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.1)';
+            else if (node.classList.contains('action-node')) color = 'rgba(255, 94, 125, 0.1)';
             
             ctx.beginPath();
             ctx.moveTo(centerX, centerY);
@@ -648,7 +606,6 @@
 
     // Inicializar
     document.addEventListener('DOMContentLoaded', () => {
-        initStars();
         createOrbitalNodes();
         initCanvas();
         updateTransform();
