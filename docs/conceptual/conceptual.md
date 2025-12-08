@@ -9,13 +9,9 @@
     width: 100% !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
-    background-color: #fefaf0 !important; /* Fondo beige igual que otras páginas */
+    background-color: #fefaf0 !important;
     border-bottom: 1px solid #e8dfd0 !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    z-index: 99999 !important;
-    height: 60px !important;
+    position: relative !important;
 }
 
 * {
@@ -50,7 +46,7 @@ body {
     position: relative;
 }
 
-/* MENÚ - CON ESPACIO ARRIBA */
+/* MENÚ - IDÉNTICO A OTRAS PÁGINAS */
 .menu-container {
     display: flex;
     justify-content: center;
@@ -58,11 +54,7 @@ body {
     width: 100%;
     background-color: #fefaf0;
     border-bottom: 1px solid #e8dfd0;
-    position: fixed;
-    top: 60px; /* Añadir espacio arriba */
-    left: 0;
-    z-index: 1000;
-    height: 60px;
+    position: relative;
     padding: 1rem 0;
     margin: 0;
 }
@@ -90,6 +82,15 @@ body {
     border-bottom-color: #1976d2;
 }
 
+/* Contenedor principal - AJUSTADO */
+.main-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 70px); /* Ajusta según el tamaño del menú */
+}
+
 /* Contenedor principal - DEBAJO DEL MENÚ */
 .main-container {
     flex: 1;
@@ -97,7 +98,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: calc(100vh - 60px); /* Restar altura del menú */
-    margin-top: 60px; /* Espacio para el menú fijo */
+    margin-top: 20px; /* Espacio para el menú fijo */
 }
 
 /* Fondo cósmico con estrellas - SOLO EN EL ÁREA DEL MAPA */
