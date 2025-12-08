@@ -1,3 +1,24 @@
+/* ===== FORZAR MENÚ VISIBLE ===== */
+.menu-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+}
+
+/* Ocultar CUALQUIER cosa que esté encima del menú */
+body > *:not(.menu-container):not(.main-container):not(.content-panel):not(.instructions) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.menu-container ~ * {
+    z-index: 1 !important;
+}
 <link rel="stylesheet" href="../stylesheets/mapa-galaxia.css">
 
 <style>
