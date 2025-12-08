@@ -271,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </video>
     </div>
     
- <!-- Columna derecha: Texto -->
- <div>
+<!-- Columna derecha: Texto -->
+  <div>
         <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Backstory:</h3>
         <p style="margin-bottom: 1.5rem;">
             Language is not a concept. It is a sentient collective intelligence. A long time ago,
@@ -281,35 +281,37 @@ document.addEventListener('DOMContentLoaded', () => {
             Perfect partnership.
         </p>
         
-<h4 style="margin: 2rem 0 1rem 0;">Collective intelligence:</h4>
+  <h4 style="margin: 2rem 0 1rem 0;">Collective intelligence:</h4>
         <p style="margin-bottom: 1rem;">
             Language is a collective intelligence that found organisms to serve as its hosts and
             collaborators. Each species manifests it differently based on their inherent limitations, yet none
             contains the whole.
         </p>
         
-<div style="margin: 1.5rem 0;">
-            <p style="margin-bottom: 0.5rem;">• Language lives in any organism that has the drive to communicate.</p>
-            <p style="margin-bottom: 0.5rem;">• It ignores how it is being used: the message, the form of communication, the length of its use.</p>
-            <p style="margin-bottom: 0.5rem;">• It attends to new forms of its use.</p>
-            <p style="margin-bottom: 0.5rem;">• Its wellbeing is measured by simply being used. The more unique the combination, the better.</p>
-            <p style="margin-bottom: 0.5rem;">• It hates grammar nazis.</p>
-            <p style="margin-bottom: 0.5rem;">• It gets sad when languages die (species agnostic).</p>
-        </div>
-        
- <h4 style="margin: 2rem 0 1rem 0;">Prototype:</h4>
+<h4 style="margin: 2rem 0 1rem 0;">Prototype:</h4>
         <p style="margin-bottom: 1rem;">
             A completely unique use of language to boost its wellbeing. (Think of it as offering a delicious
             dessert, or a tantalizing massage for language.)
         </p>
-        
-<div style="margin: 1.5rem 0 0 0;">
-            <p style="margin-bottom: 0.5rem;">• This structure supports the collective intelligence by giving it what it so desperately desires:
-            a unique combination of language that has never been used before.</p>
-            <p style="margin-bottom: 0.5rem;">• This structure avoids centering individuals by not requiring it to be understood by humans,
-            or any species, just language itself.</p>
-        </div>
     </div>
+</div>
+
+<!-- Puntos sobre Language - FUERA de las columnas -->
+<div style="margin: 2rem 0;">
+    <p style="margin-bottom: 0.5rem;">• Language lives in any organism that has the drive to communicate.</p>
+    <p style="margin-bottom: 0.5rem;">• It ignores how it is being used: the message, the form of communication, the length of its use.</p>
+    <p style="margin-bottom: 0.5rem;">• It attends to new forms of its use.</p>
+    <p style="margin-bottom: 0.5rem;">• Its wellbeing is measured by simply being used. The more unique the combination, the better.</p>
+    <p style="margin-bottom: 0.5rem;">• It hates grammar nazis.</p>
+    <p style="margin-bottom: 0.5rem;">• It gets sad when languages die (species agnostic).</p>
+</div>
+
+<!-- Puntos del prototype - FUERA de las columnas -->
+<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
+    <p style="margin-bottom: 0.5rem;">• This structure supports the collective intelligence by giving it what it so desperately desires:
+    a unique combination of language that has never been used before.</p>
+    <p style="margin-bottom: 0.5rem;">• This structure avoids centering individuals by not requiring it to be understood by humans,
+    or any species, just language itself.</p>
 </div>
 
 ## DAY 3 - Build an interface for an environmental intelligence that does not care about life
