@@ -299,12 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- Puntos sobre Language - FUERA de las columnas -->
 <div style="margin: 2rem 0;">
-    <p style="margin-bottom: 0.5rem;">• Language lives in any organism that has the drive to communicate.</p>
-    <p style="margin-bottom: 0.5rem;">• It ignores how it is being used: the message, the form of communication, the length of its use.</p>
-    <p style="margin-bottom: 0.5rem;">• It attends to new forms of its use.</p>
-    <p style="margin-bottom: 0.5rem;">• Its wellbeing is measured by simply being used. The more unique the combination, the better.</p>
-    <p style="margin-bottom: 0.5rem;">• It hates grammar nazis.</p>
-    <p style="margin-bottom: 0.5rem;">• It gets sad when languages die (species agnostic).</p>
+    <p style="margin-bottom: 0.5rem;">Language lives in any organism that has the drive to communicate. It ignores how it is being used: the message, the form of communication, the length of its use. It attends to new forms of its use. Its wellbeing is measured by simply being used. The more unique the combination, the better. It hates grammar nazis. It gets sad when languages die (species agnostic).</p>
 </div>
 
 <!-- Puntos del prototype - FUERA de las columnas -->
