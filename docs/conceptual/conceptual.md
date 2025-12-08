@@ -1,6 +1,25 @@
 <link rel="stylesheet" href="../stylesheets/mapa-galaxia.css">
 
 <style>
+/* ==== ESTO OCULTA "CONCEPTUAL" ==== */
+.md-header, .md-tabs, .md-sidebar, .md-nav__title, 
+h1:first-of-type, .md-typeset h1 {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+</style>
+
+<style>
 /* ===== FORZAR MENÚ VISIBLE Y CENTRADO ===== */
 .menu-container {
     display: flex !important;
