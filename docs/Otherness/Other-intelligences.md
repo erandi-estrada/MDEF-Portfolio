@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- Columna izquierda: Video -->
 <div>
         <video controls autoplay muted loop width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-          <source src="../../videos/day3.mp4" type="video/mp4">
+          <source src="../../videos/snake.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
     </div>
