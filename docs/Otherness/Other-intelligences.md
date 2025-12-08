@@ -362,3 +362,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
+    
+<!-- Columna izquierda: Video -->
+<div>
+        <video controls autoplay muted loop width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+          <source src="../../videos/day3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+    
+<!-- Columna derecha: Texto -->
+<div>
+        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Conceptual Statement:</h3>
+        <p style="margin-bottom: 1.5rem;">
+            Our Environmental Intelligence is a force of consumption that acts on all things in the universe agnostic of what they are.
+        </p>
+        <p style="margin-bottom: 1.5rem;">
+            Environmental intelligence is shaped by the fundamental existence of matter, yet it is destabilized by new creation and its own inherent failure to achieve its final purpose. Having no relationship to biology, it ignores everything. For this intelligence, a sense of wellbeing, when divorced from life, health, and ecology, is defined solely as the fulfillment of intention, a state of absolute self-consumption.
+        </p>
+        
+<h4 style="margin: 2rem 0 1rem 0;">The Prototype:</h4>
+        <p style="margin-bottom: 1rem;">
+            A friend (second environmental intelligence with the same aim), so they can consume each other.
+        </p>
+    </div>
+</div>
+
+<!-- Puntos con línea negra fuera de las columnas -->
+<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
+    <p style="margin-bottom: 0.5rem;">
+        This interface supports the intelligence by letting it complete the one act that has always evaded it: the consumption of itself and therefore ending consumption. Alone this is impossible, only together can they succeed.
+    </p>
+    <p style="margin-bottom: 0.5rem;">
+        This interface avoids centering life by not taking it into account at all.
+    </p>
+</div>
