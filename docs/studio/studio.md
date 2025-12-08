@@ -1473,7 +1473,7 @@ function showProtocolCollective(n) {
 
 <!-- Video abajo -->
 <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
-    <source src="../../videos/mapeado.mp4" type="video/mp4">
+    <source src="../../videos/palomas.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
