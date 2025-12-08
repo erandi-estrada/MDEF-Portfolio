@@ -50,7 +50,7 @@ body {
     position: relative;
 }
 
-/* MENÚ - CENTRADO COMO EN OTRAS PÁGINAS */
+/* MENÚ - CON ESPACIO ARRIBA */
 .menu-container {
     display: flex;
     justify-content: center;
@@ -59,11 +59,12 @@ body {
     background-color: #fefaf0;
     border-bottom: 1px solid #e8dfd0;
     position: fixed;
-    top: 0;
+    top: 20px; /* Añadir espacio arriba */
     left: 0;
     z-index: 1000;
     height: 60px;
     padding: 1rem 0;
+    margin: 0;
 }
 
 .custom-header-menu {
