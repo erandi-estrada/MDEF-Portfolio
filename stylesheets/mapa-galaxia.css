@@ -1,0 +1,389 @@
+/* ===== ELIMINAR COMPLETAMENTE EL HEADER ORIGINAL Y SIDEBARS ===== */
+.md-header {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.md-tabs {
+    display: none !important;
+}
+
+.md-sidebar {
+    display: none !important;
+}
+
+.md-sidebar--primary {
+    display: none !important;
+}
+
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+.md-header__button {
+    display: none !important;
+}
+
+/* ===== ELIMINAR MÁRGENES Y ESPACIOS ===== */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fefaf0 !important;
+    font-family: 'Be Vietnam', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.md-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* ===== MENÚ PERSONALIZADO ===== */
+.menu-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    background-color: #fefaf0 !important;
+    border-bottom: 1px solid #e8dfd0 !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+.custom-header-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.custom-header-menu a {
+    color: #2d3748 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-header-menu a:hover {
+    color: #1976d2 !important;
+    border-bottom-color: #1976d2 !important;
+}
+
+/* ===== CONTENIDO PRINCIPAL - SIN ELEMENTOS EXTRAS ===== */
+.md-main {
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.md-main__inner {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.md-content {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* ===== CONTENEDOR PRINCIPAL CON MISMO ANCHO QUE CARRUSEL ===== */
+.content-wrapper {
+    max-width: 1400px; /* Mismo ancho máximo para todo */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== ENCABEZADO CON MISMO ANCHO ===== */
+.header-container {
+    max-width: none !important;
+    margin: 2rem 0 3rem 0 !important;
+    padding: 0 !important;
+}
+
+/* Título más pequeño */
+.main-title {
+    font-size: 2.5rem !important; /* Reducido de 3.5rem */
+    font-weight: 800 !important;
+    color: #2d3748 !important;
+    text-align: left !important;
+    margin: 0 0 1.5rem 0 !important;
+    line-height: 1.1 !important;
+    padding: 0 !important;
+    max-width: 1400px; /* Mismo ancho que carrusel */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Texto de bienvenida más pequeño */
+.welcome-text {
+    color: #4a5568 !important;
+    font-size: 1rem !important; /* Reducido de 1.2rem */
+    line-height: 1.6 !important;
+    text-align: justify !important;
+    margin: 0 auto !important; /* Centrado */
+    max-width: 1400px !important; /* MISMO ANCHO QUE CARRUSEL */
+    text-justify: inter-word !important;
+    padding: 0 !important;
+}
+
+.welcome-text p {
+    text-align: justify !important;
+    margin-bottom: 1.5rem !important;
+    text-justify: inter-word !important;
+}
+
+/* ===== CARRUSEL CON MISMO ANCHO QUE TEXTO ===== */
+.carousel-container {
+    position: relative;
+    max-width: 1400px !important; /* MISMO ANCHO QUE TEXTO */
+    margin: 0 auto 4rem auto !important; /* Centrado */
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.cards-carousel {
+    display: flex;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cards-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Todas las tarjetas del MISMO tamaño */
+.cards-carousel .card {
+    background: white;
+    border-radius: 0 !important;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    height: 400px;
+    width: 380px !important;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 0 !important;
+}
+
+.cards-carousel .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cards-carousel .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.11s ease;
+}
+
+/* ===== EFECTOS HOVER EN LAS TARJETAS ===== */
+/* Colores diferentes para cada tarjeta al hover */
+.cards-carousel .card:nth-child(1):hover::before {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.85) 0%, rgba(33, 150, 243, 0.75) 100%) !important;
+}
+
+.cards-carousel .card:nth-child(2):hover::before {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.85) 0%, rgba(186, 104, 200, 0.75) 100%) !important;
+}
+
+.cards-carousel .card:nth-child(3):hover::before {
+    background: linear-gradient(135deg, rgba(0, 150, 136, 0.85) 0%, rgba(77, 182, 172, 0.75) 100%) !important;
+}
+
+.cards-carousel .card:nth-child(4):hover::before {
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.85) 0%, rgba(255, 138, 101, 0.75) 100%) !important;
+}
+
+/* DIGI - Cambiado a ROSA VIBRANTE */
+.cards-carousel .card:nth-child(5):hover::before {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.85) 0%, rgba(240, 98, 146, 0.75) 100%) !important;
+}
+
+/* STUDIO - Cambiado a AMARILLO VIBRANTE */
+.cards-carousel .card:nth-child(6):hover::before {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.85) 0%, rgba(255, 213, 79, 0.75) 100%) !important;
+}
+
+/* Superposición base */
+.cards-carousel .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 118, 210, 0.85);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+.cards-carousel .card:hover::before {
+    opacity: 0.9;
+}
+
+.cards-carousel .card:hover img {
+    transform: scale(1.07);
+}
+
+/* TEXTO MEJOR ESPACIADO Y CENTRADO */
+.cards-carousel .card h3,
+.cards-carousel .card p {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center !important;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.7s ease;
+    padding: 0 2rem; /* Más padding lateral */
+    color: #ffffff !important;
+    box-sizing: border-box;
+}
+
+.cards-carousel .card h3 {
+    top: 30% !important; /* Más arriba */
+    font-size: 1.6rem !important; /* Un poco más grande */
+    font-weight: 700;
+    margin: 0 !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    line-height: 1.3 !important;
+}
+
+.cards-carousel .card p {
+    top: 50% !important; /* Más separado del título */
+    font-size: 1.1rem !important; /* Un poco más grande */
+    line-height: 1.5 !important; /* Mejor interlineado */
+    margin: 0;
+    font-weight: 400;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    padding-top: 1rem !important; /* Espacio extra arriba del párrafo */
+}
+
+.cards-carousel .card:hover h3,
+.cards-carousel .card:hover p {
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1480px) {
+    .content-wrapper {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    
+    .main-title {
+        max-width: 1200px !important;
+    }
+    
+    .welcome-text {
+        max-width: 1200px !important;
+    }
+    
+    .carousel-container {
+        max-width: 1200px !important;
+    }
+}
+
+@media (max-width: 968px) {
+    .content-wrapper {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    
+    .main-title {
+        font-size: 2.2rem !important;
+        max-width: 100% !important;
+    }
+    
+    .welcome-text {
+        font-size: 0.95rem !important;
+        max-width: 100% !important;
+    }
+    
+    .carousel-container {
+        max-width: 100% !important;
+    }
+    
+    .cards-carousel .card {
+        height: 350px;
+        width: 320px !important;
+    }
+    
+    .cards-carousel .card h3 {
+        font-size: 1.3rem !important;
+        top: 45% !important;
+    }
+    
+    .cards-carousel .card p {
+        font-size: 0.9rem !important;
+        top: 60% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .main-title {
+        font-size: 2rem !important;
+    }
+    
+    .welcome-text {
+        font-size: 0.9rem !important;
+        text-align: left !important;
+    }
+    
+    .welcome-text p {
+        text-align: left !important;
+    }
+    
+    .cards-carousel .card {
+        height: 300px;
+        width: 280px !important;
+    }
+    
+    .cards-carousel .card h3 {
+        font-size: 1.2rem !important;
+        top: 45% !important;
+    }
+    
+    .cards-carousel .card p {
+        font-size: 0.85rem !important;
+        top: 60% !important;
+    }
+}
