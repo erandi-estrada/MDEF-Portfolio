@@ -1,4 +1,19 @@
 <style>
+    /* ===== OCULTAR TODOS LOS ELEMENTOS "CONCEPTUAL" ===== */
+    h1:contains("Conceptual"),
+    h2:contains("Conceptual"),
+    h3:contains("Conceptual"),
+    .md-content h1:first-child,
+    .md-content h2:first-child,
+    .md-content h3:first-child {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+    }
+    
     /* ===== ESTILOS BÁSICOS PARA EL MAPA GALAXIA ===== */
     
     * {
@@ -25,6 +40,7 @@
         padding: 0;
         height: 100vh;
         overflow: hidden;
+        position: relative;
     }
 
     /* ===== MENÚ SIMPLE ===== */
@@ -34,6 +50,7 @@
         padding: 20px 40px;
         position: relative;
         z-index: 1000;
+        backdrop-filter: blur(5px);
     }
 
     .custom-header-menu {
@@ -54,6 +71,7 @@
         position: relative;
         transition: all 0.3s ease;
         opacity: 0.8;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .custom-header-menu a:hover {
@@ -96,6 +114,7 @@
         transform-origin: center center;
         transition: transform 0.1s ease;
         z-index: 2;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
     }
 
     #galaxy-canvas {
@@ -108,7 +127,7 @@
         z-index: 3;
     }
 
-    /* ===== NODO CENTRAL ===== */
+    /* ===== NODO CENTRAL CON EFECTO GLOW/BLUR ===== */
     .central-node {
         position: absolute;
         top: 50%;
@@ -119,29 +138,55 @@
         border-radius: 50%;
         background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.4) 70%, transparent 100%);
         box-shadow: 
-            0 0 60px rgba(0, 198, 255, 0.4),
-            0 0 120px rgba(0, 198, 255, 0.2),
-            inset 0 0 40px rgba(255, 255, 255, 0.1);
+            0 0 100px 50px rgba(0, 198, 255, 0.6),
+            0 0 200px 80px rgba(0, 198, 255, 0.3),
+            0 0 300px 120px rgba(0, 198, 255, 0.15),
+            inset 0 0 60px rgba(255, 255, 255, 0.3);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         z-index: 10;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
+        filter: blur(1px);
     }
 
     .central-node:hover {
         transform: translate(-50%, -50%) scale(1.08);
         box-shadow: 
-            0 0 80px rgba(0, 198, 255, 0.6),
-            0 0 160px rgba(0, 198, 255, 0.3),
-            inset 0 0 50px rgba(255, 255, 255, 0.15);
+            0 0 120px 60px rgba(0, 198, 255, 0.8),
+            0 0 240px 100px rgba(0, 198, 255, 0.4),
+            0 0 360px 150px rgba(0, 198, 255, 0.2),
+            inset 0 0 80px rgba(255, 255, 255, 0.4);
+        filter: blur(0.5px);
+    }
+
+    .central-node::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        background: radial-gradient(circle, var(--core-color) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.3;
+        filter: blur(30px);
+        animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.1); }
     }
 
     .central-node-content {
         text-align: center;
         padding: 30px;
         width: 100%;
+        position: relative;
+        z-index: 2;
     }
 
     .central-node-title {
@@ -151,7 +196,9 @@
         letter-spacing: 2px;
         margin-bottom: 15px;
         color: #ffffff;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 
+            0 2px 10px rgba(0, 0, 0, 0.5),
+            0 0 20px rgba(0, 198, 255, 0.5);
         line-height: 1.2;
     }
 
@@ -163,6 +210,7 @@
         transform: translate(-50%, -50%);
         border-radius: 50%;
         border: 1px solid rgba(255, 255, 255, 0.05);
+        filter: blur(0.5px);
     }
 
     .node {
@@ -174,9 +222,34 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         z-index: 5;
         overflow: hidden;
+        filter: blur(2px);
+    }
+
+    .node::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        filter: blur(20px);
+    }
+
+    .node:hover {
+        transform: scale(1.15) translate(-50%, -50%);
+        z-index: 20;
+        filter: blur(1px);
+    }
+
+    .node:hover::before {
+        opacity: 0.6;
     }
 
     .node-title {
@@ -191,44 +264,76 @@
         line-height: 1.3;
         width: 100%;
         word-wrap: break-word;
+        position: relative;
+        z-index: 2;
     }
 
-    /* Colores de nodos */
+    /* Colores de nodos con efectos GLOW/BLUR */
     .intuition-node {
         background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(185, 103, 255, 0.5);
+        box-shadow: 
+            0 0 60px 30px rgba(185, 103, 255, 0.6),
+            0 0 100px 50px rgba(185, 103, 255, 0.3);
+    }
+
+    .intuition-node::before {
+        background: radial-gradient(circle, var(--intuitions-color) 0%, transparent 70%);
     }
 
     .question-node {
         background: radial-gradient(circle, var(--questions-color) 0%, rgba(255, 255, 255, 0.9) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        box-shadow: 
+            0 0 60px 30px rgba(255, 255, 255, 0.6),
+            0 0 100px 50px rgba(255, 255, 255, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .question-node::before {
+        background: radial-gradient(circle, var(--questions-color) 0%, transparent 70%);
     }
 
     .thematic-node {
         background: radial-gradient(circle, var(--thematic-color) 0%, rgba(255, 179, 71, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(255, 179, 71, 0.5);
+        box-shadow: 
+            0 0 60px 30px rgba(255, 179, 71, 0.6),
+            0 0 100px 50px rgba(255, 179, 71, 0.3);
+    }
+
+    .thematic-node::before {
+        background: radial-gradient(circle, var(--thematic-color) 0%, transparent 70%);
     }
 
     .action-node {
         background: radial-gradient(circle, var(--actions-color) 0%, rgba(255, 94, 125, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(255, 94, 125, 0.5);
+        box-shadow: 
+            0 0 60px 30px rgba(255, 94, 125, 0.6),
+            0 0 100px 50px rgba(255, 94, 125, 0.3);
+    }
+
+    .action-node::before {
+        background: radial-gradient(circle, var(--actions-color) 0%, transparent 70%);
     }
 
     .bee-node {
         background: radial-gradient(circle, var(--bee-color) 0%, rgba(0, 216, 167, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(0, 216, 167, 0.5);
+        box-shadow: 
+            0 0 60px 30px rgba(0, 216, 167, 0.6),
+            0 0 100px 50px rgba(0, 216, 167, 0.3);
+    }
+
+    .bee-node::before {
+        background: radial-gradient(circle, var(--bee-color) 0%, transparent 70%);
     }
 
     .fieldwork-node {
         background: radial-gradient(circle, var(--fieldwork-color) 0%, rgba(255, 138, 101, 0.8) 70%, transparent 100%);
-        box-shadow: 0 0 40px rgba(255, 138, 101, 0.5);
+        box-shadow: 
+            0 0 60px 30px rgba(255, 138, 101, 0.6),
+            0 0 100px 50px rgba(255, 138, 101, 0.3);
     }
 
-    .node:hover {
-        transform: scale(1.15) translate(-50%, -50%);
-        z-index: 20;
-        box-shadow: 0 0 60px rgba(255, 255, 255, 0.4);
+    .fieldwork-node::before {
+        background: radial-gradient(circle, var(--fieldwork-color) 0%, transparent 70%);
     }
 
     /* ===== PANEL DE INFORMACIÓN ===== */
@@ -238,7 +343,7 @@
         right: 20px;
         width: 400px;
         background: rgba(10, 14, 23, 0.85);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(20px);
         border-radius: 15px;
         padding: 25px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -301,6 +406,7 @@
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
     }
 
     .panel-close:hover {
@@ -323,13 +429,36 @@
         border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         max-width: 220px;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
         opacity: 0.7;
         transition: opacity 0.3s ease;
     }
 
     .instructions:hover {
         opacity: 1;
+    }
+
+    /* ===== ESCONDER TEXTOS EXTRANOS QUE APARECEN ===== */
+    body > *:not(.menu-container):not(.map-container):not(.content-panel):not(.instructions),
+    p:contains("CONCEPTUAL"),
+    div:contains("CONCEPTUAL"),
+    span:contains("CONCEPTUAL"),
+    h1, h2, h3, h4, h5, h6 {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+    }
+
+    /* Permitir solo nuestros elementos */
+    .menu-container,
+    .map-container,
+    .content-panel,
+    .instructions {
+        display: block !important;
+        visibility: visible !important;
     }
 </style>
 
@@ -570,15 +699,16 @@
             const nodeX = (rect.left + rect.width/2 - galaxyRect.left) / scale;
             const nodeY = (rect.top + rect.height/2 - galaxyRect.top) / scale;
             
-            let color = 'rgba(255, 255, 255, 0.1)';
-            if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.2)';
-            else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.15)';
+            let color = 'rgba(255, 255, 255, 0.08)';
+            if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.15)';
+            else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.12)';
+            else if (node.classList.contains('action-node')) color = 'rgba(255, 94, 125, 0.12)';
             
             ctx.beginPath();
             ctx.moveTo(centerX, centerY);
             ctx.lineTo(nodeX, nodeY);
             ctx.strokeStyle = color;
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 1.5;
             ctx.stroke();
         });
     }
@@ -636,6 +766,17 @@
         createOrbitalNodes();
         initCanvas();
         updateTransform();
+        
+        // Ocultar cualquier elemento que contenga "CONCEPTUAL"
+        document.querySelectorAll('*').forEach(el => {
+            if (el.textContent && el.textContent.includes('CONCEPTUAL')) {
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+                el.style.height = '0';
+                el.style.margin = '0';
+                el.style.padding = '0';
+            }
+        });
         
         setTimeout(() => {
             showNodeContent(nodesData.central);
