@@ -1,25 +1,4 @@
 <style>
-    /* REGLA PRINCIPAL: Ocultar cualquier elemento que contenga "CONCEPTUAL" */
-    body :is(h1, h2, h3, h4, .title, .header, .conceptual):contains("CONCEPTUAL"),
-    body :is(h1, h2, h3, h4, .title, .header, .conceptual):contains("Conceptual") {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        font-size: 0 !important;
-        line-height: 0 !important;
-    }
-
-    /* También ocultar elementos que puedan ser padres de títulos */
-    div:has(> h1:contains("CONCEPTUAL")),
-    div:has(> h2:contains("CONCEPTUAL")),
-    section:has(> h1:contains("CONCEPTUAL")),
-    header:has(> h1:contains("CONCEPTUAL")) {
-        display: none !important;
-        height: 0 !important;
-    }
-
     * {
         margin: 0;
         padding: 0;
@@ -107,10 +86,10 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 70px); /* Restar altura del menú */
     }
 
-    /* Fondo cósmico con estrellas */
+    /* Fondo cósmico con estrellas - SOLO EN EL ÁREA DEL MAPA */
     #stars {
         position: absolute;
         top: 0;
@@ -134,7 +113,7 @@
         50% { opacity: 0.8; }
     }
 
-    /* Viewport para navegación */
+    /* Viewport para navegación - DENTRO DEL CONTENEDOR PRINCIPAL */
     .viewport {
         position: absolute;
         top: 0;
@@ -173,7 +152,7 @@
         pointer-events: none;
     }
 
-    /* Nodo central */
+    /* Nodo central - ENORMEMENTE GRANDE */
     .central-node {
         position: absolute;
         top: 50%;
@@ -224,7 +203,7 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Nodos */
+    /* Nodos - ENORMES */
     .node {
         position: absolute;
         width: 220px;
@@ -295,7 +274,7 @@
     /* Panel de contenido */
     .content-panel {
         position: fixed;
-        top: 100px;
+        top: 100px; /* Debajo del menú */
         right: 20px;
         width: 400px;
         background: rgba(10, 14, 23, 0.95);
@@ -388,9 +367,115 @@
         max-width: 250px;
         backdrop-filter: blur(5px);
     }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        #galaxy {
+            width: 2500px;
+            height: 2500px;
+        }
+        
+        .central-node {
+            width: 350px;
+            height: 350px;
+        }
+        
+        .node {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .content-panel {
+            width: 350px;
+        }
+        
+        .menu-container {
+            padding: 15px 20px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        #galaxy {
+            width: 2000px;
+            height: 2000px;
+        }
+        
+        .central-node {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .node {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .content-panel {
+            width: calc(100% - 40px);
+            max-width: 400px;
+            top: 90px;
+        }
+        
+        .instructions {
+            display: none;
+        }
+        
+        .custom-header-menu {
+            gap: 20px;
+        }
+        
+        .custom-header-menu a {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .main-container {
+            height: calc(100vh - 60px);
+        }
+        
+        .menu-container {
+            padding: 12px 15px;
+        }
+        
+        .custom-header-menu {
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .custom-header-menu a {
+            font-size: 0.85rem;
+        }
+        
+        .content-panel {
+            left: 10px;
+            right: 10px;
+            max-width: none;
+            top: 80px;
+        }
+        
+        .central-node {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .node {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .central-node-title {
+            font-size: 2rem;
+        }
+        
+        .node-title {
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
 </style>
 
-<!-- Aquí empieza el HTML -->
+<!-- MENÚ (ARRIBA) -->
 <div class="menu-container">
     <div class="custom-header-menu">
         <a href="../..">MDEF</a>
@@ -399,7 +484,7 @@
     </div>
 </div>
 
-<!-- Contenedor principal con el mapa -->
+<!-- CONTENEDOR PRINCIPAL (CON EL MAPA) -->
 <div class="main-container">
     <div id="stars"></div>
     
@@ -436,7 +521,7 @@
 </div>
 
 <script>
-    // JavaScript permanece igual que en la versión anterior
+    // Datos para todos los nodos
     const nodesData = {
         central: {
             id: "central",
@@ -506,6 +591,7 @@
         ]
     };
 
+    // Variables globales
     let canvas, ctx;
     let scale = 0.4;
     let offsetX = 0, offsetY = 0;
@@ -514,6 +600,7 @@
     let galaxy = document.getElementById('galaxy');
     let viewport = document.getElementById('viewport');
 
+    // Inicializar estrellas
     function initStars() {
         const starsContainer = document.getElementById('stars');
         starsContainer.innerHTML = '';
@@ -533,6 +620,7 @@
         }
     }
 
+    // Crear nodos orbitales
     function createOrbitalNodes() {
         const orbits = [
             {radius: 600, nodes: nodesData.intuitions, className: 'intuition-node'},
@@ -586,6 +674,7 @@
         });
     }
 
+    // Mostrar contenido del nodo
     function showNodeContent(nodeData) {
         const panel = document.getElementById('contentPanel');
         const panelTitle = document.getElementById('panelTitle');
@@ -614,10 +703,12 @@
         panel.classList.add('active');
     }
 
+    // Cerrar panel
     document.getElementById('closePanel').addEventListener('click', () => {
         document.getElementById('contentPanel').classList.remove('active');
     });
 
+    // Inicializar canvas para conexiones
     function initCanvas() {
         canvas = document.getElementById('galaxy-canvas');
         ctx = canvas.getContext('2d');
@@ -632,6 +723,7 @@
         resizeCanvas();
     }
 
+    // Dibujar conexiones
     function drawConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
@@ -667,11 +759,13 @@
         ctx.stroke();
     }
 
+    // Actualizar transformación de la galaxia
     function updateTransform() {
         galaxy.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})`;
         drawConnections();
     }
 
+    // Manejar zoom
     function handleWheel(e) {
         e.preventDefault();
         
@@ -694,6 +788,7 @@
         updateTransform();
     }
 
+    // Manejar arrastre
     function handleMouseDown(e) {
         if (e.target === viewport || e.target.classList.contains('orbit')) {
             isDragging = true;
@@ -719,6 +814,7 @@
         viewport.classList.remove('grabbing');
     }
 
+    // Resetear vista al centro
     function resetView() {
         scale = 0.4;
         offsetX = 0;
@@ -726,6 +822,7 @@
         updateTransform();
     }
 
+    // Inicializar la página
     document.addEventListener('DOMContentLoaded', () => {
         initStars();
         createOrbitalNodes();
@@ -753,20 +850,5 @@
         });
         
         document.getElementById('closePanel').addEventListener('mousedown', (e) => e.stopPropagation());
-        
-        // Script adicional para ocultar elementos "CONCEPTUAL" que ya existían
-        setTimeout(() => {
-            // Buscar y ocultar cualquier elemento que contenga "CONCEPTUAL"
-            const elements = document.querySelectorAll('*');
-            elements.forEach(el => {
-                if (el.textContent && el.textContent.includes('CONCEPTUAL')) {
-                    el.style.display = 'none';
-                    el.style.visibility = 'hidden';
-                    el.style.height = '0';
-                    el.style.margin = '0';
-                    el.style.padding = '0';
-                }
-            });
-        }, 500);
     });
 </script>
