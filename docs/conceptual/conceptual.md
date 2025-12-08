@@ -1,75 +1,5 @@
 <style>
-    /* ==== REGLAS PARA INTEGRARSE CON TU CSS EXISTENTE ==== */
-    
-    /* 1. OCULTAR CUALQUIER ELEMENTO "CONCEPTUAL" que ya exista */
-    h1:first-of-type:not(.main-title):not(.central-node-title):not(.panel-title),
-    h1.conceptual,
-    h1[class*="conceptual"],
-    h1:contains("CONCEPTUAL"),
-    h1:contains("Conceptual") {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        font-size: 0 !important;
-        line-height: 0 !important;
-        opacity: 0 !important;
-        border: none !important;
-        overflow: hidden !important;
-    }
-    
-    /* 2. Asegurarse que nuestro mapa no sea afectado por tu CSS */
-    #galaxy-map-container {
-        all: initial !important;
-        font-family: 'Montserrat', sans-serif !important;
-    }
-    
-    #galaxy-map-container * {
-        all: unset !important;
-        font-family: 'Montserrat', sans-serif !important;
-    }
-    
-    /* 3. Resetear estilos para nuestro contenedor específico */
-    .galaxy-map-wrapper {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-        height: calc(100vh - 70px) !important;
-        position: relative !important;
-        background: #0a0e17 !important;
-        border: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        overflow: hidden !important;
-        z-index: 1 !important;
-        display: block !important;
-    }
-    
-    /* 4. Prevenir que tu CSS afecte nuestros elementos */
-    .galaxy-map-wrapper h1,
-    .galaxy-map-wrapper h2,
-    .galaxy-map-wrapper h3,
-    .galaxy-map-wrapper h4,
-    .galaxy-map-wrapper p,
-    .galaxy-map-wrapper div,
-    .galaxy-map-wrapper span {
-        margin: 0 !important;
-        padding: 0 !important;
-        font-family: 'Montserrat', sans-serif !important;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        max-width: none !important;
-        color: inherit !important;
-    }
-    
-    /* 5. Ocultar cualquier título grande que no sea nuestro */
-    .md-content h1:first-child:not(.central-node-title) {
-        display: none !important;
-    }
-    
-    /* ==== ESTILOS DEL MAPA GALAXIA (SIN CAMBIAR) ==== */
+    /* ===== ESTILOS BÁSICOS PARA EL MAPA GALAXIA ===== */
     
     * {
         margin: 0;
@@ -86,9 +16,7 @@
         --bee-color: #00d8a7;
         --fieldwork-color: #ff8a65;
         --bg-dark: #0a0e17;
-        --bg-darker: #050811;
         --text-light: #f0f4ff;
-        --text-muted: #a0a8c9;
     }
 
     body {
@@ -98,20 +26,17 @@
         margin: 0;
         padding: 0;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        overflow: hidden;
     }
 
-    /* MENÚ - ARRIBA */
+    /* ===== MENÚ SIMPLE ===== */
     .menu-container {
         width: 100%;
         background: rgba(10, 14, 23, 0.95);
-        backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1000;
-        position: relative;
         padding: 15px 40px;
+        position: relative;
+        z-index: 1000;
     }
 
     .custom-header-menu {
@@ -137,39 +62,23 @@
         color: var(--core-color);
     }
 
-    .custom-header-menu a:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--core-color);
-        transition: width 0.3s ease;
-    }
-
-    .custom-header-menu a:hover:after {
+    /* ===== CONTENEDOR DEL MAPA ===== */
+    .map-container {
         width: 100%;
-    }
-
-    /* Contenedor principal - DEBAJO DEL MENÚ */
-    .galaxy-map-wrapper {
-        flex: 1;
+        height: calc(100vh - 73px); /* Altura total menos menú */
         position: relative;
         overflow: hidden;
-        width: 100%;
-        height: calc(100vh - 70px);
+        background: var(--bg-dark);
     }
 
-    /* Fondo cósmico con estrellas */
+    /* ===== FONDO DE ESTRELLAS ===== */
     #stars {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
-        pointer-events: none;
+        z-index: 1;
     }
 
     .star {
@@ -185,23 +94,7 @@
         50% { opacity: 0.8; }
     }
 
-    /* Viewport para navegación */
-    .viewport {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        cursor: grab;
-        background: transparent;
-    }
-
-    .viewport.grabbing {
-        cursor: grabbing;
-    }
-
-    /* Galaxia */
+    /* ===== GALAXIA Y CANVAS ===== */
     #galaxy {
         position: absolute;
         width: 3000px;
@@ -211,10 +104,9 @@
         transform: translate(-50%, -50%) scale(0.4);
         transform-origin: center center;
         transition: transform 0.1s ease;
-        will-change: transform;
+        z-index: 2;
     }
 
-    /* Canvas para la galaxia radial */
     #galaxy-canvas {
         position: absolute;
         top: 0;
@@ -222,9 +114,10 @@
         width: 100%;
         height: 100%;
         pointer-events: none;
+        z-index: 3;
     }
 
-    /* Nodo central */
+    /* ===== NODO CENTRAL ===== */
     .central-node {
         position: absolute;
         top: 50%;
@@ -265,7 +158,7 @@
         line-height: 1.2;
     }
 
-    /* Contenedor de nodos orbitales */
+    /* ===== ÓRBITAS Y NODOS ===== */
     .orbit {
         position: absolute;
         top: 50%;
@@ -275,7 +168,6 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Nodos */
     .node {
         position: absolute;
         width: 220px;
@@ -302,10 +194,9 @@
         line-height: 1.3;
         width: 100%;
         word-wrap: break-word;
-        overflow-wrap: break-word;
     }
 
-    /* Colores de nodos según categoría */
+    /* Colores de nodos */
     .intuition-node {
         background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
         box-shadow: 0 0 50px rgba(185, 103, 255, 0.9);
@@ -336,14 +227,13 @@
         box-shadow: 0 0 50px rgba(255, 138, 101, 0.9);
     }
 
-    /* Efectos hover en nodos */
     .node:hover {
         transform: scale(1.15);
         z-index: 20;
         box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
     }
 
-    /* Panel de contenido */
+    /* ===== PANEL DE INFORMACIÓN ===== */
     .content-panel {
         position: fixed;
         top: 100px;
@@ -357,7 +247,6 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 1000;
         display: none;
-        transition: all 0.4s ease;
     }
 
     .content-panel.active {
@@ -389,13 +278,12 @@
         font-weight: 700;
         color: #000000;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
     }
 
     .panel-text {
         font-size: 1.05rem;
         line-height: 1.7;
-        color: var(--text-muted);
+        color: #a0a8c9;
         margin-bottom: 25px;
     }
 
@@ -405,10 +293,9 @@
         right: 15px;
         background: rgba(255, 255, 255, 0.1);
         border: none;
-        color: var(--text-muted);
+        color: #a0a8c9;
         font-size: 1.5rem;
         cursor: pointer;
-        transition: all 0.3s;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -419,11 +306,11 @@
 
     .panel-close:hover {
         background: rgba(255, 255, 255, 0.2);
-        color: var(--text-light);
+        color: #ffffff;
         transform: rotate(90deg);
     }
 
-    /* Instrucciones mínimas */
+    /* ===== INSTRUCCIONES ===== */
     .instructions {
         position: fixed;
         bottom: 20px;
@@ -441,8 +328,7 @@
     }
 </style>
 
-<!-- ===== CÓDIGO HTML ===== -->
-<!-- MENÚ (ARRIBA) -->
+<!-- ===== HTML ===== -->
 <div class="menu-container">
     <div class="custom-header-menu">
         <a href="../..">MDEF</a>
@@ -451,28 +337,22 @@
     </div>
 </div>
 
-<!-- CONTENEDOR PRINCIPAL DEL MAPA (con clases específicas para evitar conflictos) -->
-<div class="galaxy-map-wrapper" id="galaxy-map-container">
+<div class="map-container">
     <div id="stars"></div>
     
-    <!-- Viewport para navegación -->
-    <div class="viewport" id="viewport">
-        <div id="galaxy">
-            <canvas id="galaxy-canvas"></canvas>
-            
-            <!-- Nodo central -->
-            <div class="central-node" id="centralNode">
-                <div class="central-node-content">
-                    <div class="central-node-title">The Invisible City</div>
-                </div>
+    <div id="galaxy">
+        <canvas id="galaxy-canvas"></canvas>
+        
+        <div class="central-node" id="centralNode">
+            <div class="central-node-content">
+                <div class="central-node-title">The Invisible City</div>
             </div>
-            
-            <!-- Nodos serán generados por JavaScript -->
         </div>
+        <!-- Nodos serán generados por JavaScript -->
     </div>
 </div>
 
-<!-- Panel de contenido -->
+<!-- Panel de información -->
 <div class="content-panel" id="contentPanel">
     <button class="panel-close" id="closePanel">×</button>
     <div class="panel-category" id="panelCategory">Core Concept</div>
@@ -480,7 +360,7 @@
     <p class="panel-text" id="panelText">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
 </div>
 
-<!-- Instrucciones mínimas -->
+<!-- Instrucciones -->
 <div class="instructions">
     Haz clic en cualquier nodo para ver detalles<br>
     Usa la rueda del ratón para hacer zoom<br>
@@ -488,7 +368,7 @@
 </div>
 
 <script>
-    // JavaScript con limpieza adicional para eliminar elementos no deseados
+    // Datos para todos los nodos
     const nodesData = {
         central: {
             id: "central",
@@ -558,69 +438,25 @@
         ]
     };
 
+    // Variables
     let canvas, ctx;
     let scale = 0.4;
     let offsetX = 0, offsetY = 0;
     let isDragging = false;
     let lastX = 0, lastY = 0;
     let galaxy = document.getElementById('galaxy');
-    let viewport = document.getElementById('viewport');
+    let mapContainer = document.querySelector('.map-container');
 
-    // Función para limpiar elementos no deseados (incluyendo "CONCEPTUAL")
-    function cleanupExistingPage() {
-        console.log("Limpiando elementos existentes de la página...");
-        
-        // 1. Buscar y eliminar títulos "CONCEPTUAL"
-        const allElements = document.querySelectorAll('*');
-        allElements.forEach(el => {
-            if (el.textContent && (
-                el.textContent.includes('CONCEPTUAL') || 
-                el.textContent.includes('Conceptual') ||
-                el.textContent.trim() === 'Conceptual'
-            )) {
-                console.log("Encontrado y eliminando:", el);
-                el.style.display = 'none';
-                el.style.visibility = 'hidden';
-                el.style.height = '0';
-                el.style.margin = '0';
-                el.style.padding = '0';
-                el.style.opacity = '0';
-                el.style.border = 'none';
-                el.style.overflow = 'hidden';
-            }
-        });
-        
-        // 2. Eliminar cualquier h1 que no sea nuestro
-        const allH1s = document.querySelectorAll('h1');
-        allH1s.forEach(h1 => {
-            if (!h1.classList.contains('central-node-title') && 
-                !h1.classList.contains('panel-title') &&
-                !h1.parentElement.classList.contains('central-node-content')) {
-                h1.style.display = 'none';
-                h1.style.height = '0';
-                h1.style.margin = '0';
-                h1.style.padding = '0';
-            }
-        });
-        
-        // 3. Limpiar contenedores principales
-        const mainContainers = document.querySelectorAll('.md-content, .md-main__inner, .md-article');
-        mainContainers.forEach(container => {
-            container.style.padding = '0';
-            container.style.margin = '0';
-            container.style.maxWidth = 'none';
-        });
-    }
-
+    // Inicializar estrellas
     function initStars() {
         const starsContainer = document.getElementById('stars');
         starsContainer.innerHTML = '';
         
-        for (let i = 0; i < 300; i++) {
+        for (let i = 0; i < 150; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
             
-            const size = Math.random() * 4 + 1;
+            const size = Math.random() * 3 + 1;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
             star.style.left = `${Math.random() * 100}%`;
@@ -631,6 +467,7 @@
         }
     }
 
+    // Crear nodos
     function createOrbitalNodes() {
         const orbits = [
             {radius: 600, nodes: nodesData.intuitions, className: 'intuition-node'},
@@ -641,7 +478,7 @@
             {radius: 2100, nodes: nodesData.fieldwork, className: 'fieldwork-node'}
         ];
         
-        orbits.forEach((orbit, orbitIndex) => {
+        orbits.forEach((orbit) => {
             const orbitElement = document.createElement('div');
             orbitElement.classList.add('orbit');
             orbitElement.style.width = `${orbit.radius * 2}px`;
@@ -684,6 +521,7 @@
         });
     }
 
+    // Mostrar contenido
     function showNodeContent(nodeData) {
         const panel = document.getElementById('contentPanel');
         const panelTitle = document.getElementById('panelTitle');
@@ -696,14 +534,14 @@
         
         let color = '';
         switch(nodeData.category) {
-            case 'Core Concept': color = 'var(--core-color)'; break;
-            case 'Intuitions': color = 'var(--intuitions-color)'; break;
-            case 'Motor Questions': color = 'var(--questions-color)'; break;
-            case 'Thematic Fields': color = 'var(--thematic-color)'; break;
-            case 'Actions': color = 'var(--actions-color)'; break;
-            case 'Bee Project': color = 'var(--bee-color)'; break;
-            case 'Urban Fieldwork': color = 'var(--fieldwork-color)'; break;
-            default: color = 'var(--core-color)';
+            case 'Core Concept': color = '#00c6ff'; break;
+            case 'Intuitions': color = '#b967ff'; break;
+            case 'Motor Questions': color = '#ffffff'; break;
+            case 'Thematic Fields': color = '#ffb347'; break;
+            case 'Actions': color = '#ff5e7d'; break;
+            case 'Bee Project': color = '#00d8a7'; break;
+            case 'Urban Fieldwork': color = '#ff8a65'; break;
+            default: color = '#00c6ff';
         }
         
         panelCategory.style.backgroundColor = color;
@@ -712,10 +550,12 @@
         panel.classList.add('active');
     }
 
+    // Cerrar panel
     document.getElementById('closePanel').addEventListener('click', () => {
         document.getElementById('contentPanel').classList.remove('active');
     });
 
+    // Inicializar canvas
     function initCanvas() {
         canvas = document.getElementById('galaxy-canvas');
         ctx = canvas.getContext('2d');
@@ -730,6 +570,7 @@
         resizeCanvas();
     }
 
+    // Dibujar conexiones
     function drawConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
@@ -747,29 +588,23 @@
             let color = 'rgba(255, 255, 255, 0.2)';
             if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.3)';
             else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.2)';
-            else if (node.classList.contains('question-node')) color = 'rgba(255, 255, 255, 0.25)';
-            else if (node.classList.contains('action-node')) color = 'rgba(255, 94, 125, 0.2)';
-            else if (node.classList.contains('bee-node')) color = 'rgba(0, 216, 167, 0.2)';
-            else if (node.classList.contains('fieldwork-node')) color = 'rgba(255, 138, 101, 0.2)';
             
-            drawConnectionLine(centerX, centerY, nodeX, nodeY, color);
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.lineTo(nodeX, nodeY);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.stroke();
         });
     }
 
-    function drawConnectionLine(x1, y1, x2, y2, color) {
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 2;
-        ctx.stroke();
-    }
-
+    // Actualizar transformación
     function updateTransform() {
         galaxy.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})`;
         drawConnections();
     }
 
+    // Manejar zoom
     function handleWheel(e) {
         e.preventDefault();
         
@@ -782,22 +617,16 @@
             scale = Math.max(scale - zoomFactor, 0.2);
         }
         
-        const rect = viewport.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        offsetX -= (x - rect.width/2) * (scale - oldScale) / oldScale;
-        offsetY -= (y - rect.height/2) * (scale - oldScale) / oldScale;
-        
         updateTransform();
     }
 
+    // Manejar arrastre
     function handleMouseDown(e) {
-        if (e.target === viewport || e.target.classList.contains('orbit')) {
+        if (e.target === mapContainer || e.target.classList.contains('orbit')) {
             isDragging = true;
             lastX = e.clientX;
             lastY = e.clientY;
-            viewport.classList.add('grabbing');
+            mapContainer.style.cursor = 'grabbing';
         }
     }
 
@@ -814,39 +643,24 @@
 
     function handleMouseUp() {
         isDragging = false;
-        viewport.classList.remove('grabbing');
+        mapContainer.style.cursor = 'grab';
     }
 
-    function resetView() {
-        scale = 0.4;
-        offsetX = 0;
-        offsetY = 0;
-        updateTransform();
-    }
-
-    // Inicializar la página
+    // Inicializar
     document.addEventListener('DOMContentLoaded', () => {
-        // 1. Primero limpiar elementos existentes
-        cleanupExistingPage();
-        
-        // 2. Inicializar nuestro mapa
         initStars();
         createOrbitalNodes();
         initCanvas();
         updateTransform();
         
-        // 3. Mostrar contenido inicial
         setTimeout(() => {
             showNodeContent(nodesData.central);
         }, 1000);
         
-        // 4. Configurar eventos
-        viewport.addEventListener('wheel', handleWheel);
-        viewport.addEventListener('mousedown', handleMouseDown);
+        mapContainer.addEventListener('wheel', handleWheel);
+        mapContainer.addEventListener('mousedown', handleMouseDown);
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
-        
-        viewport.addEventListener('dblclick', resetView);
         
         document.addEventListener('click', (e) => {
             const panel = document.getElementById('contentPanel');
@@ -856,12 +670,5 @@
                 panel.classList.remove('active');
             }
         });
-        
-        document.getElementById('closePanel').addEventListener('mousedown', (e) => e.stopPropagation());
-        
-        // 5. Limpieza adicional después de que todo cargue
-        setTimeout(() => {
-            cleanupExistingPage();
-        }, 2000);
     });
 </script>
