@@ -39,24 +39,6 @@
         position: relative;
     }
 
-    /* MENÚ - ARRIBA */
-    .menu-container {
-        width: 100%;
-        background: rgba(10, 14, 23, 0.95);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1000;
-        position: relative;
-        padding: 15px 40px;
-    }
-
-    .custom-header-menu {
-        display: flex;
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
     .custom-header-menu a {
         color: var(--text-light);
         text-decoration: none;
