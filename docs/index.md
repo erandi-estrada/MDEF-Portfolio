@@ -25,8 +25,8 @@
                 <p>A research on extensions that question what it means to be human in a hybrid world.</p>
             </a>
 
- <a href="project/project/" class="card">
-                <img src="images/initial-ideas.jpg" alt="Initial Ideas">
+ <a href="conceptual/conceptual/" class="card">
+                <img src="images/ideas.jpg" alt="Initial Ideas">
                 <h3>Initial Ideas</h3>
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
