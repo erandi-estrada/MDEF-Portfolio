@@ -1,6 +1,6 @@
-/* mapa-galaxia.css - SOLO para la página conceptual.md */
+/* docs/stylesheets/mapa-galaxia.css */
 
-/* ===== ELIMINAR COMPLETAMENTE EL HEADER DE MKDOCS ===== */
+/* ELIMINAR TODO LO DE MKDOCS */
 .md-header,
 .md-tabs,
 .md-sidebar,
@@ -9,7 +9,8 @@
 .md-nav__title,
 .md-nav--primary,
 .md-nav__list,
-.md-header__button {
+.md-header__button,
+.md-footer {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
