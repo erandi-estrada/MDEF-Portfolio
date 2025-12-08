@@ -23,15 +23,77 @@
         font-family: 'Montserrat', sans-serif;
         background-color: var(--bg-dark);
         color: var(--text-light);
-        overflow: hidden;
-        height: 100vh;
         margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
         position: relative;
     }
 
-    /* Fondo cósmico con estrellas */
+    /* MENÚ - ARRIBA */
+    .menu-container {
+        width: 100%;
+        background: rgba(10, 14, 23, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        position: relative;
+        padding: 15px 40px;
+    }
+
+    .custom-header-menu {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .custom-header-menu a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 8px 0;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .custom-header-menu a:hover {
+        color: var(--core-color);
+    }
+
+    .custom-header-menu a:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--core-color);
+        transition: width 0.3s ease;
+    }
+
+    .custom-header-menu a:hover:after {
+        width: 100%;
+    }
+
+    /* Contenedor principal - DEBAJO DEL MENÚ */
+    .main-container {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh - 70px); /* Restar altura del menú */
+    }
+
+    /* Fondo cósmico con estrellas - SOLO EN EL ÁREA DEL MAPA */
     #stars {
-        position: fixed;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
@@ -51,7 +113,7 @@
         50% { opacity: 0.8; }
     }
 
-    /* Viewport para navegación */
+    /* Viewport para navegación - DENTRO DEL CONTENEDOR PRINCIPAL */
     .viewport {
         position: absolute;
         top: 0;
@@ -60,20 +122,21 @@
         height: 100%;
         overflow: hidden;
         cursor: grab;
+        background: transparent;
     }
 
     .viewport.grabbing {
         cursor: grabbing;
     }
 
-    /* Galaxia - AHORA ES MÁS GRANDE Y CENTRADA */
+    /* Galaxia */
     #galaxy {
         position: absolute;
-        width: 3000px;  /* MUCHO más ancho */
-        height: 3000px; /* MUCHO más alto */
+        width: 3000px;
+        height: 3000px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0.4); /* Centrado y con zoom inicial */
+        transform: translate(-50%, -50%) scale(0.4);
         transform-origin: center center;
         transition: transform 0.1s ease;
         will-change: transform;
@@ -95,8 +158,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 400px; /* ENORME */
-        height: 400px; /* ENORME */
+        width: 400px;
+        height: 400px;
         border-radius: 50%;
         background: radial-gradient(circle, var(--core-color) 0%, rgba(0, 198, 255, 0.4) 70%, transparent 100%);
         box-shadow: 0 0 100px rgba(0, 198, 255, 0.8);
@@ -121,7 +184,7 @@
 
     .central-node-title {
         font-weight: 800;
-        font-size: 2.5rem; /* MUY grande */
+        font-size: 2.5rem;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-bottom: 15px;
@@ -143,8 +206,8 @@
     /* Nodos - ENORMES */
     .node {
         position: absolute;
-        width: 220px; /* ENORME */
-        height: 220px; /* ENORME */
+        width: 220px;
+        height: 220px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -157,7 +220,7 @@
 
     .node-title {
         font-weight: 700;
-        font-size: 1.2rem; /* Más grande */
+        font-size: 1.2rem;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -170,7 +233,7 @@
         overflow-wrap: break-word;
     }
 
-    /* Colores de nodos según categoría - MÁS BRILLANTES */
+    /* Colores de nodos según categoría */
     .intuition-node {
         background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
         box-shadow: 0 0 50px rgba(185, 103, 255, 0.9);
@@ -208,10 +271,10 @@
         box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
     }
 
-    /* Panel de contenido - MODIFICADO: sin controles, solo info */
+    /* Panel de contenido */
     .content-panel {
         position: fixed;
-        top: 20px;
+        top: 100px; /* Debajo del menú */
         right: 20px;
         width: 400px;
         background: rgba(10, 14, 23, 0.95);
@@ -288,7 +351,7 @@
         transform: rotate(90deg);
     }
 
-    /* Instrucciones mínimas en una esquina */
+    /* Instrucciones mínimas */
     .instructions {
         position: fixed;
         bottom: 20px;
@@ -325,6 +388,10 @@
         .content-panel {
             width: 350px;
         }
+        
+        .menu-container {
+            padding: 15px 20px;
+        }
     }
 
     @media (max-width: 900px) {
@@ -346,38 +413,95 @@
         .content-panel {
             width: calc(100% - 40px);
             max-width: 400px;
+            top: 90px;
         }
         
         .instructions {
             display: none;
         }
+        
+        .custom-header-menu {
+            gap: 20px;
+        }
+        
+        .custom-header-menu a {
+            font-size: 0.9rem;
+        }
     }
 
     @media (max-width: 600px) {
+        .main-container {
+            height: calc(100vh - 60px);
+        }
+        
+        .menu-container {
+            padding: 12px 15px;
+        }
+        
+        .custom-header-menu {
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .custom-header-menu a {
+            font-size: 0.85rem;
+        }
+        
         .content-panel {
             left: 10px;
             right: 10px;
             max-width: none;
+            top: 80px;
+        }
+        
+        .central-node {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .node {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .central-node-title {
+            font-size: 2rem;
+        }
+        
+        .node-title {
+            font-size: 1rem;
+            padding: 10px;
         }
     }
 </style>
 
-<!-- Aquí empieza el HTML -->
-<div id="stars"></div>
+<!-- MENÚ (ARRIBA) -->
+<div class="menu-container">
+    <div class="custom-header-menu">
+        <a href="../..">MDEF</a>
+        <a href="../../projects/Portfolio">Projects</a>
+        <a href="../../about/me">About me</a>
+    </div>
+</div>
 
-<!-- Viewport para navegación -->
-<div class="viewport" id="viewport">
-    <div id="galaxy">
-        <canvas id="galaxy-canvas"></canvas>
-        
-        <!-- Nodo central -->
-        <div class="central-node" id="centralNode">
-            <div class="central-node-content">
-                <div class="central-node-title">The Invisible City</div>
+<!-- CONTENEDOR PRINCIPAL (CON EL MAPA) -->
+<div class="main-container">
+    <div id="stars"></div>
+    
+    <!-- Viewport para navegación -->
+    <div class="viewport" id="viewport">
+        <div id="galaxy">
+            <canvas id="galaxy-canvas"></canvas>
+            
+            <!-- Nodo central -->
+            <div class="central-node" id="centralNode">
+                <div class="central-node-content">
+                    <div class="central-node-title">The Invisible City</div>
+                </div>
             </div>
+            
+            <!-- Nodos serán generados por JavaScript -->
         </div>
-        
-        <!-- Nodos serán generados por JavaScript -->
     </div>
 </div>
 
@@ -469,7 +593,7 @@
 
     // Variables globales
     let canvas, ctx;
-    let scale = 0.4; // Zoom inicial
+    let scale = 0.4;
     let offsetX = 0, offsetY = 0;
     let isDragging = false;
     let lastX = 0, lastY = 0;
@@ -496,9 +620,8 @@
         }
     }
 
-    // Crear nodos orbitales - CON MÁS ESPACIO
+    // Crear nodos orbitales
     function createOrbitalNodes() {
-        // Radios MUY grandes para mucho espacio
         const orbits = [
             {radius: 600, nodes: nodesData.intuitions, className: 'intuition-node'},
             {radius: 900, nodes: nodesData.questions, className: 'question-node'},
@@ -509,14 +632,12 @@
         ];
         
         orbits.forEach((orbit, orbitIndex) => {
-            // Crear anillo orbital
             const orbitElement = document.createElement('div');
             orbitElement.classList.add('orbit');
             orbitElement.style.width = `${orbit.radius * 2}px`;
             orbitElement.style.height = `${orbit.radius * 2}px`;
             galaxy.appendChild(orbitElement);
             
-            // Crear nodos en esta órbita
             orbit.nodes.forEach((nodeData, nodeIndex) => {
                 const node = document.createElement('div');
                 node.classList.add('node', orbit.className);
@@ -525,23 +646,19 @@
                 node.dataset.text = nodeData.text;
                 node.dataset.category = nodeData.category;
                 
-                // Calcular posición angular con distribución más espaciada
                 const angle = (nodeIndex / orbit.nodes.length) * 2 * Math.PI;
                 const x = orbit.radius * Math.cos(angle);
                 const y = orbit.radius * Math.sin(angle);
                 
-                // Posicionar nodo
                 node.style.left = `calc(50% + ${x}px)`;
                 node.style.top = `calc(50% + ${y}px)`;
                 node.style.transform = 'translate(-50%, -50%)';
                 
-                // Añadir título
                 const titleElement = document.createElement('div');
                 titleElement.classList.add('node-title');
                 titleElement.textContent = nodeData.title;
                 node.appendChild(titleElement);
                 
-                // Añadir evento de clic
                 node.addEventListener('click', (e) => {
                     e.stopPropagation();
                     showNodeContent(nodeData);
@@ -551,7 +668,6 @@
             });
         });
         
-        // Añadir evento al nodo central
         document.getElementById('centralNode').addEventListener('click', (e) => {
             e.stopPropagation();
             showNodeContent(nodesData.central);
@@ -569,7 +685,6 @@
         panelText.textContent = nodeData.text;
         panelCategory.textContent = nodeData.category;
         
-        // Establecer color según categoría
         let color = '';
         switch(nodeData.category) {
             case 'Core Concept': color = 'var(--core-color)'; break;
@@ -615,7 +730,6 @@
         const centerX = canvas.width / 2;
         const centerY = canvas.height / 2;
         
-        // Conectar nodo central con todos los demás nodos
         const allNodes = document.querySelectorAll('.node:not(.central-node)');
         allNodes.forEach(node => {
             const rect = node.getBoundingClientRect();
@@ -624,7 +738,6 @@
             const nodeX = (rect.left + rect.width/2 - galaxyRect.left) / scale;
             const nodeY = (rect.top + rect.height/2 - galaxyRect.top) / scale;
             
-            // Determinar color según categoría
             let color = 'rgba(255, 255, 255, 0.2)';
             if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.3)';
             else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.2)';
@@ -665,7 +778,6 @@
             scale = Math.max(scale - zoomFactor, 0.2);
         }
         
-        // Ajustar offset para hacer zoom hacia el cursor
         const rect = viewport.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -702,7 +814,7 @@
         viewport.classList.remove('grabbing');
     }
 
-    // Resetear vista al centro (función para uso interno)
+    // Resetear vista al centro
     function resetView() {
         scale = 0.4;
         offsetX = 0;
@@ -717,21 +829,17 @@
         initCanvas();
         updateTransform();
         
-        // Mostrar contenido del nodo central al cargar
         setTimeout(() => {
             showNodeContent(nodesData.central);
         }, 1000);
         
-        // Eventos de navegación
         viewport.addEventListener('wheel', handleWheel);
         viewport.addEventListener('mousedown', handleMouseDown);
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
         
-        // Doble clic para resetear vista
         viewport.addEventListener('dblclick', resetView);
         
-        // Cerrar panel al hacer clic fuera
         document.addEventListener('click', (e) => {
             const panel = document.getElementById('contentPanel');
             const isNode = e.target.closest('.node') || e.target.closest('.central-node');
@@ -741,7 +849,6 @@
             }
         });
         
-        // Prevenir arrastre en botones
         document.getElementById('closePanel').addEventListener('mousedown', (e) => e.stopPropagation());
     });
 </script>
