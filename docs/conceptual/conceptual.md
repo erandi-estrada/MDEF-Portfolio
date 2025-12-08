@@ -51,7 +51,7 @@
         50% { opacity: 0.8; }
     }
 
-    /* Contenedor principal - AHORA ES UN VIEWPORT */
+    /* Viewport para navegación */
     .viewport {
         position: absolute;
         top: 0;
@@ -208,7 +208,7 @@
         box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
     }
 
-    /* Panel de contenido */
+    /* Panel de contenido - MODIFICADO: sin controles, solo info */
     .content-panel {
         position: fixed;
         top: 20px;
@@ -288,118 +288,21 @@
         transform: rotate(90deg);
     }
 
-    /* Leyenda */
-    .legend {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background: rgba(10, 14, 23, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1000;
-        max-width: 350px;
-    }
-
-    .legend-title {
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #ffffff;
-    }
-
-    .legend-items {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .legend-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 8px;
-        font-size: 0.9rem;
-        flex: 0 0 calc(50% - 10px);
-    }
-
-    .legend-color {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        margin-right: 12px;
-        flex-shrink: 0;
-    }
-
-    /* Instrucciones */
+    /* Instrucciones mínimas en una esquina */
     .instructions {
         position: fixed;
         bottom: 20px;
         right: 20px;
         text-align: right;
-        font-size: 0.95rem;
-        color: var(--text-muted);
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
         z-index: 1000;
-        background: rgba(10, 14, 23, 0.9);
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        max-width: 350px;
-    }
-
-    .instructions h3 {
-        margin-bottom: 10px;
-        color: var(--core-color);
-        font-size: 1rem;
-    }
-
-    /* Controles de navegación */
-    .navigation-controls {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .nav-button {
-        background: rgba(10, 14, 23, 0.9);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .nav-button:hover {
-        background: rgba(0, 198, 255, 0.4);
-        transform: scale(1.15);
-        box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
-    }
-
-    /* Indicador de zoom */
-    .zoom-level {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: rgba(10, 14, 23, 0.9);
-        padding: 8px 15px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        font-size: 0.9rem;
-        display: none;
+        background: rgba(10, 14, 23, 0.3);
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        max-width: 250px;
+        backdrop-filter: blur(5px);
     }
 
     /* Responsive */
@@ -417,6 +320,10 @@
         .node {
             width: 200px;
             height: 200px;
+        }
+        
+        .content-panel {
+            width: 350px;
         }
     }
 
@@ -441,49 +348,22 @@
             max-width: 400px;
         }
         
-        .legend {
-            max-width: 300px;
-        }
-        
         .instructions {
-            max-width: 300px;
+            display: none;
         }
     }
 
     @media (max-width: 600px) {
-        .navigation-controls {
-            top: 10px;
-            left: 10px;
-        }
-        
-        .nav-button {
-            width: 45px;
-            height: 45px;
-            font-size: 1.3rem;
-        }
-        
-        .content-panel, .legend, .instructions {
+        .content-panel {
             left: 10px;
             right: 10px;
             max-width: none;
-        }
-        
-        .instructions {
-            text-align: left;
         }
     }
 </style>
 
 <!-- Aquí empieza el HTML -->
 <div id="stars"></div>
-
-<!-- Controles de navegación -->
-<div class="navigation-controls">
-    <button class="nav-button" id="zoomIn" title="Zoom In">+</button>
-    <button class="nav-button" id="zoomOut" title="Zoom Out">-</button>
-    <button class="nav-button" id="resetView" title="Reset View">↺</button>
-    <button class="nav-button" id="centerView" title="Center View">⌖</button>
-</div>
 
 <!-- Viewport para navegación -->
 <div class="viewport" id="viewport">
@@ -507,52 +387,13 @@
     <div class="panel-category" id="panelCategory">Core Concept</div>
     <h2 class="panel-title" id="panelTitle">The Invisible City</h2>
     <p class="panel-text" id="panelText">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
-    <div id="panelConnections"></div>
 </div>
 
-<!-- Leyenda -->
-<div class="legend">
-    <div class="legend-title">CATEGORÍAS</div>
-    <div class="legend-items">
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--core-color);"></div>
-            <span>Concepto Central</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--intuitions-color);"></div>
-            <span>Intuiciones</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--questions-color);"></div>
-            <span>Preguntas Motor</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--thematic-color);"></div>
-            <span>Campos Temáticos</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--actions-color);"></div>
-            <span>Acciones</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--bee-color);"></div>
-            <span>Proyecto Abeja</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: var(--fieldwork-color);"></div>
-            <span>Trabajo de Campo</span>
-        </div>
-    </div>
-</div>
-
+<!-- Instrucciones mínimas -->
 <div class="instructions">
-    <h3>CONTROLES DE NAVEGACIÓN</h3>
-    • <strong>Haz clic</strong> en cualquier nodo para ver detalles<br>
-    • <strong>Rueda del ratón</strong> para hacer zoom<br>
-    • <strong>Arrastra</strong> para mover el mapa<br>
-    • <strong>Botones + -</strong> para controlar el zoom<br>
-    • <strong>Botón ↺</strong> para resetear vista<br>
-    • <strong>Botón ⌖</strong> para centrar
+    Haz clic en cualquier nodo para ver detalles<br>
+    Usa la rueda del ratón para hacer zoom<br>
+    Arrastra para mover el mapa
 </div>
 
 <script>
@@ -861,25 +702,9 @@
         viewport.classList.remove('grabbing');
     }
 
-    // Controladores de botones
-    function zoomIn() {
-        scale = Math.min(scale + 0.1, 1.5);
-        updateTransform();
-    }
-
-    function zoomOut() {
-        scale = Math.max(scale - 0.1, 0.2);
-        updateTransform();
-    }
-
+    // Resetear vista al centro (función para uso interno)
     function resetView() {
         scale = 0.4;
-        offsetX = 0;
-        offsetY = 0;
-        updateTransform();
-    }
-
-    function centerView() {
         offsetX = 0;
         offsetY = 0;
         updateTransform();
@@ -897,17 +722,14 @@
             showNodeContent(nodesData.central);
         }, 1000);
         
-        // Eventos
+        // Eventos de navegación
         viewport.addEventListener('wheel', handleWheel);
         viewport.addEventListener('mousedown', handleMouseDown);
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
         
-        // Botones
-        document.getElementById('zoomIn').addEventListener('click', zoomIn);
-        document.getElementById('zoomOut').addEventListener('click', zoomOut);
-        document.getElementById('resetView').addEventListener('click', resetView);
-        document.getElementById('centerView').addEventListener('click', centerView);
+        // Doble clic para resetear vista
+        viewport.addEventListener('dblclick', resetView);
         
         // Cerrar panel al hacer clic fuera
         document.addEventListener('click', (e) => {
@@ -920,8 +742,6 @@
         });
         
         // Prevenir arrastre en botones
-        document.querySelectorAll('.nav-button, .panel-close').forEach(btn => {
-            btn.addEventListener('mousedown', (e) => e.stopPropagation());
-        });
+        document.getElementById('closePanel').addEventListener('mousedown', (e) => e.stopPropagation());
     });
 </script>
