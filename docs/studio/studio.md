@@ -1804,7 +1804,6 @@ function showEvalCollective(n) {
     <p style="font-size: 1.3rem;">
         And responsiveness begins with observation, not intervention.
     </p>
-    <div style="font-size: 5rem; color: #ddd; position: absolute; bottom: -30px; right: 20px;">"</div>
 </div>
 
 <!-- Lecciones aprendidas - 3 arriba, 2 abajo centradas -->
