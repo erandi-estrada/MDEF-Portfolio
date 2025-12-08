@@ -1,6 +1,25 @@
 <style>
-    /* ===== ESTILOS BÁSICOS PARA EL MAPA GALAXIA ===== */
-    
+    /* REGLA PRINCIPAL: Ocultar cualquier elemento que contenga "CONCEPTUAL" */
+    body :is(h1, h2, h3, h4, .title, .header, .conceptual):contains("CONCEPTUAL"),
+    body :is(h1, h2, h3, h4, .title, .header, .conceptual):contains("Conceptual") {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+    }
+
+    /* También ocultar elementos que puedan ser padres de títulos */
+    div:has(> h1:contains("CONCEPTUAL")),
+    div:has(> h2:contains("CONCEPTUAL")),
+    section:has(> h1:contains("CONCEPTUAL")),
+    header:has(> h1:contains("CONCEPTUAL")) {
+        display: none !important;
+        height: 0 !important;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -16,7 +35,9 @@
         --bee-color: #00d8a7;
         --fieldwork-color: #ff8a65;
         --bg-dark: #0a0e17;
+        --bg-darker: #050811;
         --text-light: #f0f4ff;
+        --text-muted: #a0a8c9;
     }
 
     body {
@@ -26,17 +47,20 @@
         margin: 0;
         padding: 0;
         height: 100vh;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
 
-    /* ===== MENÚ SIMPLE ===== */
+    /* MENÚ - ARRIBA */
     .menu-container {
         width: 100%;
         background: rgba(10, 14, 23, 0.95);
+        backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 15px 40px;
-        position: relative;
         z-index: 1000;
+        position: relative;
+        padding: 15px 40px;
     }
 
     .custom-header-menu {
@@ -62,23 +86,39 @@
         color: var(--core-color);
     }
 
-    /* ===== CONTENEDOR DEL MAPA ===== */
-    .map-container {
-        width: 100%;
-        height: calc(100vh - 73px); /* Altura total menos menú */
-        position: relative;
-        overflow: hidden;
-        background: var(--bg-dark);
+    .custom-header-menu a:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--core-color);
+        transition: width 0.3s ease;
     }
 
-    /* ===== FONDO DE ESTRELLAS ===== */
+    .custom-header-menu a:hover:after {
+        width: 100%;
+    }
+
+    /* Contenedor principal - DEBAJO DEL MENÚ */
+    .main-container {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh - 70px);
+    }
+
+    /* Fondo cósmico con estrellas */
     #stars {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: -1;
+        pointer-events: none;
     }
 
     .star {
@@ -94,7 +134,23 @@
         50% { opacity: 0.8; }
     }
 
-    /* ===== GALAXIA Y CANVAS ===== */
+    /* Viewport para navegación */
+    .viewport {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        cursor: grab;
+        background: transparent;
+    }
+
+    .viewport.grabbing {
+        cursor: grabbing;
+    }
+
+    /* Galaxia */
     #galaxy {
         position: absolute;
         width: 3000px;
@@ -104,9 +160,10 @@
         transform: translate(-50%, -50%) scale(0.4);
         transform-origin: center center;
         transition: transform 0.1s ease;
-        z-index: 2;
+        will-change: transform;
     }
 
+    /* Canvas para la galaxia radial */
     #galaxy-canvas {
         position: absolute;
         top: 0;
@@ -114,10 +171,9 @@
         width: 100%;
         height: 100%;
         pointer-events: none;
-        z-index: 3;
     }
 
-    /* ===== NODO CENTRAL ===== */
+    /* Nodo central */
     .central-node {
         position: absolute;
         top: 50%;
@@ -158,7 +214,7 @@
         line-height: 1.2;
     }
 
-    /* ===== ÓRBITAS Y NODOS ===== */
+    /* Contenedor de nodos orbitales */
     .orbit {
         position: absolute;
         top: 50%;
@@ -168,6 +224,7 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    /* Nodos */
     .node {
         position: absolute;
         width: 220px;
@@ -194,9 +251,10 @@
         line-height: 1.3;
         width: 100%;
         word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    /* Colores de nodos */
+    /* Colores de nodos según categoría */
     .intuition-node {
         background: radial-gradient(circle, var(--intuitions-color) 0%, rgba(185, 103, 255, 0.8) 70%, transparent 100%);
         box-shadow: 0 0 50px rgba(185, 103, 255, 0.9);
@@ -227,13 +285,14 @@
         box-shadow: 0 0 50px rgba(255, 138, 101, 0.9);
     }
 
+    /* Efectos hover en nodos */
     .node:hover {
         transform: scale(1.15);
         z-index: 20;
         box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
     }
 
-    /* ===== PANEL DE INFORMACIÓN ===== */
+    /* Panel de contenido */
     .content-panel {
         position: fixed;
         top: 100px;
@@ -247,6 +306,7 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 1000;
         display: none;
+        transition: all 0.4s ease;
     }
 
     .content-panel.active {
@@ -278,12 +338,13 @@
         font-weight: 700;
         color: #000000;
         text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .panel-text {
         font-size: 1.05rem;
         line-height: 1.7;
-        color: #a0a8c9;
+        color: var(--text-muted);
         margin-bottom: 25px;
     }
 
@@ -293,9 +354,10 @@
         right: 15px;
         background: rgba(255, 255, 255, 0.1);
         border: none;
-        color: #a0a8c9;
+        color: var(--text-muted);
         font-size: 1.5rem;
         cursor: pointer;
+        transition: all 0.3s;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -306,11 +368,11 @@
 
     .panel-close:hover {
         background: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
+        color: var(--text-light);
         transform: rotate(90deg);
     }
 
-    /* ===== INSTRUCCIONES ===== */
+    /* Instrucciones mínimas */
     .instructions {
         position: fixed;
         bottom: 20px;
@@ -328,7 +390,7 @@
     }
 </style>
 
-<!-- ===== HTML ===== -->
+<!-- Aquí empieza el HTML -->
 <div class="menu-container">
     <div class="custom-header-menu">
         <a href="../..">MDEF</a>
@@ -337,22 +399,28 @@
     </div>
 </div>
 
-<div class="map-container">
+<!-- Contenedor principal con el mapa -->
+<div class="main-container">
     <div id="stars"></div>
     
-    <div id="galaxy">
-        <canvas id="galaxy-canvas"></canvas>
-        
-        <div class="central-node" id="centralNode">
-            <div class="central-node-content">
-                <div class="central-node-title">The Invisible City</div>
+    <!-- Viewport para navegación -->
+    <div class="viewport" id="viewport">
+        <div id="galaxy">
+            <canvas id="galaxy-canvas"></canvas>
+            
+            <!-- Nodo central -->
+            <div class="central-node" id="centralNode">
+                <div class="central-node-content">
+                    <div class="central-node-title">The Invisible City</div>
+                </div>
             </div>
+            
+            <!-- Nodos serán generados por JavaScript -->
         </div>
-        <!-- Nodos serán generados por JavaScript -->
     </div>
 </div>
 
-<!-- Panel de información -->
+<!-- Panel de contenido -->
 <div class="content-panel" id="contentPanel">
     <button class="panel-close" id="closePanel">×</button>
     <div class="panel-category" id="panelCategory">Core Concept</div>
@@ -360,7 +428,7 @@
     <p class="panel-text" id="panelText">How beauty hides violence, and how other species experience the city through sensory worlds we ignore. A framework connecting hostile design, multispecies inequalities, and environmental perception.</p>
 </div>
 
-<!-- Instrucciones -->
+<!-- Instrucciones mínimas -->
 <div class="instructions">
     Haz clic en cualquier nodo para ver detalles<br>
     Usa la rueda del ratón para hacer zoom<br>
@@ -368,7 +436,7 @@
 </div>
 
 <script>
-    // Datos para todos los nodos
+    // JavaScript permanece igual que en la versión anterior
     const nodesData = {
         central: {
             id: "central",
@@ -438,25 +506,23 @@
         ]
     };
 
-    // Variables
     let canvas, ctx;
     let scale = 0.4;
     let offsetX = 0, offsetY = 0;
     let isDragging = false;
     let lastX = 0, lastY = 0;
     let galaxy = document.getElementById('galaxy');
-    let mapContainer = document.querySelector('.map-container');
+    let viewport = document.getElementById('viewport');
 
-    // Inicializar estrellas
     function initStars() {
         const starsContainer = document.getElementById('stars');
         starsContainer.innerHTML = '';
         
-        for (let i = 0; i < 150; i++) {
+        for (let i = 0; i < 300; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
             
-            const size = Math.random() * 3 + 1;
+            const size = Math.random() * 4 + 1;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
             star.style.left = `${Math.random() * 100}%`;
@@ -467,7 +533,6 @@
         }
     }
 
-    // Crear nodos
     function createOrbitalNodes() {
         const orbits = [
             {radius: 600, nodes: nodesData.intuitions, className: 'intuition-node'},
@@ -478,7 +543,7 @@
             {radius: 2100, nodes: nodesData.fieldwork, className: 'fieldwork-node'}
         ];
         
-        orbits.forEach((orbit) => {
+        orbits.forEach((orbit, orbitIndex) => {
             const orbitElement = document.createElement('div');
             orbitElement.classList.add('orbit');
             orbitElement.style.width = `${orbit.radius * 2}px`;
@@ -521,7 +586,6 @@
         });
     }
 
-    // Mostrar contenido
     function showNodeContent(nodeData) {
         const panel = document.getElementById('contentPanel');
         const panelTitle = document.getElementById('panelTitle');
@@ -534,14 +598,14 @@
         
         let color = '';
         switch(nodeData.category) {
-            case 'Core Concept': color = '#00c6ff'; break;
-            case 'Intuitions': color = '#b967ff'; break;
-            case 'Motor Questions': color = '#ffffff'; break;
-            case 'Thematic Fields': color = '#ffb347'; break;
-            case 'Actions': color = '#ff5e7d'; break;
-            case 'Bee Project': color = '#00d8a7'; break;
-            case 'Urban Fieldwork': color = '#ff8a65'; break;
-            default: color = '#00c6ff';
+            case 'Core Concept': color = 'var(--core-color)'; break;
+            case 'Intuitions': color = 'var(--intuitions-color)'; break;
+            case 'Motor Questions': color = 'var(--questions-color)'; break;
+            case 'Thematic Fields': color = 'var(--thematic-color)'; break;
+            case 'Actions': color = 'var(--actions-color)'; break;
+            case 'Bee Project': color = 'var(--bee-color)'; break;
+            case 'Urban Fieldwork': color = 'var(--fieldwork-color)'; break;
+            default: color = 'var(--core-color)';
         }
         
         panelCategory.style.backgroundColor = color;
@@ -550,12 +614,10 @@
         panel.classList.add('active');
     }
 
-    // Cerrar panel
     document.getElementById('closePanel').addEventListener('click', () => {
         document.getElementById('contentPanel').classList.remove('active');
     });
 
-    // Inicializar canvas
     function initCanvas() {
         canvas = document.getElementById('galaxy-canvas');
         ctx = canvas.getContext('2d');
@@ -570,7 +632,6 @@
         resizeCanvas();
     }
 
-    // Dibujar conexiones
     function drawConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
@@ -588,23 +649,29 @@
             let color = 'rgba(255, 255, 255, 0.2)';
             if (node.classList.contains('thematic-node')) color = 'rgba(255, 179, 71, 0.3)';
             else if (node.classList.contains('intuition-node')) color = 'rgba(185, 103, 255, 0.2)';
+            else if (node.classList.contains('question-node')) color = 'rgba(255, 255, 255, 0.25)';
+            else if (node.classList.contains('action-node')) color = 'rgba(255, 94, 125, 0.2)';
+            else if (node.classList.contains('bee-node')) color = 'rgba(0, 216, 167, 0.2)';
+            else if (node.classList.contains('fieldwork-node')) color = 'rgba(255, 138, 101, 0.2)';
             
-            ctx.beginPath();
-            ctx.moveTo(centerX, centerY);
-            ctx.lineTo(nodeX, nodeY);
-            ctx.strokeStyle = color;
-            ctx.lineWidth = 2;
-            ctx.stroke();
+            drawConnectionLine(centerX, centerY, nodeX, nodeY, color);
         });
     }
 
-    // Actualizar transformación
+    function drawConnectionLine(x1, y1, x2, y2, color) {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    }
+
     function updateTransform() {
         galaxy.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})`;
         drawConnections();
     }
 
-    // Manejar zoom
     function handleWheel(e) {
         e.preventDefault();
         
@@ -617,16 +684,22 @@
             scale = Math.max(scale - zoomFactor, 0.2);
         }
         
+        const rect = viewport.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        offsetX -= (x - rect.width/2) * (scale - oldScale) / oldScale;
+        offsetY -= (y - rect.height/2) * (scale - oldScale) / oldScale;
+        
         updateTransform();
     }
 
-    // Manejar arrastre
     function handleMouseDown(e) {
-        if (e.target === mapContainer || e.target.classList.contains('orbit')) {
+        if (e.target === viewport || e.target.classList.contains('orbit')) {
             isDragging = true;
             lastX = e.clientX;
             lastY = e.clientY;
-            mapContainer.style.cursor = 'grabbing';
+            viewport.classList.add('grabbing');
         }
     }
 
@@ -643,10 +716,16 @@
 
     function handleMouseUp() {
         isDragging = false;
-        mapContainer.style.cursor = 'grab';
+        viewport.classList.remove('grabbing');
     }
 
-    // Inicializar
+    function resetView() {
+        scale = 0.4;
+        offsetX = 0;
+        offsetY = 0;
+        updateTransform();
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         initStars();
         createOrbitalNodes();
@@ -657,10 +736,12 @@
             showNodeContent(nodesData.central);
         }, 1000);
         
-        mapContainer.addEventListener('wheel', handleWheel);
-        mapContainer.addEventListener('mousedown', handleMouseDown);
+        viewport.addEventListener('wheel', handleWheel);
+        viewport.addEventListener('mousedown', handleMouseDown);
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
+        
+        viewport.addEventListener('dblclick', resetView);
         
         document.addEventListener('click', (e) => {
             const panel = document.getElementById('contentPanel');
@@ -670,5 +751,22 @@
                 panel.classList.remove('active');
             }
         });
+        
+        document.getElementById('closePanel').addEventListener('mousedown', (e) => e.stopPropagation());
+        
+        // Script adicional para ocultar elementos "CONCEPTUAL" que ya existían
+        setTimeout(() => {
+            // Buscar y ocultar cualquier elemento que contenga "CONCEPTUAL"
+            const elements = document.querySelectorAll('*');
+            elements.forEach(el => {
+                if (el.textContent && el.textContent.includes('CONCEPTUAL')) {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.height = '0';
+                    el.style.margin = '0';
+                    el.style.padding = '0';
+                }
+            });
+        }, 500);
     });
 </script>
