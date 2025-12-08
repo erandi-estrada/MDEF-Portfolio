@@ -32,9 +32,9 @@
             </a>
 
   <a href="Otherness/Other-intelligences/" class="card">
-                <img src="images/bootcamp.jpg" alt="Bootcamp"> 
-                <h3>Bootcamp</h3> 
-                <p>Hands-on learning, rapid prototyping, and collaboration.</p> 
+                <img src="images/lenguaje.jpg" alt="Other Intelligences"> 
+                <h3>Other Intelligences</h3> 
+                <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
             </a> 
 
   <a href="Unpacking/Unpacking/" class="card">
