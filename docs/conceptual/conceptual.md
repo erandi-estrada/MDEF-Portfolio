@@ -334,6 +334,7 @@
 </style>
 
 <!-- ===== HTML ===== -->
+<!-- Solo el menú principal - Sin header con "CONCEPTUAL" -->
 <div class="menu-container">
     <div class="custom-header-menu">
         <a href="../..">MDEF</a>
@@ -342,6 +343,7 @@
     </div>
 </div>
 
+<!-- Contenido principal del mapa -->
 <div class="map-container">
     <div id="galaxy">
         <canvas id="galaxy-canvas"></canvas>
