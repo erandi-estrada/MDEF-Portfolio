@@ -1142,15 +1142,15 @@ function showProtocol4(n) {
 <!-- Texto a la izquierda, imagen a la derecha -->
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: start;">
     
-    <!-- Texto a la izquierda -->
-    <div>
+<!-- Texto a la izquierda -->
+<div>
         <p>The cushion produced different kinds of friction in each phase. During Phase 1, humans kept distance, puzzled by the object's altered softness. Pigeons did not approach the bench or the ground beneath it, signaling the effectiveness of subtle discomfort.</p>
         <p>During Phase 2, the full restoration of softness and the presence of food did not lead pigeons to engage with the cushion. They maintained significant distance, rarely landing nearby. Their avoidance suggests that hospitality cannot be instantly restored through design gestures. Years of spikes, deterrents, and hostile surfaces have shaped their perception of benches as unsafe.</p>
         <p>Their absence became meaningful: it revealed how deeply exclusion has been internalized, and how trust is not automatically regained even when softness returns.</p>
     </div>
 
-    <!-- Imagen a la derecha -->
-    <div>
+<!-- Imagen a la derecha -->
+<div>
         <img src="../../images/palomas.jpeg" 
              alt="Pigeons in urban environment" 
              width="100%" 
@@ -1164,7 +1164,7 @@ function showProtocol4(n) {
     Your browser does not support the video tag.
 </video>
 
-<h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">IV — Act Collectively: Multispecies Fieldwork with Urban Pigeons</h1>
+<h1 style="font-size: 2.2rem; font-weight: bold; margin: 3rem 0 1rem 0;">COLLECTIVE ACTION</h1>
 
 <!-- Imagen completa -->
 <img src="../../images/collective-main.jpg" 
@@ -1175,7 +1175,7 @@ function showProtocol4(n) {
 <!-- Conceptual Statement -->
 <h3 style="font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 0.5rem 0;">Conceptual Statement</h3>
 <p>This collective action reframes pigeons not as "subjects of study" or "urban pests," but as a multispecies community already navigating, negotiating, and shaping the public spaces of Barcelona. Rather than intervening directly, this action focuses on co-presence, following, and learning from pigeons' own movement patterns, social dynamics, and urban strategies.</p>
-<p>Hostile architecture has deeply influenced pigeon behavior—not only where they land, but where they feel safe, how they form groups, and how they move through the city. By shifting from "designing for pigeons" to "designing with pigeons," this collective action acknowledges their agency, routines, emotional responses, and spatial intelligence.</p>
+<p>Hostile architecture has deeply influenced pigeon behavior, not only where they land, but where they feel safe, how they form groups, and how they move through the city. By shifting from "designing for pigeons" to "designing with pigeons," this collective action acknowledges their agency, routines, emotional responses, and spatial intelligence.</p>
 <p>The objective is not to modify their behavior, but to understand it. The action becomes a collaboration through attentive observation, relational proximity, and respect for autonomy, recognizing pigeons as co-inhabitants whose daily spatial negotiations reveal the hidden structures of exclusion in the city.</p>
 
 <!-- Action Strategy -->
@@ -1239,7 +1239,7 @@ function showProtocol4(n) {
 </div>
 
 <!-- Protocolo -->
-<h2 style="font-size: 2.5rem; font-weight: bold; margin: 2rem 0 1rem 0;">Detailed Protocol (Step-by-Step)</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 2rem 0 1rem 0;">Protocol</h2>
 
 <div class="protocol-container-collective" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
@@ -1255,12 +1255,12 @@ function showProtocol4(n) {
         </ul>
         
  <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">2. Selection of Individuals</h4>
-        <p>Identify 2–4 pigeons with distinct positions or behaviors:</p>
+        <p>Identify a couple of pigeons with distinct positions or behaviors, like:</p>
         <ul>
-            <li>one drinking from the fountain</li>
-            <li>one exploring food scraps</li>
-            <li>one resting in a tree</li>
-            <li>one navigating high foot traffic</li>
+            <li>drinking from the fountain</li>
+            <li>exploring food scraps</li>
+            <li>resting in a tree</li>
+            <li>navigating high foot traffic</li>
         </ul>
         
 <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">3. Following</h4>
@@ -1276,7 +1276,7 @@ function showProtocol4(n) {
 
  <!-- Tarjeta 2 -->
 <div class="protocol-card-collective">
-        <h3 style="color: #333; margin-top: 0;">Phase 1 — Individual Field Observation (Continuación)</h3>
+        <h3 style="color: #333; margin-top: 0;">Phase 1 — Individual Field Observation</h3>
         
  <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">4. Documentation</h4>
         <p>Produce a drawn map noting:</p>
@@ -1292,7 +1292,7 @@ function showProtocol4(n) {
         
 <h4 style="font-size: 1.5rem; font-weight: normal; margin: 1rem 0 0.5rem 0;">5. Ethical Position</h4>
         <p><strong>No luring, no feeding, no disturbance, no forced proximity.</strong><br>
-        Your body becomes a quiet observer—not a manipulator.</p>
+        Your body becomes a quiet observer, not a manipulator.</p>
     </div>
 
 <!-- Tarjeta 3 -->
@@ -1390,8 +1390,7 @@ function showProtocol4(n) {
 <!-- Why they need this activation -->
 <div>
         <h4 style="font-size: 1.6rem; font-weight: bold; margin: 0 0 0.5rem 0;">Why they need this activation</h4>
-        <p><strong>Not because pigeons need help—<br>
-        but because humans need to understand how pigeons navigate a city designed against them.</strong></p>
+        <p><strong>Not because pigeons need help, but because humans need to understand how pigeons navigate a city designed against them.</strong></p>
         <p>Their avoidance, their withdrawal, their hesitations are forms of knowledge. This action reveals their strategies, fears, adaptability, and resilience.</p>
     </div>
 </div>
@@ -1479,15 +1478,15 @@ function showProtocolCollective(n) {
 </video>
 
 <!-- Critical Evaluation -->
-<h2 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0;">Critical Evaluation — Collective Action (Pigeon Observation)</h2>
+<h2 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0;">Critical Evaluation</h2>
 
-<p style="margin-bottom: 2rem;">The collective action shifted from attempting to attract pigeons into an experiment toward practicing a slow, relational form of multispecies observation. By following pigeons across two different urban ecologies—Jardins de la Reina Victòria and Plaça de Catalunya—I learned to understand pigeons not as urban nuisances but as inhabitants whose routines, routes, and decisions are directly shaped by architectural hostility and human behavior.</p>
+<p style="margin-bottom: 2rem;">The collective action shifted from attempting to attract pigeons into an experiment toward practicing a slow, relational form of multispecies observation. By following pigeons across two different urban ecologies, Jardins de la Reina Victòria and Plaça de Catalunya, I learned to understand pigeons not as urban nuisances but as inhabitants whose routines, routes, and decisions are directly shaped by architectural hostility and human behavior.</p>
 
 <!-- Tarjetas de Critical Evaluation -->
 <div class="eval-container-collective" style="position: relative; max-width: 100%; margin: 2rem 0; border-radius: 8px; overflow: hidden;">
     
-    <!-- Tarjeta 1 -->
-    <div class="eval-card-collective active-eval">
+<!-- Tarjeta 1 -->
+<div class="eval-card-collective active-eval">
         <h3 style="color: #333; margin-top: 0; font-size: 1.6rem;">1. From Designing "For" to Learning "With"</h3>
         <p>This phase of the project represented a turning point. Rather than trying to make pigeons interact with a designed object, I chose to move with them, to follow their rhythms, and to document how they inhabit the city on their own terms.</p>
         <p>This shift revealed that pigeons already possess deep knowledge of:</p>
@@ -1500,22 +1499,22 @@ function showProtocolCollective(n) {
         <p>The action became participatory because participation was defined by pigeons, not by my expectations.</p>
     </div>
 
-    <!-- Tarjeta 2 -->
-    <div class="eval-card-collective">
+<!-- Tarjeta 2 -->
+<div class="eval-card-collective">
         <h3 style="color: #333; margin-top: 0; font-size: 1.6rem;">2. Individual Observations: Micro-Movements as Communication</h3>
         <p>Following individual pigeons for more than an hour in Jardins de la Reina Victòria revealed complex spatial strategies:</p>
         <ul>
             <li>Pigeons constantly recalculated their routes to avoid unpredictable human movement.</li>
             <li>They alternated between walking, pausing, retreating, and taking flight based on subtle environmental cues.</li>
-            <li>One pigeon repeatedly attempted to eat a french fry across the street, but its approach was fragmented—walk a few steps, stop, reassess, retreat—before finally taking the risk.</li>
+            <li>One pigeon repeatedly attempted to eat a french fry across the street, but its approach was fragmented, walk a few steps, stop, reassess, retreat, before finally taking the risk.</li>
             <li>Vertical safety (trees, lampposts, architectural ledges) played a crucial role: pigeons frequently moved between ground and elevated positions to regulate exposure.</li>
             <li>Rest happened only in places offering visibility and escape options, such as the monument top or tree cavities.</li>
         </ul>
         <p>These micro-behaviors showed how pigeons live in a constant negotiation of safety, shaped by human density and urban design.</p>
     </div>
 
-    <!-- Tarjeta 3 -->
-    <div class="eval-card-collective">
+<!-- Tarjeta 3 -->
+<div class="eval-card-collective">
         <h3 style="color: #333; margin-top: 0; font-size: 1.6rem;">3. Group Observations: Collective Intelligence and Flocking Behavior</h3>
         <p>In Plaça de Catalunya, observing group-level behavior revealed a distinct ecology:</p>
         <ul>
@@ -1523,24 +1522,24 @@ function showProtocolCollective(n) {
             <li>Smaller groups rested near fountains, using the water as a resource and the basin edges as secure perches.</li>
             <li>Shade zones under bushes became resting sites, especially during warmer hours.</li>
             <li>Movement happened as waves: groups merged and split in response to human cues, noise, or the availability of space.</li>
-            <li>Certain pigeons remained at the periphery—more cautious, slower to respond, maintaining more distance from humans and dominant birds.</li>
+            <li>Certain pigeons remained at the periphery, more cautious, slower to respond, maintaining more distance from humans and dominant birds.</li>
         </ul>
         <p>These dynamics demonstrate that pigeons share a collective spatial intelligence, shaped by social hierarchy and environmental affordances.</p>
     </div>
 
-    <!-- Tarjeta 4 -->
-    <div class="eval-card-collective">
+<!-- Tarjeta 4 -->
+<div class="eval-card-collective">
         <h3 style="color: #333; margin-top: 0; font-size: 1.6rem;">4. What the Maps Revealed</h3>
         <p>Mapping both sites made visible two different relational landscapes:</p>
         <ul>
-            <li>In the garden, pigeon movement is fragmented, cautious, and individualized. Space is negotiated moment-by-moment.</li>
+            <li>In the garden, pigeon movement is fragmented, cautious, and individualized. Space is negotiated moment by moment.</li>
             <li>In the plaza, pigeons form social territories: feeding zones, resting zones, shade zones, and vertical refuge points.</li>
         </ul>
         <p>The maps expose how pigeons interact with an environment that has been repeatedly modified to repel them. Their routes and decisions reflect accumulated experience and adaptation.</p>
     </div>
 
-    <!-- Tarjeta 5 -->
-    <div class="eval-card-collective">
+<!-- Tarjeta 5 -->
+<div class="eval-card-collective">
         <h3 style="color: #333; margin-top: 0; font-size: 1.6rem;">5. Ethical and Methodological Learning</h3>
         <p>This action revealed the ethical importance of not forcing participation. Unlike my earlier actions, this one:</p>
         <ul>
@@ -1549,11 +1548,11 @@ function showProtocolCollective(n) {
             <li>did not manipulate their behavior.</li>
         </ul>
         <p>Instead, it relied entirely on attentiveness and presence.</p>
-        <p>This approach aligns with the course's emphasis on avoiding extractivist practices and establishing horizontal relationships. The pigeons' movements, pauses, and absences became the data—not because they performed something for the project, but because they continued their lives in ways that revealed the city's multispecies politics.</p>
+        <p>This approach aligns with the course's emphasis on avoiding extractivist practices and establishing horizontal relationships. The pigeons' movements, pauses, and absences became the data, not because they performed something for the project, but because they continued their lives in ways that revealed the city's multispecies politics.</p>
     </div>
 
-    <!-- Tarjeta 6 -->
-    <div class="eval-card-collective">
+<!-- Tarjeta 6 -->
+<div class="eval-card-collective">
         <h3 style="color: #333; margin-top: 0; font-size: 1.6rem;">6. Limitations and Future Opportunities</h3>
         <p>The evaluation also highlights limitations:</p>
         <ul>
@@ -1571,13 +1570,13 @@ function showProtocolCollective(n) {
         <p>These directions would deepen the collective dimension of the project.</p>
     </div>
 
-    <!-- Navegación -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+<!-- Navegación -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
         <button class="eval-prev-collective" onclick="plusEvalCollective(-1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             ← Previous
         </button>
         
-        <div class="eval-dots-collective" style="display: flex; gap: 10px;">
+<div class="eval-dots-collective" style="display: flex; gap: 10px;">
             <span class="eval-dot-collective active-eval" onclick="currentEvalCollective(1)">1</span>
             <span class="eval-dot-collective" onclick="currentEvalCollective(2)">2</span>
             <span class="eval-dot-collective" onclick="currentEvalCollective(3)">3</span>
@@ -1586,7 +1585,7 @@ function showProtocolCollective(n) {
             <span class="eval-dot-collective" onclick="currentEvalCollective(6)">6</span>
         </div>
         
-        <button class="eval-next-collective" onclick="plusEvalCollective(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+ <button class="eval-next-collective" onclick="plusEvalCollective(1)" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
             Next →
         </button>
     </div>
@@ -1595,7 +1594,7 @@ function showProtocolCollective(n) {
 <!-- Conclusion -->
 <h3 style="font-size: 1.8rem; font-weight: bold; margin: 2rem 0 1rem 0;">Conclusion</h3>
 <p style="margin-bottom: 3rem;">The collective action succeeded by reframing participation: instead of expecting pigeons to respond to a design intervention, I positioned myself as the one who must adapt. Through slow observation, the pigeons became co-researchers, not subjects.</p>
-<p style="margin-bottom: 3rem;">Their behaviors—detours, hesitations, resting choices, group formations—revealed how exclusion shapes everyday life for non-human inhabitants of Barcelona. This action expanded the project from studying hostility as an architectural phenomenon to understanding its ecological and emotional consequences.</p>
+<p style="margin-bottom: 3rem;">Their behaviors, detours, hesitations, resting choices, group formations, revealed how exclusion shapes everyday life for non-human inhabitants of Barcelona. This action expanded the project from studying hostility as an architectural phenomenon to understanding its ecological and emotional consequences.</p>
 <p>The most meaningful form of participation emerged not through interaction but through co-presence, careful attention, and the willingness to let the pigeons lead.</p>
 
 <script>
@@ -1665,3 +1664,224 @@ function showEvalCollective(n) {
     background-color: #666;
 }
 </style>
+
+<!-- Final Reflection -->
+<h1 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0; text-align: center;">Final Reflection</h1>
+
+<!-- Tarjeta de introducción -->
+<div style="background: #f8f9fa; border-radius: 12px; padding: 2.5rem; margin: 2rem 0; border-left: 5px solid #333;">
+    <p style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+        This project began as an exploration of hostile design in Barcelona, but it unfolded into something far more complex: a confrontation with the limits of aesthetic order, with the politics of public space, and with my own assumptions about agency, participation, and care.
+    </p>
+</div>
+
+<!-- Grid de las 4 primeras acciones -->
+<div style="margin: 3rem 0;">
+    <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #333;">
+        Four Actions, Four Faces of Urban Violence
+    </h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+        
+        <!-- Acción 1 -->
+        <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #4a90e2;">
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <div style="background: #4a90e2; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">
+                    1
+                </div>
+                <h4 style="margin: 0; font-size: 1.2rem; font-weight: bold;">Body as Testimony</h4>
+            </div>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                <strong>My body resting where it shouldn't</strong> made visible the discomfort engineered into public space.
+            </p>
+        </div>
+        
+        <!-- Acción 2 -->
+        <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #50c878;">
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <div style="background: #50c878; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">
+                    2
+                </div>
+                <h4 style="margin: 0; font-size: 1.2rem; font-weight: bold;">Fragile Life</h4>
+            </div>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                <strong>Small plants placed in forbidden corners</strong> exposed the fragility of spontaneous life under regimes of maintenance.
+            </p>
+        </div>
+        
+        <!-- Acción 3 -->
+        <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #ff6b6b;">
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <div style="background: #ff6b6b; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">
+                    3
+                </div>
+                <h4 style="margin: 0; font-size: 1.2rem; font-weight: bold;">Violence Transferred</h4>
+            </div>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                <strong>Wearing hostile architecture</strong> showed how violence becomes legible only when transferred to the human body.
+            </p>
+        </div>
+        
+        <!-- Acción 4 -->
+        <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #9b59b6;">
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <div style="background: #9b59b6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">
+                    4
+                </div>
+                <h4 style="margin: 0; font-size: 1.2rem; font-weight: bold;">Softness Manipulated</h4>
+            </div>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                <strong>Transforming a cushion</strong> revealed how easily comfort can be manipulated and how it shapes public behavior.
+            </p>
+        </div>
+    </div>
+    
+    <div style="background: #fff9e6; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #f1c40f;">
+        <p style="margin: 0; font-style: italic; line-height: 1.6;">
+            "These actions revealed how normalized hostility has become, so embedded into the urban aesthetic that people barely see it anymore. They also taught me that critical design is not only about making violence visible; it is also about understanding the systems that sustain it."
+        </p>
+    </div>
+</div>
+
+<!-- Sección del giro -->
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 2.5rem; margin: 3rem 0; color: white; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(80px, -80px);"></div>
+    <div style="position: relative; z-index: 1;">
+        <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem;">The Turning Point</h3>
+        <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            I realized that my interventions were still centered on human perception. Even when trying to engage pigeons, my approach was initially "designing for" them, rather than listening to their own spatial intelligence.
+        </p>
+        <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: bold; backdrop-filter: blur(10px);">
+            The shift came when I began to follow pigeons rather than attempt to attract them.
+        </div>
+    </div>
+</div>
+
+<!-- Sección de aprendizaje -->
+<div style="margin: 3rem 0;">
+    <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #333;">Learning to See Differently</h3>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+        <!-- Columna izquierda -->
+        <div style="background: #e8f4f8; border-radius: 8px; padding: 2rem;">
+            <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #2c3e50;">What the Pigeons Taught Me</h4>
+            <ul style="margin: 0; padding-left: 1.5rem;">
+                <li style="margin-bottom: 0.75rem; line-height: 1.5;">Their avoidance, hesitation, and detours were not deficits but accumulated memories of exclusion</li>
+                <li style="margin-bottom: 0.75rem; line-height: 1.5;">Their routes revealed an invisible architecture of risk and adaptation</li>
+                <li style="margin-bottom: 0.75rem; line-height: 1.5;">Trees as safe zones, fountains as shared resources</li>
+                <li style="margin-bottom: 0.75rem; line-height: 1.5;">Pedestrian streams as threats, green patches as temporary shelters</li>
+                <li style="margin-bottom: 0.75rem; line-height: 1.5;">Edges as negotiation spaces</li>
+            </ul>
+        </div>
+        
+        <!-- Columna derecha -->
+        <div style="background: #f0e8f8; border-radius: 8px; padding: 2rem;">
+            <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #2c3e50;">Horizontal Participation</h4>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                This was the first moment in the project where participation felt truly horizontal.
+                Not because pigeons interacted with my prototype, but because <strong>I interacted with their world</strong>, through attention, patience, and relational humility.
+            </p>
+            <div style="background: white; border-radius: 6px; padding: 1.5rem; margin-top: 1rem;">
+                <p style="margin: 0; font-style: italic; color: #555;">
+                    "Their forms of communication were subtle but powerful: a pause before crossing a path, a sudden flight when a stroller approached, the slow merging of groups around a stranger offering food..."
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cita importante -->
+<div style="text-align: center; margin: 3rem 0; padding: 2.5rem; background: #f5f7fa; border-radius: 12px; position: relative;">
+    <div style="font-size: 5rem; color: #ddd; position: absolute; top: -10px; left: 20px;">"</div>
+    <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 300; margin: 0 0 1rem 0; color: #333;">
+        Through this, I learned that collective action does not require interaction; it requires <span style="font-weight: bold; color: #e74c3c;">responsiveness</span>.
+    </p>
+    <p style="font-size: 1.3rem; color: #666; font-style: italic;">
+        And responsiveness begins with observation, not intervention.
+    </p>
+    <div style="font-size: 5rem; color: #ddd; position: absolute; bottom: -30px; right: 20px;">"</div>
+</div>
+
+<!-- Lecciones aprendidas -->
+<div style="margin: 3rem 0;">
+    <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #333;">Core Understandings</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+        
+        <!-- Lección 1 -->
+        <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
+            <div style="width: 50px; height: 50px; background: #e74c3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="color: white; font-weight: bold; font-size: 1.5rem;">!</span>
+            </div>
+            <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">Beauty as Governance</h4>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                Beauty is not neutral; it is a tool of governance that decides who and what belongs.
+            </p>
+        </div>
+        
+        <!-- Lección 2 -->
+        <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
+            <div style="width: 50px; height: 50px; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="color: white; font-weight: bold; font-size: 1.5rem;">⟲</span>
+            </div>
+            <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">Design Shapes Memory</h4>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                Hostile design shapes more than space—it shapes memory, movement, and trust across species.
+            </p>
+        </div>
+        
+        <!-- Lección 3 -->
+        <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
+            <div style="width: 50px; height: 50px; background: #2ecc71; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="color: white; font-weight: bold; font-size: 1.5rem;">⚖️</span>
+            </div>
+            <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">Coexistence as Negotiation</h4>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                Coexistence is not granted by design; it is negotiated through time, patience, and mutual adaptation.
+            </p>
+        </div>
+        
+        <!-- Lección 4 -->
+        <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
+            <div style="width: 50px; height: 50px; background: #9b59b6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="color: white; font-weight: bold; font-size: 1.5rem;">🤫</span>
+            </div>
+            <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">Agency as Withdrawal</h4>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                Non-human agency often appears as withdrawal, silence, or hesitation—forms of resistance that must be learned to recognize.
+            </p>
+        </div>
+        
+        <!-- Lección 5 -->
+        <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
+            <div style="width: 50px; height: 50px; background: #f39c12; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="color: white; font-weight: bold; font-size: 1.5rem;">👥</span>
+            </div>
+            <h4 style="margin: 0 0 0.75rem 0; font-size: 1.2rem; font-weight: bold;">True Collectivity</h4>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.5;">
+                Acting collectively means acknowledging that others, human or not, have their own priorities, rhythms, and vulnerabilities.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Conclusión final -->
+<div style="background: linear-gradient(to right, #2c3e50, #4a6572); border-radius: 12px; padding: 3rem; margin: 3rem 0; color: white;">
+    <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">From Exposure to Repair</h3>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+        <div>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                If the earlier actions exposed violence, the final collective action taught me about <strong>repair</strong>.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                Not the romantic idea of "inviting nature back," but the more honest recognition that trust cannot be manufactured instantly, and that care is a slow, subtle, and unfinished process.
+            </p>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f1c40f;">
+            <p style="margin: 0; font-size: 1.2rem; font-style: italic; line-height: 1.6;">
+                "This project ends not with a resolved conclusion but with an expanded sensitivity: an understanding that cities are multispecies landscapes, and that design, when attentive, can shift from controlling life to learning from it."
+            </p>
+        </div>
+    </div>
+</div>
