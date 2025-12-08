@@ -1906,20 +1906,21 @@ function showEvalCollective(n) {
 <!-- Final Reflection -->
 <h1 style="font-size: 2.5rem; font-weight: bold; margin: 3rem 0 1rem 0; text-align: center;">Final Reflection</h1>
 
-<!-- Tarjeta de introducción -->
-<div style="background: #f8f9fa; border-radius: 12px; padding: 2.5rem; margin: 2rem 0; border-left: 5px solid #333;">
+<!-- Tarjeta de introducción SIN FONDO -->
+<div style="margin: 2rem 0;">
     <p style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
         This project began as an exploration of hostile design in Barcelona, but it unfolded into something far more complex: a confrontation with the limits of aesthetic order, with the politics of public space, and with my own assumptions about agency, participation, and care.
     </p>
 </div>
 
-<!-- Grid de las 4 primeras acciones -->
+<!-- Grid de las 4 primeras acciones - 2 arriba, 2 abajo -->
 <div style="margin: 3rem 0;">
     <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #333;">
         Four Actions, Four Faces of Urban Violence
     </h3>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+    <!-- Primera fila: 2 tarjetas -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
 
         <!-- Acción 1 -->
         <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #4a90e2;">
@@ -1946,6 +1947,10 @@ function showEvalCollective(n) {
                 <strong>Small plants placed in forbidden corners</strong> exposed the fragility of spontaneous life under regimes of maintenance.
             </p>
         </div>
+    </div>
+
+    <!-- Segunda fila: 2 tarjetas -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
 
         <!-- Acción 3 -->
         <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #ff6b6b;">
@@ -1974,7 +1979,8 @@ function showEvalCollective(n) {
         </div>
     </div>
 
-    <div style="background: #fff9e6; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #f1c40f;">
+    <!-- Texto abajo SIN CUADRO -->
+    <div style="margin-top: 1.5rem;">
         <p style="margin: 0; font-style: italic; line-height: 1.6;">
             "These actions revealed how normalized hostility has become, so embedded into the urban aesthetic that people barely see it anymore. They also taught me that critical design is not only about making violence visible; it is also about understanding the systems that sustain it."
         </p>
@@ -2040,11 +2046,12 @@ function showEvalCollective(n) {
     <div style="font-size: 5rem; color: #ddd; position: absolute; bottom: -30px; right: 20px;">"</div>
 </div>
 
-<!-- Lecciones aprendidas -->
+<!-- Lecciones aprendidas - 3 arriba, 2 abajo centradas -->
 <div style="margin: 3rem 0;">
     <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #333;">Core Understandings</h3>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+    <!-- Primera fila: 3 tarjetas -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
 
         <!-- Lección 1 -->
         <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
@@ -2078,6 +2085,10 @@ function showEvalCollective(n) {
                 Coexistence is not granted by design; it is negotiated through time, patience, and mutual adaptation.
             </p>
         </div>
+    </div>
+
+    <!-- Segunda fila: 2 tarjetas CENTRADAS -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
 
         <!-- Lección 4 -->
         <div style="background: linear-gradient(145deg, #ffffff, #f5f7fa); border-radius: 10px; padding: 1.5rem; box-shadow: 8px 8px 16px #e1e5eb, -8px -8px 16px #ffffff; border: 1px solid #e1e8ed;">
@@ -2131,7 +2142,7 @@ function showEvalCollective(n) {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 14:03:20 UTC">December 8, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 8, 2025 14:14:26 UTC">December 8, 2025</span>
     
   </small>
 </div>
