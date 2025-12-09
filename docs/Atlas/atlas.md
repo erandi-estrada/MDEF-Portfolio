@@ -44,7 +44,7 @@
 <!-- Contenedor de dos columnas: Imagen y Definición -->
 <div class="two-column-container">
         <div class="column-left">
-            <img src="card1.png" alt="card">
+            <img src="card.jpg" alt="card">
         </div>
         <div class="column-right">
             <div class="definition-box">
