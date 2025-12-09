@@ -7,37 +7,42 @@
 </div>
 
 <div class="venn-page">
-    <h1 class="venn-title">Atlas of Weak Signals</h1>
 
-    <!-- Diagrama de Venn simplificado -->
-    <div class="venn-container">
+<!-- Imagen completa -->
+<img src="../../images/AllCards.png" 
+     alt="Tarjetas Atlas" 
+     width="100%" 
+     style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">   
+
+<!-- Diagrama de Venn simplificado -->
+<div class="venn-container">
         <div class="venn-diagram">
             <!-- Círculo 1: Rural Punk -->
             <div class="venn-circle circle-1">
                 <div class="circle-label">Rural Punk</div>
             </div>
             
-            <!-- Círculo 2: Anarch Governance -->
-            <div class="venn-circle circle-2">
+<!-- Círculo 2: Anarch Governance -->
+<div class="venn-circle circle-2">
                 <div class="circle-label">Anarch Governance</div>
             </div>
             
-            <!-- Círculo 3: Restorative Justice -->
-            <div class="venn-circle circle-3">
+<!-- Círculo 3: Restorative Justice -->
+<div class="venn-circle circle-3">
                 <div class="circle-label">Restorative Justice</div>
             </div>
             
-            <!-- Random Triggers -->
-            <div class="random-triggers">
+<!-- Random Triggers -->
+<div class="random-triggers">
                 <div class="trigger trigger-1">Avatars</div>
                 <div class="trigger trigger-2">Ancestral Knowledge</div>
             </div>
             
-        </div>
+</div>
     </div>
 
-    <!-- Contenedor de dos columnas: Imagen y Definición -->
-    <div class="two-column-container">
+<!-- Contenedor de dos columnas: Imagen y Definición -->
+<div class="two-column-container">
         <div class="column-left">
             <img src="Digital-Squatting.png" alt="Digital Squatting" class="definition-image">
         </div>
@@ -47,15 +52,15 @@
                 <p>As a form of digital activism or digital disobedience, is the act of claiming online spaces such as domains or usernames to challenge control and digital capitalism. It reclaims virtual ground as an act of resistance, using the architecture of the internet to stage protests.</p>
             </div>
             
-            <!-- Equipo -->
-            <div class="team-note">
+ <!-- Equipo -->
+<div class="team-note">
                 <p><strong>Weak Signal worked in team:</strong> Sila, Ishan, Ludo, Aishwarya, Erandi, Francesco</p>
             </div>
         </div>
     </div>
 
-    <!-- Video de YouTube -->
-    <div class="video-container">
+<!-- Video de YouTube -->
+   <div class="video-container">
         <div class="youtube-video">
             <iframe 
                 src="https://www.youtube.com/embed/0VJFyfiYXVs" 
@@ -65,7 +70,7 @@
                 allowfullscreen>
             </iframe>
         </div>
-        <p class="video-caption">Atlas of Weak Signals - Team Project</p>
+        <p class="video-caption">Atlas of Weak Signals - Digital Squatting</p>
     </div>
 </div>
 
