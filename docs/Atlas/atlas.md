@@ -44,7 +44,10 @@
 <!-- Contenedor de dos columnas: Imagen y Definición -->
 <div class="two-column-container">
         <div class="column-left">
-            <img src="card.jpg" alt="card" class="definition-image">
+             <img src="../../images/card.jpg" 
+             alt="tarjeta" 
+             width="100%" 
+             style="border-radius: 8px; object-fit: cover;">
         </div>
         <div class="column-right">
             <div class="definition-box">
