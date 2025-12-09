@@ -79,7 +79,7 @@
 
 <!-- Nueva imagen cards2.jpg -->
 <div class="image-section">
-    <img src="../../images/cards2.jpg" 
+    <img src="../../images/cards2.png" 
          alt="Tarjetas adicionales del Atlas" 
          width="100%" 
          style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
@@ -105,21 +105,18 @@
             <div class="concept-box">
                 <div class="concept-content">
                     <h4>Tech Abolition</h4>
-                    <p class="concept-description">Rethinking technology beyond capitalist paradigms</p>
                 </div>
             </div>
             
  <div class="concept-box">
                 <div class="concept-content">
                     <h4>Border Regimes</h4>
-                    <p class="concept-description">Challenging territorial and social boundaries</p>
                 </div>
             </div>
             
 <div class="concept-box">
                 <div class="concept-content">
                     <h4>Boredom and Laziness</h4>
-                    <p class="concept-description">Reclaiming time and resisting productivity culture</p>
                 </div>
             </div>
         </div>
@@ -131,7 +128,6 @@
 <div class="node node-kit">
             <div class="node-content">
                 <h3>Kit</h3>
-                <p class="kit-description">Tools and resources for post-capitalist care</p>
             </div>
         </div>
     </div>
