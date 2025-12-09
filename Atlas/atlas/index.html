@@ -339,76 +339,49 @@
          style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
 </div>
 
-<!-- Nuevo diagrama Post-Capitalist Care -->
-<div class="diagram-section">
-    <h2 class="diagram-title">Post-Capitalist Care Framework</h2>
+<!-- Diagrama sencillo sin fondo -->
+<div class="simple-diagram-container">
+    <h2 class="simple-diagram-title">Post-Capitalist Care Framework</h2>
 
-<div class="care-diagram">
+    <div class="simple-diagram">
         <!-- Nodo central -->
-        <div class="central-node">
-            <div class="node-content">
-                <h3>Post-Capitalist Care</h3>
-            </div>
+        <div class="simple-central-node">
+            <h3>Post-Capitalist Care</h3>
         </div>
 
-<!-- Rama 1: Tech Abolition -->
-<div class="branch branch-1">
-            <div class="branch-line"></div>
-            <div class="branch-node">
-                <div class="node-content">
-                    <h4>Tech Abolition</h4>
-                    <p>Rethinking technology beyond capitalist paradigms</p>
-                </div>
+        <!-- Líneas conectores -->
+        <div class="connector connector-1"></div>
+        <div class="connector connector-2"></div>
+        <div class="connector connector-3"></div>
+
+        <!-- Rama 1: Tech Abolition -->
+        <div class="simple-branch branch-1">
+            <div class="branch-content">
+                <h4>Tech Abolition</h4>
+                <p class="branch-desc">Rethinking technology beyond capitalist paradigms</p>
             </div>
-            <div class="branch-arrow">
-                <div class="arrow-line"></div>
-                <div class="arrow-head"></div>
-            </div>
-            <div class="end-node kit-node">
-                <div class="node-content">
-                    <span class="kit-badge">Kit</span>
-                </div>
-            </div>
+            <div class="connector-to-kit"></div>
+            <div class="kit-box">Kit</div>
         </div>
 
- <!-- Rama 2: Border Regimes -->
-   <div class="branch branch-2">
-            <div class="branch-line"></div>
-            <div class="branch-node">
-                <div class="node-content">
-                    <h4>Border Regimes</h4>
-                    <p>Challenging territorial and social boundaries</p>
-                </div>
+        <!-- Rama 2: Border Regimes -->
+        <div class="simple-branch branch-2">
+            <div class="branch-content">
+                <h4>Border Regimes</h4>
+                <p class="branch-desc">Challenging territorial and social boundaries</p>
             </div>
-            <div class="branch-arrow">
-                <div class="arrow-line"></div>
-                <div class="arrow-head"></div>
-            </div>
-            <div class="end-node kit-node">
-                <div class="node-content">
-                    <span class="kit-badge">Kit</span>
-                </div>
-            </div>
+            <div class="connector-to-kit"></div>
+            <div class="kit-box">Kit</div>
         </div>
 
-<!-- Rama 3: Boredom and Laziness -->
- <div class="branch branch-3">
-            <div class="branch-line"></div>
-            <div class="branch-node">
-                <div class="node-content">
-                    <h4>Boredom and Laziness</h4>
-                    <p>Reclaiming time and resisting productivity culture</p>
-                </div>
+        <!-- Rama 3: Boredom and Laziness -->
+        <div class="simple-branch branch-3">
+            <div class="branch-content">
+                <h4>Boredom and Laziness</h4>
+                <p class="branch-desc">Reclaiming time and resisting productivity culture</p>
             </div>
-            <div class="branch-arrow">
-                <div class="arrow-line"></div>
-                <div class="arrow-head"></div>
-            </div>
-            <div class="end-node kit-node">
-                <div class="node-content">
-                    <span class="kit-badge">Kit</span>
-                </div>
-            </div>
+            <div class="connector-to-kit"></div>
+            <div class="kit-box">Kit</div>
         </div>
     </div>
 </div>
@@ -786,338 +759,225 @@ h1:first-of-type {
 
 </style>
 
+<!-- Estilos para el diagrama sencillo -->
 <style>
-/* Estilos para la nueva imagen */
-.image-section {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Estilos para el nuevo diagrama */
-.diagram-section {
+/* Contenedor del diagrama sencillo */
+.simple-diagram-container {
     margin: 4rem 0;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 2rem 0;
+    background: transparent;
 }
 
-.diagram-title {
+.simple-diagram-title {
     text-align: center;
     color: #2d3748;
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 3rem;
-    position: relative;
 }
 
-.diagram-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #1976d2, #9c27b0);
-    border-radius: 2px;
-}
-
-/* Diagrama de Post-Capitalist Care */
-.care-diagram {
+/* Diagrama principal */
+.simple-diagram {
     position: relative;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 400px;
 }
 
 /* Nodo central */
-.central-node {
+.simple-central-node {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #1976d2, #9c27b0);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3);
-    border: 5px solid white;
-    animation: pulse-glow 3s infinite;
-}
-
-.central-node h3 {
-    color: white;
+    background: white;
+    padding: 1.5rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px solid #1976d2;
+    z-index: 10;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 1rem;
-    margin: 0;
+    min-width: 180px;
 }
 
-/* Estilos generales de las ramas */
-.branch {
+.simple-central-node h3 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Conectores desde el nodo central */
+.connector {
+    position: absolute;
+    background: #1976d2;
+    z-index: 1;
+}
+
+.connector-1 {
+    /* Hacia Tech Abolition */
+    width: 120px;
+    height: 3px;
+    top: 50%;
+    left: calc(50% + 90px);
+    transform: translateY(-50%);
+}
+
+.connector-2 {
+    /* Hacia Border Regimes */
+    width: 120px;
+    height: 3px;
+    top: 50%;
+    right: calc(50% + 90px);
+    transform: translateY(-50%);
+}
+
+.connector-3 {
+    /* Hacia Boredom and Laziness */
+    width: 3px;
+    height: 120px;
+    top: calc(50% + 90px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Ramas */
+.simple-branch {
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    width: 180px;
 }
 
-.branch-line {
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #1976d2, #9c27b0);
+/* Posicionamiento de las ramas */
+.branch-1 {
+    /* Tech Abolition - Derecha */
+    top: 50%;
+    left: calc(50% + 220px);
+    transform: translateY(-50%);
 }
 
-.branch-node {
+.branch-2 {
+    /* Border Regimes - Izquierda */
+    top: 50%;
+    right: calc(50% + 220px);
+    transform: translateY(-50%);
+}
+
+.branch-3 {
+    /* Boredom and Laziness - Abajo */
+    top: calc(50% + 220px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Contenido de cada rama */
+.branch-content {
     background: white;
     padding: 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    min-width: 180px;
-    border-left: 4px solid;
-    transition: transform 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
-.branch-node:hover {
-    transform: translateY(-5px);
-}
-
-.branch-node h4 {
+.branch-content h4 {
     margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
     color: #2d3748;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.branch-node p {
+.branch-desc {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
     line-height: 1.4;
 }
 
-/* Flecha hacia Kit */
-.branch-arrow {
-    display: flex;
-    align-items: center;
-    margin: 0 15px;
-}
-
-.arrow-line {
+/* Conector a Kit */
+.connector-to-kit {
     width: 40px;
     height: 2px;
     background: #4a5568;
+    margin: 0.5rem 0;
 }
 
-.arrow-head {
-    width: 0;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 10px solid #4a5568;
-}
-
-/* Nodo Kit */
-.end-node {
+/* Caja Kit */
+.kit-box {
     background: linear-gradient(135deg, #ff9800, #ff5722);
-    border-radius: 8px;
-    padding: 0.8rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
-}
-
-.kit-badge {
     color: white;
-    font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(255, 87, 34, 0.2);
+    min-width: 60px;
+    text-align: center;
 }
 
-/* Posicionamiento específico de las ramas */
-.branch-1 {
-    /* Tech Abolition - Superior izquierda */
-    top: 20%;
-    left: 10%;
-    flex-direction: row;
-}
-
-.branch-1 .branch-node {
-    border-left-color: #1976d2;
-}
-
-.branch-2 {
-    /* Border Regimes - Superior derecha */
-    top: 20%;
-    right: 10%;
-    flex-direction: row-reverse;
-}
-
-.branch-2 .branch-node {
-    border-left-color: #9c27b0;
-}
-
-.branch-3 {
-    /* Boredom and Laziness - Inferior central */
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: column;
-    align-items: center;
-}
-
-.branch-3 .branch-line {
-    width: 4px;
-    height: 80px;
-    margin-bottom: 10px;
-    background: linear-gradient(to bottom, #1976d2, #9c27b0);
-}
-
-.branch-3 .branch-arrow {
-    flex-direction: column;
-    margin: 10px 0;
-}
-
-.branch-3 .arrow-line {
-    width: 2px;
-    height: 30px;
-}
-
-.branch-3 .arrow-head {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 10px solid #4a5568;
-    border-left: none;
-}
-
-.branch-3 .branch-node {
-    border-left-color: #009688;
-}
-
-/* Animación para el nodo central */
-@keyframes pulse-glow {
-    0% {
-        box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3);
-    }
-    50% {
-        box-shadow: 0 8px 30px rgba(25, 118, 210, 0.5);
-    }
-    100% {
-        box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3);
-    }
-}
-
-/* Responsive para el nuevo diagrama */
-@media (max-width: 992px) {
-    .care-diagram {
-        min-height: 700px;
-    }
-
-    .branch-1 {
-        top: 15%;
-        left: 5%;
-    }
-
-    .branch-2 {
-        top: 15%;
-        right: 5%;
-    }
-
-    .branch-3 {
-        bottom: 10%;
-    }
-
-    .central-node {
-        width: 180px;
-        height: 180px;
-    }
-
-    .central-node h3 {
-        font-size: 1.3rem;
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .care-diagram {
-        min-height: 850px;
+    .simple-diagram {
+        min-height: 600px;
     }
 
-    .branch {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        margin: 2rem 0;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .branch-1, .branch-2, .branch-3 {
-        flex-direction: column !important;
-        align-items: center;
-        transform: none !important;
-    }
-
-    .branch-line {
-        width: 4px !important;
-        height: 50px !important;
-        margin-bottom: 10px;
-    }
-
-    .branch-arrow {
-        margin: 10px 0 !important;
-        flex-direction: column;
-    }
-
-    .arrow-line {
-        width: 2px !important;
-        height: 30px !important;
-    }
-
-    .arrow-head {
-        border-left: 6px solid transparent !important;
-        border-right: 6px solid transparent !important;
-        border-top: 10px solid #4a5568 !important;
-        border-left: none !important;
-    }
-
-    .central-node {
+    .simple-central-node {
         position: relative;
         top: auto;
         left: auto;
         transform: none;
         margin: 0 auto 3rem auto;
+        width: 80%;
     }
 
-    .diagram-title {
-        font-size: 1.8rem;
+    .connector {
+        display: none;
+    }
+
+    .simple-branch {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 2rem auto;
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .branch-1, .branch-2, .branch-3 {
+        margin: 2rem auto;
+    }
+
+    .simple-diagram-title {
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .central-node {
-        width: 160px;
-        height: 160px;
+    .simple-central-node {
+        padding: 1rem 1.5rem;
     }
 
-    .central-node h3 {
-        font-size: 1.1rem;
-        padding: 0.8rem;
+    .simple-central-node h3 {
+        font-size: 1.2rem;
     }
 
-    .branch-node {
-        min-width: 150px;
+    .branch-content {
         padding: 1rem;
     }
 
-    .branch-node h4 {
-        font-size: 1.1rem;
+    .branch-content h4 {
+        font-size: 1rem;
     }
 
-    .diagram-title {
-        font-size: 1.5rem;
+    .branch-desc {
+        font-size: 0.8rem;
     }
 }
 </style>
@@ -1129,7 +989,7 @@ h1:first-of-type {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 21:10:03 UTC">December 9, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 22:53:28 UTC">December 9, 2025</span>
     
   </small>
 </div>
