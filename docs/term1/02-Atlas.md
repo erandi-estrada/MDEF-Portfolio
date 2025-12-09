@@ -11,6 +11,7 @@
      alt="Tarjetas Atlas" 
      width="100%" 
      style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">  
+
 <div class="venn-page"> 
 
 <!-- Diagrama de Venn simplificado -->
@@ -43,7 +44,7 @@
 <!-- Contenedor de dos columnas: Imagen y Definición -->
 <div class="two-column-container">
         <div class="column-left">
-            <img src="card1.png" alt="Digital Squatting" class="definition-image">
+            <img src="card1.png" alt="card">
         </div>
         <div class="column-right">
             <div class="definition-box">
