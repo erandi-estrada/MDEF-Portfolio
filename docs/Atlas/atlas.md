@@ -79,7 +79,7 @@
 
 <!-- Nueva imagen cards2.jpg -->
 <div class="image-section">
-    <img src="../../images/cards2.jpg" 
+    <img src="../../images/cards2.png" 
          alt="Tarjetas adicionales del Atlas" 
          width="100%" 
          style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
