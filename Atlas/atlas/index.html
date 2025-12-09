@@ -333,55 +333,60 @@
 
 <!-- Nueva imagen cards2.jpg -->
 <div class="image-section">
-    <img src="../../images/cards2.png" 
+    <img src="../../images/cards2.jpg" 
          alt="Tarjetas adicionales del Atlas" 
          width="100%" 
          style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
 </div>
 
-<!-- Diagrama sencillo sin fondo -->
-<div class="simple-diagram-container">
-    <h2 class="simple-diagram-title">Post-Capitalist Care Framework</h2>
+<!-- Diagrama horizontal -->
+<div class="horizontal-diagram-container">
+    <h2 class="diagram-title-horizontal">Post-Capitalist Care Framework</h2>
 
-    <div class="simple-diagram">
-        <!-- Nodo central -->
-        <div class="simple-central-node">
-            <h3>Post-Capitalist Care</h3>
+<div class="horizontal-diagram">
+        <!-- Nodo 1: Post-Capitalist Care -->
+        <div class="node node-main">
+            <div class="node-content">
+                <h3>Post-Capitalist Care</h3>
+            </div>
         </div>
 
-        <!-- Líneas conectores -->
-        <div class="connector connector-1"></div>
-        <div class="connector connector-2"></div>
-        <div class="connector connector-3"></div>
+<!-- Flecha 1 -->
+<div class="arrow-horizontal"></div>
 
-        <!-- Rama 1: Tech Abolition -->
-        <div class="simple-branch branch-1">
-            <div class="branch-content">
-                <h4>Tech Abolition</h4>
-                <p class="branch-desc">Rethinking technology beyond capitalist paradigms</p>
+ <!-- Nodos intermedios: 3 conceptos -->
+<div class="concepts-row">
+            <div class="concept-box">
+                <div class="concept-content">
+                    <h4>Tech Abolition</h4>
+                    <p class="concept-description">Rethinking technology beyond capitalist paradigms</p>
+                </div>
             </div>
-            <div class="connector-to-kit"></div>
-            <div class="kit-box">Kit</div>
+
+ <div class="concept-box">
+                <div class="concept-content">
+                    <h4>Border Regimes</h4>
+                    <p class="concept-description">Challenging territorial and social boundaries</p>
+                </div>
+            </div>
+
+<div class="concept-box">
+                <div class="concept-content">
+                    <h4>Boredom and Laziness</h4>
+                    <p class="concept-description">Reclaiming time and resisting productivity culture</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Rama 2: Border Regimes -->
-        <div class="simple-branch branch-2">
-            <div class="branch-content">
-                <h4>Border Regimes</h4>
-                <p class="branch-desc">Challenging territorial and social boundaries</p>
-            </div>
-            <div class="connector-to-kit"></div>
-            <div class="kit-box">Kit</div>
-        </div>
+<!-- Flecha 2 -->
+<div class="arrow-horizontal"></div>
 
-        <!-- Rama 3: Boredom and Laziness -->
-        <div class="simple-branch branch-3">
-            <div class="branch-content">
-                <h4>Boredom and Laziness</h4>
-                <p class="branch-desc">Reclaiming time and resisting productivity culture</p>
+<!-- Nodo final: Kit -->
+<div class="node node-kit">
+            <div class="node-content">
+                <h3>Kit</h3>
+                <p class="kit-description">Tools and resources for post-capitalist care</p>
             </div>
-            <div class="connector-to-kit"></div>
-            <div class="kit-box">Kit</div>
         </div>
     </div>
 </div>
@@ -759,16 +764,16 @@ h1:first-of-type {
 
 </style>
 
-<!-- Estilos para el diagrama sencillo -->
+<!-- Estilos para el diagrama horizontal -->
 <style>
-/* Contenedor del diagrama sencillo */
-.simple-diagram-container {
+/* Contenedor del diagrama horizontal */
+.horizontal-diagram-container {
     margin: 4rem 0;
     padding: 2rem 0;
     background: transparent;
 }
 
-.simple-diagram-title {
+.diagram-title-horizontal {
     text-align: center;
     color: #2d3748;
     font-size: 1.8rem;
@@ -776,207 +781,224 @@ h1:first-of-type {
     margin-bottom: 3rem;
 }
 
-/* Diagrama principal */
-.simple-diagram {
-    position: relative;
-    max-width: 900px;
+/* Diagrama horizontal principal */
+.horizontal-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
-    min-height: 400px;
+    padding: 0 1rem;
 }
 
-/* Nodo central */
-.simple-central-node {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* Nodos */
+.node {
     background: white;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 2px solid #1976d2;
-    z-index: 10;
     text-align: center;
-    min-width: 180px;
+    min-width: 200px;
+    flex-shrink: 0;
 }
 
-.simple-central-node h3 {
-    margin: 0;
+.node-main {
+    border: 2px solid #1976d2;
+}
+
+.node-kit {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    border: 2px solid #ff5722;
+}
+
+.node-content h3 {
+    margin: 0 0 0.5rem 0;
     color: #2d3748;
     font-size: 1.4rem;
     font-weight: 700;
 }
 
-/* Conectores desde el nodo central */
-.connector {
-    position: absolute;
-    background: #1976d2;
-    z-index: 1;
+.node-kit .node-content h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
 }
 
-.connector-1 {
-    /* Hacia Tech Abolition */
-    width: 120px;
-    height: 3px;
+.kit-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+}
+
+/* Flechas horizontales */
+.arrow-horizontal {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.arrow-horizontal::before {
+    content: '';
+    position: absolute;
     top: 50%;
-    left: calc(50% + 90px);
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: #4a5568;
     transform: translateY(-50%);
 }
 
-.connector-2 {
-    /* Hacia Border Regimes */
-    width: 120px;
-    height: 3px;
+.arrow-horizontal::after {
+    content: '';
+    position: absolute;
     top: 50%;
-    right: calc(50% + 90px);
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #4a5568;
     transform: translateY(-50%);
 }
 
-.connector-3 {
-    /* Hacia Boredom and Laziness */
-    width: 3px;
-    height: 120px;
-    top: calc(50% + 90px);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Ramas */
-.simple-branch {
-    position: absolute;
+/* Fila de conceptos */
+.concepts-row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 180px;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 600px;
+    max-width: 800px;
 }
 
-/* Posicionamiento de las ramas */
-.branch-1 {
-    /* Tech Abolition - Derecha */
-    top: 50%;
-    left: calc(50% + 220px);
-    transform: translateY(-50%);
+.concept-box {
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
 }
 
-.branch-2 {
-    /* Border Regimes - Izquierda */
-    top: 50%;
-    right: calc(50% + 220px);
-    transform: translateY(-50%);
-}
-
-.branch-3 {
-    /* Boredom and Laziness - Abajo */
-    top: calc(50% + 220px);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Contenido de cada rama */
-.branch-content {
+.concept-content {
     background: white;
     padding: 1.2rem;
     border-radius: 6px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     border: 1px solid #e2e8f0;
-    margin-bottom: 1rem;
-    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.branch-content h4 {
+.concept-content h4 {
     margin: 0 0 0.5rem 0;
     color: #2d3748;
     font-size: 1.1rem;
     font-weight: 600;
+    text-align: center;
 }
 
-.branch-desc {
+.concept-description {
     margin: 0;
     font-size: 0.85rem;
     color: #666;
     line-height: 1.4;
-}
-
-/* Conector a Kit */
-.connector-to-kit {
-    width: 40px;
-    height: 2px;
-    background: #4a5568;
-    margin: 0.5rem 0;
-}
-
-/* Caja Kit */
-.kit-box {
-    background: linear-gradient(135deg, #ff9800, #ff5722);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 6px rgba(255, 87, 34, 0.2);
-    min-width: 60px;
     text-align: center;
 }
 
+/* Líneas de conexión desde cada concepto al Kit (solo visible en desktop) */
+.concept-box {
+    position: relative;
+}
+
+.concept-box::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: #ff9800;
+    transform: translateX(-50%);
+    opacity: 0.3;
+    display: none;
+}
+
 /* Responsive */
-@media (max-width: 768px) {
-    .simple-diagram {
-        min-height: 600px;
+@media (max-width: 1100px) {
+    .horizontal-diagram {
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .simple-central-node {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        margin: 0 auto 3rem auto;
-        width: 80%;
+    .concepts-row {
+        min-width: 100%;
+        order: 2;
+        margin: 1rem 0;
     }
 
-    .connector {
+    .node-main {
+        order: 1;
+    }
+
+    .node-kit {
+        order: 3;
+    }
+
+    .arrow-horizontal {
         display: none;
     }
 
-    .simple-branch {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        margin: 2rem auto;
-        width: 80%;
-        max-width: 250px;
+    /* Mostrar líneas de conexión en móvil */
+    .concept-box::after {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .concepts-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
 
-    .branch-1, .branch-2, .branch-3 {
-        margin: 2rem auto;
+    .concept-box {
+        max-width: 300px;
+        width: 100%;
     }
 
-    .simple-diagram-title {
+    .node {
+        min-width: 250px;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .diagram-title-horizontal {
         font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .simple-central-node {
-        padding: 1rem 1.5rem;
-    }
-
-    .simple-central-node h3 {
+    .node-content h3 {
         font-size: 1.2rem;
     }
 
-    .branch-content {
-        padding: 1rem;
+    .node-kit .node-content h3 {
+        font-size: 1.5rem;
     }
 
-    .branch-content h4 {
+    .concept-content h4 {
         font-size: 1rem;
     }
 
-    .branch-desc {
+    .concept-description {
+        font-size: 0.8rem;
+    }
+
+    .kit-description {
         font-size: 0.8rem;
     }
 }
@@ -989,7 +1011,7 @@ h1:first-of-type {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 22:55:12 UTC">December 9, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 9, 2025 23:02:15 UTC">December 9, 2025</span>
     
   </small>
 </div>
