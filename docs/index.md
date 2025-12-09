@@ -50,7 +50,7 @@
             </a>
 
   <a href="studio/studio/" class="card">
-                <img src="images/studio.jpg" alt="Studio">
+                <img src="images/palomas.jpg" alt="Studio">
                 <h3>Studio</h3>
                 <p>Design, experimentation, and material explorations.</p>
             </a>
