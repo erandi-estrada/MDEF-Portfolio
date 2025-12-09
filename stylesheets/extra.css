@@ -236,6 +236,10 @@ body {
 .cards-carousel .card:nth-child(6):hover::before {
     background: linear-gradient(135deg, rgba(255, 193, 7, 0.85) 0%, rgba(255, 213, 79, 0.75) 100%) !important;
 }
+/* Para la nueva tarjeta (séptima) */
+.cards-carousel .card:nth-child(7):hover::before {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.85) 0%, rgba(129, 199, 132, 0.75) 100%) !important;
+}
 
 /* Superposición base */
 .cards-carousel .card::before {
