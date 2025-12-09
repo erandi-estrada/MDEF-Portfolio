@@ -36,11 +36,6 @@
                 <h3>Other Intelligences</h3> 
                 <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
             </a> 
-<a href="term1/02-Atlas/" class="card">
-                <img src="images/atlas.jpg" alt="Atlas of weak signals"> 
-                <h3>Map of emerging signals for futures.</p> 
-            </a> 
-
 
   <a href="Unpacking/Unpacking/" class="card">
                 <img src="images/unpacking.jpg" alt="Unpacking Technologies">
@@ -53,6 +48,13 @@
                 <h3>Machine Paradox</h3>
                 <p>To expand the notion of what a machine might be.</p>
             </a>
+
+  <a href="term1/02-Atlas/" class="card">
+                <img src="images/atlas.jpg" alt="Atlas of weak signals">
+                <h3>Atlas of weak signals</h3>
+                <p>Map of emerging signals for futures. </p>
+            </a>
+
 
   <a href="studio/studio/" class="card">
                 <img src="images/palomas.jpeg" alt="Studio">
