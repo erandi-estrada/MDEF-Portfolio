@@ -49,7 +49,7 @@
                 <p>To expand the notion of what a machine might be.</p>
             </a>
 
-  <a href="term1/02-Atlas/" class="card">
+  <a href="Atlas/atlas/" class="card">
                 <img src="images/atlas.jpg" alt="Atlas of weak signals">
                 <h3>Atlas of weak signals</h3>
                 <p>Map of emerging signals for futures. </p>
