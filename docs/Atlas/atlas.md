@@ -77,6 +77,88 @@
     </div>
 </div>
 
+<!-- Nueva imagen cards2.jpg -->
+<div class="image-section">
+    <img src="../../images/cards2.jpg" 
+         alt="Tarjetas adicionales del Atlas" 
+         width="100%" 
+         style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
+
+<!-- Nuevo diagrama Post-Capitalist Care -->
+<div class="diagram-section">
+    <h2 class="diagram-title">Post-Capitalist Care Framework</h2>
+    
+<div class="care-diagram">
+        <!-- Nodo central -->
+        <div class="central-node">
+            <div class="node-content">
+                <h3>Post-Capitalist Care</h3>
+            </div>
+        </div>
+        
+<!-- Rama 1: Tech Abolition -->
+<div class="branch branch-1">
+            <div class="branch-line"></div>
+            <div class="branch-node">
+                <div class="node-content">
+                    <h4>Tech Abolition</h4>
+                    <p>Rethinking technology beyond capitalist paradigms</p>
+                </div>
+            </div>
+            <div class="branch-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            <div class="end-node kit-node">
+                <div class="node-content">
+                    <span class="kit-badge">Kit</span>
+                </div>
+            </div>
+        </div>
+        
+ <!-- Rama 2: Border Regimes -->
+   <div class="branch branch-2">
+            <div class="branch-line"></div>
+            <div class="branch-node">
+                <div class="node-content">
+                    <h4>Border Regimes</h4>
+                    <p>Challenging territorial and social boundaries</p>
+                </div>
+            </div>
+            <div class="branch-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            <div class="end-node kit-node">
+                <div class="node-content">
+                    <span class="kit-badge">Kit</span>
+                </div>
+            </div>
+        </div>
+        
+<!-- Rama 3: Boredom and Laziness -->
+ <div class="branch branch-3">
+            <div class="branch-line"></div>
+            <div class="branch-node">
+                <div class="node-content">
+                    <h4>Boredom and Laziness</h4>
+                    <p>Reclaiming time and resisting productivity culture</p>
+                </div>
+            </div>
+            <div class="branch-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            <div class="end-node kit-node">
+                <div class="node-content">
+                    <span class="kit-badge">Kit</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <style>
 /* Estilos para la página del diagrama de Venn */
 .venn-page {
@@ -450,3 +532,338 @@ h1:first-of-type {
 
 </style>
 
+<style>
+/* Estilos para la nueva imagen */
+.image-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilos para el nuevo diagrama */
+.diagram-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.diagram-title {
+    text-align: center;
+    color: #2d3748;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.diagram-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #1976d2, #9c27b0);
+    border-radius: 2px;
+}
+
+/* Diagrama de Post-Capitalist Care */
+.care-diagram {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+/* Nodo central */
+.central-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #1976d2, #9c27b0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3);
+    border: 5px solid white;
+    animation: pulse-glow 3s infinite;
+}
+
+.central-node h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Estilos generales de las ramas */
+.branch {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.branch-line {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #1976d2, #9c27b0);
+}
+
+.branch-node {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-width: 180px;
+    border-left: 4px solid;
+    transition: transform 0.3s ease;
+}
+
+.branch-node:hover {
+    transform: translateY(-5px);
+}
+
+.branch-node h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: #2d3748;
+}
+
+.branch-node p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Flecha hacia Kit */
+.branch-arrow {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.arrow-line {
+    width: 40px;
+    height: 2px;
+    background: #4a5568;
+}
+
+.arrow-head {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #4a5568;
+}
+
+/* Nodo Kit */
+.end-node {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+.kit-badge {
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Posicionamiento específico de las ramas */
+.branch-1 {
+    /* Tech Abolition - Superior izquierda */
+    top: 20%;
+    left: 10%;
+    flex-direction: row;
+}
+
+.branch-1 .branch-node {
+    border-left-color: #1976d2;
+}
+
+.branch-2 {
+    /* Border Regimes - Superior derecha */
+    top: 20%;
+    right: 10%;
+    flex-direction: row-reverse;
+}
+
+.branch-2 .branch-node {
+    border-left-color: #9c27b0;
+}
+
+.branch-3 {
+    /* Boredom and Laziness - Inferior central */
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: center;
+}
+
+.branch-3 .branch-line {
+    width: 4px;
+    height: 80px;
+    margin-bottom: 10px;
+    background: linear-gradient(to bottom, #1976d2, #9c27b0);
+}
+
+.branch-3 .branch-arrow {
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.branch-3 .arrow-line {
+    width: 2px;
+    height: 30px;
+}
+
+.branch-3 .arrow-head {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #4a5568;
+    border-left: none;
+}
+
+.branch-3 .branch-node {
+    border-left-color: #009688;
+}
+
+/* Animación para el nodo central */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(25, 118, 210, 0.5);
+    }
+    100% {
+        box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3);
+    }
+}
+
+/* Responsive para el nuevo diagrama */
+@media (max-width: 992px) {
+    .care-diagram {
+        min-height: 700px;
+    }
+    
+    .branch-1 {
+        top: 15%;
+        left: 5%;
+    }
+    
+    .branch-2 {
+        top: 15%;
+        right: 5%;
+    }
+    
+    .branch-3 {
+        bottom: 10%;
+    }
+    
+    .central-node {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .central-node h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .care-diagram {
+        min-height: 850px;
+    }
+    
+    .branch {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 2rem 0;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .branch-1, .branch-2, .branch-3 {
+        flex-direction: column !important;
+        align-items: center;
+        transform: none !important;
+    }
+    
+    .branch-line {
+        width: 4px !important;
+        height: 50px !important;
+        margin-bottom: 10px;
+    }
+    
+    .branch-arrow {
+        margin: 10px 0 !important;
+        flex-direction: column;
+    }
+    
+    .arrow-line {
+        width: 2px !important;
+        height: 30px !important;
+    }
+    
+    .arrow-head {
+        border-left: 6px solid transparent !important;
+        border-right: 6px solid transparent !important;
+        border-top: 10px solid #4a5568 !important;
+        border-left: none !important;
+    }
+    
+    .central-node {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto 3rem auto;
+    }
+    
+    .diagram-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .central-node {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .central-node h3 {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+    
+    .branch-node {
+        min-width: 150px;
+        padding: 1rem;
+    }
+    
+    .branch-node h4 {
+        font-size: 1.1rem;
+    }
+    
+    .diagram-title {
+        font-size: 1.5rem;
+    }
+}
+</style>
