@@ -33,11 +33,6 @@
                 <div class="trigger trigger-2">Ancestral Knowledge</div>
             </div>
             
-            <!-- Solo las etiquetas de intersección, sin cajas -->
-            <div class="intersection-label int-1-2">Rural Anarchy</div>
-            <div class="intersection-label int-2-3">Just Governance</div>
-            <div class="intersection-label int-1-3">Rural Justice</div>
-            <div class="intersection-label int-center">Digital Squatting</div>
         </div>
     </div>
 
