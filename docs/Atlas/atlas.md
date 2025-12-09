@@ -436,4 +436,14 @@
         align-items: center;
     }
 }
+
+/* Ocultar el header superior con "Atlas" */
+header:first-of-type,
+.header:first-of-type,
+.atlas-header,
+h1:first-of-type {
+    display: none !important;
+}
+
 </style>
+
