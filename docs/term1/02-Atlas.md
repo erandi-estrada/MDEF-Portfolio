@@ -6,13 +6,12 @@
     </div>
 </div>
 
-<div class="venn-page">
-
 <!-- Imagen completa -->
 <img src="../../images/AllCards.png" 
      alt="Tarjetas Atlas" 
      width="100%" 
-     style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">   
+     style="border-radius: 8px; margin: 1rem 0 2rem 0; object-fit: cover;">  
+<div class="venn-page"> 
 
 <!-- Diagrama de Venn simplificado -->
 <div class="venn-container">
