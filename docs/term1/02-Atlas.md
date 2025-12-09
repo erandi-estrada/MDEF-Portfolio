@@ -44,7 +44,7 @@
 <!-- Contenedor de dos columnas: Imagen y Definición -->
 <div class="two-column-container">
         <div class="column-left">
-            <img src="Digital-Squatting.png" alt="Digital Squatting" class="definition-image">
+            <img src="card1.png" alt="Digital Squatting" class="definition-image">
         </div>
         <div class="column-right">
             <div class="definition-box">
