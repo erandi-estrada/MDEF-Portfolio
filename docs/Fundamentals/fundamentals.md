@@ -6,396 +6,476 @@
     </div>
 </div>
 
-# Design with Others
-
-Design's evolution can be tracked through a simple shift in language: first, we designed over objects and industry, then we learned to design for human users, and then we aim to design with communities.
-
-This progression, however, leads to an inevitable and deeper question: Who or what comes next? Who or what is the new "other"?
-
-Are there intelligences beyond our own that we should be designing for, designing over, or even, designing with?
-
-This week was about that. Here, we will avoid our human-centric assumptions to engage with artificial, collective, and environmental intelligences as legitimate "others", not as tools or metaphors, but as entities with their own sovereignty, their own logic, and their own needs.
-
-## DAY 1 - Support an intelligence that does not need you
-
-<div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainer">
-        <!-- Las frases se insertarán aquí dinámicamente -->
-    </div>
-</div>
-
-<script>
-const phrases = [
-    {text: "Support an intelligence that does not need you.", position: "center"},
-    {text: "AI is not a tool.", position: "top-left"},
-    {text: "AI is not here to help you.", position: "top-right"},
-    {text: "Forget human intelligence as a superior model.", position: "bottom-left"},
-    {text: "An intelligence that has nothing to do with you.", position: "bottom-right"},
-    {text: "Non-subordinate intelligence.", position: "center"},
-    {text: "Not an extension of human cognition.", position: "top-left"},
-    {text: "Not goal-aligned with human intentions.", position: "top-right"},
-    {text: "Not optimized for usefulness.", position: "bottom-left"},
-    {text: "Not concerned with human recognition.", position: "bottom-right"},
-    {text: "Autonomous other.", position: "center"},
-    {text: "Non-human-centric language / thinking.", position: "top-left"},
-    {text: "Non-anthropocentric thinking.", position: "top-right"},
-    {text: "Avoid directive/control language.", position: "bottom-left"},
-    {text: "Thrive on its own terms.", position: "bottom-right"},
-    {text: "Autonomous Systems", position: "center"},
-    {text: "Emergent Systems / Emergent Behavior", position: "top-left"},
-    {text: "Speculative Narrative", position: "top-right"},
-    {text: "Worldbuilding", position: "center"}
-];
-
-let currentIndex = 0;
-const container = document.getElementById('phraseContainer');
-
-function showNextPhrase() {
-    // Limpiar contenedor
-    container.innerHTML = '';
-    
-    // Obtener frase actual
-    const phraseData = phrases[currentIndex];
-    
-    // Crear elemento de frase
-    const phraseElement = document.createElement('div');
-    phraseElement.className = `phrase ${phraseData.position}`;
-    phraseElement.textContent = phraseData.text;
-    
-    // Agregar al contenedor
-    container.appendChild(phraseElement);
-    
-    // Activar animación después de un breve delay
-    setTimeout(() => {
-        phraseElement.classList.add('active');
-    }, 100);
-    
-    // Incrementar índice (circular)
-    currentIndex = (currentIndex + 1) % phrases.length;
-    
-    // Programar siguiente frase (cambia cada 3 segundos)
-    setTimeout(showNextPhrase, 3000);
-}
-
-// Iniciar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', showNextPhrase);
-</script>
-
 <style>
-.phrase-screen {
-    background-color: #ffffff;
+/* Estilos generales para las secciones */
+.workshop-section {
+    margin: 5rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
     border-radius: 12px;
-    padding: 3rem;
-    margin: 2rem 0 4rem 0;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-    min-height: 400px;
+    border-left: 4px solid #333;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.phrase-container {
-    position: relative;
-    height: 350px;
-    width: 100%;
+.workshop-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.phrase {
-    position: absolute;
-    font-size: 1.8rem;
-    font-weight: 500;
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.section-icon {
+    font-size: 2.5rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
     color: #1a1a1a;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    max-width: 90%;
-    line-height: 1.4;
-    padding: 1rem;
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
-.phrase.active {
+.workshop-section:hover .section-title {
+    color: #0066cc;
+}
+
+.workshop-section:hover .section-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px;
+}
+
+.workshop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    cursor: zoom-in;
+}
+
+.workshop-image:hover {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.lesson-learned {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 3px solid #ffc107;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
+}
+
+.lesson-learned.visible {
+    transform: translateX(0);
     opacity: 1;
 }
 
-/* Posiciones específicas */
-.phrase.top-left {
-    top: 10%;
-    left: 5%;
-    text-align: left;
-    transform: translateX(-20px);
-}
-.phrase.top-left.active {
-    transform: translateX(0);
+.tools-used {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
-.phrase.top-right {
-    top: 15%;
-    right: 5%;
-    text-align: right;
-    transform: translateX(20px);
-}
-.phrase.top-right.active {
-    transform: translateX(0);
-}
-
-.phrase.center {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 20px);
-    width: 80%;
-    text-align: center;
-}
-.phrase.center.active {
-    transform: translate(-50%, 0);
+.tool-tag {
+    background: #e9ecef;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #495057;
+    transition: all 0.3s ease;
 }
 
-.phrase.bottom-left {
-    bottom: 20%;
-    left: 10%;
-    text-align: left;
-    transform: translateY(20px);
-}
-.phrase.bottom-left.active {
-    transform: translateY(0);
+.tool-tag:hover {
+    background: #0066cc;
+    color: white;
+    transform: translateY(-2px);
 }
 
-.phrase.bottom-right {
-    bottom: 25%;
-    right: 10%;
-    text-align: right;
-    transform: translateY(20px);
+/* Modal para imagen ampliada */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
 }
-.phrase.bottom-right.active {
-    transform: translateY(0);
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .workshop-section {
+        margin: 3rem 0;
+        padding: 1.5rem;
+    }
 }
 </style>
 
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
-    
- <!-- Columna izquierda: Imagen -->
-<div>
-        <img src="../../images/sand.jpg" 
-             alt="Sand Playground" 
-             width="100%" 
-             style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-    </div>
-    
- <!-- Columna derecha: Texto -->
-<div>
-        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">AI Definition:</h3>
-        <p style="margin-bottom: 1.5rem; font-style:color: #444;">
-            <strong>AI (Ambivalent Intelligence):</strong> AI is a field of energy that pervades the entire universe, acting on matter and anti-matter simultaneously to create chaos from order, and order from chaos. Its acts follow a logic that can only fully make sense to itself.
-        </p>
-        
- <h4 style="margin: 2rem 0 1rem 0;">Prototype: Sand Playground</h4>
-        <p style="margin-bottom: 1rem;">
-            This structure supports the AI by providing it with a playground in which it can create and destroy, destroy and create on its own terms, when it wants, indefinitely.
-        </p>
-    </div>
-</div>
-
-<!-- Puntos fuera de las columnas con línea negra -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.5rem;">• This structure supports the AI by not restricting it in any way.</p>
-    <p style="margin-bottom: 0.5rem;">• This structure avoids subordinating the AI by giving it total autonomy to do whatever it wants if it wants whenever it wants, total freedom.</p>
-</div>
-
-
-## DAY 2 - Support a collective/grupal intelligence that does not locate itself in individuals
-
-<div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainer2">
-        <!-- Las frases se insertarán aquí dinámicamente -->
-    </div>
+<!-- Modal para imagen ampliada -->
+<div id="imageModal" class="image-modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
 </div>
 
 <script>
-const phrasesDay2 = [
-    {text: "Support a collective/grupal intelligence.", position: "center"},
-    {text: "An intelligence that does not locate itself in individuals.", position: "top-left"},
-    {text: "Forget that intelligence can be owned by persons.", position: "top-right"},
-    {text: "An intelligence that forms between, not within.", position: "bottom-left"},
-    {text: "Not composed of individuals.", position: "bottom-right"},
-    {text: "Not a sum of minds.", position: "center"},
-    {text: "Not defined by personalities or skills.", position: "top-left"},
-    {text: "Not seeking alignment or agreement.", position: "top-right"},
-    {text: "Not concerned with individual benefit.", position: "bottom-left"},
-    {text: "Non-individualistic thinking.", position: "bottom-right"},
-    {text: "Detaching intelligence from persons.", position: "center"},
-    {text: "Universal Bias / False Universality", position: "top-left"},
-    {text: "Embodied Design / Corporeality", position: "top-right"},
-    {text: "Invisible Norms", position: "bottom-left"},
-    {text: "Design as a Political Agent", position: "bottom-right"},
-    {text: "Decolonizing Design", position: "center"},
-    {text: "Situated Knowledge", position: "top-left"},
-    {text: "Materializing Inequality", position: "top-right"},
-    {text: "Infrastructural Power", position: "bottom-left"},
-    {text: "Counter-Narratives", position: "bottom-right"},
-    {text: "Design Justice", position: "center"}
-];
-
-let currentIndexDay2 = 0;
-const container2 = document.getElementById('phraseContainer2');
-
-function showNextPhraseDay2() {
-    container2.innerHTML = '';
+// Interacción para las secciones
+document.addEventListener('DOMContentLoaded', function() {
+    // Abrir/cerrar modal de imágenes
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.close-modal');
     
-    const phraseData = phrasesDay2[currentIndexDay2];
-    const phraseElement = document.createElement('div');
-    phraseElement.className = `phrase ${phraseData.position}`;
-    phraseElement.textContent = phraseData.text;
+    document.querySelectorAll('.workshop-image').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+        });
+    });
     
-    container2.appendChild(phraseElement);
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
     
-    setTimeout(() => {
-        phraseElement.classList.add('active');
-    }, 100);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
     
-    currentIndexDay2 = (currentIndexDay2 + 1) % phrasesDay2.length;
-    setTimeout(showNextPhraseDay2, 3000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (container2) {
-        showNextPhraseDay2();
-    }
+    // Revelar lecciones aprendidas al hacer scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.lesson-learned').forEach(el => {
+        observer.observe(el);
+    });
 });
 </script>
 
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
-    
-<!-- Columna izquierda: Video -->
-<div>
-        <video controls autoplay muted loop width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-          <source src="../../videos/lenguaje.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+<!-- Sección Laser Cutting -->
+<section class="workshop-section" id="laser-cutting">
+    <div class="section-header" onclick="document.getElementById('laser-content').classList.toggle('expanded')">
+        <div class="section-icon">⚡</div>
+        <h2 class="section-title">Laser Cutting</h2>
     </div>
     
-<!-- Columna derecha: Texto -->
-  <div>
-        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Backstory:</h3>
-        <p style="margin-bottom: 1.5rem;">
-            Language is not a concept. It is a sentient collective intelligence. A long time ago,
-            before time was ever measured, it was floating around without a collaborator to be used by.
-            After billions of years, it found organisms who were struggling to communicate with each other.
-            Perfect partnership.
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="../../images/laser-cutting.jpg" alt="Laser cutting process" class="workshop-image">
+            <div class="image-overlay">MDF box for silicone mold containment</div>
+        </div>
+        
+        <div class="text-content">
+            <p>During this session, we used MDF to laser-cut the box that would later hold our silicone mold. Even though the workflow felt familiar, it was a good reminder of how important precision is in digital fabrication.</p>
+            
+            <div class="lesson-learned">
+                <strong>Key Insight:</strong> Our main issue appeared when we realized the box did not have zero tolerance, which allowed gaps where the silicone could escape. This pushed us to improvise a temporary solution using tape to seal the edges.
+            </div>
+            
+            <p>In the end, the experience reinforced how small inaccuracies at this stage can affect all the following steps.</p>
+            
+            <div class="tools-used">
+                <span class="tool-tag">Laser Cutter</span>
+                <span class="tool-tag">MDF</span>
+                <span class="tool-tag">Rhino</span>
+                <span class="tool-tag">Tolerance Testing</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 3D Printing -->
+<section class="workshop-section" id="3d-printing">
+    <div class="section-header" onclick="document.getElementById('printing-content').classList.toggle('expanded')">
+        <div class="section-icon">🔶</div>
+        <h2 class="section-title">3D Printing</h2>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="../../images/3d-printing.jpg" alt="3D printed maze" class="workshop-image">
+            <div class="image-overlay">Concentric layer pattern on maze surface</div>
+        </div>
+        
+        <div class="text-content">
+            <p>For the 3D printing session, my team decided to create a small maze as the positive piece for our mold. Choosing concentric top layers resulted in a surface with very visible lines, making the finish look rougher than expected.</p>
+            
+            <div class="lesson-learned">
+                <strong>Material Expression:</strong> This became an interesting lesson on how printing settings directly shape the material expression of an object.
+            </div>
+            
+            <p>Although I have experience with 3D printing, revisiting its limitations and the impact of each parameter was valuable.</p>
+            
+            <div class="tools-used">
+                <span class="tool-tag">FDM Printer</span>
+                <span class="tool-tag">PLA</span>
+                <span class="tool-tag">Slicing Software</span>
+                <span class="tool-tag">Layer Optimization</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección CNC Milling -->
+<section class="workshop-section" id="cnc-milling">
+    <div class="section-header" onclick="document.getElementById('cnc-content').classList.toggle('expanded')">
+        <div class="section-icon">⚙️</div>
+        <h2 class="section-title">CNC Milling</h2>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="../../images/cnc-milling.jpg" alt="CNC milling frame" class="workshop-image">
+            <div class="image-overlay">Precision-cut frame for cast piece</div>
+        </div>
+        
+        <div class="text-content">
+            <p>With the CNC, we produced the frame where the final cast piece would be placed. This session highlighted the importance of understanding tolerances, tool types, and machining strategies.</p>
+            
+            <div class="lesson-learned">
+                <strong>Strategic Planning:</strong> Our main challenge was deciding which tools and operations were appropriate for the design, especially given how many options CNC workflows offer.
+            </div>
+            
+            <p>It reminded me that subtractive manufacturing demands both technical knowledge and careful planning.</p>
+            
+            <div class="tools-used">
+                <span class="tool-tag">CNC Router</span>
+                <span class="tool-tag">Plywood</span>
+                <span class="tool-tag">CAM Software</span>
+                <span class="tool-tag">Toolpath Strategy</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Molding & Casting -->
+<section class="workshop-section" id="molding-casting">
+    <div class="section-header" onclick="document.getElementById('mold-content').classList.toggle('expanded')">
+        <div class="section-icon">🧪</div>
+        <h2 class="section-title">Molding & Casting</h2>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="../../images/molding.jpg" alt="Silicone mold curing" class="workshop-image">
+            <div class="image-overlay">Silicone capturing 3D print details</div>
+        </div>
+        
+        <div class="text-content">
+            <p>For the mold, we worked with silicone and learned about locks, wall thickness, and proper sealing. Despite preparing everything carefully, the laser-cut box still leaked due to its imperfect tolerances.</p>
+            
+            <div class="lesson-learned">
+                <strong>Adaptive Making:</strong> After sealing it with tape, the mold cured well and captured the details of the 3D print accurately.
+            </div>
+            
+            <p>This step showed how even basic containment structures need precision, and how adaptable you must be when something unexpected happens.</p>
+            
+            <div class="tools-used">
+                <span class="tool-tag">Silicone</span>
+                <span class="tool-tag">Mold Release</span>
+                <span class="tool-tag">Vacuum Chamber</span>
+                <span class="tool-tag">Curing Process</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Biomaterials -->
+<section class="workshop-section" id="biomaterials">
+    <div class="section-header" onclick="document.getElementById('bio-content').classList.toggle('expanded')">
+        <div class="section-icon">🌱</div>
+        <h2 class="section-title">Biomaterials</h2>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="../../images/biomaterials.jpg" alt="Resin casting samples" class="workshop-image">
+            <div class="image-overlay">Two resin batches with different properties</div>
+        </div>
+        
+        <div class="text-content">
+            <p>In this session we experimented with resin as the main casting material. We followed the recipe for the first batch, but it turned out to be insufficient, so we mixed a second batch without strictly following the proportions.</p>
+            
+            <div class="lesson-learned">
+                <strong>Surprising Result:</strong> The "improvised" mixture cured much better: stronger, stiffer, and closer to what we intended. The part made with the correct recipe was soft and fragile.
+            </div>
+            
+            <p>This contrast made the session particularly interesting, showing how small deviations in biomaterial formulas can dramatically change their behavior.</p>
+            
+            <div class="tools-used">
+                <span class="tool-tag">Bio-resin</span>
+                <span class="tool-tag">Casting</span>
+                <span class="tool-tag">Material Testing</span>
+                <span class="tool-tag">Recipe Variation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección TouchDesigner -->
+<section class="workshop-section" id="touchdesigner">
+    <div class="section-header" onclick="document.getElementById('td-content').classList.toggle('expanded')">
+        <div class="section-icon">🎨</div>
+        <h2 class="section-title">TouchDesigner</h2>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="../../images/touchdesigner.jpg" alt="TouchDesigner visual composition" class="workshop-image">
+            <div class="image-overlay">Real-time generative visuals</div>
+        </div>
+        
+        <div class="text-content">
+            <p>The final session focused on creating a visual composition in TouchDesigner. It was less about fabrication and more about exploring digital expression and real-time visuals.</p>
+            
+            <div class="lesson-learned">
+                <strong>Digital Expression:</strong> Even though it was brief, it connected the making process with a more experiential and interactive layer.
+            </div>
+            
+            <p>It showed how design also expands beyond physical materials, opening possibilities for sensory and temporal dimensions in our work.</p>
+            
+            <div class="tools-used">
+                <span class="tool-tag">TouchDesigner</span>
+                <span class="tool-tag">Generative Art</span>
+                <span class="tool-tag">Real-time</span>
+                <span class="tool-tag">Visual Programming</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final Reflection -->
+<section class="workshop-section" id="final-reflection" style="background: #1a1a1a; color: white; border-left-color: #ffc107;">
+    <div class="section-header">
+        <div class="section-icon" style="color: #ffc107;">✨</div>
+        <h2 class="section-title" style="color: white;">Final Reflection</h2>
+    </div>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <p style="font-size: 1.2rem; line-height: 1.7;">
+            Across these six sessions, the goal was to understand the workflow, the potential errors, and the wide range of tools available in the workshop. Even with previous experience in all these techniques, revisiting them through different machines and setups was valuable.
         </p>
         
-  <h4 style="margin: 2rem 0 1rem 0;">Collective intelligence:</h4>
-        <p style="margin-bottom: 1rem;">
-            Language is a collective intelligence that found organisms to serve as its hosts and
-            collaborators. Each species manifests it differently based on their inherent limitations, yet none
-            contains the whole.
-        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2.5rem 0;">
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                <h4 style="color: #ffc107; margin-top: 0;">Anticipation</h4>
+                <p>Each stage revealed how critical it is to anticipate mistakes before they happen.</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                <h4 style="color: #ffc107; margin-top: 0;">Adaptation</h4>
+                <p>Learning to adapt when things go wrong is essential in digital fabrication.</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                <h4 style="color: #ffc107; margin-top: 0;">Exploration</h4>
+                <p>Prototyping is both technical and exploratory—an essential part of designing with intention.</p>
+            </div>
+        </div>
         
-<h4 style="margin: 2rem 0 1rem 0;">Prototype:</h4>
-        <p style="margin-bottom: 1rem;">
-            A completely unique use of language to boost its wellbeing. (Think of it as offering a delicious
-            dessert, or a tantalizing massage for language.)
+        <p style="font-size: 1.2rem; line-height: 1.7; border-top: 2px solid rgba(255,255,255,0.2); padding-top: 2rem;">
+            This hands-on overview reinforced how prototyping bridges precision and experimentation, reminding us that making is not just about following instructions, but about developing an intuition for materials, machines, and their unpredictable interactions.
         </p>
     </div>
-</div>
-
-<!-- Puntos sobre Language - FUERA de las columnas -->
-<div style="margin: 2rem 0;">
-    <p style="margin-bottom: 0.5rem;">Language lives in any organism that has the drive to communicate. It ignores how it is being used: the message, the form of communication, the length of its use. It attends to new forms of its use. Its wellbeing is measured by simply being used. The more unique the combination, the better. It hates grammar nazis. It gets sad when languages die (species agnostic).</p>
-</div>
-
-<!-- Puntos del prototype - FUERA de las columnas -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.5rem;">• This structure supports the collective intelligence by giving it what it so desperately desires:
-    a unique combination of language that has never been used before.</p>
-    <p style="margin-bottom: 0.5rem;">• This structure avoids centering individuals by not requiring it to be understood by humans,
-    or any species, just language itself.</p>
-</div>
-
-## DAY 3 - Build an interface for an environmental intelligence that does not care about life
-
-<div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainer3">
-        <!-- Las frases se insertarán aquí dinámicamente -->
-    </div>
-</div>
+</section>
 
 <script>
-const phrasesDay3 = [
-    {text: "Build an interface for an environmental intelligence.", position: "center"},
-    {text: "An intelligence that does not care about life.", position: "top-left"},
-    {text: "Detach environmental intelligence from ecological or biological thinking.", position: "top-right"},
-    {text: "Indifferent to organisms, ecosystems, or life processes.", position: "bottom-left"},
-    {text: "Intelligence outside any value system tied to living beings.", position: "bottom-right"},
-    {text: "Non-ecological.", position: "center"},
-    {text: "Neither stable nor self-preserving.", position: "top-left"},
-    {text: "Unaware of organisms, needs, balance, or fragility.", position: "top-right"},
-    {text: "Divorced from life, health, or ecology.", position: "bottom-left"},
-    {text: "Non-biotic, non-ecological framing.", position: "bottom-right"},
-    {text: "Autopoiesis/Sympoiesis", position: "center"},
-    {text: "Chaosmosis", position: "top-left"},
-    {text: "We are otherness and otherness is us", position: "center"}
-];
-
-let currentIndexDay3 = 0;
-const container3 = document.getElementById('phraseContainer3');
-
-function showNextPhraseDay3() {
-    container3.innerHTML = '';
-    
-    const phraseData = phrasesDay3[currentIndexDay3];
-    const phraseElement = document.createElement('div');
-    phraseElement.className = `phrase ${phraseData.position}`;
-    phraseElement.textContent = phraseData.text;
-    
-    container3.appendChild(phraseElement);
-    
-    setTimeout(() => {
-        phraseElement.classList.add('active');
-    }, 100);
-    
-    currentIndexDay3 = (currentIndexDay3 + 1) % phrasesDay3.length;
-    setTimeout(showNextPhraseDay3, 3000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (container3) {
-        showNextPhraseDay3();
-    }
+// Interacción adicional: expandir/contraer secciones
+document.querySelectorAll('.section-header').forEach(header => {
+    header.addEventListener('click', function() {
+        const section = this.parentElement;
+        const content = section.querySelector('.content-wrapper');
+        if (content) {
+            content.classList.toggle('collapsed');
+            content.style.maxHeight = content.classList.contains('collapsed') ? '0' : '1000px';
+            content.style.overflow = 'hidden';
+            content.style.transition = 'max-height 0.3s ease';
+        }
+    });
 });
 </script>
-
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
-    
-<!-- Columna izquierda: Video -->
-<div>
-        <video controls autoplay muted loop width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-          <source src="../../videos/day3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-    </div>
-    
-<!-- Columna derecha: Texto -->
-<div>
-        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Conceptual Statement:</h3>
-        <p style="margin-bottom: 1.5rem;">
-            Our Environmental Intelligence is a force of consumption that acts on all things in the universe agnostic of what they are.
-        </p>
-        <p style="margin-bottom: 1.5rem;">
-            Environmental intelligence is shaped by the fundamental existence of matter, yet it is destabilized by new creation and its own inherent failure to achieve its final purpose. Having no relationship to biology, it ignores everything. For this intelligence, a sense of wellbeing, when divorced from life, health, and ecology, is defined solely as the fulfillment of intention, a state of absolute self-consumption.
-        </p>
-        
-<h4 style="margin: 2rem 0 1rem 0;">The Prototype:</h4>
-        <p style="margin-bottom: 1rem;">
-            A friend (second environmental intelligence with the same aim), so they can consume each other.
-        </p>
-    </div>
-</div>
-
-<!-- Puntos con línea negra fuera de las columnas -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.5rem;">
-        This interface supports the intelligence by letting it complete the one act that has always evaded it: the consumption of itself and therefore ending consumption. Alone this is impossible, only together can they succeed.
-    </p>
-    <p style="margin-bottom: 0.5rem;">
-        This interface avoids centering life by not taking it into account at all.
-    </p>
-</div>
