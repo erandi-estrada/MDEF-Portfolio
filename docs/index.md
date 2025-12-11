@@ -55,6 +55,11 @@
                 <p>Map of emerging signals for futures. </p>
             </a>
 
+<a href="Fundamentals/fundamentals/" class="card">
+                <img src="images/fundamentals.jpg" alt="Fundamentals for future makers">
+                <h3>Fundamentals for future makers</h3>
+                <p>Introduction to technologies, tools and fabrication processes in the lab </p>
+            </a>
 
   <a href="studio/studio/" class="card">
                 <img src="images/palomas.jpeg" alt="Studio">
