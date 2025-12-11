@@ -246,12 +246,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="content-wrapper">
         <div class="image-container">
-            <img src="../../images/laser-cutting.jpg" alt="Laser cutting process" class="workshop-image">
+            <img src="../../images/laser.jpg" alt="Laser cutting process" class="workshop-image">
             <div class="image-overlay">MDF box for silicone mold containment</div>
         </div>
         
         <div class="text-content">
-            <p>During this session, we used MDF to laser-cut the box that would later hold our silicone mold. Even though the workflow felt familiar, it was a good reminder of how important precision is in digital fabrication.</p>
+            <p>During this session, we used MDF to laser-cut the box that would later hold our silicone mold.</p>
             
             <div class="lesson-learned">
                 <strong>Key Insight:</strong> Our main issue appeared when we realized the box did not have zero tolerance, which allowed gaps where the silicone could escape. This pushed us to improvise a temporary solution using tape to seal the edges.
@@ -278,24 +278,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="content-wrapper">
         <div class="image-container">
-            <img src="../../images/3d-printing.jpg" alt="3D printed maze" class="workshop-image">
+            <img src="../../images/3d.jpg" alt="3D printed maze" class="workshop-image">
             <div class="image-overlay">Concentric layer pattern on maze surface</div>
         </div>
         
         <div class="text-content">
-            <p>For the 3D printing session, my team decided to create a small maze as the positive piece for our mold. Choosing concentric top layers resulted in a surface with very visible lines, making the finish look rougher than expected.</p>
+            <p>For the 3D printing session, we decided to create a small maze as the positive piece for our mold. Choosing concentric top layers resulted in a surface with very visible lines, making the finish look rougher than expected.</p>
             
             <div class="lesson-learned">
                 <strong>Material Expression:</strong> This became an interesting lesson on how printing settings directly shape the material expression of an object.
             </div>
             
-            <p>Although I have experience with 3D printing, revisiting its limitations and the impact of each parameter was valuable.</p>
+            <p>It became clear how each setting directly shapes the material expression of the piece, and how easily a single parameter can shift the result.</p>
             
             <div class="tools-used">
-                <span class="tool-tag">FDM Printer</span>
+                <span class="tool-tag">Bambu Printer</span>
                 <span class="tool-tag">PLA</span>
                 <span class="tool-tag">Slicing Software</span>
-                <span class="tool-tag">Layer Optimization</span>
             </div>
         </div>
     </div>
@@ -310,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="content-wrapper">
         <div class="image-container">
-            <img src="../../images/cnc-milling.jpg" alt="CNC milling frame" class="workshop-image">
+            <img src="../../images/cnc.jpg" alt="CNC milling frame" class="workshop-image">
             <div class="image-overlay">Precision-cut frame for cast piece</div>
         </div>
         
@@ -327,7 +326,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="tool-tag">CNC Router</span>
                 <span class="tool-tag">Plywood</span>
                 <span class="tool-tag">CAM Software</span>
-                <span class="tool-tag">Toolpath Strategy</span>
             </div>
         </div>
     </div>
@@ -358,8 +356,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="tools-used">
                 <span class="tool-tag">Silicone</span>
                 <span class="tool-tag">Mold Release</span>
-                <span class="tool-tag">Vacuum Chamber</span>
-                <span class="tool-tag">Curing Process</span>
             </div>
         </div>
     </div>
@@ -405,10 +401,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     
     <div class="content-wrapper">
-        <div class="image-container">
-            <img src="../../images/touchdesigner.jpg" alt="TouchDesigner visual composition" class="workshop-image">
-            <div class="image-overlay">Real-time generative visuals</div>
-        </div>
+        <video controls autoplay muted loop width="100%" style="border-radius: 8px; margin: 2rem 0;">
+  <source src="../../videos/touch.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
         
         <div class="text-content">
             <p>The final session focused on creating a visual composition in TouchDesigner. It was less about fabrication and more about exploring digital expression and real-time visuals.</p>
@@ -421,7 +417,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <div class="tools-used">
                 <span class="tool-tag">TouchDesigner</span>
-                <span class="tool-tag">Generative Art</span>
                 <span class="tool-tag">Real-time</span>
                 <span class="tool-tag">Visual Programming</span>
             </div>
@@ -438,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div style="max-width: 800px; margin: 0 auto;">
         <p style="font-size: 1.2rem; line-height: 1.7;">
-            Across these six sessions, the goal was to understand the workflow, the potential errors, and the wide range of tools available in the workshop. Even with previous experience in all these techniques, revisiting them through different machines and setups was valuable.
+            Across these sessions, the goal was to understand the workflow, the potential errors, and the wide range of tools available in the workshop. Even with previous experience in all these techniques, revisiting them through different machines and setups was valuable.
         </p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2.5rem 0;">
