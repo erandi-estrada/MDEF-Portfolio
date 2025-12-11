@@ -11,32 +11,37 @@
 
     <!-- Slides -->
     <div class="slide fade">
-        <img src="../../images/fundamentals/fundamentals1.jpg" style="width:100%; display: block; height: 500px; object-fit: cover;">
+        <img src="../../images/fundamentals/fundamentals1.jpg" style="width:100%; display: block; height: 650px; object-fit: cover;">
     </div>
     <div class="slide fade">
-        <img src="../../images/fundamentals/fundamentals2.jpg" style="width:100%; display: block; height: 500px; object-fit: cover;">
+        <img src="../../images/fundamentals/fundamentals2.jpg" style="width:100%; display: block; height: 650px; object-fit: cover;">
     </div>
     <div class="slide fade">
-        <img src="../../images/fundamentals/fundamentals3.jpg" style="width:100%; display: block; height: 500px; object-fit: cover;">
+        <img src="../../images/fundamentals/fundamentals3.jpg" style="width:100%; display: block; height: 650px; object-fit: cover;">
     </div>
     <div class="slide fade">
-        <img src="../../images/fundamentals/fundamentals4.jpg" style="width:100%; display: block; height: 500px; object-fit: cover;">
+        <img src="../../images/fundamentals/fundamentals4.jpg" style="width:100%; display: block; height: 650px; object-fit: cover;">
     </div>
     <div class="slide fade">
-        <img src="../../images/fundamentals/fundamentals5.jpg" style="width:100%; display: block; height: 500px; object-fit: cover;">
+        <img src="../../images/fundamentals/fundamentals5.jpg" style="width:100%; display: block; height: 650px; object-fit: cover;">
     </div>
 
     <!-- Navigation buttons -->
-    <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0; text-decoration: none;">❮</a>
-    <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 20px; color: white; font-weight: bold; font-size: 24px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 5px 0 0 5px; text-decoration: none;">❯</a>
+    <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0; padding: 24px; color: white; font-weight: bold; font-size: 28px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 0 5px 5px 0; text-decoration: none; transition: background-color 0.3s ease;">❮</a>
+    <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0; padding: 24px; color: white; font-weight: bold; font-size: 28px; transform: translateY(-50%); user-select: none; background: rgba(0,0,0,0.3); border-radius: 5px 0 0 5px; text-decoration: none; transition: background-color 0.3s ease;">❯</a>
 
     <!-- Dots indicator -->
-    <div style="text-align: center; padding: 15px; position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.5);">
+    <div style="text-align: center; padding: 20px; position: absolute; bottom: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.7));">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    
+    <!-- Slide counter -->
+    <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.6); color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; backdrop-filter: blur(4px);">
+        <span id="slideCounter">1</span>/5
     </div>
 </div>
 
@@ -77,6 +82,9 @@ function showSlides(n) {
     
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+    
+    // Actualizar contador
+    document.getElementById("slideCounter").textContent = slideIndex;
 }
 
 function startAutoSlide() {
@@ -105,64 +113,141 @@ if (slideshowContainer) {
         startAutoSlide();
     });
 }
+
+// Swipe para móviles
+let touchStartX = 0;
+let touchEndX = 0;
+
+slideshowContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    clearInterval(slideInterval);
+});
+
+slideshowContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startAutoSlide();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    
+    if (touchStartX - touchEndX > swipeThreshold) {
+        // Swipe izquierda = siguiente
+        plusSlides(1);
+    } else if (touchEndX - touchStartX > swipeThreshold) {
+        // Swipe derecha = anterior
+        plusSlides(-1);
+    }
+}
 </script>
 
 <style>
 .slide {
     display: none;
-    animation: fade 1s ease;
+    animation: fade 0.8s ease;
 }
 
 @keyframes fade {
-    from {opacity: 0.4}
+    from {opacity: 0.6}
     to {opacity: 1}
 }
 
 .dot {
     cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 4px;
-    background-color: rgba(255,255,255,0.5);
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: rgba(255,255,255,0.4);
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.dot.active, .dot:hover {
+.dot.active {
     background-color: #ffffff;
+    transform: scale(1.3);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.dot:hover {
+    background-color: rgba(255,255,255,0.8);
     transform: scale(1.2);
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.7) !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive para pantallas grandes */
+@media (min-width: 1400px) {
+    div[style*="max-width: 1200px"] {
+        max-width: 1400px !important;
+    }
+    
     .slide img {
-        height: 400px !important;
+        height: 750px !important;
+    }
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+    .slide img {
+        height: 550px !important;
     }
     
     .prev, .next {
-        padding: 15px !important;
-        font-size: 20px !important;
+        padding: 20px !important;
+        font-size: 24px !important;
+    }
+    
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .slide img {
+        height: 450px !important;
+    }
+    
+    .prev, .next {
+        padding: 16px !important;
+        font-size: 22px !important;
     }
     
     .dot {
         height: 10px;
         width: 10px;
+        margin: 0 4px;
+    }
+    
+    div[style*="padding: 20px"] {
+        padding: 15px !important;
+    }
+    
+    div[style*="top: 20px; right: 20px"] {
+        top: 15px !important;
+        right: 15px !important;
+        padding: 6px 12px !important;
+        font-size: 12px !important;
     }
 }
 
+/* Responsive para móviles pequeños */
 @media (max-width: 480px) {
     .slide img {
-        height: 300px !important;
+        height: 350px !important;
     }
     
     .prev, .next {
-        padding: 10px !important;
-        font-size: 18px !important;
+        padding: 12px !important;
+        font-size: 20px !important;
     }
     
     .dot {
@@ -170,8 +255,25 @@ if (slideshowContainer) {
         width: 8px;
         margin: 0 3px;
     }
+    
+    div[style*="padding: 20px"] {
+        padding: 12px !important;
+    }
+}
+
+/* Efecto hover para el contenedor */
+div[style*="position: relative; max-width: 1200px"]:hover .prev,
+div[style*="position: relative; max-width: 1200px"]:hover .next {
+    opacity: 1;
+}
+
+div[style*="position: relative; max-width: 1200px"]:not(:hover) .prev,
+div[style*="position: relative; max-width: 1200px"]:not(:hover) .next {
+    opacity: 0.7;
 }
 </style>
+
+<!-- [Aquí va el resto de tu contenido con las secciones de fabricación] -->
 
 
 <style>
@@ -179,7 +281,6 @@ if (slideshowContainer) {
 .workshop-section {
     margin: 5rem 0;
     padding: 2rem;
-    background: #f8f9fa;
     border-radius: 12px;
     border-left: 4px solid #333;
     transition: all 0.3s ease;
