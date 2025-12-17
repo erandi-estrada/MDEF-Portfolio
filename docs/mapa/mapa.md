@@ -20,7 +20,7 @@ body {
     margin-top: 0 !important;
     padding-top: 0 !important;
     overflow: hidden !important;
-    background: #0a0e17 !important;
+    background: #fefaf0 !important;
 }
 
 /* ===== MENÚ CON PERSONALIDAD ===== */
@@ -31,10 +31,11 @@ body {
     width: 100% !important;
     margin: 0 !important;
     padding: 1.2rem 0 !important;
-    background: linear-gradient(90deg, #fefaf0 0%, #f5f0e6 100%) !important;
-    border-bottom: 3px solid #e74c3c !important;
+    background: linear-gradient(90deg, #f5f0e6 0%, #f0ebe0 100%) !important;
+    border-bottom: 3px solid #d4af37 !important;
     position: relative !important;
     z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
 
 .custom-header-menu {
@@ -57,16 +58,16 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
 }
 
 .custom-header-menu a:hover {
-    color: #e74c3c;
-    border-color: #e74c3c;
+    color: #c0392b;
+    border-color: #c0392b;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.2);
-    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.15);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -78,22 +79,22 @@ body {
 :root {
     --pigeon-color: #3498db;
     --microbe-color: #9b59b6;
-    --pollution-color: #95a5a6;
+    --pollution-color: #7f8c8d;
     --stress-color: #e67e22;
-    --breath-color: #1abc9c;
+    --breath-color: #16a085;
     --injustice-color: #c0392b;
-    --concrete-color: #7f8c8d;
+    --concrete-color: #95a5a6;
     --life-color: #27ae60;
-    --bg-dark: #0a0e17;
-    --bg-darker: #050811;
-    --text-light: #f0f4ff;
-    --text-muted: #a0a8c9;
+    --bg-light: #fefaf0;
+    --bg-lighter: #fffaf5;
+    --text-dark: #2c3e50;
+    --text-muted: #7f8c8d;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -102,19 +103,21 @@ body {
     position: relative;
 }
 
-/* ==== CONTENEDOR PRINCIPAL CON TEXTURA ==== */
+/* ==== CONTENEDOR PRINCIPAL CON FONDO CLARO ==== */
 .main-container {
     flex: 1;
     position: relative;
     overflow: hidden;
     width: 100%;
     height: calc(100vh - 80px);
-    background: 
-        linear-gradient(45deg, rgba(10, 14, 23, 0.9) 0%, rgba(5, 8, 17, 0.95) 100%),
-        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJ0ZXh0dXJlIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyIiBoZWlnaHQ9IjIuMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCN0ZXh0dXJlKSIvPjwvc3ZnPg==');
+    background: var(--bg-light);
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(155, 89, 182, 0.03) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(254, 250, 240, 0.8) 0%, rgba(255, 250, 245, 0.9) 100%);
 }
 
-/* PARTÍCULAS FLOTANTES (no estrellas) */
+/* PARTÍCULAS FLOTANTES SUTILES */
 #particles {
     position: absolute;
     top: 0;
@@ -128,15 +131,16 @@ body {
 .particle {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.3;
-    animation: float 20s infinite linear;
+    opacity: 0.1;
+    animation: float 25s infinite linear;
+    background: rgba(52, 152, 219, 0.1);
 }
 
 @keyframes float {
     0% { transform: translateY(0) translateX(0); }
-    25% { transform: translateY(-20px) translateX(10px); }
-    50% { transform: translateY(-40px) translateX(0); }
-    75% { transform: translateY(-20px) translateX(-10px); }
+    25% { transform: translateY(-15px) translateX(8px); }
+    50% { transform: translateY(-30px) translateX(0); }
+    75% { transform: translateY(-15px) translateX(-8px); }
     100% { transform: translateY(0) translateX(0); }
 }
 
@@ -167,6 +171,7 @@ body {
     transform-origin: center center;
     transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    background: transparent;
 }
 
 /* CANVAS PARA CONEXIONES */
@@ -177,10 +182,10 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.4;
 }
 
-/* NODO CENTRAL - FORMA ORGÁNICA */
+/* NODO CENTRAL - FORMA ORGÁNICA SOBRE FONDO CLARO */
 .central-node {
     position: absolute;
     top: 50%;
@@ -190,21 +195,22 @@ body {
     height: 400px;
     border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
     background: 
-        radial-gradient(circle at 30% 30%, rgba(52, 152, 219, 0.8) 0%, transparent 70%),
-        radial-gradient(circle at 70% 70%, rgba(155, 89, 182, 0.8) 0%, transparent 70%),
-        radial-gradient(circle at 50% 50%, rgba(10, 14, 23, 0.9) 30%, transparent 100%);
+        radial-gradient(circle at 30% 30%, rgba(52, 152, 219, 0.9) 0%, transparent 70%),
+        radial-gradient(circle at 70% 70%, rgba(155, 89, 182, 0.9) 0%, transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.95) 30%, transparent 100%);
     box-shadow: 
-        inset 0 0 80px rgba(52, 152, 219, 0.4),
-        inset 0 0 80px rgba(155, 89, 182, 0.4),
-        0 0 120px rgba(52, 152, 219, 0.6),
-        0 0 120px rgba(155, 89, 182, 0.4);
+        inset 0 0 80px rgba(52, 152, 219, 0.3),
+        inset 0 0 80px rgba(155, 89, 182, 0.3),
+        0 0 100px rgba(52, 152, 219, 0.4),
+        0 0 100px rgba(155, 89, 182, 0.3),
+        0 10px 40px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 10;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 3px solid rgba(255, 255, 255, 0.15);
+    border: 3px solid rgba(52, 152, 219, 0.2);
     animation: central-pulse 8s ease-in-out infinite;
 }
 
@@ -226,11 +232,13 @@ body {
 .central-node:hover {
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: 
-        inset 0 0 120px rgba(52, 152, 219, 0.5),
-        inset 0 0 120px rgba(155, 89, 182, 0.5),
-        0 0 200px rgba(52, 152, 219, 0.8),
-        0 0 200px rgba(155, 89, 182, 0.6);
+        inset 0 0 120px rgba(52, 152, 219, 0.4),
+        inset 0 0 120px rgba(155, 89, 182, 0.4),
+        0 0 150px rgba(52, 152, 219, 0.6),
+        0 0 150px rgba(155, 89, 182, 0.4),
+        0 15px 50px rgba(0, 0, 0, 0.15);
     animation: none;
+    border-color: rgba(52, 152, 219, 0.4);
 }
 
 .central-node-content {
@@ -245,24 +253,23 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #2c3e50;
     text-shadow: 
-        0 2px 10px rgba(0, 0, 0, 0.8),
-        0 0 30px rgba(52, 152, 219, 0.5),
-        0 0 30px rgba(155, 89, 182, 0.3);
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(52, 152, 219, 0.3);
     line-height: 1.1;
 }
 
 .central-node-subtitle {
     font-weight: 300;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(44, 62, 80, 0.8);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-style: italic;
 }
 
-/* NODOS - FORMAS VARIADAS */
+/* NODOS - FORMAS VARIADAS SOBRE FONDO CLARO */
 .node {
     position: absolute;
     display: flex;
@@ -275,9 +282,11 @@ body {
     overflow: hidden;
     padding: 20px;
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    filter: drop-shadow(0 0 15px currentColor);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
     animation: node-float var(--float-time) ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
 }
 
 @keyframes node-float {
@@ -296,7 +305,7 @@ body {
     font-size: 2.2rem;
     margin-bottom: 12px;
     opacity: 0.9;
-    filter: drop-shadow(0 0 5px currentColor);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .node-title {
@@ -304,8 +313,7 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: #ffffff;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    color: #2c3e50;
     line-height: 1.3;
     width: 100%;
     word-wrap: break-word;
@@ -313,87 +321,101 @@ body {
 
 .node-subtitle {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(44, 62, 80, 0.7);
     margin-top: 6px;
     font-weight: 400;
     font-style: italic;
 }
 
-/* COLORES DE NODOS */
+/* COLORES DE NODOS - CON FONDO BLANCO SEMITRANSPARENTE */
 .pigeon-node {
-    background: radial-gradient(circle at 30% 30%, 
-        rgba(52, 152, 219, 0.85) 0%,
-        rgba(52, 152, 219, 0.6) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 30% 30%, 
+            rgba(52, 152, 219, 0.9) 0%,
+            rgba(52, 152, 219, 0.6) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(52, 152, 219, 0.3),
-        0 0 60px rgba(52, 152, 219, 0.5);
-    border-color: rgba(52, 152, 219, 0.3);
+        inset 0 0 40px rgba(52, 152, 219, 0.2),
+        0 0 60px rgba(52, 152, 219, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(52, 152, 219, 0.4);
 }
 
 .microbe-node {
-    background: radial-gradient(circle at 70% 30%, 
-        rgba(155, 89, 182, 0.85) 0%,
-        rgba(155, 89, 182, 0.6) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 70% 30%, 
+            rgba(155, 89, 182, 0.9) 0%,
+            rgba(155, 89, 182, 0.6) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(155, 89, 182, 0.3),
-        0 0 60px rgba(155, 89, 182, 0.5);
-    border-color: rgba(155, 89, 182, 0.3);
+        inset 0 0 40px rgba(155, 89, 182, 0.2),
+        0 0 60px rgba(155, 89, 182, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(155, 89, 182, 0.4);
 }
 
 .pollution-node {
-    background: radial-gradient(circle at 50% 50%, 
-        rgba(149, 165, 166, 0.8) 0%,
-        rgba(127, 140, 141, 0.5) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 50% 50%, 
+            rgba(127, 140, 141, 0.8) 0%,
+            rgba(149, 165, 166, 0.5) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(149, 165, 166, 0.2),
-        0 0 60px rgba(149, 165, 166, 0.4);
-    border-color: rgba(149, 165, 166, 0.2);
+        inset 0 0 40px rgba(149, 165, 166, 0.15),
+        0 0 60px rgba(149, 165, 166, 0.2),
+        0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(149, 165, 166, 0.3);
 }
 
 .stress-node {
-    background: radial-gradient(circle at 20% 80%, 
-        rgba(230, 126, 34, 0.85) 0%,
-        rgba(230, 126, 34, 0.6) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 20% 80%, 
+            rgba(230, 126, 34, 0.9) 0%,
+            rgba(230, 126, 34, 0.6) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(230, 126, 34, 0.3),
-        0 0 60px rgba(230, 126, 34, 0.5);
+        inset 0 0 40px rgba(230, 126, 34, 0.2),
+        0 0 60px rgba(230, 126, 34, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.1);
     border-color: rgba(230, 126, 34, 0.3);
 }
 
 .breath-node {
-    background: radial-gradient(circle at 80% 20%, 
-        rgba(26, 188, 156, 0.85) 0%,
-        rgba(26, 188, 156, 0.6) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 80% 20%, 
+            rgba(22, 160, 133, 0.9) 0%,
+            rgba(22, 160, 133, 0.6) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(26, 188, 156, 0.3),
-        0 0 60px rgba(26, 188, 156, 0.5);
-    border-color: rgba(26, 188, 156, 0.3);
+        inset 0 0 40px rgba(22, 160, 133, 0.2),
+        0 0 60px rgba(22, 160, 133, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(22, 160, 133, 0.3);
 }
 
 .injustice-node {
-    background: radial-gradient(circle at 50% 20%, 
-        rgba(192, 57, 43, 0.85) 0%,
-        rgba(192, 57, 43, 0.6) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 50% 20%, 
+            rgba(192, 57, 43, 0.9) 0%,
+            rgba(192, 57, 43, 0.6) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(192, 57, 43, 0.3),
-        0 0 60px rgba(192, 57, 43, 0.5);
+        inset 0 0 40px rgba(192, 57, 43, 0.2),
+        0 0 60px rgba(192, 57, 43, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.1);
     border-color: rgba(192, 57, 43, 0.3);
 }
 
 .life-node {
-    background: radial-gradient(circle at 20% 50%, 
-        rgba(39, 174, 96, 0.85) 0%,
-        rgba(39, 174, 96, 0.6) 50%,
-        transparent 80%);
+    background: 
+        radial-gradient(circle at 20% 50%, 
+            rgba(39, 174, 96, 0.9) 0%,
+            rgba(39, 174, 96, 0.6) 40%,
+            rgba(255, 255, 255, 0.9) 80%);
     box-shadow: 
-        inset 0 0 40px rgba(39, 174, 96, 0.3),
-        0 0 60px rgba(39, 174, 96, 0.5);
+        inset 0 0 40px rgba(39, 174, 96, 0.2),
+        0 0 60px rgba(39, 174, 96, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.1);
     border-color: rgba(39, 174, 96, 0.3);
 }
 
@@ -403,13 +425,15 @@ body {
     z-index: 20;
     box-shadow: 
         0 0 80px currentColor,
-        inset 0 0 50px rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+        inset 0 0 50px rgba(255, 255, 255, 0.3),
+        0 15px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
     animation: none !important;
-    filter: drop-shadow(0 0 25px currentColor) brightness(1.2);
+    filter: drop-shadow(0 0 25px currentColor) brightness(1.1);
+    background: rgba(255, 255, 255, 0.95);
 }
 
-/* PANEL DE CONTENIDO - CON PERSONALIDAD */
+/* PANEL DE CONTENIDO - SOBRE FONDO CLARO */
 .content-panel {
     position: fixed;
     top: 100px;
@@ -417,14 +441,14 @@ body {
     width: 480px;
     max-height: 80vh;
     overflow-y: auto;
-    background: rgba(10, 14, 23, 0.95);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
     border-radius: 12px;
     padding: 35px;
     box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     z-index: 1000;
     display: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -453,17 +477,18 @@ body {
     border-radius: 20px;
     margin-bottom: 25px;
     font-weight: 800;
-    color: #000000;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     background: var(--node-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .panel-title {
     font-size: 1.9rem;
     font-weight: 800;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #2c3e50;
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -478,7 +503,7 @@ body {
 }
 
 .panel-concept {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(52, 152, 219, 0.05);
     border-left: 4px solid var(--node-color);
     padding: 20px;
     margin: 25px 0;
@@ -491,7 +516,7 @@ body {
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .panel-list {
@@ -520,7 +545,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(44, 62, 80, 0.1);
     border: none;
     color: var(--text-muted);
     font-size: 1.8rem;
@@ -536,34 +561,34 @@ body {
 }
 
 .panel-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--text-light);
+    background: rgba(44, 62, 80, 0.2);
+    color: var(--text-dark);
     transform: rotate(90deg);
 }
 
-/* LEYENDA */
+/* LEYENDA SOBRE FONDO CLARO */
 .legend {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background: rgba(10, 14, 23, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     z-index: 1000;
     max-width: 280px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .legend-title {
     font-size: 0.9rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #2c3e50;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 10px;
 }
 
@@ -589,7 +614,7 @@ body {
 
 .legend-label {
     font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(44, 62, 80, 0.8);
     line-height: 1.3;
 }
 
@@ -600,15 +625,16 @@ body {
     right: 20px;
     text-align: right;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(44, 62, 80, 0.6);
     z-index: 1000;
-    background: rgba(10, 14, 23, 0.4);
+    background: rgba(255, 255, 255, 0.8);
     padding: 12px 18px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     max-width: 260px;
     backdrop-filter: blur(5px);
     line-height: 1.5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* RESPONSIVE */
@@ -768,7 +794,7 @@ body {
             <div class="legend-label">Microorganisms / Invisible Foundation</div>
         </div>
         <div class="legend-item">
-            <div class="legend-color" style="background-color: #95a5a6;"></div>
+            <div class="legend-color" style="background-color: #7f8c8d;"></div>
             <div class="legend-label">Pollution / Shared Burden</div>
         </div>
         <div class="legend-item">
@@ -776,7 +802,7 @@ body {
             <div class="legend-label">Stress / Biological Response</div>
         </div>
         <div class="legend-item">
-            <div class="legend-color" style="background-color: #1abc9c;"></div>
+            <div class="legend-color" style="background-color: #16a085;"></div>
             <div class="legend-label">Breath / Atmospheric Commons</div>
         </div>
     </div>
@@ -810,7 +836,7 @@ body {
             ]
         },
         
-        // NODOS DE PALOMAS - POSICIONES ESTRATÉGICAS
+        // NODOS DE PALOMAS
         pigeons: [
             {
                 id: "pigeon-body",
@@ -975,7 +1001,7 @@ body {
             }
         ],
         
-        // NODOS CONCEPTUALES/DE CONEXIÓN
+        // NODOS CONCEPTUALES
         concepts: [
             {
                 id: "visible-invisible",
@@ -1040,41 +1066,39 @@ body {
     let mapSpace = document.getElementById('map-space');
     let viewport = document.getElementById('viewport');
 
-    // Crear partículas flotantes
+    // Crear partículas sutiles
     function initParticles() {
         const particlesContainer = document.getElementById('particles');
         particlesContainer.innerHTML = '';
         
-        // Menos partículas, más sutiles
-        for (let i = 0; i < 80; i++) {
+        for (let i = 0; i < 60; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
             
-            // Colores sutiles relacionados con el tema
+            // Colores sutiles
             const colors = [
-                'rgba(52, 152, 219, 0.15)',   // azul paloma
-                'rgba(155, 89, 182, 0.15)',   // púrpura microbe
-                'rgba(149, 165, 166, 0.1)',   // gris contaminación
-                'rgba(230, 126, 34, 0.1)',    // naranja estrés
-                'rgba(26, 188, 156, 0.1)'     // verde/turquesa
+                'rgba(52, 152, 219, 0.08)',   // azul paloma
+                'rgba(155, 89, 182, 0.08)',   // púrpura microbe
+                'rgba(127, 140, 141, 0.06)',  // gris contaminación
+                'rgba(230, 126, 34, 0.06)',   // naranja estrés
+                'rgba(22, 160, 133, 0.06)'    // verde/turquesa
             ];
             
-            const size = Math.random() * 6 + 1;
+            const size = Math.random() * 5 + 1;
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
             particle.style.left = `${Math.random() * 100}%`;
             particle.style.top = `${Math.random() * 100}%`;
             particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-            particle.style.animationDuration = `${Math.random() * 30 + 20}s`;
+            particle.style.animationDuration = `${Math.random() * 25 + 20}s`;
             particle.style.animationDelay = `${Math.random() * 5}s`;
             
             particlesContainer.appendChild(particle);
         }
     }
 
-    // Crear nodos en posiciones estratégicas
+    // Crear nodos orgánicos
     function createOrganicNodes() {
-        // Combinar todos los nodos
         const allNodes = [
             ...nodesData.pigeons,
             ...nodesData.microbes,
@@ -1091,7 +1115,7 @@ body {
             const shapeClass = shapeClasses[Math.floor(Math.random() * shapeClasses.length)];
             node.classList.add('node', shapeClass);
             
-            // Clase de color según categoría
+            // Clase de color
             if (nodeData.category.includes('PIGEON') || nodeData.id.includes('pigeon')) {
                 node.classList.add('pigeon-node');
             } else if (nodeData.category.includes('MICROBE') || nodeData.id.includes('microbe')) {
@@ -1111,7 +1135,7 @@ body {
             } else if (nodeData.category.includes('DESIGN')) {
                 node.classList.add('life-node');
             } else {
-                node.classList.add('pigeon-node'); // default
+                node.classList.add('pigeon-node');
             }
             
             node.id = nodeData.id;
@@ -1205,16 +1229,16 @@ body {
         if (nodeData.category.includes('MICROBE')) {
             color = '#9b59b6';
         } else if (nodeData.category.includes('POLLUTION') || nodeData.category.includes('STRESS')) {
-            color = '#95a5a6';
+            color = '#7f8c8d';
         } else if (nodeData.category.includes('ATMOSPHERIC') || nodeData.category.includes('BREATH')) {
-            color = '#1abc9c';
+            color = '#16a085';
         } else if (nodeData.category.includes('INJUSTICE') || nodeData.category.includes('POLITICS')) {
             color = '#c0392b';
         } else if (nodeData.category.includes('DESIGN')) {
             color = '#27ae60';
         }
         
-        // Aplicar color al panel
+        // Aplicar color
         panel.style.setProperty('--node-color', color);
         document.getElementById('panelCategory').style.background = color;
         document.getElementById('panelConcept').style.borderLeftColor = color;
@@ -1264,7 +1288,7 @@ body {
         resizeCanvas();
     }
 
-    // Conexiones orgánicas
+    // Conexiones orgánicas sutiles
     function drawOrganicConnections() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
@@ -1282,28 +1306,28 @@ body {
             const nodeY = (rect.top + rect.height/2 - spaceRect.top) / scale;
             
             // Color según tipo de nodo
-            let color = 'rgba(52, 152, 219, 0.12)';
-            let width = 1.5;
+            let color = 'rgba(52, 152, 219, 0.1)';
+            let width = 1.3;
             
             if (node.classList.contains('microbe-node')) {
-                color = 'rgba(155, 89, 182, 0.12)';
-                width = 1.4;
-            } else if (node.classList.contains('pollution-node')) {
-                color = 'rgba(149, 165, 166, 0.1)';
+                color = 'rgba(155, 89, 182, 0.1)';
                 width = 1.2;
+            } else if (node.classList.contains('pollution-node')) {
+                color = 'rgba(127, 140, 141, 0.08)';
+                width = 1.0;
             } else if (node.classList.contains('stress-node')) {
-                color = 'rgba(230, 126, 34, 0.1)';
-                width = 1.3;
+                color = 'rgba(230, 126, 34, 0.08)';
+                width = 1.1;
             } else if (node.classList.contains('breath-node')) {
-                color = 'rgba(26, 188, 156, 0.1)';
-                width = 1.4;
+                color = 'rgba(22, 160, 133, 0.08)';
+                width = 1.2;
             }
             
-            // Dibujar línea al centro con ligera curva
+            // Dibujar línea al centro
             drawConnectionToCenter(centerX, centerY, nodeX, nodeY, color, width);
         });
         
-        // Conexiones específicas entre nodos
+        // Conexiones específicas
         drawSpecificConnections();
     }
     
@@ -1312,8 +1336,8 @@ body {
         ctx.moveTo(x1, y1);
         
         // Línea con ligera curva
-        const cpX = (x1 + x2) / 2 + (Math.random() - 0.5) * 100;
-        const cpY = (y1 + y2) / 2 + (Math.random() - 0.5) * 100;
+        const cpX = (x1 + x2) / 2 + (Math.random() - 0.5) * 80;
+        const cpY = (y1 + y2) / 2 + (Math.random() - 0.5) * 80;
         
         ctx.quadraticCurveTo(cpX, cpY, x2, y2);
         ctx.strokeStyle = color;
@@ -1323,14 +1347,14 @@ body {
     }
     
     function drawSpecificConnections() {
-        // Conexiones importantes entre nodos relacionados
+        // Conexiones importantes
         const connections = [
-            { from: 'pigeon-body', to: 'visible-invisible', color: 'rgba(52, 152, 219, 0.2)', width: 1.8 },
-            { from: 'microbe-invisible', to: 'visible-invisible', color: 'rgba(155, 89, 182, 0.2)', width: 1.8 },
-            { from: 'air-toxicity', to: 'pigeon-lungs', color: 'rgba(149, 165, 166, 0.15)', width: 1.6 },
-            { from: 'air-toxicity', to: 'microbe-chemical', color: 'rgba(149, 165, 166, 0.15)', width: 1.6 },
-            { from: 'pigeon-gut', to: 'scale-connection', color: 'rgba(52, 152, 219, 0.18)', width: 1.7 },
-            { from: 'microbe-network', to: 'scale-connection', color: 'rgba(155, 89, 182, 0.18)', width: 1.7 }
+            { from: 'pigeon-body', to: 'visible-invisible', color: 'rgba(52, 152, 219, 0.15)', width: 1.6 },
+            { from: 'microbe-invisible', to: 'visible-invisible', color: 'rgba(155, 89, 182, 0.15)', width: 1.6 },
+            { from: 'air-toxicity', to: 'pigeon-lungs', color: 'rgba(127, 140, 141, 0.12)', width: 1.4 },
+            { from: 'air-toxicity', to: 'microbe-chemical', color: 'rgba(127, 140, 141, 0.12)', width: 1.4 },
+            { from: 'pigeon-gut', to: 'scale-connection', color: 'rgba(52, 152, 219, 0.14)', width: 1.5 },
+            { from: 'microbe-network', to: 'scale-connection', color: 'rgba(155, 89, 182, 0.14)', width: 1.5 }
         ];
         
         connections.forEach(conn => {
@@ -1348,12 +1372,12 @@ body {
                 const toX = (toRect.left + toRect.width/2 - spaceRect.left) / scale;
                 const toY = (toRect.top + toRect.height/2 - spaceRect.top) / scale;
                 
-                // Línea curva entre nodos
+                // Línea curva
                 ctx.beginPath();
                 ctx.moveTo(fromX, fromY);
                 
-                const cp1x = (fromX + toX) / 2 + (Math.random() - 0.5) * 200;
-                const cp1y = (fromY + toY) / 2 + (Math.random() - 0.5) * 200;
+                const cp1x = (fromX + toX) / 2 + (Math.random() - 0.5) * 150;
+                const cp1y = (fromY + toY) / 2 + (Math.random() - 0.5) * 150;
                 
                 ctx.quadraticCurveTo(cp1x, cp1y, toX, toY);
                 ctx.strokeStyle = conn.color;
