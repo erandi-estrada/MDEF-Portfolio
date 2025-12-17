@@ -32,7 +32,7 @@
             </a>
 
 <a href="mapa/mapa/" class="card">
-                <img src="images/ideas.jpg" alt="Initial Ideas">
+                <img src="images/alambre.jpg" alt="Initial Ideas">
                 <h3>Infrastucturo of non-human life</h3>
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
