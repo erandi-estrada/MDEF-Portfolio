@@ -31,6 +31,12 @@
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
 
+<a href="mapa/mapa/" class="card">
+                <img src="images/ideas.jpg" alt="Initial Ideas">
+                <h3>Infrastucturo of non-human life</h3>
+                <p>Early explorations that became the foundation of future projects.</p>
+            </a>
+
   <a href="Otherness/Other-intelligences/" class="card">
                 <img src="images/lenguaje.jpg" alt="Other Intelligences"> 
                 <h3>Other Intelligences</h3> 
