@@ -224,50 +224,60 @@ body {
     z-index: 1;
 }
 
-/* COLORES ESPECÍFICOS POR CLASE - EN EL ORDEN PEDIDO */
+/* IMPORTANTE: 9 tarjetas originales + 9 clones = 18 tarjetas */
+/* Colores por posición (funciona para originales y clones) */
 
-/* 1. Initial Ideas - AZUL CLARO */
-.cards-carousel .initial-ideas-card:hover::before {
+/* 1. Initial Ideas - AZUL CLARO (posición 1 y 10) */
+.cards-carousel .card:nth-child(1):hover::before,
+.cards-carousel .card:nth-child(10):hover::before {
     background: linear-gradient(135deg, rgba(25, 118, 210, 0.85) 0%, rgba(33, 150, 243, 0.75) 100%) !important;
 }
 
-/* 2. Studio - AMARILLO VIBRANTE */
-.cards-carousel .studio-card:hover::before {
+/* 2. Studio - AMARILLO VIBRANTE (posición 2 y 11) */
+.cards-carousel .card:nth-child(2):hover::before,
+.cards-carousel .card:nth-child(11):hover::before {
     background: linear-gradient(135deg, rgba(255, 193, 7, 0.85) 0%, rgba(255, 213, 79, 0.75) 100%) !important;
 }
 
-/* 3. Infrastructure - VERDE */
-.cards-carousel .infrastructure-card:hover::before {
+/* 3. Infrastructure - VERDE (posición 3 y 12) */
+.cards-carousel .card:nth-child(3):hover::before,
+.cards-carousel .card:nth-child(12):hover::before {
     background: linear-gradient(135deg, rgba(0, 150, 136, 0.85) 0%, rgba(77, 182, 172, 0.75) 100%) !important;
 }
 
-/* 4. Unpacking Technologies - NARANJA */
-.cards-carousel .unpacking-card:hover::before {
+/* 4. Unpacking Technologies - NARANJA (posición 4 y 13) */
+.cards-carousel .card:nth-child(4):hover::before,
+.cards-carousel .card:nth-child(13):hover::before {
     background: linear-gradient(135deg, rgba(255, 87, 34, 0.85) 0%, rgba(255, 138, 101, 0.75) 100%) !important;
 }
 
-/* 5. Machine Paradox - MORADO */
-.cards-carousel .machine-card:hover::before {
+/* 5. Machine Paradox - MORADO (posición 5 y 14) */
+.cards-carousel .card:nth-child(5):hover::before,
+.cards-carousel .card:nth-child(14):hover::before {
     background: linear-gradient(135deg, rgba(156, 39, 176, 0.85) 0%, rgba(186, 104, 200, 0.75) 100%) !important;
 }
 
-/* 6. Other Intelligences - ROJO ANARANJADO */
-.cards-carousel .intelligences-card:hover::before {
+/* 6. Other Intelligences - ROJO ANARANJADO (posición 6 y 15) */
+.cards-carousel .card:nth-child(6):hover::before,
+.cards-carousel .card:nth-child(15):hover::before {
     background: linear-gradient(135deg, rgba(255, 61, 0, 0.85) 0%, rgba(255, 122, 69, 0.75) 100%) !important;
 }
 
-/* 7. Prosthesis - AZUL OSCURO */
-.cards-carousel .prosthesis-card:hover::before {
+/* 7. Prosthesis - AZUL OSCURO (posición 7 y 16) */
+.cards-carousel .card:nth-child(7):hover::before,
+.cards-carousel .card:nth-child(16):hover::before {
     background: linear-gradient(135deg, rgba(13, 71, 161, 0.85) 0%, rgba(25, 118, 210, 0.75) 100%) !important;
 }
 
-/* 8. Fundamentals - ROSA VIBRANTE */
-.cards-carousel .fundamentals-card:hover::before {
+/* 8. Fundamentals - ROSA VIBRANTE (posición 8 y 17) */
+.cards-carousel .card:nth-child(8):hover::before,
+.cards-carousel .card:nth-child(17):hover::before {
     background: linear-gradient(135deg, rgba(233, 30, 99, 0.85) 0%, rgba(240, 98, 146, 0.75) 100%) !important;
 }
 
-/* 9. Atlas of weak signals - VERDE AZULADO */
-.cards-carousel .atlas-card:hover::before {
+/* 9. Atlas of weak signals - VERDE AZULADO (posición 9 y 18) */
+.cards-carousel .card:nth-child(9):hover::before,
+.cards-carousel .card:nth-child(18):hover::before {
     background: linear-gradient(135deg, rgba(0, 121, 107, 0.85) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
 }
 
