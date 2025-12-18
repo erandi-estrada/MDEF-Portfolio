@@ -20,63 +20,63 @@
     <div class="carousel-container">
         <div class="cards-carousel" id="cardsCarousel">
             <!-- Initial Ideas -->
-            <a href="conceptual/conceptual/" class="card initial-ideas-card">
+            <a href="conceptual/conceptual/" class="card">
                 <img src="images/ideas.jpg" alt="Initial Ideas">
                 <h3>Initial Ideas</h3>
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
 
             <!-- Studio -->
-            <a href="studio/studio/" class="card studio-card">
+            <a href="studio/studio/" class="card">
                 <img src="images/palomas.jpeg" alt="Studio">
                 <h3>Studio</h3>
                 <p>Design, experimentation, and material explorations.</p>
             </a>
 
             <!-- Infrastructure of non-human life -->
-            <a href="mapa/mapa/" class="card infrastructure-card">
+            <a href="mapa/mapa/" class="card">
                 <img src="images/alambre.jpeg" alt="Infrastructure of non-human life">
                 <h3>Infrastructure of non-human life</h3>
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
 
             <!-- Unpacking Technologies -->
-            <a href="Unpacking/Unpacking/" class="card unpacking-card">
+            <a href="Unpacking/Unpacking/" class="card">
                 <img src="images/unpacking.jpg" alt="Unpacking Technologies">
                 <h3>Unpacking Technologies</h3>
                 <p>To examine our relation with technology.</p>
             </a>
 
             <!-- Machine Paradox -->
-            <a href="Machine/Machine/" class="card machine-card">
+            <a href="Machine/Machine/" class="card">
                 <img src="images/machine.jpg" alt="The Machine Paradox">
                 <h3>Machine Paradox</h3>
                 <p>To expand the notion of what a machine might be.</p>
             </a>
 
             <!-- Other Intelligences -->
-            <a href="Otherness/Other-intelligences/" class="card intelligences-card">
+            <a href="Otherness/Other-intelligences/" class="card">
                 <img src="images/lenguaje.jpg" alt="Other Intelligences"> 
                 <h3>Other Intelligences</h3> 
                 <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
             </a>
 
             <!-- Prosthesis -->
-            <a href="Otherness/Prosthesis" class="card prosthesis-card">
+            <a href="Otherness/Prosthesis" class="card">
                 <img src="images/prosthesis.jpeg" alt="Prosthesis">
                 <h3>Prosthesis</h3>
                 <p>A research on extensions that question what it means to be human in a hybrid world.</p>
             </a>
 
             <!-- Fundamentals for future makers -->
-            <a href="Fundamentals/fundamentals/" class="card fundamentals-card">
+            <a href="Fundamentals/fundamentals/" class="card">
                 <img src="images/fundamentals.jpg" alt="Fundamentals for future makers">
                 <h3>Fundamentals for future makers</h3>
                 <p>Introduction to technologies, tools and fabrication processes in the lab</p>
             </a>
 
             <!-- Atlas of weak signals -->
-            <a href="Atlas/atlas/" class="card atlas-card">
+            <a href="Atlas/atlas/" class="card">
                 <img src="images/atlas.jpg" alt="Atlas of weak signals">
                 <h3>Atlas of weak signals</h3>
                 <p>Map of emerging signals for futures.</p>
