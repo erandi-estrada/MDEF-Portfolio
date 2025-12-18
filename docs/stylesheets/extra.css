@@ -210,7 +210,7 @@ body {
 }
 
 /* ===== EFECTOS HOVER EN LAS TARJETAS ===== */
-/* Superposición base para todas */
+/* Superposición base para todas - INICIALMENTE INVISIBLE */
 .cards-carousel .card::before {
     content: '';
     position: absolute;
@@ -219,7 +219,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(25, 118, 210, 0.85); /* Azul por defecto */
-    opacity: 0;
+    opacity: 0; /* INVISIBLE por defecto */
     transition: all 0.6s ease;
     z-index: 1;
 }
@@ -231,61 +231,71 @@ body {
 .cards-carousel .card:nth-child(1):hover::before,
 .cards-carousel .card:nth-child(10):hover::before {
     background: linear-gradient(135deg, rgba(25, 118, 210, 0.85) 0%, rgba(33, 150, 243, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 2. Studio - AMARILLO VIBRANTE (posición 2 y 11) */
 .cards-carousel .card:nth-child(2):hover::before,
 .cards-carousel .card:nth-child(11):hover::before {
     background: linear-gradient(135deg, rgba(255, 193, 7, 0.85) 0%, rgba(255, 213, 79, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 3. Infrastructure - VERDE (posición 3 y 12) */
 .cards-carousel .card:nth-child(3):hover::before,
 .cards-carousel .card:nth-child(12):hover::before {
     background: linear-gradient(135deg, rgba(0, 150, 136, 0.85) 0%, rgba(77, 182, 172, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 4. Unpacking Technologies - NARANJA (posición 4 y 13) */
 .cards-carousel .card:nth-child(4):hover::before,
 .cards-carousel .card:nth-child(13):hover::before {
     background: linear-gradient(135deg, rgba(255, 87, 34, 0.85) 0%, rgba(255, 138, 101, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 5. Machine Paradox - MORADO (posición 5 y 14) */
 .cards-carousel .card:nth-child(5):hover::before,
 .cards-carousel .card:nth-child(14):hover::before {
     background: linear-gradient(135deg, rgba(156, 39, 176, 0.85) 0%, rgba(186, 104, 200, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 6. Other Intelligences - ROJO ANARANJADO (posición 6 y 15) */
 .cards-carousel .card:nth-child(6):hover::before,
 .cards-carousel .card:nth-child(15):hover::before {
     background: linear-gradient(135deg, rgba(255, 61, 0, 0.85) 0%, rgba(255, 122, 69, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 7. Prosthesis - AZUL OSCURO (posición 7 y 16) */
 .cards-carousel .card:nth-child(7):hover::before,
 .cards-carousel .card:nth-child(16):hover::before {
     background: linear-gradient(135deg, rgba(13, 71, 161, 0.85) 0%, rgba(25, 118, 210, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 8. Fundamentals - ROSA VIBRANTE (posición 8 y 17) */
 .cards-carousel .card:nth-child(8):hover::before,
 .cards-carousel .card:nth-child(17):hover::before {
     background: linear-gradient(135deg, rgba(233, 30, 99, 0.85) 0%, rgba(240, 98, 146, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
 /* 9. Atlas of weak signals - VERDE AZULADO (posición 9 y 18) */
 .cards-carousel .card:nth-child(9):hover::before,
 .cards-carousel .card:nth-child(18):hover::before {
     background: linear-gradient(135deg, rgba(0, 121, 107, 0.85) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
+/* Asegurar que la imagen se agrande al hacer hover */
 .cards-carousel .card:hover img {
     transform: scale(1.07);
 }
 
-/* TEXTO MEJOR ESPACIADO Y CENTRADO */
+/* TEXTO - INICIALMENTE INVISIBLE */
 .cards-carousel .card h3,
 .cards-carousel .card p {
     position: absolute;
@@ -293,16 +303,16 @@ body {
     width: 100%;
     text-align: center !important;
     z-index: 2;
-    opacity: 0;
+    opacity: 0; /* INVISIBLE por defecto */
     transition: all 0.7s ease;
-    padding: 0 2rem; /* Más padding lateral */
+    padding: 0 2rem;
     color: #ffffff !important;
     box-sizing: border-box;
 }
 
 .cards-carousel .card h3 {
-    top: 30% !important; /* Más arriba */
-    font-size: 1.6rem !important; /* Un poco más grande */
+    top: 30% !important;
+    font-size: 1.6rem !important;
     font-weight: 700;
     margin: 0 !important;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
@@ -310,18 +320,19 @@ body {
 }
 
 .cards-carousel .card p {
-    top: 50% !important; /* Más separado del título */
-    font-size: 1.1rem !important; /* Un poco más grande */
-    line-height: 1.5 !important; /* Mejor interlineado */
+    top: 50% !important;
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
     margin: 0;
     font-weight: 400;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    padding-top: 1rem !important; /* Espacio extra arriba del párrafo */
+    padding-top: 1rem !important;
 }
 
+/* TEXTO VISIBLE al hacer hover en la tarjeta */
 .cards-carousel .card:hover h3,
 .cards-carousel .card:hover p {
-    opacity: 1;
+    opacity: 1 !important; /* VISIBLE al hover */
 }
 
 /* ===== RESPONSIVE ===== */
