@@ -77,9 +77,65 @@
     </div>
 </div>
 
-<!-- Nuevo Carrusel de Tarjetas -->
+<!-- Nueva imagen cards2.jpg -->
+<div class="image-section">
+    <img src="../../images/cards2.png" 
+         alt="Tarjetas adicionales del Atlas" 
+         width="100%" 
+         style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
+
+<!-- Diagrama horizontal -->
+<div class="horizontal-diagram-container">
+    <h2 class="diagram-title-horizontal">Post-Capitalist Care Framework</h2>
+    
+<div class="horizontal-diagram">
+        <!-- Nodo 1: Post-Capitalist Care -->
+        <div class="node node-main">
+            <div class="node-content">
+                <h3>Post-Capitalist Care</h3>
+            </div>
+        </div>
+        
+<!-- Flecha 1 -->
+<div class="arrow-horizontal"></div>
+        
+ <!-- Nodos intermedios: 3 conceptos -->
+<div class="concepts-row">
+            <div class="concept-box">
+                <div class="concept-content">
+                    <h4>Tech Abolition</h4>
+                </div>
+            </div>
+            
+ <div class="concept-box">
+                <div class="concept-content">
+                    <h4>Border Regimes</h4>
+                </div>
+            </div>
+            
+<div class="concept-box">
+                <div class="concept-content">
+                    <h4>Boredom and Laziness</h4>
+                </div>
+            </div>
+        </div>
+        
+<!-- Flecha 2 -->
+<div class="arrow-horizontal"></div>
+        
+<!-- Nodo final: Kit -->
+<div class="node node-kit">
+            <div class="node-content">
+                <h3>Kit</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nuevo Carrusel de Tarjetas - AL FINAL -->
 <div class="cards-slider-section">
-    <h2 class="cards-slider-title">Concepts Exploration</h2>
+    <h2 class="cards-slider-title">5 Weak Signals</h2>
     
     <div class="cards-slider-container">
         <div class="cards-slider">
@@ -185,62 +241,6 @@
                     <path d="M9 18l6-6-6-6"/>
                 </svg>
             </button>
-        </div>
-    </div>
-</div>
-
-<!-- Nueva imagen cards2.jpg -->
-<div class="image-section">
-    <img src="../../images/cards2.png" 
-         alt="Tarjetas adicionales del Atlas" 
-         width="100%" 
-         style="border-radius: 8px; margin: 3rem 0 4rem 0; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-</div>
-
-<!-- Diagrama horizontal -->
-<div class="horizontal-diagram-container">
-    <h2 class="diagram-title-horizontal">Post-Capitalist Care Framework</h2>
-    
-<div class="horizontal-diagram">
-        <!-- Nodo 1: Post-Capitalist Care -->
-        <div class="node node-main">
-            <div class="node-content">
-                <h3>Post-Capitalist Care</h3>
-            </div>
-        </div>
-        
-<!-- Flecha 1 -->
-<div class="arrow-horizontal"></div>
-        
- <!-- Nodos intermedios: 3 conceptos -->
-<div class="concepts-row">
-            <div class="concept-box">
-                <div class="concept-content">
-                    <h4>Tech Abolition</h4>
-                </div>
-            </div>
-            
- <div class="concept-box">
-                <div class="concept-content">
-                    <h4>Border Regimes</h4>
-                </div>
-            </div>
-            
-<div class="concept-box">
-                <div class="concept-content">
-                    <h4>Boredom and Laziness</h4>
-                </div>
-            </div>
-        </div>
-        
-<!-- Flecha 2 -->
-<div class="arrow-horizontal"></div>
-        
-<!-- Nodo final: Kit -->
-<div class="node node-kit">
-            <div class="node-content">
-                <h3>Kit</h3>
-            </div>
         </div>
     </div>
 </div>
@@ -509,13 +509,13 @@
 /* Estilos para el nuevo carrusel de tarjetas */
 .cards-slider-section {
     max-width: 1200px;
-    margin: 4rem auto;
+    margin: 4rem auto 6rem auto;
     padding: 0 2rem;
 }
 
 .cards-slider-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #2d3748;
     margin-bottom: 3rem;
@@ -528,7 +528,7 @@
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100px;
     height: 4px;
     background: linear-gradient(90deg, #1976d2, #9c27b0);
     border-radius: 2px;
@@ -793,7 +793,7 @@
     }
     
     .cards-slider-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -839,6 +839,10 @@
     .slider-btn {
         width: 40px;
         height: 40px;
+    }
+    
+    .cards-slider-title {
+        font-size: 1.5rem;
     }
 }
 
