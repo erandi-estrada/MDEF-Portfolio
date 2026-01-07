@@ -53,13 +53,12 @@
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
-body {
-    background-color: #fefefe;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Ocultar cualquier título que aparezca antes */
+header:first-of-type,
+.header:first-of-type,
+.atlas-header,
+h1:first-of-type {
+    display: none !important;
 }
 
 /* Menú EXACTO como tu referencia */
@@ -67,6 +66,10 @@ body {
     margin-bottom: 3rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #eaeaea;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
 .custom-header-menu {
@@ -90,7 +93,14 @@ body {
 
 .custom-header-menu a:first-child {
     color: #333;
-    font-weight: 600; /* Bold restaurado */
+    font-weight: 600;
+}
+
+/* Contenedor principal para centrado */
+body, .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 h2 {
@@ -100,6 +110,10 @@ h2 {
     color: #444;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
 p {
@@ -109,13 +123,18 @@ p {
     max-width: 900px;
     color: #555;
     line-height: 1.7;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
 .slides-section {
-    margin: 4rem 0;
+    margin: 4rem auto;
     height: 600px;
     position: relative;
     overflow: hidden;
+    max-width: 1000px;
 }
 
 .slider {
@@ -167,8 +186,9 @@ p {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    margin: 1.5rem auto 3rem auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .dot {
@@ -186,6 +206,7 @@ p {
 @media (max-width: 768px) {
     .slides-section {
         height: 400px;
+        margin: 3rem auto;
     }
     
     .slider-btn {
@@ -197,11 +218,16 @@ p {
         gap: 1.5rem;
         font-size: 0.9rem;
     }
+    
+    h2, p, .menu-container, .dots-container {
+        padding: 0 15px;
+    }
 }
 
 @media (max-width: 480px) {
     .slides-section {
         height: 300px;
+        margin: 2rem auto;
     }
     
     .slider-btn {
@@ -216,6 +242,10 @@ p {
     
     .next-btn {
         right: 10px;
+    }
+    
+    h2, p, .menu-container, .dots-container {
+        padding: 0 10px;
     }
 }
 </style>
