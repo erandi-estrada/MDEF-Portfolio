@@ -16,9 +16,40 @@
             background-color: #fefefe;
             color: #333;
             line-height: 1.6;
-            padding: 40px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        /* Menú igual a tu referencia */
+        .menu-container {
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .custom-header-menu {
+            display: flex;
+            gap: 2.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .custom-header-menu a {
+            color: #555;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
+        }
+
+        .custom-header-menu a:hover {
+            color: #1976d2;
+        }
+
+        .custom-header-menu a:first-child {
+            color: #333;
+            font-weight: 600;
         }
 
         h2 {
@@ -111,10 +142,6 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-            
             .slides-section {
                 height: 400px;
             }
@@ -122,6 +149,11 @@
             .slider-btn {
                 width: 40px;
                 height: 40px;
+            }
+            
+            .custom-header-menu {
+                gap: 1.5rem;
+                font-size: 0.9rem;
             }
         }
 
@@ -147,6 +179,15 @@
     </style>
 </head>
 <body>
+
+    <!-- Menú igual a tu referencia -->
+    <div class="menu-container">
+        <div class="custom-header-menu">
+            <a href="../..">MDEF</a>
+            <a href="https://eradesign.portfolio.site/" target="_blank" rel="noopener noreferrer">Projects</a>
+            <a href="../../about/me">About me</a>
+        </div>
+    </div>
 
     <h2>Short Proposal</h2>
     <p>This pictorial proposes an open visual exploration of multispecies justice, without fixing a single subject, scale, or outcome. Rather than presenting conclusions, it assembles images, textures, overlays, and partial texts to speculate on how non-human lives intersect with urban environments and human-centered systems. Inspired by visual essays the work treats images as the main thinking tool, layering, obscuring, and contrasting elements to surface relationships that are usually overlooked. The format remains fluid and modular, functioning as a provisional map of questions, observations, and possible directions, allowing the project to evolve as new species, sites, and perspectives emerge.</p>
