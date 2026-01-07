@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narrative I</title>
     <style>
         * {
             margin: 0;
@@ -18,6 +19,13 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        /* Ocultar cualquier header/título que aparezca antes del menú */
+        header:first-of-type,
+        .header:first-of-type,
+        h1:first-of-type {
+            display: none !important;
         }
 
         /* Menú igual a tu referencia */
@@ -179,7 +187,7 @@
 </head>
 <body>
 
-    <!-- Menú igual a tu referencia -->
+    <!-- Solo el menú -->
     <div class="menu-container">
         <div class="custom-header-menu">
             <a href="../..">MDEF</a>
@@ -191,7 +199,10 @@
     <h2>Short Proposal</h2>
     <p>This pictorial proposes an open visual exploration of multispecies justice, without fixing a single subject, scale, or outcome. Rather than presenting conclusions, it assembles images, textures, overlays, and partial texts to speculate on how non-human lives intersect with urban environments and human-centered systems. Inspired by visual essays the work treats images as the main thinking tool, layering, obscuring, and contrasting elements to surface relationships that are usually overlooked. The format remains fluid and modular, functioning as a provisional map of questions, observations, and possible directions, allowing the project to evolve as new species, sites, and perspectives emerge.</p>
 
-<div class="slides-section">
+    <h2>Draft Pictorial</h2>
+    <p>The current pictorial draft takes the form of a series of images arranged within a minimal and flexible layout, where visual material leads the narrative. Yellow and blue are used as provisional colors to differentiate images, textures, and visual layers, rather than as a fixed palette. At this stage, color operates as a placeholder for different material qualities, atmospheres, or sensory conditions, and is expected to shift as the project develops.</p>
+
+    <div class="slides-section">
         <div class="slider">
             <div class="slide">
                 <img src="../../images/pictorial1.jpg" alt="Pictorial 1">
@@ -224,9 +235,6 @@
         <!-- Los puntos se generan con JavaScript -->
     </div>
 
-    <h2>Draft Pictorial</h2>
-    <p>The current pictorial draft takes the form of a series of images arranged within a minimal and flexible layout, where visual material leads the narrative. Yellow and blue are used as provisional colors to differentiate images, textures, and visual layers, rather than as a fixed palette. At this stage, color operates as a placeholder for different material qualities, atmospheres, or sensory conditions, and is expected to shift as the project develops.</p>
-    
     <p>White space is intentionally present, creating pauses between images and text, and allowing each element to be read independently while still contributing to an overall flow. The emphasis remains on images as carriers of meaning, with text acting as a subtle guide rather than an explanation. This draft functions as an exploratory structure, testing rhythm, contrast, and visual hierarchy, rather than a finalized composition.</p>
 
     <script>
