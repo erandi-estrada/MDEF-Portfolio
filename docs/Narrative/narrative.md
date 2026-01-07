@@ -151,34 +151,34 @@
     <h2>Short Proposal</h2>
     <p>This pictorial proposes an open visual exploration of multispecies justice, without fixing a single subject, scale, or outcome. Rather than presenting conclusions, it assembles images, textures, overlays, and partial texts to speculate on how non-human lives intersect with urban environments and human-centered systems. Inspired by visual essays the work treats images as the main thinking tool, layering, obscuring, and contrasting elements to surface relationships that are usually overlooked. The format remains fluid and modular, functioning as a provisional map of questions, observations, and possible directions, allowing the project to evolve as new species, sites, and perspectives emerge.</p>
 
-    <div class="slides-section">
+<div class="slides-section">
         <div class="slider">
             <div class="slide">
-                <img src="images/pictorial1.png" alt="Pictorial 1">
+                <img src="images/pictorial1.jpg" alt="Pictorial 1">
             </div>
             <div class="slide">
-                <img src="images/pictorial2.png" alt="Pictorial 2">
+                <img src="images/pictorial2.jpg" alt="Pictorial 2">
             </div>
             <div class="slide">
-                <img src="images/pictorial3.png" alt="Pictorial 3">
+                <img src="images/pictorial3.jpg" alt="Pictorial 3">
             </div>
             <div class="slide">
-                <img src="images/pictorial4.png" alt="Pictorial 4">
+                <img src="images/pictorial4.jpg" alt="Pictorial 4">
             </div>
             <div class="slide">
-                <img src="images/pictorial5.png" alt="Pictorial 5">
+                <img src="images/pictorial5.jpg" alt="Pictorial 5">
             </div>
             <div class="slide">
-                <img src="images/pictorial6.png" alt="Pictorial 6">
+                <img src="images/pictorial6.jpg" alt="Pictorial 6">
             </div>
             <div class="slide">
-                <img src="images/pictorial7.png" alt="Pictorial 7">
+                <img src="images/pictorial7.jpg" alt="Pictorial 7">
             </div>
             <div class="slide">
-                <img src="images/pictorial8.png" alt="Pictorial 8">
+                <img src="images/pictorial8.jpg" alt="Pictorial 8">
             </div>
             <div class="slide">
-                <img src="images/pictorial9.png" alt="Pictorial 9">
+                <img src="images/pictorial9.jpg" alt="Pictorial 9">
             </div>
         </div>
         
