@@ -48,6 +48,13 @@ The current pictorial draft takes the form of a series of images arranged within
 White space is intentionally present, creating pauses between images and text, and allowing each element to be read independently while still contributing to an overall flow. The emphasis remains on images as carriers of meaning, with text acting as a subtle guide rather than an explanation. This draft functions as an exploratory structure, testing rhythm, contrast, and visual hierarchy, rather than a finalized composition.
 
 <style>
+    /* Ocultar el header superior con "Atlas" */
+header:first-of-type,
+.header:first-of-type,
+.atlas-header,
+h1:first-of-type {
+    display: none !important;
+}
 /* Slides section - EXACTAMENTE igual que en tu código de referencia */
 .slides-section {
     position: relative;
