@@ -48,6 +48,26 @@ The current pictorial draft takes the form of a series of images arranged within
 White space is intentionally present, creating pauses between images and text, and allowing each element to be read independently while still contributing to an overall flow. The emphasis remains on images as carriers of meaning, with text acting as a subtle guide rather than an explanation. This draft functions as an exploratory structure, testing rhythm, contrast, and visual hierarchy, rather than a finalized composition.
 
 <style>
+/* Ocultar el header con "Narrative" o cualquier título que aparezca antes */
+header:first-of-type,
+.header:first-of-type,
+.atlas-header,
+h1:first-of-type,
+.title:first-of-type {
+    display: none !important;
+}
+
+/* Contenedor para centrar el contenido como en tus otras páginas */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Menú igual a tu referencia */
 .menu-container {
     margin-bottom: 3rem;
     padding-bottom: 1.5rem;
@@ -78,11 +98,33 @@ White space is intentionally present, creating pauses between images and text, a
     font-weight: 600;
 }
 
+/* Estilos para los títulos (## se convierte en h2) */
+h2 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Párrafos */
+p {
+    font-weight: 350;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Slides */
 .slides-section {
-    margin: 4rem 0;
-    height: 600px;
+    margin: 3rem 0;
+    height: 500px;
     position: relative;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .slider {
@@ -134,7 +176,7 @@ White space is intentionally present, creating pauses between images and text, a
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 1.5rem 0 3rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 .dot {
@@ -151,7 +193,7 @@ White space is intentionally present, creating pauses between images and text, a
 
 @media (max-width: 768px) {
     .slides-section {
-        height: 400px;
+        height: 350px;
     }
     
     .slider-btn {
@@ -162,13 +204,12 @@ White space is intentionally present, creating pauses between images and text, a
 
 @media (max-width: 480px) {
     .slides-section {
-        height: 300px;
+        height: 250px;
     }
     
     .slider-btn {
         width: 35px;
         height: 35px;
-        font-size: 1rem;
     }
 }
 </style>
@@ -184,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
     const totalSlides = slides.length;
     
+    // Crear puntos
     for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -217,14 +259,14 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
     
+    // Auto slide cada 4 segundos
     let slideInterval = setInterval(nextSlide, 4000);
     
+    // Pausar al hacer hover
     const slidesSection = document.querySelector('.slides-section');
     slidesSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
     slidesSection.addEventListener('mouseleave', () => {
         slideInterval = setInterval(nextSlide, 4000);
     });
-    
-    goToSlide(0);
 });
 </script>
