@@ -197,9 +197,6 @@
                 <img src="../../images/pictorial1.jpg" alt="Pictorial 1">
             </div>
             <div class="slide">
-                <img src="../../images/pictorial2.jpg" alt="Pictorial 2">
-            </div>
-            <div class="slide">
                 <img src="../../images/pictorial3.jpg" alt="Pictorial 3">
             </div>
             <div class="slide">
@@ -210,9 +207,6 @@
             </div>
             <div class="slide">
                 <img src="../../images/pictorial6.jpg" alt="Pictorial 6">
-            </div>
-            <div class="slide">
-                <img src="../../images/pictorial7.jpg" alt="Pictorial 7">
             </div>
             <div class="slide">
                 <img src="../../images/pictorial8.jpg" alt="Pictorial 8">
