@@ -46,30 +46,10 @@
 <p>White space is intentionally present, creating pauses between images and text, and allowing each element to be read independently while still contributing to an overall flow. The emphasis remains on images as carriers of meaning, with text acting as a subtle guide rather than an explanation. This draft functions as an exploratory structure, testing rhythm, contrast, and visual hierarchy, rather than a finalized composition.</p>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-}
-
-/* Ocultar cualquier título que aparezca antes */
-header:first-of-type,
-.header:first-of-type,
-.atlas-header,
-h1:first-of-type {
-    display: none !important;
-}
-
-/* Menú EXACTO como tu referencia */
 .menu-container {
     margin-bottom: 3rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #eaeaea;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
 }
 
 .custom-header-menu {
@@ -96,13 +76,6 @@ h1:first-of-type {
     font-weight: 600;
 }
 
-/* Contenedor principal para centrado */
-body, .content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 h2 {
     font-weight: 400;
     font-size: 1.8rem;
@@ -110,10 +83,6 @@ h2 {
     color: #444;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
 }
 
 p {
@@ -123,18 +92,13 @@ p {
     max-width: 900px;
     color: #555;
     line-height: 1.7;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
 }
 
 .slides-section {
-    margin: 4rem auto;
+    margin: 4rem 0;
     height: 600px;
     position: relative;
     overflow: hidden;
-    max-width: 1000px;
 }
 
 .slider {
@@ -186,9 +150,7 @@ p {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 1.5rem auto 3rem auto;
-    max-width: 1200px;
-    padding: 0 20px;
+    margin: 1.5rem 0 3rem 0;
 }
 
 .dot {
@@ -206,7 +168,6 @@ p {
 @media (max-width: 768px) {
     .slides-section {
         height: 400px;
-        margin: 3rem auto;
     }
     
     .slider-btn {
@@ -218,16 +179,11 @@ p {
         gap: 1.5rem;
         font-size: 0.9rem;
     }
-    
-    h2, p, .menu-container, .dots-container {
-        padding: 0 15px;
-    }
 }
 
 @media (max-width: 480px) {
     .slides-section {
         height: 300px;
-        margin: 2rem auto;
     }
     
     .slider-btn {
@@ -243,10 +199,6 @@ p {
     .next-btn {
         right: 10px;
     }
-    
-    h2, p, .menu-container, .dots-container {
-        padding: 0 10px;
-    }
 }
 </style>
 
@@ -261,7 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
     const totalSlides = slides.length;
     
-    // Crear puntos
     for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -295,17 +246,14 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
     
-    // Auto slide cada 4 segundos
     let slideInterval = setInterval(nextSlide, 4000);
     
-    // Pausar al hacer hover
     const slidesSection = document.querySelector('.slides-section');
     slidesSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
     slidesSection.addEventListener('mouseleave', () => {
         slideInterval = setInterval(nextSlide, 4000);
     });
     
-    // Iniciar
     goToSlide(0);
 });
 </script>
