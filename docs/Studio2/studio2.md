@@ -207,6 +207,7 @@
         font-size: 20px;
         transform: translateY(-50%);
         user-select: none;
+        background: none;
         border: none;
         border-radius: 50%;
         transition: background-color 0.3s ease;
