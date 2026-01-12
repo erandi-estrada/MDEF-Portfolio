@@ -303,8 +303,7 @@
 
 <h2 id="5-errors">5 Errors<a class="headerlink" href="#5-errors" title="Permanent link">&para;</a></h2>
 <div class="slides-section">
-    <div class="slider">
-        <!-- Error 1 -->
+    <div class="slider errors-slider">
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">01</div>
@@ -313,7 +312,6 @@
             </div>
         </div>
 
-        <!-- Error 2 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">02</div>
@@ -322,7 +320,6 @@
             </div>
         </div>
 
-        <!-- Error 3 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">03</div>
@@ -331,7 +328,6 @@
             </div>
         </div>
 
-        <!-- Error 4 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">04</div>
@@ -340,7 +336,6 @@
             </div>
         </div>
 
-        <!-- Error 5 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">05</div>
@@ -350,66 +345,59 @@
         </div>
     </div>
 
-    <button class="slider-btn prev-btn">‹</button>
-    <button class="slider-btn next-btn">›</button>
+    <button class="slider-btn prev-btn" data-slider="errors">‹</button>
+    <button class="slider-btn next-btn" data-slider="errors">›</button>
+    <div class="dots-container errors-dots"></div>
 </div>
-
-<div class="dots-container"></div>
 
 <h2 id="5-fascinations">5 Fascinations<a class="headerlink" href="#5-fascinations" title="Permanent link">&para;</a></h2>
 <div class="slides-section">
-    <div class="slider">
-        <!-- Fascination 1 -->
+    <div class="slider fascinations-slider">
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">01</div>
                 <h3 class="slide-title">Invisible Forms of Violence</h3>
-                <p class="slide-text">Especially in urban environments, where systemic violence becomes embedded in infrastructure, policies, and everyday practices.</p>
+                <p class="slide-text">Especially in urban environments</p>
             </div>
         </div>
 
-        <!-- Fascination 2 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">02</div>
                 <h3 class="slide-title">Multispecies Justice</h3>
-                <p class="slide-text">Who is allowed to inhabit the city and who is excluded. Questioning anthropocentric urban planning and advocating for more-than-human coexistence.</p>
+                <p class="slide-text">Who is allowed to inhabit the city and who is excluded</p>
             </div>
         </div>
 
-        <!-- Fascination 3 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">03</div>
                 <h3 class="slide-title">Embodied Knowledge</h3>
-                <p class="slide-text">How bodies act as sensors and reveal what data by itself cannot do. The physical, affective, and situated ways of knowing that challenge purely rational approaches.</p>
+                <p class="slide-text">How bodies act as sensors and reveal what data by itself cannot do.</p>
             </div>
         </div>
 
-        <!-- Fascination 4 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">04</div>
                 <h3 class="slide-title">Immersive and Experiential Translation</h3>
-                <p class="slide-text">Translating abstract systems into lived experiences. Creating spaces, situations, or objects that make complex issues tangible and emotionally resonant.</p>
+                <p class="slide-text">Translating abstract systems into lived experiences</p>
             </div>
         </div>
 
-        <!-- Fascination 5 -->
         <div class="slide">
             <div class="slide-content">
                 <div class="slide-number">05</div>
                 <h3 class="slide-title">From Awareness to Action</h3>
-                <p class="slide-text">Connecting research insights to concrete shifts in perception, responsibility and behavior. Moving beyond critique to propose actionable alternatives.</p>
+                <p class="slide-text">Connecting research insights to concrete shifts in perception, responsability and behavior</p>
             </div>
         </div>
     </div>
 
-    <button class="slider-btn prev-btn">‹</button>
-    <button class="slider-btn next-btn">›</button>
+    <button class="slider-btn prev-btn" data-slider="fascinations">‹</button>
+    <button class="slider-btn next-btn" data-slider="fascinations">›</button>
+    <div class="dots-container fascinations-dots"></div>
 </div>
-
-<div class="dots-container"></div>
 
 <style>
     /* Ocultar el header superior con "Atlas" */
@@ -425,16 +413,16 @@
         font-size: 2rem;
         font-weight: 700;
         color: #2d3748;
-        margin: 3rem 0 2rem 0;
+        margin: 3rem 0 1.5rem 0;
         padding-bottom: 0.5rem;
         border-bottom: 3px solid #1976d2;
     }
 
-    /* Slides section - EXACTAMENTE igual que en tu código de referencia */
+    /* Slides section */
     .slides-section {
         position: relative;
         max-width: 100%;
-        margin: 2rem 0 3rem 0;
+        margin: 0 0 3rem 0;
         border-radius: 8px;
         overflow: hidden;
         padding: 2rem;
@@ -447,10 +435,10 @@
 
     .slide {
         display: none;
-        min-height: 300px;
+        min-height: 250px;
         background: white;
         border-radius: 12px;
-        padding: 3rem;
+        padding: 2.5rem;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         border: 1px solid #e2e8f0;
     }
@@ -473,9 +461,9 @@
 
     .slide-number {
         position: absolute;
-        top: -20px;
-        left: -30px;
-        font-size: 5rem;
+        top: -15px;
+        left: -25px;
+        font-size: 4rem;
         font-weight: 900;
         color: rgba(25, 118, 210, 0.15);
         line-height: 1;
@@ -483,38 +471,38 @@
     }
 
     .slide-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
         color: #2d3748;
-        margin: 0 0 1.5rem 0;
+        margin: 0 0 1rem 0;
         padding: 0 0 0.5rem 0;
         position: relative;
         z-index: 1;
     }
 
     .slide-text {
-        font-size: 1.1rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.6;
         color: #4a5568;
         margin: 0;
         position: relative;
         z-index: 1;
     }
 
-    /* Botones - EXACTAMENTE igual que en tu código */
+    /* Botones */
     .slider-btn {
         cursor: pointer;
         position: absolute;
         top: 50%;
-        padding: 20px;
+        padding: 15px;
         color: #333;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
         transform: translateY(-50%);
         user-select: none;
         background: rgba(255,255,255,0.8);
         border: none;
-        border-radius: 5px;
+        border-radius: 50%;
         transition: background-color 0.3s ease;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         z-index: 10;
@@ -527,26 +515,24 @@
 
     .prev-btn {
         left: 10px;
-        border-radius: 50%;
     }
 
     .next-btn {
         right: 10px;
-        border-radius: 50%;
     }
 
-    /* Dots - EXACTAMENTE igual que en tu código */
+    /* Dots */
     .dots-container {
         text-align: center;
-        padding: 20px;
-        margin-bottom: 2rem;
+        padding: 15px 0;
+        margin-top: 10px;
     }
 
     .slide-dot {
         cursor: pointer;
-        height: 12px;
-        width: 12px;
-        margin: 0 6px;
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;
@@ -558,55 +544,45 @@
         transform: scale(1.2);
     }
 
-    /* Estilos para el segundo carrusel */
-    .slides-section:nth-of-type(2) .slide {
-        background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-        border: 1px solid #e2e8f0;
-    }
-
-    .slides-section:nth-of-type(2) .slide-number {
-        color: rgba(156, 39, 176, 0.15);
-    }
-
-    .slides-section:nth-of-type(2) .slide-dot.active-dot, 
-    .slides-section:nth-of-type(2) .slide-dot:hover {
-        background-color: #9c27b0;
+    /* Estilos específicos para cada sección */
+    .slides-section:nth-of-type(2) {
+        margin-top: 3rem;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
         h2 {
             font-size: 1.5rem;
-            margin: 2rem 0 1.5rem 0;
+            margin: 2rem 0 1rem 0;
         }
 
         .slides-section {
-            padding: 1rem;
-            margin: 1.5rem 0 2rem 0;
+            padding: 1.5rem;
+            margin: 0 0 2rem 0;
         }
 
         .slide {
             padding: 2rem 1.5rem;
-            min-height: 250px;
+            min-height: 220px;
         }
 
         .slide-number {
-            font-size: 3.5rem;
-            top: -15px;
+            font-size: 3rem;
+            top: -10px;
             left: -15px;
         }
 
         .slide-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
         .slide-text {
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .slider-btn {
-            padding: 15px;
-            font-size: 20px;
+            padding: 12px;
+            font-size: 18px;
         }
     }
 
@@ -618,110 +594,146 @@
 
         .slide-number {
             font-size: 2.5rem;
-            top: -10px;
+            top: -8px;
             left: -10px;
         }
 
         .slide-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         .slide-text {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .dots-container {
-            padding: 15px;
+            padding: 10px 0;
+        }
+
+        .slide-dot {
+            height: 8px;
+            width: 8px;
+            margin: 0 4px;
         }
     }
 </style>
 
 <script>
-// JavaScript EXACTAMENTE igual que en tu código de referencia
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("slide-dot");
-
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-
-    // Ocultar todos los slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].className = slides[i].className.replace(" active-slide", "");
-    }
-
-    // Quitar clase active de todos los dots
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active-dot", "");
-    }
-
-    // Mostrar slide actual y activar su dot
-    if (slides[slideIndex-1]) {
-        slides[slideIndex-1].style.display = "block";
-        slides[slideIndex-1].className += " active-slide";
-    }
-    if (dots[slideIndex-1]) {
-        dots[slideIndex-1].className += " active-dot";
-    }
-}
-
-// Auto-advance cada 8 segundos - EXACTAMENTE igual
-setInterval(() => {
-    plusSlides(1);
-}, 8000);
-
-// Cuando cargue la página, crear los dots para cada slider
+// JavaScript para manejar múltiples sliders independientes
 document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('.slider');
+    // Configurar cada slider individualmente
+    const sliders = [
+        {
+            name: 'errors',
+            container: document.querySelector('.errors-slider'),
+            dotsContainer: document.querySelector('.errors-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        },
+        {
+            name: 'fascinations',
+            container: document.querySelector('.fascinations-slider'),
+            dotsContainer: document.querySelector('.fascinations-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        }
+    ];
 
+    // Inicializar cada slider
     sliders.forEach((slider, sliderIndex) => {
-        const slides = slider.querySelectorAll('.slide');
-        const dotsContainer = document.querySelectorAll('.dots-container')[sliderIndex];
+        if (!slider.container) return;
 
-        // Limpiar primero
-        dotsContainer.innerHTML = '';
+        // Obtener slides
+        slider.slides = Array.from(slider.container.querySelectorAll('.slide'));
 
-        // Crear un dot por cada slide
-        slides.forEach((slide, index) => {
+        // Crear dots
+        slider.slides.forEach((slide, index) => {
             const dot = document.createElement('span');
             dot.className = 'slide-dot';
-            if (index === 0) dot.className += ' active-dot';
-            dot.onclick = function() { 
-                // Resetear slideIndex para cada slider individualmente
-                slideIndex = index + 1;
-                currentSlide(slideIndex);
-            };
-            dotsContainer.appendChild(dot);
+            dot.dataset.index = index;
+            dot.addEventListener('click', () => {
+                goToSlide(slider, index);
+            });
+            slider.dotsContainer.appendChild(dot);
+            slider.dots.push(dot);
         });
 
-        // Configurar botones para este slider
-        const prevBtn = slider.parentElement.querySelector('.prev-btn');
-        const nextBtn = slider.parentElement.querySelector('.next-btn');
+        // Mostrar primera slide
+        showSlide(slider, 0);
 
-        prevBtn.addEventListener('click', function() {
-            plusSlides(-1);
+        // Configurar auto-advance
+        slider.interval = setInterval(() => {
+            nextSlide(slider);
+        }, 8000);
+
+        // Pausar auto-advance al interactuar
+        slider.container.addEventListener('mouseenter', () => {
+            clearInterval(slider.interval);
         });
 
-        nextBtn.addEventListener('click', function() {
-            plusSlides(1);
+        slider.container.addEventListener('mouseleave', () => {
+            slider.interval = setInterval(() => {
+                nextSlide(slider);
+            }, 8000);
         });
     });
 
-    // Mostrar el primer slide de cada slider
-    showSlides(slideIndex);
+    // Configurar botones de navegación
+    document.querySelectorAll('.slider-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const sliderName = this.dataset.slider;
+            const slider = sliders.find(s => s.name === sliderName);
+            const direction = this.classList.contains('prev-btn') ? -1 : 1;
+
+            if (direction === -1) {
+                prevSlide(slider);
+            } else {
+                nextSlide(slider);
+            }
+        });
+    });
+
+    // Funciones de navegación
+    function showSlide(slider, index) {
+        // Validar índice
+        if (index < 0) index = slider.slides.length - 1;
+        if (index >= slider.slides.length) index = 0;
+
+        // Ocultar todas las slides
+        slider.slides.forEach(slide => {
+            slide.style.display = 'none';
+            slide.classList.remove('active-slide');
+        });
+
+        // Remover active de todos los dots
+        slider.dots.forEach(dot => {
+            dot.classList.remove('active-dot');
+        });
+
+        // Mostrar slide actual
+        slider.slides[index].style.display = 'block';
+        slider.slides[index].classList.add('active-slide');
+        slider.dots[index].classList.add('active-dot');
+
+        // Actualizar índice actual
+        slider.currentSlide = index;
+    }
+
+    function nextSlide(slider) {
+        showSlide(slider, slider.currentSlide + 1);
+    }
+
+    function prevSlide(slider) {
+        showSlide(slider, slider.currentSlide - 1);
+    }
+
+    function goToSlide(slider, index) {
+        showSlide(slider, index);
+    }
 });
 </script>
                 
@@ -732,7 +744,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 12, 2026 14:53:49 UTC">January 12, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 12, 2026 15:03:10 UTC">January 12, 2026</span>
     
   </small>
 </div>
