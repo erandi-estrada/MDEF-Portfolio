@@ -8,7 +8,6 @@
 
 ## 5 Errors
 
-A reflection on the mistakes and learnings from the design process.
 
 <div class="slides-section">
     <div class="slider">
@@ -66,7 +65,6 @@ A reflection on the mistakes and learnings from the design process.
 
 ## 5 Fascinations
 
-The core themes and questions that continue to drive my research.
 
 <div class="slides-section">
     <div class="slider">
