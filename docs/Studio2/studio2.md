@@ -133,7 +133,7 @@
         border-radius: 8px;
         overflow: hidden;
         padding: 2rem;
-        background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%);
+        background: none;
     }
     
     .slider {
