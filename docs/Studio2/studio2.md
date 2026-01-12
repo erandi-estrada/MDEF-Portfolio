@@ -133,7 +133,7 @@
         border-radius: 8px;
         overflow: hidden;
         padding: 2rem;
-        background: none;
+        background: #fefaf0;
     }
     
     .slider {
