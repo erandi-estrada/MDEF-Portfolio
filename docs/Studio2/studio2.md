@@ -106,6 +106,62 @@
     <div class="dots-container fascinations-dots"></div>
 </div>
 
+## Problematizing Ethics
+
+<div class="slides-section">
+    <div class="slider ethics-slider">
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-number">01</div>
+                <h3 class="slide-title">Me — Researcher / Designer</h3>
+                <p class="slide-text"><strong>Ethical tension:</strong> Speaking about another species<br><br>
+                I approach non-human life with care and responsibility, avoiding romantic or anthropomorphic narratives. The project is grounded in scientific research and multispecies ethics, aiming to translate vulnerability without simplifying it.<br><br>
+                However, I still occupy a position of authority. I choose the species, decide what data matters, and translate non-human experiences through human-designed tools and languages. Even with ethical intentions, there is a risk of turning non-human suffering into a conceptual, visual, or aesthetic resource.<br><br>
+                <em>Where is the line between empathy and projection?<br>
+                Who has the right to speak for another species?</em></p>
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-number">02</div>
+                <h3 class="slide-title">My Community — Academic, Design, and Cultural Contexts</h3>
+                <p class="slide-text"><strong>Ethical tension:</strong> Awareness vs. responsibility<br><br>
+                The project resists superficial sustainability narratives by insisting on biological accuracy, long-term research, and embodied experience rather than symbolic gestures.<br><br>
+                Yet within academic, gallery, or design contexts, the work may still be consumed as an aesthetic or intellectual experience. Audiences can feel informed or emotionally moved without being implicated or required to act. In this way, ecological concern risks becoming something to observe rather than something that demands responsibility.<br><br>
+                <em>Does the project challenge its audience, or does it offer moral comfort?</em></p>
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-number">03</div>
+                <h3 class="slide-title">Society — Urban, Political, and Technological Systems</h3>
+                <p class="slide-text"><strong>Ethical tension:</strong> Visibility without accountability<br><br>
+                The project exposes how cities through infrastructure, planning, pollution, and everyday human habits systematically harm non-human life. It frames the urban environment as a multispecies system shaped by political and design decisions.<br><br>
+                At the same time, by translating harm through sensory and experiential formats, responsibility can become diffuse. Structural violence risks being perceived as an abstract condition rather than the result of specific policies, actors, and choices.<br><br>
+                <em>Making harm visible does not automatically make anyone accountable.</em></p>
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-number">04</div>
+                <h3 class="slide-title">Planet — Ecological and Multispecies Scale</h3>
+                <p class="slide-text"><strong>Ethical tension:</strong> Care vs. participation in extractive systems<br><br>
+                The project is guided by a care-based ethics that questions human dominance and seeks to design with ecological systems rather than over them.<br><br>
+                Still, any intervention, technological, material, or computational, relies on extraction, energy use, and global infrastructures. Even critical or ethical projects participate, however minimally, in the systems they question.<br><br>
+                <em>Can a project that exposes ecological violence avoid reproducing it?<br>
+                Or is ethical practice always partial and compromised?</em></p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="slider-btn prev-btn" data-slider="ethics">‹</button>
+    <button class="slider-btn next-btn" data-slider="ethics">›</button>
+    <div class="dots-container ethics-dots"></div>
+</div>
+
 <style>
     /* Ocultar el header superior con "Atlas" */
     header:first-of-type,
@@ -343,6 +399,15 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'fascinations',
             container: document.querySelector('.fascinations-slider'),
             dotsContainer: document.querySelector('.fascinations-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        },
+        {
+            name: 'ethics',
+            container: document.querySelector('.ethics-slider'),
+            dotsContainer: document.querySelector('.ethics-dots'),
             currentSlide: 0,
             slides: [],
             dots: [],
