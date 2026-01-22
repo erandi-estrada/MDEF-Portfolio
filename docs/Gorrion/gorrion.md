@@ -26,8 +26,6 @@
                     <img src="../../Diagrama/1b.png" alt="Urban Attractors Details">
                 </div>
             </div>
-            <!-- Flecha hacia el centro -->
-            <div class="arrow arrow-1"></div>
         </div>
         
         <!-- Nodo 2 - Superior derecha -->
@@ -40,7 +38,6 @@
                     <img src="../../Diagrama/2b.png" alt="Dietary Poverty Details">
                 </div>
             </div>
-            <div class="arrow arrow-2"></div>
         </div>
         
         <!-- Nodo 3 - Inferior derecha -->
@@ -53,7 +50,6 @@
                     <img src="../../Diagrama/3b.png" alt="Chronic Stress Details">
                 </div>
             </div>
-            <div class="arrow arrow-3"></div>
         </div>
         
         <!-- Nodo 4 - Parte inferior -->
@@ -66,7 +62,6 @@
                     <img src="../../Diagrama/4b.png" alt="Foraging Behavior Details">
                 </div>
             </div>
-            <div class="arrow arrow-4"></div>
         </div>
         
         <!-- Nodo 5 - Inferior izquierda -->
@@ -79,7 +74,6 @@
                     <img src="../../Diagrama/5b.png" alt="Density Waste Details">
                 </div>
             </div>
-            <div class="arrow arrow-5"></div>
         </div>
         
         <!-- Nodo 6 - Superior izquierda -->
@@ -92,7 +86,6 @@
                     <img src="../../Diagrama/6b.png" alt="Health Decline Details">
                 </div>
             </div>
-            <div class="arrow arrow-6"></div>
         </div>
     </div>
     
@@ -127,14 +120,14 @@
     
     /* Estilos del diagrama */
     .diagram-container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 2rem auto;
         padding: 0 1rem;
         position: relative;
     }
     
     .diagram-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         font-weight: 700;
         color: #2d3748;
         text-align: center;
@@ -142,7 +135,7 @@
     }
     
     .diagram-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: #4a5568;
         text-align: center;
         margin-bottom: 3rem;
@@ -152,8 +145,8 @@
     /* Contenedor hexagonal */
     .hexagon-diagram {
         position: relative;
-        width: 800px;
-        height: 700px;
+        width: 1000px;
+        height: 900px;
         margin: 0 auto;
     }
     
@@ -163,8 +156,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         z-index: 1;
     }
     
@@ -174,14 +167,14 @@
         object-fit: contain;
         border-radius: 50%;
         box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        border: 3px solid #1976d2;
+        border: 4px solid #1976d2;
     }
     
-    /* Nodos del hexágono */
+    /* Nodos del hexágono - CÍRCULOS GRANDES */
     .hexagon-node {
         position: absolute;
-        width: 140px;
-        height: 140px;
+        width: 220px;  /* Más grande para imágenes de 1200px */
+        height: 220px;
         cursor: pointer;
         transition: transform 0.3s ease;
         z-index: 2;
@@ -192,14 +185,14 @@
     }
     
     /* Posiciones de los nodos en forma de hexágono */
-    .node-1 { top: 50px; left: 50%; transform: translateX(-50%); }
-    .node-2 { top: 150px; right: 200px; }
-    .node-3 { top: 350px; right: 150px; }
-    .node-4 { bottom: 50px; left: 50%; transform: translateX(-50%); }
-    .node-5 { top: 350px; left: 150px; }
-    .node-6 { top: 150px; left: 200px; }
+    .node-1 { top: 80px; left: 50%; transform: translateX(-50%); }
+    .node-2 { top: 200px; right: 220px; }
+    .node-3 { top: 450px; right: 180px; }
+    .node-4 { bottom: 80px; left: 50%; transform: translateX(-50%); }
+    .node-5 { top: 450px; left: 180px; }
+    .node-6 { top: 200px; left: 220px; }
     
-    /* Tarjeta que gira */
+    /* Tarjeta que gira en su mismo eje */
     .hexagon-card {
         width: 100%;
         height: 100%;
@@ -220,91 +213,34 @@
         backface-visibility: hidden;
         border-radius: 50%;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .card-front img, .card-back img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain; /* Cambiado de cover a contain para mostrar toda la imagen */
+        border-radius: 50%;
     }
     
     .card-back {
         transform: rotateY(180deg);
     }
     
-    /* Flechas hacia el centro */
-    .arrow {
-        position: absolute;
-        background: linear-gradient(to right, #1976d2, #42a5f5);
-        height: 3px;
-        z-index: 0;
-    }
-    
-    .arrow::after {
-        content: '';
-        position: absolute;
-        right: -10px;
-        top: -5px;
-        border-left: 10px solid #1976d2;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-    }
-    
-    /* Posiciones y ángulos de las flechas */
-    .arrow-1 {
-        width: 150px;
-        top: 140px;
-        left: 50%;
-        transform: translateX(-50%) rotate(180deg);
-    }
-    
-    .arrow-2 {
-        width: 170px;
-        top: 70px;
-        left: -60px;
-        transform: rotate(120deg);
-    }
-    
-    .arrow-3 {
-        width: 170px;
-        top: 100px;
-        left: -140px;
-        transform: rotate(60deg);
-    }
-    
-    .arrow-4 {
-        width: 150px;
-        bottom: 140px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .arrow-5 {
-        width: 170px;
-        bottom: 70px;
-        right: -60px;
-        transform: rotate(240deg);
-    }
-    
-    .arrow-6 {
-        width: 170px;
-        bottom: 100px;
-        right: -140px;
-        transform: rotate(300deg);
-    }
-    
     /* Panel de información */
     .info-panel {
         position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 400px;
-        max-height: 500px;
+        bottom: 40px;
+        right: 40px;
+        width: 450px;
+        max-height: 600px;
         background: white;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 12px 50px rgba(0,0,0,0.2);
+        border: 2px solid #e2e8f0;
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.4s ease, transform 0.4s ease;
@@ -318,44 +254,112 @@
     }
     
     .info-title {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: 700;
         color: #2d3748;
-        margin-bottom: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid #1976d2;
+        margin-bottom: 1.2rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 3px solid #1976d2;
     }
     
     .info-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 600;
         color: #1976d2;
-        margin: 1rem 0 0.5rem 0;
+        margin: 1.2rem 0 0.6rem 0;
     }
     
     .info-content p {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 1rem;
+        line-height: 1.6;
         color: #4a5568;
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
     }
     
     .info-note {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         font-style: italic;
         color: #718096;
-        padding: 1rem;
+        padding: 1.2rem;
         background: #f7fafc;
-        border-left: 3px solid #e2e8f0;
-        margin-top: 1rem;
-        border-radius: 4px;
+        border-left: 4px solid #e2e8f0;
+        margin-top: 1.5rem;
+        border-radius: 8px;
+        line-height: 1.5;
     }
     
     /* Responsive */
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         .hexagon-diagram {
-            width: 600px;
-            height: 550px;
+            width: 800px;
+            height: 750px;
+        }
+        
+        .center-image {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .hexagon-node {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .node-1 { top: 60px; }
+        .node-2 { top: 160px; right: 180px; }
+        .node-3 { top: 380px; right: 150px; }
+        .node-4 { bottom: 60px; }
+        .node-5 { top: 380px; left: 150px; }
+        .node-6 { top: 160px; left: 180px; }
+        
+        .info-panel {
+            width: 400px;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .hexagon-diagram {
+            width: 650px;
+            height: 650px;
+        }
+        
+        .center-image {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .hexagon-node {
+            width: 160px;
+            height: 160px;
+        }
+        
+        .node-1 { top: 50px; }
+        .node-2 { top: 140px; right: 140px; }
+        .node-3 { top: 330px; right: 110px; }
+        .node-4 { bottom: 50px; }
+        .node-5 { top: 330px; left: 110px; }
+        .node-6 { top: 140px; left: 140px; }
+        
+        .diagram-title {
+            font-size: 2.2rem;
+        }
+        
+        .diagram-subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .info-panel {
+            width: 350px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .hexagon-diagram {
+            width: 100%;
+            height: 600px;
+            max-width: 550px;
         }
         
         .center-image {
@@ -364,105 +368,67 @@
         }
         
         .hexagon-node {
-            width: 110px;
-            height: 110px;
+            width: 140px;
+            height: 140px;
         }
         
         .node-1 { top: 40px; }
-        .node-2 { top: 120px; right: 150px; }
-        .node-3 { top: 280px; right: 120px; }
+        .node-2 { top: 120px; right: 110px; }
+        .node-3 { top: 280px; right: 80px; }
         .node-4 { bottom: 40px; }
-        .node-5 { top: 280px; left: 120px; }
-        .node-6 { top: 120px; left: 150px; }
-        
-        .arrow-1 { width: 120px; top: 110px; }
-        .arrow-2 { width: 140px; top: 50px; left: -50px; }
-        .arrow-3 { width: 140px; top: 80px; left: -110px; }
-        .arrow-4 { width: 120px; bottom: 110px; }
-        .arrow-5 { width: 140px; bottom: 50px; right: -50px; }
-        .arrow-6 { width: 140px; bottom: 80px; right: -110px; }
+        .node-5 { top: 280px; left: 80px; }
+        .node-6 { top: 120px; left: 110px; }
         
         .info-panel {
-            width: 350px;
-            right: 20px;
-            bottom: 20px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .hexagon-diagram {
+            position: static;
             width: 100%;
-            height: 500px;
-            max-width: 500px;
-        }
-        
-        .center-image {
-            width: 120px;
-            height: 120px;
-        }
-        
-        .hexagon-node {
-            width: 90px;
-            height: 90px;
-        }
-        
-        .node-1 { top: 30px; }
-        .node-2 { top: 100px; right: 100px; }
-        .node-3 { top: 220px; right: 80px; }
-        .node-4 { bottom: 30px; }
-        .node-5 { top: 220px; left: 80px; }
-        .node-6 { top: 100px; left: 100px; }
-        
-        .arrow {
-            display: none; /* Ocultar flechas en móvil para simplificar */
+            max-width: 550px;
+            margin: 2.5rem auto 0;
+            opacity: 1;
+            transform: none;
         }
         
         .diagram-title {
             font-size: 2rem;
         }
-        
-        .diagram-subtitle {
-            font-size: 1rem;
-        }
-        
-        .info-panel {
-            position: static;
-            width: 100%;
-            max-width: 500px;
-            margin: 2rem auto 0;
-            opacity: 1;
-            transform: none;
-        }
     }
     
     @media (max-width: 480px) {
         .hexagon-diagram {
-            height: 400px;
+            height: 500px;
         }
         
         .center-image {
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 130px;
         }
         
         .hexagon-node {
-            width: 70px;
-            height: 70px;
+            width: 120px;
+            height: 120px;
         }
         
-        .node-1 { top: 20px; }
-        .node-2 { top: 80px; right: 70px; }
-        .node-3 { top: 180px; right: 50px; }
-        .node-4 { bottom: 20px; }
-        .node-5 { top: 180px; left: 50px; }
-        .node-6 { top: 80px; left: 70px; }
+        .node-1 { top: 30px; }
+        .node-2 { top: 100px; right: 80px; }
+        .node-3 { top: 240px; right: 60px; }
+        .node-4 { bottom: 30px; }
+        .node-5 { top: 240px; left: 60px; }
+        .node-6 { top: 100px; left: 80px; }
         
         .info-title {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
         
         .info-content p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+        }
+        
+        .diagram-title {
+            font-size: 1.8rem;
+        }
+        
+        .diagram-subtitle {
+            font-size: 1.1rem;
         }
     }
 </style>
@@ -474,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoTitle = infoPanel.querySelector('.info-title');
     const infoContent = infoPanel.querySelector('.info-content');
     
-    // Datos para cada nodo
+    // Datos para cada nodo CON TÍTULOS EN EL PANEL
     const nodeData = {
         1: {
             title: "Urban Attractors and Constraints",
