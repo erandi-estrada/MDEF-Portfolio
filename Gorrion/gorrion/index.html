@@ -266,61 +266,42 @@
         <!-- Imagen central grande -->
         <div class="center-image">
             <img src="../../Diagrama/Centro.png" alt="Urban Sparrow Center">
-            <div class="center-glow"></div>
         </div>
 
         <!-- Nodo 1 - Parte superior -->
         <div class="hexagon-node node-1" data-node="1">
-            <div class="node-content">
-                <img src="../../Diagrama/1.png" alt="Urban Attractors and Constraints">
-                <div class="node-glow" style="background: linear-gradient(45deg, #1976d2, #42a5f5);"></div>
-            </div>
-            <div class="node-pulse"></div>
+            <img src="../../Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
+            <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
         </div>
 
         <!-- Nodo 2 - Superior derecha -->
         <div class="hexagon-node node-2" data-node="2">
-            <div class="node-content">
-                <img src="../../Diagrama/2.png" alt="Dietary Poverty & Toxic Intake">
-                <div class="node-glow" style="background: linear-gradient(45deg, #388e3c, #66bb6a);"></div>
-            </div>
-            <div class="node-pulse"></div>
+            <img src="../../Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
+            <div class="node-glow" style="background: radial-gradient(circle, rgba(56, 142, 60, 0.4) 0%, transparent 70%);"></div>
         </div>
 
         <!-- Nodo 3 - Inferior derecha -->
         <div class="hexagon-node node-3" data-node="3">
-            <div class="node-content">
-                <img src="../../Diagrama/3.png" alt="Chronic Stress and Energetic Drain">
-                <div class="node-glow" style="background: linear-gradient(45deg, #f57c00, #ffb74d);"></div>
-            </div>
-            <div class="node-pulse"></div>
+            <img src="../../Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
+            <div class="node-glow" style="background: radial-gradient(circle, rgba(245, 124, 0, 0.4) 0%, transparent 70%);"></div>
         </div>
 
         <!-- Nodo 4 - Parte inferior -->
         <div class="hexagon-node node-4" data-node="4">
-            <div class="node-content">
-                <img src="../../Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making">
-                <div class="node-glow" style="background: linear-gradient(45deg, #d32f2f, #ef5350);"></div>
-            </div>
-            <div class="node-pulse"></div>
+            <img src="../../Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
+            <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
         </div>
 
         <!-- Nodo 5 - Inferior izquierda -->
         <div class="hexagon-node node-5" data-node="5">
-            <div class="node-content">
-                <img src="../../Diagrama/5.png" alt="Density, Waste, and Compounding Exposure">
-                <div class="node-glow" style="background: linear-gradient(45deg, #7b1fa2, #ba68c8);"></div>
-            </div>
-            <div class="node-pulse"></div>
+            <img src="../../Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
+            <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
         </div>
 
         <!-- Nodo 6 - Superior izquierda -->
         <div class="hexagon-node node-6" data-node="6">
-            <div class="node-content">
-                <img src="../../Diagrama/6.png" alt="Health Decline Without Escape">
-                <div class="node-glow" style="background: linear-gradient(45deg, #00796b, #4db6ac);"></div>
-            </div>
-            <div class="node-pulse"></div>
+            <img src="../../Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
+            <div class="node-glow" style="background: radial-gradient(circle, rgba(0, 121, 107, 0.4) 0%, transparent 70%);"></div>
         </div>
     </div>
 
@@ -356,35 +337,33 @@
         display: none !important;
     }
 
-    /* Estilos del diagrama */
+    /* SIN FONDO - Usa el fondo por defecto de tu código */
     .diagram-container {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         position: relative;
-        overflow: hidden;
+        padding: 2rem 0;
     }
 
-    /* Contenedor hexagonal */
+    /* Contenedor hexagonal - MUY GRANDE */
     .hexagon-diagram {
         position: relative;
-        width: 1000px;
-        height: 900px;
+        width: 1400px;
+        height: 1200px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    /* Imagen central - LA MÁS GRANDE */
+    /* Imagen central - GRANDE */
     .center-image {
         position: absolute;
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
         z-index: 10;
-        animation: float 6s ease-in-out infinite;
     }
 
     .center-image img {
@@ -393,123 +372,101 @@
         object-fit: contain;
         border-radius: 50%;
         border: 4px solid #1976d2;
-        box-shadow: 
-            0 0 30px rgba(25, 118, 210, 0.3),
-            0 0 60px rgba(25, 118, 210, 0.2),
-            0 0 90px rgba(25, 118, 210, 0.1);
+        filter: drop-shadow(0 10px 20px rgba(25, 118, 210, 0.3));
     }
 
-    .center-glow {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: radial-gradient(circle, rgba(25, 118, 210, 0.15) 0%, transparent 70%);
-        border-radius: 50%;
-        z-index: 9;
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    /* Nodos del hexágono */
+    /* Nodos - MUY GRANDES Y SON LAS IMÁGENES DIRECTAMENTE */
     .hexagon-node {
         position: absolute;
-        width: 180px;
-        height: 180px;
+        width: 260px;  /* Tamaño grande */
+        height: 260px;
         cursor: pointer;
         z-index: 20;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
-    }
-
-    .hexagon-node:hover {
-        transform: scale(1.15) translateZ(0);
-        filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
-        z-index: 30;
-    }
-
-    .node-content {
-        width: 100%;
-        height: 100%;
-        position: relative;
         border-radius: 50%;
-        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .node-content img {
-        width: 90%;
-        height: 90%;
+    /* CORREGIDO: Los nodos de arriba y abajo no se mueven */
+    .hexagon-node:hover {
+        transform: scale(1.2); /* Solo crece en su lugar */
+        z-index: 30;
+    }
+
+    /* Excepción para nodos centrados */
+    .node-1:hover, .node-4:hover {
+        transform: scale(1.2) translateX(-50%); /* Mantiene posición centrada */
+    }
+
+    .node-img {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         border-radius: 50%;
         position: relative;
         z-index: 2;
+        border: 3px solid;
         transition: transform 0.3s ease;
     }
 
-    .hexagon-node:hover .node-content img {
-        transform: scale(1.05);
-    }
+    /* Bordes de colores para cada nodo */
+    .node-1 .node-img { border-color: #1976d2; }
+    .node-2 .node-img { border-color: #388e3c; }
+    .node-3 .node-img { border-color: #f57c00; }
+    .node-4 .node-img { border-color: #d32f2f; }
+    .node-5 .node-img { border-color: #7b1fa2; }
+    .node-6 .node-img { border-color: #00796b; }
 
     .node-glow {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 120%;
+        height: 120%;
         border-radius: 50%;
-        opacity: 0.3;
         z-index: 1;
-        filter: blur(10px);
-        transition: opacity 0.3s ease;
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
     }
 
     .hexagon-node:hover .node-glow {
-        opacity: 0.6;
+        opacity: 1;
+        transform: scale(1.1);
         filter: blur(15px);
     }
 
-    .node-pulse {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        z-index: 0;
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-
-    .hexagon-node:hover .node-pulse {
-        animation: pulse 2s ease-in-out infinite;
-    }
-
-    /* Posiciones de los nodos en forma de hexágono */
+    /* POSICIONES - HEXÁGONO PERFECTO */
     .node-1 { 
-        top: 50px; 
+        top: 60px; 
         left: 50%; 
         transform: translateX(-50%);
     }
+
     .node-2 { 
-        top: 180px; 
-        right: 250px; 
+        top: 240px; 
+        right: 300px; 
     }
+
     .node-3 { 
-        top: 450px; 
-        right: 200px; 
+        top: 520px; 
+        right: 240px; 
     }
+
     .node-4 { 
-        bottom: 50px; 
+        bottom: 60px; 
         left: 50%; 
         transform: translateX(-50%);
     }
+
     .node-5 { 
-        top: 450px; 
-        left: 200px; 
+        top: 520px; 
+        left: 240px; 
     }
+
     .node-6 { 
-        top: 180px; 
-        left: 250px; 
+        top: 240px; 
+        left: 300px; 
     }
 
     /* Panel de información */
@@ -524,7 +481,6 @@
         align-items: center;
         justify-content: center;
         z-index: 1000;
-        backdrop-filter: blur(10px);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -532,20 +488,17 @@
     .info-overlay.active {
         display: flex;
         opacity: 1;
-        animation: fadeIn 0.3s ease;
     }
 
     .info-panel {
         background: white;
         border-radius: 20px;
         width: 90%;
-        max-width: 700px;
-        max-height: 80vh;
-        padding: 2.5rem;
+        max-width: 800px;
+        max-height: 85vh;
+        padding: 3rem;
         position: relative;
-        box-shadow: 
-            0 20px 60px rgba(0, 0, 0, 0.3),
-            0 0 0 1px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
         transform: translateY(20px);
         transition: transform 0.3s ease;
         overflow-y: auto;
@@ -561,16 +514,17 @@
         right: 1.5rem;
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #666;
         cursor: pointer;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
+        line-height: 1;
     }
 
     .close-btn:hover {
@@ -580,7 +534,7 @@
     }
 
     .info-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         color: #2d3748;
         margin-bottom: 1.5rem;
@@ -589,10 +543,10 @@
     }
 
     .info-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #1976d2;
-        margin: 1.8rem 0 0.8rem 0;
+        margin: 2rem 0 1rem 0;
         padding-top: 1.5rem;
         border-top: 1px solid #e2e8f0;
     }
@@ -601,62 +555,59 @@
         margin-top: 1rem;
         padding-top: 0;
         border-top: none;
+        color: #2d3748;
+        font-size: 1.8rem;
+        font-weight: 700;
     }
 
     .info-content p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.7;
         color: #4a5568;
         margin-bottom: 1.5rem;
     }
 
     .info-note {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-style: italic;
         color: #718096;
-        padding: 1.5rem;
+        padding: 1.8rem;
         background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
         border-left: 4px solid #e2e8f0;
-        margin-top: 2rem;
-        border-radius: 10px;
+        margin-top: 2.5rem;
+        border-radius: 12px;
         line-height: 1.6;
     }
 
-    /* Animaciones */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-15px);
-        }
-    }
-
-    @keyframes pulse {
-        0%, 100% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0.5;
-        }
-        50% {
-            transform: translate(-50%, -50%) scale(1.1);
-            opacity: 0.3;
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
     /* Responsive */
-    @media (max-width: 1200px) {
+    @media (max-width: 1600px) {
         .hexagon-diagram {
-            width: 850px;
-            height: 750px;
+            width: 1200px;
+            height: 1000px;
+        }
+
+        .center-image {
+            width: 350px;
+            height: 350px;
+        }
+
+        .hexagon-node {
+            width: 220px;
+            height: 220px;
+        }
+
+        .node-1 { top: 50px; }
+        .node-2 { top: 200px; right: 260px; }
+        .node-3 { top: 450px; right: 210px; }
+        .node-4 { bottom: 50px; }
+        .node-5 { top: 450px; left: 210px; }
+        .node-6 { top: 200px; left: 260px; }
+    }
+
+    @media (max-width: 1300px) {
+        .hexagon-diagram {
+            width: 1000px;
+            height: 900px;
         }
 
         .center-image {
@@ -664,9 +615,52 @@
             height: 300px;
         }
 
-        .center-glow {
-            width: 350px;
-            height: 350px;
+        .hexagon-node {
+            width: 200px;
+            height: 200px;
+        }
+
+        .node-1 { top: 40px; }
+        .node-2 { top: 180px; right: 220px; }
+        .node-3 { top: 400px; right: 180px; }
+        .node-4 { bottom: 40px; }
+        .node-5 { top: 400px; left: 180px; }
+        .node-6 { top: 180px; left: 220px; }
+    }
+
+    @media (max-width: 1100px) {
+        .hexagon-diagram {
+            width: 850px;
+            height: 800px;
+        }
+
+        .center-image {
+            width: 280px;
+            height: 280px;
+        }
+
+        .hexagon-node {
+            width: 180px;
+            height: 180px;
+        }
+
+        .node-1 { top: 35px; }
+        .node-2 { top: 160px; right: 190px; }
+        .node-3 { top: 360px; right: 150px; }
+        .node-4 { bottom: 35px; }
+        .node-5 { top: 360px; left: 150px; }
+        .node-6 { top: 160px; left: 190px; }
+    }
+
+    @media (max-width: 900px) {
+        .hexagon-diagram {
+            width: 700px;
+            height: 700px;
+        }
+
+        .center-image {
+            width: 240px;
+            height: 240px;
         }
 
         .hexagon-node {
@@ -674,28 +668,28 @@
             height: 160px;
         }
 
-        .node-1 { top: 40px; }
-        .node-2 { top: 150px; right: 210px; }
-        .node-3 { top: 380px; right: 170px; }
-        .node-4 { bottom: 40px; }
-        .node-5 { top: 380px; left: 170px; }
-        .node-6 { top: 150px; left: 210px; }
+        .node-1 { top: 30px; }
+        .node-2 { top: 140px; right: 150px; }
+        .node-3 { top: 320px; right: 120px; }
+        .node-4 { bottom: 30px; }
+        .node-5 { top: 320px; left: 120px; }
+        .node-6 { top: 140px; left: 150px; }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
+        .diagram-container {
+            min-height: 90vh;
+        }
+
         .hexagon-diagram {
-            width: 700px;
+            width: 100%;
             height: 650px;
+            max-width: 600px;
         }
 
         .center-image {
-            width: 250px;
-            height: 250px;
-        }
-
-        .center-glow {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
         }
 
         .hexagon-node {
@@ -703,47 +697,12 @@
             height: 140px;
         }
 
-        .node-1 { top: 35px; }
-        .node-2 { top: 130px; right: 170px; }
-        .node-3 { top: 330px; right: 140px; }
-        .node-4 { bottom: 35px; }
-        .node-5 { top: 330px; left: 140px; }
-        .node-6 { top: 130px; left: 170px; }
-    }
-
-    @media (max-width: 768px) {
-        .diagram-container {
-            height: 100vh;
-            min-height: 800px;
-        }
-
-        .hexagon-diagram {
-            width: 100%;
-            height: 700px;
-            max-width: 600px;
-        }
-
-        .center-image {
-            width: 220px;
-            height: 220px;
-        }
-
-        .center-glow {
-            width: 260px;
-            height: 260px;
-        }
-
-        .hexagon-node {
-            width: 120px;
-            height: 120px;
-        }
-
-        .node-1 { top: 30px; }
-        .node-2 { top: 110px; right: 140px; }
-        .node-3 { top: 290px; right: 110px; }
-        .node-4 { bottom: 30px; }
-        .node-5 { top: 290px; left: 110px; }
-        .node-6 { top: 110px; left: 140px; }
+        .node-1 { top: 25px; }
+        .node-2 { top: 120px; right: 120px; }
+        .node-3 { top: 280px; right: 100px; }
+        .node-4 { bottom: 25px; }
+        .node-5 { top: 280px; left: 100px; }
+        .node-6 { top: 120px; left: 120px; }
 
         .info-panel {
             width: 95%;
@@ -752,57 +711,54 @@
         }
 
         .info-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
 
         .info-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
         }
 
         .info-content p {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
     }
 
     @media (max-width: 480px) {
         .hexagon-diagram {
-            height: 600px;
+            height: 550px;
         }
 
         .center-image {
-            width: 180px;
-            height: 180px;
-        }
-
-        .center-glow {
-            width: 220px;
-            height: 220px;
+            width: 160px;
+            height: 160px;
         }
 
         .hexagon-node {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
         }
 
-        .node-1 { top: 25px; }
-        .node-2 { top: 90px; right: 110px; }
-        .node-3 { top: 250px; right: 90px; }
-        .node-4 { bottom: 25px; }
-        .node-5 { top: 250px; left: 90px; }
-        .node-6 { top: 90px; left: 110px; }
+        .node-1 { top: 20px; }
+        .node-2 { top: 100px; right: 90px; }
+        .node-3 { top: 240px; right: 70px; }
+        .node-4 { bottom: 20px; }
+        .node-5 { top: 240px; left: 70px; }
+        .node-6 { top: 100px; left: 90px; }
 
         .info-panel {
             padding: 1.5rem;
         }
 
         .info-title {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
         }
 
         .close-btn {
             top: 1rem;
             right: 1rem;
-            font-size: 1.8rem;
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
         }
     }
 </style>
@@ -916,13 +872,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listeners para cada nodo - CLICK
     nodes.forEach(node => {
-        node.addEventListener('click', function() {
+        node.addEventListener('click', function(e) {
+            e.stopPropagation();
             const nodeId = this.dataset.node;
             const data = nodeData[nodeId];
 
             if (data) {
                 infoTitle.textContent = data.title;
-                let fullContent = `<div class="info-subtitle" style="margin-top: 0; padding-top: 0; border-top: none; color: #2d3748; font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem;">${data.subtitle}</div>`;
+                let fullContent = `<div class="info-subtitle" style="margin-top: 0; padding-top: 0; border-top: none; color: #2d3748; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem;">${data.subtitle}</div>`;
                 fullContent += data.content;
                 infoContent.innerHTML = fullContent;
                 infoOverlay.classList.add('active');
@@ -952,17 +909,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         }
     });
-
-    // Efecto hover mejorado
-    nodes.forEach(node => {
-        node.addEventListener('mouseenter', function() {
-            this.style.zIndex = '30';
-        });
-
-        node.addEventListener('mouseleave', function() {
-            this.style.zIndex = '20';
-        });
-    });
 });
 </script>
                 
@@ -973,7 +919,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 21:21:42 UTC">January 23, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 21:48:14 UTC">January 23, 2026</span>
     
   </small>
 </div>
