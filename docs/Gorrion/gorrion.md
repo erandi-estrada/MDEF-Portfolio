@@ -8,7 +8,7 @@
 
 <div class="diagram-container">
     <h1 class="diagram-title">House Sparrow Urban Trap</h1>
-    <p class="diagram-subtitle">Health Decline Without Escape</p>
+    <p class="diagram-subtitle">Urban Sparrow</p>
     
     <div class="hexagon-diagram">
         <!-- Imagen central fija -->
@@ -155,19 +155,19 @@
     /* Contenedor hexagonal - MÁS GRANDE Y ESPACIADO */
     .hexagon-diagram {
         position: relative;
-        width: 1200px;
-        height: 1100px;
+        width: 1300px;
+        height: 1200px;
         margin: 0 auto;
     }
     
-    /* Imagen central */
+    /* Imagen central - MÁS GRANDE PARA 1200px */
     .center-image {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 250px;
-        height: 250px;
+        width: 300px;  /* Más grande para imagen de 1200px */
+        height: 300px;
         z-index: 1;
     }
     
@@ -177,16 +177,16 @@
         object-fit: contain;
         border-radius: 50%;
         box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        border: 4px solid #1976d2;
+        border: 4px solid #1976d2;  /* Borde azul */
     }
     
     /* Nodos del hexágono - MÁS GRANDES Y ESPACIADOS */
     .hexagon-node {
         position: absolute;
-        width: 220px;
-        height: 220px;
+        width: 240px;  /* Más grande para imágenes de 1200px */
+        height: 240px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease;
         z-index: 2;
     }
     
@@ -196,33 +196,33 @@
     
     /* POSICIONES MÁS ESPACIADAS - HEXÁGONO MÁS GRANDE */
     .node-1 { 
-        top: 50px; 
+        top: 60px; 
         left: 50%; 
         transform: translateX(-50%);
     }
     .node-2 { 
-        top: 200px; 
-        right: 280px; 
+        top: 220px; 
+        right: 320px; 
     }
     .node-3 { 
-        top: 500px; 
-        right: 220px; 
+        top: 550px; 
+        right: 260px; 
     }
     .node-4 { 
-        bottom: 50px; 
+        bottom: 60px; 
         left: 50%; 
         transform: translateX(-50%);
     }
     .node-5 { 
-        top: 500px; 
-        left: 220px; 
+        top: 550px; 
+        left: 260px; 
     }
     .node-6 { 
-        top: 200px; 
-        left: 280px; 
+        top: 220px; 
+        left: 320px; 
     }
     
-    /* Tarjeta que gira - GIRAR EN SU EJE */
+    /* Tarjeta que gira - TODOS GIRAN */
     .hexagon-card {
         width: 100%;
         height: 100%;
@@ -248,12 +248,14 @@
         justify-content: center;
     }
     
-    /* IMÁGENES VISIBLES - CONTENEDOR MÁS PEQUEÑO PARA VER LAS IMÁGENES */
+    /* IMÁGENES CON BORDE AZUL */
     .card-front img, .card-back img {
-        width: 90%;
-        height: 90%;
+        width: 95%;
+        height: 95%;
         object-fit: contain;
         border-radius: 50%;
+        border: 2px solid #1976d2;  /* Borde azul pequeño */
+        box-sizing: border-box;
     }
     
     .card-back {
@@ -348,26 +350,66 @@
     /* Responsive */
     @media (max-width: 1400px) {
         .hexagon-diagram {
-            width: 1000px;
-            height: 900px;
+            width: 1100px;
+            height: 1000px;
         }
         
-        .node-1 { top: 40px; }
-        .node-2 { top: 170px; right: 230px; }
-        .node-3 { top: 420px; right: 180px; }
-        .node-4 { bottom: 40px; }
-        .node-5 { top: 420px; left: 180px; }
-        .node-6 { top: 170px; left: 230px; }
+        .center-image {
+            width: 260px;
+            height: 260px;
+        }
+        
+        .hexagon-node {
+            width: 210px;
+            height: 210px;
+        }
+        
+        .node-1 { top: 50px; }
+        .node-2 { top: 190px; right: 270px; }
+        .node-3 { top: 480px; right: 220px; }
+        .node-4 { bottom: 50px; }
+        .node-5 { top: 480px; left: 220px; }
+        .node-6 { top: 190px; left: 270px; }
         
         .info-panel {
             width: 450px;
         }
     }
     
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
         .hexagon-diagram {
-            width: 850px;
-            height: 800px;
+            width: 950px;
+            height: 900px;
+        }
+        
+        .center-image {
+            width: 230px;
+            height: 230px;
+        }
+        
+        .hexagon-node {
+            width: 190px;
+            height: 190px;
+        }
+        
+        .node-1 { top: 45px; }
+        .node-2 { top: 170px; right: 230px; }
+        .node-3 { top: 430px; right: 190px; }
+        .node-4 { bottom: 45px; }
+        .node-5 { top: 430px; left: 190px; }
+        .node-6 { top: 170px; left: 230px; }
+        
+        .info-panel {
+            width: 400px;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+    
+    @media (max-width: 1000px) {
+        .hexagon-diagram {
+            width: 800px;
+            height: 750px;
         }
         
         .center-image {
@@ -376,15 +418,15 @@
         }
         
         .hexagon-node {
-            width: 190px;
-            height: 190px;
+            width: 170px;
+            height: 170px;
         }
         
-        .node-1 { top: 35px; }
+        .node-1 { top: 40px; }
         .node-2 { top: 150px; right: 190px; }
-        .node-3 { top: 370px; right: 150px; }
-        .node-4 { bottom: 35px; }
-        .node-5 { top: 370px; left: 150px; }
+        .node-3 { top: 380px; right: 160px; }
+        .node-4 { bottom: 40px; }
+        .node-5 { top: 380px; left: 160px; }
         .node-6 { top: 150px; left: 190px; }
         
         .diagram-title {
@@ -394,15 +436,9 @@
         .diagram-subtitle {
             font-size: 1.2rem;
         }
-        
-        .info-panel {
-            width: 400px;
-            right: 30px;
-            bottom: 30px;
-        }
     }
     
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
         .hexagon-diagram {
             width: 700px;
             height: 650px;
@@ -414,16 +450,16 @@
         }
         
         .hexagon-node {
-            width: 170px;
-            height: 170px;
+            width: 150px;
+            height: 150px;
         }
         
-        .node-1 { top: 30px; }
-        .node-2 { top: 130px; right: 150px; }
-        .node-3 { top: 310px; right: 120px; }
-        .node-4 { bottom: 30px; }
-        .node-5 { top: 310px; left: 120px; }
-        .node-6 { top: 130px; left: 150px; }
+        .node-1 { top: 35px; }
+        .node-2 { top: 130px; right: 160px; }
+        .node-3 { top: 330px; right: 130px; }
+        .node-4 { bottom: 35px; }
+        .node-5 { top: 330px; left: 130px; }
+        .node-6 { top: 130px; left: 160px; }
         
         .info-panel {
             width: 380px;
@@ -433,38 +469,38 @@
     @media (max-width: 768px) {
         .hexagon-diagram {
             width: 100%;
-            height: 600px;
-            max-width: 600px;
+            height: 650px;
+            max-width: 650px;
         }
         
         .center-image {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
         }
         
         .hexagon-node {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
         }
         
-        .node-1 { top: 25px; }
-        .node-2 { top: 110px; right: 120px; }
-        .node-3 { top: 270px; right: 90px; }
-        .node-4 { bottom: 25px; }
-        .node-5 { top: 270px; left: 90px; }
-        .node-6 { top: 110px; left: 120px; }
+        .node-1 { top: 30px; }
+        .node-2 { top: 120px; right: 140px; }
+        .node-3 { top: 300px; right: 110px; }
+        .node-4 { bottom: 30px; }
+        .node-5 { top: 300px; left: 110px; }
+        .node-6 { top: 120px; left: 140px; }
         
         .info-panel {
             position: static;
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
             margin: 3rem auto 0;
             opacity: 1;
             transform: none;
         }
         
         .diagram-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
         
         .diagram-subtitle {
@@ -474,29 +510,29 @@
     
     @media (max-width: 480px) {
         .hexagon-diagram {
-            height: 500px;
+            height: 550px;
         }
         
         .center-image {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
         }
         
         .hexagon-node {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
         }
         
-        .node-1 { top: 20px; }
-        .node-2 { top: 90px; right: 90px; }
-        .node-3 { top: 220px; right: 70px; }
-        .node-4 { bottom: 20px; }
-        .node-5 { top: 220px; left: 70px; }
-        .node-6 { top: 90px; left: 90px; }
+        .node-1 { top: 25px; }
+        .node-2 { top: 100px; right: 100px; }
+        .node-3 { top: 250px; right: 80px; }
+        .node-4 { bottom: 25px; }
+        .node-5 { top: 250px; left: 80px; }
+        .node-6 { top: 100px; left: 100px; }
         
         .card-front img, .card-back img {
-            width: 85%;
-            height: 85%;
+            width: 90%;
+            height: 90%;
         }
         
         .info-title {
@@ -524,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoTitle = infoPanel.querySelector('.info-title');
     const infoContent = infoPanel.querySelector('.info-content');
     
-    // Datos para cada nodo CORREGIDOS
+    // Datos para cada nodo
     const nodeData = {
         1: {
             title: "House Sparrow",
@@ -676,7 +712,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Event listeners para cada nodo
+    // Event listeners para cada nodo - TODOS GIRAN
     nodes.forEach(node => {
         const nodeId = node.dataset.node;
         
@@ -704,7 +740,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Para dispositivos táctiles
+    // Para dispositivos táctiles - TODOS GIRAN
     nodes.forEach(node => {
         node.addEventListener('touchstart', function(e) {
             e.preventDefault();
@@ -719,6 +755,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 infoPanel.classList.toggle('active');
             }
         });
+    });
+    
+    // Forzar que todos los nodos tengan el efecto hover activo
+    nodes.forEach(node => {
+        // Esto asegura que todos los nodos respondan al hover
+        node.style.pointerEvents = 'auto';
     });
 });
 </script>
