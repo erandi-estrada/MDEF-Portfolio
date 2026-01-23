@@ -345,8 +345,18 @@
     <!-- Panel de información que aparece al pasar el cursor -->
     <div class="info-panel">
         <div class="info-content">
-            <h3 class="info-title">Urban Attractors and Constraints</h3>
-            <div class="info-subtitle">High urban density</div>
+            <h3 class="info-title">House Sparrow</h3>
+            <div class="info-subtitle">Health Decline Without Escape</div>
+            <ul class="info-list">
+                <li>Urban Attractors and Constraints</li>
+                <li>Dietary Poverty & Toxic Intake</li>
+                <li>Chronic Stress and Energetic Drain</li>
+                <li>Impaired Foraging Behavior and Decision-Making</li>
+                <li>Density, Waste, and Compounding Exposure</li>
+                <li>Health Decline Without Escape</li>
+            </ul>
+
+            <div class="info-subtitle">Urban Attractors and Constraints</div>
             <p>Concentrates sparrows in small spatial ranges (~60 m from nests), especially in densely populated human neighborhoods, where population density correlates more strongly with sparrow health decline than light or noise alone.</p>
 
             <div class="info-subtitle">Habitat structure</div>
@@ -373,7 +383,7 @@
 
     /* Estilos del diagrama */
     .diagram-container {
-        max-width: 1400px;
+        max-width: 1600px;
         margin: 2rem auto;
         padding: 0 1rem;
         position: relative;
@@ -395,11 +405,11 @@
         font-style: italic;
     }
 
-    /* Contenedor hexagonal */
+    /* Contenedor hexagonal - MÁS GRANDE Y ESPACIADO */
     .hexagon-diagram {
         position: relative;
-        width: 1000px;
-        height: 900px;
+        width: 1200px;
+        height: 1100px;
         margin: 0 auto;
     }
 
@@ -423,29 +433,49 @@
         border: 4px solid #1976d2;
     }
 
-    /* Nodos del hexágono - CÍRCULOS GRANDES */
+    /* Nodos del hexágono - MÁS GRANDES Y ESPACIADOS */
     .hexagon-node {
         position: absolute;
-        width: 220px;  /* Más grande para imágenes de 1200px */
+        width: 220px;
         height: 220px;
         cursor: pointer;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
         z-index: 2;
     }
 
     .hexagon-node:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
-    /* Posiciones de los nodos en forma de hexágono */
-    .node-1 { top: 80px; left: 50%; transform: translateX(-50%); }
-    .node-2 { top: 200px; right: 220px; }
-    .node-3 { top: 450px; right: 180px; }
-    .node-4 { bottom: 80px; left: 50%; transform: translateX(-50%); }
-    .node-5 { top: 450px; left: 180px; }
-    .node-6 { top: 200px; left: 220px; }
+    /* POSICIONES MÁS ESPACIADAS - HEXÁGONO MÁS GRANDE */
+    .node-1 { 
+        top: 50px; 
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+    .node-2 { 
+        top: 200px; 
+        right: 280px; 
+    }
+    .node-3 { 
+        top: 500px; 
+        right: 220px; 
+    }
+    .node-4 { 
+        bottom: 50px; 
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+    .node-5 { 
+        top: 500px; 
+        left: 220px; 
+    }
+    .node-6 { 
+        top: 200px; 
+        left: 280px; 
+    }
 
-    /* Tarjeta que gira en su mismo eje */
+    /* Tarjeta que gira - GIRAR EN SU EJE */
     .hexagon-card {
         width: 100%;
         height: 100%;
@@ -471,10 +501,11 @@
         justify-content: center;
     }
 
+    /* IMÁGENES VISIBLES - CONTENEDOR MÁS PEQUEÑO PARA VER LAS IMÁGENES */
     .card-front img, .card-back img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* Cambiado de cover a contain para mostrar toda la imagen */
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
         border-radius: 50%;
     }
 
@@ -487,12 +518,12 @@
         position: fixed;
         bottom: 40px;
         right: 40px;
-        width: 450px;
-        max-height: 600px;
+        width: 500px;
+        max-height: 650px;
         background: white;
         border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 12px 50px rgba(0,0,0,0.2);
+        padding: 2.5rem;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.2);
         border: 2px solid #e2e8f0;
         opacity: 0;
         transform: translateY(20px);
@@ -507,45 +538,89 @@
     }
 
     .info-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 700;
         color: #2d3748;
-        margin-bottom: 1.2rem;
+        margin-bottom: 0.8rem;
         padding-bottom: 0.8rem;
         border-bottom: 3px solid #1976d2;
     }
 
+    .info-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 1.5rem 0;
+        border-left: 3px solid #e2e8f0;
+        padding-left: 1.5rem;
+    }
+
+    .info-list li {
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 0.8rem;
+        padding-left: 0.5rem;
+        position: relative;
+    }
+
+    .info-list li:before {
+        content: "•";
+        color: #1976d2;
+        font-weight: bold;
+        position: absolute;
+        left: -0.8rem;
+    }
+
     .info-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         color: #1976d2;
-        margin: 1.2rem 0 0.6rem 0;
+        margin: 1.5rem 0 0.8rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
     }
 
     .info-content p {
-        font-size: 1rem;
+        font-size: 1.05rem;
         line-height: 1.6;
         color: #4a5568;
         margin-bottom: 1.2rem;
     }
 
     .info-note {
-        font-size: 0.95rem;
+        font-size: 1rem;
         font-style: italic;
         color: #718096;
-        padding: 1.2rem;
+        padding: 1.5rem;
         background: #f7fafc;
         border-left: 4px solid #e2e8f0;
         margin-top: 1.5rem;
         border-radius: 8px;
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     /* Responsive */
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         .hexagon-diagram {
-            width: 800px;
-            height: 750px;
+            width: 1000px;
+            height: 900px;
+        }
+
+        .node-1 { top: 40px; }
+        .node-2 { top: 170px; right: 230px; }
+        .node-3 { top: 420px; right: 180px; }
+        .node-4 { bottom: 40px; }
+        .node-5 { top: 420px; left: 180px; }
+        .node-6 { top: 170px; left: 230px; }
+
+        .info-panel {
+            width: 450px;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        .hexagon-diagram {
+            width: 850px;
+            height: 800px;
         }
 
         .center-image {
@@ -554,16 +629,24 @@
         }
 
         .hexagon-node {
-            width: 180px;
-            height: 180px;
+            width: 190px;
+            height: 190px;
         }
 
-        .node-1 { top: 60px; }
-        .node-2 { top: 160px; right: 180px; }
-        .node-3 { top: 380px; right: 150px; }
-        .node-4 { bottom: 60px; }
-        .node-5 { top: 380px; left: 150px; }
-        .node-6 { top: 160px; left: 180px; }
+        .node-1 { top: 35px; }
+        .node-2 { top: 150px; right: 190px; }
+        .node-3 { top: 370px; right: 150px; }
+        .node-4 { bottom: 35px; }
+        .node-5 { top: 370px; left: 150px; }
+        .node-6 { top: 150px; left: 190px; }
+
+        .diagram-title {
+            font-size: 2.4rem;
+        }
+
+        .diagram-subtitle {
+            font-size: 1.2rem;
+        }
 
         .info-panel {
             width: 400px;
@@ -574,7 +657,7 @@
 
     @media (max-width: 900px) {
         .hexagon-diagram {
-            width: 650px;
+            width: 700px;
             height: 650px;
         }
 
@@ -584,27 +667,19 @@
         }
 
         .hexagon-node {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
         }
 
-        .node-1 { top: 50px; }
-        .node-2 { top: 140px; right: 140px; }
-        .node-3 { top: 330px; right: 110px; }
-        .node-4 { bottom: 50px; }
-        .node-5 { top: 330px; left: 110px; }
-        .node-6 { top: 140px; left: 140px; }
-
-        .diagram-title {
-            font-size: 2.2rem;
-        }
-
-        .diagram-subtitle {
-            font-size: 1.2rem;
-        }
+        .node-1 { top: 30px; }
+        .node-2 { top: 130px; right: 150px; }
+        .node-3 { top: 310px; right: 120px; }
+        .node-4 { bottom: 30px; }
+        .node-5 { top: 310px; left: 120px; }
+        .node-6 { top: 130px; left: 150px; }
 
         .info-panel {
-            width: 350px;
+            width: 380px;
         }
     }
 
@@ -612,37 +687,41 @@
         .hexagon-diagram {
             width: 100%;
             height: 600px;
-            max-width: 550px;
+            max-width: 600px;
         }
 
         .center-image {
+            width: 160px;
+            height: 160px;
+        }
+
+        .hexagon-node {
             width: 150px;
             height: 150px;
         }
 
-        .hexagon-node {
-            width: 140px;
-            height: 140px;
-        }
-
-        .node-1 { top: 40px; }
-        .node-2 { top: 120px; right: 110px; }
-        .node-3 { top: 280px; right: 80px; }
-        .node-4 { bottom: 40px; }
-        .node-5 { top: 280px; left: 80px; }
-        .node-6 { top: 120px; left: 110px; }
+        .node-1 { top: 25px; }
+        .node-2 { top: 110px; right: 120px; }
+        .node-3 { top: 270px; right: 90px; }
+        .node-4 { bottom: 25px; }
+        .node-5 { top: 270px; left: 90px; }
+        .node-6 { top: 110px; left: 120px; }
 
         .info-panel {
             position: static;
             width: 100%;
-            max-width: 550px;
-            margin: 2.5rem auto 0;
+            max-width: 600px;
+            margin: 3rem auto 0;
             opacity: 1;
             transform: none;
         }
 
         .diagram-title {
             font-size: 2rem;
+        }
+
+        .diagram-subtitle {
+            font-size: 1.1rem;
         }
     }
 
@@ -652,28 +731,33 @@
         }
 
         .center-image {
+            width: 140px;
+            height: 140px;
+        }
+
+        .hexagon-node {
             width: 130px;
             height: 130px;
         }
 
-        .hexagon-node {
-            width: 120px;
-            height: 120px;
+        .node-1 { top: 20px; }
+        .node-2 { top: 90px; right: 90px; }
+        .node-3 { top: 220px; right: 70px; }
+        .node-4 { bottom: 20px; }
+        .node-5 { top: 220px; left: 70px; }
+        .node-6 { top: 90px; left: 90px; }
+
+        .card-front img, .card-back img {
+            width: 85%;
+            height: 85%;
         }
 
-        .node-1 { top: 30px; }
-        .node-2 { top: 100px; right: 80px; }
-        .node-3 { top: 240px; right: 60px; }
-        .node-4 { bottom: 30px; }
-        .node-5 { top: 240px; left: 60px; }
-        .node-6 { top: 100px; left: 80px; }
-
         .info-title {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
         }
 
         .info-content p {
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .diagram-title {
@@ -681,7 +765,7 @@
         }
 
         .diagram-subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
     }
 </style>
@@ -693,12 +777,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoTitle = infoPanel.querySelector('.info-title');
     const infoContent = infoPanel.querySelector('.info-content');
 
-    // Datos para cada nodo CON TÍTULOS EN EL PANEL
+    // Datos para cada nodo CORREGIDOS
     const nodeData = {
         1: {
-            title: "Urban Attractors and Constraints",
+            title: "House Sparrow",
+            subtitle: "Urban Attractors and Constraints",
             content: `
-                <div class="info-subtitle">High urban density</div>
+                <ul class="info-list">
+                    <li>Urban Attractors and Constraints</li>
+                    <li>Dietary Poverty & Toxic Intake</li>
+                    <li>Chronic Stress and Energetic Drain</li>
+                    <li>Impaired Foraging Behavior and Decision-Making</li>
+                    <li>Density, Waste, and Compounding Exposure</li>
+                    <li>Health Decline Without Escape</li>
+                </ul>
+
+                <div class="info-subtitle">Urban Attractors and Constraints</div>
                 <p>Concentrates sparrows in small spatial ranges (~60 m from nests), especially in densely populated human neighborhoods, where population density correlates more strongly with sparrow health decline than light or noise alone.</p>
 
                 <div class="info-subtitle">Habitat structure</div>
@@ -713,9 +807,19 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         2: {
-            title: "Dietary Poverty & Toxic Intake",
+            title: "House Sparrow",
+            subtitle: "Dietary Poverty & Toxic Intake",
             content: `
-                <div class="info-subtitle">Low-quality diets</div>
+                <ul class="info-list">
+                    <li>Urban Attractors and Constraints</li>
+                    <li>Dietary Poverty & Toxic Intake</li>
+                    <li>Chronic Stress and Energetic Drain</li>
+                    <li>Impaired Foraging Behavior and Decision-Making</li>
+                    <li>Density, Waste, and Compounding Exposure</li>
+                    <li>Health Decline Without Escape</li>
+                </ul>
+
+                <div class="info-subtitle">Dietary Poverty & Toxic Intake</div>
                 <p>Dominated by human food waste (bread, scraps), deficient in protein and micronutrients.</p>
 
                 <div class="info-subtitle">High exposure to contaminants</div>
@@ -727,9 +831,19 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         3: {
-            title: "Chronic Stress and Energetic Drain",
+            title: "House Sparrow",
+            subtitle: "Chronic Stress and Energetic Drain",
             content: `
-                <div class="info-subtitle">Metabolic stress</div>
+                <ul class="info-list">
+                    <li>Urban Attractors and Constraints</li>
+                    <li>Dietary Poverty & Toxic Intake</li>
+                    <li>Chronic Stress and Energetic Drain</li>
+                    <li>Impaired Foraging Behavior and Decision-Making</li>
+                    <li>Density, Waste, and Compounding Exposure</li>
+                    <li>Health Decline Without Escape</li>
+                </ul>
+
+                <div class="info-subtitle">Chronic Stress and Energetic Drain</div>
                 <p>Evidenced by altered glucose regulation, reduced uric acid, and depleted liver glycogen.</p>
 
                 <div class="info-subtitle">Immune system up-regulation</div>
@@ -741,9 +855,19 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         4: {
-            title: "Impaired Foraging Behavior and Decision-Making",
+            title: "House Sparrow",
+            subtitle: "Impaired Foraging Behavior and Decision-Making",
             content: `
-                <div class="info-subtitle">Reduced foraging range and efficiency</div>
+                <ul class="info-list">
+                    <li>Urban Attractors and Constraints</li>
+                    <li>Dietary Poverty & Toxic Intake</li>
+                    <li>Chronic Stress and Energetic Drain</li>
+                    <li>Impaired Foraging Behavior and Decision-Making</li>
+                    <li>Density, Waste, and Compounding Exposure</li>
+                    <li>Health Decline Without Escape</li>
+                </ul>
+
+                <div class="info-subtitle">Impaired Foraging Behavior and Decision-Making</div>
                 <p>Reinforcing reliance on nearby, low-quality food sources.</p>
 
                 <div class="info-subtitle">Lower neophobia and increased risk-taking</div>
@@ -758,9 +882,19 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         5: {
-            title: "Density, Waste, and Compounding Exposure",
+            title: "House Sparrow",
+            subtitle: "Density, Waste, and Compounding Exposure",
             content: `
-                <div class="info-subtitle">Sparrow density</div>
+                <ul class="info-list">
+                    <li>Urban Attractors and Constraints</li>
+                    <li>Dietary Poverty & Toxic Intake</li>
+                    <li>Chronic Stress and Energetic Drain</li>
+                    <li>Impaired Foraging Behavior and Decision-Making</li>
+                    <li>Density, Waste, and Compounding Exposure</li>
+                    <li>Health Decline Without Escape</li>
+                </ul>
+
+                <div class="info-subtitle">Density, Waste, and Compounding Exposure</div>
                 <p>High sparrow density intensifies competition, increasing stress and further narrowing foraging options.</p>
 
                 <div class="info-subtitle">Contaminated Diet</div>
@@ -771,9 +905,19 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         6: {
-            title: "Health Decline Without Escape",
+            title: "House Sparrow",
+            subtitle: "Health Decline Without Escape",
             content: `
-                <div class="info-subtitle">Restricted Movement</div>
+                <ul class="info-list">
+                    <li>Urban Attractors and Constraints</li>
+                    <li>Dietary Poverty & Toxic Intake</li>
+                    <li>Chronic Stress and Energetic Drain</li>
+                    <li>Impaired Foraging Behavior and Decision-Making</li>
+                    <li>Density, Waste, and Compounding Exposure</li>
+                    <li>Health Decline Without Escape</li>
+                </ul>
+
+                <div class="info-subtitle">Health Decline Without Escape</div>
                 <p>Sparrows remain spatially constrained due to nest fidelity and limited dispersal.</p>
 
                 <div class="info-subtitle">Chronic Stress Impacts</div>
@@ -793,7 +937,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = nodeData[nodeId];
             if (data) {
                 infoTitle.textContent = data.title;
-                infoContent.innerHTML = data.content;
+                // Agregar el subtítulo específico al contenido
+                let fullContent = `<div class="info-subtitle" style="margin-top: 0; padding-top: 0; border-top: none; color: #2d3748; font-size: 1.4rem;">${data.subtitle}</div>`;
+                fullContent += data.content;
+                infoContent.innerHTML = fullContent;
                 infoPanel.classList.add('active');
             }
         });
@@ -819,7 +966,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (data) {
                 infoTitle.textContent = data.title;
-                infoContent.innerHTML = data.content;
+                let fullContent = `<div class="info-subtitle" style="margin-top: 0; padding-top: 0; border-top: none; color: #2d3748; font-size: 1.4rem;">${data.subtitle}</div>`;
+                fullContent += data.content;
+                infoContent.innerHTML = fullContent;
                 infoPanel.classList.toggle('active');
             }
         });
@@ -834,7 +983,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 22, 2026 22:46:45 UTC">January 22, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 21:00:37 UTC">January 23, 2026</span>
     
   </small>
 </div>
