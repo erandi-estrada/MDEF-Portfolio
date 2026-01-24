@@ -10,42 +10,42 @@
     <div class="hexagon-diagram">
         <!-- Imagen central grande -->
         <div class="center-image">
-            <img src="../images/Diagrama/Centro.png" alt="Urban Sparrow Center">
+            <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center">
         </div>
         
-        <!-- Nodo 1 - Parte superior -->
-        <div class="hexagon-node node-1" data-node="1">
-            <img src="../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
+<!-- Nodo 1 - Parte superior -->
+<div class="hexagon-node node-1" data-node="1">
+            <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
         </div>
         
         <!-- Nodo 2 - Superior derecha -->
         <div class="hexagon-node node-2" data-node="2">
-            <img src="../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
+            <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(56, 142, 60, 0.4) 0%, transparent 70%);"></div>
         </div>
         
         <!-- Nodo 3 - Inferior derecha -->
         <div class="hexagon-node node-3" data-node="3">
-            <img src="../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
+            <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(245, 124, 0, 0.4) 0%, transparent 70%);"></div>
         </div>
         
         <!-- Nodo 4 - Parte inferior -->
         <div class="hexagon-node node-4" data-node="4">
-            <img src="../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
+            <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
         </div>
         
 <!-- Nodo 5 - Inferior izquierda -->
 <div class="hexagon-node node-5" data-node="5">
-            <img src="../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
+            <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
         </div>
         
         <!-- Nodo 6 - Superior izquierda -->
         <div class="hexagon-node node-6" data-node="6">
-            <img src="../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
+            <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(0, 121, 107, 0.4) 0%, transparent 70%);"></div>
         </div>
     </div>
