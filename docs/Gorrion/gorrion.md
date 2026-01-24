@@ -18,7 +18,7 @@
 <div class="hexagon-node node-1" data-node="1">
             <div class="node-position">
                 <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 221, 255, 0.77) 0%, transparent 70%);"></div>
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 221, 255, 0.77) 0%, transparent 30%);"></div>
                 <div class="hover-overlay"></div>
                 <div class="hover-text">Click Here</div>
             </div>
@@ -28,7 +28,7 @@
 <div class="hexagon-node node-2" data-node="2">
             <div class="node-position">
                 <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(156, 255, 69, 0.71) 0%, transparent 70%);"></div>
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(156, 255, 69, 0.71) 0%, transparent 30%);"></div>
                 <div class="hover-overlay"></div>
                 <div class="hover-text">Click Here</div>
             </div>
@@ -38,7 +38,7 @@
 <div class="hexagon-node node-3" data-node="3">
             <div class="node-position">
                 <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 193, 69, 0.77) 0%, transparent 70%);"></div>
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 193, 69, 0.77) 0%, transparent 30%);"></div>
                 <div class="hover-overlay"></div>
                 <div class="hover-text">Click Here</div>
             </div>
@@ -48,7 +48,7 @@
 <div class="hexagon-node node-4" data-node="4">
             <div class="node-position">
                 <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 94, 69, 0.77) 0%, transparent 70%);"></div>
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 94, 69, 0.77) 0%, transparent 30%);"></div>
                 <div class="hover-overlay"></div>
                 <div class="hover-text">Click Here</div>
             </div>
@@ -58,7 +58,7 @@
 <div class="hexagon-node node-5" data-node="5">
             <div class="node-position">
                 <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(159, 69, 255, 0.77) 0%, transparent 70%);"></div>
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(159, 69, 255, 0.77) 0%, transparent 30%);"></div>
                 <div class="hover-overlay"></div>
                 <div class="hover-text">Click Here</div>
             </div>
@@ -68,7 +68,7 @@
 <div class="hexagon-node node-6" data-node="6">
             <div class="node-position">
                 <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 255, 181, 0.77) 0%, transparent 70%));"></div>
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 255, 181, 0.77) 0%, transparent 30%));"></div>
                 <div class="hover-overlay"></div>
                 <div class="hover-text">Click Here</div>
             </div>
