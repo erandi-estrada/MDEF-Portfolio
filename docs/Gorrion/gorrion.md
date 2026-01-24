@@ -225,7 +225,7 @@
     /* NODO 1 SUBIDO AÚN MÁS - cambiado de 200px a 150px */
     
     .node-1 { 
-        top: 25px; /* SUBIDO AÚN MÁS - antes era 200px */
+        top: 15px; /* SUBIDO AÚN MÁS - antes era 200px */
         left: calc(900px - 150px); /* Centrado horizontalmente */
     }
     
@@ -373,7 +373,7 @@
         
         /* Recalcular posiciones para nuevo tamaño */
         .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 180px */
+            top: 20px; /* SUBIDO AÚN MÁS - antes era 180px */
             left: calc(800px - 150px);
         }
         
@@ -432,7 +432,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 90px; /* SUBIDO AÚN MÁS - antes era 160px */
+            top: 20px; /* SUBIDO AÚN MÁS - antes era 160px */
             left: calc(700px - 140px);
         }
         
@@ -490,7 +490,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 100px; /* SUBIDO AÚN MÁS - antes era 140px */
+            top: 40px; /* SUBIDO AÚN MÁS - antes era 140px */
             left: calc(600px - 125px);
         }
         
@@ -548,7 +548,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 90px; /* SUBIDO AÚN MÁS - antes era 120px */
+            top: 40px; /* SUBIDO AÚN MÁS - antes era 120px */
             left: calc(500px - 110px);
         }
         
@@ -606,7 +606,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 80px; /* SUBIDO AÚN MÁS - antes era 100px */
+            top: 40px; /* SUBIDO AÚN MÁS - antes era 100px */
             left: calc(425px - 100px);
         }
         
@@ -664,7 +664,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 70px; /* SUBIDO AÚN MÁS - antes era 90px */
+            top: 30px; /* SUBIDO AÚN MÁS - antes era 90px */
             left: calc(350px - 90px);
         }
         
@@ -722,7 +722,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 60px; /* SUBIDO AÚN MÁS - antes era 80px */
+            top: 10px; /* SUBIDO AÚN MÁS - antes era 80px */
             left: calc(300px - 80px);
         }
         
@@ -785,7 +785,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 50px; /* SUBIDO AÚN MÁS - antes era 70px */
+            top: 10px; /* SUBIDO AÚN MÁS - antes era 70px */
             left: calc(250px - 70px);
         }
         
@@ -860,7 +860,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 60px */
+            top: 10px; /* SUBIDO AÚN MÁS - antes era 60px */
             left: calc(250px - 60px);
         }
         
