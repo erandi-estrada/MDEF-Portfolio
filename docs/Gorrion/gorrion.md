@@ -8,13 +8,14 @@
 
 <div class="diagram-container">
     <div class="hexagon-diagram">
-        <!-- Imagen central grande -->
+        <!-- Imagen central grande CON FONDO BLANCO -->
         <div class="center-image">
-            <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center">
+            <div class="center-circle"></div>
+            <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center" class="center-img">
         </div>
         
-<!-- Nodo 1 - Parte superior -->
-<div class="hexagon-node node-1" data-node="1">
+        <!-- Nodo 1 - Parte superior -->
+        <div class="hexagon-node node-1" data-node="1">
             <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
         </div>
@@ -37,8 +38,8 @@
             <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
         </div>
         
-<!-- Nodo 5 - Inferior izquierda -->
-<div class="hexagon-node node-5" data-node="5">
+        <!-- Nodo 5 - Inferior izquierda -->
+        <div class="hexagon-node node-5" data-node="5">
             <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
             <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
         </div>
@@ -93,38 +94,52 @@
         padding: 2rem 0;
     }
     
-    /* Contenedor hexagonal - MUY GRANDE */
+    /* Contenedor hexagonal - MÁS GRANDE PARA MÁS SEPARACIÓN */
     .hexagon-diagram {
         position: relative;
-        width: 1400px;
-        height: 1200px;
+        width: 1600px;  /* MÁS ANCHO */
+        height: 1400px; /* MÁS ALTO */
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
-    /* Imagen central - GRANDE */
+    /* Imagen central - MÁS GRANDE CON FONDO BLANCO */
     .center-image {
         position: absolute;
-        width: 400px;
-        height: 400px;
+        width: 500px;  /* MÁS GRANDE */
+        height: 500px;
         z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
-    .center-image img {
+    .center-circle {
+        position: absolute;
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        background: white;
         border-radius: 50%;
         border: 4px solid #1976d2;
-        filter: drop-shadow(0 10px 20px rgba(25, 118, 210, 0.3));
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
     
-    /* Nodos - MUY GRANDES Y SON LAS IMÁGENES DIRECTAMENTE */
+    .center-img {
+        width: 70%;  /* Imagen más pequeña dentro del círculo blanco */
+        height: 70%;
+        object-fit: contain;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Nodos - MÁS GRANDES Y MÁS SEPARADOS */
     .hexagon-node {
         position: absolute;
-        width: 260px;  /* Tamaño grande */
-        height: 260px;
+        width: 300px;  /* MÁS GRANDE */
+        height: 300px;
         cursor: pointer;
         z-index: 20;
         border-radius: 50%;
@@ -136,13 +151,13 @@
     
     /* CORREGIDO: Los nodos de arriba y abajo no se mueven */
     .hexagon-node:hover {
-        transform: scale(1.2); /* Solo crece en su lugar */
+        transform: scale(1.15); /* Solo crece en su lugar */
         z-index: 30;
     }
     
     /* Excepción para nodos centrados */
     .node-1:hover, .node-4:hover {
-        transform: scale(1.2) translateX(-50%); /* Mantiene posición centrada */
+        transform: scale(1.15) translateX(-50%); /* Mantiene posición centrada */
     }
     
     .node-img {
@@ -178,40 +193,40 @@
     .hexagon-node:hover .node-glow {
         opacity: 1;
         transform: scale(1.1);
-        filter: blur(15px);
+        filter: blur(20px);
     }
     
-    /* POSICIONES - HEXÁGONO PERFECTO */
+    /* POSICIONES - HEXÁGONO MÁS GRANDE Y MÁS SEPARADO */
     .node-1 { 
-        top: 60px; 
+        top: 80px; 
         left: 50%; 
         transform: translateX(-50%);
     }
     
     .node-2 { 
-        top: 240px; 
-        right: 300px; 
+        top: 280px; 
+        right: 380px;  /* MÁS SEPARADO */
     }
     
     .node-3 { 
-        top: 520px; 
-        right: 240px; 
+        top: 600px; 
+        right: 300px;  /* MÁS SEPARADO */
     }
     
     .node-4 { 
-        bottom: 60px; 
+        bottom: 80px; 
         left: 50%; 
         transform: translateX(-50%);
     }
     
     .node-5 { 
-        top: 520px; 
-        left: 240px; 
+        top: 600px; 
+        left: 300px;   /* MÁS SEPARADO */
     }
     
     .node-6 { 
-        top: 240px; 
-        left: 300px; 
+        top: 280px; 
+        left: 380px;   /* MÁS SEPARADO */
     }
     
     /* Panel de información */
@@ -325,10 +340,58 @@
     }
     
     /* Responsive */
-    @media (max-width: 1600px) {
+    @media (max-width: 1800px) {
+        .hexagon-diagram {
+            width: 1400px;
+            height: 1200px;
+        }
+        
+        .center-image {
+            width: 450px;
+            height: 450px;
+        }
+        
+        .hexagon-node {
+            width: 280px;
+            height: 280px;
+        }
+        
+        .node-1 { top: 70px; }
+        .node-2 { top: 250px; right: 340px; }
+        .node-3 { top: 550px; right: 270px; }
+        .node-4 { bottom: 70px; }
+        .node-5 { top: 550px; left: 270px; }
+        .node-6 { top: 250px; left: 340px; }
+    }
+    
+    @media (max-width: 1500px) {
         .hexagon-diagram {
             width: 1200px;
             height: 1000px;
+        }
+        
+        .center-image {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .hexagon-node {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .node-1 { top: 60px; }
+        .node-2 { top: 220px; right: 300px; }
+        .node-3 { top: 480px; right: 240px; }
+        .node-4 { bottom: 60px; }
+        .node-5 { top: 480px; left: 240px; }
+        .node-6 { top: 220px; left: 300px; }
+    }
+    
+    @media (max-width: 1300px) {
+        .hexagon-diagram {
+            width: 1000px;
+            height: 900px;
         }
         
         .center-image {
@@ -343,16 +406,16 @@
         
         .node-1 { top: 50px; }
         .node-2 { top: 200px; right: 260px; }
-        .node-3 { top: 450px; right: 210px; }
+        .node-3 { top: 430px; right: 210px; }
         .node-4 { bottom: 50px; }
-        .node-5 { top: 450px; left: 210px; }
+        .node-5 { top: 430px; left: 210px; }
         .node-6 { top: 200px; left: 260px; }
     }
     
-    @media (max-width: 1300px) {
+    @media (max-width: 1100px) {
         .hexagon-diagram {
-            width: 1000px;
-            height: 900px;
+            width: 850px;
+            height: 800px;
         }
         
         .center-image {
@@ -367,34 +430,10 @@
         
         .node-1 { top: 40px; }
         .node-2 { top: 180px; right: 220px; }
-        .node-3 { top: 400px; right: 180px; }
+        .node-3 { top: 380px; right: 180px; }
         .node-4 { bottom: 40px; }
-        .node-5 { top: 400px; left: 180px; }
+        .node-5 { top: 380px; left: 180px; }
         .node-6 { top: 180px; left: 220px; }
-    }
-    
-    @media (max-width: 1100px) {
-        .hexagon-diagram {
-            width: 850px;
-            height: 800px;
-        }
-        
-        .center-image {
-            width: 280px;
-            height: 280px;
-        }
-        
-        .hexagon-node {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .node-1 { top: 35px; }
-        .node-2 { top: 160px; right: 190px; }
-        .node-3 { top: 360px; right: 150px; }
-        .node-4 { bottom: 35px; }
-        .node-5 { top: 360px; left: 150px; }
-        .node-6 { top: 160px; left: 190px; }
     }
     
     @media (max-width: 900px) {
@@ -404,21 +443,21 @@
         }
         
         .center-image {
-            width: 240px;
-            height: 240px;
+            width: 260px;
+            height: 260px;
         }
         
         .hexagon-node {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
         }
         
-        .node-1 { top: 30px; }
-        .node-2 { top: 140px; right: 150px; }
-        .node-3 { top: 320px; right: 120px; }
-        .node-4 { bottom: 30px; }
-        .node-5 { top: 320px; left: 120px; }
-        .node-6 { top: 140px; left: 150px; }
+        .node-1 { top: 35px; }
+        .node-2 { top: 160px; right: 180px; }
+        .node-3 { top: 340px; right: 150px; }
+        .node-4 { bottom: 35px; }
+        .node-5 { top: 340px; left: 150px; }
+        .node-6 { top: 160px; left: 180px; }
     }
     
     @media (max-width: 768px) {
@@ -433,21 +472,21 @@
         }
         
         .center-image {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
         }
         
         .hexagon-node {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
         }
         
-        .node-1 { top: 25px; }
-        .node-2 { top: 120px; right: 120px; }
-        .node-3 { top: 280px; right: 100px; }
-        .node-4 { bottom: 25px; }
-        .node-5 { top: 280px; left: 100px; }
-        .node-6 { top: 120px; left: 120px; }
+        .node-1 { top: 30px; }
+        .node-2 { top: 140px; right: 140px; }
+        .node-3 { top: 300px; right: 110px; }
+        .node-4 { bottom: 30px; }
+        .node-5 { top: 300px; left: 110px; }
+        .node-6 { top: 140px; left: 140px; }
         
         .info-panel {
             width: 95%;
@@ -474,21 +513,21 @@
         }
         
         .center-image {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
         }
         
         .hexagon-node {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
         }
         
-        .node-1 { top: 20px; }
-        .node-2 { top: 100px; right: 90px; }
-        .node-3 { top: 240px; right: 70px; }
-        .node-4 { bottom: 20px; }
-        .node-5 { top: 240px; left: 70px; }
-        .node-6 { top: 100px; left: 90px; }
+        .node-1 { top: 25px; }
+        .node-2 { top: 120px; right: 100px; }
+        .node-3 { top: 260px; right: 80px; }
+        .node-4 { bottom: 25px; }
+        .node-5 { top: 260px; left: 80px; }
+        .node-6 { top: 120px; left: 100px; }
         
         .info-panel {
             padding: 1.5rem;
