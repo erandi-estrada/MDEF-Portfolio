@@ -14,8 +14,16 @@
             <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center" class="center-img">
         </div>
         
+        <!-- Flechas entre nodos -->
+        <div class="arrow arrow-1-2"></div>
+        <div class="arrow arrow-2-3"></div>
+        <div class="arrow arrow-3-4"></div>
+        <div class="arrow arrow-4-5"></div>
+        <div class="arrow arrow-5-6"></div>
+        <div class="arrow arrow-6-1"></div>
+        
         <!-- Nodo 1 - Parte superior -->
-<div class="hexagon-node node-1" data-node="1">
+        <div class="hexagon-node node-1" data-node="1">
             <div class="node-position">
                 <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 221, 255, 0.77) 0%, transparent 30%);"></div>
@@ -25,7 +33,7 @@
         </div>
         
         <!-- Nodo 2 - Superior derecha -->
-<div class="hexagon-node node-2" data-node="2">
+        <div class="hexagon-node node-2" data-node="2">
             <div class="node-position">
                 <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(156, 255, 69, 0.71) 0%, transparent 30%);"></div>
@@ -35,7 +43,7 @@
         </div>
         
         <!-- Nodo 3 - Inferior derecha -->
-<div class="hexagon-node node-3" data-node="3">
+        <div class="hexagon-node node-3" data-node="3">
             <div class="node-position">
                 <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 193, 69, 0.77) 0%, transparent 30%);"></div>
@@ -45,7 +53,7 @@
         </div>
         
         <!-- Nodo 4 - Parte inferior -->
-<div class="hexagon-node node-4" data-node="4">
+        <div class="hexagon-node node-4" data-node="4">
             <div class="node-position">
                 <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 94, 69, 0.77) 0%, transparent 30%);"></div>
@@ -55,7 +63,7 @@
         </div>
         
         <!-- Nodo 5 - Inferior izquierda -->
-<div class="hexagon-node node-5" data-node="5">
+        <div class="hexagon-node node-5" data-node="5">
             <div class="node-position">
                 <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(159, 69, 255, 0.77) 0%, transparent 30%);"></div>
@@ -65,7 +73,7 @@
         </div>
         
         <!-- Nodo 6 - Superior izquierda -->
-<div class="hexagon-node node-6" data-node="6">
+        <div class="hexagon-node node-6" data-node="6">
             <div class="node-position">
                 <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 255, 181, 0.77) 0%, transparent 30%));"></div>
@@ -161,6 +169,70 @@
         border-radius: none;
         position: relative;
         z-index: 2;
+    }
+    
+    /* Flechas entre nodos */
+    .arrow {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        z-index: 5;
+        opacity: 0.7;
+    }
+    
+    /* Estilo base de las flechas */
+    .arrow::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid #666;
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+    }
+    
+    /* Posición y rotación de cada flecha */
+    .arrow-1-2 {
+        /* Entre nodo 1 y nodo 2 */
+        top: calc(15px + 150px + 60px); /* 225px */
+        left: calc(900px - 20px + 150px); /* 1030px */
+        transform: rotate(60deg);
+    }
+    
+    .arrow-2-3 {
+        /* Entre nodo 2 y nodo 3 */
+        top: calc(800px - 150px); /* 650px */
+        left: calc(900px + 476px - 20px); /* 1356px */
+        transform: rotate(0deg);
+    }
+    
+    .arrow-3-4 {
+        /* Entre nodo 3 y nodo 4 */
+        top: calc(800px + 275px - 60px); /* 1015px */
+        left: calc(900px + 238px - 20px); /* 1118px */
+        transform: rotate(-60deg);
+    }
+    
+    .arrow-4-5 {
+        /* Entre nodo 4 y nodo 5 */
+        top: calc(800px + 550px - 150px - 60px); /* 1140px */
+        left: calc(900px - 150px - 20px); /* 730px */
+        transform: rotate(-120deg);
+    }
+    
+    .arrow-5-6 {
+        /* Entre nodo 5 y nodo 6 */
+        top: calc(800px + 275px - 60px); /* 1015px */
+        left: calc(900px - 476px + 20px); /* 444px */
+        transform: rotate(-180deg);
+    }
+    
+    .arrow-6-1 {
+        /* Entre nodo 6 y nodo 1 */
+        top: calc(800px - 150px); /* 650px */
+        left: calc(900px - 476px - 20px); /* 404px */
+        transform: rotate(-240deg);
     }
     
     /* Nodos - ESTRUCTURA CORREGIDA */
@@ -426,7 +498,7 @@
         line-height: 1.6;
     }
     
-    /* Responsive */
+    /* Responsive - Ajustes para flechas */
     @media (max-width: 2000px) {
         .hexagon-diagram {
             width: 1600px;
@@ -463,6 +535,37 @@
             top: calc(700px - 250px - 150px);
             left: calc(800px - 433px - 150px);
         }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(20px + 150px + 60px);
+            left: calc(800px - 20px + 150px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(700px - 150px);
+            left: calc(800px + 433px - 20px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(700px + 250px - 60px);
+            left: calc(800px + 216px - 20px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(700px + 500px - 150px - 60px);
+            left: calc(800px - 150px - 20px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(700px + 250px - 60px);
+            left: calc(800px - 433px + 20px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(700px - 150px);
+            left: calc(800px - 433px - 20px);
+        }
     }
     
     @media (max-width: 1800px) {
@@ -497,6 +600,18 @@
             font-size: 1.8rem;
         }
         
+        /* Ajustar tamaño de flechas */
+        .arrow {
+            width: 35px;
+            height: 18px;
+        }
+        
+        .arrow::before {
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-top: 13px solid #666;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 20px; /* SUBIDO AÚN MÁS - antes era 160px */
@@ -526,6 +641,37 @@
         .node-6 { 
             top: calc(600px - 225px - 140px);
             left: calc(700px - 390px - 140px);
+        }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(20px + 140px + 60px);
+            left: calc(700px - 17px + 140px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(600px - 140px);
+            left: calc(700px + 390px - 17px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(600px + 225px - 60px);
+            left: calc(700px + 195px - 17px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(600px + 450px - 140px - 60px);
+            left: calc(700px - 140px - 17px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(600px + 225px - 60px);
+            left: calc(700px - 390px + 17px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(600px - 140px);
+            left: calc(700px - 390px - 17px);
         }
     }
     
@@ -559,6 +705,18 @@
             font-size: 1.7rem;
         }
         
+        /* Ajustar tamaño de flechas */
+        .arrow {
+            width: 30px;
+            height: 15px;
+        }
+        
+        .arrow::before {
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 11px solid #666;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 40px; /* SUBIDO AÚN MÁS - antes era 140px */
@@ -588,6 +746,37 @@
         .node-6 { 
             top: calc(500px - 200px - 125px);
             left: calc(600px - 346px - 125px);
+        }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(40px + 125px + 50px);
+            left: calc(600px - 15px + 125px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(500px - 125px);
+            left: calc(600px + 346px - 15px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(500px + 200px - 50px);
+            left: calc(600px + 173px - 15px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(500px + 400px - 125px - 50px);
+            left: calc(600px - 125px - 15px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(500px + 200px - 50px);
+            left: calc(600px - 346px + 15px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(500px - 125px);
+            left: calc(600px - 346px - 15px);
         }
     }
     
@@ -621,6 +810,18 @@
             font-size: 1.6rem;
         }
         
+        /* Ajustar tamaño de flechas */
+        .arrow {
+            width: 25px;
+            height: 13px;
+        }
+        
+        .arrow::before {
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 9px solid #666;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 40px; /* SUBIDO AÚN MÁS - antes era 120px */
@@ -650,6 +851,37 @@
         .node-6 { 
             top: calc(450px - 175px - 110px);
             left: calc(500px - 303px - 110px);
+        }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(40px + 110px + 45px);
+            left: calc(500px - 12px + 110px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(450px - 110px);
+            left: calc(500px + 303px - 12px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(450px + 175px - 45px);
+            left: calc(500px + 151px - 12px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(450px + 350px - 110px - 45px);
+            left: calc(500px - 110px - 12px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(450px + 175px - 45px);
+            left: calc(500px - 303px + 12px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(450px - 110px);
+            left: calc(500px - 303px - 12px);
         }
     }
     
@@ -683,6 +915,18 @@
             font-size: 1.5rem;
         }
         
+        /* Ajustar tamaño de flechas */
+        .arrow {
+            width: 20px;
+            height: 10px;
+        }
+        
+        .arrow::before {
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #666;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 40px; /* SUBIDO AÚN MÁS - antes era 100px */
@@ -712,6 +956,37 @@
         .node-6 { 
             top: calc(400px - 150px - 100px);
             left: calc(425px - 260px - 100px);
+        }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(40px + 100px + 40px);
+            left: calc(425px - 10px + 100px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(400px - 100px);
+            left: calc(425px + 260px - 10px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(400px + 150px - 40px);
+            left: calc(425px + 130px - 10px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(400px + 300px - 100px - 40px);
+            left: calc(425px - 100px - 10px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(400px + 150px - 40px);
+            left: calc(425px - 260px + 10px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(400px - 100px);
+            left: calc(425px - 260px - 10px);
         }
     }
     
@@ -745,6 +1020,18 @@
             font-size: 1.4rem;
         }
         
+        /* Ajustar tamaño de flechas */
+        .arrow {
+            width: 18px;
+            height: 9px;
+        }
+        
+        .arrow::before {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid #666;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 30px; /* SUBIDO AÚN MÁS - antes era 90px */
@@ -774,6 +1061,37 @@
         .node-6 { 
             top: calc(350px - 125px - 90px);
             left: calc(350px - 217px - 90px);
+        }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(30px + 90px + 35px);
+            left: calc(350px - 9px + 90px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(350px - 90px);
+            left: calc(350px + 217px - 9px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(350px + 125px - 35px);
+            left: calc(350px + 108px - 9px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(350px + 250px - 90px - 35px);
+            left: calc(350px - 90px - 9px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(350px + 125px - 35px);
+            left: calc(350px - 217px + 9px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(350px - 90px);
+            left: calc(350px - 217px - 9px);
         }
     }
     
@@ -807,6 +1125,18 @@
             font-size: 1.3rem;
         }
         
+        /* Ajustar tamaño de flechas */
+        .arrow {
+            width: 16px;
+            height: 8px;
+        }
+        
+        .arrow::before {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 6px solid #666;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 10px; /* SUBIDO AÚN MÁS - antes era 80px */
@@ -836,6 +1166,37 @@
         .node-6 { 
             top: calc(300px - 100px - 80px);
             left: calc(300px - 173px - 80px);
+        }
+        
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(10px + 80px + 30px);
+            left: calc(300px - 8px + 80px);
+        }
+        
+        .arrow-2-3 {
+            top: calc(300px - 80px);
+            left: calc(300px + 173px - 8px);
+        }
+        
+        .arrow-3-4 {
+            top: calc(300px + 100px - 30px);
+            left: calc(300px + 86px - 8px);
+        }
+        
+        .arrow-4-5 {
+            top: calc(300px + 200px - 80px - 30px);
+            left: calc(300px - 80px - 8px);
+        }
+        
+        .arrow-5-6 {
+            top: calc(300px + 100px - 30px);
+            left: calc(300px - 173px + 8px);
+        }
+        
+        .arrow-6-1 {
+            top: calc(300px - 80px);
+            left: calc(300px - 173px - 8px);
         }
     }
     
@@ -872,6 +1233,11 @@
         
         .hover-text {
             font-size: 1.2rem;
+        }
+        
+        /* Ocultar flechas en pantallas muy pequeñas */
+        .arrow {
+            display: none;
         }
         
         /* Recalcular posiciones */
