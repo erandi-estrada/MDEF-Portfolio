@@ -143,7 +143,7 @@
     
     /* IMAGEN DEL CENTRO MÁS GRANDE - cambiado de 70% a 85% */
     .center-img {
-        width: 85%;  /* AGRANDADA de 70% a 85% */
+        width: 100%;  /* AGRANDADA de 70% a 85% */
         height: 85%; /* AGRANDADA de 70% a 85% */
         object-fit: contain;
         border-radius: 50%;
