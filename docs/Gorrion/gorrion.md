@@ -19,7 +19,9 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
+                <div class="click-hint">Click here</div>
             </div>
+            <div class="arrow arrow-1"></div>
         </div>
         
         <!-- Nodo 2 - Superior derecha -->
@@ -27,7 +29,9 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(56, 142, 60, 0.4) 0%, transparent 70%);"></div>
+                <div class="click-hint">Click here</div>
             </div>
+            <div class="arrow arrow-2"></div>
         </div>
         
         <!-- Nodo 3 - Inferior derecha -->
@@ -35,7 +39,9 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(245, 124, 0, 0.4) 0%, transparent 70%);"></div>
+                <div class="click-hint">Click here</div>
             </div>
+            <div class="arrow arrow-3"></div>
         </div>
         
         <!-- Nodo 4 - Parte inferior -->
@@ -43,7 +49,9 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
+                <div class="click-hint">Click here</div>
             </div>
+            <div class="arrow arrow-4"></div>
         </div>
         
         <!-- Nodo 5 - Inferior izquierda -->
@@ -51,7 +59,9 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
+                <div class="click-hint">Click here</div>
             </div>
+            <div class="arrow arrow-5"></div>
         </div>
         
         <!-- Nodo 6 - Superior izquierda -->
@@ -59,7 +69,9 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(0, 121, 107, 0.4) 0%, transparent 70%);"></div>
+                <div class="click-hint">Click here</div>
             </div>
+            <div class="arrow arrow-6"></div>
         </div>
     </div>
     
@@ -141,10 +153,10 @@
         z-index: 1;
     }
     
-    /* IMAGEN DEL CENTRO MÁS GRANDE - cambiado de 70% a 85% */
+    /* IMAGEN DEL CENTRO MÁS GRANDE */
     .center-img {
-        width: 100%;  /* AGRANDADA de 70% a 85% */
-        height: 85%; /* AGRANDADA de 70% a 85% */
+        width: 100%;
+        height: 85%;
         object-fit: contain;
         border-radius: none;
         position: relative;
@@ -173,7 +185,7 @@
         position: relative;
     }
     
-    /* EFECTO HOVER CORREGIDO - sin conflicto con posicionamiento */
+    /* EFECTO HOVER MEJORADO - con borde más grueso */
     .node-position:hover {
         transform: scale(1.15);
         z-index: 30;
@@ -187,11 +199,13 @@
         position: relative;
         z-index: 2;
         border: 3px solid;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
     }
     
+    /* BORDES MÁS GRUESOS AL HOVER */
     .node-position:hover .node-img {
         transform: scale(1.05);
+        border-width: 6px; /* Borde más grueso al hover */
     }
     
     /* Bordes de colores para cada nodo */
@@ -219,39 +233,229 @@
         filter: blur(20px);
     }
     
-    /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
-    /* Radio aumentado a 550px para más separación */
-    /* Centro en (900px, 800px) del contenedor de 1800x1600 */
-    /* NODO 1 SUBIDO AÚN MÁS - cambiado de 200px a 150px */
+    /* Mensaje "Click here" */
+    .click-hint {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        opacity: 0;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        z-index: 40;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
     
+    .node-position:hover .click-hint {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-5px);
+    }
+    
+    /* FLECHAS */
+    .arrow {
+        position: absolute;
+        z-index: 5;
+        pointer-events: none;
+    }
+    
+    /* Línea de la flecha */
+    .arrow::before {
+        content: '';
+        position: absolute;
+        background: linear-gradient(90deg, 
+            rgba(255, 255, 255, 0.8) 0%, 
+            rgba(255, 255, 255, 0.6) 50%, 
+            rgba(255, 255, 255, 0.3) 100%);
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Punta de la flecha */
+    .arrow::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-color: transparent;
+    }
+    
+    /* Flecha 1 - Hacia arriba */
+    .arrow-1 {
+        width: 6px;
+        height: 250px;
+        top: 330px;
+        left: calc(50% + 147px);
+        transform: translateX(-50%);
+    }
+    
+    .arrow-1::before {
+        width: 6px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .arrow-1::after {
+        top: -10px;
+        left: -6px;
+        border-width: 0 9px 12px 9px;
+        border-bottom-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Flecha 2 - Superior derecha */
+    .arrow-2 {
+        width: 320px;
+        height: 6px;
+        top: 525px;
+        left: 925px;
+        transform: rotate(-30deg);
+        transform-origin: left center;
+    }
+    
+    .arrow-2::before {
+        width: 100%;
+        height: 6px;
+        top: 0;
+        left: 0;
+    }
+    
+    .arrow-2::after {
+        top: -9px;
+        right: -12px;
+        border-width: 6px 0 6px 12px;
+        border-left-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Flecha 3 - Inferior derecha */
+    .arrow-3 {
+        width: 320px;
+        height: 6px;
+        top: 775px;
+        left: 925px;
+        transform: rotate(30deg);
+        transform-origin: left center;
+    }
+    
+    .arrow-3::before {
+        width: 100%;
+        height: 6px;
+        top: 0;
+        left: 0;
+    }
+    
+    .arrow-3::after {
+        top: -9px;
+        right: -12px;
+        border-width: 6px 0 6px 12px;
+        border-left-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Flecha 4 - Hacia abajo */
+    .arrow-4 {
+        width: 6px;
+        height: 250px;
+        bottom: 330px;
+        left: calc(50% + 147px);
+        transform: translateX(-50%);
+    }
+    
+    .arrow-4::before {
+        width: 6px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .arrow-4::after {
+        bottom: -10px;
+        left: -6px;
+        border-width: 12px 9px 0 9px;
+        border-top-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Flecha 5 - Inferior izquierda */
+    .arrow-5 {
+        width: 320px;
+        height: 6px;
+        top: 775px;
+        left: 325px;
+        transform: rotate(-30deg);
+        transform-origin: right center;
+    }
+    
+    .arrow-5::before {
+        width: 100%;
+        height: 6px;
+        top: 0;
+        left: 0;
+    }
+    
+    .arrow-5::after {
+        top: -9px;
+        left: -12px;
+        border-width: 6px 12px 6px 0;
+        border-right-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Flecha 6 - Superior izquierda */
+    .arrow-6 {
+        width: 320px;
+        height: 6px;
+        top: 525px;
+        left: 325px;
+        transform: rotate(30deg);
+        transform-origin: right center;
+    }
+    
+    .arrow-6::before {
+        width: 100%;
+        height: 6px;
+        top: 0;
+        left: 0;
+    }
+    
+    .arrow-6::after {
+        top: -9px;
+        left: -12px;
+        border-width: 6px 12px 6px 0;
+        border-right-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
     .node-1 { 
-        top: 15px; /* SUBIDO AÚN MÁS - antes era 200px */
-        left: calc(900px - 150px); /* Centrado horizontalmente */
+        top: 15px;
+        left: calc(900px - 150px);
     }
     
     .node-2 { 
-        top: calc(800px - 275px - 150px); /* 375px */
-        left: calc(900px + 476px - 150px); /* 1226px */
+        top: calc(800px - 275px - 150px);
+        left: calc(900px + 476px - 150px);
     }
     
     .node-3 { 
-        top: calc(800px + 275px - 150px); /* 925px */
-        left: calc(900px + 476px - 150px); /* 1226px */
+        top: calc(800px + 275px - 150px);
+        left: calc(900px + 476px - 150px);
     }
     
     .node-4 { 
-        top: calc(800px + 550px - 150px); /* 1200px */
-        left: calc(900px - 150px); /* Centrado horizontalmente */
+        top: calc(800px + 550px - 150px);
+        left: calc(900px - 150px);
     }
     
     .node-5 { 
-        top: calc(800px + 275px - 150px); /* 925px */
-        left: calc(900px - 476px - 150px); /* 274px */
+        top: calc(800px + 275px - 150px);
+        left: calc(900px - 476px - 150px);
     }
     
     .node-6 { 
-        top: calc(800px - 275px - 150px); /* 375px */
-        left: calc(900px - 476px - 150px); /* 274px */
+        top: calc(800px - 275px - 150px);
+        left: calc(900px - 476px - 150px);
     }
     
     /* Panel de información */
@@ -364,16 +568,15 @@
         line-height: 1.6;
     }
     
-    /* Responsive */
+    /* Responsive - Ajustar flechas y posiciones */
     @media (max-width: 2000px) {
         .hexagon-diagram {
             width: 1600px;
             height: 1400px;
         }
         
-        /* Recalcular posiciones para nuevo tamaño */
         .node-1 { 
-            top: 20px; /* SUBIDO AÚN MÁS - antes era 180px */
+            top: 20px;
             left: calc(800px - 150px);
         }
         
@@ -401,6 +604,43 @@
             top: calc(700px - 250px - 150px);
             left: calc(800px - 433px - 150px);
         }
+        
+        /* Ajustar flechas para tamaño 1600px */
+        .arrow-1 {
+            height: 220px;
+            top: 300px;
+            left: calc(50% + 140px);
+        }
+        
+        .arrow-2 {
+            width: 280px;
+            top: 470px;
+            left: 830px;
+        }
+        
+        .arrow-3 {
+            width: 280px;
+            top: 690px;
+            left: 830px;
+        }
+        
+        .arrow-4 {
+            height: 220px;
+            bottom: 300px;
+            left: calc(50% + 140px);
+        }
+        
+        .arrow-5 {
+            width: 280px;
+            top: 690px;
+            left: 370px;
+        }
+        
+        .arrow-6 {
+            width: 280px;
+            top: 470px;
+            left: 370px;
+        }
     }
     
     @media (max-width: 1800px) {
@@ -415,7 +655,7 @@
         }
         
         .center-img {
-            width: 85%; /* Mantenemos el 85% en responsive */
+            width: 100%;
             height: 85%;
         }
         
@@ -424,15 +664,13 @@
             height: 280px;
         }
         
-        /* Ajustar tamaño del contenedor interno */
         .node-position {
             width: 280px;
             height: 280px;
         }
         
-        /* Recalcular posiciones */
         .node-1 { 
-            top: 20px; /* SUBIDO AÚN MÁS - antes era 160px */
+            top: 20px;
             left: calc(700px - 140px);
         }
         
@@ -460,6 +698,43 @@
             top: calc(600px - 225px - 140px);
             left: calc(700px - 390px - 140px);
         }
+        
+        /* Ajustar flechas para tamaño 1400px */
+        .arrow-1 {
+            height: 200px;
+            top: 280px;
+            left: calc(50% + 134px);
+        }
+        
+        .arrow-2 {
+            width: 250px;
+            top: 420px;
+            left: 730px;
+        }
+        
+        .arrow-3 {
+            width: 250px;
+            top: 620px;
+            left: 730px;
+        }
+        
+        .arrow-4 {
+            height: 200px;
+            bottom: 280px;
+            left: calc(50% + 134px);
+        }
+        
+        .arrow-5 {
+            width: 250px;
+            top: 620px;
+            left: 320px;
+        }
+        
+        .arrow-6 {
+            width: 250px;
+            top: 420px;
+            left: 320px;
+        }
     }
     
     @media (max-width: 1600px) {
@@ -474,7 +749,7 @@
         }
         
         .center-img {
-            width: 85%;
+            width: 100%;
             height: 85%;
         }
         
@@ -488,9 +763,8 @@
             height: 250px;
         }
         
-        /* Recalcular posiciones */
         .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 140px */
+            top: 40px;
             left: calc(600px - 125px);
         }
         
@@ -518,391 +792,17 @@
             top: calc(500px - 200px - 125px);
             left: calc(600px - 346px - 125px);
         }
+        
+        /* Ocultar flechas en pantallas más pequeñas para mantener limpieza */
+        .arrow {
+            display: none;
+        }
     }
     
+    /* Para pantallas más pequeñas, ocultamos las flechas */
     @media (max-width: 1400px) {
-        .hexagon-diagram {
-            width: 1000px;
-            height: 900px;
-        }
-        
-        .center-image {
-            width: 350px;
-            height: 350px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 220px;
-            height: 220px;
-        }
-        
-        .node-position {
-            width: 220px;
-            height: 220px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 120px */
-            left: calc(500px - 110px);
-        }
-        
-        .node-2 { 
-            top: calc(450px - 175px - 110px);
-            left: calc(500px + 303px - 110px);
-        }
-        
-        .node-3 { 
-            top: calc(450px + 175px - 110px);
-            left: calc(500px + 303px - 110px);
-        }
-        
-        .node-4 { 
-            top: calc(450px + 350px - 110px);
-            left: calc(500px - 110px);
-        }
-        
-        .node-5 { 
-            top: calc(450px + 175px - 110px);
-            left: calc(500px - 303px - 110px);
-        }
-        
-        .node-6 { 
-            top: calc(450px - 175px - 110px);
-            left: calc(500px - 303px - 110px);
-        }
-    }
-    
-    @media (max-width: 1200px) {
-        .hexagon-diagram {
-            width: 850px;
-            height: 800px;
-        }
-        
-        .center-image {
-            width: 300px;
-            height: 300px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .node-position {
-            width: 200px;
-            height: 200px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 100px */
-            left: calc(425px - 100px);
-        }
-        
-        .node-2 { 
-            top: calc(400px - 150px - 100px);
-            left: calc(425px + 260px - 100px);
-        }
-        
-        .node-3 { 
-            top: calc(400px + 150px - 100px);
-            left: calc(425px + 260px - 100px);
-        }
-        
-        .node-4 { 
-            top: calc(400px + 300px - 100px);
-            left: calc(425px - 100px);
-        }
-        
-        .node-5 { 
-            top: calc(400px + 150px - 100px);
-            left: calc(425px - 260px - 100px);
-        }
-        
-        .node-6 { 
-            top: calc(400px - 150px - 100px);
-            left: calc(425px - 260px - 100px);
-        }
-    }
-    
-    @media (max-width: 1000px) {
-        .hexagon-diagram {
-            width: 700px;
-            height: 700px;
-        }
-        
-        .center-image {
-            width: 250px;
-            height: 250px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .node-position {
-            width: 180px;
-            height: 180px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 30px; /* SUBIDO AÚN MÁS - antes era 90px */
-            left: calc(350px - 90px);
-        }
-        
-        .node-2 { 
-            top: calc(350px - 125px - 90px);
-            left: calc(350px + 217px - 90px);
-        }
-        
-        .node-3 { 
-            top: calc(350px + 125px - 90px);
-            left: calc(350px + 217px - 90px);
-        }
-        
-        .node-4 { 
-            top: calc(350px + 250px - 90px);
-            left: calc(350px - 90px);
-        }
-        
-        .node-5 { 
-            top: calc(350px + 125px - 90px);
-            left: calc(350px - 217px - 90px);
-        }
-        
-        .node-6 { 
-            top: calc(350px - 125px - 90px);
-            left: calc(350px - 217px - 90px);
-        }
-    }
-    
-    @media (max-width: 850px) {
-        .hexagon-diagram {
-            width: 600px;
-            height: 600px;
-        }
-        
-        .center-image {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 160px;
-            height: 160px;
-        }
-        
-        .node-position {
-            width: 160px;
-            height: 160px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 80px */
-            left: calc(300px - 80px);
-        }
-        
-        .node-2 { 
-            top: calc(300px - 100px - 80px);
-            left: calc(300px + 173px - 80px);
-        }
-        
-        .node-3 { 
-            top: calc(300px + 100px - 80px);
-            left: calc(300px + 173px - 80px);
-        }
-        
-        .node-4 { 
-            top: calc(300px + 200px - 80px);
-            left: calc(300px - 80px);
-        }
-        
-        .node-5 { 
-            top: calc(300px + 100px - 80px);
-            left: calc(300px - 173px - 80px);
-        }
-        
-        .node-6 { 
-            top: calc(300px - 100px - 80px);
-            left: calc(300px - 173px - 80px);
-        }
-    }
-    
-    @media (max-width: 700px) {
-        .diagram-container {
-            min-height: 90vh;
-        }
-        
-        .hexagon-diagram {
-            width: 100%;
-            height: 550px;
-            max-width: 500px;
-        }
-        
-        .center-image {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 140px;
-            height: 140px;
-        }
-        
-        .node-position {
-            width: 140px;
-            height: 140px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 70px */
-            left: calc(250px - 70px);
-        }
-        
-        .node-2 { 
-            top: calc(275px - 85px - 70px);
-            left: calc(250px + 147px - 70px);
-        }
-        
-        .node-3 { 
-            top: calc(275px + 85px - 70px);
-            left: calc(250px + 147px - 70px);
-        }
-        
-        .node-4 { 
-            top: calc(275px + 170px - 70px);
-            left: calc(250px - 70px);
-        }
-        
-        .node-5 { 
-            top: calc(275px + 85px - 70px);
-            left: calc(250px - 147px - 70px);
-        }
-        
-        .node-6 { 
-            top: calc(275px - 85px - 70px);
-            left: calc(250px - 147px - 70px);
-        }
-        
-        .info-panel {
-            width: 95%;
-            padding: 2rem;
-            max-height: 85vh;
-        }
-        
-        .info-title {
-            font-size: 2rem;
-        }
-        
-        .info-subtitle {
-            font-size: 1.3rem;
-        }
-        
-        .info-content p {
-            font-size: 1.1rem;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .hexagon-diagram {
-            height: 500px;
-        }
-        
-        .center-image {
-            width: 150px;
-            height: 150px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 120px;
-            height: 120px;
-        }
-        
-        .node-position {
-            width: 120px;
-            height: 120px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 60px */
-            left: calc(250px - 60px);
-        }
-        
-        .node-2 { 
-            top: calc(250px - 65px - 60px);
-            left: calc(250px + 113px - 60px);
-        }
-        
-        .node-3 { 
-            top: calc(250px + 65px - 60px);
-            left: calc(250px + 113px - 60px);
-        }
-        
-        .node-4 { 
-            top: calc(250px + 130px - 60px);
-            left: calc(250px - 60px);
-        }
-        
-        .node-5 { 
-            top: calc(250px + 65px - 60px);
-            left: calc(250px - 113px - 60px);
-        }
-        
-        .node-6 { 
-            top: calc(250px - 65px - 60px);
-            left: calc(250px - 113px - 60px);
-        }
-        
-        .info-panel {
-            padding: 1.5rem;
-        }
-        
-        .info-title {
-            font-size: 1.8rem;
-        }
-        
-        .close-btn {
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            width: 40px;
-            height: 40px;
+        .arrow {
+            display: none;
         }
     }
 </style>
