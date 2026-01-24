@@ -19,6 +19,8 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
+                <div class="hover-overlay"></div>
+                <div class="hover-text">Click Here</div>
             </div>
         </div>
         
@@ -27,6 +29,8 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(56, 142, 60, 0.4) 0%, transparent 70%);"></div>
+                <div class="hover-overlay"></div>
+                <div class="hover-text">Click Here</div>
             </div>
         </div>
         
@@ -35,6 +39,8 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(245, 124, 0, 0.4) 0%, transparent 70%);"></div>
+                <div class="hover-overlay"></div>
+                <div class="hover-text">Click Here</div>
             </div>
         </div>
         
@@ -43,6 +49,8 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
+                <div class="hover-overlay"></div>
+                <div class="hover-text">Click Here</div>
             </div>
         </div>
         
@@ -51,6 +59,8 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
+                <div class="hover-overlay"></div>
+                <div class="hover-text">Click Here</div>
             </div>
         </div>
         
@@ -59,6 +69,8 @@
             <div class="node-position">
                 <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
                 <div class="node-glow" style="background: radial-gradient(circle, rgba(0, 121, 107, 0.4) 0%, transparent 70%);"></div>
+                <div class="hover-overlay"></div>
+                <div class="hover-text">Click Here</div>
             </div>
         </div>
     </div>
@@ -146,7 +158,7 @@
         width: 100%;  /* AGRANDADA de 70% a 85% */
         height: 85%; /* AGRANDADA de 70% a 85% */
         object-fit: contain;
-        border-radius: ;
+        border-radius: none;
         position: relative;
         z-index: 2;
     }
@@ -187,8 +199,58 @@
         position: relative;
         z-index: 2;
         border: 3px solid;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
     }
+    
+    /* Nuevos estilos para el efecto hover solicitado */
+    .hover-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: transparent;
+        z-index: 3;
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .hover-text {
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        z-index: 4;
+        opacity: 0;
+        transition: all 0.3s ease;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        letter-spacing: 1px;
+        padding: 0 20px;
+    }
+    
+    /* Efecto hover: opacar la imagen y mostrar texto */
+    .node-position:hover .node-img {
+        filter: brightness(0.4) opacity(0.7);
+    }
+    
+    .node-position:hover .hover-overlay {
+        opacity: 0.9;
+    }
+    
+    .node-position:hover .hover-text {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    /* Colores específicos para cada overlay */
+    .node-1 .hover-overlay { background-color: #1976d2; }
+    .node-2 .hover-overlay { background-color: #388e3c; }
+    .node-3 .hover-overlay { background-color: #f57c00; }
+    .node-4 .hover-overlay { background-color: #d32f2f; }
+    .node-5 .hover-overlay { background-color: #7b1fa2; }
+    .node-6 .hover-overlay { background-color: #00796b; }
     
     .node-position:hover .node-img {
         transform: scale(1.05);
@@ -430,6 +492,11 @@
             height: 280px;
         }
         
+        /* Ajustar tamaño del texto hover */
+        .hover-text {
+            font-size: 1.8rem;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 20px; /* SUBIDO AÚN MÁS - antes era 160px */
@@ -486,6 +553,10 @@
         .node-position {
             width: 250px;
             height: 250px;
+        }
+        
+        .hover-text {
+            font-size: 1.7rem;
         }
         
         /* Recalcular posiciones */
@@ -546,6 +617,10 @@
             height: 220px;
         }
         
+        .hover-text {
+            font-size: 1.6rem;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 40px; /* SUBIDO AÚN MÁS - antes era 120px */
@@ -602,6 +677,10 @@
         .node-position {
             width: 200px;
             height: 200px;
+        }
+        
+        .hover-text {
+            font-size: 1.5rem;
         }
         
         /* Recalcular posiciones */
@@ -662,6 +741,10 @@
             height: 180px;
         }
         
+        .hover-text {
+            font-size: 1.4rem;
+        }
+        
         /* Recalcular posiciones */
         .node-1 { 
             top: 30px; /* SUBIDO AÚN MÁS - antes era 90px */
@@ -718,6 +801,10 @@
         .node-position {
             width: 160px;
             height: 160px;
+        }
+        
+        .hover-text {
+            font-size: 1.3rem;
         }
         
         /* Recalcular posiciones */
@@ -781,6 +868,10 @@
         .node-position {
             width: 140px;
             height: 140px;
+        }
+        
+        .hover-text {
+            font-size: 1.2rem;
         }
         
         /* Recalcular posiciones */
@@ -856,6 +947,11 @@
         .node-position {
             width: 120px;
             height: 120px;
+        }
+        
+        .hover-text {
+            font-size: 1rem;
+            padding: 0 15px;
         }
         
         /* Recalcular posiciones */
