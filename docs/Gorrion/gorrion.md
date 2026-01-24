@@ -94,11 +94,11 @@
         padding: 2rem 0;
     }
     
-    /* Contenedor hexagonal - MÁS GRANDE PARA MÁS SEPARACIÓN */
+    /* Contenedor hexagonal - MUCHO MÁS GRANDE PARA SEPARACIÓN EXTREMA */
     .hexagon-diagram {
         position: relative;
-        width: 1800px;  /* MÁS ANCHO - aumentado de 1600px */
-        height: 1600px; /* MÁS ALTO - aumentado de 1400px */
+        width: 2200px;  /* MUCHO MÁS ANCHO */
+        height: 2000px; /* MUCHO MÁS ALTO */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -135,7 +135,7 @@
         z-index: 2;
     }
     
-    /* Nodos - MÁS GRANDES Y MÁS SEPARADOS */
+    /* Nodos - MANTENEMOS EL TAMAÑO PERO LOS ALEJAMOS MÁS */
     .hexagon-node {
         position: absolute;
         width: 300px;
@@ -196,37 +196,38 @@
         filter: blur(20px);
     }
     
-    /* POSICIONES - HEXÁGONO MUCHO MÁS GRANDE Y MUCHO MÁS SEPARADO */
+    /* POSICIONES - MUCHO MÁS ALEJADAS DEL CENTRO */
+    /* Calculamos para que haya al menos 200px de separación entre centro y nodos */
     .node-1 { 
-        top: 100px;  /* aumentado de 80px */
+        top: 50px;  /* MUY ALEJADO DEL CENTRO */
         left: 50%; 
         transform: translateX(-50%);
     }
     
     .node-2 { 
-        top: 320px;  /* aumentado de 280px */
-        right: 450px; /* aumentado de 380px - MUCHO MÁS SEPARADO */
+        top: 250px;  /* MUY ALEJADO DEL CENTRO */
+        right: 650px; /* MUCHO MÁS ALEJADO - aumentado drásticamente */
     }
     
     .node-3 { 
-        top: 700px;  /* aumentado de 600px */
-        right: 360px; /* aumentado de 300px - MUCHO MÁS SEPARADO */
+        top: 850px;  /* MUY ALEJADO DEL CENTRO */
+        right: 500px; /* MUCHO MÁS ALEJADO - aumentado drásticamente */
     }
     
     .node-4 { 
-        bottom: 100px; /* aumentado de 80px */
+        bottom: 50px; /* MUY ALEJADO DEL CENTRO */
         left: 50%; 
         transform: translateX(-50%);
     }
     
     .node-5 { 
-        top: 700px;  /* aumentado de 600px */
-        left: 360px;  /* aumentado de 300px - MUCHO MÁS SEPARADO */
+        top: 850px;  /* MUY ALEJADO DEL CENTRO */
+        left: 500px;  /* MUCHO MÁS ALEJADO - aumentado drásticamente */
     }
     
     .node-6 { 
-        top: 320px;  /* aumentado de 280px */
-        left: 450px;  /* aumentado de 380px - MUCHO MÁS SEPARADO */
+        top: 250px;  /* MUY ALEJADO DEL CENTRO */
+        left: 650px;  /* MUCHO MÁS ALEJADO - aumentado drásticamente */
     }
     
     /* Panel de información */
@@ -340,24 +341,38 @@
     }
     
     /* Responsive */
+    @media (max-width: 2400px) {
+        .hexagon-diagram {
+            width: 2000px;
+            height: 1800px;
+        }
+        
+        .node-1 { top: 45px; }
+        .node-2 { top: 230px; right: 580px; }
+        .node-3 { top: 780px; right: 450px; }
+        .node-4 { bottom: 45px; }
+        .node-5 { top: 780px; left: 450px; }
+        .node-6 { top: 230px; left: 580px; }
+    }
+    
+    @media (max-width: 2200px) {
+        .hexagon-diagram {
+            width: 1800px;
+            height: 1600px;
+        }
+        
+        .node-1 { top: 40px; }
+        .node-2 { top: 210px; right: 520px; }
+        .node-3 { top: 710px; right: 400px; }
+        .node-4 { bottom: 40px; }
+        .node-5 { top: 710px; left: 400px; }
+        .node-6 { top: 210px; left: 520px; }
+    }
+    
     @media (max-width: 2000px) {
         .hexagon-diagram {
             width: 1600px;
             height: 1400px;
-        }
-        
-        .node-1 { top: 90px; }
-        .node-2 { top: 290px; right: 400px; }
-        .node-3 { top: 620px; right: 320px; }
-        .node-4 { bottom: 90px; }
-        .node-5 { top: 620px; left: 320px; }
-        .node-6 { top: 290px; left: 400px; }
-    }
-    
-    @media (max-width: 1800px) {
-        .hexagon-diagram {
-            width: 1500px;
-            height: 1300px;
         }
         
         .center-image {
@@ -370,18 +385,18 @@
             height: 280px;
         }
         
-        .node-1 { top: 80px; }
-        .node-2 { top: 270px; right: 370px; }
-        .node-3 { top: 580px; right: 300px; }
-        .node-4 { bottom: 80px; }
-        .node-5 { top: 580px; left: 300px; }
-        .node-6 { top: 270px; left: 370px; }
+        .node-1 { top: 35px; }
+        .node-2 { top: 190px; right: 460px; }
+        .node-3 { top: 640px; right: 360px; }
+        .node-4 { bottom: 35px; }
+        .node-5 { top: 640px; left: 360px; }
+        .node-6 { top: 190px; left: 460px; }
     }
     
-    @media (max-width: 1600px) {
+    @media (max-width: 1800px) {
         .hexagon-diagram {
-            width: 1400px;
-            height: 1200px;
+            width: 1500px;
+            height: 1300px;
         }
         
         .center-image {
@@ -394,12 +409,36 @@
             height: 260px;
         }
         
-        .node-1 { top: 70px; }
-        .node-2 { top: 250px; right: 340px; }
-        .node-3 { top: 540px; right: 280px; }
-        .node-4 { bottom: 70px; }
-        .node-5 { top: 540px; left: 280px; }
-        .node-6 { top: 250px; left: 340px; }
+        .node-1 { top: 30px; }
+        .node-2 { top: 170px; right: 430px; }
+        .node-3 { top: 590px; right: 330px; }
+        .node-4 { bottom: 30px; }
+        .node-5 { top: 590px; left: 330px; }
+        .node-6 { top: 170px; left: 430px; }
+    }
+    
+    @media (max-width: 1600px) {
+        .hexagon-diagram {
+            width: 1400px;
+            height: 1200px;
+        }
+        
+        .center-image {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .hexagon-node {
+            width: 240px;
+            height: 240px;
+        }
+        
+        .node-1 { top: 25px; }
+        .node-2 { top: 150px; right: 400px; }
+        .node-3 { top: 540px; right: 310px; }
+        .node-4 { bottom: 25px; }
+        .node-5 { top: 540px; left: 310px; }
+        .node-6 { top: 150px; left: 400px; }
     }
     
     @media (max-width: 1400px) {
@@ -409,21 +448,21 @@
         }
         
         .center-image {
-            width: 380px;
-            height: 380px;
+            width: 360px;
+            height: 360px;
         }
         
         .hexagon-node {
-            width: 240px;
-            height: 240px;
+            width: 220px;
+            height: 220px;
         }
         
-        .node-1 { top: 60px; }
-        .node-2 { top: 230px; right: 300px; }
-        .node-3 { top: 490px; right: 240px; }
-        .node-4 { bottom: 60px; }
-        .node-5 { top: 490px; left: 240px; }
-        .node-6 { top: 230px; left: 300px; }
+        .node-1 { top: 20px; }
+        .node-2 { top: 130px; right: 350px; }
+        .node-3 { top: 490px; right: 270px; }
+        .node-4 { bottom: 20px; }
+        .node-5 { top: 490px; left: 270px; }
+        .node-6 { top: 130px; left: 350px; }
     }
     
     @media (max-width: 1200px) {
@@ -438,16 +477,16 @@
         }
         
         .hexagon-node {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
         }
         
-        .node-1 { top: 50px; }
-        .node-2 { top: 200px; right: 250px; }
-        .node-3 { top: 420px; right: 200px; }
-        .node-4 { bottom: 50px; }
-        .node-5 { top: 420px; left: 200px; }
-        .node-6 { top: 200px; left: 250px; }
+        .node-1 { top: 15px; }
+        .node-2 { top: 110px; right: 290px; }
+        .node-3 { top: 420px; right: 230px; }
+        .node-4 { bottom: 15px; }
+        .node-5 { top: 420px; left: 230px; }
+        .node-6 { top: 110px; left: 290px; }
     }
     
     @media (max-width: 1000px) {
@@ -462,16 +501,16 @@
         }
         
         .hexagon-node {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
         }
         
-        .node-1 { top: 40px; }
-        .node-2 { top: 180px; right: 210px; }
-        .node-3 { top: 380px; right: 170px; }
-        .node-4 { bottom: 40px; }
-        .node-5 { top: 380px; left: 170px; }
-        .node-6 { top: 180px; left: 210px; }
+        .node-1 { top: 10px; }
+        .node-2 { top: 100px; right: 240px; }
+        .node-3 { top: 370px; right: 190px; }
+        .node-4 { bottom: 10px; }
+        .node-5 { top: 370px; left: 190px; }
+        .node-6 { top: 100px; left: 240px; }
     }
     
     @media (max-width: 850px) {
@@ -486,16 +525,16 @@
         }
         
         .hexagon-node {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
         }
         
-        .node-1 { top: 35px; }
-        .node-2 { top: 160px; right: 170px; }
-        .node-3 { top: 340px; right: 140px; }
-        .node-4 { bottom: 35px; }
-        .node-5 { top: 340px; left: 140px; }
-        .node-6 { top: 160px; left: 170px; }
+        .node-1 { top: 8px; }
+        .node-2 { top: 90px; right: 190px; }
+        .node-3 { top: 320px; right: 150px; }
+        .node-4 { bottom: 8px; }
+        .node-5 { top: 320px; left: 150px; }
+        .node-6 { top: 90px; left: 190px; }
     }
     
     @media (max-width: 700px) {
@@ -515,16 +554,16 @@
         }
         
         .hexagon-node {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
         }
         
-        .node-1 { top: 30px; }
-        .node-2 { top: 140px; right: 140px; }
-        .node-3 { top: 300px; right: 110px; }
-        .node-4 { bottom: 30px; }
-        .node-5 { top: 300px; left: 110px; }
-        .node-6 { top: 140px; left: 140px; }
+        .node-1 { top: 5px; }
+        .node-2 { top: 80px; right: 150px; }
+        .node-3 { top: 280px; right: 120px; }
+        .node-4 { bottom: 5px; }
+        .node-5 { top: 280px; left: 120px; }
+        .node-6 { top: 80px; left: 150px; }
         
         .info-panel {
             width: 95%;
@@ -556,16 +595,16 @@
         }
         
         .hexagon-node {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
         }
         
-        .node-1 { top: 25px; }
-        .node-2 { top: 120px; right: 100px; }
-        .node-3 { top: 260px; right: 80px; }
-        .node-4 { bottom: 25px; }
-        .node-5 { top: 260px; left: 80px; }
-        .node-6 { top: 120px; left: 100px; }
+        .node-1 { top: 3px; }
+        .node-2 { top: 70px; right: 110px; }
+        .node-3 { top: 240px; right: 90px; }
+        .node-4 { bottom: 3px; }
+        .node-5 { top: 240px; left: 90px; }
+        .node-6 { top: 70px; left: 110px; }
         
         .info-panel {
             padding: 1.5rem;
