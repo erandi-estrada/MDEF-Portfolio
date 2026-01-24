@@ -269,27 +269,38 @@
             <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center" class="center-img">
         </div>
 
-        <!-- Flechas entre nodos - CORREGIDAS -->
+        <!-- Flechas entre nodos - EN MEDIO DE LOS CÍRCULOS -->
+        <!-- Flecha 1-2 (45° diagonal derecha arriba) -->
         <div class="arrow arrow-1-2">
             <div class="arrow-line"></div>
             <div class="arrow-head"></div>
         </div>
+
+        <!-- Flecha 2-3 (vertical hacia abajo) -->
         <div class="arrow arrow-2-3">
             <div class="arrow-line"></div>
             <div class="arrow-head"></div>
         </div>
+
+        <!-- Flecha 3-4 (45° diagonal izquierda abajo) -->
         <div class="arrow arrow-3-4">
             <div class="arrow-line"></div>
             <div class="arrow-head"></div>
         </div>
+
+        <!-- Flecha 4-5 (45° diagonal izquierda arriba) -->
         <div class="arrow arrow-4-5">
             <div class="arrow-line"></div>
             <div class="arrow-head"></div>
         </div>
+
+        <!-- Flecha 5-6 (vertical hacia arriba) -->
         <div class="arrow arrow-5-6">
             <div class="arrow-line"></div>
             <div class="arrow-head"></div>
         </div>
+
+        <!-- Flecha 6-1 (45° diagonal derecha abajo) -->
         <div class="arrow arrow-6-1">
             <div class="arrow-line"></div>
             <div class="arrow-head"></div>
@@ -444,18 +455,19 @@
         z-index: 2;
     }
 
-    /* Flechas entre nodos - ESTILOS CORREGIDOS */
+    /* Flechas entre nodos - EN MEDIO DE LOS CÍRCULOS */
     .arrow {
         position: absolute;
-        z-index: 15; /* Mayor que el z-index de los círculos */
+        z-index: 25; /* MAYOR que los círculos (20) */
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
-    /* Línea de la flecha (la "colita") */
+    /* Línea de la flecha */
     .arrow-line {
-        width: 120px; /* Longitud de la línea */
-        height: 4px;
+        width: 200px; /* Más larga para estar en medio */
+        height: 3px;
         background: #666;
         opacity: 0.7;
         position: relative;
@@ -463,65 +475,66 @@
 
     /* Cabeza de la flecha */
     .arrow-head {
+        position: absolute;
         width: 0;
         height: 0;
-        border-left: 12px solid #666;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
+        border-left: 10px solid #666;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
         opacity: 0.7;
-        position: relative;
-        margin-left: -1px; /* Para que se conecte bien con la línea */
+        right: -10px; /* Se posiciona al final de la línea */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    /* Posición y rotación de cada flecha - CORREGIDAS */
-    /* Todas las flechas parten del centro de un nodo y apuntan al siguiente */
+    /* POSICIONES CORREGIDAS - EN EL PUNTO MEDIO ENTRE CÍRCULOS */
 
+    /* Flecha 1-2: Diagonal 45° derecha arriba */
     .arrow-1-2 {
-        /* Del nodo 1 al nodo 2 */
-        top: calc(15px + 150px); /* Centro vertical del nodo 1 */
-        left: calc(900px); /* Centro horizontal del nodo 1 */
-        transform: translate(75px, 0) rotate(60deg);
-        transform-origin: left center;
+        /* Punto medio entre nodo 1 y nodo 2 */
+        top: calc(15px + 150px + 60px); /* Entre los dos nodos */
+        left: calc(900px - 150px + 150px + 60px); /* Entre los dos nodos */
+        transform: rotate(60deg); /* 60° para el hexágono */
     }
 
+    /* Flecha 2-3: Vertical hacia abajo */
     .arrow-2-3 {
-        /* Del nodo 2 al nodo 3 */
-        top: calc(800px - 275px - 150px + 150px); /* Centro vertical del nodo 2 */
+        /* Punto medio entre nodo 2 y nodo 3 */
+        top: calc(800px - 275px - 150px + 150px + 75px); /* Entre los dos nodos */
         left: calc(900px + 476px - 150px + 150px); /* Centro horizontal del nodo 2 */
-        transform: translate(0, 112.5px) rotate(90deg);
-        transform-origin: center top;
+        transform: rotate(90deg);
     }
 
+    /* Flecha 3-4: Diagonal 45° izquierda abajo */
     .arrow-3-4 {
-        /* Del nodo 3 al nodo 4 */
-        top: calc(800px + 275px - 150px + 150px); /* Centro vertical del nodo 3 */
-        left: calc(900px + 476px - 150px + 150px); /* Centro horizontal del nodo 3 */
-        transform: translate(-75px, 112.5px) rotate(120deg);
-        transform-origin: right center;
+        /* Punto medio entre nodo 3 y nodo 4 */
+        top: calc(800px + 275px - 150px + 150px - 60px); /* Entre los dos nodos */
+        left: calc(900px + 476px - 150px + 150px - 60px); /* Entre los dos nodos */
+        transform: rotate(120deg); /* 120° para el hexágono */
     }
 
+    /* Flecha 4-5: Diagonal 45° izquierda arriba */
     .arrow-4-5 {
-        /* Del nodo 4 al nodo 5 */
-        top: calc(800px + 550px - 150px + 150px); /* Centro vertical del nodo 4 */
-        left: calc(900px); /* Centro horizontal del nodo 4 */
-        transform: translate(-150px, 0) rotate(180deg);
-        transform-origin: right center;
+        /* Punto medio entre nodo 4 y nodo 5 */
+        top: calc(800px + 550px - 150px + 150px - 60px); /* Entre los dos nodos */
+        left: calc(900px - 150px - 60px); /* Entre los dos nodos */
+        transform: rotate(180deg); /* 180° para el hexágono */
     }
 
+    /* Flecha 5-6: Vertical hacia arriba */
     .arrow-5-6 {
-        /* Del nodo 5 al nodo 6 */
-        top: calc(800px + 275px - 150px + 150px); /* Centro vertical del nodo 5 */
+        /* Punto medio entre nodo 5 y nodo 6 */
+        top: calc(800px + 275px - 150px + 150px - 75px); /* Entre los dos nodos */
         left: calc(900px - 476px - 150px + 150px); /* Centro horizontal del nodo 5 */
-        transform: translate(-75px, -112.5px) rotate(240deg);
-        transform-origin: right center;
+        transform: rotate(270deg); /* 270° = -90° */
     }
 
+    /* Flecha 6-1: Diagonal 45° derecha abajo */
     .arrow-6-1 {
-        /* Del nodo 6 al nodo 1 */
-        top: calc(800px - 275px - 150px + 150px); /* Centro vertical del nodo 6 */
-        left: calc(900px - 476px - 150px + 150px); /* Centro horizontal del nodo 6 */
-        transform: translate(0, -112.5px) rotate(270deg);
-        transform-origin: center bottom;
+        /* Punto medio entre nodo 6 y nodo 1 */
+        top: calc(800px - 275px - 150px + 150px + 60px); /* Entre los dos nodos */
+        left: calc(900px - 476px - 150px + 150px + 60px); /* Entre los dos nodos */
+        transform: rotate(300deg); /* 300° = -60° para el hexágono */
     }
 
     /* Nodos - ESTRUCTURA CORREGIDA */
@@ -530,7 +543,6 @@
         width: 300px;
         height: 300px;
         z-index: 20;
-        /* Posicionamiento absoluto en lugar de transform */
     }
 
     /* Contenedor para el efecto hover - separado del posicionamiento */
@@ -549,7 +561,7 @@
     /* EFECTO HOVER CORREGIDO - sin conflicto con posicionamiento */
     .node-position:hover {
         transform: scale(1.15);
-        z-index: 30;
+        z-index: 30; /* Mayor que las flechas cuando hay hover */
     }
 
     .node-img {
@@ -643,38 +655,34 @@
     }
 
     /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
-    /* Radio aumentado a 550px para más separación */
-    /* Centro en (900px, 800px) del contenedor de 1800x1600 */
-    /* NODO 1 SUBIDO AÚN MÁS - cambiado de 200px a 150px */
-
     .node-1 { 
-        top: 15px; /* SUBIDO AÚN MÁS - antes era 200px */
-        left: calc(900px - 150px); /* Centrado horizontalmente */
+        top: 15px;
+        left: calc(900px - 150px);
     }
 
     .node-2 { 
-        top: calc(800px - 275px - 150px); /* 375px */
-        left: calc(900px + 476px - 150px); /* 1226px */
+        top: calc(800px - 275px - 150px);
+        left: calc(900px + 476px - 150px);
     }
 
     .node-3 { 
-        top: calc(800px + 275px - 150px); /* 925px */
-        left: calc(900px + 476px - 150px); /* 1226px */
+        top: calc(800px + 275px - 150px);
+        left: calc(900px + 476px - 150px);
     }
 
     .node-4 { 
-        top: calc(800px + 550px - 150px); /* 1200px */
-        left: calc(900px - 150px); /* Centrado horizontalmente */
+        top: calc(800px + 550px - 150px);
+        left: calc(900px - 150px);
     }
 
     .node-5 { 
-        top: calc(800px + 275px - 150px); /* 925px */
-        left: calc(900px - 476px - 150px); /* 274px */
+        top: calc(800px + 275px - 150px);
+        left: calc(900px - 476px - 150px);
     }
 
     .node-6 { 
-        top: calc(800px - 275px - 150px); /* 375px */
-        left: calc(900px - 476px - 150px); /* 274px */
+        top: calc(800px - 275px - 150px);
+        left: calc(900px - 476px - 150px);
     }
 
     /* Panel de información */
@@ -796,44 +804,38 @@
 
         /* Ajustar posiciones de flechas */
         .arrow-1-2 {
-            top: calc(20px + 150px);
-            left: calc(800px);
-            transform: translate(75px, 0) rotate(60deg);
+            top: calc(20px + 150px + 60px);
+            left: calc(800px - 150px + 150px + 60px);
         }
 
         .arrow-2-3 {
-            top: calc(700px - 250px - 150px + 150px);
+            top: calc(700px - 250px - 150px + 150px + 75px);
             left: calc(800px + 433px - 150px + 150px);
-            transform: translate(0, 112.5px) rotate(90deg);
         }
 
         .arrow-3-4 {
-            top: calc(700px + 250px - 150px + 150px);
-            left: calc(800px + 433px - 150px + 150px);
-            transform: translate(-75px, 112.5px) rotate(120deg);
+            top: calc(700px + 250px - 150px + 150px - 60px);
+            left: calc(800px + 433px - 150px + 150px - 60px);
         }
 
         .arrow-4-5 {
-            top: calc(700px + 500px - 150px + 150px);
-            left: calc(800px);
-            transform: translate(-150px, 0) rotate(180deg);
+            top: calc(700px + 500px - 150px + 150px - 60px);
+            left: calc(800px - 150px - 60px);
         }
 
         .arrow-5-6 {
-            top: calc(700px + 250px - 150px + 150px);
+            top: calc(700px + 250px - 150px + 150px - 75px);
             left: calc(800px - 433px - 150px + 150px);
-            transform: translate(-75px, -112.5px) rotate(240deg);
         }
 
         .arrow-6-1 {
-            top: calc(700px - 250px - 150px + 150px);
-            left: calc(800px - 433px - 150px + 150px);
-            transform: translate(0, -112.5px) rotate(270deg);
+            top: calc(700px - 250px - 150px + 150px + 60px);
+            left: calc(800px - 433px - 150px + 150px + 60px);
         }
 
-        /* Recalcular posiciones para nuevo tamaño */
+        /* Recalcular posiciones de nodos */
         .node-1 { 
-            top: 20px; /* SUBIDO AÚN MÁS - antes era 180px */
+            top: 20px;
             left: calc(800px - 150px);
         }
 
@@ -875,7 +877,7 @@
         }
 
         .center-img {
-            width: 85%; /* Mantenemos el 85% en responsive */
+            width: 85%;
             height: 85%;
         }
 
@@ -884,69 +886,55 @@
             height: 280px;
         }
 
-        /* Ajustar tamaño del contenedor interno */
         .node-position {
             width: 280px;
             height: 280px;
         }
 
-        /* Ajustar tamaño del texto hover */
         .hover-text {
             font-size: 1.8rem;
         }
 
         /* Ajustar tamaño de flechas */
         .arrow-line {
-            width: 110px;
+            width: 180px;
             height: 3px;
-        }
-
-        .arrow-head {
-            border-left: 10px solid #666;
-            border-top: 7px solid transparent;
-            border-bottom: 7px solid transparent;
         }
 
         /* Ajustar posiciones de flechas */
         .arrow-1-2 {
-            top: calc(20px + 140px);
-            left: calc(700px);
-            transform: translate(70px, 0) rotate(60deg);
+            top: calc(20px + 140px + 60px);
+            left: calc(700px - 140px + 140px + 60px);
         }
 
         .arrow-2-3 {
-            top: calc(600px - 225px - 140px + 140px);
+            top: calc(600px - 225px - 140px + 140px + 75px);
             left: calc(700px + 390px - 140px + 140px);
-            transform: translate(0, 105px) rotate(90deg);
         }
 
         .arrow-3-4 {
-            top: calc(600px + 225px - 140px + 140px);
-            left: calc(700px + 390px - 140px + 140px);
-            transform: translate(-70px, 105px) rotate(120deg);
+            top: calc(600px + 225px - 140px + 140px - 60px);
+            left: calc(700px + 390px - 140px + 140px - 60px);
         }
 
         .arrow-4-5 {
-            top: calc(600px + 450px - 140px + 140px);
-            left: calc(700px);
-            transform: translate(-140px, 0) rotate(180deg);
+            top: calc(600px + 450px - 140px + 140px - 60px);
+            left: calc(700px - 140px - 60px);
         }
 
         .arrow-5-6 {
-            top: calc(600px + 225px - 140px + 140px);
+            top: calc(600px + 225px - 140px + 140px - 75px);
             left: calc(700px - 390px - 140px + 140px);
-            transform: translate(-70px, -105px) rotate(240deg);
         }
 
         .arrow-6-1 {
-            top: calc(600px - 225px - 140px + 140px);
-            left: calc(700px - 390px - 140px + 140px);
-            transform: translate(0, -105px) rotate(270deg);
+            top: calc(600px - 225px - 140px + 140px + 60px);
+            left: calc(700px - 390px - 140px + 140px + 60px);
         }
 
-        /* Recalcular posiciones */
+        /* Recalcular posiciones de nodos */
         .node-1 { 
-            top: 20px; /* SUBIDO AÚN MÁS - antes era 160px */
+            top: 20px;
             left: calc(700px - 140px);
         }
 
@@ -1008,56 +996,51 @@
 
         /* Ajustar tamaño de flechas */
         .arrow-line {
-            width: 100px;
-            height: 3px;
+            width: 160px;
+            height: 2px;
         }
 
         .arrow-head {
-            border-left: 9px solid #666;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
+            border-left: 8px solid #666;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            right: -8px;
         }
 
         /* Ajustar posiciones de flechas */
         .arrow-1-2 {
-            top: calc(40px + 125px);
-            left: calc(600px);
-            transform: translate(62.5px, 0) rotate(60deg);
+            top: calc(40px + 125px + 50px);
+            left: calc(600px - 125px + 125px + 50px);
         }
 
         .arrow-2-3 {
-            top: calc(500px - 200px - 125px + 125px);
+            top: calc(500px - 200px - 125px + 125px + 62.5px);
             left: calc(600px + 346px - 125px + 125px);
-            transform: translate(0, 93.75px) rotate(90deg);
         }
 
         .arrow-3-4 {
-            top: calc(500px + 200px - 125px + 125px);
-            left: calc(600px + 346px - 125px + 125px);
-            transform: translate(-62.5px, 93.75px) rotate(120deg);
+            top: calc(500px + 200px - 125px + 125px - 50px);
+            left: calc(600px + 346px - 125px + 125px - 50px);
         }
 
         .arrow-4-5 {
-            top: calc(500px + 400px - 125px + 125px);
-            left: calc(600px);
-            transform: translate(-125px, 0) rotate(180deg);
+            top: calc(500px + 400px - 125px + 125px - 50px);
+            left: calc(600px - 125px - 50px);
         }
 
         .arrow-5-6 {
-            top: calc(500px + 200px - 125px + 125px);
+            top: calc(500px + 200px - 125px + 125px - 62.5px);
             left: calc(600px - 346px - 125px + 125px);
-            transform: translate(-62.5px, -93.75px) rotate(240deg);
         }
 
         .arrow-6-1 {
-            top: calc(500px - 200px - 125px + 125px);
-            left: calc(600px - 346px - 125px + 125px);
-            transform: translate(0, -93.75px) rotate(270deg);
+            top: calc(500px - 200px - 125px + 125px + 50px);
+            left: calc(600px - 346px - 125px + 125px + 50px);
         }
 
-        /* Recalcular posiciones */
+        /* Recalcular posiciones de nodos */
         .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 140px */
+            top: 40px;
             left: calc(600px - 125px);
         }
 
@@ -1119,56 +1102,25 @@
 
         /* Ajustar tamaño de flechas */
         .arrow-line {
-            width: 90px;
+            width: 140px;
             height: 2px;
         }
 
         .arrow-head {
-            border-left: 8px solid #666;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
+            border-left: 7px solid #666;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            right: -7px;
         }
 
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(40px + 110px);
-            left: calc(500px);
-            transform: translate(55px, 0) rotate(60deg);
+        /* Ocultar flechas en pantallas medianas/pequeñas */
+        .arrow {
+            display: none;
         }
 
-        .arrow-2-3 {
-            top: calc(450px - 175px - 110px + 110px);
-            left: calc(500px + 303px - 110px + 110px);
-            transform: translate(0, 82.5px) rotate(90deg);
-        }
-
-        .arrow-3-4 {
-            top: calc(450px + 175px - 110px + 110px);
-            left: calc(500px + 303px - 110px + 110px);
-            transform: translate(-55px, 82.5px) rotate(120deg);
-        }
-
-        .arrow-4-5 {
-            top: calc(450px + 350px - 110px + 110px);
-            left: calc(500px);
-            transform: translate(-110px, 0) rotate(180deg);
-        }
-
-        .arrow-5-6 {
-            top: calc(450px + 175px - 110px + 110px);
-            left: calc(500px - 303px - 110px + 110px);
-            transform: translate(-55px, -82.5px) rotate(240deg);
-        }
-
-        .arrow-6-1 {
-            top: calc(450px - 175px - 110px + 110px);
-            left: calc(500px - 303px - 110px + 110px);
-            transform: translate(0, -82.5px) rotate(270deg);
-        }
-
-        /* Recalcular posiciones */
+        /* Recalcular posiciones de nodos */
         .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 120px */
+            top: 40px;
             left: calc(500px - 110px);
         }
 
@@ -1198,6 +1150,7 @@
         }
     }
 
+    /* Responsive adicional (mantener como antes) */
     @media (max-width: 1200px) {
         .hexagon-diagram {
             width: 850px;
@@ -1228,58 +1181,9 @@
             font-size: 1.5rem;
         }
 
-        /* Ajustar tamaño de flechas */
-        .arrow-line {
-            width: 80px;
-            height: 2px;
-        }
-
-        .arrow-head {
-            border-left: 7px solid #666;
-            border-top: 4px solid transparent;
-            border-bottom: 4px solid transparent;
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(40px + 100px);
-            left: calc(425px);
-            transform: translate(50px, 0) rotate(60deg);
-        }
-
-        .arrow-2-3 {
-            top: calc(400px - 150px - 100px + 100px);
-            left: calc(425px + 260px - 100px + 100px);
-            transform: translate(0, 75px) rotate(90deg);
-        }
-
-        .arrow-3-4 {
-            top: calc(400px + 150px - 100px + 100px);
-            left: calc(425px + 260px - 100px + 100px);
-            transform: translate(-50px, 75px) rotate(120deg);
-        }
-
-        .arrow-4-5 {
-            top: calc(400px + 300px - 100px + 100px);
-            left: calc(425px);
-            transform: translate(-100px, 0) rotate(180deg);
-        }
-
-        .arrow-5-6 {
-            top: calc(400px + 150px - 100px + 100px);
-            left: calc(425px - 260px - 100px + 100px);
-            transform: translate(-50px, -75px) rotate(240deg);
-        }
-
-        .arrow-6-1 {
-            top: calc(400px - 150px - 100px + 100px);
-            left: calc(425px - 260px - 100px + 100px);
-            transform: translate(0, -75px) rotate(270deg);
-        }
-
         /* Recalcular posiciones */
         .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 100px */
+            top: 40px;
             left: calc(425px - 100px);
         }
 
@@ -1339,58 +1243,9 @@
             font-size: 1.4rem;
         }
 
-        /* Ajustar tamaño de flechas */
-        .arrow-line {
-            width: 70px;
-            height: 2px;
-        }
-
-        .arrow-head {
-            border-left: 6px solid #666;
-            border-top: 4px solid transparent;
-            border-bottom: 4px solid transparent;
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(30px + 90px);
-            left: calc(350px);
-            transform: translate(45px, 0) rotate(60deg);
-        }
-
-        .arrow-2-3 {
-            top: calc(350px - 125px - 90px + 90px);
-            left: calc(350px + 217px - 90px + 90px);
-            transform: translate(0, 67.5px) rotate(90deg);
-        }
-
-        .arrow-3-4 {
-            top: calc(350px + 125px - 90px + 90px);
-            left: calc(350px + 217px - 90px + 90px);
-            transform: translate(-45px, 67.5px) rotate(120deg);
-        }
-
-        .arrow-4-5 {
-            top: calc(350px + 250px - 90px + 90px);
-            left: calc(350px);
-            transform: translate(-90px, 0) rotate(180deg);
-        }
-
-        .arrow-5-6 {
-            top: calc(350px + 125px - 90px + 90px);
-            left: calc(350px - 217px - 90px + 90px);
-            transform: translate(-45px, -67.5px) rotate(240deg);
-        }
-
-        .arrow-6-1 {
-            top: calc(350px - 125px - 90px + 90px);
-            left: calc(350px - 217px - 90px + 90px);
-            transform: translate(0, -67.5px) rotate(270deg);
-        }
-
         /* Recalcular posiciones */
         .node-1 { 
-            top: 30px; /* SUBIDO AÚN MÁS - antes era 90px */
+            top: 30px;
             left: calc(350px - 90px);
         }
 
@@ -1450,14 +1305,9 @@
             font-size: 1.3rem;
         }
 
-        /* Ocultar flechas en pantallas medianas/pequeñas */
-        .arrow {
-            display: none;
-        }
-
         /* Recalcular posiciones */
         .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 80px */
+            top: 10px;
             left: calc(300px - 80px);
         }
 
@@ -1524,7 +1374,7 @@
 
         /* Recalcular posiciones */
         .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 70px */
+            top: 10px;
             left: calc(250px - 70px);
         }
 
@@ -1604,7 +1454,7 @@
 
         /* Recalcular posiciones */
         .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 60px */
+            top: 10px;
             left: calc(250px - 60px);
         }
 
@@ -1809,7 +1659,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 24, 2026 21:24:34 UTC">January 24, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 24, 2026 21:37:30 UTC">January 24, 2026</span>
     
   </small>
 </div>
