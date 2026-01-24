@@ -141,9 +141,10 @@
         z-index: 1;
     }
     
+    /* IMAGEN DEL CENTRO MÁS GRANDE - cambiado de 70% a 85% */
     .center-img {
-        width: 70%;
-        height: 70%;
+        width: 85%;  /* AGRANDADA de 70% a 85% */
+        height: 85%; /* AGRANDADA de 70% a 85% */
         object-fit: contain;
         border-radius: 50%;
         position: relative;
@@ -221,10 +222,10 @@
     /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
     /* Radio aumentado a 550px para más separación */
     /* Centro en (900px, 800px) del contenedor de 1800x1600 */
-    /* NODO 1 SUBIDO 50px MÁS - cambiado de 250px a 200px */
+    /* NODO 1 SUBIDO AÚN MÁS - cambiado de 200px a 150px */
     
     .node-1 { 
-        top: 200px; /* SUBIDO 50px - antes era 250px */
+        top: 150px; /* SUBIDO AÚN MÁS - antes era 200px */
         left: calc(900px - 150px); /* Centrado horizontalmente */
     }
     
@@ -372,7 +373,7 @@
         
         /* Recalcular posiciones para nuevo tamaño */
         .node-1 { 
-            top: 180px; /* SUBIDO - antes era 200px */
+            top: 130px; /* SUBIDO AÚN MÁS - antes era 180px */
             left: calc(800px - 150px);
         }
         
@@ -413,6 +414,11 @@
             height: 450px;
         }
         
+        .center-img {
+            width: 85%; /* Mantenemos el 85% en responsive */
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 280px;
             height: 280px;
@@ -426,7 +432,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 160px; /* SUBIDO */
+            top: 110px; /* SUBIDO AÚN MÁS - antes era 160px */
             left: calc(700px - 140px);
         }
         
@@ -467,6 +473,11 @@
             height: 400px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 250px;
             height: 250px;
@@ -479,7 +490,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 140px; /* SUBIDO */
+            top: 100px; /* SUBIDO AÚN MÁS - antes era 140px */
             left: calc(600px - 125px);
         }
         
@@ -520,6 +531,11 @@
             height: 350px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 220px;
             height: 220px;
@@ -532,7 +548,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 120px; /* SUBIDO */
+            top: 90px; /* SUBIDO AÚN MÁS - antes era 120px */
             left: calc(500px - 110px);
         }
         
@@ -573,6 +589,11 @@
             height: 300px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 200px;
             height: 200px;
@@ -585,7 +606,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 100px; /* SUBIDO */
+            top: 80px; /* SUBIDO AÚN MÁS - antes era 100px */
             left: calc(425px - 100px);
         }
         
@@ -626,6 +647,11 @@
             height: 250px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 180px;
             height: 180px;
@@ -638,7 +664,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 90px; /* SUBIDO */
+            top: 70px; /* SUBIDO AÚN MÁS - antes era 90px */
             left: calc(350px - 90px);
         }
         
@@ -679,6 +705,11 @@
             height: 200px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 160px;
             height: 160px;
@@ -691,7 +722,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 80px; /* SUBIDO */
+            top: 60px; /* SUBIDO AÚN MÁS - antes era 80px */
             left: calc(300px - 80px);
         }
         
@@ -737,6 +768,11 @@
             height: 180px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 140px;
             height: 140px;
@@ -749,7 +785,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 70px; /* SUBIDO */
+            top: 50px; /* SUBIDO AÚN MÁS - antes era 70px */
             left: calc(250px - 70px);
         }
         
@@ -807,6 +843,11 @@
             height: 150px;
         }
         
+        .center-img {
+            width: 85%;
+            height: 85%;
+        }
+        
         .hexagon-node {
             width: 120px;
             height: 120px;
@@ -819,7 +860,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 60px; /* SUBIDO */
+            top: 40px; /* SUBIDO AÚN MÁS - antes era 60px */
             left: calc(250px - 60px);
         }
         
