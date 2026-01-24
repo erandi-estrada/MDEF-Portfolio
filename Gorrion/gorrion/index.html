@@ -269,13 +269,31 @@
             <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center" class="center-img">
         </div>
 
-        <!-- Flechas entre nodos -->
-        <div class="arrow arrow-1-2"></div>
-        <div class="arrow arrow-2-3"></div>
-        <div class="arrow arrow-3-4"></div>
-        <div class="arrow arrow-4-5"></div>
-        <div class="arrow arrow-5-6"></div>
-        <div class="arrow arrow-6-1"></div>
+        <!-- Flechas entre nodos - CORREGIDAS -->
+        <div class="arrow arrow-1-2">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
+        <div class="arrow arrow-2-3">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
+        <div class="arrow arrow-3-4">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
+        <div class="arrow arrow-4-5">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
+        <div class="arrow arrow-5-6">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
+        <div class="arrow arrow-6-1">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
 
         <!-- Nodo 1 - Parte superior -->
         <div class="hexagon-node node-1" data-node="1">
@@ -426,68 +444,84 @@
         z-index: 2;
     }
 
-    /* Flechas entre nodos */
+    /* Flechas entre nodos - ESTILOS CORREGIDOS */
     .arrow {
         position: absolute;
-        width: 40px;
-        height: 20px;
-        z-index: 5;
-        opacity: 0.7;
+        z-index: 15; /* Mayor que el z-index de los círculos */
+        display: flex;
+        align-items: center;
     }
 
-    /* Estilo base de las flechas */
-    .arrow::before {
-        content: '';
-        position: absolute;
+    /* Línea de la flecha (la "colita") */
+    .arrow-line {
+        width: 120px; /* Longitud de la línea */
+        height: 4px;
+        background: #666;
+        opacity: 0.7;
+        position: relative;
+    }
+
+    /* Cabeza de la flecha */
+    .arrow-head {
         width: 0;
         height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 15px solid #666;
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+        border-left: 12px solid #666;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        opacity: 0.7;
+        position: relative;
+        margin-left: -1px; /* Para que se conecte bien con la línea */
     }
 
-    /* Posición y rotación de cada flecha */
+    /* Posición y rotación de cada flecha - CORREGIDAS */
+    /* Todas las flechas parten del centro de un nodo y apuntan al siguiente */
+
     .arrow-1-2 {
-        /* Entre nodo 1 y nodo 2 */
-        top: calc(15px + 150px + 60px); /* 225px */
-        left: calc(900px - 20px + 150px); /* 1030px */
-        transform: rotate(60deg);
+        /* Del nodo 1 al nodo 2 */
+        top: calc(15px + 150px); /* Centro vertical del nodo 1 */
+        left: calc(900px); /* Centro horizontal del nodo 1 */
+        transform: translate(75px, 0) rotate(60deg);
+        transform-origin: left center;
     }
 
     .arrow-2-3 {
-        /* Entre nodo 2 y nodo 3 */
-        top: calc(800px - 150px); /* 650px */
-        left: calc(900px + 476px - 20px); /* 1356px */
-        transform: rotate(0deg);
+        /* Del nodo 2 al nodo 3 */
+        top: calc(800px - 275px - 150px + 150px); /* Centro vertical del nodo 2 */
+        left: calc(900px + 476px - 150px + 150px); /* Centro horizontal del nodo 2 */
+        transform: translate(0, 112.5px) rotate(90deg);
+        transform-origin: center top;
     }
 
     .arrow-3-4 {
-        /* Entre nodo 3 y nodo 4 */
-        top: calc(800px + 275px - 60px); /* 1015px */
-        left: calc(900px + 238px - 20px); /* 1118px */
-        transform: rotate(-60deg);
+        /* Del nodo 3 al nodo 4 */
+        top: calc(800px + 275px - 150px + 150px); /* Centro vertical del nodo 3 */
+        left: calc(900px + 476px - 150px + 150px); /* Centro horizontal del nodo 3 */
+        transform: translate(-75px, 112.5px) rotate(120deg);
+        transform-origin: right center;
     }
 
     .arrow-4-5 {
-        /* Entre nodo 4 y nodo 5 */
-        top: calc(800px + 550px - 150px - 60px); /* 1140px */
-        left: calc(900px - 150px - 20px); /* 730px */
-        transform: rotate(-120deg);
+        /* Del nodo 4 al nodo 5 */
+        top: calc(800px + 550px - 150px + 150px); /* Centro vertical del nodo 4 */
+        left: calc(900px); /* Centro horizontal del nodo 4 */
+        transform: translate(-150px, 0) rotate(180deg);
+        transform-origin: right center;
     }
 
     .arrow-5-6 {
-        /* Entre nodo 5 y nodo 6 */
-        top: calc(800px + 275px - 60px); /* 1015px */
-        left: calc(900px - 476px + 20px); /* 444px */
-        transform: rotate(-180deg);
+        /* Del nodo 5 al nodo 6 */
+        top: calc(800px + 275px - 150px + 150px); /* Centro vertical del nodo 5 */
+        left: calc(900px - 476px - 150px + 150px); /* Centro horizontal del nodo 5 */
+        transform: translate(-75px, -112.5px) rotate(240deg);
+        transform-origin: right center;
     }
 
     .arrow-6-1 {
-        /* Entre nodo 6 y nodo 1 */
-        top: calc(800px - 150px); /* 650px */
-        left: calc(900px - 476px - 20px); /* 404px */
-        transform: rotate(-240deg);
+        /* Del nodo 6 al nodo 1 */
+        top: calc(800px - 275px - 150px + 150px); /* Centro vertical del nodo 6 */
+        left: calc(900px - 476px - 150px + 150px); /* Centro horizontal del nodo 6 */
+        transform: translate(0, -112.5px) rotate(270deg);
+        transform-origin: center bottom;
     }
 
     /* Nodos - ESTRUCTURA CORREGIDA */
@@ -760,6 +794,43 @@
             height: 1400px;
         }
 
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(20px + 150px);
+            left: calc(800px);
+            transform: translate(75px, 0) rotate(60deg);
+        }
+
+        .arrow-2-3 {
+            top: calc(700px - 250px - 150px + 150px);
+            left: calc(800px + 433px - 150px + 150px);
+            transform: translate(0, 112.5px) rotate(90deg);
+        }
+
+        .arrow-3-4 {
+            top: calc(700px + 250px - 150px + 150px);
+            left: calc(800px + 433px - 150px + 150px);
+            transform: translate(-75px, 112.5px) rotate(120deg);
+        }
+
+        .arrow-4-5 {
+            top: calc(700px + 500px - 150px + 150px);
+            left: calc(800px);
+            transform: translate(-150px, 0) rotate(180deg);
+        }
+
+        .arrow-5-6 {
+            top: calc(700px + 250px - 150px + 150px);
+            left: calc(800px - 433px - 150px + 150px);
+            transform: translate(-75px, -112.5px) rotate(240deg);
+        }
+
+        .arrow-6-1 {
+            top: calc(700px - 250px - 150px + 150px);
+            left: calc(800px - 433px - 150px + 150px);
+            transform: translate(0, -112.5px) rotate(270deg);
+        }
+
         /* Recalcular posiciones para nuevo tamaño */
         .node-1 { 
             top: 20px; /* SUBIDO AÚN MÁS - antes era 180px */
@@ -789,37 +860,6 @@
         .node-6 { 
             top: calc(700px - 250px - 150px);
             left: calc(800px - 433px - 150px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(20px + 150px + 60px);
-            left: calc(800px - 20px + 150px);
-        }
-
-        .arrow-2-3 {
-            top: calc(700px - 150px);
-            left: calc(800px + 433px - 20px);
-        }
-
-        .arrow-3-4 {
-            top: calc(700px + 250px - 60px);
-            left: calc(800px + 216px - 20px);
-        }
-
-        .arrow-4-5 {
-            top: calc(700px + 500px - 150px - 60px);
-            left: calc(800px - 150px - 20px);
-        }
-
-        .arrow-5-6 {
-            top: calc(700px + 250px - 60px);
-            left: calc(800px - 433px + 20px);
-        }
-
-        .arrow-6-1 {
-            top: calc(700px - 150px);
-            left: calc(800px - 433px - 20px);
         }
     }
 
@@ -856,15 +896,52 @@
         }
 
         /* Ajustar tamaño de flechas */
-        .arrow {
-            width: 35px;
-            height: 18px;
+        .arrow-line {
+            width: 110px;
+            height: 3px;
         }
 
-        .arrow::before {
-            border-left: 9px solid transparent;
-            border-right: 9px solid transparent;
-            border-top: 13px solid #666;
+        .arrow-head {
+            border-left: 10px solid #666;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+        }
+
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(20px + 140px);
+            left: calc(700px);
+            transform: translate(70px, 0) rotate(60deg);
+        }
+
+        .arrow-2-3 {
+            top: calc(600px - 225px - 140px + 140px);
+            left: calc(700px + 390px - 140px + 140px);
+            transform: translate(0, 105px) rotate(90deg);
+        }
+
+        .arrow-3-4 {
+            top: calc(600px + 225px - 140px + 140px);
+            left: calc(700px + 390px - 140px + 140px);
+            transform: translate(-70px, 105px) rotate(120deg);
+        }
+
+        .arrow-4-5 {
+            top: calc(600px + 450px - 140px + 140px);
+            left: calc(700px);
+            transform: translate(-140px, 0) rotate(180deg);
+        }
+
+        .arrow-5-6 {
+            top: calc(600px + 225px - 140px + 140px);
+            left: calc(700px - 390px - 140px + 140px);
+            transform: translate(-70px, -105px) rotate(240deg);
+        }
+
+        .arrow-6-1 {
+            top: calc(600px - 225px - 140px + 140px);
+            left: calc(700px - 390px - 140px + 140px);
+            transform: translate(0, -105px) rotate(270deg);
         }
 
         /* Recalcular posiciones */
@@ -896,37 +973,6 @@
         .node-6 { 
             top: calc(600px - 225px - 140px);
             left: calc(700px - 390px - 140px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(20px + 140px + 60px);
-            left: calc(700px - 17px + 140px);
-        }
-
-        .arrow-2-3 {
-            top: calc(600px - 140px);
-            left: calc(700px + 390px - 17px);
-        }
-
-        .arrow-3-4 {
-            top: calc(600px + 225px - 60px);
-            left: calc(700px + 195px - 17px);
-        }
-
-        .arrow-4-5 {
-            top: calc(600px + 450px - 140px - 60px);
-            left: calc(700px - 140px - 17px);
-        }
-
-        .arrow-5-6 {
-            top: calc(600px + 225px - 60px);
-            left: calc(700px - 390px + 17px);
-        }
-
-        .arrow-6-1 {
-            top: calc(600px - 140px);
-            left: calc(700px - 390px - 17px);
         }
     }
 
@@ -961,15 +1007,52 @@
         }
 
         /* Ajustar tamaño de flechas */
-        .arrow {
-            width: 30px;
-            height: 15px;
+        .arrow-line {
+            width: 100px;
+            height: 3px;
         }
 
-        .arrow::before {
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 11px solid #666;
+        .arrow-head {
+            border-left: 9px solid #666;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(40px + 125px);
+            left: calc(600px);
+            transform: translate(62.5px, 0) rotate(60deg);
+        }
+
+        .arrow-2-3 {
+            top: calc(500px - 200px - 125px + 125px);
+            left: calc(600px + 346px - 125px + 125px);
+            transform: translate(0, 93.75px) rotate(90deg);
+        }
+
+        .arrow-3-4 {
+            top: calc(500px + 200px - 125px + 125px);
+            left: calc(600px + 346px - 125px + 125px);
+            transform: translate(-62.5px, 93.75px) rotate(120deg);
+        }
+
+        .arrow-4-5 {
+            top: calc(500px + 400px - 125px + 125px);
+            left: calc(600px);
+            transform: translate(-125px, 0) rotate(180deg);
+        }
+
+        .arrow-5-6 {
+            top: calc(500px + 200px - 125px + 125px);
+            left: calc(600px - 346px - 125px + 125px);
+            transform: translate(-62.5px, -93.75px) rotate(240deg);
+        }
+
+        .arrow-6-1 {
+            top: calc(500px - 200px - 125px + 125px);
+            left: calc(600px - 346px - 125px + 125px);
+            transform: translate(0, -93.75px) rotate(270deg);
         }
 
         /* Recalcular posiciones */
@@ -1001,37 +1084,6 @@
         .node-6 { 
             top: calc(500px - 200px - 125px);
             left: calc(600px - 346px - 125px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(40px + 125px + 50px);
-            left: calc(600px - 15px + 125px);
-        }
-
-        .arrow-2-3 {
-            top: calc(500px - 125px);
-            left: calc(600px + 346px - 15px);
-        }
-
-        .arrow-3-4 {
-            top: calc(500px + 200px - 50px);
-            left: calc(600px + 173px - 15px);
-        }
-
-        .arrow-4-5 {
-            top: calc(500px + 400px - 125px - 50px);
-            left: calc(600px - 125px - 15px);
-        }
-
-        .arrow-5-6 {
-            top: calc(500px + 200px - 50px);
-            left: calc(600px - 346px + 15px);
-        }
-
-        .arrow-6-1 {
-            top: calc(500px - 125px);
-            left: calc(600px - 346px - 15px);
         }
     }
 
@@ -1066,15 +1118,52 @@
         }
 
         /* Ajustar tamaño de flechas */
-        .arrow {
-            width: 25px;
-            height: 13px;
+        .arrow-line {
+            width: 90px;
+            height: 2px;
         }
 
-        .arrow::before {
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-            border-top: 9px solid #666;
+        .arrow-head {
+            border-left: 8px solid #666;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(40px + 110px);
+            left: calc(500px);
+            transform: translate(55px, 0) rotate(60deg);
+        }
+
+        .arrow-2-3 {
+            top: calc(450px - 175px - 110px + 110px);
+            left: calc(500px + 303px - 110px + 110px);
+            transform: translate(0, 82.5px) rotate(90deg);
+        }
+
+        .arrow-3-4 {
+            top: calc(450px + 175px - 110px + 110px);
+            left: calc(500px + 303px - 110px + 110px);
+            transform: translate(-55px, 82.5px) rotate(120deg);
+        }
+
+        .arrow-4-5 {
+            top: calc(450px + 350px - 110px + 110px);
+            left: calc(500px);
+            transform: translate(-110px, 0) rotate(180deg);
+        }
+
+        .arrow-5-6 {
+            top: calc(450px + 175px - 110px + 110px);
+            left: calc(500px - 303px - 110px + 110px);
+            transform: translate(-55px, -82.5px) rotate(240deg);
+        }
+
+        .arrow-6-1 {
+            top: calc(450px - 175px - 110px + 110px);
+            left: calc(500px - 303px - 110px + 110px);
+            transform: translate(0, -82.5px) rotate(270deg);
         }
 
         /* Recalcular posiciones */
@@ -1106,37 +1195,6 @@
         .node-6 { 
             top: calc(450px - 175px - 110px);
             left: calc(500px - 303px - 110px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(40px + 110px + 45px);
-            left: calc(500px - 12px + 110px);
-        }
-
-        .arrow-2-3 {
-            top: calc(450px - 110px);
-            left: calc(500px + 303px - 12px);
-        }
-
-        .arrow-3-4 {
-            top: calc(450px + 175px - 45px);
-            left: calc(500px + 151px - 12px);
-        }
-
-        .arrow-4-5 {
-            top: calc(450px + 350px - 110px - 45px);
-            left: calc(500px - 110px - 12px);
-        }
-
-        .arrow-5-6 {
-            top: calc(450px + 175px - 45px);
-            left: calc(500px - 303px + 12px);
-        }
-
-        .arrow-6-1 {
-            top: calc(450px - 110px);
-            left: calc(500px - 303px - 12px);
         }
     }
 
@@ -1171,15 +1229,52 @@
         }
 
         /* Ajustar tamaño de flechas */
-        .arrow {
-            width: 20px;
-            height: 10px;
+        .arrow-line {
+            width: 80px;
+            height: 2px;
         }
 
-        .arrow::before {
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 8px solid #666;
+        .arrow-head {
+            border-left: 7px solid #666;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(40px + 100px);
+            left: calc(425px);
+            transform: translate(50px, 0) rotate(60deg);
+        }
+
+        .arrow-2-3 {
+            top: calc(400px - 150px - 100px + 100px);
+            left: calc(425px + 260px - 100px + 100px);
+            transform: translate(0, 75px) rotate(90deg);
+        }
+
+        .arrow-3-4 {
+            top: calc(400px + 150px - 100px + 100px);
+            left: calc(425px + 260px - 100px + 100px);
+            transform: translate(-50px, 75px) rotate(120deg);
+        }
+
+        .arrow-4-5 {
+            top: calc(400px + 300px - 100px + 100px);
+            left: calc(425px);
+            transform: translate(-100px, 0) rotate(180deg);
+        }
+
+        .arrow-5-6 {
+            top: calc(400px + 150px - 100px + 100px);
+            left: calc(425px - 260px - 100px + 100px);
+            transform: translate(-50px, -75px) rotate(240deg);
+        }
+
+        .arrow-6-1 {
+            top: calc(400px - 150px - 100px + 100px);
+            left: calc(425px - 260px - 100px + 100px);
+            transform: translate(0, -75px) rotate(270deg);
         }
 
         /* Recalcular posiciones */
@@ -1211,37 +1306,6 @@
         .node-6 { 
             top: calc(400px - 150px - 100px);
             left: calc(425px - 260px - 100px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(40px + 100px + 40px);
-            left: calc(425px - 10px + 100px);
-        }
-
-        .arrow-2-3 {
-            top: calc(400px - 100px);
-            left: calc(425px + 260px - 10px);
-        }
-
-        .arrow-3-4 {
-            top: calc(400px + 150px - 40px);
-            left: calc(425px + 130px - 10px);
-        }
-
-        .arrow-4-5 {
-            top: calc(400px + 300px - 100px - 40px);
-            left: calc(425px - 100px - 10px);
-        }
-
-        .arrow-5-6 {
-            top: calc(400px + 150px - 40px);
-            left: calc(425px - 260px + 10px);
-        }
-
-        .arrow-6-1 {
-            top: calc(400px - 100px);
-            left: calc(425px - 260px - 10px);
         }
     }
 
@@ -1276,15 +1340,52 @@
         }
 
         /* Ajustar tamaño de flechas */
-        .arrow {
-            width: 18px;
-            height: 9px;
+        .arrow-line {
+            width: 70px;
+            height: 2px;
         }
 
-        .arrow::before {
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 7px solid #666;
+        .arrow-head {
+            border-left: 6px solid #666;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        /* Ajustar posiciones de flechas */
+        .arrow-1-2 {
+            top: calc(30px + 90px);
+            left: calc(350px);
+            transform: translate(45px, 0) rotate(60deg);
+        }
+
+        .arrow-2-3 {
+            top: calc(350px - 125px - 90px + 90px);
+            left: calc(350px + 217px - 90px + 90px);
+            transform: translate(0, 67.5px) rotate(90deg);
+        }
+
+        .arrow-3-4 {
+            top: calc(350px + 125px - 90px + 90px);
+            left: calc(350px + 217px - 90px + 90px);
+            transform: translate(-45px, 67.5px) rotate(120deg);
+        }
+
+        .arrow-4-5 {
+            top: calc(350px + 250px - 90px + 90px);
+            left: calc(350px);
+            transform: translate(-90px, 0) rotate(180deg);
+        }
+
+        .arrow-5-6 {
+            top: calc(350px + 125px - 90px + 90px);
+            left: calc(350px - 217px - 90px + 90px);
+            transform: translate(-45px, -67.5px) rotate(240deg);
+        }
+
+        .arrow-6-1 {
+            top: calc(350px - 125px - 90px + 90px);
+            left: calc(350px - 217px - 90px + 90px);
+            transform: translate(0, -67.5px) rotate(270deg);
         }
 
         /* Recalcular posiciones */
@@ -1316,37 +1417,6 @@
         .node-6 { 
             top: calc(350px - 125px - 90px);
             left: calc(350px - 217px - 90px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(30px + 90px + 35px);
-            left: calc(350px - 9px + 90px);
-        }
-
-        .arrow-2-3 {
-            top: calc(350px - 90px);
-            left: calc(350px + 217px - 9px);
-        }
-
-        .arrow-3-4 {
-            top: calc(350px + 125px - 35px);
-            left: calc(350px + 108px - 9px);
-        }
-
-        .arrow-4-5 {
-            top: calc(350px + 250px - 90px - 35px);
-            left: calc(350px - 90px - 9px);
-        }
-
-        .arrow-5-6 {
-            top: calc(350px + 125px - 35px);
-            left: calc(350px - 217px + 9px);
-        }
-
-        .arrow-6-1 {
-            top: calc(350px - 90px);
-            left: calc(350px - 217px - 9px);
         }
     }
 
@@ -1380,16 +1450,9 @@
             font-size: 1.3rem;
         }
 
-        /* Ajustar tamaño de flechas */
+        /* Ocultar flechas en pantallas medianas/pequeñas */
         .arrow {
-            width: 16px;
-            height: 8px;
-        }
-
-        .arrow::before {
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            border-top: 6px solid #666;
+            display: none;
         }
 
         /* Recalcular posiciones */
@@ -1421,37 +1484,6 @@
         .node-6 { 
             top: calc(300px - 100px - 80px);
             left: calc(300px - 173px - 80px);
-        }
-
-        /* Ajustar posiciones de flechas */
-        .arrow-1-2 {
-            top: calc(10px + 80px + 30px);
-            left: calc(300px - 8px + 80px);
-        }
-
-        .arrow-2-3 {
-            top: calc(300px - 80px);
-            left: calc(300px + 173px - 8px);
-        }
-
-        .arrow-3-4 {
-            top: calc(300px + 100px - 30px);
-            left: calc(300px + 86px - 8px);
-        }
-
-        .arrow-4-5 {
-            top: calc(300px + 200px - 80px - 30px);
-            left: calc(300px - 80px - 8px);
-        }
-
-        .arrow-5-6 {
-            top: calc(300px + 100px - 30px);
-            left: calc(300px - 173px + 8px);
-        }
-
-        .arrow-6-1 {
-            top: calc(300px - 80px);
-            left: calc(300px - 173px - 8px);
         }
     }
 
@@ -1488,11 +1520,6 @@
 
         .hover-text {
             font-size: 1.2rem;
-        }
-
-        /* Ocultar flechas en pantallas muy pequeñas */
-        .arrow {
-            display: none;
         }
 
         /* Recalcular posiciones */
@@ -1782,7 +1809,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 24, 2026 21:14:48 UTC">January 24, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 24, 2026 21:24:34 UTC">January 24, 2026</span>
     
   </small>
 </div>
