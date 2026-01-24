@@ -146,7 +146,7 @@
         width: 100%;  /* AGRANDADA de 70% a 85% */
         height: 85%; /* AGRANDADA de 70% a 85% */
         object-fit: contain;
-        border-radius: 50%;
+        border-radius: 5%;
         position: relative;
         z-index: 2;
     }
