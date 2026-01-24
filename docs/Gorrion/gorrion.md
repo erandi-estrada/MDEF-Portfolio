@@ -8,22 +8,10 @@
 
 <div class="diagram-container">
     <div class="hexagon-diagram">
-        <!-- Flechas entre nodos -->
-        <div class="arrow arrow-1-2"></div>
-        <div class="arrow arrow-2-3"></div>
-        <div class="arrow arrow-3-4"></div>
-        <div class="arrow arrow-4-5"></div>
-        <div class="arrow arrow-5-6"></div>
-        <div class="arrow arrow-6-1"></div>
-        
         <!-- Imagen central grande CON FONDO BLANCO -->
         <div class="center-image">
             <div class="center-circle"></div>
             <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center" class="center-img">
-            <!-- Texto "CLICK HERE" que aparece en hover -->
-            <div class="click-here-overlay">
-                <div class="click-here-text">CLICK HERE</div>
-            </div>
         </div>
         
         <!-- Nodo 1 - Parte superior -->
@@ -140,7 +128,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        cursor: pointer;
     }
     
     .center-circle {
@@ -159,116 +146,9 @@
         width: 100%;  /* AGRANDADA de 70% a 85% */
         height: 85%; /* AGRANDADA de 70% a 85% */
         object-fit: contain;
-        border-radius: none;
+        border-radius: ;
         position: relative;
         z-index: 2;
-    }
-    
-    /* Flechas entre los nodos */
-    .arrow {
-        position: absolute;
-        background: linear-gradient(to right, #4a5568, #718096);
-        height: 6px;
-        border-radius: 3px;
-        z-index: 5;
-        opacity: 0.7;
-        transform-origin: 0 50%;
-    }
-    
-    /* Flecha del nodo 1 al 2 (superior a superior derecha) */
-    .arrow-1-2 {
-        top: 175px; /* Ajustado para conectar nodos */
-        left: 900px;
-        width: 425px;
-        transform: rotate(60deg);
-    }
-    
-    /* Flecha del nodo 2 al 3 (superior derecha a inferior derecha) */
-    .arrow-2-3 {
-        top: 375px; /* Ajustado para conectar nodos */
-        left: 1326px; /* Ajustado para conectar nodos */
-        width: 425px;
-        transform: rotate(-60deg);
-    }
-    
-    /* Flecha del nodo 3 al 4 (inferior derecha a inferior) */
-    .arrow-3-4 {
-        top: 925px; /* Ajustado para conectar nodos */
-        left: 900px;
-        width: 425px;
-        transform: rotate(180deg);
-    }
-    
-    /* Flecha del nodo 4 al 5 (inferior a inferior izquierda) */
-    .arrow-4-5 {
-        top: 925px; /* Ajustado para conectar nodos */
-        left: 274px; /* Ajustado para conectar nodos */
-        width: 425px;
-        transform: rotate(60deg);
-    }
-    
-    /* Flecha del nodo 5 al 6 (inferior izquierda a superior izquierda) */
-    .arrow-5-6 {
-        top: 375px; /* Ajustado para conectar nodos */
-        left: 274px; /* Ajustado para conectar nodos */
-        width: 425px;
-        transform: rotate(-60deg);
-    }
-    
-    /* Flecha del nodo 6 al 1 (superior izquierda a superior) */
-    .arrow-6-1 {
-        top: 175px; /* Ajustado para conectar nodos */
-        left: 900px;
-        width: 425px;
-        transform: rotate(-120deg);
-    }
-    
-    /* Puntas de las flechas */
-    .arrow::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        border-left: 15px solid #4a5568;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-    }
-    
-    /* Overlay "CLICK HERE" para el centro */
-    .click-here-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: rgba(25, 118, 210, 0.9);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 15;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none;
-    }
-    
-    .center-image:hover .click-here-overlay {
-        opacity: 1;
-    }
-    
-    .click-here-text {
-        color: white;
-        font-size: 2.2rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        animation: pulse 1.5s infinite;
-    }
-    
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
     }
     
     /* Nodos - ESTRUCTURA CORREGIDA */
@@ -484,7 +364,7 @@
         line-height: 1.6;
     }
     
-    /* Responsive - manteniendo las flechas visibles en todos los tamaños */
+    /* Responsive */
     @media (max-width: 2000px) {
         .hexagon-diagram {
             width: 1600px;
@@ -520,43 +400,6 @@
         .node-6 { 
             top: calc(700px - 250px - 150px);
             left: calc(800px - 433px - 150px);
-        }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 170px;
-            left: 800px;
-            width: 390px;
-        }
-        
-        .arrow-2-3 {
-            top: 350px;
-            left: 1233px;
-            width: 390px;
-        }
-        
-        .arrow-3-4 {
-            top: 830px;
-            left: 800px;
-            width: 390px;
-        }
-        
-        .arrow-4-5 {
-            top: 830px;
-            left: 267px;
-            width: 390px;
-        }
-        
-        .arrow-5-6 {
-            top: 350px;
-            left: 267px;
-            width: 390px;
-        }
-        
-        .arrow-6-1 {
-            top: 170px;
-            left: 800px;
-            width: 390px;
         }
     }
     
@@ -617,43 +460,6 @@
             top: calc(600px - 225px - 140px);
             left: calc(700px - 390px - 140px);
         }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 150px;
-            left: 700px;
-            width: 355px;
-        }
-        
-        .arrow-2-3 {
-            top: 315px;
-            left: 1090px;
-            width: 355px;
-        }
-        
-        .arrow-3-4 {
-            top: 725px;
-            left: 700px;
-            width: 355px;
-        }
-        
-        .arrow-4-5 {
-            top: 725px;
-            left: 310px;
-            width: 355px;
-        }
-        
-        .arrow-5-6 {
-            top: 315px;
-            left: 310px;
-            width: 355px;
-        }
-        
-        .arrow-6-1 {
-            top: 150px;
-            left: 700px;
-            width: 355px;
-        }
     }
     
     @media (max-width: 1600px) {
@@ -711,43 +517,6 @@
         .node-6 { 
             top: calc(500px - 200px - 125px);
             left: calc(600px - 346px - 125px);
-        }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 140px;
-            left: 600px;
-            width: 320px;
-        }
-        
-        .arrow-2-3 {
-            top: 285px;
-            left: 946px;
-            width: 320px;
-        }
-        
-        .arrow-3-4 {
-            top: 625px;
-            left: 600px;
-            width: 320px;
-        }
-        
-        .arrow-4-5 {
-            top: 625px;
-            left: 254px;
-            width: 320px;
-        }
-        
-        .arrow-5-6 {
-            top: 285px;
-            left: 254px;
-            width: 320px;
-        }
-        
-        .arrow-6-1 {
-            top: 140px;
-            left: 600px;
-            width: 320px;
         }
     }
     
@@ -807,47 +576,6 @@
             top: calc(450px - 175px - 110px);
             left: calc(500px - 303px - 110px);
         }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 120px;
-            left: 500px;
-            width: 285px;
-        }
-        
-        .arrow-2-3 {
-            top: 245px;
-            left: 803px;
-            width: 285px;
-        }
-        
-        .arrow-3-4 {
-            top: 535px;
-            left: 500px;
-            width: 285px;
-        }
-        
-        .arrow-4-5 {
-            top: 535px;
-            left: 197px;
-            width: 285px;
-        }
-        
-        .arrow-5-6 {
-            top: 245px;
-            left: 197px;
-            width: 285px;
-        }
-        
-        .arrow-6-1 {
-            top: 120px;
-            left: 500px;
-            width: 285px;
-        }
-        
-        .click-here-text {
-            font-size: 1.8rem;
-        }
     }
     
     @media (max-width: 1200px) {
@@ -905,47 +633,6 @@
         .node-6 { 
             top: calc(400px - 150px - 100px);
             left: calc(425px - 260px - 100px);
-        }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 100px;
-            left: 425px;
-            width: 245px;
-        }
-        
-        .arrow-2-3 {
-            top: 200px;
-            left: 685px;
-            width: 245px;
-        }
-        
-        .arrow-3-4 {
-            top: 450px;
-            left: 425px;
-            width: 245px;
-        }
-        
-        .arrow-4-5 {
-            top: 450px;
-            left: 165px;
-            width: 245px;
-        }
-        
-        .arrow-5-6 {
-            top: 200px;
-            left: 165px;
-            width: 245px;
-        }
-        
-        .arrow-6-1 {
-            top: 100px;
-            left: 425px;
-            width: 245px;
-        }
-        
-        .click-here-text {
-            font-size: 1.6rem;
         }
     }
     
@@ -1005,47 +692,6 @@
             top: calc(350px - 125px - 90px);
             left: calc(350px - 217px - 90px);
         }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 90px;
-            left: 350px;
-            width: 212px;
-        }
-        
-        .arrow-2-3 {
-            top: 175px;
-            left: 567px;
-            width: 212px;
-        }
-        
-        .arrow-3-4 {
-            top: 395px;
-            left: 350px;
-            width: 212px;
-        }
-        
-        .arrow-4-5 {
-            top: 395px;
-            left: 133px;
-            width: 212px;
-        }
-        
-        .arrow-5-6 {
-            top: 175px;
-            left: 133px;
-            width: 212px;
-        }
-        
-        .arrow-6-1 {
-            top: 90px;
-            left: 350px;
-            width: 212px;
-        }
-        
-        .click-here-text {
-            font-size: 1.4rem;
-        }
     }
     
     @media (max-width: 850px) {
@@ -1103,47 +749,6 @@
         .node-6 { 
             top: calc(300px - 100px - 80px);
             left: calc(300px - 173px - 80px);
-        }
-        
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow-1-2 {
-            top: 70px;
-            left: 300px;
-            width: 182px;
-        }
-        
-        .arrow-2-3 {
-            top: 140px;
-            left: 473px;
-            width: 182px;
-        }
-        
-        .arrow-3-4 {
-            top: 320px;
-            left: 300px;
-            width: 182px;
-        }
-        
-        .arrow-4-5 {
-            top: 320px;
-            left: 127px;
-            width: 182px;
-        }
-        
-        .arrow-5-6 {
-            top: 140px;
-            left: 127px;
-            width: 182px;
-        }
-        
-        .arrow-6-1 {
-            top: 70px;
-            left: 300px;
-            width: 182px;
-        }
-        
-        .click-here-text {
-            font-size: 1.2rem;
         }
     }
     
@@ -1209,53 +814,6 @@
             left: calc(250px - 147px - 70px);
         }
         
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow {
-            height: 4px;
-        }
-        
-        .arrow-1-2 {
-            top: 60px;
-            left: 250px;
-            width: 157px;
-        }
-        
-        .arrow-2-3 {
-            top: 125px;
-            left: 397px;
-            width: 157px;
-        }
-        
-        .arrow-3-4 {
-            top: 280px;
-            left: 250px;
-            width: 157px;
-        }
-        
-        .arrow-4-5 {
-            top: 280px;
-            left: 103px;
-            width: 157px;
-        }
-        
-        .arrow-5-6 {
-            top: 125px;
-            left: 103px;
-            width: 157px;
-        }
-        
-        .arrow-6-1 {
-            top: 60px;
-            left: 250px;
-            width: 157px;
-        }
-        
-        .arrow::after {
-            border-left: 12px solid #4a5568;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-        }
-        
         .info-panel {
             width: 95%;
             padding: 2rem;
@@ -1272,10 +830,6 @@
         
         .info-content p {
             font-size: 1.1rem;
-        }
-        
-        .click-here-text {
-            font-size: 1rem;
         }
     }
     
@@ -1335,53 +889,6 @@
             left: calc(250px - 113px - 60px);
         }
         
-        /* Ajustar flechas para nuevo tamaño */
-        .arrow {
-            height: 3px;
-        }
-        
-        .arrow-1-2 {
-            top: 50px;
-            left: 250px;
-            width: 135px;
-        }
-        
-        .arrow-2-3 {
-            top: 105px;
-            left: 363px;
-            width: 135px;
-        }
-        
-        .arrow-3-4 {
-            top: 240px;
-            left: 250px;
-            width: 135px;
-        }
-        
-        .arrow-4-5 {
-            top: 240px;
-            left: 137px;
-            width: 135px;
-        }
-        
-        .arrow-5-6 {
-            top: 105px;
-            left: 137px;
-            width: 135px;
-        }
-        
-        .arrow-6-1 {
-            top: 50px;
-            left: 250px;
-            width: 135px;
-        }
-        
-        .arrow::after {
-            border-left: 10px solid #4a5568;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-        }
-        
         .info-panel {
             padding: 1.5rem;
         }
@@ -1397,17 +904,12 @@
             width: 40px;
             height: 40px;
         }
-        
-        .click-here-text {
-            font-size: 0.9rem;
-        }
     }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const nodes = document.querySelectorAll('.hexagon-node');
-    const centerImage = document.querySelector('.center-image');
     const infoOverlay = document.querySelector('.info-overlay');
     const infoPanel = infoOverlay.querySelector('.info-panel');
     const closeBtn = infoOverlay.querySelector('.close-btn');
@@ -1511,36 +1013,6 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         }
     };
-    
-    // Event listener para el centro
-    centerImage.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const data = {
-            title: "Urban Sparrow Center",
-            subtitle: "Ecological Feedback Loop",
-            content: `
-                <div class="info-subtitle">The Vicious Cycle</div>
-                <p>This diagram illustrates how urban environments create a self-reinforcing ecological trap for house sparrows. Each node represents a key factor in their urban adaptation and decline.</p>
-                
-                <div class="info-subtitle">Circular Dependencies</div>
-                <p>The arrows show how each factor influences the next, creating a feedback loop that locks sparrows into a state of chronic stress and health decline despite apparent habitat suitability.</p>
-                
-                <div class="info-subtitle">Click on any node</div>
-                <p>to explore each component of this ecological trap in detail. The cycle begins with urban attractors and progresses through dietary poverty, chronic stress, impaired behavior, compounding exposure, and ultimately health decline without escape.</p>
-                
-                <div class="info-note">
-                    Urban environments function as ecological traps: they offer reliable food and nesting opportunities while masking long-term costs that accumulate through this vicious cycle.
-                </div>
-            `
-        };
-        
-        infoTitle.textContent = data.title;
-        let fullContent = `<div class="info-subtitle" style="margin-top: 0; padding-top: 0; border-top: none; color: #2d3748; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem;">${data.subtitle}</div>`;
-        fullContent += data.content;
-        infoContent.innerHTML = fullContent;
-        infoOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
     
     // Event listeners para cada nodo - CLICK
     nodes.forEach(node => {
