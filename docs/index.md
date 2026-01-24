@@ -33,9 +33,9 @@
                 <p>Design, experimentation, and material explorations.</p>
             </a>
 
-            <!-- Infrastructure of non-human life -->
-            <a href="mapa/mapa/" class="card">
-                <img src="images/alambre.jpeg" alt="Infrastructure of non-human life">
+<!-- Infrastructure of non-human life -->
+<a href="Gorrion/gorrion/" class="card">
+                <img src="images/Diagrama/Centro.png" alt="Infrastructure of non-human life">
                 <h3>Infrastructure of non-human life</h3>
                 <p>Early explorations that became the foundation of future projects.</p>
             </a>
