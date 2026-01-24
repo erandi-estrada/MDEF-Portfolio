@@ -225,7 +225,7 @@
     /* NODO 1 SUBIDO AÚN MÁS - cambiado de 200px a 150px */
     
     .node-1 { 
-        top: 100px; /* SUBIDO AÚN MÁS - antes era 200px */
+        top: 90px; /* SUBIDO AÚN MÁS - antes era 200px */
         left: calc(900px - 150px); /* Centrado horizontalmente */
     }
     
@@ -432,7 +432,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: 110px; /* SUBIDO AÚN MÁS - antes era 160px */
+            top: 90px; /* SUBIDO AÚN MÁS - antes era 160px */
             left: calc(700px - 140px);
         }
         
