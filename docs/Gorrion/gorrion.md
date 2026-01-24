@@ -16,38 +16,50 @@
         
         <!-- Nodo 1 - Parte superior -->
         <div class="hexagon-node node-1" data-node="1">
-            <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
-            <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
+            <div class="node-position">
+                <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(25, 118, 210, 0.4) 0%, transparent 70%);"></div>
+            </div>
         </div>
         
         <!-- Nodo 2 - Superior derecha -->
         <div class="hexagon-node node-2" data-node="2">
-            <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
-            <div class="node-glow" style="background: radial-gradient(circle, rgba(56, 142, 60, 0.4) 0%, transparent 70%);"></div>
+            <div class="node-position">
+                <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(56, 142, 60, 0.4) 0%, transparent 70%);"></div>
+            </div>
         </div>
         
         <!-- Nodo 3 - Inferior derecha -->
         <div class="hexagon-node node-3" data-node="3">
-            <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
-            <div class="node-glow" style="background: radial-gradient(circle, rgba(245, 124, 0, 0.4) 0%, transparent 70%);"></div>
+            <div class="node-position">
+                <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(245, 124, 0, 0.4) 0%, transparent 70%);"></div>
+            </div>
         </div>
         
         <!-- Nodo 4 - Parte inferior -->
         <div class="hexagon-node node-4" data-node="4">
-            <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
-            <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
+            <div class="node-position">
+                <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, transparent 70%);"></div>
+            </div>
         </div>
         
         <!-- Nodo 5 - Inferior izquierda -->
         <div class="hexagon-node node-5" data-node="5">
-            <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
-            <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
+            <div class="node-position">
+                <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(123, 31, 162, 0.4) 0%, transparent 70%);"></div>
+            </div>
         </div>
         
         <!-- Nodo 6 - Superior izquierda -->
         <div class="hexagon-node node-6" data-node="6">
-            <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
-            <div class="node-glow" style="background: radial-gradient(circle, rgba(0, 121, 107, 0.4) 0%, transparent 70%);"></div>
+            <div class="node-position">
+                <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
+                <div class="node-glow" style="background: radial-gradient(circle, rgba(0, 121, 107, 0.4) 0%, transparent 70%);"></div>
+            </div>
         </div>
     </div>
     
@@ -94,11 +106,11 @@
         padding: 2rem 0;
     }
     
-    /* Contenedor hexagonal */
+    /* Contenedor hexagonal - MÁS GRANDE PARA MÁS SEPARACIÓN */
     .hexagon-diagram {
         position: relative;
-        width: 1600px;
-        height: 1400px;
+        width: 1800px;
+        height: 1600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -138,24 +150,30 @@
         z-index: 2;
     }
     
-    /* Nodos */
+    /* Nodos - ESTRUCTURA CORREGIDA */
     .hexagon-node {
         position: absolute;
         width: 300px;
         height: 300px;
-        cursor: pointer;
         z-index: 20;
+        /* Posicionamiento absoluto en lugar de transform */
+    }
+    
+    /* Contenedor para el efecto hover - separado del posicionamiento */
+    .node-position {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        top: 50%;
-        left: 50%;
+        position: relative;
     }
     
-    /* CORREGIDO: Los nodos de arriba y abajo no se mueven */
-    .hexagon-node:hover {
+    /* EFECTO HOVER CORREGIDO - sin conflicto con posicionamiento */
+    .node-position:hover {
         transform: scale(1.15);
         z-index: 30;
     }
@@ -169,6 +187,10 @@
         z-index: 2;
         border: 3px solid;
         transition: transform 0.3s ease;
+    }
+    
+    .node-position:hover .node-img {
+        transform: scale(1.05);
     }
     
     /* Bordes de colores para cada nodo */
@@ -190,38 +212,44 @@
         pointer-events: none;
     }
     
-    .hexagon-node:hover .node-glow {
+    .node-position:hover .node-glow {
         opacity: 1;
         transform: scale(1.1);
         filter: blur(20px);
     }
     
     /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
-    /* Radio del hexágono: 450px (para más separación) */
-    /* Centro en (800px, 700px) */
+    /* Radio aumentado a 550px para más separación */
+    /* Centro en (900px, 800px) del contenedor de 1800x1600 */
     
     .node-1 { 
-        transform: translate(-50%, calc(-50% - 450px)); /* Arriba */
+        top: calc(800px - 550px); /* 250px */
+        left: calc(900px - 150px); /* Centrado horizontalmente */
     }
     
     .node-2 { 
-        transform: translate(calc(-50% + 390px), calc(-50% - 225px)); /* Superior derecha */
+        top: calc(800px - 275px - 150px); /* 375px */
+        left: calc(900px + 476px - 150px); /* 1226px */
     }
     
     .node-3 { 
-        transform: translate(calc(-50% + 390px), calc(-50% + 225px)); /* Inferior derecha */
+        top: calc(800px + 275px - 150px); /* 925px */
+        left: calc(900px + 476px - 150px); /* 1226px */
     }
     
     .node-4 { 
-        transform: translate(-50%, calc(-50% + 450px)); /* Abajo */
+        top: calc(800px + 550px - 150px); /* 1200px */
+        left: calc(900px - 150px); /* Centrado horizontalmente */
     }
     
     .node-5 { 
-        transform: translate(calc(-50% - 390px), calc(-50% + 225px)); /* Inferior izquierda */
+        top: calc(800px + 275px - 150px); /* 925px */
+        left: calc(900px - 476px - 150px); /* 274px */
     }
     
     .node-6 { 
-        transform: translate(calc(-50% - 390px), calc(-50% - 225px)); /* Superior izquierda */
+        top: calc(800px - 275px - 150px); /* 375px */
+        left: calc(900px - 476px - 150px); /* 274px */
     }
     
     /* Panel de información */
@@ -335,25 +363,48 @@
     }
     
     /* Responsive */
+    @media (max-width: 2000px) {
+        .hexagon-diagram {
+            width: 1600px;
+            height: 1400px;
+        }
+        
+        /* Recalcular posiciones para nuevo tamaño */
+        .node-1 { 
+            top: calc(700px - 500px);
+            left: calc(800px - 150px);
+        }
+        
+        .node-2 { 
+            top: calc(700px - 250px - 150px);
+            left: calc(800px + 433px - 150px);
+        }
+        
+        .node-3 { 
+            top: calc(700px + 250px - 150px);
+            left: calc(800px + 433px - 150px);
+        }
+        
+        .node-4 { 
+            top: calc(700px + 500px - 150px);
+            left: calc(800px - 150px);
+        }
+        
+        .node-5 { 
+            top: calc(700px + 250px - 150px);
+            left: calc(800px - 433px - 150px);
+        }
+        
+        .node-6 { 
+            top: calc(700px - 250px - 150px);
+            left: calc(800px - 433px - 150px);
+        }
+    }
+    
     @media (max-width: 1800px) {
         .hexagon-diagram {
             width: 1400px;
             height: 1200px;
-        }
-        
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 400px)); }
-        .node-2 { transform: translate(calc(-50% + 346px), calc(-50% - 200px)); }
-        .node-3 { transform: translate(calc(-50% + 346px), calc(-50% + 200px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 400px)); }
-        .node-5 { transform: translate(calc(-50% - 346px), calc(-50% + 200px)); }
-        .node-6 { transform: translate(calc(-50% - 346px), calc(-50% - 200px)); }
-    }
-    
-    @media (max-width: 1600px) {
-        .hexagon-diagram {
-            width: 1200px;
-            height: 1000px;
         }
         
         .center-image {
@@ -366,19 +417,48 @@
             height: 280px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 350px)); }
-        .node-2 { transform: translate(calc(-50% + 303px), calc(-50% - 175px)); }
-        .node-3 { transform: translate(calc(-50% + 303px), calc(-50% + 175px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 350px)); }
-        .node-5 { transform: translate(calc(-50% - 303px), calc(-50% + 175px)); }
-        .node-6 { transform: translate(calc(-50% - 303px), calc(-50% - 175px)); }
+        /* Ajustar tamaño del contenedor interno */
+        .node-position {
+            width: 280px;
+            height: 280px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(600px - 450px);
+            left: calc(700px - 140px);
+        }
+        
+        .node-2 { 
+            top: calc(600px - 225px - 140px);
+            left: calc(700px + 390px - 140px);
+        }
+        
+        .node-3 { 
+            top: calc(600px + 225px - 140px);
+            left: calc(700px + 390px - 140px);
+        }
+        
+        .node-4 { 
+            top: calc(600px + 450px - 140px);
+            left: calc(700px - 140px);
+        }
+        
+        .node-5 { 
+            top: calc(600px + 225px - 140px);
+            left: calc(700px - 390px - 140px);
+        }
+        
+        .node-6 { 
+            top: calc(600px - 225px - 140px);
+            left: calc(700px - 390px - 140px);
+        }
     }
     
-    @media (max-width: 1400px) {
+    @media (max-width: 1600px) {
         .hexagon-diagram {
-            width: 1000px;
-            height: 900px;
+            width: 1200px;
+            height: 1000px;
         }
         
         .center-image {
@@ -391,19 +471,47 @@
             height: 250px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 300px)); }
-        .node-2 { transform: translate(calc(-50% + 260px), calc(-50% - 150px)); }
-        .node-3 { transform: translate(calc(-50% + 260px), calc(-50% + 150px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 300px)); }
-        .node-5 { transform: translate(calc(-50% - 260px), calc(-50% + 150px)); }
-        .node-6 { transform: translate(calc(-50% - 260px), calc(-50% - 150px)); }
+        .node-position {
+            width: 250px;
+            height: 250px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(500px - 400px);
+            left: calc(600px - 125px);
+        }
+        
+        .node-2 { 
+            top: calc(500px - 200px - 125px);
+            left: calc(600px + 346px - 125px);
+        }
+        
+        .node-3 { 
+            top: calc(500px + 200px - 125px);
+            left: calc(600px + 346px - 125px);
+        }
+        
+        .node-4 { 
+            top: calc(500px + 400px - 125px);
+            left: calc(600px - 125px);
+        }
+        
+        .node-5 { 
+            top: calc(500px + 200px - 125px);
+            left: calc(600px - 346px - 125px);
+        }
+        
+        .node-6 { 
+            top: calc(500px - 200px - 125px);
+            left: calc(600px - 346px - 125px);
+        }
     }
     
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         .hexagon-diagram {
-            width: 850px;
-            height: 800px;
+            width: 1000px;
+            height: 900px;
         }
         
         .center-image {
@@ -416,13 +524,94 @@
             height: 220px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 260px)); }
-        .node-2 { transform: translate(calc(-50% + 225px), calc(-50% - 130px)); }
-        .node-3 { transform: translate(calc(-50% + 225px), calc(-50% + 130px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 260px)); }
-        .node-5 { transform: translate(calc(-50% - 225px), calc(-50% + 130px)); }
-        .node-6 { transform: translate(calc(-50% - 225px), calc(-50% - 130px)); }
+        .node-position {
+            width: 220px;
+            height: 220px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(450px - 350px);
+            left: calc(500px - 110px);
+        }
+        
+        .node-2 { 
+            top: calc(450px - 175px - 110px);
+            left: calc(500px + 303px - 110px);
+        }
+        
+        .node-3 { 
+            top: calc(450px + 175px - 110px);
+            left: calc(500px + 303px - 110px);
+        }
+        
+        .node-4 { 
+            top: calc(450px + 350px - 110px);
+            left: calc(500px - 110px);
+        }
+        
+        .node-5 { 
+            top: calc(450px + 175px - 110px);
+            left: calc(500px - 303px - 110px);
+        }
+        
+        .node-6 { 
+            top: calc(450px - 175px - 110px);
+            left: calc(500px - 303px - 110px);
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        .hexagon-diagram {
+            width: 850px;
+            height: 800px;
+        }
+        
+        .center-image {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .hexagon-node {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .node-position {
+            width: 200px;
+            height: 200px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(400px - 300px);
+            left: calc(425px - 100px);
+        }
+        
+        .node-2 { 
+            top: calc(400px - 150px - 100px);
+            left: calc(425px + 260px - 100px);
+        }
+        
+        .node-3 { 
+            top: calc(400px + 150px - 100px);
+            left: calc(425px + 260px - 100px);
+        }
+        
+        .node-4 { 
+            top: calc(400px + 300px - 100px);
+            left: calc(425px - 100px);
+        }
+        
+        .node-5 { 
+            top: calc(400px + 150px - 100px);
+            left: calc(425px - 260px - 100px);
+        }
+        
+        .node-6 { 
+            top: calc(400px - 150px - 100px);
+            left: calc(425px - 260px - 100px);
+        }
     }
     
     @media (max-width: 1000px) {
@@ -432,22 +621,50 @@
         }
         
         .center-image {
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
         }
         
         .hexagon-node {
-            width: 190px;
-            height: 190px;
+            width: 180px;
+            height: 180px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 230px)); }
-        .node-2 { transform: translate(calc(-50% + 200px), calc(-50% - 115px)); }
-        .node-3 { transform: translate(calc(-50% + 200px), calc(-50% + 115px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 230px)); }
-        .node-5 { transform: translate(calc(-50% - 200px), calc(-50% + 115px)); }
-        .node-6 { transform: translate(calc(-50% - 200px), calc(-50% - 115px)); }
+        .node-position {
+            width: 180px;
+            height: 180px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(350px - 250px);
+            left: calc(350px - 90px);
+        }
+        
+        .node-2 { 
+            top: calc(350px - 125px - 90px);
+            left: calc(350px + 217px - 90px);
+        }
+        
+        .node-3 { 
+            top: calc(350px + 125px - 90px);
+            left: calc(350px + 217px - 90px);
+        }
+        
+        .node-4 { 
+            top: calc(350px + 250px - 90px);
+            left: calc(350px - 90px);
+        }
+        
+        .node-5 { 
+            top: calc(350px + 125px - 90px);
+            left: calc(350px - 217px - 90px);
+        }
+        
+        .node-6 { 
+            top: calc(350px - 125px - 90px);
+            left: calc(350px - 217px - 90px);
+        }
     }
     
     @media (max-width: 850px) {
@@ -457,22 +674,50 @@
         }
         
         .center-image {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
         }
         
         .hexagon-node {
-            width: 170px;
-            height: 170px;
+            width: 160px;
+            height: 160px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 200px)); }
-        .node-2 { transform: translate(calc(-50% + 173px), calc(-50% - 100px)); }
-        .node-3 { transform: translate(calc(-50% + 173px), calc(-50% + 100px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 200px)); }
-        .node-5 { transform: translate(calc(-50% - 173px), calc(-50% + 100px)); }
-        .node-6 { transform: translate(calc(-50% - 173px), calc(-50% - 100px)); }
+        .node-position {
+            width: 160px;
+            height: 160px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(300px - 200px);
+            left: calc(300px - 80px);
+        }
+        
+        .node-2 { 
+            top: calc(300px - 100px - 80px);
+            left: calc(300px + 173px - 80px);
+        }
+        
+        .node-3 { 
+            top: calc(300px + 100px - 80px);
+            left: calc(300px + 173px - 80px);
+        }
+        
+        .node-4 { 
+            top: calc(300px + 200px - 80px);
+            left: calc(300px - 80px);
+        }
+        
+        .node-5 { 
+            top: calc(300px + 100px - 80px);
+            left: calc(300px - 173px - 80px);
+        }
+        
+        .node-6 { 
+            top: calc(300px - 100px - 80px);
+            left: calc(300px - 173px - 80px);
+        }
     }
     
     @media (max-width: 700px) {
@@ -487,8 +732,8 @@
         }
         
         .center-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
         }
         
         .hexagon-node {
@@ -496,13 +741,41 @@
             height: 140px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 170px)); }
-        .node-2 { transform: translate(calc(-50% + 147px), calc(-50% - 85px)); }
-        .node-3 { transform: translate(calc(-50% + 147px), calc(-50% + 85px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 170px)); }
-        .node-5 { transform: translate(calc(-50% - 147px), calc(-50% + 85px)); }
-        .node-6 { transform: translate(calc(-50% - 147px), calc(-50% - 85px)); }
+        .node-position {
+            width: 140px;
+            height: 140px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(275px - 170px);
+            left: calc(250px - 70px);
+        }
+        
+        .node-2 { 
+            top: calc(275px - 85px - 70px);
+            left: calc(250px + 147px - 70px);
+        }
+        
+        .node-3 { 
+            top: calc(275px + 85px - 70px);
+            left: calc(250px + 147px - 70px);
+        }
+        
+        .node-4 { 
+            top: calc(275px + 170px - 70px);
+            left: calc(250px - 70px);
+        }
+        
+        .node-5 { 
+            top: calc(275px + 85px - 70px);
+            left: calc(250px - 147px - 70px);
+        }
+        
+        .node-6 { 
+            top: calc(275px - 85px - 70px);
+            left: calc(250px - 147px - 70px);
+        }
         
         .info-panel {
             width: 95%;
@@ -529,8 +802,8 @@
         }
         
         .center-image {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
         }
         
         .hexagon-node {
@@ -538,13 +811,41 @@
             height: 120px;
         }
         
-        /* Ajustar posiciones proporcionalmente */
-        .node-1 { transform: translate(-50%, calc(-50% - 150px)); }
-        .node-2 { transform: translate(calc(-50% + 130px), calc(-50% - 75px)); }
-        .node-3 { transform: translate(calc(-50% + 130px), calc(-50% + 75px)); }
-        .node-4 { transform: translate(-50%, calc(-50% + 150px)); }
-        .node-5 { transform: translate(calc(-50% - 130px), calc(-50% + 75px)); }
-        .node-6 { transform: translate(calc(-50% - 130px), calc(-50% - 75px)); }
+        .node-position {
+            width: 120px;
+            height: 120px;
+        }
+        
+        /* Recalcular posiciones */
+        .node-1 { 
+            top: calc(250px - 130px);
+            left: calc(250px - 60px);
+        }
+        
+        .node-2 { 
+            top: calc(250px - 65px - 60px);
+            left: calc(250px + 113px - 60px);
+        }
+        
+        .node-3 { 
+            top: calc(250px + 65px - 60px);
+            left: calc(250px + 113px - 60px);
+        }
+        
+        .node-4 { 
+            top: calc(250px + 130px - 60px);
+            left: calc(250px - 60px);
+        }
+        
+        .node-5 { 
+            top: calc(250px + 65px - 60px);
+            left: calc(250px - 113px - 60px);
+        }
+        
+        .node-6 { 
+            top: calc(250px - 65px - 60px);
+            left: calc(250px - 113px - 60px);
+        }
         
         .info-panel {
             padding: 1.5rem;
@@ -673,9 +974,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Event listeners para cada nodo - CLICK
     nodes.forEach(node => {
-        node.addEventListener('click', function(e) {
+        const nodePosition = node.querySelector('.node-position');
+        
+        nodePosition.addEventListener('click', function(e) {
             e.stopPropagation();
-            const nodeId = this.dataset.node;
+            const nodeId = node.dataset.node;
             const data = nodeData[nodeId];
             
             if (data) {
