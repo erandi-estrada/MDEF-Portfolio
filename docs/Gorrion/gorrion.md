@@ -221,9 +221,10 @@
     /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
     /* Radio aumentado a 550px para más separación */
     /* Centro en (900px, 800px) del contenedor de 1800x1600 */
+    /* NODO 1 SUBIDO 50px MÁS - cambiado de 250px a 200px */
     
     .node-1 { 
-        top: calc(800px - 550px); /* 250px */
+        top: 200px; /* SUBIDO 50px - antes era 250px */
         left: calc(900px - 150px); /* Centrado horizontalmente */
     }
     
@@ -371,7 +372,7 @@
         
         /* Recalcular posiciones para nuevo tamaño */
         .node-1 { 
-            top: calc(700px - 500px);
+            top: 180px; /* SUBIDO - antes era 200px */
             left: calc(800px - 150px);
         }
         
@@ -425,7 +426,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(600px - 450px);
+            top: 160px; /* SUBIDO */
             left: calc(700px - 140px);
         }
         
@@ -478,7 +479,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(500px - 400px);
+            top: 140px; /* SUBIDO */
             left: calc(600px - 125px);
         }
         
@@ -531,7 +532,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(450px - 350px);
+            top: 120px; /* SUBIDO */
             left: calc(500px - 110px);
         }
         
@@ -584,7 +585,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(400px - 300px);
+            top: 100px; /* SUBIDO */
             left: calc(425px - 100px);
         }
         
@@ -637,7 +638,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(350px - 250px);
+            top: 90px; /* SUBIDO */
             left: calc(350px - 90px);
         }
         
@@ -690,7 +691,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(300px - 200px);
+            top: 80px; /* SUBIDO */
             left: calc(300px - 80px);
         }
         
@@ -748,7 +749,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(275px - 170px);
+            top: 70px; /* SUBIDO */
             left: calc(250px - 70px);
         }
         
@@ -818,7 +819,7 @@
         
         /* Recalcular posiciones */
         .node-1 { 
-            top: calc(250px - 130px);
+            top: 60px; /* SUBIDO */
             left: calc(250px - 60px);
         }
         
