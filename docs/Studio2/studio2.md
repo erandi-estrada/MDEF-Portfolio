@@ -235,18 +235,6 @@
         <div class="slide">
             <img src="images/nomadic/6.jpg" alt="Nomadic project image 6" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
-        <div class="slide">
-            <img src="images/nomadic/7.jpg" alt="Nomadic project image 7" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <div class="slide">
-            <img src="images/nomadic/8.jpg" alt="Nomadic project image 8" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <div class="slide">
-            <img src="images/nomadic/9.jpg" alt="Nomadic project image 9" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <div class="slide">
-            <img src="images/nomadic/10.jpg" alt="Nomadic project image 10" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
     </div>
     
     <button class="slider-btn prev-btn" data-slider="nomadic">‹</button>
@@ -315,6 +303,7 @@
         line-height: 1.6;
         color: #4a5568;
         margin: 0 0 1rem 0;
+        background: none,
     }
     
     .description-box p:last-child {
@@ -326,7 +315,7 @@
         border-radius: 12px;
         padding: 1rem;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        border: 1px solid #e2e8f0;
+        border: none;
     }
     
     /* Estilos específicos para el slider de imágenes Nomadic */
