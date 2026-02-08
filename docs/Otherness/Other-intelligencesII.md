@@ -300,9 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
     background-color: #4a6fa5;
 }
 
-.indicator:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
 </style>
 
 ## Physical Computing Setup
