@@ -113,18 +113,197 @@ When user provides color input:
    - NeoPixel light pattern code</pre>
 </div>
 
-<div class="image-carousel" style="margin: 3rem 0; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<div class="carousel-container" style="margin: 3rem 0; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative;">
     <h4 style="text-align: center; margin-bottom: 1.5rem;">Agent Interactions</h4>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-        <img src="../../images/Agent1.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/Agent2.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/Agent3.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/Agent4.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/Agent5.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/Agent6.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/Agent7.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
+    
+    <div class="carousel-wrapper">
+        <div class="carousel-slides">
+            <div class="carousel-slide active">
+                <img src="../../images/Agent1.png" alt="Agent Interaction 1" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent2.png" alt="Agent Interaction 2" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent3.png" alt="Agent Interaction 3" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent4.png" alt="Agent Interaction 4" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent5.png" alt="Agent Interaction 5" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent6.png" alt="Agent Interaction 6" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent7.png" alt="Agent Interaction 7" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+        </div>
+        
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+        
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="currentSlide(0)"></span>
+            <span class="indicator" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+            <span class="indicator" onclick="currentSlide(5)"></span>
+            <span class="indicator" onclick="currentSlide(6)"></span>
+        </div>
     </div>
 </div>
+
+<script>
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const indicators = document.querySelectorAll('.indicator');
+
+function showSlide(index) {
+    // Asegurarse de que el índice esté dentro del rango
+    if (index >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+    } else {
+        currentSlideIndex = index;
+    }
+    
+    // Ocultar todas las slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    // Remover activo de todos los indicadores
+    indicators.forEach(indicator => {
+        indicator.classList.remove('active');
+    });
+    
+    // Mostrar slide actual
+    slides[currentSlideIndex].classList.add('active');
+    
+    // Activar indicador actual
+    if (indicators[currentSlideIndex]) {
+        indicators[currentSlideIndex].classList.add('active');
+    }
+}
+
+function moveSlide(n) {
+    showSlide(currentSlideIndex + n);
+}
+
+function currentSlide(n) {
+    showSlide(n);
+}
+
+// Auto-avance cada 5 segundos
+let slideInterval = setInterval(() => {
+    moveSlide(1);
+}, 5000);
+
+// Pausar auto-avance al interactuar
+const carousel = document.querySelector('.carousel-wrapper');
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(() => {
+        moveSlide(1);
+    }, 5000);
+});
+
+// Inicializar
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+});
+</script>
+
+<style>
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #4a6fa5;
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+</style>
 
 ## Physical Computing Setup
 
@@ -259,15 +438,7 @@ mcp.run(port=8080)</pre>
     <p style="margin-bottom: 1.5rem; color: #4a5568;">
         This experience reframed my understanding of Extended Intelligences. True agentic systems don't require perfect sensing or seamless integration. Instead, they thrive in the gaps—interpreting, adapting, and creating coherence from incomplete information. The AI became not just a tool, but a collaborator that could work with whatever signals were available, however imperfect.
     </p>
-      
-    </div>
 </div>
-
-    
-
-
-
-
 
 <style>
 .image-carousel img {
