@@ -171,6 +171,344 @@
         Your browser does not support the video tag.
     </video>
 </div>
+<!-- Sección Problematize Objects -->
+<h2>Problematize Objects</h2>
+
+<div class="objects-grid">
+    <div class="objects-column">
+        <div class="concepts-box">
+            <h3>Concepts</h3>
+            <ul>
+                <li>Low tech</li>
+                <li>Mobility</li>
+                <li>Non-human perspective</li>
+                <li>Multispecies</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="objects-column">
+        <div class="project-box">
+            <h3>Project 1</h3>
+            <p>How to standardize the design and creation of a bicycle using low tech so everyone could make them at home</p>
+        </div>
+        
+        <div class="project-box">
+            <h3>Project 2</h3>
+            <p>Multispecies justice in the city, understanding how the city affects other species and taking their perspective</p>
+        </div>
+    </div>
+</div>
+
+<div class="objects-grid" style="margin-top: 3rem;">
+    <div class="objects-column">
+        <div class="image-container">
+            <img src="Nomadic.png" alt="Nomadic project" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+    
+    <div class="objects-column">
+        <div class="description-box">
+            <p>This project proposes a mobile micro-habitat designed to support non-human life in hostile urban environments. The habitat moves because urban hostility is not static: heat, shade, dryness, and exposure constantly shift across the city. While human bodies can adapt by relocating, most insects and small organisms cannot escape these changing conditions.</p>
+            <p>Rather than stabilizing the environment through technological control, the project responds through displacement. Mobility becomes a survival strategy, not a feature. Inspired by walking mechanical structures, the habitat autonomously relocates when environmental conditions exceed tolerable thresholds, transporting shade, humidity, and shelter across the urban landscape.</p>
+        </div>
+    </div>
+</div>
+
+<div class="nomadic-slider-container" style="margin-top: 3rem;">
+    <div class="slider nomadic-slider">
+        <div class="slide">
+            <img src="images/nomadic/1.jpg" alt="Nomadic project image 1" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/2.jpg" alt="Nomadic project image 2" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/3.jpg" alt="Nomadic project image 3" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/4.jpg" alt="Nomadic project image 4" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/5.jpg" alt="Nomadic project image 5" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/6.jpg" alt="Nomadic project image 6" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/7.jpg" alt="Nomadic project image 7" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/8.jpg" alt="Nomadic project image 8" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/9.jpg" alt="Nomadic project image 9" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <div class="slide">
+            <img src="images/nomadic/10.jpg" alt="Nomadic project image 10" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </div>
+    
+    <button class="slider-btn prev-btn" data-slider="nomadic">‹</button>
+    <button class="slider-btn next-btn" data-slider="nomadic">›</button>
+    <div class="dots-container nomadic-dots"></div>
+</div>
+
+<style>
+    /* Estilos para Problematize Objects */
+    .objects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .objects-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .concepts-box, .project-box, .description-box {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        border: 1px solid #e2e8f0;
+    }
+    
+    .concepts-box h3, .project-box h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1976d2;
+        margin: 0 0 1rem 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    
+    .concepts-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .concepts-box li {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        color: #4a5568;
+        border-bottom: 1px solid #f7fafc;
+    }
+    
+    .concepts-box li:last-child {
+        border-bottom: none;
+    }
+    
+    .project-box p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #4a5568;
+        margin: 0;
+    }
+    
+    .description-box p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #4a5568;
+        margin: 0 0 1rem 0;
+    }
+    
+    .description-box p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .image-container {
+        background: white;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        border: 1px solid #e2e8f0;
+    }
+    
+    /* Estilos específicos para el slider de imágenes Nomadic */
+    .nomadic-slider-container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        background: transparent !important;
+    }
+    
+    .nomadic-slider {
+        background: transparent !important;
+    }
+    
+    .nomadic-slider .slide {
+        display: none;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+    
+    .nomadic-slider .slide.active-slide {
+        display: block;
+    }
+    
+    .nomadic-slider .slide img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .objects-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .concepts-box, .project-box, .description-box {
+            padding: 1.25rem;
+        }
+    }
+</style>
+
+<script>
+// Configurar el slider de imágenes Nomadic
+document.addEventListener('DOMContentLoaded', function() {
+    // Agregar el slider Nomadic a la lista de sliders
+    const sliders = [
+        {
+            name: 'errors',
+            container: document.querySelector('.errors-slider'),
+            dotsContainer: document.querySelector('.errors-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        },
+        {
+            name: 'fascinations',
+            container: document.querySelector('.fascinations-slider'),
+            dotsContainer: document.querySelector('.fascinations-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        },
+        {
+            name: 'ethics',
+            container: document.querySelector('.ethics-slider'),
+            dotsContainer: document.querySelector('.ethics-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        },
+        {
+            name: 'nomadic',
+            container: document.querySelector('.nomadic-slider'),
+            dotsContainer: document.querySelector('.nomadic-dots'),
+            currentSlide: 0,
+            slides: [],
+            dots: [],
+            interval: null
+        }
+    ];
+    
+    // Inicializar cada slider
+    sliders.forEach((slider, sliderIndex) => {
+        if (!slider.container) return;
+        
+        // Obtener slides
+        slider.slides = Array.from(slider.container.querySelectorAll('.slide'));
+        
+        // Crear dots
+        slider.slides.forEach((slide, index) => {
+            const dot = document.createElement('span');
+            dot.className = 'slide-dot';
+            dot.dataset.index = index;
+            dot.addEventListener('click', () => {
+                goToSlide(slider, index);
+            });
+            slider.dotsContainer.appendChild(dot);
+            slider.dots.push(dot);
+        });
+        
+        // Mostrar primera slide
+        showSlide(slider, 0);
+        
+        // Configurar auto-advance
+        slider.interval = setInterval(() => {
+            nextSlide(slider);
+        }, 5000); // Más rápido para imágenes
+        
+        // Pausar auto-advance al interactuar
+        slider.container.addEventListener('mouseenter', () => {
+            clearInterval(slider.interval);
+        });
+        
+        slider.container.addEventListener('mouseleave', () => {
+            slider.interval = setInterval(() => {
+                nextSlide(slider);
+            }, 5000);
+        });
+    });
+    
+    // Configurar botones de navegación
+    document.querySelectorAll('.slider-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const sliderName = this.dataset.slider;
+            const slider = sliders.find(s => s.name === sliderName);
+            const direction = this.classList.contains('prev-btn') ? -1 : 1;
+            
+            if (direction === -1) {
+                prevSlide(slider);
+            } else {
+                nextSlide(slider);
+            }
+        });
+    });
+    
+    // Funciones de navegación
+    function showSlide(slider, index) {
+        // Validar índice
+        if (index < 0) index = slider.slides.length - 1;
+        if (index >= slider.slides.length) index = 0;
+        
+        // Ocultar todas las slides
+        slider.slides.forEach(slide => {
+            slide.style.display = 'none';
+            slide.classList.remove('active-slide');
+        });
+        
+        // Remover active de todos los dots
+        slider.dots.forEach(dot => {
+            dot.classList.remove('active-dot');
+        });
+        
+        // Mostrar slide actual
+        slider.slides[index].style.display = 'block';
+        slider.slides[index].classList.add('active-slide');
+        slider.dots[index].classList.add('active-dot');
+        
+        // Actualizar índice actual
+        slider.currentSlide = index;
+    }
+    
+    function nextSlide(slider) {
+        showSlide(slider, slider.currentSlide + 1);
+    }
+    
+    function prevSlide(slider) {
+        showSlide(slider, slider.currentSlide - 1);
+    }
+    
+    function goToSlide(slider, index) {
+        showSlide(slider, index);
+    }
+});
+</script>
 
 <style>
     /* Ocultar el header superior con "Atlas" */
