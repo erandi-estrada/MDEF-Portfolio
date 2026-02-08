@@ -1,1265 +1,491 @@
-<div class="menu-container">
-    <div class="custom-header-menu">
-        <a href="../..">MDEF</a>
-        <a href="https://eradesign.portfolio.site/" target="_blank" rel="noopener noreferrer">Projects</a>
-        <a href="../../about/me">About me</a>
-    </div>
-</div>
-
-<div class="diagram-container">
-    <div class="hexagon-diagram">
-        <!-- Imagen central grande CON FONDO BLANCO -->
-        <div class="center-image">
-            <div class="center-circle"></div>
-            <img src="../../images/Diagrama/Centro.png" alt="Urban Sparrow Center" class="center-img">
-        </div>
-        
-        <!-- Nodo 1 - Parte superior -->
-        <div class="hexagon-node node-1" data-node="1">
-            <div class="node-position">
-                <img src="../../images/Diagrama/1.png" alt="Urban Attractors and Constraints" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 221, 255, 0.77) 0%, transparent 30%);"></div>
-                <div class="hover-overlay"></div>
-                <div class="hover-text">Click Here</div>
-                <div class="node-number">1</div>
-            </div>
-        </div>
-        
-        <!-- Nodo 2 - Superior derecha -->
-        <div class="hexagon-node node-2" data-node="2">
-            <div class="node-position">
-                <img src="../../images/Diagrama/2.png" alt="Dietary Poverty & Toxic Intake" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(156, 255, 69, 0.71) 0%, transparent 30%);"></div>
-                <div class="hover-overlay"></div>
-                <div class="hover-text">Click Here</div>
-                <div class="node-number">2</div>
-            </div>
-        </div>
-        
-        <!-- Nodo 3 - Inferior derecha -->
-        <div class="hexagon-node node-3" data-node="3">
-            <div class="node-position">
-                <img src="../../images/Diagrama/3.png" alt="Chronic Stress and Energetic Drain" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 193, 69, 0.77) 0%, transparent 30%);"></div>
-                <div class="hover-overlay"></div>
-                <div class="hover-text">Click Here</div>
-                <div class="node-number">3</div>
-            </div>
-        </div>
-        
-        <!-- Nodo 4 - Parte inferior -->
-        <div class="hexagon-node node-4" data-node="4">
-            <div class="node-position">
-                <img src="../../images/Diagrama/4.png" alt="Impaired Foraging Behavior and Decision-Making" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(255, 94, 69, 0.77) 0%, transparent 30%);"></div>
-                <div class="hover-overlay"></div>
-                <div class="hover-text">Click Here</div>
-                <div class="node-number">4</div>
-            </div>
-        </div>
-        
-        <!-- Nodo 5 - Inferior izquierda -->
-        <div class="hexagon-node node-5" data-node="5">
-            <div class="node-position">
-                <img src="../../images/Diagrama/5.png" alt="Density, Waste, and Compounding Exposure" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(159, 69, 255, 0.77) 0%, transparent 30%);"></div>
-                <div class="hover-overlay"></div>
-                <div class="hover-text">Click Here</div>
-                <div class="node-number">5</div>
-            </div>
-        </div>
-        
-        <!-- Nodo 6 - Superior izquierda -->
-        <div class="hexagon-node node-6" data-node="6">
-            <div class="node-position">
-                <img src="../../images/Diagrama/6.png" alt="Health Decline Without Escape" class="node-img">
-                <div class="node-glow" style="background: radial-gradient(circle, rgba(69, 255, 181, 0.77) 0%, transparent 30%);"></div>
-                <div class="hover-overlay"></div>
-                <div class="hover-text">Click Here</div>
-                <div class="node-number">6</div>
-            </div>
-        </div>
-    </div>
+<!-- Ya tienes el menú, así que continúo con el contenido de la página -->
+<div class="content-container">
     
-    <!-- Panel de información que aparece al hacer clic -->
-    <div class="info-overlay">
-        <div class="info-panel">
-            <button class="close-btn">&times;</button>
-            <div class="info-content">
-                <h3 class="info-title">House Sparrow</h3>
-                <div class="info-subtitle">Urban Attractors and Constraints</div>
-                <p>Concentrates sparrows in small spatial ranges (~60 m from nests), especially in densely populated human neighborhoods, where population density correlates more strongly with sparrow health decline than light or noise alone.</p>
-                
-                <div class="info-subtitle">Habitat structure</div>
-                <p>Favors presence near allotments, medium-height tree clusters, and low shrub cover, offering nesting and shelter.</p>
-                
-                <div class="info-subtitle">Anthropogenic food availability</div>
-                <p>Peaks in areas with abundant litter and food waste, creating predictable foraging hotspots.</p>
-                
-                <div class="info-note">
-                    Urban environments initially function as ecological traps: they offer reliable food and nesting opportunities while masking long-term costs.
+    <h1>Extended Intelligences II</h1>
+    
+    <div class="intro-section" style="margin: 2rem 0 3rem 0;">
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
+            This module explored the design of agentic systems that connect physical computing with artificial intelligence, 
+            creating distributed intelligences across digital and material domains. The challenge was to build a meaningful 
+            interface between human input, AI interpretation, and physical response—not as tools, but as collaborative agents.
+        </p>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="section" style="margin-bottom: 4rem;">
+        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">Project Overview</h2>
+        
+        <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0; align-items: start;">
+            <div>
+                <p style="margin-bottom: 1rem; line-height: 1.6;">
+                    <strong>Human + AI Co-creative Music Agent:</strong> A system where physical touch and color become a language for 
+                    musical co-creation with an AI agent. The user provides rhythmic input through touch and emotional tone through 
+                    color, which the AI interprets to generate lyrics, suggest musical references, and orchestrate light behavior.
+                </p>
+                <p style="margin-bottom: 1rem; line-height: 1.6;">
+                    The project reimagines musical composition as a distributed intelligence—neither fully human nor fully artificial, 
+                    but emerging through the interaction between physical sensing, AI interpretation, and atmospheric feedback.
+                </p>
+            </div>
+            <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #6c5ce7;">
+                <h4 style="margin-top: 0; color: #6c5ce7;">Core Architecture</h4>
+                <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">
+                    • Physical Inputs (touch, color) → MCP Server<br>
+                    • LLM Interpretation (mood, rhythm analysis)<br>
+                    • Generative Output (lyrics, song references)<br>
+                    • Physical Feedback (NeoPixel light patterns)<br>
+                    • Continuous loop of interpretation and response
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Logic -->
+    <div class="section" style="margin-bottom: 4rem;">
+        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">System Logic & Pipeline</h2>
+        
+        <div style="background-color: #fff; border-radius: 10px; padding: 2rem; margin: 2rem 0; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h4 style="color: #2d3436; margin-bottom: 1.5rem;">Interaction Pipeline</h4>
+                <div style="display: inline-block; text-align: left; position: relative;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                        <!-- Step 1 -->
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: #6c5ce7; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+                            <div style="padding: 1rem 1.5rem; background-color: #f8f9fa; border-radius: 8px; min-width: 200px;">
+                                <strong>User Input</strong><br>
+                                Touch (rhythm) + Color (mood)
+                            </div>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div style="font-size: 1.5rem; color: #6c5ce7;">↓</div>
+                        
+                        <!-- Step 2 -->
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: #00b894; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+                            <div style="padding: 1rem 1.5rem; background-color: #f8f9fa; border-radius: 8px; min-width: 200px;">
+                                <strong>AI Agent</strong><br>
+                                Mood + rhythm interpretation
+                            </div>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div style="font-size: 1.5rem; color: #00b894;">↓</div>
+                        
+                        <!-- Step 3 -->
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: #fd79a8; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
+                            <div style="padding: 1rem 1.5rem; background-color: #f8f9fa; border-radius: 8px; min-width: 200px;">
+                                <strong>Lyrics Generation</strong><br>
+                                + Song reference (YouTube)
+                            </div>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div style="font-size: 1.5rem; color: #fd79a8;">↓</div>
+                        
+                        <!-- Step 4 -->
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="background-color: #fdcb6e; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">4</div>
+                            <div style="padding: 1rem 1.5rem; background-color: #f8f9fa; border-radius: 8px; min-width: 200px;">
+                                <strong>Light Behavior</strong><br>
+                                NeoPixel pattern generation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+                <div>
+                    <h4 style="color: #2d3436;">What Actually Worked</h4>
+                    <ul style="padding-left: 1.2rem; line-height: 1.6;">
+                        <li>MCP-based architecture connecting physical inputs to AI agent</li>
+                        <li>Prompt logic interpreting color as emotional mood</li>
+                        <li>Mapping mood → lyrical tone and narrative structure</li>
+                        <li>Randomized rhythm pattern generation from touch input</li>
+                        <li>Matching generated lyrics to existing musical references</li>
+                        <li>Conceptual pipeline from sensor → interpretation → generative output</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #2d3436;">What Didn't Fully Materialize</h4>
+                    <ul style="padding-left: 1.2rem; line-height: 1.6;">
+                        <li>Capacitive touch sensor reached only binary detection (touched/not touched)</li>
+                        <li>Complex rhythm detection required signal stability beyond available time</li>
+                        <li>OS and connectivity issues limited real-time deployment to NeoPixel LEDs</li>
+                        <li>Color sensor integration remained at conceptual stage</li>
+                        <li>Full hardware-software feedback loop couldn't be closed in timeframe</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- AI Prompting & Agent Behavior -->
+    <div class="section" style="margin-bottom: 4rem;">
+        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">AI Prompting & Agent Behavior</h2>
+        
+        <div style="margin-bottom: 3rem;">
+            <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                The AI agent was designed to act as an interpretive composer—translating abstract physical inputs 
+                into musical and lyrical outputs. Rather than simply reacting, it made creative decisions across 
+                emotional, rhythmic, and atmospheric domains.
+            </p>
+            
+            <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                <div style="background-color: #f8f9fa; border-radius: 8px; padding: 1.5rem; border: 1px solid #e0e0e0;">
+                    <h4 style="margin-top: 0; color: #6c5ce7;">Example Prompt Structure</h4>
+                    <div style="background-color: #2d3436; color: #dfe6e9; padding: 1rem; border-radius: 5px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                        <code>
+                            User input: Color=Blue (mood: melancholic), Touch pattern=slow, irregular<br>
+                            Task: Generate lyrics reflecting melancholic mood with slow, irregular rhythm<br>
+                            Additional: Suggest a YouTube song matching this atmosphere<br>
+                            Output format: Lyrics + Song reference + Light pattern code for NeoPixel
+                        </code>
+                    </div>
+                </div>
+                <div style="background-color: #f8f9fa; border-radius: 8px; padding: 1.5rem; border: 1px solid #e0e0e0;">
+                    <h4 style="margin-top: 0; color: #00b894;">Sample AI Output</h4>
+                    <div style="padding: 0.5rem; line-height: 1.5; font-style: italic;">
+                        "The rain falls in uneven beats,<br>
+                        Like memories on windowpanes...<br>
+                        <br>
+                        Song reference: 'River Flows in You' by Yiruma<br>
+                        Light pattern: Slow blue pulses with occasional white flickers"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Placeholder for screenshot - you'll need to add your actual image -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <div style="background-color: #f1f2f6; border: 2px dashed #a4b0be; border-radius: 8px; padding: 3rem; margin-bottom: 1rem;">
+                <p style="color: #747d8c; margin: 0;">[Screenshot of AI prompt interface and outputs]</p>
+                <p style="color: #a4b0be; font-size: 0.9rem; margin-top: 0.5rem;">Replace with your actual screenshot</p>
+            </div>
+            <p style="font-size: 0.9rem; color: #666;">Example of the AI agent interpreting physical inputs and generating creative outputs</p>
+        </div>
+    </div>
+
+    <!-- Physical Computing Setup -->
+    <div class="section" style="margin-bottom: 4rem;">
+        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">Physical Computing Setup</h2>
+        
+        <p style="margin-bottom: 2rem; line-height: 1.6;">
+            The hardware infrastructure was built around a Raspberry Pi Pico 2W, with capacitive touch sensing 
+            and NeoPixel LED control. Despite technical constraints, the setup demonstrates how physical and 
+            digital intelligences can be architecturally connected.
+        </p>
+        
+        <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+            <div>
+                <h4 style="margin-bottom: 1rem;">Hardware Components</h4>
+                <ul style="padding-left: 1.2rem; line-height: 1.6;">
+                    <li>Raspberry Pi Pico 2W (MicroPython)</li>
+                    <li>Capacitive copper strip touch sensor</li>
+                    <li>NeoPixel LED strip (WS2812B)</li>
+                    <li>Breadboard and wiring infrastructure</li>
+                    <li>Color sensor (conceptual/planned)</li>
+                </ul>
+                
+                <div style="margin-top: 2rem; background-color: #fff8e1; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ffb300;">
+                    <h5 style="margin-top: 0; color: #ff8f00;">Code Structure (MCP Server)</h5>
+                    <pre style="background-color: #2d3436; color: #dfe6e9; padding: 1rem; border-radius: 5px; font-size: 0.8rem; overflow-x: auto;">
+import time
+import network
+from machine import Pin, ADC
+from micro_mcp import MCPServer
+
+# Touch sensor setup
+sensor = ADC(Pin(26))
+
+# MCP server for AI agent communication
+mcp = MCPServer(name="music-agent", version="1.0.0")
+
+@mcp.tool(
+    name="read_touch_sensor",
+    description="Read touch sensor state.",
+    input_schema={"type": "object", "properties": {}, "required": []}
+)
+def read_touch_sensor():
+    readings = []
+    for _ in range(5):
+        readings.append(sensor.read_u16())
+        time.sleep(0.2)
+    zeros = sum(1 for v in readings if v == 0)
+    return "Touched" if zeros >= 3 else "Not Touched"
+
+# Start server
+mcp.run(port=8080)</pre>
+                </div>
+            </div>
+            
+            <div>
+                <!-- Placeholder for hardware photos - you'll need to add your actual images -->
+                <div style="background-color: #f1f2f6; border: 2px dashed #a4b0be; border-radius: 8px; padding: 2rem; margin-bottom: 1rem; height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: #747d8c; text-align: center;">[Photo of Raspberry Pi Pico setup with capacitive sensor]</p>
+                </div>
+                <div style="background-color: #f1f2f6; border: 2px dashed #a4b0be; border-radius: 8px; padding: 2rem; margin-top: 1rem; height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: #747d8c; text-align: center;">[Photo of NeoPixel LED strip and wiring]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why This Fits Extended Intelligences II -->
+    <div class="section" style="margin-bottom: 4rem; background-color: #f8f9fa; padding: 2rem; border-radius: 10px;">
+        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">Why This Fits Extended Intelligences II</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <h4 style="color: #6c5ce7; margin-top: 0;">Distributed Intelligence</h4>
+                <p>The system demonstrates intelligence distributed across human touch, AI interpretation, and hardware response—no single component "owns" the creative process.</p>
+            </div>
+            
+            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <h4 style="color: #00b894; margin-top: 0;">Interpretive, Not Reactive</h4>
+                <p>The AI agent interprets abstract inputs (color=mood, touch=rhythm) rather than simply reacting to signals, exercising creative agency across domains.</p>
+            </div>
+            
+            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <h4 style="color: #fd79a8; margin-top: 0;">Agentic Decision-Making</h4>
+                <p>The system makes decisions across emotion, rhythm, visuals, and musical references—demonstrating multi-domain agency rather than single-function automation.</p>
+            </div>
+            
+            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <h4 style="color: #fdcb6e; margin-top: 0;">Meaning from Constraints</h4>
+                <p>The project shows that intelligence in physical systems doesn't require perfect sensing—meaningful interaction emerges from partial, abstract, or even broken inputs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reflection & Learnings -->
+    <div class="section" style="margin-bottom: 4rem;">
+        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">Reflection & Learnings</h2>
+        
+        <div class="two-column-layout" style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin: 2rem 0;">
+            <div>
+                <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+                    This project began as an exploration of shared musical creation between human and AI, where physical interaction 
+                    would directly shape sound, mood, and atmosphere. The vision was elegant: touch and color becoming a language 
+                    for co-creation, with the AI responding through lyrics, music references, and light.
+                </p>
+                
+                <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+                    In practice, it became a lesson in friction and negotiation. Working within tight constraints—both temporal and 
+                    technical—meant that many envisioned interactions remained incomplete. The capacitive sensor delivered only 
+                    binary readings rather than nuanced rhythm detection. OS conflicts prevented real-time LED control. The color 
+                    sensor never made it past the conceptual stage.
+                </p>
+                
+                <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+                    Yet this very incompleteness revealed something more interesting: that intelligence in hybrid systems isn't 
+                    about technical perfection, but about meaning-making within constraints. The AI agent didn't need perfect 
+                    rhythm detection to generate compelling lyrics. It didn't need calibrated color sensing to interpret emotional 
+                    tone. It worked with what it had—partial, abstract, sometimes broken inputs—and still created coherent, 
+                    atmospheric outputs.
+                </p>
+                
+                <p style="line-height: 1.7;">
+                    This project taught me that agentic systems thrive not despite their limitations, but through them. The gaps 
+                    between intention and implementation become spaces for improvisation and reinterpretation. What began as a 
+                    technical challenge became a conceptual insight: intelligence in physical computing isn't something we build 
+                    perfectly and then deploy—it's something that emerges, unevenly and unexpectedly, from the dialogue between 
+                    human intention, material constraints, and algorithmic interpretation.
+                </p>
+            </div>
+            
+            <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; border-top: 4px solid #6c5ce7;">
+                <h4 style="margin-top: 0; color: #6c5ce7;">Key Insights</h4>
+                <ul style="padding-left: 1.2rem; line-height: 1.6;">
+                    <li>Agentic systems make meaning from partial data</li>
+                    <li>Technical constraints can drive creative interpretation</li>
+                    <li>Intelligence is distributed across the system, not localized</li>
+                    <li>Failure modes become part of the system's "personality"</li>
+                    <li>Human-AI collaboration emerges through negotiation, not control</li>
+                </ul>
+                
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0;">
+                    <h5 style="color: #2d3436;">Technical Realizations</h5>
+                    <p style="font-size: 0.9rem; line-height: 1.5;">
+                        MCP architecture successfully connected physical and digital domains. Prompt engineering enabled 
+                        meaningful interpretation of abstract inputs. Hardware limitations redirected focus to conceptual 
+                        robustness over technical perfection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<style>
-    /* Ocultar el header superior con "Atlas" */
-    header:first-of-type,
-    .header:first-of-type,
-    .atlas-header,
-    h1:first-of-type {
-        display: none !important;
-    }
-    
-    /* SIN FONDO - Usa el fondo por defecto de tu código */
-    .diagram-container {
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        padding: 2rem 0;
-    }
-    
-    /* Contenedor hexagonal - MÁS GRANDE PARA MÁS SEPARACIÓN */
-    .hexagon-diagram {
-        position: relative;
-        width: 1800px;
-        height: 1600px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* Imagen central - MÁS GRANDE CON FONDO BLANCO */
-    .center-image {
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    .center-circle {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: white;
-        border-radius: 50%;
-        border: 4px solid #1976d2;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-    
-    /* IMAGEN DEL CENTRO MÁS GRANDE - cambiado de 70% a 85% */
-    .center-img {
-        width: 100%;  /* AGRANDADA de 70% a 85% */
-        height: 85%; /* AGRANDADA de 70% a 85% */
-        object-fit: contain;
-        border-radius: none;
-        position: relative;
-        z-index: 2;
-    }
-    
-    /* Nodos - ESTRUCTURA CORREGIDA */
-    .hexagon-node {
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        z-index: 20;
-        /* Posicionamiento absoluto en lugar de transform */
-    }
-    
-    /* Contenedor para el efecto hover - separado del posicionamiento */
-    .node-position {
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        position: relative;
-    }
-    
-    /* EFECTO HOVER CORREGIDO - sin conflicto con posicionamiento */
-    .node-position:hover {
-        transform: scale(1.15);
-        z-index: 30;
-    }
-    
-    .node-img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        border-radius: 50%;
-        position: relative;
-        z-index: 2;
-        border: 3px solid;
-        transition: all 0.3s ease;
-    }
-    
-    /* Nuevos estilos para el efecto hover solicitado */
-    .hover-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: transparent;
-        z-index: 3;
-        opacity: 0;
-        transition: all 0.3s ease;
-        pointer-events: none;
-    }
-    
-    .hover-text {
-        position: absolute;
-        color: white;
-        font-size: 2rem;
-        font-weight: 700;
-        text-align: center;
-        z-index: 4;
-        opacity: 0;
-        transition: all 0.3s ease;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        pointer-events: none;
-        letter-spacing: 1px;
-        padding: 0 20px;
-    }
-    
-    /* NÚMEROS agregados - parte exterior superior derecha */
-    .node-number {
-        position: absolute;
-        top: -15px;
-        right: -15px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: white;
-        z-index: 5;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        border: 3px solid white;
-        pointer-events: none;
-    }
-    
-    /* Efecto hover: opacar la imagen y mostrar texto */
-    .node-position:hover .node-img {
-        filter: brightness(0.4) opacity(0.7);
-    }
-    
-    .node-position:hover .hover-overlay {
-        opacity: 0.9;
-    }
-    
-    .node-position:hover .hover-text {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    
-    /* Colores específicos para cada overlay y número */
-    .node-1 .hover-overlay { background-color: #1976d2; }
-    .node-1 .node-number { background-color: #1976d2; }
-    
-    .node-2 .hover-overlay { background-color: #388e3c; }
-    .node-2 .node-number { background-color: #388e3c; }
-    
-    .node-3 .hover-overlay { background-color: #f57c00; }
-    .node-3 .node-number { background-color: #f57c00; }
-    
-    .node-4 .hover-overlay { background-color: #d32f2f; }
-    .node-4 .node-number { background-color: #d32f2f; }
-    
-    .node-5 .hover-overlay { background-color: #7b1fa2; }
-    .node-5 .node-number { background-color: #7b1fa2; }
-    
-    .node-6 .hover-overlay { background-color: #00796b; }
-    .node-6 .node-number { background-color: #00796b; }
-    
-    .node-position:hover .node-img {
-        transform: scale(1.05);
-    }
-    
-    /* Bordes de colores para cada nodo */
-    .node-1 .node-img { border-color: #1976d2; }
-    .node-2 .node-img { border-color: #388e3c; }
-    .node-3 .node-img { border-color: #f57c00; }
-    .node-4 .node-img { border-color: #d32f2f; }
-    .node-5 .node-img { border-color: #7b1fa2; }
-    .node-6 .node-img { border-color: #00796b; }
-    
-    .node-glow {
-        position: absolute;
-        width: 120%;
-        height: 120%;
-        border-radius: 50%;
-        z-index: 1;
-        opacity: 0;
-        transition: all 0.3s ease;
-        pointer-events: none;
-    }
-    
-    .node-position:hover .node-glow {
-        opacity: 1;
-        transform: scale(1.1);
-        filter: blur(20px);
-    }
-    
-    /* POSICIONES CORREGIDAS - HEXÁGONO PERFECTO CON MÁS SEPARACIÓN */
-    /* Radio aumentado a 550px para más separación */
-    /* Centro en (900px, 800px) del contenedor de 1800x1600 */
-    /* NODO 1 SUBIDO AÚN MÁS - cambiado de 200px a 150px */
-    
-    .node-1 { 
-        top: 15px; /* SUBIDO AÚN MÁS - antes era 200px */
-        left: calc(900px - 150px); /* Centrado horizontalmente */
-    }
-    
-    .node-2 { 
-        top: calc(800px - 275px - 150px); /* 375px */
-        left: calc(900px + 476px - 150px); /* 1226px */
-    }
-    
-    .node-3 { 
-        top: calc(800px + 275px - 150px); /* 925px */
-        left: calc(900px + 476px - 150px); /* 1226px */
-    }
-    
-    .node-4 { 
-        top: calc(800px + 550px - 150px); /* 1200px */
-        left: calc(900px - 150px); /* Centrado horizontalmente */
-    }
-    
-    .node-5 { 
-        top: calc(800px + 275px - 150px); /* 925px */
-        left: calc(900px - 476px - 150px); /* 274px */
-    }
-    
-    .node-6 { 
-        top: calc(800px - 275px - 150px); /* 375px */
-        left: calc(900px - 476px - 150px); /* 274px */
-    }
-    
-    /* Panel de información */
-    .info-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    
-    .info-overlay.active {
-        display: flex;
-        opacity: 1;
-    }
-    
-    .info-panel {
-        background: white;
-        border-radius: 20px;
-        width: 90%;
-        max-width: 800px;
-        max-height: 85vh;
-        padding: 3rem;
-        position: relative;
-        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-        transform: translateY(20px);
-        transition: transform 0.3s ease;
-        overflow-y: auto;
-    }
-    
-    .info-overlay.active .info-panel {
-        transform: translateY(0);
-    }
-    
-    .close-btn {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: none;
-        border: none;
-        font-size: 2.5rem;
-        color: #666;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        line-height: 1;
-    }
-    
-    .close-btn:hover {
-        background: #f5f5f5;
-        color: #333;
-        transform: rotate(90deg);
-    }
-    
-    .info-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid #1976d2;
-    }
-    
-    .info-subtitle {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #1976d2;
-        margin: 2rem 0 1rem 0;
-        padding-top: 1.5rem;
-        border-top: 1px solid #e2e8f0;
-    }
-    
-    .info-subtitle:first-of-type {
-        margin-top: 1rem;
-        padding-top: 0;
-        border-top: none;
-        color: #2d3748;
-        font-size: 1.8rem;
-        font-weight: 700;
-    }
-    
-    .info-content p {
-        font-size: 1.2rem;
-        line-height: 1.7;
-        color: #4a5568;
-        margin-bottom: 1.5rem;
-    }
-    
-    .info-note {
-        font-size: 1.1rem;
-        font-style: italic;
-        color: #718096;
-        padding: 1.8rem;
-        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-        border-left: 4px solid #e2e8f0;
-        margin-top: 2.5rem;
-        border-radius: 12px;
-        line-height: 1.6;
-    }
-    
-    /* Responsive - ajustes para los números */
-    @media (max-width: 2000px) {
-        .hexagon-diagram {
-            width: 1600px;
-            height: 1400px;
-        }
-        
-        .node-number {
-            width: 45px;
-            height: 45px;
-            font-size: 1.6rem;
-            top: -12px;
-            right: -12px;
-        }
-        
-        /* Recalcular posiciones para nuevo tamaño */
-        .node-1 { 
-            top: 20px; /* SUBIDO AÚN MÁS - antes era 180px */
-            left: calc(800px - 150px);
-        }
-        
-        .node-2 { 
-            top: calc(700px - 250px - 150px);
-            left: calc(800px + 433px - 150px);
-        }
-        
-        .node-3 { 
-            top: calc(700px + 250px - 150px);
-            left: calc(800px + 433px - 150px);
-        }
-        
-        .node-4 { 
-            top: calc(700px + 500px - 150px);
-            left: calc(800px - 150px);
-        }
-        
-        .node-5 { 
-            top: calc(700px + 250px - 150px);
-            left: calc(800px - 433px - 150px);
-        }
-        
-        .node-6 { 
-            top: calc(700px - 250px - 150px);
-            left: calc(800px - 433px - 150px);
-        }
-    }
-    
-    @media (max-width: 1800px) {
-        .hexagon-diagram {
-            width: 1400px;
-            height: 1200px;
-        }
-        
-        .center-image {
-            width: 450px;
-            height: 450px;
-        }
-        
-        .center-img {
-            width: 85%; /* Mantenemos el 85% en responsive */
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 280px;
-            height: 280px;
-        }
-        
-        /* Ajustar tamaño del contenedor interno */
-        .node-position {
-            width: 280px;
-            height: 280px;
-        }
-        
-        /* Ajustar tamaño del texto hover */
-        .hover-text {
-            font-size: 1.8rem;
-        }
-        
-        .node-number {
-            width: 42px;
-            height: 42px;
-            font-size: 1.5rem;
-            top: -10px;
-            right: -10px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 20px; /* SUBIDO AÚN MÁS - antes era 160px */
-            left: calc(700px - 140px);
-        }
-        
-        .node-2 { 
-            top: calc(600px - 225px - 140px);
-            left: calc(700px + 390px - 140px);
-        }
-        
-        .node-3 { 
-            top: calc(600px + 225px - 140px);
-            left: calc(700px + 390px - 140px);
-        }
-        
-        .node-4 { 
-            top: calc(600px + 450px - 140px);
-            left: calc(700px - 140px);
-        }
-        
-        .node-5 { 
-            top: calc(600px + 225px - 140px);
-            left: calc(700px - 390px - 140px);
-        }
-        
-        .node-6 { 
-            top: calc(600px - 225px - 140px);
-            left: calc(700px - 390px - 140px);
-        }
-    }
-    
-    @media (max-width: 1600px) {
-        .hexagon-diagram {
-            width: 1200px;
-            height: 1000px;
-        }
-        
-        .center-image {
-            width: 400px;
-            height: 400px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 250px;
-            height: 250px;
-        }
-        
-        .node-position {
-            width: 250px;
-            height: 250px;
-        }
-        
-        .hover-text {
-            font-size: 1.7rem;
-        }
-        
-        .node-number {
-            width: 40px;
-            height: 40px;
-            font-size: 1.4rem;
-            top: -10px;
-            right: -10px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 140px */
-            left: calc(600px - 125px);
-        }
-        
-        .node-2 { 
-            top: calc(500px - 200px - 125px);
-            left: calc(600px + 346px - 125px);
-        }
-        
-        .node-3 { 
-            top: calc(500px + 200px - 125px);
-            left: calc(600px + 346px - 125px);
-        }
-        
-        .node-4 { 
-            top: calc(500px + 400px - 125px);
-            left: calc(600px - 125px);
-        }
-        
-        .node-5 { 
-            top: calc(500px + 200px - 125px);
-            left: calc(600px - 346px - 125px);
-        }
-        
-        .node-6 { 
-            top: calc(500px - 200px - 125px);
-            left: calc(600px - 346px - 125px);
-        }
-    }
-    
-    @media (max-width: 1400px) {
-        .hexagon-diagram {
-            width: 1000px;
-            height: 900px;
-        }
-        
-        .center-image {
-            width: 350px;
-            height: 350px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 220px;
-            height: 220px;
-        }
-        
-        .node-position {
-            width: 220px;
-            height: 220px;
-        }
-        
-        .hover-text {
-            font-size: 1.6rem;
-        }
-        
-        .node-number {
-            width: 36px;
-            height: 36px;
-            font-size: 1.3rem;
-            top: -8px;
-            right: -8px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 120px */
-            left: calc(500px - 110px);
-        }
-        
-        .node-2 { 
-            top: calc(450px - 175px - 110px);
-            left: calc(500px + 303px - 110px);
-        }
-        
-        .node-3 { 
-            top: calc(450px + 175px - 110px);
-            left: calc(500px + 303px - 110px);
-        }
-        
-        .node-4 { 
-            top: calc(450px + 350px - 110px);
-            left: calc(500px - 110px);
-        }
-        
-        .node-5 { 
-            top: calc(450px + 175px - 110px);
-            left: calc(500px - 303px - 110px);
-        }
-        
-        .node-6 { 
-            top: calc(450px - 175px - 110px);
-            left: calc(500px - 303px - 110px);
-        }
-    }
-    
-    @media (max-width: 1200px) {
-        .hexagon-diagram {
-            width: 850px;
-            height: 800px;
-        }
-        
-        .center-image {
-            width: 300px;
-            height: 300px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .node-position {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .hover-text {
-            font-size: 1.5rem;
-        }
-        
-        .node-number {
-            width: 34px;
-            height: 34px;
-            font-size: 1.2rem;
-            top: -8px;
-            right: -8px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 40px; /* SUBIDO AÚN MÁS - antes era 100px */
-            left: calc(425px - 100px);
-        }
-        
-        .node-2 { 
-            top: calc(400px - 150px - 100px);
-            left: calc(425px + 260px - 100px);
-        }
-        
-        .node-3 { 
-            top: calc(400px + 150px - 100px);
-            left: calc(425px + 260px - 100px);
-        }
-        
-        .node-4 { 
-            top: calc(400px + 300px - 100px);
-            left: calc(425px - 100px);
-        }
-        
-        .node-5 { 
-            top: calc(400px + 150px - 100px);
-            left: calc(425px - 260px - 100px);
-        }
-        
-        .node-6 { 
-            top: calc(400px - 150px - 100px);
-            left: calc(425px - 260px - 100px);
-        }
-    }
-    
-    @media (max-width: 1000px) {
-        .hexagon-diagram {
-            width: 700px;
-            height: 700px;
-        }
-        
-        .center-image {
-            width: 250px;
-            height: 250px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .node-position {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .hover-text {
-            font-size: 1.4rem;
-        }
-        
-        .node-number {
-            width: 32px;
-            height: 32px;
-            font-size: 1.1rem;
-            top: -7px;
-            right: -7px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 30px; /* SUBIDO AÚN MÁS - antes era 90px */
-            left: calc(350px - 90px);
-        }
-        
-        .node-2 { 
-            top: calc(350px - 125px - 90px);
-            left: calc(350px + 217px - 90px);
-        }
-        
-        .node-3 { 
-            top: calc(350px + 125px - 90px);
-            left: calc(350px + 217px - 90px);
-        }
-        
-        .node-4 { 
-            top: calc(350px + 250px - 90px);
-            left: calc(350px - 90px);
-        }
-        
-        .node-5 { 
-            top: calc(350px + 125px - 90px);
-            left: calc(350px - 217px - 90px);
-        }
-        
-        .node-6 { 
-            top: calc(350px - 125px - 90px);
-            left: calc(350px - 217px - 90px);
-        }
-    }
-    
-    @media (max-width: 850px) {
-        .hexagon-diagram {
-            width: 600px;
-            height: 600px;
-        }
-        
-        .center-image {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 160px;
-            height: 160px;
-        }
-        
-        .node-position {
-            width: 160px;
-            height: 160px;
-        }
-        
-        .hover-text {
-            font-size: 1.3rem;
-        }
-        
-        .node-number {
-            width: 30px;
-            height: 30px;
-            font-size: 1rem;
-            top: -6px;
-            right: -6px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 80px */
-            left: calc(300px - 80px);
-        }
-        
-        .node-2 { 
-            top: calc(300px - 100px - 80px);
-            left: calc(300px + 173px - 80px);
-        }
-        
-        .node-3 { 
-            top: calc(300px + 100px - 80px);
-            left: calc(300px + 173px - 80px);
-        }
-        
-        .node-4 { 
-            top: calc(300px + 200px - 80px);
-            left: calc(300px - 80px);
-        }
-        
-        .node-5 { 
-            top: calc(300px + 100px - 80px);
-            left: calc(300px - 173px - 80px);
-        }
-        
-        .node-6 { 
-            top: calc(300px - 100px - 80px);
-            left: calc(300px - 173px - 80px);
-        }
-    }
-    
-    @media (max-width: 700px) {
-        .diagram-container {
-            min-height: 90vh;
-        }
-        
-        .hexagon-diagram {
-            width: 100%;
-            height: 550px;
-            max-width: 500px;
-        }
-        
-        .center-image {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 140px;
-            height: 140px;
-        }
-        
-        .node-position {
-            width: 140px;
-            height: 140px;
-        }
-        
-        .hover-text {
-            font-size: 1.2rem;
-        }
-        
-        .node-number {
-            width: 28px;
-            height: 28px;
-            font-size: 0.9rem;
-            top: -5px;
-            right: -5px;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 70px */
-            left: calc(250px - 70px);
-        }
-        
-        .node-2 { 
-            top: calc(275px - 85px - 70px);
-            left: calc(250px + 147px - 70px);
-        }
-        
-        .node-3 { 
-            top: calc(275px + 85px - 70px);
-            left: calc(250px + 147px - 70px);
-        }
-        
-        .node-4 { 
-            top: calc(275px + 170px - 70px);
-            left: calc(250px - 70px);
-        }
-        
-        .node-5 { 
-            top: calc(275px + 85px - 70px);
-            left: calc(250px - 147px - 70px);
-        }
-        
-        .node-6 { 
-            top: calc(275px - 85px - 70px);
-            left: calc(250px - 147px - 70px);
-        }
-        
-        .info-panel {
-            width: 95%;
-            padding: 2rem;
-            max-height: 85vh;
-        }
-        
-        .info-title {
-            font-size: 2rem;
-        }
-        
-        .info-subtitle {
-            font-size: 1.3rem;
-        }
-        
-        .info-content p {
-            font-size: 1.1rem;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .hexagon-diagram {
-            height: 500px;
-        }
-        
-        .center-image {
-            width: 150px;
-            height: 150px;
-        }
-        
-        .center-img {
-            width: 85%;
-            height: 85%;
-        }
-        
-        .hexagon-node {
-            width: 120px;
-            height: 120px;
-        }
-        
-        .node-position {
-            width: 120px;
-            height: 120px;
-        }
-        
-        .hover-text {
-            font-size: 1rem;
-            padding: 0 15px;
-        }
-        
-        .node-number {
-            width: 25px;
-            height: 25px;
-            font-size: 0.8rem;
-            top: -4px;
-            right: -4px;
-            border: 2px solid white;
-        }
-        
-        /* Recalcular posiciones */
-        .node-1 { 
-            top: 10px; /* SUBIDO AÚN MÁS - antes era 60px */
-            left: calc(250px - 60px);
-        }
-        
-        .node-2 { 
-            top: calc(250px - 65px - 60px);
-            left: calc(250px + 113px - 60px);
-        }
-        
-        .node-3 { 
-            top: calc(250px + 65px - 60px);
-            left: calc(250px + 113px - 60px);
-        }
-        
-        .node-4 { 
-            top: calc(250px + 130px - 60px);
-            left: calc(250px - 60px);
-        }
-        
-        .node-5 { 
-            top: calc(250px + 65px - 60px);
-            left: calc(250px - 113px - 60px);
-        }
-        
-        .node-6 { 
-            top: calc(250px - 65px - 60px);
-            left: calc(250px - 113px - 60px);
-        }
-        
-        .info-panel {
-            padding: 1.5rem;
-        }
-        
-        .info-title {
-            font-size: 1.8rem;
-        }
-        
-        .close-btn {
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            width: 40px;
-            height: 40px;
-        }
-    }
-</style>
+<!-- Frases animadas al final (similar a tus otras páginas) -->
+<div class="phrase-screen" style="margin-top: 4rem;">
+    <div class="phrase-container" id="phraseContainerEI">
+        <!-- Las frases se insertarán aquí dinámicamente -->
+    </div>
+</div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const nodes = document.querySelectorAll('.hexagon-node');
-    const infoOverlay = document.querySelector('.info-overlay');
-    const infoPanel = infoOverlay.querySelector('.info-panel');
-    const closeBtn = infoOverlay.querySelector('.close-btn');
-    const infoTitle = infoPanel.querySelector('.info-title');
-    const infoContent = infoPanel.querySelector('.info-content');
+const phrasesEI = [
+    {text: "Intelligence emerges through constraints.", position: "center"},
+    {text: "Not perfect sensing, but meaningful interpretation.", position: "top-left"},
+    {text: "Distributed across human, AI, and hardware.", position: "top-right"},
+    {text: "Making meaning from partial inputs.", position: "bottom-left"},
+    {text: "Agentic, not automated.", position: "bottom-right"},
+    {text: "Collaboration through negotiation.", position: "center"},
+    {text: "Physical computing as dialogue.", position: "top-left"},
+    {text: "AI as interpretive composer.", position: "top-right"},
+    {text: "Limitations become features.", position: "bottom-left"},
+    {text: "Emergent, not engineered.", position: "bottom-right"},
+    {text: "Extended Intelligence", position: "center"}
+];
+
+let currentIndexEI = 0;
+const containerEI = document.getElementById('phraseContainerEI');
+
+function showNextPhraseEI() {
+    containerEI.innerHTML = '';
     
-    // Datos para cada nodo
-    const nodeData = {
-        1: {
-            title: "House Sparrow",
-            subtitle: "Urban Attractors and Constraints",
-            content: `
-                <div class="info-subtitle">High urban density</div>
-                <p>Concentrates sparrows in small spatial ranges (~60 m from nests), especially in densely populated human neighborhoods, where population density correlates more strongly with sparrow health decline than light or noise alone.</p>
-                
-                <div class="info-subtitle">Habitat structure</div>
-                <p>Favors presence near allotments, medium-height tree clusters, and low shrub cover, offering nesting and shelter.</p>
-                
-                <div class="info-subtitle">Anthropogenic food availability</div>
-                <p>Peaks in areas with abundant litter and food waste, creating predictable foraging hotspots.</p>
-                
-                <div class="info-note">
-                    Urban environments initially function as ecological traps: they offer reliable food and nesting opportunities while masking long-term costs.
-                </div>
-            `
-        },
-        2: {
-            title: "House Sparrow",
-            subtitle: "Dietary Poverty & Toxic Intake",
-            content: `
-                <div class="info-subtitle">Low-quality diets</div>
-                <p>Dominated by human food waste (bread, scraps), deficient in protein and micronutrients.</p>
-                
-                <div class="info-subtitle">High exposure to contaminants</div>
-                <p>As food waste, grit, water, and bio-accumulated insects in traffic-dense areas contain elevated levels of lead, copper, and zinc.</p>
-                
-                <div class="info-note">
-                    Birds in the densest human-population patches show the highest blood-lead concentrations, linking urban crowding directly to toxic burden.
-                </div>
-            `
-        },
-        3: {
-            title: "House Sparrow",
-            subtitle: "Chronic Stress and Energetic Drain",
-            content: `
-                <div class="info-subtitle">Metabolic stress</div>
-                <p>Evidenced by altered glucose regulation, reduced uric acid, and depleted liver glycogen.</p>
-                
-                <div class="info-subtitle">Immune system up-regulation</div>
-                <p>Particularly in urban birds, which over-express immune, coagulation, and lipid-metabolism proteins despite lower parasite prevalence than rural counterparts.</p>
-                
-                <div class="info-note">
-                    Urban sparrows maintain heightened immune readiness not because of higher pathogen loads, but as a stress-induced response to pollution, disturbance, and poor nutrition. Both metabolic imbalance and immune vigilance are energetically expensive, rapidly depleting already scarce resources.
-                </div>
-            `
-        },
-        4: {
-            title: "House Sparrow",
-            subtitle: "Impaired Foraging Behavior and Decision-Making",
-            content: `
-                <div class="info-subtitle">Reduced foraging range and efficiency</div>
-                <p>Reinforcing reliance on nearby, low-quality food sources.</p>
-                
-                <div class="info-subtitle">Lower neophobia and increased risk-taking</div>
-                <p>Pushing birds toward highly contaminated areas (roadsides, dense pedestrian zones).</p>
-                
-                <div class="info-subtitle">Cognitive impairment</div>
-                <p>As chronic stress and toxin exposure interfere with learning, memory, and habitat assessment.</p>
-                
-                <div class="info-note">
-                    The bird becomes behaviorally locked into the very spaces that are harming it.
-                </div>
-            `
-        },
-        5: {
-            title: "House Sparrow",
-            subtitle: "Density, Waste, and Compounding Exposure",
-            content: `
-                <div class="info-subtitle">Sparrow density</div>
-                <p>High sparrow density intensifies competition, increasing stress and further narrowing foraging options.</p>
-                
-                <div class="info-subtitle">Contaminated Diet</div>
-                <p>Continued reliance on litter-rich zones elevates toxic intake and nutritional imbalance.</p>
-                
-                <div class="info-subtitle">Reduced Food Availability</div>
-                <p>Improvements in waste management paradoxically remove a critical (though poor-quality) food source, increasing nutritional stress without restoring ecological alternatives.</p>
-            `
-        },
-        6: {
-            title: "House Sparrow",
-            subtitle: "Health Decline Without Escape",
-            content: `
-                <div class="info-subtitle">Restricted Movement</div>
-                <p>Sparrows remain spatially constrained due to nest fidelity and limited dispersal.</p>
-                
-                <div class="info-subtitle">Chronic Stress Impacts</div>
-                <p>Chronic stress replaces acute mortality, allowing survival but reducing long-term health, resilience, and reproductive potential.</p>
-                
-                <div class="info-subtitle">Persistent Vulnerability</div>
-                <p>The city sustains sparrow presence, but in a state of persistent physiological compromise.</p>
-            `
-        }
-    };
+    const phraseData = phrasesEI[currentIndexEI];
+    const phraseElement = document.createElement('div');
+    phraseElement.className = `phrase ${phraseData.position}`;
+    phraseElement.textContent = phraseData.text;
     
-    // Event listeners para cada nodo - CLICK
-    nodes.forEach(node => {
-        const nodePosition = node.querySelector('.node-position');
-        
-        nodePosition.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const nodeId = node.dataset.node;
-            const data = nodeData[nodeId];
-            
-            if (data) {
-                infoTitle.textContent = data.title;
-                let fullContent = `<div class="info-subtitle" style="margin-top: 0; padding-top: 0; border-top: none; color: #2d3748; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem;">${data.subtitle}</div>`;
-                fullContent += data.content;
-                infoContent.innerHTML = fullContent;
-                infoOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
+    containerEI.appendChild(phraseElement);
     
-    // Cerrar panel
-    closeBtn.addEventListener('click', function() {
-        infoOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
+    setTimeout(() => {
+        phraseElement.classList.add('active');
+    }, 100);
     
-    // Cerrar al hacer clic fuera del panel
-    infoOverlay.addEventListener('click', function(e) {
-        if (e.target === infoOverlay) {
-            infoOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
-    
-    // Cerrar con tecla ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && infoOverlay.classList.contains('active')) {
-            infoOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
+    currentIndexEI = (currentIndexEI + 1) % phrasesEI.length;
+    setTimeout(showNextPhraseEI, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (containerEI) {
+        showNextPhraseEI();
+    }
 });
 </script>
+
+<style>
+/* Estilos adicionales para esta página (compatibles con tu estilo existente) */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+pre {
+    background-color: #2d3436;
+    color: #dfe6e9;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background-color: #f1f2f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* Estilos para las frases animadas (ya existen en tu CSS, los mantengo) */
+.phrase-screen {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 2rem 0 4rem 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.phrase-container {
+    position: relative;
+    height: 350px;
+    width: 100%;
+}
+
+.phrase {
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    max-width: 90%;
+    line-height: 1.4;
+    padding: 1rem;
+}
+
+.phrase.active {
+    opacity: 1;
+}
+
+/* Posiciones específicas */
+.phrase.top-left {
+    top: 10%;
+    left: 5%;
+    text-align: left;
+    transform: translateX(-20px);
+}
+.phrase.top-left.active {
+    transform: translateX(0);
+}
+
+.phrase.top-right {
+    top: 15%;
+    right: 5%;
+    text-align: right;
+    transform: translateX(20px);
+}
+.phrase.top-right.active {
+    transform: translateX(0);
+}
+
+.phrase.center {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    width: 80%;
+    text-align: center;
+}
+.phrase.center.active {
+    transform: translate(-50%, 0);
+}
+
+.phrase.bottom-left {
+    bottom: 20%;
+    left: 10%;
+    text-align: left;
+    transform: translateY(20px);
+}
+.phrase.bottom-left.active {
+    transform: translateY(0);
+}
+
+.phrase.bottom-right {
+    bottom: 25%;
+    right: 10%;
+    text-align: right;
+    transform: translateY(20px);
+}
+.phrase.bottom-right.active {
+    transform: translateY(0);
+}
+</style>
