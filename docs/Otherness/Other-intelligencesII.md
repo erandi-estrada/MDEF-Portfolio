@@ -247,7 +247,6 @@ mcp.run(port=8080)</pre>
 ## Reflection & Learnings
 
 <div style="background-color: #f8fafc; padding: 2.5rem; border-radius: 8px; margin: 4rem 0; border-left: 5px solid #4c51bf;">
-    <h3 style="margin-top: 0; color: #2d3748;">Designing with Imperfect Intelligence</h3>
     
     <p style="margin-bottom: 1.5rem; color: #4a5568;">
         This project began as an exploration of shared musical creation between human and AI, where physical interaction—touch, color, movement—would become a language for co-creation. The vision was poetic: an AI that responds not just to words, but to the body's rhythm and the emotion of color.
@@ -257,61 +256,18 @@ mcp.run(port=8080)</pre>
         In practice, the process revealed something more valuable than technical perfection: the ability of an intelligent system to find meaning in partial, ambiguous, or even broken signals. When capacitive touch resisted nuanced detection, the AI still generated emotionally resonant lyrics from binary input. When color sensing failed, mood mapping continued through fallback logic. The system's intelligence wasn't in flawless execution, but in adaptive interpretation.
     </p>
     
-    <div style="padding-left: 1rem; border-left: 3px solid #a0aec0; margin: 2rem 0;">
-        <p style="font-style: italic; color: #718096;">
-            "The friction became the pedagogy. Each technical failure revealed how intelligence distributes itself across human intention, algorithmic interpretation, and material constraints. The project shifted from building a perfect system to understanding how meaning emerges from negotiation between agent, environment, and limitation."
-        </p>
-    </div>
-    
     <p style="margin-bottom: 1.5rem; color: #4a5568;">
         This experience reframed my understanding of Extended Intelligences. True agentic systems don't require perfect sensing or seamless integration. Instead, they thrive in the gaps—interpreting, adapting, and creating coherence from incomplete information. The AI became not just a tool, but a collaborator that could work with whatever signals were available, however imperfect.
     </p>
-    
-    <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
-        <h4 style="color: #2d3748;">Key Insights for Future Development:</h4>
-        <ul style="color: #4a5568;">
-            <li>Agentic systems prioritize interpretation over perfect input</li>
-            <li>Distributed intelligence manifests across multiple domains simultaneously</li>
-            <li>Physical computing constraints can inspire creative AI responses</li>
-            <li>Co-creation emerges from the negotiation between intention and limitation</li>
-            <li>Meaningful interaction doesn't require technical perfection</li>
-        </ul>
+      
     </div>
 </div>
 
-## Future Development
-
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 3rem 0;">
     
-<div style="background-color: #fff; padding: 1.5rem; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-    <h4>🔄 Technical Improvements</h4>
-    <ul>
-        <li>Implement capacitive touch matrix for nuanced rhythm detection</li>
-        <li>Integrate TCS34725 color sensor for direct mood input</li>
-        <li>Develop real-time NeoPixel pattern synchronization</li>
-        <li>Create calibration interface for sensor tuning</li>
-        <li>Build mobile/web dashboard for interaction monitoring</li>
-    </ul>
-</div>
 
-<div style="background-color: #fff; padding: 1.5rem; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-    <h4>🎨 Creative Expansions</h4>
-    <ul>
-        <li>Multi-user collaborative mode</li>
-        <li>Genre-specific lyric generation</li>
-        <li>Dynamic light choreography based on musical structure</li>
-        <li>Physical instrument integration (MIDI compatibility)</li>
-        <li>Long-term memory for evolving musical style</li>
-    </ul>
-</div>
-</div>
 
-<div style="text-align: center; margin: 4rem 0; padding: 2rem; background-color: #f7fafc; border-radius: 8px;">
-    <h3 style="color: #2d3748;">Extended Intelligence Manifested</h3>
-    <p style="max-width: 800px; margin: 1rem auto; color: #4a5568;">
-        This project demonstrates that intelligence in physical systems isn't about flawless execution, but about meaningful interpretation across distributed agents. The AI composer, the human participant, and the responsive hardware together form an extended intelligence that creates value not despite its imperfections, but through its adaptive response to them.
-    </p>
-</div>
+
+
 
 <style>
 .image-carousel img {
