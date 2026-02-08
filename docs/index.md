@@ -64,7 +64,7 @@
             <a href="Otherness/Other-intelligencesII/" class="card">
                 <img src="images/LLM.png" alt="Other Intelligences"> 
                 <h3>Other Intelligences</h3> 
-                <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
+                <p>Connecting physical computing and AI agents to enable collaborative, generative interactions.</p> 
             </a>
 
             <!-- Prosthesis -->
