@@ -203,7 +203,7 @@
 <div class="objects-grid" style="margin-top: 3rem;">
     <div class="objects-column">
         <div class="image-container">
-            <img src="../../images/Nomadic.png" alt="Nomadic project" style="width: 100%; border-radius: 8px;">
+            <img src="../../images/nodamic/Nomadic.png" alt="Nomadic project" style="width: 100%; border-radius: 8px;">
         </div>
     </div>
     
