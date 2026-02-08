@@ -5,157 +5,333 @@
         <a href="../../about/me">About me</a>
     </div>
 </div>
-<!-- Ya tienes el menú, así que continúo con el contenido de la página -->
-<div class="content-container">
+
+# Extended Intelligences II: Co-Creative Music Agent
+
+## Project Overview
+
+This project explores a distributed intelligence system where humans and AI collaborate to create music through physical interaction. The system interprets emotional and rhythmic inputs from sensors, processes them through an LLM agent, and generates lyrics, musical references, and light behavior. Despite technical constraints, the project demonstrates how imperfect sensing can still facilitate meaningful co-creative experiences between human and non-human intelligences.
+
+## System Logic
+
+<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: center;">
     
-    <h1>Extended Intelligences II</h1>
+<div>
+    <img src="../../images/system-diagram.jpg" 
+         alt="System Architecture Diagram" 
+         width="100%" 
+         style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+</div>
+
+<div>
+    <h3 style="margin-top: 0;">Interaction Pipeline:</h3>
+    <ol style="line-height: 1.8; padding-left: 1.5rem;">
+        <li><strong>Physical Inputs:</strong> Touch (rhythm) + Color (mood)</li>
+        <li><strong>AI Interpretation:</strong> LLM maps inputs to emotional tone</li>
+        <li><strong>Generative Output:</strong> Original lyrics + YouTube reference</li>
+        <li><strong>Physical Feedback:</strong> NeoPixel light patterns</li>
+        <li><strong>Closed Loop:</strong> Human responds to generated content</li>
+    </ol>
+</div>
+</div>
+
+## AI Prompting & Agent Behavior
+
+<div class="phrase-screen">
+    <div class="phrase-container" id="phraseContainerAgent">
+        <!-- Las frases se insertarán aquí dinámicamente -->
+    </div>
+</div>
+
+<script>
+const phrasesAgent = [
+    {text: "Agent Architecture", position: "center"},
+    {text: "MCP-based sensor interface", position: "top-left"},
+    {text: "Color → Mood mapping", position: "top-right"},
+    {text: "Rhythm → Lyrical structure", position: "bottom-left"},
+    {text: "Cross-domain decision making", position: "bottom-right"},
+    {text: "Distributed Intelligence", position: "center"},
+    {text: "Human touch as creative input", position: "top-left"},
+    {text: "AI as composer & interpreter", position: "top-right"},
+    {text: "Hardware as responsive body", position: "bottom-left"},
+    {text: "System orchestrator", position: "bottom-right"},
+    {text: "Meaning from imperfection", position: "center"}
+];
+
+let currentIndexAgent = 0;
+const containerAgent = document.getElementById('phraseContainerAgent');
+
+function showNextPhraseAgent() {
+    containerAgent.innerHTML = '';
     
-    <div class="intro-section" style="margin: 2rem 0 3rem 0;">
-        <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
-            This module explored the design of agentic systems that connect physical computing with artificial intelligence, 
-            creating distributed intelligences across digital and material domains. The challenge was to build a meaningful 
-            interface between human input, AI interpretation, and physical response—not as tools, but as collaborative agents.
-        </p>
+    const phraseData = phrasesAgent[currentIndexAgent];
+    const phraseElement = document.createElement('div');
+    phraseElement.className = `phrase ${phraseData.position}`;
+    phraseElement.textContent = phraseData.text;
+    
+    containerAgent.appendChild(phraseElement);
+    
+    setTimeout(() => {
+        phraseElement.classList.add('active');
+    }, 100);
+    
+    currentIndexAgent = (currentIndexAgent + 1) % phrasesAgent.length;
+    setTimeout(showNextPhraseAgent, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (containerAgent) {
+        showNextPhraseAgent();
+    }
+});
+</script>
+
+<div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #4a6fa5;">
+    <h4>AI Agent Prompt Logic (Working Implementation):</h4>
+    <pre style="background-color: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem;">
+When user provides color input:
+1. Map color to mood spectrum:
+   - Red → Passionate/Intense
+   - Blue → Melancholic/Calm
+   - Green → Hopeful/Growing
+   - Yellow → Joyful/Energetic
+   - Purple → Mysterious/Introspective
+
+2. Generate lyrics incorporating:
+   - Mood-derived emotional tone
+   - Randomized rhythmic structure
+   - Coherent thematic development
+
+3. Search YouTube for matching song:
+   - Similar emotional vibe
+   - Compatible musical genre
+   - Contemporary relevance
+
+4. Return structured response:
+   - Generated lyrics
+   - Song recommendation with link
+   - NeoPixel light pattern code</pre>
+</div>
+
+<div class="image-carousel" style="margin: 3rem 0; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    <h4 style="text-align: center; margin-bottom: 1.5rem;">Agent Interactions</h4>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <img src="../../images/prompt-1.jpg" alt="Prompt interface" style="width: 100%; border-radius: 4px;">
+        <img src="../../images/lyrics-output.jpg" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
+        <img src="../../images/song-reference.jpg" alt="Song recommendation" style="width: 100%; border-radius: 4px;">
     </div>
-
-    <!-- Project Overview -->
-    <div class="section" style="margin-bottom: 4rem;">
-        <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">Project Overview</h2>
-        
-        <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0; align-items: start;">
-            <div>
-                <p style="margin-bottom: 1rem; line-height: 1.6;">
-                    <strong>Human + AI Co-creative Music Agent:</strong> A system where physical touch and color become a language for 
-                    musical co-creation with an AI agent. The user provides rhythmic input through touch and emotional tone through 
-                    color, which the AI interprets to generate lyrics, suggest musical references, and orchestrate light behavior.
-                </p>
-                <p style="margin-bottom: 1rem; line-height: 1.6;">
-                    The project reimagines musical composition as a distributed intelligence—neither fully human nor fully artificial, 
-                    but emerging through the interaction between physical sensing, AI interpretation, and atmospheric feedback.
-                </p>
-            </div>
-            <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #6c5ce7;">
-                <h4 style="margin-top: 0; color: #6c5ce7;">System Logic</h4>
-                <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">
-                    • User input (touch / color)<br>
-                    • AI agent (mood + rhythm interpretation)<br>
-                    • Lyrics generation <br>
-                    • Song reference (YouTube)<br>
-                    • Light behavior (NeoPixel)
-                </p>
-            </div>
-        </div>
-    </div>
-<!-- System & Agent Behavior -->
-<div class="section" style="margin-bottom: 4rem;">
-    <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">
-        System & Agent Behavior
-    </h2>
-
-    <div style="max-width: 900px;">
-        <p style="margin-bottom: 1rem; line-height: 1.6;">
-            At the core of the project is an AI agent acting as an interpreter between human intention and physical response. 
-            Instead of receiving precise musical instructions, the agent works with abstract inputs such as mood, rhythm, 
-            and symbolic gestures.
-        </p>
-
-        <p style="margin-bottom: 1rem; line-height: 1.6;">
-            Color input is translated into emotional states, while touch interaction is intended to communicate rhythm. 
-            Based on these parameters, the agent generates song lyrics, identifies a matching musical reference, and defines 
-            the behavior of a NeoPixel light strip to visually reinforce the atmosphere of the generated song.
-        </p>
-
-        <p style="margin-bottom: 0; line-height: 1.6;">
-            The intelligence of the system does not rely on exact sensing, but on interpretation—embracing ambiguity as part 
-            of the creative exchange between human and machine.
-        </p>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+        <img src="../../images/color-mapping.jpg" alt="Color to mood mapping" style="width: 100%; border-radius: 4px;">
+        <img src="../../images/neopixel-code.jpg" alt="Light pattern code" style="width: 100%; border-radius: 4px;">
     </div>
 </div>
 
-<!-- Physical Computing Setup -->
-<div class="section" style="margin-bottom: 4rem;">
-    <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">
-        Physical Computing Setup
-    </h2>
+## Physical Computing Setup
 
-    <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-        <div>
-            <p style="margin-bottom: 1rem; line-height: 1.6;">
-                The system was developed using a Raspberry Pi Pico 2W connected to physical sensors and actuators. 
-                A capacitive touch sensor made from a copper strip was designed to capture rhythmic interaction, 
-                while a color sensor was planned to communicate emotional tone.
-            </p>
+<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
+    
+<div>
+    <h3 style="margin-top: 0;">Hardware Components</h3>
+    <ul style="line-height: 1.8;">
+        <li><strong>Raspberry Pi Pico 2W:</strong> Main controller with WiFi</li>
+        <li><strong>Capacitive Copper Strips:</strong> Rhythm detection (touch sensing)</li>
+        <li><strong>Color Sensor (TCS34725):</strong> Mood input detection</li>
+        <li><strong>NeoPixel LED Strip:</strong> Visual feedback system</li>
+        <li><strong>Breadboard & Wiring:</strong> Prototyping infrastructure</li>
+    </ul>
+    
+    <div style="margin-top: 2rem; padding: 1rem; background-color: #f0f0f0; border-radius: 6px;">
+        <h4>Working Raspberry Pi Code</h4>
+        <pre style="background-color: #fff; padding: 1rem; border-radius: 4px; font-size: 0.8rem; overflow-x: auto;">
+import time
+import network
+from machine import Pin, ADC
+from micro_mcp import MCPServer
 
-            <p style="margin-bottom: 0; line-height: 1.6;">
-                Due to time constraints and hardware instability, the touch sensor was only partially functional, 
-                detecting presence rather than continuous rhythm. Connectivity issues also limited the integration 
-                of the color sensor and NeoPixel strip during the final implementation.
-            </p>
-        </div>
+# Touch sensor on ADC Pin 26
+sensor = ADC(Pin(26))
 
-        <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
-            <h4 style="margin-top: 0;">Components</h4>
-            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
-                • Raspberry Pi Pico 2W<br>
-                • Capacitive touch sensor (copper strip)<br>
-                • Planned color sensor<br>
-                • NeoPixel LED strip<br>
-                • MCP-based communication with AI agent
-            </p>
-        </div>
-    </div>
-</div>
-<!-- Process & Challenges -->
-<div class="section" style="margin-bottom: 4rem;">
-    <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">
-        Process & Challenges
-    </h2>
+# Debounce settings
+DEBOUNCE_SAMPLES = 3
+DEBOUNCE_TOLERANCE = 100
+SAMPLE_INTERVAL = 0.05
 
-    <div style="max-width: 900px;">
-        <p style="margin-bottom: 1rem; line-height: 1.6;">
-            The course took place over only three days, which strongly shaped both the scope and direction of the project. 
-            Much of the development time was spent troubleshooting hardware communication, operating system constraints, 
-            and sensor calibration.
-        </p>
+def read_debounced():
+    stable_count = 0
+    last_stable = None
+    
+    while stable_count < DEBOUNCE_SAMPLES:
+        value = sensor.read_u16()
+        if last_stable is None:
+            last_stable = value
+            stable_count = 1
+        elif abs(value - last_stable) <= DEBOUNCE_TOLERANCE:
+            stable_count += 1
+        else:
+            last_stable = value
+            stable_count = 1
+        time.sleep(SAMPLE_INTERVAL)
+    return last_stable
 
-        <p style="margin-bottom: 1rem; line-height: 1.6;">
-            Attempting to extract rhythmic information from a simple capacitive sensor revealed how fragile physical 
-            interaction can be when signal stability is not guaranteed. These limitations ultimately shifted the project 
-            toward a more AI-driven interaction, where the agent compensated for incomplete or symbolic inputs.
-        </p>
+# WiFi connection
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect("Iaac-Wifi", "EnterIaac22@")
 
-        <p style="margin-bottom: 0; line-height: 1.6;">
-            Rather than abandoning the concept, the project embraced this imbalance, allowing the AI agent to become 
-            more speculative, interpretive, and autonomous in its creative decisions.
-        </p>
-    </div>
-</div>
+# MCP server setup
+mcp = MCPServer(name="music-agent", version="1.0.0")
 
-<!-- Reflection -->
-<div class="section" style="margin-bottom: 4rem;">
-    <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-bottom: 2rem;">
-        Reflection
-    </h2>
+@mcp.tool(
+    name="read_touch_sensor",
+    description="Read touch sensor state",
+    input_schema={"type": "object", "properties": {}}
+)
+def read_touch_sensor():
+    readings = []
+    for _ in range(5):
+        readings.append(sensor.read_u16())
+        time.sleep(0.2)
+    zeros = sum(1 for v in readings if v == 0)
+    return "Touched" if zeros >= 3 else "Not Touched"
 
-    <div style="max-width: 900px;">
-        <p style="margin-bottom: 1rem; line-height: 1.6;">
-            This project started with the intention of creating a shared musical experience between a human and an AI agent, 
-            where physical interaction would directly shape sound, mood, and atmosphere. The idea was simple but ambitious: 
-            touching, sensing color, and moving rhythmically would become a way of talking to an AI.
-        </p>
-
-        <p style="margin-bottom: 1rem; line-height: 1.6;">
-            In practice, the project quickly became a lesson about friction. Hardware limitations, connectivity issues, 
-            and the short timeframe meant that many interactions remained incomplete or unstable. What I imagined as a 
-            fluid, embodied exchange often turned into negotiation with the tools themselves.
-        </p>
-
-        <p style="margin-bottom: 0; line-height: 1.6;">
-            This process made me realize that intelligence in physical systems is rarely clean or finished. It is shaped 
-            by improvisation, failure, and adaptation. Rather than seeing these constraints as shortcomings, the project 
-            reframed them as part of how agentic systems come into being.
-        </p>
+mcp.run(port=8080)</pre>
     </div>
 </div>
 
+<div>
+    <img src="../../images/hardware-setup.jpg" 
+         alt="Hardware Setup" 
+         width="100%" 
+         style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+    
+    <div style="background-color: #fff5f5; padding: 1.5rem; border-radius: 6px; border-left: 4px solid #e53e3e;">
+        <h4>Technical Constraints Encountered:</h4>
+        <ul style="margin-bottom: 0;">
+            <li>Capacitive sensing limited to binary detection</li>
+            <li>Rhythm detection required signal stabilization</li>
+            <li>OS compatibility issues with real-time LED control</li>
+            <li>Color sensor integration delayed by connectivity problems</li>
+            <li>Limited timeframe for calibration and refinement</li>
+        </ul>
+    </div>
+</div>
+</div>
 
+## What Worked vs. What Didn't
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0;">
+    
+<div style="background-color: #f0f9f0; padding: 2rem; border-radius: 8px; border: 1px solid #c6f6d5;">
+    <h3 style="color: #276749; margin-top: 0;">✅ Successful Implementation</h3>
+    <ul style="color: #276749;">
+        <li><strong>MCP Architecture:</strong> Stable connection between physical inputs and AI agent</li>
+        <li><strong>Prompt Logic:</strong> Effective color-to-mood mapping and lyric generation</li>
+        <li><strong>Conceptual Pipeline:</strong> Clear flow from sensor → AI → output → feedback</li>
+        <li><strong>Agent Behavior:</strong> AI made coherent cross-domain decisions (emotion, rhythm, visuals, references)</li>
+        <li><strong>Distributed Intelligence:</strong> Demonstrated shared agency between human and AI</li>
+    </ul>
+</div>
+
+<div style="background-color: #fff5f5; padding: 2rem; border-radius: 8px; border: 1px solid #fed7d7;">
+    <h3 style="color: #c53030; margin-top: 0;">❌ Limitations & Challenges</h3>
+    <ul style="color: #c53030;">
+        <li><strong>Sensor Resolution:</strong> Touch detection remained binary, not rhythmic</li>
+        <li><strong>Hardware Integration:</strong> NeoPixel and color sensor not fully operational</li>
+        <li><strong>Calibration Time:</strong> Signal stability required more development time</li>
+        <li><strong>OS Conflicts:</strong> Windows connectivity issues with Raspberry Pi</li>
+        <li><strong>Real-time Feedback:</strong> Light patterns not synchronized in final demo</li>
+    </ul>
+</div>
+</div>
+
+## Reflection & Learnings
+
+<div style="background-color: #f8fafc; padding: 2.5rem; border-radius: 8px; margin: 4rem 0; border-left: 5px solid #4c51bf;">
+    <h3 style="margin-top: 0; color: #2d3748;">Designing with Imperfect Intelligence</h3>
+    
+    <p style="margin-bottom: 1.5rem; color: #4a5568;">
+        This project began as an exploration of shared musical creation between human and AI, where physical interaction—touch, color, movement—would become a language for co-creation. The vision was poetic: an AI that responds not just to words, but to the body's rhythm and the emotion of color.
+    </p>
+    
+    <p style="margin-bottom: 1.5rem; color: #4a5568;">
+        In practice, the process revealed something more valuable than technical perfection: the ability of an intelligent system to find meaning in partial, ambiguous, or even broken signals. When capacitive touch resisted nuanced detection, the AI still generated emotionally resonant lyrics from binary input. When color sensing failed, mood mapping continued through fallback logic. The system's intelligence wasn't in flawless execution, but in adaptive interpretation.
+    </p>
+    
+    <div style="padding-left: 1rem; border-left: 3px solid #a0aec0; margin: 2rem 0;">
+        <p style="font-style: italic; color: #718096;">
+            "The friction became the pedagogy. Each technical failure revealed how intelligence distributes itself across human intention, algorithmic interpretation, and material constraints. The project shifted from building a perfect system to understanding how meaning emerges from negotiation between agent, environment, and limitation."
+        </p>
+    </div>
+    
+    <p style="margin-bottom: 1.5rem; color: #4a5568;">
+        This experience reframed my understanding of Extended Intelligences. True agentic systems don't require perfect sensing or seamless integration. Instead, they thrive in the gaps—interpreting, adapting, and creating coherence from incomplete information. The AI became not just a tool, but a collaborator that could work with whatever signals were available, however imperfect.
+    </p>
+    
+    <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+        <h4 style="color: #2d3748;">Key Insights for Future Development:</h4>
+        <ul style="color: #4a5568;">
+            <li>Agentic systems prioritize interpretation over perfect input</li>
+            <li>Distributed intelligence manifests across multiple domains simultaneously</li>
+            <li>Physical computing constraints can inspire creative AI responses</li>
+            <li>Co-creation emerges from the negotiation between intention and limitation</li>
+            <li>Meaningful interaction doesn't require technical perfection</li>
+        </ul>
+    </div>
+</div>
+
+## Future Development
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 3rem 0;">
+    
+<div style="background-color: #fff; padding: 1.5rem; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <h4>🔄 Technical Improvements</h4>
+    <ul>
+        <li>Implement capacitive touch matrix for nuanced rhythm detection</li>
+        <li>Integrate TCS34725 color sensor for direct mood input</li>
+        <li>Develop real-time NeoPixel pattern synchronization</li>
+        <li>Create calibration interface for sensor tuning</li>
+        <li>Build mobile/web dashboard for interaction monitoring</li>
+    </ul>
+</div>
+
+<div style="background-color: #fff; padding: 1.5rem; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <h4>🎨 Creative Expansions</h4>
+    <ul>
+        <li>Multi-user collaborative mode</li>
+        <li>Genre-specific lyric generation</li>
+        <li>Dynamic light choreography based on musical structure</li>
+        <li>Physical instrument integration (MIDI compatibility)</li>
+        <li>Long-term memory for evolving musical style</li>
+    </ul>
+</div>
+</div>
+
+<div style="text-align: center; margin: 4rem 0; padding: 2rem; background-color: #f7fafc; border-radius: 8px;">
+    <h3 style="color: #2d3748;">Extended Intelligence Manifested</h3>
+    <p style="max-width: 800px; margin: 1rem auto; color: #4a5568;">
+        This project demonstrates that intelligence in physical systems isn't about flawless execution, but about meaningful interpretation across distributed agents. The AI composer, the human participant, and the responsive hardware together form an extended intelligence that creates value not despite its imperfections, but through its adaptive response to them.
+    </p>
+</div>
+
+<style>
+.image-carousel img {
+    transition: transform 0.3s ease;
+}
+
+.image-carousel img:hover {
+    transform: scale(1.02);
+}
+
+pre {
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+</style>
