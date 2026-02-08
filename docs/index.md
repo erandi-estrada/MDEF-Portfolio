@@ -61,6 +61,12 @@
                 <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
             </a>
 
+            <a href="Otherness/Other-intelligencesII/" class="card">
+                <img src="images/LLM.png" alt="Other Intelligences"> 
+                <h3>Other Intelligences</h3> 
+                <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
+            </a>
+
             <!-- Prosthesis -->
             <a href="Otherness/Prosthesis" class="card">
                 <img src="images/prosthesis.jpeg" alt="Prosthesis">
