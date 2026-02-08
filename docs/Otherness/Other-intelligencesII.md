@@ -17,7 +17,7 @@ This project explores a distributed intelligence system where humans and AI coll
 <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: center;">
     
 <div>
-    <img src="../../images/system-diagram.jpg" 
+    <img src="../../images/LLM.png" 
          alt="System Architecture Diagram" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
@@ -116,7 +116,6 @@ When user provides color input:
 <div class="image-carousel" style="margin: 3rem 0; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
     <h4 style="text-align: center; margin-bottom: 1.5rem;">Agent Interactions</h4>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-        <img src="../../images/LLM.png" alt="Prompt interface" style="width: 100%; border-radius: 4px;">
         <img src="../../images/Agent1.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
         <img src="../../images/Agent2.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
         <img src="../../images/Agent3.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
@@ -124,10 +123,6 @@ When user provides color input:
         <img src="../../images/Agent5.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
         <img src="../../images/Agent6.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
         <img src="../../images/Agent7.png" alt="Lyrics generation" style="width: 100%; border-radius: 4px;">
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-        <img src="../../images/color-mapping.jpg" alt="Color to mood mapping" style="width: 100%; border-radius: 4px;">
-        <img src="../../images/neopixel-code.jpg" alt="Light pattern code" style="width: 100%; border-radius: 4px;">
     </div>
 </div>
 
