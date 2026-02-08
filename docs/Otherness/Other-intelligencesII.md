@@ -425,15 +425,15 @@ mcp.run(port=8080)</pre>
 <div style="background-color: #f8fafc; padding: 2.5rem; border-radius: 8px; margin: 4rem 0; border-left: 5px solid #4c51bf;">
     
     <p style="margin-bottom: 1.5rem; color: #4a5568;">
-        This project began as an exploration of shared musical creation between human and AI, where physical interaction—touch, color, movement—would become a language for co-creation. The vision was poetic: an AI that responds not just to words, but to the body's rhythm and the emotion of color.
+        This project began as an exploration of shared musical creation between human and AI, where physical interaction (touch and color) would become a language for co-creation. The idea was poetic: an AI that responds not just to words, but to the body's rhythm and the emotion of color.
     </p>
     
     <p style="margin-bottom: 1.5rem; color: #4a5568;">
-        In practice, the process revealed something more valuable than technical perfection: the ability of an intelligent system to find meaning in partial, ambiguous, or even broken signals. When capacitive touch resisted nuanced detection, the AI still generated emotionally resonant lyrics from binary input. When color sensing failed, mood mapping continued through fallback logic. The system's intelligence wasn't in flawless execution, but in adaptive interpretation.
+       In practice, the project quickly became a lesson about friction. Working within a very short timeframe and dealing with hardware limitations, operating system conflicts, and unreliable capacitive sensing meant that many parts of the physical system never fully behaved as expected. While the original intention was to create a more immediate and embodied interaction, the project revealed that even without real-time musical co-creation, it is still possible to meaningfully collaborate with an AI through a small set of inputs. This shift highlighted how artificial intelligence can act as a creative partner, interpreting minimal signals and expanding them into richer musical and atmospheric outcomes.
     </p>
     
     <p style="margin-bottom: 1.5rem; color: #4a5568;">
-        This experience reframed my understanding of Extended Intelligences. True agentic systems don't require perfect sensing or seamless integration. Instead, they thrive in the gaps—interpreting, adapting, and creating coherence from incomplete information. The AI became not just a tool, but a collaborator that could work with whatever signals were available, however imperfect.
+     Due to the very limited timeframe of the course, much of the project required improvisation, and the system ultimately relied more on the LLM than originally intended. While this constrained the physical implementation, it also revealed how powerful it is to integrate an AI that can interpret ambiguous, emotional, and incomplete inputs, something that would be extremely difficult to achieve through deterministic code alone. With more time, the project could have pushed further into embodied interaction, but even in its partial form, it highlighted how rich and complex the communication between hardware and software can be, and how valuable this relationship is as a space for exploration and learning.
     </p>
 </div>
 
