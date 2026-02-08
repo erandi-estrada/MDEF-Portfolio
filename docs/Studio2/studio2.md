@@ -203,7 +203,7 @@
 <div class="objects-grid" style="margin-top: 3rem;">
     <div class="objects-column">
         <div class="image-container">
-            <img src="Nomadic.png" alt="Nomadic project" style="width: 100%; border-radius: 8px;">
+            <img src="../../images/Nomadic.png" alt="Nomadic project" style="width: 100%; border-radius: 8px;">
         </div>
     </div>
     
@@ -218,19 +218,19 @@
 <div class="nomadic-slider-container" style="margin-top: 3rem;">
     <div class="slider nomadic-slider">
         <div class="slide">
-            <img src="images/nomadic/1.jpg" alt="Nomadic project image 1" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="../../images/nomadic/1.jpg" alt="Nomadic project image 1" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
         <div class="slide">
-            <img src="images/nomadic/2.jpg" alt="Nomadic project image 2" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="../../images/nomadic/2.jpg" alt="Nomadic project image 2" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
         <div class="slide">
-            <img src="images/nomadic/3.jpg" alt="Nomadic project image 3" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="../../images/nomadic/3.jpg" alt="Nomadic project image 3" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
         <div class="slide">
-            <img src="images/nomadic/4.jpg" alt="Nomadic project image 4" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="../../images/nomadic/4.jpg" alt="Nomadic project image 4" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
         <div class="slide">
-            <img src="images/nomadic/5.jpg" alt="Nomadic project image 5" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="../../images/nomadic/5.jpg" alt="Nomadic project image 5" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
         <div class="slide">
             <img src="images/nomadic/6.jpg" alt="Nomadic project image 6" style="width: 100%; height: auto; border-radius: 8px;">
