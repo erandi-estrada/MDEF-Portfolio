@@ -9,7 +9,7 @@
 # Nomadic Infrastructure for Urban Microecosystems  
 ### Individual Reflective Post  
 
-<img src="../../images/nomadic1.jpg" 
+<img src="../../images/nomadic1.jpeg" 
      alt="Nomadic Infrastructure concept" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -33,7 +33,7 @@ Inspired by walking mechanisms like the Strandbeest system, the project shifted 
     <p style="font-size: 1.1rem; line-height: 1.7;">Trying to design from a non‑human perspective exposed a limitation. We cannot fully understand how insects experience temperature or dryness. What we can do is translate environmental variables into measurable signals. Soil humidity, light intensity, temperature. These become our way of approximatin environmental stress. It is an imperfect translation, but it makes response possible.</p>
 </div>
 
-<img src="../../images/nomadic2.jpg" 
+<img src="../../images/nomadic2.jpeg" 
      alt="Cognitive mapping" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -48,7 +48,7 @@ Inspired by walking mechanisms like the Strandbeest system, the project shifted 
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">Another question that stayed with me is intervention versus coexistence. Are we supporting life, or are we imposing another layer of artificial control? The artifact carries living matter. It becomes less about performance and more about care.</p>
 </div>
 
-<img src="../../images/nomadic3.jpg" 
+<img src="../../images/nomadic3.jpeg" 
      alt="Ethical considerations" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -62,7 +62,7 @@ Inspired by walking mechanisms like the Strandbeest system, the project shifted 
 We built a 12‑leg walking structure based on the Theo Jansen mechanism. The assembly was much more delicate than expected. The system is extremely precise. If one screw is slightly misaligned or tightened too much, the whole walking pattern collapses. Precision is not aesthetic here, it is structural necessity.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-    <img src="../../images/nomadic4.jpg" 
+    <img src="../../images/nomadic4.jpeg" 
          alt="Mechanical assembly" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
@@ -95,7 +95,7 @@ We integrated three sensors: soil moisture, light sensitivity through an LDR, an
 
 We designed and laser cut a terrarium in MDF to host soil, moss and worms. Integrating living matter into a moving structure introduced new constraints. Weight distribution, vibration, ventilation. The more we stabilized the ecosystem, the harder it became to move it.
 
-<img src="../../images/nomadic7.jpg" 
+<img src="../../images/nomadic7.jpeg" 
      alt="Terrarium design" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -110,7 +110,7 @@ We designed and laser cut a terrarium in MDF to host soil, moss and worms. Integ
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">This reframes the artifact from prototype to speculative infrastructure model. It becomes less about one walking object and more about how cities could integrate nomadic ecological support systems.</p>
 </div>
 
-<img src="../../images/nomadic8.jpg" 
+<img src="../../images/nomadic8.jpeg" 
      alt="Future vision" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -180,15 +180,15 @@ We designed and laser cut a terrarium in MDF to host soil, moss and worms. Integ
             <!-- Slideshow Container -->
             <div id="nomadic-slideshow" style="width: 100%; height: 600px; background: #f0f0f0;">
                 <!-- Images will be inserted by JavaScript -->
-                <img src="../../images/nomadic9.jpg" 
+                <img src="../../images/nomadic9.jpeg" 
      alt="Future vision" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-      <img src="../../images/nomadic10.jpg" 
+      <img src="../../images/nomadic10.jpeg" 
      alt="Future vision" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-     <img src="../../images/nomadic11.jpg" 
+     <img src="../../images/nomadic11.jpeg" 
      alt="Future vision" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
