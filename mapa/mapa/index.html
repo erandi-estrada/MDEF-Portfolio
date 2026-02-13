@@ -1025,6 +1025,707 @@ body {
     </div>
 </div>
 
+<!-- Leyenda -->
+<div class="legend">
+    <div class="legend-title">MAP KEY</div>
+    <div class="legend-items">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #3498db;"></div>
+            <div class="legend-label">Pigeons / Visible Exclusion</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #9b59b6;"></div>
+            <div class="legend-label">Microorganisms / Invisible Foundation</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #7f8c8d;"></div>
+            <div class="legend-label">Pollution / Shared Burden</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #e67e22;"></div>
+            <div class="legend-label">Stress / Biological Response</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #16a085;"></div>
+            <div class="legend-label">Breath / Atmospheric Commons</div>
+        </div>
+    </div>
+</div>
+
+<!-- Instrucciones -->
+<div class="instructions">
+    Click nodes to explore connections<br>
+    Scroll to zoom in/out<br>
+    Drag to navigate the map<br>
+    Double-click to reset view
+</div>
+
+<script>
+    // DATOS ORGÁNICOS
+    const nodesData = {
+        central: {
+            id: "central",
+            title: "THE URBAN DICHOTOMY",
+            text: "Cities manage non-human life through twin mechanisms: visible exclusion (spikes, noise, removal) and invisible erasure (chemicals, sterilization, ignorance). Pigeons experience the violence of being seen, microorganisms suffer the violence of being unseen.",
+            category: "VISIBLE/INVISIBLE",
+            concept: {
+                title: "PERCEPTION AS VIOLENCE",
+                text: "What we choose to see determines how we exclude. What we choose to ignore determines what we destroy. Urban design is an exercise in selective perception."
+            },
+            points: [
+                "Visibility leads to direct violence",
+                "Invisibility leads to systemic neglect",
+                "Both are forms of urban management",
+                "Both reveal human priorities"
+            ]
+        },
+
+        // NODOS DE PALOMAS
+        pigeons: [
+            {
+                id: "pigeon-body",
+                title: "THE BODY IN SPACE",
+                subtitle: "visible presence",
+                text: "Pigeon bodies occupy space in ways deemed unacceptable. Their resting, nesting, feeding—all become transgressions. The urban response: spikes, nets, repellents. Architecture that says 'your body is the problem'.",
+                category: "VISIBLE EXCLUSION",
+                concept: "The politics of resting",
+                points: [
+                    "Resting as political act",
+                    "Body as unwanted architecture",
+                    "Design against presence",
+                    "The violence of 'no place'"
+                ],
+                x: -1000,
+                y: -200,
+                size: 180
+            },
+            {
+                id: "pigeon-lungs",
+                title: "SHARED ATMOSPHERE",
+                subtitle: "breathing together",
+                text: "Pigeons breathe what we exhale: PM2.5, NO₂, ozone. Their respiratory systems become archives of urban pollution. Each breath a record of industrial progress and environmental cost.",
+                category: "ATMOSPHERIC COMMONS",
+                concept: "Breath as connection",
+                points: [
+                    "One air, unequal effects",
+                    "Lungs as pollution sensors",
+                    "Respiration as shared fate",
+                    "The fiction of separation"
+                ],
+                x: -1400,
+                y: 300,
+                size: 200
+            },
+            {
+                id: "pigeon-gut",
+                title: "INTERNAL CITY",
+                subtitle: "gut as urban archive",
+                text: "Pigeon digestive systems contain microplastics, chemical residues, human food waste. Their gut microbiome maps our consumption patterns and waste management failures.",
+                category: "INTERNAL ECOLOGIES",
+                concept: "Digestion as translation",
+                points: [
+                    "Gut as material archive",
+                    "Microbiome as urban map",
+                    "Consumption made visible",
+                    "Waste internalized"
+                ],
+                x: -800,
+                y: 1000,
+                size: 190
+            }
+        ],
+
+        // NODOS DE MICROORGANISMOS
+        microbes: [
+            {
+                id: "microbe-invisible",
+                title: "INVISIBLE INFRASTRUCTURE",
+                subtitle: "unseen foundation",
+                text: "Microorganisms perform essential urban functions: nutrient cycling, soil regeneration, pollution breakdown. Their work is invisible, their existence ignored until something goes wrong.",
+                category: "INVISIBLE LABOR",
+                concept: "Work without witness",
+                points: [
+                    "Essential but unseen",
+                    "Labor without recognition",
+                    "Foundation of urban ecosystems",
+                    "Ignored until collapse"
+                ],
+                x: 1100,
+                y: -300,
+                size: 195
+            },
+            {
+                id: "microbe-chemical",
+                title: "CHEMICAL CONVERSATIONS",
+                subtitle: "silent communication",
+                text: "Microbes communicate through chemical signals disrupted by pollution. Heavy metals, VOCs, pH changes—all distort their language, their communities, their survival.",
+                category: "CHEMICAL STRESS",
+                concept: "Pollution as noise",
+                points: [
+                    "Chemical language disrupted",
+                    "Signals drowned in toxins",
+                    "Community collapse",
+                    "Silent chemical violence"
+                ],
+                x: 1500,
+                y: 150,
+                size: 185
+            },
+            {
+                id: "microbe-network",
+                title: "SUBSURFACE NETWORKS",
+                subtitle: "cities beneath",
+                text: "Bacterial highways in pavement cracks, fungal networks under sidewalks, microbial communities in building materials. An entire urban ecosystem operating beneath human perception.",
+                category: "SUBSURFACE SYSTEMS",
+                concept: "The city below",
+                points: [
+                    "Infrastructure on infrastructure",
+                    "Networks beneath networks",
+                    "Ecosystems within ecosystems",
+                    "Life in the cracks"
+                ],
+                x: 900,
+                y: 1100,
+                size: 205
+            }
+        ],
+
+        // NODOS DE PRESIÓN/CONTAMINACIÓN
+        pressures: [
+            {
+                id: "air-toxicity",
+                title: "ATMOSPHERIC LOAD",
+                subtitle: "shared burden",
+                text: "Particulate matter affects pigeons' respiratory systems while traveling on microbes. Heavy metals accumulate in tissues while altering microbial metabolism. One pollution, multiple damages.",
+                category: "SHARED STRESSOR",
+                concept: "Pollution's many faces",
+                points: [
+                    "Same source, different effects",
+                    "Cross-species contamination",
+                    "Atmospheric violence",
+                    "Shared but unequal suffering"
+                ],
+                x: -1600,
+                y: -700,
+                size: 175
+            },
+            {
+                id: "noise-pressure",
+                title: "ACOUSTIC STRESS",
+                subtitle: "sound as violence",
+                text: "Chronic noise disrupts pigeon communication, increases stress hormones, alters behavior. While microbes don't 'hear', the noise ecosystem affects their habitats and predators.",
+                category: "SENSORY POLLUTION",
+                concept: "The violence of sound",
+                points: [
+                    "Communication disrupted",
+                    "Stress made audible",
+                    "Sensory overload",
+                    "The sound of exclusion"
+                ],
+                x: 1800,
+                y: -600,
+                size: 180
+            },
+            {
+                id: "thermal-stress",
+                title: "HEAT ISLAND EFFECT",
+                subtitle: "temperature as weapon",
+                text: "Urban heat islands increase temperatures, reducing microbial diversity while stressing pigeon thermoregulation. Concrete absorbs heat, radiates violence.",
+                category: "THERMAL STRESS",
+                concept: "Heat as design failure",
+                points: [
+                    "Temperature as exclusion",
+                    "Concrete as heat battery",
+                    "Thermal stress across scales",
+                    "Design that overheats life"
+                ],
+                x: 0,
+                y: -1300,
+                size: 190
+            }
+        ],
+
+        // NODOS CONCEPTUALES
+        concepts: [
+            {
+                id: "visible-invisible",
+                title: "VISIBLE/INVISIBLE",
+                subtitle: "the perception spectrum",
+                text: "Pigeons are too visible, therefore excluded. Microbes are invisible, therefore ignored. The city manages life through these complementary mechanisms of perception politics.",
+                category: "PERCEPTION POLITICS",
+                concept: "Seeing and not-seeing",
+                points: [
+                    "Visibility as liability",
+                    "Invisibility as erasure",
+                    "The politics of attention",
+                    "How perception determines value"
+                ],
+                x: 200,
+                y: 1400,
+                size: 210
+            },
+            {
+                id: "scale-connection",
+                title: "SCALE CONNECTIONS",
+                subtitle: "micro to macro",
+                text: "Microbial shifts affect air quality affects pigeon health affects urban ecosystems. Changes at microscopic scales cascade through visible systems. Everything is connected through material flows.",
+                category: "SYSTEMIC CONNECTIONS",
+                concept: "Everything is connected",
+                points: [
+                    "Micro changes macro effects",
+                    "Cascading consequences",
+                    "Material flows connect all",
+                    "No scale is isolated"
+                ],
+                x: -1300,
+                y: 1200,
+                size: 185
+            },
+            {
+                id: "design-intervention",
+                title: "WHERE TO INTERVENE",
+                subtitle: "design opportunities",
+                text: "Potential points for intervention: creating multispecies habitats, designing pollution translation tools, developing sensory interfaces, rethinking hostile architecture, acknowledging invisible labor.",
+                category: "DESIGN POTENTIAL",
+                concept: "From mapping to making",
+                points: [
+                    "Multispecies co-design",
+                    "Making invisible visible",
+                    "Translating pollution",
+                    "Designing with, not against"
+                ],
+                x: 1400,
+                y: 800,
+                size: 200
+            }
+        ]
+    };
+
+    // Variables globales
+    let canvas, ctx;
+    let scale = 0.35;
+    let offsetX = 0, offsetY = 0;
+    let isDragging = false;
+    let lastX = 0, lastY = 0;
+    let mapSpace = document.getElementById('map-space');
+    let viewport = document.getElementById('viewport');
+
+    // Crear partículas sutiles
+    function initParticles() {
+        const particlesContainer = document.getElementById('particles');
+        particlesContainer.innerHTML = '';
+
+        for (let i = 0; i < 60; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+
+            // Colores sutiles
+            const colors = [
+                'rgba(52, 152, 219, 0.08)',   // azul paloma
+                'rgba(155, 89, 182, 0.08)',   // púrpura microbe
+                'rgba(127, 140, 141, 0.06)',  // gris contaminación
+                'rgba(230, 126, 34, 0.06)',   // naranja estrés
+                'rgba(22, 160, 133, 0.06)'    // verde/turquesa
+            ];
+
+            const size = Math.random() * 5 + 1;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.animationDuration = `${Math.random() * 25 + 20}s`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // Crear nodos orgánicos
+    function createOrganicNodes() {
+        const allNodes = [
+            ...nodesData.pigeons,
+            ...nodesData.microbes,
+            ...nodesData.pressures,
+            ...nodesData.concepts
+        ];
+
+        const shapeClasses = ['shape-a', 'shape-b', 'shape-c', 'shape-d', 'shape-e'];
+
+        allNodes.forEach((nodeData, index) => {
+            const node = document.createElement('div');
+
+            // Forma aleatoria
+            const shapeClass = shapeClasses[Math.floor(Math.random() * shapeClasses.length)];
+            node.classList.add('node', shapeClass);
+
+            // Clase de color
+            if (nodeData.category.includes('PIGEON') || nodeData.id.includes('pigeon')) {
+                node.classList.add('pigeon-node');
+            } else if (nodeData.category.includes('MICROBE') || nodeData.id.includes('microbe')) {
+                node.classList.add('microbe-node');
+            } else if (nodeData.category.includes('POLLUTION') || nodeData.category.includes('STRESS')) {
+                if (nodeData.title.includes('AIR') || nodeData.title.includes('ATMOSPHERIC')) {
+                    node.classList.add('pollution-node');
+                } else if (nodeData.title.includes('NOISE') || nodeData.title.includes('THERMAL')) {
+                    node.classList.add('stress-node');
+                } else {
+                    node.classList.add('pollution-node');
+                }
+            } else if (nodeData.category.includes('BREATH') || nodeData.category.includes('ATMOSPHERIC')) {
+                node.classList.add('breath-node');
+            } else if (nodeData.category.includes('INJUSTICE') || nodeData.category.includes('POLITICS')) {
+                node.classList.add('injustice-node');
+            } else if (nodeData.category.includes('DESIGN')) {
+                node.classList.add('life-node');
+            } else {
+                node.classList.add('pigeon-node');
+            }
+
+            node.id = nodeData.id;
+            node.dataset.title = nodeData.title;
+            node.dataset.text = nodeData.text;
+            node.dataset.category = nodeData.category;
+            node.dataset.concept = nodeData.concept;
+            node.dataset.points = JSON.stringify(nodeData.points);
+
+            // Posición y propiedades
+            const x = nodeData.x || (Math.random() - 0.5) * 2500;
+            const y = nodeData.y || (Math.random() - 0.5) * 2500;
+            const rotation = (Math.random() - 0.5) * 30;
+
+            node.style.left = `calc(50% + ${x}px)`;
+            node.style.top = `calc(50% + ${y}px)`;
+            node.style.setProperty('--rotation', `${rotation}deg`);
+            node.style.setProperty('--float-time', `${Math.random() * 4 + 5}s`);
+
+            // Tamaño
+            const size = nodeData.size || (160 + Math.random() * 60);
+            node.style.width = `${size}px`;
+            node.style.height = `${size}px`;
+
+            // Icono
+            const iconElement = document.createElement('div');
+            iconElement.classList.add('node-icon');
+
+            // Iconos según categoría
+            if (nodeData.category.includes('PIGEON')) {
+                iconElement.textContent = ['🕊️', '🏙️', '👁️'][Math.floor(Math.random() * 3)];
+            } else if (nodeData.category.includes('MICROBE')) {
+                iconElement.textContent = ['🦠', '🔬', '🌀'][Math.floor(Math.random() * 3)];
+            } else if (nodeData.category.includes('POLLUTION')) {
+                iconElement.textContent = ['☁️', '⚗️', '⚠️'][Math.floor(Math.random() * 3)];
+            } else if (nodeData.category.includes('STRESS')) {
+                iconElement.textContent = ['💥', '🔥', '📈'][Math.floor(Math.random() * 3)];
+            } else {
+                iconElement.textContent = ['💡', '🔗', '⚡'][Math.floor(Math.random() * 3)];
+            }
+
+            // Título
+            const titleElement = document.createElement('div');
+            titleElement.classList.add('node-title');
+            titleElement.textContent = nodeData.title;
+
+            // Subtítulo
+            const subtitleElement = document.createElement('div');
+            subtitleElement.classList.add('node-subtitle');
+            subtitleElement.textContent = nodeData.subtitle || '';
+
+            node.appendChild(iconElement);
+            node.appendChild(titleElement);
+            if (nodeData.subtitle) {
+                node.appendChild(subtitleElement);
+            }
+
+            // Evento click
+            node.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showNodeContent(nodeData);
+            });
+
+            mapSpace.appendChild(node);
+        });
+
+        // Nodo central
+        document.getElementById('centralNode').addEventListener('click', (e) => {
+            e.stopPropagation();
+            showNodeContent(nodesData.central);
+        });
+    }
+
+    // Mostrar contenido
+    function showNodeContent(nodeData) {
+        const panel = document.getElementById('contentPanel');
+        const panelTitle = document.getElementById('panelTitle');
+        const panelText = document.getElementById('panelText');
+        const panelCategory = document.getElementById('panelCategory');
+        const conceptTitle = document.getElementById('conceptTitle');
+        const conceptText = document.getElementById('conceptText');
+        const panelList = document.getElementById('panelList');
+
+        // Actualizar contenido
+        panelTitle.textContent = nodeData.title;
+        panelText.textContent = nodeData.text;
+        panelCategory.textContent = nodeData.category;
+
+        // Color según categoría
+        let color = '#3498db'; // default pigeon blue
+        if (nodeData.category.includes('MICROBE')) {
+            color = '#9b59b6';
+        } else if (nodeData.category.includes('POLLUTION') || nodeData.category.includes('STRESS')) {
+            color = '#7f8c8d';
+        } else if (nodeData.category.includes('ATMOSPHERIC') || nodeData.category.includes('BREATH')) {
+            color = '#16a085';
+        } else if (nodeData.category.includes('INJUSTICE') || nodeData.category.includes('POLITICS')) {
+            color = '#c0392b';
+        } else if (nodeData.category.includes('DESIGN')) {
+            color = '#27ae60';
+        }
+
+        // Aplicar color
+        panel.style.setProperty('--node-color', color);
+        document.getElementById('panelCategory').style.background = color;
+        document.getElementById('panelConcept').style.borderLeftColor = color;
+
+        // Actualizar concepto
+        if (nodeData.concept) {
+            document.getElementById('panelConcept').style.display = 'block';
+            conceptTitle.textContent = typeof nodeData.concept === 'object' ? nodeData.concept.title : 'KEY IDEA';
+            conceptText.textContent = typeof nodeData.concept === 'object' ? nodeData.concept.text : nodeData.concept;
+        } else {
+            document.getElementById('panelConcept').style.display = 'none';
+        }
+
+        // Lista de puntos
+        panelList.innerHTML = '';
+        if (nodeData.points && nodeData.points.length > 0) {
+            nodeData.points.forEach(point => {
+                const listItem = document.createElement('div');
+                listItem.classList.add('panel-list-item');
+                listItem.textContent = point;
+                listItem.style.setProperty('--node-color', color);
+                panelList.appendChild(listItem);
+            });
+        }
+
+        // Mostrar panel
+        panel.classList.add('active');
+    }
+
+    // Cerrar panel
+    document.getElementById('closePanel').addEventListener('click', () => {
+        document.getElementById('contentPanel').classList.remove('active');
+    });
+
+    // Inicializar canvas
+    function initCanvas() {
+        canvas = document.getElementById('connections-canvas');
+        ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = mapSpace.offsetWidth;
+            canvas.height = mapSpace.offsetHeight;
+            drawOrganicConnections();
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+    }
+
+    // Conexiones orgánicas sutiles
+    function drawOrganicConnections() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        // Conexiones desde el centro
+        const allNodes = document.querySelectorAll('.node:not(.central-node)');
+
+        allNodes.forEach(node => {
+            const rect = node.getBoundingClientRect();
+            const spaceRect = mapSpace.getBoundingClientRect();
+
+            const nodeX = (rect.left + rect.width/2 - spaceRect.left) / scale;
+            const nodeY = (rect.top + rect.height/2 - spaceRect.top) / scale;
+
+            // Color según tipo de nodo
+            let color = 'rgba(52, 152, 219, 0.1)';
+            let width = 1.3;
+
+            if (node.classList.contains('microbe-node')) {
+                color = 'rgba(155, 89, 182, 0.1)';
+                width = 1.2;
+            } else if (node.classList.contains('pollution-node')) {
+                color = 'rgba(127, 140, 141, 0.08)';
+                width = 1.0;
+            } else if (node.classList.contains('stress-node')) {
+                color = 'rgba(230, 126, 34, 0.08)';
+                width = 1.1;
+            } else if (node.classList.contains('breath-node')) {
+                color = 'rgba(22, 160, 133, 0.08)';
+                width = 1.2;
+            }
+
+            // Dibujar línea al centro
+            drawConnectionToCenter(centerX, centerY, nodeX, nodeY, color, width);
+        });
+
+        // Conexiones específicas
+        drawSpecificConnections();
+    }
+
+    function drawConnectionToCenter(x1, y1, x2, y2, color, width) {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+
+        // Línea con ligera curva
+        const cpX = (x1 + x2) / 2 + (Math.random() - 0.5) * 80;
+        const cpY = (y1 + y2) / 2 + (Math.random() - 0.5) * 80;
+
+        ctx.quadraticCurveTo(cpX, cpY, x2, y2);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = width;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+    }
+
+    function drawSpecificConnections() {
+        // Conexiones importantes
+        const connections = [
+            { from: 'pigeon-body', to: 'visible-invisible', color: 'rgba(52, 152, 219, 0.15)', width: 1.6 },
+            { from: 'microbe-invisible', to: 'visible-invisible', color: 'rgba(155, 89, 182, 0.15)', width: 1.6 },
+            { from: 'air-toxicity', to: 'pigeon-lungs', color: 'rgba(127, 140, 141, 0.12)', width: 1.4 },
+            { from: 'air-toxicity', to: 'microbe-chemical', color: 'rgba(127, 140, 141, 0.12)', width: 1.4 },
+            { from: 'pigeon-gut', to: 'scale-connection', color: 'rgba(52, 152, 219, 0.14)', width: 1.5 },
+            { from: 'microbe-network', to: 'scale-connection', color: 'rgba(155, 89, 182, 0.14)', width: 1.5 }
+        ];
+
+        connections.forEach(conn => {
+            const fromNode = document.getElementById(conn.from);
+            const toNode = document.getElementById(conn.to);
+
+            if (fromNode && toNode) {
+                const spaceRect = mapSpace.getBoundingClientRect();
+
+                const fromRect = fromNode.getBoundingClientRect();
+                const fromX = (fromRect.left + fromRect.width/2 - spaceRect.left) / scale;
+                const fromY = (fromRect.top + fromRect.height/2 - spaceRect.top) / scale;
+
+                const toRect = toNode.getBoundingClientRect();
+                const toX = (toRect.left + toRect.width/2 - spaceRect.left) / scale;
+                const toY = (toRect.top + toRect.height/2 - spaceRect.top) / scale;
+
+                // Línea curva
+                ctx.beginPath();
+                ctx.moveTo(fromX, fromY);
+
+                const cp1x = (fromX + toX) / 2 + (Math.random() - 0.5) * 150;
+                const cp1y = (fromY + toY) / 2 + (Math.random() - 0.5) * 150;
+
+                ctx.quadraticCurveTo(cp1x, cp1y, toX, toY);
+                ctx.strokeStyle = conn.color;
+                ctx.lineWidth = conn.width;
+                ctx.lineCap = 'round';
+                ctx.stroke();
+            }
+        });
+    }
+
+    // Actualizar transformación
+    function updateTransform() {
+        mapSpace.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})`;
+        drawOrganicConnections();
+    }
+
+    // Zoom
+    function handleWheel(e) {
+        e.preventDefault();
+
+        const zoomFactor = 0.07;
+        const oldScale = scale;
+
+        if (e.deltaY < 0) {
+            scale = Math.min(scale + zoomFactor, 0.8);
+        } else {
+            scale = Math.max(scale - zoomFactor, 0.25);
+        }
+
+        const rect = viewport.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        offsetX -= (x - rect.width/2) * (scale - oldScale) / oldScale;
+        offsetY -= (y - rect.height/2) * (scale - oldScale) / oldScale;
+
+        updateTransform();
+    }
+
+    // Arrastre
+    function handleMouseDown(e) {
+        if (!e.target.closest('.content-panel')) {
+            isDragging = true;
+            lastX = e.clientX;
+            lastY = e.clientY;
+            viewport.classList.add('grabbing');
+        }
+    }
+
+    function handleMouseMove(e) {
+        if (!isDragging) return;
+
+        offsetX += (e.clientX - lastX);
+        offsetY += (e.clientY - lastY);
+        lastX = e.clientX;
+        lastY = e.clientY;
+
+        updateTransform();
+    }
+
+    function handleMouseUp() {
+        isDragging = false;
+        viewport.classList.remove('grabbing');
+    }
+
+    // Reset
+    function resetView() {
+        scale = 0.35;
+        offsetX = 0;
+        offsetY = 0;
+        updateTransform();
+    }
+
+    // Inicializar
+    document.addEventListener('DOMContentLoaded', () => {
+        initParticles();
+        createOrganicNodes();
+        initCanvas();
+        updateTransform();
+
+        // Mostrar contenido central
+        setTimeout(() => {
+            showNodeContent(nodesData.central);
+        }, 800);
+
+        // Event listeners
+        viewport.addEventListener('wheel', handleWheel);
+        viewport.addEventListener('mousedown', handleMouseDown);
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+        viewport.addEventListener('dblclick', resetView);
+
+        // Cerrar panel al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            const panel = document.getElementById('contentPanel');
+            const isNode = e.target.closest('.node') || e.target.closest('.central-node');
+            const isCloseBtn = e.target.closest('.panel-close');
+            const isPanel = e.target.closest('.content-panel');
+
+            if (!isNode && !isCloseBtn && !isPanel && panel.classList.contains('active')) {
+                panel.classList.remove('active');
+            }
+        });
+    });
 </script>
                 
                   
@@ -1034,7 +1735,7 @@ body {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 8, 2026 23:30:28 UTC">February 8, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 13, 2026 19:26:33 UTC">February 13, 2026</span>
     
   </small>
 </div>
