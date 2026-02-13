@@ -504,39 +504,15 @@
 </div>
 
 <hr />
-<!-- Slideshow Gallery (nomadic images) -->
+<!-- Slideshow Gallery (CORREGIDO) -->
 <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
     <!-- Left Column: Slideshow -->
     <div>
         <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">Project Gallery</h2>
         <div style="position: relative; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
             <!-- Slideshow Container -->
-            <div id="nomadic-slideshow" style="width: 100%; height: 600px; background: #f0f0f0;">
-                <!-- Images will be inserted by JavaScript -->
-                <img src="../../images/nomadic9.jpeg" 
-     alt="Future vision" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-      <img src="../../images/nomadic10.jpeg" 
-     alt="Future vision" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-     <img src="../../images/nomadic11.jpeg" 
-     alt="Future vision" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-     <img src="../../images/nomadic12.jpg" 
-     alt="Future vision" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-     <img src="../../images/nomadic13.jpg" 
-     alt="Future vision" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
-     <img src="../../images/nomadic14.jpg" 
-     alt="Future vision" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
+            <div id="nomadic-slideshow" style="width: 100%; height: 600px; background: #f0f0f0; position: relative;">
+                <!-- Las imágenes se insertarán aquí por JavaScript -->
             </div>
 
             <!-- Navigation Buttons -->
@@ -565,83 +541,118 @@
 </div>
 
 <script>
-// Slideshow functionality (adapted for nomadic images)
+// Slideshow functionality (CORREGIDO)
 let currentSlide = 0;
-const totalSlides = 5; // nomadic1.jpg to nomadic5.jpg (adjust as needed)
+
+// IMPORTANTE: Define aquí las imágenes que SÍ existen en tu carpeta
+// Basado en las imágenes que mostraste en el HTML, estas son las que tienes:
+const slideImages = [
+    "../../images/nomadic9.jpeg",
+    "../../images/nomadic10.jpeg",
+    "../../images/nomadic11.jpeg",
+    "../../images/nomadic12.jpg",
+    "../../images/nomadic13.jpg",
+    "../../images/nomadic14.jpg"
+];
+
+const totalSlides = slideImages.length;
 const slideshowContainer = document.getElementById('nomadic-slideshow');
 const indicatorContainer = document.getElementById('slide-indicator');
 
-// Dimensions for vertical images (105mm x 148.5mm) – same as original
-const mmToPx = 3.7795275591;
-const targetWidth = 105 * mmToPx; // ~397px
-const targetHeight = 148.5 * mmToPx; // ~561px
-
 // Initialize slideshow
 function initializeSlideshow() {
+    if (!slideshowContainer) return;
+
     slideshowContainer.innerHTML = '';
     indicatorContainer.innerHTML = '';
 
+    // Crear contenedor para las diapositivas
     const slidesContainer = document.createElement('div');
     slidesContainer.style.width = '100%';
     slidesContainer.style.height = '100%';
-    slidesContainer.style.display = 'flex';
-    slidesContainer.style.alignItems = 'center';
-    slidesContainer.style.justifyContent = 'center';
-    slidesContainer.style.background = '#f0f0f0';
+    slidesContainer.style.position = 'relative';
     slideshowContainer.appendChild(slidesContainer);
 
-    for (let i = 1; i <= totalSlides; i++) {
-        const slideWrapper = document.createElement('div');
-        slideWrapper.id = `slide-wrapper-${i}`;
-        slideWrapper.style.width = `${targetWidth}px`;
-        slideWrapper.style.height = `${targetHeight}px`;
-        slideWrapper.style.display = i === 1 ? 'flex' : 'none';
-        slideWrapper.style.alignItems = 'center';
-        slideWrapper.style.justifyContent = 'center';
-        slideWrapper.style.overflow = 'hidden';
-        slideWrapper.style.borderRadius = '4px';
-        slideWrapper.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
+    // Crear cada diapositiva
+    slideImages.forEach((src, index) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.className = 'slide';
+        slideDiv.style.position = 'absolute';
+        slideDiv.style.top = '0';
+        slideDiv.style.left = '0';
+        slideDiv.style.width = '100%';
+        slideDiv.style.height = '100%';
+        slideDiv.style.display = index === 0 ? 'block' : 'none';
+        slideDiv.style.backgroundColor = '#f0f0f0';
 
         const img = document.createElement('img');
-        img.src = `../../images/nomadic${i}.jpg`;
-        img.alt = `Nomadic project image ${i}`;
+        img.src = src;
+        img.alt = `Nomadic project image ${index + 1}`;
         img.style.width = '100%';
         img.style.height = '100%';
         img.style.objectFit = 'cover';
 
-        slideWrapper.appendChild(img);
-        slidesContainer.appendChild(slideWrapper);
+        // Manejar error de carga de imagen
+        img.onerror = function() {
+            this.style.display = 'none';
+            const errorDiv = document.createElement('div');
+            errorDiv.style.display = 'flex';
+            errorDiv.style.alignItems = 'center';
+            errorDiv.style.justifyContent = 'center';
+            errorDiv.style.height = '100%';
+            errorDiv.style.backgroundColor = '#e0e0e0';
+            errorDiv.style.color = '#666';
+            errorDiv.innerText = 'Image not found: ' + src.split('/').pop();
+            slideDiv.appendChild(errorDiv);
+        };
 
+        slideDiv.appendChild(img);
+        slidesContainer.appendChild(slideDiv);
+
+        // Crear indicador
         const indicator = document.createElement('button');
-        indicator.onclick = () => goToSlide(i - 1);
-        indicator.style.width = '10px';
-        indicator.style.height = '10px';
+        indicator.onclick = () => goToSlide(index);
+        indicator.style.width = '12px';
+        indicator.style.height = '12px';
         indicator.style.borderRadius = '50%';
         indicator.style.border = 'none';
         indicator.style.cursor = 'pointer';
-        indicator.style.backgroundColor = i === 1 ? '#333' : '#ccc';
+        indicator.style.margin = '0 4px';
+        indicator.style.backgroundColor = index === 0 ? '#333' : '#ccc';
         indicator.style.transition = 'background-color 0.3s ease';
         indicatorContainer.appendChild(indicator);
+    });
+}
+
+// Navigation functions
+function goToSlide(index) {
+    const slides = document.querySelectorAll('#nomadic-slideshow .slide');
+    const indicators = indicatorContainer.children;
+
+    if (slides.length === 0) return;
+
+    // Ocultar slide actual
+    slides[currentSlide].style.display = 'none';
+    if (indicators[currentSlide]) {
+        indicators[currentSlide].style.backgroundColor = '#ccc';
+    }
+
+    // Mostrar nuevo slide
+    currentSlide = index;
+    slides[currentSlide].style.display = 'block';
+    if (indicators[currentSlide]) {
+        indicators[currentSlide].style.backgroundColor = '#333';
     }
 }
 
-// Navigation functions (same as original)
-function goToSlide(index) {
-    document.getElementById(`slide-wrapper-${currentSlide + 1}`).style.display = 'none';
-    indicatorContainer.children[currentSlide].style.backgroundColor = '#ccc';
-
-    currentSlide = index;
-
-    document.getElementById(`slide-wrapper-${currentSlide + 1}`).style.display = 'flex';
-    indicatorContainer.children[currentSlide].style.backgroundColor = '#333';
-}
-
 function prevSlide() {
+    if (totalSlides === 0) return;
     const newIndex = (currentSlide - 1 + totalSlides) % totalSlides;
     goToSlide(newIndex);
 }
 
 function nextSlide() {
+    if (totalSlides === 0) return;
     const newIndex = (currentSlide + 1) % totalSlides;
     goToSlide(newIndex);
 }
@@ -651,20 +662,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSlideshow();
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prevSlide();
-        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            e.preventDefault();
+        }
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+            e.preventDefault();
+        }
     });
 });
 </script>
 
 <style>
-/* Additional styles (preserved from original) */
-#nomadic-slideshow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Additional styles */
 #slide-indicator button:hover {
     background-color: #888 !important;
 }
@@ -696,7 +707,7 @@ button:hover {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 13, 2026 22:17:12 UTC">February 13, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 13, 2026 22:25:09 UTC">February 13, 2026</span>
     
   </small>
 </div>
