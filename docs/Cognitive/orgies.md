@@ -129,23 +129,44 @@ We designed and laser cut a terrarium in MDF to host soil, moss and worms. Integ
 ## 6. Next Steps  
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+    
+    <!-- Left Column -->
     <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
         <h3 style="margin-top: 0;">If we continue developing this project, the priorities would be:</h3>
         <ul style="line-height: 1.8;">
-            <li>Redesigning the motor system to increase torque and reliability</li>
-            <li>Adjusting the mechanical tolerances of the walking structure</li>
-            <li>Improving sensor calibration</li>
-            <li>Adding directional logic instead of simple reactive movement</li>
+            <li>Modifying the gears so the transmission of movement is more stable</li>
+            <li>Securing and reinforcing the central axis so it rotates properly</li>
+            <li>Welding some nuts in place to prevent unwanted loosening</li>
+            <li>Carefully testing and recalibrating the servo motors to ensure they provide enough torque and synchronized movement</li>
         </ul>
+        <p style="font-weight: bold; margin-top: 1.5rem;">Right now the main limitation is not conceptual, it is mechanical reliability. The walking system depends on precision, and small inconsistencies affect the entire structure.</p>
     </div>
+    
+    <!-- Right Column -->
     <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
         <h3 style="margin-top: 0;">Further exploration:</h3>
+        <p>Beyond fixing the mechanics, the next layer of development would focus on the logic of the system.</p>
         <ul style="line-height: 1.8;">
-            <li>Exploring solar power for greater autonomy</li>
-            <li>Researching specific species requirements more rigorously</li>
-            <li>Developing a network model of multiple mobile microecosystems functioning as ecological corridors</li>
+            <li>Revisiting the code to define more precisely when the artifact moves and why</li>
+            <li>Studying the actual habitat needs of the organisms inside the microecosystem, including how long they need light, darkness, specific humidity levels and temperature ranges</li>
+            <li>Refining the thresholds so they respond not only to general conditions but also to time of day and duration of exposure</li>
         </ul>
+        
+        <h3 style="margin-top: 1.5rem;">The current code operates on broad environmental conditions. It does not yet consider cycles or temporal patterns, which are essential in real ecosystems.</h3>
+        
+        <h3 style="margin-top: 1.5rem;">Another important improvement would be:</h3>
+        <ul style="line-height: 1.8;">
+            <li>Adding proximity sensors or small cameras to prevent collisions and allow safer navigation</li>
+        </ul>  
+        
+        <h3 style="margin-top: 1.5rem;">And at a larger scale:</h3>
+        <ul style="line-height: 1.8;">
+            <li>Exploring how different units could host different microenvironments, creating a distributed system rather than a single mobile ecosystem</li>
+        </ul>  
+        
+        <p style="font-weight: bold; margin-top: 1.5rem;">This next phase would move the project from a reactive prototype to a more ecologically informed system.</p>
     </div>
+    
 </div>
 
 ---
