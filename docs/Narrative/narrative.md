@@ -47,11 +47,6 @@ The current pictorial draft takes the form of a series of images arranged within
 
 White space is intentionally present, creating pauses between images and text, and allowing each element to be read independently while still contributing to an overall flow. The emphasis remains on images as carriers of meaning, with text acting as a subtle guide rather than an explanation. This draft functions as an exploratory structure, testing rhythm, contrast, and visual hierarchy, rather than a finalized composition.
 
-<iframe src="../Narrative/Draft-v1.pdf" width="100%" height="600px">
-    Este navegador no soporta la visualización de PDFs. 
-    <a href="../Narrative/Draft-v1.pdf">Descarga el PDF</a>.
-</iframe>
-
 <style>
     /* Ocultar el header superior con "Atlas" */
 header:first-of-type,
