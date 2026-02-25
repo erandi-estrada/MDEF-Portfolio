@@ -557,6 +557,94 @@
     <div class="book-dots-container"></div>
 </div>
 
+<!-- ========== NUEVA SECCIÓN: SNAPSHOT - SPEED DATING ========== -->
+<h2>Snapshot - speed dating</h2>
+
+<div class="snapshot-section">
+    <!-- Contenedor principal con imagen y entrevista -->
+    <div class="snapshot-container">
+        <!-- Columna izquierda: imagen SCARS -->
+        <div class="snapshot-image-column">
+            <div class="snapshot-image-wrapper">
+                <img src="../../images/scars.jpg" alt="Scars" class="snapshot-img">
+                <!-- Elemento decorativo que refuerza el tema de "cicatriz" -->
+                <div class="scar-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Columna derecha: entrevista interactiva -->
+        <div class="snapshot-interview-column">
+            <div class="interview-container">
+                <!-- Pregunta 1 -->
+                <div class="interview-item">
+                    <div class="question">What a scar means?</div>
+                    <div class="answer">More understanding</div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="interview-item">
+                    <div class="question">What did you decide not to include that you believe would have been easy or popular choice?</div>
+                    <div class="answer">Physical scars not emotional scars</div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="interview-item">
+                    <div class="question">What did you decide not to include that you believe would have been easy or popular choice?</div>
+                    <div class="answer">Not only images</div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="interview-item">
+                    <div class="question">What method limited your thinking as much as it helped it?</div>
+                    <div class="answer">Documentation - consistance</div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="interview-item">
+                    <div class="question">What method limited your thinking as much as it helped it?</div>
+                    <div class="answer">Keep circulating and adding more</div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="interview-item">
+                    <div class="question">Which context is doing the most invisible work in your project?</div>
+                    <div class="answer">Sound</div>
+                </div>
+
+                <!-- Pregunta 7 (repetida pero la dejamos como está) -->
+                <div class="interview-item">
+                    <div class="question">Which context is doing the most invisible work in your project?</div>
+                    <div class="answer">Sound</div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="interview-item">
+                    <div class="question"></div>
+                    <div class="answer">Misuse</div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="interview-item">
+                    <div class="question"></div>
+                    <div class="answer">Empathy</div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="interview-item">
+                    <div class="question">What material does your project secretly want to be made of, even if it isn’t made out of a material?</div>
+                    <div class="answer">Latex, fake skin</div>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="interview-item">
+                    <div class="question">If your project had to be explained only through an image on the cover of a zine, what would not be shown?</div>
+                    <div class="answer">A face</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <style>
     /* Ocultar el header superior con "Atlas" */
 header:first-of-type,
@@ -860,8 +948,169 @@ h1:first-of-type {
     transform: scale(1.2);
 }
 
+/* ========== ESTILOS NUEVOS PARA SNAPSHOT - SPEED DATING ========== */
+.snapshot-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo sutil tipo cicatriz */
+.snapshot-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, 
+        rgba(180, 130, 100, 0.02) 0px, 
+        rgba(180, 130, 100, 0.02) 20px,
+        rgba(200, 150, 120, 0.01) 20px, 
+        rgba(200, 150, 120, 0.01) 40px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snapshot-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.snapshot-image-column {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.snapshot-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.snapshot-image-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.snapshot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(0.3) contrast(1.1);
+    transition: filter 0.5s ease;
+}
+
+.snapshot-image-wrapper:hover .snapshot-img {
+    filter: sepia(0) contrast(1.2);
+}
+
+/* Overlay decorativo que simula una cicatriz sobre la imagen */
+.scar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, 
+        rgba(255,200,180,0.1) 0%, 
+        transparent 50%);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.snapshot-interview-column {
+    flex: 2 1 500px;
+}
+
+.interview-container {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-left: 4px solid #b3806b;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Estilo para cada ítem de pregunta/respuesta */
+.interview-item {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: #fefaf8;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.interview-item:hover {
+    background: #fff3ef;
+    border-left-color: #b3806b;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.question {
+    font-weight: 600;
+    color: #4a3a33;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.answer {
+    color: #b3806b;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-style: italic;
+    padding-left: 0.5rem;
+    border-left: 2px solid #e5c7bb;
+}
+
+/* Scroll personalizado para la entrevista */
+.interview-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.interview-container::-webkit-scrollbar-track {
+    background: #f0e5e0;
+    border-radius: 10px;
+}
+
+.interview-container::-webkit-scrollbar-thumb {
+    background: #b3806b;
+    border-radius: 10px;
+}
+
+.interview-container::-webkit-scrollbar-thumb:hover {
+    background: #9a6a55;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+    .snapshot-container {
+        flex-direction: column;
+    }
+
+    .snapshot-image-column {
+        max-width: 100%;
+    }
+
+    .interview-container {
+        max-height: 400px;
+    }
+
     .book-spread {
         flex-direction: column;
         gap: 30px;
@@ -1029,7 +1278,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 17:37:14 UTC">February 24, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 25, 2026 12:31:19 UTC">February 25, 2026</span>
     
   </small>
 </div>
