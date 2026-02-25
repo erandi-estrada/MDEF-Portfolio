@@ -289,25 +289,13 @@ This draft publication brings together the research I have developed so far thro
                 <!-- Pregunta 2 -->
                 <div class="interview-item">
                     <div class="question">What did you decide not to include that you believe would have been easy or popular choice?</div>
-                    <div class="answer">Physical scars not emotional scars</div>
-                </div>
-                
-                <!-- Pregunta 3 -->
-                <div class="interview-item">
-                    <div class="question">What did you decide not to include that you believe would have been easy or popular choice?</div>
-                    <div class="answer">Not only images</div>
+                    <div class="answer">Physical scars not emotional scars</div> <div class="answer">Not only images</div>
                 </div>
                 
                 <!-- Pregunta 4 -->
                 <div class="interview-item">
                     <div class="question">What method limited your thinking as much as it helped it?</div>
-                    <div class="answer">Documentation - consistance</div>
-                </div>
-                
-                <!-- Pregunta 5 -->
-                <div class="interview-item">
-                    <div class="question">What method limited your thinking as much as it helped it?</div>
-                    <div class="answer">Keep circulating and adding more</div>
+                    <div class="answer">Documentation - consistance</div> <div class="answer">Keep circulating and adding more</div>
                 </div>
                 
                 <!-- Pregunta 6 -->
@@ -316,23 +304,12 @@ This draft publication brings together the research I have developed so far thro
                     <div class="answer">Sound</div>
                 </div>
                 
-                <!-- Pregunta 7 (repetida pero la dejamos como está) -->
-                <div class="interview-item">
-                    <div class="question">Which context is doing the most invisible work in your project?</div>
-                    <div class="answer">Sound</div>
-                </div>
-                
                 <!-- Pregunta 8 -->
                 <div class="interview-item">
-                    <div class="question"></div>
-                    <div class="answer">Misuse</div>
-                </div>
-                
-                <!-- Pregunta 9 -->
-                <div class="interview-item">
-                    <div class="question"></div>
+                    <div class="question">Misuse</div>
                     <div class="answer">Empathy</div>
                 </div>
+    
                 
                 <!-- Pregunta 10 -->
                 <div class="interview-item">
