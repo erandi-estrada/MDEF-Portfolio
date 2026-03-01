@@ -1,461 +1,181 @@
-<div class="menu-container">
-    <div class="custom-header-menu">
-        <a href="../..">MDEF</a>
-        <a href="https://eradesign.portfolio.site/" target="_blank" rel="noopener noreferrer">Projects</a>
-        <a href="../../about/me">About me</a>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situated Design Practices · MDEF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-# Extended Intelligences II: Co-Creative Music Agent
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fcfcfc;
+            color: #1a1e2b;
+            line-height: 1.6;
+        }
 
-## Project Overview
+        /* ----- MENU (exacto como en la referencia) ----- */
+        .menu-container {
+            width: 100%;
+            border-bottom: 1px solid #eaeef2;
+            background-color: #ffffff;
+        }
 
-This project explores a distributed intelligence system where humans and AI collaborate to create music through physical interaction. The system interprets emotional and rhythmic inputs from sensors, processes them through an LLM agent, and generates lyrics, musical references, and light behavior. Despite technical constraints, the project demonstrates how imperfect sensing can still facilitate meaningful co-creative experiences between human and non-human intelligences.
+        .custom-header-menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            gap: 2.5rem;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+        }
 
-## System Logic
+        .custom-header-menu a {
+            text-decoration: none;
+            color: #2d3a4a;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 0.2rem;
+        }
 
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: center;">
-    
-<div>
-    <img src="../../images/LLM.png" 
-         alt="System Architecture Diagram" 
-         width="100%" 
-         style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
+        .custom-header-menu a:hover {
+            color: #4c6b8a;
+            border-bottom-color: #8ba0b8;
+        }
 
-<div>
-    <h3 style="margin-top: 0;">Interaction Pipeline:</h3>
-    <ol style="line-height: 1.8; padding-left: 1.5rem;">
-        <li><strong>Physical Inputs:</strong> Touch (rhythm) + Color (mood)</li>
-        <li><strong>AI Interpretation:</strong> LLM maps inputs to emotional tone</li>
-        <li><strong>Generative Output:</strong> Original lyrics + YouTube reference</li>
-        <li><strong>Physical Feedback:</strong> NeoPixel light patterns</li>
-        <li><strong>Closed Loop:</strong> Human responds to generated content</li>
-    </ol>
-</div>
-</div>
+        /* ----- LAYOUT PRINCIPAL ----- */
+        .main-content {
+            max-width: 1000px;
+            margin: 3rem auto 5rem;
+            padding: 0 2rem;
+        }
 
-## AI Prompting & Agent Behavior
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.2rem;
+            color: #1e2b3a;
+            border-left: 6px solid #6b8cae;
+            padding-left: 1.8rem;
+        }
 
-<div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainerAgent">
-        <!-- Las frases se insertarán aquí dinámicamente -->
-    </div>
-</div>
+        /* video contenedor - loop, silenciado, 2seg */
+        .video-wrapper {
+            margin: 3rem 0 3rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px -8px rgba(0,20,30,0.25);
+            background-color: #e9edf2;
+            aspect-ratio: 16 / 9;
+        }
 
-<script>
-const phrasesAgent = [
-    {text: "Agent Architecture", position: "center"},
-    {text: "MCP-based sensor interface", position: "top-left"},
-    {text: "Color → Mood mapping", position: "top-right"},
-    {text: "Rhythm → Lyrical structure", position: "bottom-left"},
-    {text: "Cross-domain decision making", position: "bottom-right"},
-    {text: "Distributed Intelligence", position: "center"},
-    {text: "Human touch as creative input", position: "top-left"},
-    {text: "AI as composer & interpreter", position: "top-right"},
-    {text: "Hardware as responsive body", position: "bottom-left"},
-    {text: "System orchestrator", position: "bottom-right"},
-    {text: "Meaning from imperfection", position: "center"}
-];
+        .situated-video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            background-color: #1a1f2b; /* fallback mientras carga */
+        }
 
-let currentIndexAgent = 0;
-const containerAgent = document.getElementById('phraseContainerAgent');
+        /* texto principal con estilo de párrafo similar al de las reflexiones */
+        .reflection-text {
+            background-color: #f8fafc;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 3rem 0 2rem;
+            border-left: 5px solid #4c51bf;
+            font-size: 1.1rem;
+            color: #2d3f4f;
+        }
 
-function showNextPhraseAgent() {
-    containerAgent.innerHTML = '';
-    
-    const phraseData = phrasesAgent[currentIndexAgent];
-    const phraseElement = document.createElement('div');
-    phraseElement.className = `phrase ${phraseData.position}`;
-    phraseElement.textContent = phraseData.text;
-    
-    containerAgent.appendChild(phraseElement);
-    
-    setTimeout(() => {
-        phraseElement.classList.add('active');
-    }, 100);
-    
-    currentIndexAgent = (currentIndexAgent + 1) % phrasesAgent.length;
-    setTimeout(showNextPhraseAgent, 3000);
-}
+        .reflection-text p {
+            margin-bottom: 1.8rem;
+        }
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (containerAgent) {
-        showNextPhraseAgent();
-    }
-});
-</script>
+        .reflection-text p:last-child {
+            margin-bottom: 0;
+        }
 
-<div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #4a6fa5;">
-    <h4>AI Agent Prompt Logic (Working Implementation):</h4>
-    <pre style="background-color: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem;">
-When user provides color input:
-1. Map color to mood spectrum:
-   - Red → Passionate/Intense
-   - Blue → Melancholic/Calm
-   - Green → Hopeful/Growing
-   - Yellow → Joyful/Energetic
-   - Purple → Mysterious/Introspective
+        /* pequeña línea decorativa (opcional) */
+        .context-label {
+            display: inline-block;
+            background-color: #e2eaf2;
+            color: #2b4a6b;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-top: 1rem;
+        }
 
-2. Generate lyrics incorporating:
-   - Mood-derived emotional tone
-   - Randomized rhythmic structure
-   - Coherent thematic development
+        /* responsive */
+        @media (max-width: 600px) {
+            .custom-header-menu {
+                padding: 1rem 1.5rem;
+                gap: 1.5rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+                padding-left: 1.2rem;
+            }
+            .reflection-text {
+                padding: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
 
-3. Search YouTube for matching song:
-   - Similar emotional vibe
-   - Compatible musical genre
-   - Contemporary relevance
-
-4. Return structured response:
-   - Generated lyrics
-   - Song recommendation with link
-   - NeoPixel light pattern code</pre>
-</div>
-
-<div class="carousel-container" style="margin: 3rem 0; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative;">
-    <h4 style="text-align: center; margin-bottom: 1.5rem;">Agent Interactions</h4>
-    
-    <div class="carousel-wrapper">
-        <div class="carousel-slides">
-            <div class="carousel-slide active">
-                <img src="../../images/Agent1.png" alt="Agent Interaction 1" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-            <div class="carousel-slide">
-                <img src="../../images/Agent2.png" alt="Agent Interaction 2" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-            <div class="carousel-slide">
-                <img src="../../images/Agent3.png" alt="Agent Interaction 3" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-            <div class="carousel-slide">
-                <img src="../../images/Agent4.png" alt="Agent Interaction 4" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-            <div class="carousel-slide">
-                <img src="../../images/Agent5.png" alt="Agent Interaction 5" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-            <div class="carousel-slide">
-                <img src="../../images/Agent6.png" alt="Agent Interaction 6" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-            <div class="carousel-slide">
-                <img src="../../images/Agent7.png" alt="Agent Interaction 7" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
-            </div>
-        </div>
-        
-        <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
-        <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
-        
-        <div class="carousel-indicators">
-            <span class="indicator active" onclick="currentSlide(0)"></span>
-            <span class="indicator" onclick="currentSlide(1)"></span>
-            <span class="indicator" onclick="currentSlide(2)"></span>
-            <span class="indicator" onclick="currentSlide(3)"></span>
-            <span class="indicator" onclick="currentSlide(4)"></span>
-            <span class="indicator" onclick="currentSlide(5)"></span>
-            <span class="indicator" onclick="currentSlide(6)"></span>
+    <!-- MENU EXACTO DE LA REFERENCIA (solo cambian los links, pero los dejamos igual) -->
+    <div class="menu-container">
+        <div class="custom-header-menu">
+            <a href="../..">MDEF</a>
+            <a href="https://eradesign.portfolio.site/" target="_blank" rel="noopener noreferrer">Projects</a>
+            <a href="../../about/me">About me</a>
         </div>
     </div>
-</div>
 
-<script>
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const indicators = document.querySelectorAll('.indicator');
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content">
+        
+        <!-- TÍTULO DEL POST / PÁGINA -->
+        <h1>Situated Design Practices</h1>
 
-function showSlide(index) {
-    // Asegurarse de que el índice esté dentro del rango
-    if (index >= slides.length) {
-        currentSlideIndex = 0;
-    } else if (index < 0) {
-        currentSlideIndex = slides.length - 1;
-    } else {
-        currentSlideIndex = index;
-    }
-    
-    // Ocultar todas las slides
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-    
-    // Remover activo de todos los indicadores
-    indicators.forEach(indicator => {
-        indicator.classList.remove('active');
-    });
-    
-    // Mostrar slide actual
-    slides[currentSlideIndex].classList.add('active');
-    
-    // Activar indicador actual
-    if (indicators[currentSlideIndex]) {
-        indicators[currentSlideIndex].classList.add('active');
-    }
-}
+        <!-- VIDEO EN LOOP (2 segundos) - con atributos loop, muted, autoplay (opcional) y preload -->
+        <div class="video-wrapper">
+            <video class="situated-video" autoplay loop muted playsinline preload="auto">
+                <source src="../../videos/Situated.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
 
-function moveSlide(n) {
-    showSlide(currentSlideIndex + n);
-}
+        <!-- TEXTO COMPLETO (el que proporcionaste, enriquecido con el estilo de la cita/reflexión) -->
+        <div class="reflection-text">
+            <p>This week helped me understand design not as an abstract or universal practice, but as a situated action, embedded in a territory, shaped by political structures, and connected to specific communities. Throughout the sessions, exploring different contexts in Barcelona made it clear that design does not only produce objects or systems, but also relationships, narratives, and positions.</p>
 
-function currentSlide(n) {
-    showSlide(n);
-}
+            <p>The visit to the Barcelona Supercomputing Center made me see how highly complex technological infrastructures are not only scientific devices, but also political and cultural artifacts. High-performance computing structures ways of producing knowledge, sets research priorities, and distributes resources. From a situated design perspective, this means acknowledging that even systems that appear "neutral" are embedded in power dynamics and institutional decisions.</p>
 
-// Auto-avance cada 5 segundos
-let slideInterval = setInterval(() => {
-    moveSlide(1);
-}, 5000);
+            <p>The experience at Cal Negre introduced a completely different dimension: community life as a design practice in itself. There, design is not expressed as a finished product, but as an ongoing process of negotiation, care, and adaptation to the territory. The proximity to the airport and industrial infrastructures creates ecological and social tensions that directly shape ways of inhabiting the space. In this context, design becomes a tool to sustain alternative forms of coexistence, showing that commitment is not just a discourse, but something practiced daily.</p>
 
-// Pausar auto-avance al interactuar
-const carousel = document.querySelector('.carousel-wrapper');
-carousel.addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
-});
+            <p>The discussion around forced communities and border regimes also made visible how design actively participates in the production of exclusion or mobility. Systems, infrastructures, and policies are designed and they shape who can move, who must stay, and under what conditions.</p>
 
-carousel.addEventListener('mouseleave', () => {
-    slideInterval = setInterval(() => {
-        moveSlide(1);
-    }, 5000);
-});
+            <p>For me, this reinforces the importance of understanding design as a practice that must explicitly recognize its context and political implications. It means working with communities not as abstract "users," but as agents with history, agency, and their own knowledge.</p>
+        </div>
 
-// Inicializar
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(0);
-});
-</script>
-
-<style>
-.carousel-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 6px;
-}
-
-.carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    display: none;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-    display: block;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-}
-
-.carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-btn.prev {
-    left: 15px;
-}
-
-.carousel-btn.next {
-    right: 15px;
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    z-index: 10;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.indicator.active {
-    background-color: #4a6fa5;
-}
-
-</style>
-
-## Physical Computing Setup
-
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
-    
-<div>
-    <h3 style="margin-top: 0;">Hardware Components</h3>
-    <ul style="line-height: 1.8;">
-        <li><strong>Raspberry Pi Pico 2W:</strong> Main controller with WiFi</li>
-        <li><strong>Capacitive Copper Strips:</strong> Rhythm detection (touch sensing)</li>
-        <li><strong>Color Sensor (TCS34725):</strong> Mood input detection</li>
-        <li><strong>NeoPixel LED Strip:</strong> Visual feedback system</li>
-        <li><strong>Breadboard & Wiring:</strong> Prototyping infrastructure</li>
-    </ul>
-    
-    <div style="margin-top: 2rem; padding: 1rem; background-color: #f0f0f0; border-radius: 6px;">
-        <h4>Working Raspberry Pi Code</h4>
-        <pre style="background-color: #fff; padding: 1rem; border-radius: 4px; font-size: 0.8rem; overflow-x: auto;">
-import time
-import network
-from machine import Pin, ADC
-from micro_mcp import MCPServer
-
-# Touch sensor on ADC Pin 26
-sensor = ADC(Pin(26))
-
-# Debounce settings
-DEBOUNCE_SAMPLES = 3
-DEBOUNCE_TOLERANCE = 100
-SAMPLE_INTERVAL = 0.05
-
-def read_debounced():
-    stable_count = 0
-    last_stable = None
-    
-    while stable_count < DEBOUNCE_SAMPLES:
-        value = sensor.read_u16()
-        if last_stable is None:
-            last_stable = value
-            stable_count = 1
-        elif abs(value - last_stable) <= DEBOUNCE_TOLERANCE:
-            stable_count += 1
-        else:
-            last_stable = value
-            stable_count = 1
-        time.sleep(SAMPLE_INTERVAL)
-    return last_stable
-
-# WiFi connection
-wlan = network.WLAN(network.STA_IF)
-wlan.active(True)
-wlan.connect("Iaac-Wifi", "EnterIaac22@")
-
-# MCP server setup
-mcp = MCPServer(name="music-agent", version="1.0.0")
-
-@mcp.tool(
-    name="read_touch_sensor",
-    description="Read touch sensor state",
-    input_schema={"type": "object", "properties": {}}
-)
-def read_touch_sensor():
-    readings = []
-    for _ in range(5):
-        readings.append(sensor.read_u16())
-        time.sleep(0.2)
-    zeros = sum(1 for v in readings if v == 0)
-    return "Touched" if zeros >= 3 else "Not Touched"
-
-mcp.run(port=8080)</pre>
+        <!-- pequeño detalle de contexto (opcional, le da un aire de diario) -->
+        <div class="context-label">
+            ⚡ design · territory · situated practices
+        </div>
     </div>
-</div>
 
-<div>
-    <img src="../../images/raspberry.jpeg" 
-         alt="Hardware Setup" 
-         width="100%" 
-         style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
-    
-    <div style="background-color: #fff5f5; padding: 1.5rem; border-radius: 6px; border-left: 4px solid #e53e3e;">
-        <h4>Technical Constraints Encountered:</h4>
-        <ul style="margin-bottom: 0;">
-            <li>Capacitive sensing limited to binary detection</li>
-            <li>Rhythm detection required signal stabilization</li>
-            <li>OS compatibility issues with real-time LED control</li>
-            <li>Color sensor integration delayed by connectivity problems</li>
-            <li>Limited timeframe for calibration and refinement</li>
-        </ul>
-    </div>
-</div>
-</div>
-
-## What Worked vs. What Didn't
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0;">
-    
-<div style="background-color: #f0f9f0; padding: 2rem; border-radius: 8px; border: 1px solid #c6f6d5;">
-    <h3 style="color: #276749; margin-top: 0;">✅ Successful Implementation</h3>
-    <ul style="color: #276749;">
-        <li><strong>MCP Architecture:</strong> Stable connection between physical inputs and AI agent</li>
-        <li><strong>Prompt Logic:</strong> Effective color-to-mood mapping and lyric generation</li>
-        <li><strong>Conceptual Pipeline:</strong> Clear flow from sensor → AI → output → feedback</li>
-        <li><strong>Agent Behavior:</strong> AI made coherent cross-domain decisions (emotion, rhythm, visuals, references)</li>
-        <li><strong>Distributed Intelligence:</strong> Demonstrated shared agency between human and AI</li>
-    </ul>
-</div>
-
-<div style="background-color: #fff5f5; padding: 2rem; border-radius: 8px; border: 1px solid #fed7d7;">
-    <h3 style="color: #c53030; margin-top: 0;">❌ Limitations & Challenges</h3>
-    <ul style="color: #c53030;">
-        <li><strong>Sensor Resolution:</strong> Touch detection remained binary, not rhythmic</li>
-        <li><strong>Hardware Integration:</strong> NeoPixel and color sensor not fully operational</li>
-        <li><strong>Calibration Time:</strong> Signal stability required more development time</li>
-        <li><strong>OS Conflicts:</strong> Windows connectivity issues with Raspberry Pi</li>
-        <li><strong>Real-time Feedback:</strong> Light patterns not synchronized in final demo</li>
-    </ul>
-</div>
-</div>
-
-## Reflection & Learnings
-
-<div style="background-color: #f8fafc; padding: 2.5rem; border-radius: 8px; margin: 4rem 0; border-left: 5px solid #4c51bf;">
-    
-    <p style="margin-bottom: 1.5rem; color: #4a5568;">
-        This project began as an exploration of shared musical creation between human and AI, where physical interaction (touch and color) would become a language for co-creation. The idea was poetic: an AI that responds not just to words, but to the body's rhythm and the emotion of color.
-    </p>
-    
-    <p style="margin-bottom: 1.5rem; color: #4a5568;">
-       In practice, the project quickly became a lesson about friction. Working within a very short timeframe and dealing with hardware limitations, operating system conflicts, and unreliable capacitive sensing meant that many parts of the physical system never fully behaved as expected. While the original intention was to create a more immediate and embodied interaction, the project revealed that even without real-time musical co-creation, it is still possible to meaningfully collaborate with an AI through a small set of inputs. This shift highlighted how artificial intelligence can act as a creative partner, interpreting minimal signals and expanding them into richer musical and atmospheric outcomes.
-    </p>
-    
-    <p style="margin-bottom: 1.5rem; color: #4a5568;">
-     Due to the very limited timeframe of the course, much of the project required improvisation, and the system ultimately relied more on the LLM than originally intended. While this constrained the physical implementation, it also revealed how powerful it is to integrate an AI that can interpret ambiguous, emotional, and incomplete inputs, something that would be extremely difficult to achieve through deterministic code alone. With more time, the project could have pushed further into embodied interaction, but even in its partial form, it highlighted how rich and complex the communication between hardware and software can be, and how valuable this relationship is as a space for exploration and learning.
-    </p>
-</div>
-
-<style>
-.image-carousel img {
-    transition: transform 0.3s ease;
-}
-
-.image-carousel img:hover {
-    transform: scale(1.02);
-}
-
-pre {
-    font-family: 'Courier New', monospace;
-    line-height: 1.4;
-}
-
-ul, ol {
-    padding-left: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-}
-</style>
+    <!-- (opcional) script mínimo para asegurar loop en navegadores dudosos, pero con atributos loop+muted sobra -->
+</body>
+</html>
