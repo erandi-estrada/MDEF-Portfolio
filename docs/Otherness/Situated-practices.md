@@ -103,19 +103,6 @@
             margin-bottom: 0;
         }
 
-        /* pequeña línea decorativa (opcional) */
-        .context-label {
-            display: inline-block;
-            background-color: #e2eaf2;
-            color: #2b4a6b;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            margin-top: 1rem;
-        }
-
         /* responsive */
         @media (max-width: 600px) {
             .custom-header-menu {
@@ -134,7 +121,7 @@
 </head>
 <body>
 
-    <!-- MENU EXACTO DE LA REFERENCIA (solo cambian los links, pero los dejamos igual) -->
+    <!-- MENU EXACTO DE LA REFERENCIA -->
     <div class="menu-container">
         <div class="custom-header-menu">
             <a href="../..">MDEF</a>
@@ -146,10 +133,10 @@
     <!-- CONTENIDO PRINCIPAL -->
     <div class="main-content">
         
-        <!-- TÍTULO DEL POST / PÁGINA -->
+        <!-- TÍTULO -->
         <h1>Situated Design Practices</h1>
 
-        <!-- VIDEO EN LOOP (2 segundos) - con atributos loop, muted, autoplay (opcional) y preload -->
+        <!-- VIDEO EN LOOP (2 segundos) -->
         <div class="video-wrapper">
             <video class="situated-video" autoplay loop muted playsinline preload="auto">
                 <source src="../../videos/Situated.mp4" type="video/mp4">
@@ -157,7 +144,7 @@
             </video>
         </div>
 
-        <!-- TEXTO COMPLETO (el que proporcionaste, enriquecido con el estilo de la cita/reflexión) -->
+        <!-- TEXTO COMPLETO -->
         <div class="reflection-text">
             <p>This week helped me understand design not as an abstract or universal practice, but as a situated action, embedded in a territory, shaped by political structures, and connected to specific communities. Throughout the sessions, exploring different contexts in Barcelona made it clear that design does not only produce objects or systems, but also relationships, narratives, and positions.</p>
 
@@ -169,9 +156,6 @@
 
             <p>For me, this reinforces the importance of understanding design as a practice that must explicitly recognize its context and political implications. It means working with communities not as abstract "users," but as agents with history, agency, and their own knowledge.</p>
         </div>
-
     </div>
-
-    <!-- (opcional) script mínimo para asegurar loop en navegadores dudosos, pero con atributos loop+muted sobra -->
 </body>
 </html>
