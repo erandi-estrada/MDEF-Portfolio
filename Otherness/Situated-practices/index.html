@@ -11,7 +11,7 @@
         <meta name="description" content="Master in Design for Emergent Futures">
       
       
-        <link rel="canonical" href="https://erandi-estrada.github.io/MDEF-Portfolio/Otherness/Other-intelligences/">
+        <link rel="canonical" href="https://erandi-estrada.github.io/MDEF-Portfolio/Otherness/Situated-practices/">
       
       
         <meta name="author" content="Erandi Estrada">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Other intelligences - Erandi Estrada - MDEF & Fab Lab Barcelona</title>
+        <title>Situated practices - Erandi Estrada - MDEF & Fab Lab Barcelona</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#design-with-others" class="md-skip">
+        <a href="#extended-intelligences-ii-co-creative-music-agent" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Other intelligences
+              Situated practices
             
           </span>
         </div>
@@ -260,22 +260,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#day-1-support-an-intelligence-that-does-not-need-you" class="md-nav__link">
-    DAY 1 - Support an intelligence that does not need you
+  <a href="#project-overview" class="md-nav__link">
+    Project Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#day-2-support-a-collectivegrupal-intelligence-that-does-not-locate-itself-in-individuals" class="md-nav__link">
-    DAY 2 - Support a collective/grupal intelligence that does not locate itself in individuals
+  <a href="#system-logic" class="md-nav__link">
+    System Logic
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#day-3-build-an-interface-for-an-environmental-intelligence-that-does-not-care-about-life" class="md-nav__link">
-    DAY 3 - Build an interface for an environmental intelligence that does not care about life
+  <a href="#ai-prompting-agent-behavior" class="md-nav__link">
+    AI Prompting &amp; Agent Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-computing-setup" class="md-nav__link">
+    Physical Computing Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-worked-vs-what-didnt" class="md-nav__link">
+    What Worked vs. What Didn't
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-learnings" class="md-nav__link">
+    Reflection &amp; Learnings
   </a>
   
 </li>
@@ -292,7 +313,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/erandi-estrada/MDEF-Portfolio/edit/master/docs/Otherness/Other-intelligences.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/erandi-estrada/MDEF-Portfolio/edit/master/docs/Otherness/Situated-practices.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -308,390 +329,451 @@
     </div>
 </div>
 
-<h1 id="design-with-others">Design with Others<a class="headerlink" href="#design-with-others" title="Permanent link">&para;</a></h1>
-<p>Design's evolution can be tracked through a simple shift in language: first, we designed over objects and industry, then we learned to design for human users, and then we aim to design with communities.</p>
-<p>This progression, however, leads to an inevitable and deeper question: Who or what comes next? Who or what is the new "other"?</p>
-<p>Are there intelligences beyond our own that we should be designing for, designing over, or even, designing with?</p>
-<p>This week was about that. Here, we will avoid our human-centric assumptions to engage with artificial, collective, and environmental intelligences as legitimate "others", not as tools or metaphors, but as entities with their own sovereignty, their own logic, and their own needs.</p>
-<h2 id="day-1-support-an-intelligence-that-does-not-need-you">DAY 1 - Support an intelligence that does not need you<a class="headerlink" href="#day-1-support-an-intelligence-that-does-not-need-you" title="Permanent link">&para;</a></h2>
+<h1 id="extended-intelligences-ii-co-creative-music-agent">Extended Intelligences II: Co-Creative Music Agent<a class="headerlink" href="#extended-intelligences-ii-co-creative-music-agent" title="Permanent link">&para;</a></h1>
+<h2 id="project-overview">Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
+<p>This project explores a distributed intelligence system where humans and AI collaborate to create music through physical interaction. The system interprets emotional and rhythmic inputs from sensors, processes them through an LLM agent, and generates lyrics, musical references, and light behavior. Despite technical constraints, the project demonstrates how imperfect sensing can still facilitate meaningful co-creative experiences between human and non-human intelligences.</p>
+<h2 id="system-logic">System Logic<a class="headerlink" href="#system-logic" title="Permanent link">&para;</a></h2>
+<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: center;">
+
+<div>
+    <img src="../../images/LLM.png" 
+         alt="System Architecture Diagram" 
+         width="100%" 
+         style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+</div>
+
+<div>
+    <h3 style="margin-top: 0;">Interaction Pipeline:</h3>
+    <ol style="line-height: 1.8; padding-left: 1.5rem;">
+        <li><strong>Physical Inputs:</strong> Touch (rhythm) + Color (mood)</li>
+        <li><strong>AI Interpretation:</strong> LLM maps inputs to emotional tone</li>
+        <li><strong>Generative Output:</strong> Original lyrics + YouTube reference</li>
+        <li><strong>Physical Feedback:</strong> NeoPixel light patterns</li>
+        <li><strong>Closed Loop:</strong> Human responds to generated content</li>
+    </ol>
+</div>
+</div>
+
+<h2 id="ai-prompting-agent-behavior">AI Prompting &amp; Agent Behavior<a class="headerlink" href="#ai-prompting-agent-behavior" title="Permanent link">&para;</a></h2>
 <div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainer">
+    <div class="phrase-container" id="phraseContainerAgent">
         <!-- Las frases se insertarán aquí dinámicamente -->
     </div>
 </div>
 
 <script>
-const phrases = [
-    {text: "Support an intelligence that does not need you.", position: "center"},
-    {text: "AI is not a tool.", position: "top-left"},
-    {text: "AI is not here to help you.", position: "top-right"},
-    {text: "Forget human intelligence as a superior model.", position: "bottom-left"},
-    {text: "An intelligence that has nothing to do with you.", position: "bottom-right"},
-    {text: "Non-subordinate intelligence.", position: "center"},
-    {text: "Not an extension of human cognition.", position: "top-left"},
-    {text: "Not goal-aligned with human intentions.", position: "top-right"},
-    {text: "Not optimized for usefulness.", position: "bottom-left"},
-    {text: "Not concerned with human recognition.", position: "bottom-right"},
-    {text: "Autonomous other.", position: "center"},
-    {text: "Non-human-centric language / thinking.", position: "top-left"},
-    {text: "Non-anthropocentric thinking.", position: "top-right"},
-    {text: "Avoid directive/control language.", position: "bottom-left"},
-    {text: "Thrive on its own terms.", position: "bottom-right"},
-    {text: "Autonomous Systems", position: "center"},
-    {text: "Emergent Systems / Emergent Behavior", position: "top-left"},
-    {text: "Speculative Narrative", position: "top-right"},
-    {text: "Worldbuilding", position: "center"}
+const phrasesAgent = [
+    {text: "Agent Architecture", position: "center"},
+    {text: "MCP-based sensor interface", position: "top-left"},
+    {text: "Color → Mood mapping", position: "top-right"},
+    {text: "Rhythm → Lyrical structure", position: "bottom-left"},
+    {text: "Cross-domain decision making", position: "bottom-right"},
+    {text: "Distributed Intelligence", position: "center"},
+    {text: "Human touch as creative input", position: "top-left"},
+    {text: "AI as composer & interpreter", position: "top-right"},
+    {text: "Hardware as responsive body", position: "bottom-left"},
+    {text: "System orchestrator", position: "bottom-right"},
+    {text: "Meaning from imperfection", position: "center"}
 ];
 
-let currentIndex = 0;
-const container = document.getElementById('phraseContainer');
+let currentIndexAgent = 0;
+const containerAgent = document.getElementById('phraseContainerAgent');
 
-function showNextPhrase() {
-    // Limpiar contenedor
-    container.innerHTML = '';
+function showNextPhraseAgent() {
+    containerAgent.innerHTML = '';
 
-    // Obtener frase actual
-    const phraseData = phrases[currentIndex];
-
-    // Crear elemento de frase
+    const phraseData = phrasesAgent[currentIndexAgent];
     const phraseElement = document.createElement('div');
     phraseElement.className = `phrase ${phraseData.position}`;
     phraseElement.textContent = phraseData.text;
 
-    // Agregar al contenedor
-    container.appendChild(phraseElement);
+    containerAgent.appendChild(phraseElement);
 
-    // Activar animación después de un breve delay
     setTimeout(() => {
         phraseElement.classList.add('active');
     }, 100);
 
-    // Incrementar índice (circular)
-    currentIndex = (currentIndex + 1) % phrases.length;
-
-    // Programar siguiente frase (cambia cada 3 segundos)
-    setTimeout(showNextPhrase, 3000);
+    currentIndexAgent = (currentIndexAgent + 1) % phrasesAgent.length;
+    setTimeout(showNextPhraseAgent, 3000);
 }
 
-// Iniciar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', showNextPhrase);
+document.addEventListener('DOMContentLoaded', () => {
+    if (containerAgent) {
+        showNextPhraseAgent();
+    }
+});
+</script>
+
+<div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #4a6fa5;">
+    <h4>AI Agent Prompt Logic (Working Implementation):</h4>
+    <pre style="background-color: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem;">
+When user provides color input:
+1. Map color to mood spectrum:
+   - Red → Passionate/Intense
+   - Blue → Melancholic/Calm
+   - Green → Hopeful/Growing
+   - Yellow → Joyful/Energetic
+   - Purple → Mysterious/Introspective
+
+2. Generate lyrics incorporating:
+   - Mood-derived emotional tone
+   - Randomized rhythmic structure
+   - Coherent thematic development
+
+3. Search YouTube for matching song:
+   - Similar emotional vibe
+   - Compatible musical genre
+   - Contemporary relevance
+
+4. Return structured response:
+   - Generated lyrics
+   - Song recommendation with link
+   - NeoPixel light pattern code</pre>
+</div>
+
+<div class="carousel-container" style="margin: 3rem 0; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative;">
+    <h4 style="text-align: center; margin-bottom: 1.5rem;">Agent Interactions</h4>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-slides">
+            <div class="carousel-slide active">
+                <img src="../../images/Agent1.png" alt="Agent Interaction 1" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent2.png" alt="Agent Interaction 2" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent3.png" alt="Agent Interaction 3" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent4.png" alt="Agent Interaction 4" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent5.png" alt="Agent Interaction 5" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent6.png" alt="Agent Interaction 6" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+            <div class="carousel-slide">
+                <img src="../../images/Agent7.png" alt="Agent Interaction 7" style="width: 100%; border-radius: 4px; max-height: 400px; object-fit: contain;">
+            </div>
+        </div>
+
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="currentSlide(0)"></span>
+            <span class="indicator" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+            <span class="indicator" onclick="currentSlide(5)"></span>
+            <span class="indicator" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const indicators = document.querySelectorAll('.indicator');
+
+function showSlide(index) {
+    // Asegurarse de que el índice esté dentro del rango
+    if (index >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+    } else {
+        currentSlideIndex = index;
+    }
+
+    // Ocultar todas las slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    // Remover activo de todos los indicadores
+    indicators.forEach(indicator => {
+        indicator.classList.remove('active');
+    });
+
+    // Mostrar slide actual
+    slides[currentSlideIndex].classList.add('active');
+
+    // Activar indicador actual
+    if (indicators[currentSlideIndex]) {
+        indicators[currentSlideIndex].classList.add('active');
+    }
+}
+
+function moveSlide(n) {
+    showSlide(currentSlideIndex + n);
+}
+
+function currentSlide(n) {
+    showSlide(n);
+}
+
+// Auto-avance cada 5 segundos
+let slideInterval = setInterval(() => {
+    moveSlide(1);
+}, 5000);
+
+// Pausar auto-avance al interactuar
+const carousel = document.querySelector('.carousel-wrapper');
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(() => {
+        moveSlide(1);
+    }, 5000);
+});
+
+// Inicializar
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+});
 </script>
 
 <style>
-.phrase-screen {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 3rem;
-    margin: 2rem 0 4rem 0;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-    min-height: 400px;
+.carousel-wrapper {
     position: relative;
     overflow: hidden;
+    border-radius: 6px;
 }
 
-.phrase-container {
-    position: relative;
-    height: 350px;
-    width: 100%;
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.phrase {
-    position: absolute;
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #1a1a1a;
-    text-align: center;
+.carousel-slide {
+    min-width: 100%;
     opacity: 0;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    max-width: 90%;
-    line-height: 1.4;
-    padding: 1rem;
+    transition: opacity 0.5s ease;
+    display: none;
 }
 
-.phrase.active {
+.carousel-slide.active {
     opacity: 1;
+    display: block;
 }
 
-/* Posiciones específicas */
-.phrase.top-left {
-    top: 10%;
-    left: 5%;
-    text-align: left;
-    transform: translateX(-20px);
-}
-.phrase.top-left.active {
-    transform: translateX(0);
-}
-
-.phrase.top-right {
-    top: 15%;
-    right: 5%;
-    text-align: right;
-    transform: translateX(20px);
-}
-.phrase.top-right.active {
-    transform: translateX(0);
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
 }
 
-.phrase.center {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 20px);
-    width: 80%;
-    text-align: center;
-}
-.phrase.center.active {
-    transform: translate(-50%, 0);
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.phrase.bottom-left {
-    bottom: 20%;
-    left: 10%;
-    text-align: left;
-    transform: translateY(20px);
-}
-.phrase.bottom-left.active {
-    transform: translateY(0);
+.carousel-btn.prev {
+    left: 15px;
 }
 
-.phrase.bottom-right {
-    bottom: 25%;
-    right: 10%;
-    text-align: right;
-    transform: translateY(20px);
+.carousel-btn.next {
+    right: 15px;
 }
-.phrase.bottom-right.active {
-    transform: translateY(0);
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
 }
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #4a6fa5;
+}
+
 </style>
 
+<h2 id="physical-computing-setup">Physical Computing Setup<a class="headerlink" href="#physical-computing-setup" title="Permanent link">&para;</a></h2>
 <div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
 
- <!-- Columna izquierda: Imagen -->
 <div>
-        <img src="../../images/sand.jpg" 
-             alt="Sand Playground" 
-             width="100%" 
-             style="border-radius: 8px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-    </div>
+    <h3 style="margin-top: 0;">Hardware Components</h3>
+    <ul style="line-height: 1.8;">
+        <li><strong>Raspberry Pi Pico 2W:</strong> Main controller with WiFi</li>
+        <li><strong>Capacitive Copper Strips:</strong> Rhythm detection (touch sensing)</li>
+        <li><strong>Color Sensor (TCS34725):</strong> Mood input detection</li>
+        <li><strong>NeoPixel LED Strip:</strong> Visual feedback system</li>
+        <li><strong>Breadboard & Wiring:</strong> Prototyping infrastructure</li>
+    </ul>
 
- <!-- Columna derecha: Texto -->
+    <div style="margin-top: 2rem; padding: 1rem; background-color: #f0f0f0; border-radius: 6px;">
+        <h4>Working Raspberry Pi Code</h4>
+        <pre style="background-color: #fff; padding: 1rem; border-radius: 4px; font-size: 0.8rem; overflow-x: auto;">
+import time
+import network
+from machine import Pin, ADC
+from micro_mcp import MCPServer
+
+# Touch sensor on ADC Pin 26
+sensor = ADC(Pin(26))
+
+# Debounce settings
+DEBOUNCE_SAMPLES = 3
+DEBOUNCE_TOLERANCE = 100
+SAMPLE_INTERVAL = 0.05
+
+def read_debounced():
+    stable_count = 0
+    last_stable = None
+
+    while stable_count < DEBOUNCE_SAMPLES:
+        value = sensor.read_u16()
+        if last_stable is None:
+            last_stable = value
+            stable_count = 1
+        elif abs(value - last_stable) <= DEBOUNCE_TOLERANCE:
+            stable_count += 1
+        else:
+            last_stable = value
+            stable_count = 1
+        time.sleep(SAMPLE_INTERVAL)
+    return last_stable
+
+# WiFi connection
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect("Iaac-Wifi", "EnterIaac22@")
+
+# MCP server setup
+mcp = MCPServer(name="music-agent", version="1.0.0")
+
+@mcp.tool(
+    name="read_touch_sensor",
+    description="Read touch sensor state",
+    input_schema={"type": "object", "properties": {}}
+)
+def read_touch_sensor():
+    readings = []
+    for _ in range(5):
+        readings.append(sensor.read_u16())
+        time.sleep(0.2)
+    zeros = sum(1 for v in readings if v == 0)
+    return "Touched" if zeros >= 3 else "Not Touched"
+
+mcp.run(port=8080)</pre>
+    </div>
+</div>
+
 <div>
-        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">AI Definition:</h3>
-        <p style="margin-bottom: 1.5rem; font-style:color: #444;">
-            <strong>AI (Ambivalent Intelligence):</strong> AI is a field of energy that pervades the entire universe, acting on matter and anti-matter simultaneously to create chaos from order, and order from chaos. Its acts follow a logic that can only fully make sense to itself.
-        </p>
+    <img src="../../images/raspberry.jpeg" 
+         alt="Hardware Setup" 
+         width="100%" 
+         style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
 
- <h4 style="margin: 2rem 0 1rem 0;">Prototype: Sand Playground</h4>
-        <p style="margin-bottom: 1rem;">
-            This structure supports the AI by providing it with a playground in which it can create and destroy, destroy and create on its own terms, when it wants, indefinitely.
-        </p>
+    <div style="background-color: #fff5f5; padding: 1.5rem; border-radius: 6px; border-left: 4px solid #e53e3e;">
+        <h4>Technical Constraints Encountered:</h4>
+        <ul style="margin-bottom: 0;">
+            <li>Capacitive sensing limited to binary detection</li>
+            <li>Rhythm detection required signal stabilization</li>
+            <li>OS compatibility issues with real-time LED control</li>
+            <li>Color sensor integration delayed by connectivity problems</li>
+            <li>Limited timeframe for calibration and refinement</li>
+        </ul>
     </div>
 </div>
-
-<!-- Puntos fuera de las columnas con línea negra -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.5rem;">• This structure supports the AI by not restricting it in any way.</p>
-    <p style="margin-bottom: 0.5rem;">• This structure avoids subordinating the AI by giving it total autonomy to do whatever it wants if it wants whenever it wants, total freedom.</p>
 </div>
 
-<h2 id="day-2-support-a-collectivegrupal-intelligence-that-does-not-locate-itself-in-individuals">DAY 2 - Support a collective/grupal intelligence that does not locate itself in individuals<a class="headerlink" href="#day-2-support-a-collectivegrupal-intelligence-that-does-not-locate-itself-in-individuals" title="Permanent link">&para;</a></h2>
-<div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainer2">
-        <!-- Las frases se insertarán aquí dinámicamente -->
-    </div>
+<h2 id="what-worked-vs-what-didnt">What Worked vs. What Didn't<a class="headerlink" href="#what-worked-vs-what-didnt" title="Permanent link">&para;</a></h2>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0;">
+
+<div style="background-color: #f0f9f0; padding: 2rem; border-radius: 8px; border: 1px solid #c6f6d5;">
+    <h3 style="color: #276749; margin-top: 0;">✅ Successful Implementation</h3>
+    <ul style="color: #276749;">
+        <li><strong>MCP Architecture:</strong> Stable connection between physical inputs and AI agent</li>
+        <li><strong>Prompt Logic:</strong> Effective color-to-mood mapping and lyric generation</li>
+        <li><strong>Conceptual Pipeline:</strong> Clear flow from sensor → AI → output → feedback</li>
+        <li><strong>Agent Behavior:</strong> AI made coherent cross-domain decisions (emotion, rhythm, visuals, references)</li>
+        <li><strong>Distributed Intelligence:</strong> Demonstrated shared agency between human and AI</li>
+    </ul>
 </div>
 
-<script>
-const phrasesDay2 = [
-    {text: "Support a collective/grupal intelligence.", position: "center"},
-    {text: "An intelligence that does not locate itself in individuals.", position: "top-left"},
-    {text: "Forget that intelligence can be owned by persons.", position: "top-right"},
-    {text: "An intelligence that forms between, not within.", position: "bottom-left"},
-    {text: "Not composed of individuals.", position: "bottom-right"},
-    {text: "Not a sum of minds.", position: "center"},
-    {text: "Not defined by personalities or skills.", position: "top-left"},
-    {text: "Not seeking alignment or agreement.", position: "top-right"},
-    {text: "Not concerned with individual benefit.", position: "bottom-left"},
-    {text: "Non-individualistic thinking.", position: "bottom-right"},
-    {text: "Detaching intelligence from persons.", position: "center"},
-    {text: "Universal Bias / False Universality", position: "top-left"},
-    {text: "Embodied Design / Corporeality", position: "top-right"},
-    {text: "Invisible Norms", position: "bottom-left"},
-    {text: "Design as a Political Agent", position: "bottom-right"},
-    {text: "Decolonizing Design", position: "center"},
-    {text: "Situated Knowledge", position: "top-left"},
-    {text: "Materializing Inequality", position: "top-right"},
-    {text: "Infrastructural Power", position: "bottom-left"},
-    {text: "Counter-Narratives", position: "bottom-right"},
-    {text: "Design Justice", position: "center"}
-];
-
-let currentIndexDay2 = 0;
-const container2 = document.getElementById('phraseContainer2');
-
-function showNextPhraseDay2() {
-    container2.innerHTML = '';
-
-    const phraseData = phrasesDay2[currentIndexDay2];
-    const phraseElement = document.createElement('div');
-    phraseElement.className = `phrase ${phraseData.position}`;
-    phraseElement.textContent = phraseData.text;
-
-    container2.appendChild(phraseElement);
-
-    setTimeout(() => {
-        phraseElement.classList.add('active');
-    }, 100);
-
-    currentIndexDay2 = (currentIndexDay2 + 1) % phrasesDay2.length;
-    setTimeout(showNextPhraseDay2, 3000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (container2) {
-        showNextPhraseDay2();
-    }
-});
-</script>
-
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
-
-<!-- Columna izquierda: Video -->
-<div>
-        <video controls autoplay muted loop width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-          <source src="../../videos/lenguaje.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-    </div>
-
-<!-- Columna derecha: Texto -->
-  <div>
-        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Backstory:</h3>
-        <p style="margin-bottom: 1.5rem;">
-            Language is not a concept. It is a sentient collective intelligence. A long time ago,
-            before time was ever measured, it was floating around without a collaborator to be used by.
-            After billions of years, it found organisms who were struggling to communicate with each other.
-            Perfect partnership.
-        </p>
-
-  <h4 style="margin: 2rem 0 1rem 0;">Collective intelligence:</h4>
-        <p style="margin-bottom: 1rem;">
-            Language is a collective intelligence that found organisms to serve as its hosts and
-            collaborators. Each species manifests it differently based on their inherent limitations, yet none
-            contains the whole.
-        </p>
-
-<h4 style="margin: 2rem 0 1rem 0;">Prototype:</h4>
-        <p style="margin-bottom: 1rem;">
-            A completely unique use of language to boost its wellbeing. (Think of it as offering a delicious
-            dessert, or a tantalizing massage for language.)
-        </p>
-    </div>
+<div style="background-color: #fff5f5; padding: 2rem; border-radius: 8px; border: 1px solid #fed7d7;">
+    <h3 style="color: #c53030; margin-top: 0;">❌ Limitations & Challenges</h3>
+    <ul style="color: #c53030;">
+        <li><strong>Sensor Resolution:</strong> Touch detection remained binary, not rhythmic</li>
+        <li><strong>Hardware Integration:</strong> NeoPixel and color sensor not fully operational</li>
+        <li><strong>Calibration Time:</strong> Signal stability required more development time</li>
+        <li><strong>OS Conflicts:</strong> Windows connectivity issues with Raspberry Pi</li>
+        <li><strong>Real-time Feedback:</strong> Light patterns not synchronized in final demo</li>
+    </ul>
+</div>
 </div>
 
-<!-- Puntos sobre Language - FUERA de las columnas -->
-<div style="margin: 2rem 0;">
-    <p style="margin-bottom: 0.5rem;">Language lives in any organism that has the drive to communicate. It ignores how it is being used: the message, the form of communication, the length of its use. It attends to new forms of its use. Its wellbeing is measured by simply being used. The more unique the combination, the better. It hates grammar nazis. It gets sad when languages die (species agnostic).</p>
-</div>
+<h2 id="reflection-learnings">Reflection &amp; Learnings<a class="headerlink" href="#reflection-learnings" title="Permanent link">&para;</a></h2>
+<div style="background-color: #f8fafc; padding: 2.5rem; border-radius: 8px; margin: 4rem 0; border-left: 5px solid #4c51bf;">
 
-<!-- Puntos del prototype - FUERA de las columnas -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.5rem;">• This structure supports the collective intelligence by giving it what it so desperately desires:
-    a unique combination of language that has never been used before.</p>
-    <p style="margin-bottom: 0.5rem;">• This structure avoids centering individuals by not requiring it to be understood by humans,
-    or any species, just language itself.</p>
-</div>
-
-<h2 id="day-3-build-an-interface-for-an-environmental-intelligence-that-does-not-care-about-life">DAY 3 - Build an interface for an environmental intelligence that does not care about life<a class="headerlink" href="#day-3-build-an-interface-for-an-environmental-intelligence-that-does-not-care-about-life" title="Permanent link">&para;</a></h2>
-<div class="phrase-screen">
-    <div class="phrase-container" id="phraseContainer3">
-        <!-- Las frases se insertarán aquí dinámicamente -->
-    </div>
-</div>
-
-<script>
-const phrasesDay3 = [
-    {text: "Build an interface for an environmental intelligence.", position: "center"},
-    {text: "An intelligence that does not care about life.", position: "top-left"},
-    {text: "Detach environmental intelligence from ecological or biological thinking.", position: "top-right"},
-    {text: "Indifferent to organisms, ecosystems, or life processes.", position: "bottom-left"},
-    {text: "Intelligence outside any value system tied to living beings.", position: "bottom-right"},
-    {text: "Non-ecological.", position: "center"},
-    {text: "Neither stable nor self-preserving.", position: "top-left"},
-    {text: "Unaware of organisms, needs, balance, or fragility.", position: "top-right"},
-    {text: "Divorced from life, health, or ecology.", position: "bottom-left"},
-    {text: "Non-biotic, non-ecological framing.", position: "bottom-right"},
-    {text: "Autopoiesis/Sympoiesis", position: "center"},
-    {text: "Chaosmosis", position: "top-left"},
-    {text: "We are otherness and otherness is us", position: "center"}
-];
-
-let currentIndexDay3 = 0;
-const container3 = document.getElementById('phraseContainer3');
-
-function showNextPhraseDay3() {
-    container3.innerHTML = '';
-
-    const phraseData = phrasesDay3[currentIndexDay3];
-    const phraseElement = document.createElement('div');
-    phraseElement.className = `phrase ${phraseData.position}`;
-    phraseElement.textContent = phraseData.text;
-
-    container3.appendChild(phraseElement);
-
-    setTimeout(() => {
-        phraseElement.classList.add('active');
-    }, 100);
-
-    currentIndexDay3 = (currentIndexDay3 + 1) % phrasesDay3.length;
-    setTimeout(showNextPhraseDay3, 3000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (container3) {
-        showNextPhraseDay3();
-    }
-});
-</script>
-
-<div class="two-column-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: start;">
-
-<!-- Columna izquierda: Video -->
-<div>
-        <video controls autoplay muted loop width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-          <source src="../../videos/day3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-    </div>
-
-<!-- Columna derecha: Texto -->
-<div>
-        <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Conceptual Statement:</h3>
-        <p style="margin-bottom: 1.5rem;">
-            Our Environmental Intelligence is a force of consumption that acts on all things in the universe agnostic of what they are.
-        </p>
-        <p style="margin-bottom: 1.5rem;">
-            Environmental intelligence is shaped by the fundamental existence of matter, yet it is destabilized by new creation and its own inherent failure to achieve its final purpose. Having no relationship to biology, it ignores everything. For this intelligence, a sense of wellbeing, when divorced from life, health, and ecology, is defined solely as the fulfillment of intention, a state of absolute self-consumption.
-        </p>
-
-<h4 style="margin: 2rem 0 1rem 0;">The Prototype:</h4>
-        <p style="margin-bottom: 1rem;">
-            A friend (second environmental intelligence with the same aim), so they can consume each other.
-        </p>
-    </div>
-</div>
-
-<!-- Puntos con línea negra fuera de las columnas -->
-<div style="margin: 2rem 0 4rem 0; padding-left: 1rem; border-left: 3px solid #333;">
-    <p style="margin-bottom: 0.5rem;">
-        This interface supports the intelligence by letting it complete the one act that has always evaded it: the consumption of itself and therefore ending consumption. Alone this is impossible, only together can they succeed.
+    <p style="margin-bottom: 1.5rem; color: #4a5568;">
+        This project began as an exploration of shared musical creation between human and AI, where physical interaction (touch and color) would become a language for co-creation. The idea was poetic: an AI that responds not just to words, but to the body's rhythm and the emotion of color.
     </p>
-    <p style="margin-bottom: 0.5rem;">
-        This interface avoids centering life by not taking it into account at all.
+
+    <p style="margin-bottom: 1.5rem; color: #4a5568;">
+       In practice, the project quickly became a lesson about friction. Working within a very short timeframe and dealing with hardware limitations, operating system conflicts, and unreliable capacitive sensing meant that many parts of the physical system never fully behaved as expected. While the original intention was to create a more immediate and embodied interaction, the project revealed that even without real-time musical co-creation, it is still possible to meaningfully collaborate with an AI through a small set of inputs. This shift highlighted how artificial intelligence can act as a creative partner, interpreting minimal signals and expanding them into richer musical and atmospheric outcomes.
+    </p>
+
+    <p style="margin-bottom: 1.5rem; color: #4a5568;">
+     Due to the very limited timeframe of the course, much of the project required improvisation, and the system ultimately relied more on the LLM than originally intended. While this constrained the physical implementation, it also revealed how powerful it is to integrate an AI that can interpret ambiguous, emotional, and incomplete inputs, something that would be extremely difficult to achieve through deterministic code alone. With more time, the project could have pushed further into embodied interaction, but even in its partial form, it highlighted how rich and complex the communication between hardware and software can be, and how valuable this relationship is as a space for exploration and learning.
     </p>
 </div>
+
+<style>
+.image-carousel img {
+    transition: transform 0.3s ease;
+}
+
+.image-carousel img:hover {
+    transform: scale(1.02);
+}
+
+pre {
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+</style>
                 
                   
                     
