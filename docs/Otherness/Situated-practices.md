@@ -170,10 +170,6 @@
             <p>For me, this reinforces the importance of understanding design as a practice that must explicitly recognize its context and political implications. It means working with communities not as abstract "users," but as agents with history, agency, and their own knowledge.</p>
         </div>
 
-        <!-- pequeño detalle de contexto (opcional, le da un aire de diario) -->
-        <div class="context-label">
-            ⚡ design · territory · situated practices
-        </div>
     </div>
 
     <!-- (opcional) script mínimo para asegurar loop en navegadores dudosos, pero con atributos loop+muted sobra -->
