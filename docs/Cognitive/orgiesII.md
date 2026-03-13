@@ -60,7 +60,7 @@ We became very excited about the idea of embedding the motors in silicone to cre
          alt="Motor assembly" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
-    <img src="../../images/orgie5.png" 
+    <img src="../../images/orgies5.png" 
          alt="Silicone molding process" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
