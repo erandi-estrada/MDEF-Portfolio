@@ -19,7 +19,7 @@
 This project explored the possibility of communication between two different forms of intelligence. From the beginning, our intention was to connect human perception with environmental intelligence something closer to ecological signals or non human systems. However, finding reliable real time environmental data streams and integrating them within the short timeframe proved difficult. As a result, we pivoted toward the stock market as a data source. While this shift initially felt like a compromise, it allowed us to test the core idea of the project: translating complex data from a collective system into somatic signals that the body can perceive. In that sense, the stock market became a proxy for testing how two different intelligences human and systemic might communicate.
 
 > **Note:** This documentation is a personal reflection. For collaborative context and full technical details, visit:
-> **[Full Group Documentation on Hackster.io →](https://www.hackster.io/antoniogarciafernandez/nomadic-infrastructure-for-urban-microecosistems-b799ea)**
+> **[Full Group Documentation on Hackster.io →](https://www.hackster.io/545047/stocksense-610f0b)**
 
 ---
 
@@ -39,8 +39,7 @@ This project explored the possibility of communication between two different for
 ## 2. Moral Trace
 
 <div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-    <p style="font-size: 1.1rem; line-height: 1.7;">There were also moral traces in how we approached the use of AI during development. Rather than asking an AI system to generate the entire platform at once, we used it as a step by step collaborator. We first mapped the system architecture ourselves and then asked for help implementing each small part. This approach helped us maintain a sense of authorship over the system while still benefiting from computational assistance. It also made debugging easier because we understood how each piece was constructed.</p>
-    <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The decision to use the stock market as a data source also carried ethical weight. Financial systems are not neutral they concentrate power, create exclusion, and operate on logics of extraction. Translating them into embodied sensation without acknowledging this context felt incomplete. At the same time, the stock market is a real time collective intelligence system, and testing our interface with it allowed us to ask: what would it mean to feel the movements of a system that shapes so much of human life?</p>
+    <p style="font-size: 1.1rem; line-height: 1.7;">Another important process trace was how collaboration unfolded in practice. In theory, the fastest strategy would have been to divide tasks and work in parallel. However, both of us wanted to learn every part of the process from soldering to coding to system integration so we intentionally avoided strict specialization. This created moments where efficiency slowed down. For example, soldering motors cannot realistically be done by two people at once, and when we were working on the platform most of the coding happened on a single computer. At times this meant that one person was actively building while the other observed, asked questions, and tried to understand the logic. While slower, this process made the learning experience more shared and transparent.</p>
 </div>
 
 <img src="../../images/orgies.jpg" 
@@ -50,7 +49,7 @@ This project explored the possibility of communication between two different for
 
 ---
 
-## 3. Technical and Process Trace
+## 3. Technical Trace
 
 ### Material and Mechanical Decisions
 
@@ -67,9 +66,6 @@ We became very excited about the idea of embedding the motors in silicone to cre
          style="border-radius: 8px; object-fit: cover;">
 </div>
 
-### Collaboration Dynamics
-
-Another important process trace was how collaboration unfolded in practice. In theory, the fastest strategy would have been to divide tasks and work in parallel. However, both of us wanted to learn every part of the process from soldering to coding to system integration so we intentionally avoided strict specialization. This created moments where efficiency slowed down. For example, soldering motors cannot realistically be done by two people at once, and when we were working on the platform most of the coding happened on a single computer. At times this meant that one person was actively building while the other observed, asked questions, and tried to understand the logic. While slower, this process made the learning experience more shared and transparent.
 
 ### System Architecture
 
@@ -90,8 +86,8 @@ We built a system that translates real time stock data into haptic patterns acro
 ## 4. Review and Future Direction
 
 <div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-    <p style="font-size: 1.1rem; line-height: 1.7;">Looking back, the project feels less like a finished artifact and more like a working prototype that opens new questions. The wearable, the data translation pipeline, and the platform together demonstrate a possible framework for somatic interfaces that communicate complex systems through the body. For me personally, this prototype is especially valuable because it establishes a technical and conceptual foundation that I can later adapt toward environmental sensing and ecological intelligence the direction that originally motivated the project.</p>
-    <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The collar form, inspired by the Egyptian Usekh worn by ancient elites, also took on new meaning through this process. What began as an accident of material constraints became a narrative asset positioning the wearer as a channel of collective intelligence rather than a mere user of information.</p>
+    <p style="font-size: 1.1rem; line-height: 1.7;">The project is not a finished artifact but a working prototype that opens new questions. The wearable, the data translation pipeline, and the platform together demonstrate a possible framework for somatic interfaces that communicate complex systems through the body. For me personally, this prototype is especially valuable because it establishes a technical and conceptual foundation that I can later adapt toward environmental sensing and ecological intelligence the direction that originally motivated the project.</p>
+    <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The collar form, also took on new meaning through this process. What began as an accident of material constraints became somehow part of the narrative.</p>
 </div>
 
 <img src="../../images/orgies.jpg" 
@@ -104,8 +100,8 @@ We built a system that translates real time stock data into haptic patterns acro
 ## 5. What This Prototype Is
 
 <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border-left: 4px solid #333; margin: 2rem 0;">
-    <p style="font-size: 1.1rem; line-height: 1.7;">This is not a finished product. It is a working question. Can financial data become felt experience? Can we build interfaces that let the body perceive abstract systems directly?</p>
-    <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The fact that we pivoted from ecological to financial data is part of the narrative. It reveals how infrastructure choices data availability, API reliability, time constraints shape what becomes possible. The project is as much about these constraints as it is about the final artifact.</p>
+    <p style="font-size: 1.1rem; line-height: 1.7;">This is not a finished product. It is a working question. Can we build interfaces that let the body perceive abstract systems directly?</p>
+    <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The fact that we pivoted from ecological to financial data is part of the narrative. It reveals how infrastructure choices, data availability, API reliability, time constraints shape what becomes possible. The project is as much about these constraints as it is about the final artifact.</p>
 </div>
 
 ---
@@ -117,7 +113,7 @@ We built a system that translates real time stock data into haptic patterns acro
     <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #333;">
         <h3 style="margin-top: 0;">If we continue developing this project, the priorities would be:</h3>
         <ul style="line-height: 1.8;">
-            <li>Multiplexing or charlieplexing the motor wiring to reduce cable clutter</li>
+            <li>Exploring different materials, for example, agar agar</li>
             <li>Creating a proper pouch for the microcontroller and battery in the back</li>
             <li>Refining the aesthetic to more closely resemble an Usekh collar</li>
             <li>Testing different body placements to optimize tactile perception based on two point discrimination maps</li>
@@ -131,7 +127,6 @@ We built a system that translates real time stock data into haptic patterns acro
             <li>Reconnecting to the original intention of environmental data streams</li>
             <li>Exploring visual tracking of animal movements using OpenCV as an alternative data source</li>
             <li>Developing more nuanced haptic vocabularies that differentiate between types of change (rate, direction, volatility)</li>
-            <li>Building community features into the platform so users can share and download haptic patterns</li>
         </ul>
     </div>
     
