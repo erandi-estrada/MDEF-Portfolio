@@ -9,7 +9,7 @@
 # StockSense
 ### Individual Reflective Post
 
-<img src="../../images/orgies.jpg" 
+<img src="../../images/orgies.jpeg" 
      alt="StockSense wearable prototype" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -26,10 +26,10 @@ This project explored the possibility of communication between two different for
 ## 1. Cognitive Trace
 
 <div style="background: #fefaf0; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-    <p style="font-size: 1.1rem; line-height: 1.7;">One of the main cognitive traces for me was realizing how easily we accept the first technically feasible solution. At first, it was tempting to simply implement the stock market API and move on. However, we kept returning to the question of what kind of intelligence we actually wanted to communicate with. This constant reframing helped clarify that the wearable and platform were not the final goal, but rather a way to explore how data could become embodied perception. In that sense, the project also became a first prototype for a larger direction I want to pursue interfaces that translate environmental signals into sensory experiences that humans can feel and respond to.</p>
+    <p style="font-size: 1.1rem; line-height: 1.7;">One of the main cognitive traces for me was realizing that we had to accept the limits of what could realistically be achieved in a week. Our initial intention was to connect the wearable to environmental intelligence, but integrating those data streams and building the system in such a short timeframe proved too complex. Instead of forcing an incomplete solution, we decided to compromise and use the stock market API as a working data stream. This allowed us to focus on testing the core idea of the project: translating data from an external system into haptic signals that the body can perceive. In that sense, the project became a first prototype that helps me explore how environmental signals could eventually be translated into sensory experiences that humans can feel and respond to.</p>
 </div>
 
-<img src="../../images/orgies.jpg" 
+<img src="../../images/orgies2.png" 
      alt="Cognitive mapping process" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -42,7 +42,7 @@ This project explored the possibility of communication between two different for
     <p style="font-size: 1.1rem; line-height: 1.7;">Another important process trace was how collaboration unfolded in practice. In theory, the fastest strategy would have been to divide tasks and work in parallel. However, both of us wanted to learn every part of the process from soldering to coding to system integration so we intentionally avoided strict specialization. This created moments where efficiency slowed down. For example, soldering motors cannot realistically be done by two people at once, and when we were working on the platform most of the coding happened on a single computer. At times this meant that one person was actively building while the other observed, asked questions, and tried to understand the logic. While slower, this process made the learning experience more shared and transparent.</p>
 </div>
 
-<img src="../../images/orgies.jpg" 
+<img src="../../images/orgies3.png" 
      alt="Ethical considerations" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -56,11 +56,11 @@ This project explored the possibility of communication between two different for
 We became very excited about the idea of embedding the motors in silicone to create a polished wearable artifact. However, this decision also consumed much more time and material than we anticipated. At one point the silicone failed to cure overnight, which forced us to remove everything and start again with a faster curing material. Because we ran out of both time and silicone, the artifact ultimately shifted from the vest we initially envisioned to something closer to a collar like chest piece. Although this began as a constraint, it ended up shaping the final narrative of the project and its visual identity.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-    <img src="../../images/orgies.jpg" 
+    <img src="../../images/orgies4.png" 
          alt="Motor assembly" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
-    <img src="../../images/orgies.jpg" 
+    <img src="../../images/orgie5.png" 
          alt="Silicone molding process" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
@@ -76,7 +76,7 @@ We built a system that translates real time stock data into haptic patterns acro
     <p>The most persistent challenge was connectivity. We spent hours troubleshooting why the Raspberry Pi Pico W would not connect to WiFi, only to realize that moving to a different room with better signal solved the problem. Another universal fix that worked was simply unplugging and replugging the device. These small moments of frustration became lessons in how infrastructure physical and digital is never as seamless as it appears.</p>
 </div>
 
-<img src="../../images/orgies.jpg" 
+<img src="../../images/orgies6.png" 
      alt="System diagram" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -90,7 +90,7 @@ We built a system that translates real time stock data into haptic patterns acro
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The collar form, also took on new meaning through this process. What began as an accident of material constraints became somehow part of the narrative.</p>
 </div>
 
-<img src="../../images/orgies.jpg" 
+<img src="../../images/orgies7.jpeg" 
      alt="Future vision" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -156,12 +156,11 @@ We built a system that translates real time stock data into haptic patterns acro
     <div>
         <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">System Diagram</h2>
         <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
-            <img src="../../images/orgies.jpg" 
+            <img src="../../images/orgies8.png" 
                  alt="StockSense system diagram" 
                  width="100%" 
                  style="display: block; object-fit: cover;">
         </div>
-        <p style="text-align: center; margin-top: 1rem; color: #666; font-style: italic;">Data flow: Stock API → Node-RED → MQTT → Pico W → Haptic motors</p>
     </div>
 </div>
 
@@ -171,12 +170,12 @@ let currentSlide = 0;
 
 // Define images
 const slideImages = [
-    "../../images/orgies.jpg",
-    "../../images/orgies.jpg",
-    "../../images/orgies.jpg",
-    "../../images/orgies.jpg",
-    "../../images/orgies.jpg",
-    "../../images/orgies.jpg"
+    "../../images/orgies9.png",
+    "../../images/orgies10.png",
+    "../../images/orgies11.png",
+    "../../images/orgies12.png",
+    "../../images/orgies13.png",
+    "../../images/orgies14.jpeg"
 ];
 
 const totalSlides = slideImages.length;
