@@ -278,7 +278,7 @@ body {
 /* 8. Prosthesis - AZUL OSCURO (posición 7 y 16) */
 .cards-carousel .card:nth-child(7):hover::before,
 .cards-carousel .card:nth-child(16):hover::before {
-    background: linear-gradient(135deg, rgba(13, 71, 161, 0.85) 0%, rgba(25, 118, 210, 0.75) 100%) !important;
+    background: linear-gradient(135deg, rgba(98, 161, 255, 0.85) 0%, rgba(25, 118, 210, 0.75) 100%) !important;
     opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
@@ -293,6 +293,20 @@ body {
 .cards-carousel .card:nth-child(9):hover::before,
 .cards-carousel .card:nth-child(18):hover::before {
     background: linear-gradient(135deg, rgba(0, 121, 107, 0.85) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
+}
+
+/* 11. Cognitive1 (posición 9 y 18) */
+.cards-carousel .card:nth-child(9):hover::before,
+.cards-carousel .card:nth-child(18):hover::before {
+    background: linear-gradient(135deg, rgba(104, 244, 104, 0.959) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
+}
+
+/* 12. Cognitive2 (posición 9 y 18) */
+.cards-carousel .card:nth-child(9):hover::before,
+.cards-carousel .card:nth-child(18):hover::before {
+    background: linear-gradient(135deg, rgba(162, 104, 244, 0.959) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
     opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
