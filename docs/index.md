@@ -87,6 +87,20 @@
                 <h3>Atlas of weak signals</h3>
                 <p>Map of emerging signals for futures.</p>
             </a>
+
+            <!-- Cognitive orgies 1 -->
+            <a href="Cognitive/orgies/" class="card">
+                <img src="images/nomadic1.jpeg" alt="Cognitive Orgies">
+                <h3>Cognitive orgies</h3>
+                <p>Creation of an interventional artifact that seeks to intervene in a situated context and community. </p>
+            </a>
+
+              <!-- Cognitive orgies 2 -->
+            <a href="Cognitive/orgiesII/" class="card">
+                <img src="images/orgies.jpeg" alt="Cognitive Orgies II">
+                <h3>Cognitive orgies II</h3>
+                <p>Design of artifact that would comunicate 2 different intelligences. </p>
+            </a>
         </div>
     </div>
 </div>
