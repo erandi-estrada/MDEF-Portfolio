@@ -242,6 +242,24 @@
     <div class="dots-container nomadic-dots"></div>
 </div>
 
+<!-- Sección Problematize Space -->
+<h2>Problematize Space</h2>
+
+<img src="../../images/Space.jpg" 
+     alt="Problematize Space" 
+     width="100%" 
+     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
+<div class="objects-column">
+        <div class="description-box">
+            <p>This two diagram explain the relationship between urban infrastructures, ecological stress, and human perception.</p>
+
+<p>The Structural Systems circle maps the broader forces shaping the urban environment. It illustrates how infrastructures such as energy, mobility systems, real estate development, agriculture, and the lighting economy produce environmental stressors including traffic noise, artificial light at night, air pollution, insect decline, and urban heat island effects. These conditions converge on the house sparrow, which functions in the diagram as a biological indicator of urban ecological change. The bird’s physiological and behavioral responses represent how environmental pressures become embodied within a species living inside the city.</p>
+
+<p>The Multisensory Translation circle mirrors this system but focuses on how these ecological signals can be translated into human experience. Environmental data captured through sensors is processed and transformed into multisensory outputs. These outputs are designed to engage the human body and generate perceptual responses such as multispecies awareness, emotional arousal, and cognitive dissonance.</p>
+
+<p>Together, the two circles describe the conceptual structure of the project. The first diagram reveals the hidden structural drivers of ecological stress, while the second diagram explores how those invisible processes can be translated into perceptible experiences for humans. By placing the sparrow at the center of both diagrams, the system emphasizes the role of urban wildlife as a mediator between environmental change and human awareness, framing the project as a form of ecological translation between infrastructures, nonhuman life, and urban perception.</p>
+        </div>
+    </div>
 <style>
     /* Estilos para Problematize Objects */
     .objects-grid {
