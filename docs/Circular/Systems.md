@@ -121,15 +121,6 @@
             margin: 1rem 0;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 2rem;
-            border-top: 1px solid #e2dbd0;
-            font-size: 0.85rem;
-            color: #6b6256;
-        }
-
         @media (max-width: 700px) {
             .container {
                 padding: 1rem;
@@ -249,18 +240,6 @@
             background: white;
             transform: scale(1.2);
         }
-        .diagram-block {
-            margin-top: 2rem;
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 1rem;
-            border: 1px solid #ece2d4;
-        }
-        .diagram-block img {
-            width: 100%;
-            border-radius: 16px;
-            display: block;
-        }
         @media (max-width: 800px) {
             .slideshow-container {
                 height: 380px;
@@ -359,6 +338,13 @@
         </div>
     </div>
 
+    <!-- Hybrid experiments integrated into Material Exploration -->
+    <div class="card">
+        <h3>Hybrid experiments: rigid and flexible</h3>
+        <p><strong>Extruded straws braiding:</strong> Combining rigid connectors with flexible woven elements opens new possibilities for modular furniture, biodegradable textiles and architectural components.</p>
+        <p><strong>Heat-press flattening:</strong> Post-drying correction allows precise thickness and flatness for interlocking joints. Laser cutting of final tiles tested at Fab Lab.</p>
+    </div>
+
     <div class="insight-box" style="background: #e7e2d7;">
         <strong>Multi-state material system:</strong> Cardboard is not waste — it is a versatile resource shifting between rigid structures and flexible fibers, enabling circular, distributed production.
     </div>
@@ -376,40 +362,18 @@
         <p style="text-align: center; margin-top: 1rem; color: #5a5548; font-size: 0.9rem;">Process documentation: shredding, binder mixing, extrusion, tiles, braided fibers and heat pressing.</p>
     </div>
 
-    <!-- System diagram with local image -->
-    <div class="diagram-block">
-        <h3 style="margin-left: 0.5rem;">Circular Production Flow Diagram</h3>
-        <img src="../../images/circular_diagram.jpg" 
-             alt="Circular production flow diagram" 
-             width="100%" 
-             style="border-radius: 16px; object-fit: cover;">
-        <p style="margin-top: 0.75rem; text-align: center; font-size: 0.85rem;">Conceptual diagram: from waste collection to reprocessing and new applications within Fab Lab.</p>
-    </div>
-
-    <div class="canvas-card">
-        <div class="canvas-title">Hybrid experiments: rigid and flexible</div>
-        <div class="grid-2col">
-            <div><strong>Extruded straws braiding:</strong> Combining rigid connectors with flexible woven elements opens new possibilities for modular furniture, biodegradable textiles and architectural components.</div>
-            <div><strong>Heat-press flattening:</strong> Post-drying correction allows precise thickness and flatness for interlocking joints. Laser cutting of final tiles tested at Fab Lab.</div>
-        </div>
-    </div>
 </div>
 
-<footer>
-    MDEF · Circular Material Systems | Cardboard as local resource — from waste to closed-loop production | Fab Lab Barcelona 2025
-</footer>
-
 <script>
-    // INTERACTIVE MATRIX CHART
+    // INTERACTIVE MATRIX CHART - UPDATED VALUES
     const ctx = document.getElementById('materialMatrixChart').getContext('2d');
     const materialsData = [
-        { name: 'Cardboard / paper', x: 2.8, y: 8.2, color: '#b48c5c', radius: 14, highlight: true },
-        { name: 'Ceramics / clay', x: 7.2, y: 7.5, color: '#bfa77a', radius: 11 },
-        { name: 'Organic / food waste', x: 5.5, y: 6.8, color: '#96a57c', radius: 11 },
-        { name: 'Wood / sawdust', x: 4.2, y: 6.5, color: '#9b7e5c', radius: 11 },
-        { name: 'Plastics / PLA', x: 6.5, y: 7.9, color: '#7e8c8d', radius: 11 },
-        { name: 'Electronics waste', x: 9.0, y: 5.2, color: '#9e7b68', radius: 10 },
-        { name: 'Textile scraps', x: 4.5, y: 6.2, color: '#be9e7a', radius: 10 }
+        { name: 'Wood / Saw dust', x: 4.5, y: 8.5, color: '#9b7e5c', radius: 13, highlight: false },
+        { name: 'Organic / Food', x: 5.5, y: 6.5, color: '#96a57c', radius: 12, highlight: false },
+        { name: 'Paper / Cardboard', x: 3.0, y: 7.5, color: '#b48c5c', radius: 14, highlight: true },
+        { name: 'Plastics / PLA', x: 7.0, y: 8.0, color: '#7e8c8d', radius: 12, highlight: false },
+        { name: 'Electronics', x: 9.0, y: 4.0, color: '#9e7b68', radius: 11, highlight: false },
+        { name: 'Acrylic', x: 9.5, y: 1.0, color: '#b0a79e', radius: 10, highlight: false }
     ];
 
     new Chart(ctx, {
@@ -618,11 +582,6 @@
         background: #ffffff;
         transform: scale(1.2);
         box-shadow: 0 0 4px rgba(0,0,0,0.3);
-    }
-    .diagram-block img {
-        max-height: 400px;
-        object-fit: cover;
-        width: 100%;
     }
     .matrix-container canvas {
         width: 100%;
