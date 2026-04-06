@@ -182,7 +182,7 @@
         .slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             background: #f8f5ef;
         }
         .nav-btn {
@@ -225,6 +225,8 @@
             justify-content: center;
             gap: 0.75rem;
             z-index: 20;
+            flex-wrap: wrap;
+            padding: 0 1rem;
         }
         .indicator-dot {
             width: 10px;
@@ -338,7 +340,6 @@
         </div>
     </div>
 
-    <!-- Hybrid experiments integrated into Material Exploration -->
     <div class="card">
         <h3>Hybrid experiments: rigid and flexible</h3>
         <p><strong>Extruded straws braiding:</strong> Combining rigid connectors with flexible woven elements opens new possibilities for modular furniture, biodegradable textiles and architectural components.</p>
@@ -349,17 +350,32 @@
         <strong>Multi-state material system:</strong> Cardboard is not waste — it is a versatile resource shifting between rigid structures and flexible fibers, enabling circular, distributed production.
     </div>
 
-    <!-- FULL WIDTH SLIDESHOW GALLERY - USING LOCAL IMAGES -->
+    <!-- FIRST SLIDESHOW: Process documentation (images 1 to 13) -->
+    <h2>Process Documentation</h2>
     <div class="fullwidth-gallery">
         <div class="slideshow-wrapper">
-            <div class="slideshow-container" id="mainSlideshow">
+            <div class="slideshow-container" id="processSlideshow">
                 <!-- slides injected by javascript -->
             </div>
-            <button class="nav-btn nav-left" id="prevSlideBtn">‹</button>
-            <button class="nav-btn nav-right" id="nextSlideBtn">›</button>
-            <div class="slide-indicators" id="slideIndicators"></div>
+            <button class="nav-btn nav-left" id="prevProcessBtn">‹</button>
+            <button class="nav-btn nav-right" id="nextProcessBtn">›</button>
+            <div class="slide-indicators" id="processIndicators"></div>
         </div>
-        <p style="text-align: center; margin-top: 1rem; color: #5a5548; font-size: 0.9rem;">Process documentation: shredding, binder mixing, extrusion, tiles, braided fibers and heat pressing.</p>
+        <p style="text-align: center; margin-top: 1rem; color: #5a5548; font-size: 0.9rem;">Complete process documentation: from waste collection to final experiments.</p>
+    </div>
+
+    <!-- SECOND SLIDESHOW: Presentation (no captions, images from cardboard folder) -->
+    <h2>Presentation</h2>
+    <div class="fullwidth-gallery">
+        <div class="slideshow-wrapper">
+            <div class="slideshow-container" id="presentationSlideshow">
+                <!-- slides injected by javascript -->
+            </div>
+            <button class="nav-btn nav-left" id="prevPresBtn">‹</button>
+            <button class="nav-btn nav-right" id="nextPresBtn">›</button>
+            <div class="slide-indicators" id="presentationIndicators"></div>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: #5a5548; font-size: 0.9rem;">End of week presentation slides.</p>
     </div>
 
 </div>
@@ -429,111 +445,151 @@
         }
     });
 
-    // FULL WIDTH SLIDESHOW WITH LOCAL IMAGES
-    // Using your local image paths: ../../images/circular1.jpg, circular2.jpg, etc.
-    const slideshowImages = [
-        "../../images/circular1.jpg",
-        "../../images/circular2.jpg",
-        "../../images/circular3.jpg",
-        "../../images/circular4.jpg",
-        "../../images/circular5.jpg",
-        "../../images/circular6.jpg",
-        "../../images/circular7.jpg",
-        "../../images/circular8.jpg"
-    ];
-    
-    const captionsList = [
-        "Shredded cardboard feedstock ready for binder mixing",
-        "Starch-based binder preparation (water + cornstarch + glycerin)",
-        "Experiment 3: smooth extrusion of homogeneous pulp",
-        "Tile prototypes drying — shrinkage visible, later flattened",
-        "Interlocking cardboard tiles: rigid, modular, structural",
-        "Extruded straw-like fibers braided — textile potential",
-        "Heat press corrects warping, ensures flat interlocking surfaces",
-        "Finished coasters with high compression resistance"
+    // ========== FIRST SLIDESHOW: Process documentation (13 images with specific captions) ==========
+    const processImages = [
+        { src: "../../images/circular1.jpg", caption: "Waste bin where cardboard is collected at Fab Lab" },
+        { src: "../../images/circular2.jpg", caption: "Cardboard cut into smaller pieces" },
+        { src: "../../images/circular3.jpg", caption: "Cardboard being shredded" },
+        { src: "../../images/circular4.jpg", caption: "Drying process" },
+        { src: "../../images/circular5.jpg", caption: "Mixing with starch-based binder (glue mixture)" },
+        { src: "../../images/circular6.jpg", caption: "Extrusion process and shrinkage after drying" },
+        { src: "../../images/circular7.jpg", caption: "Filaments, weaving and braiding experiments" },
+        { src: "../../images/circular8.jpg", caption: "Heat press for flattening samples" },
+        { src: "../../images/circular9.jpg", caption: "Results after experimentation" },
+        { src: "../../images/circular10.jpg", caption: "Two interlocking puzzle-like pieces made by hand with the mixture" },
+        { src: "../../images/circular11.jpg", caption: "Results from first mixture experiment" },
+        { src: "../../images/circular12.jpg", caption: "Results from second mixture experiment" },
+        { src: "../../images/circular13.jpg", caption: "Results from third mixture experiment (best result)" }
     ];
 
-    let currentSlideIndex = 0;
-    let slidesArray = [];
-    let indicatorsArray = [];
+    // ========== SECOND SLIDESHOW: Presentation slides (11 images from cardboard folder) ==========
+    const presentationImages = [];
+    for (let i = 1; i <= 11; i++) {
+        presentationImages.push({ src: `../../images/cardboard/${i}.jpg`, caption: "" });
+    }
 
-    function initSlideshow() {
-        const container = document.getElementById('mainSlideshow');
-        if (!container) return;
-        container.innerHTML = '';
-        
-        for (let i = 0; i < slideshowImages.length; i++) {
-            const slideDiv = document.createElement('div');
-            slideDiv.className = 'slide';
-            if (i === 0) slideDiv.classList.add('active');
+    // Generic slideshow factory function
+    function createSlideshow(containerId, imagesArray, indicatorId, prevBtnId, nextBtnId, showCaptions = true) {
+        let currentIndex = 0;
+        let slides = [];
+        let indicators = [];
+
+        const container = document.getElementById(containerId);
+        if (!container) return null;
+
+        function init() {
+            container.innerHTML = '';
             
-            const img = document.createElement('img');
-            img.src = slideshowImages[i];
-            img.alt = captionsList[i];
-            img.loading = 'lazy';
+            for (let i = 0; i < imagesArray.length; i++) {
+                const slideDiv = document.createElement('div');
+                slideDiv.className = 'slide';
+                if (i === 0) slideDiv.classList.add('active');
+                
+                const img = document.createElement('img');
+                img.src = imagesArray[i].src;
+                img.alt = imagesArray[i].caption || `Slide ${i+1}`;
+                img.loading = 'lazy';
+                
+                slideDiv.appendChild(img);
+                
+                if (showCaptions && imagesArray[i].caption) {
+                    const captionSpan = document.createElement('div');
+                    captionSpan.innerText = imagesArray[i].caption;
+                    captionSpan.style.position = 'absolute';
+                    captionSpan.style.bottom = '12px';
+                    captionSpan.style.left = '12px';
+                    captionSpan.style.backgroundColor = 'rgba(0,0,0,0.55)';
+                    captionSpan.style.color = 'white';
+                    captionSpan.style.padding = '6px 14px';
+                    captionSpan.style.borderRadius = '40px';
+                    captionSpan.style.fontSize = '0.8rem';
+                    captionSpan.style.backdropFilter = 'blur(4px)';
+                    captionSpan.style.pointerEvents = 'none';
+                    captionSpan.style.zIndex = '5';
+                    slideDiv.appendChild(captionSpan);
+                }
+                
+                container.appendChild(slideDiv);
+            }
             
-            const captionSpan = document.createElement('div');
-            captionSpan.innerText = captionsList[i];
-            captionSpan.style.position = 'absolute';
-            captionSpan.style.bottom = '12px';
-            captionSpan.style.left = '12px';
-            captionSpan.style.backgroundColor = 'rgba(0,0,0,0.55)';
-            captionSpan.style.color = 'white';
-            captionSpan.style.padding = '6px 14px';
-            captionSpan.style.borderRadius = '40px';
-            captionSpan.style.fontSize = '0.8rem';
-            captionSpan.style.backdropFilter = 'blur(4px)';
-            captionSpan.style.pointerEvents = 'none';
-            captionSpan.style.zIndex = '5';
+            slides = document.querySelectorAll(`#${containerId} .slide`);
             
-            slideDiv.appendChild(img);
-            slideDiv.appendChild(captionSpan);
-            container.appendChild(slideDiv);
+            const indicatorParent = document.getElementById(indicatorId);
+            if (indicatorParent) {
+                indicatorParent.innerHTML = '';
+                for (let i = 0; i < slides.length; i++) {
+                    const dot = document.createElement('button');
+                    dot.classList.add('indicator-dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    indicatorParent.appendChild(dot);
+                }
+                indicators = document.querySelectorAll(`#${indicatorId} .indicator-dot`);
+            }
+            
+            const prevBtn = document.getElementById(prevBtnId);
+            const nextBtn = document.getElementById(nextBtnId);
+            if (prevBtn) prevBtn.onclick = () => changeSlide(-1);
+            if (nextBtn) nextBtn.onclick = () => changeSlide(1);
         }
         
-        slidesArray = document.querySelectorAll('#mainSlideshow .slide');
-        
-        const indicatorParent = document.getElementById('slideIndicators');
-        indicatorParent.innerHTML = '';
-        for (let i = 0; i < slidesArray.length; i++) {
-            const dot = document.createElement('button');
-            dot.classList.add('indicator-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            indicatorParent.appendChild(dot);
+        function changeSlide(direction) {
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = slides.length - 1;
+            if (newIndex >= slides.length) newIndex = 0;
+            goToSlide(newIndex);
         }
-        indicatorsArray = document.querySelectorAll('.indicator-dot');
         
-        const prevBtn = document.getElementById('prevSlideBtn');
-        const nextBtn = document.getElementById('nextSlideBtn');
-        if (prevBtn) prevBtn.onclick = () => { changeSlide(-1); };
-        if (nextBtn) nextBtn.onclick = () => { changeSlide(1); };
+        function goToSlide(index) {
+            if (!slides.length) return;
+            slides[currentIndex].classList.remove('active');
+            if (indicators[currentIndex]) indicators[currentIndex].classList.remove('active');
+            
+            currentIndex = index;
+            slides[currentIndex].classList.add('active');
+            if (indicators[currentIndex]) indicators[currentIndex].classList.add('active');
+        }
         
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') { changeSlide(-1); e.preventDefault(); }
-            if (e.key === 'ArrowRight') { changeSlide(1); e.preventDefault(); }
-        });
-    }
-    
-    function changeSlide(direction) {
-        let newIndex = currentSlideIndex + direction;
-        if (newIndex < 0) newIndex = slidesArray.length - 1;
-        if (newIndex >= slidesArray.length) newIndex = 0;
-        goToSlide(newIndex);
-    }
-    
-    function goToSlide(index) {
-        if (!slidesArray.length) return;
-        slidesArray[currentSlideIndex].classList.remove('active');
-        if (indicatorsArray[currentSlideIndex]) indicatorsArray[currentSlideIndex].classList.remove('active');
+        init();
         
-        currentSlideIndex = index;
-        slidesArray[currentSlideIndex].classList.add('active');
-        if (indicatorsArray[currentSlideIndex]) indicatorsArray[currentSlideIndex].classList.add('active');
+        // Add keyboard navigation for this slideshow (optional: use specific key handlers, but we'll add global with focus)
+        return { changeSlide, goToSlide };
     }
-    
+
+    // Initialize both slideshows after DOM ready
     document.addEventListener('DOMContentLoaded', () => {
-        initSlideshow();
+        // First slideshow: process documentation (with captions)
+        createSlideshow('processSlideshow', processImages, 'processIndicators', 'prevProcessBtn', 'nextProcessBtn', true);
+        
+        // Second slideshow: presentation (no captions)
+        createSlideshow('presentationSlideshow', presentationImages, 'presentationIndicators', 'prevPresBtn', 'nextPresBtn', false);
+        
+        // Global keyboard navigation: left/right arrows control the slideshow that is currently visible?
+        // We'll add a simple listener that controls the first slideshow by default, but user can click on any.
+        // For simplicity, we attach to both slideshows with separate handlers, but we can make it dynamic.
+        // Better: let the user interact with buttons, but also add arrow keys for both? We'll add arrow keys for the first slideshow (main process)
+        // and second slideshow can be navigated via buttons. To avoid conflicts, we implement a simple focus system but fine.
+        // Actually, we can add a small enhancement: arrow keys control whichever slideshow the user last clicked on? Too complex.
+        // We'll just add arrow keys for the first slideshow (process) as it's the primary one, and second one via buttons.
+        let processSlideshowControls = null;
+        // Re-fetch controls after initialization
+        const setupGlobalKeys = () => {
+            const prevBtn = document.getElementById('prevProcessBtn');
+            const nextBtn = document.getElementById('nextProcessBtn');
+            if (prevBtn && nextBtn) {
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        prevBtn.click();
+                        e.preventDefault();
+                    }
+                    if (e.key === 'ArrowRight') {
+                        nextBtn.click();
+                        e.preventDefault();
+                    }
+                });
+            }
+        };
+        setupGlobalKeys();
     });
 </script>
 <style>
@@ -565,7 +621,7 @@
         background: #e2dbd0;
     }
     .slide img {
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
         height: 100%;
     }
@@ -577,6 +633,7 @@
         margin: 0 5px;
         border: none;
         transition: 0.2s;
+        cursor: pointer;
     }
     .indicator-dot.active {
         background: #ffffff;
