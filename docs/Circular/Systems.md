@@ -465,7 +465,7 @@
     // ========== SECOND SLIDESHOW: Presentation slides (11 images from cardboard folder) ==========
     const presentationImages = [];
     for (let i = 1; i <= 11; i++) {
-        presentationImages.push({ src: `../../images/cardboard/${i}.jpg`, caption: "" });
+        presentationImages.push({ src: `../../images/Cardboard/${i}.jpg`, caption: "" });
     }
 
     // Generic slideshow factory function
