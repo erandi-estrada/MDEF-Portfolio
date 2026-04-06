@@ -375,7 +375,7 @@
             <button class="nav-btn nav-right" id="nextPresBtn">›</button>
             <div class="slide-indicators" id="presentationIndicators"></div>
         </div>
-        <p style="text-align: center; margin-top: 1rem; color: #5a5548; font-size: 0.9rem;">End of week presentation slides.</p>
+        <p style="text-align: center; margin-top: 1rem; color: #5a5548; font-size: 0.9rem;">Week presentation slides.</p>
     </div>
 
 </div>
