@@ -255,19 +255,19 @@
     <div class="cards-slider-container">
         <div class="cards-slider images-slider" id="step1Slider">
             <div class="card-slide-image active" data-slide-index="0">
-                <img src="../../images/atlas/1.jpg" alt="Weak Signal 1" class="step-image">
+                <img src="../../images/atlas/1.jpg" alt="Weak Signal 1" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="1">
-                <img src="../../images/atlas/2.jpg" alt="Weak Signal 2" class="step-image">
+                <img src="../../images/atlas/2.jpg" alt="Weak Signal 2" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="2">
-                <img src="../../images/atlas/3.jpg" alt="Weak Signal 3" class="step-image">
+                <img src="../../images/atlas/3.jpg" alt="Weak Signal 3" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="3">
-                <img src="../../images/atlas/4.jpg" alt="Weak Signal 4" class="step-image">
+                <img src="../../images/atlas/4.jpg" alt="Weak Signal 4" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="4">
-                <img src="../../images/atlas/5.jpg" alt="Weak Signal 5" class="step-image">
+                <img src="../../images/atlas/5.jpg" alt="Weak Signal 5" class="step-image step-image-contain">
             </div>
         </div>
         <div class="slider-controls">
@@ -302,19 +302,19 @@
             <div class="cards-slider-container mini-slider">
                 <div class="cards-slider images-slider" id="triggersSlider">
                     <div class="card-slide-image active" data-slide-index="0">
-                        <img src="../../images/atlas/6.jpg" alt="Random Trigger 1" class="step-image">
+                        <img src="../../images/atlas/6.jpg" alt="Random Trigger 1" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="1">
-                        <img src="../../images/atlas/7.jpg" alt="Random Trigger 2" class="step-image">
+                        <img src="../../images/atlas/7.jpg" alt="Random Trigger 2" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="2">
-                        <img src="../../images/atlas/8.jpg" alt="Random Trigger 3" class="step-image">
+                        <img src="../../images/atlas/8.jpg" alt="Random Trigger 3" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="3">
-                        <img src="../../images/atlas/9.jpg" alt="Random Trigger 4" class="step-image">
+                        <img src="../../images/atlas/9.jpg" alt="Random Trigger 4" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="4">
-                        <img src="../../images/atlas/10.jpg" alt="Random Trigger 5" class="step-image">
+                        <img src="../../images/atlas/10.jpg" alt="Random Trigger 5" class="step-image step-image-contain">
                     </div>
                 </div>
                 <div class="slider-controls mini-controls">
@@ -345,19 +345,19 @@
             <div class="cards-slider-container mini-slider">
                 <div class="cards-slider images-slider" id="opportunitiesSlider">
                     <div class="card-slide-image active" data-slide-index="0">
-                        <img src="../../images/atlas/11.jpg" alt="New Opportunity 1" class="step-image">
+                        <img src="../../images/atlas/11.jpg" alt="New Opportunity 1" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="1">
-                        <img src="../../images/atlas/12.jpg" alt="New Opportunity 2" class="step-image">
+                        <img src="../../images/atlas/12.jpg" alt="New Opportunity 2" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="2">
-                        <img src="../../images/atlas/13.jpg" alt="New Opportunity 3" class="step-image">
+                        <img src="../../images/atlas/13.jpg" alt="New Opportunity 3" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="3">
-                        <img src="../../images/atlas/14.jpg" alt="New Opportunity 4" class="step-image">
+                        <img src="../../images/atlas/14.jpg" alt="New Opportunity 4" class="step-image step-image-contain">
                     </div>
                     <div class="card-slide-image" data-slide-index="4">
-                        <img src="../../images/atlas/15.jpg" alt="New Opportunity 5" class="step-image">
+                        <img src="../../images/atlas/15.jpg" alt="New Opportunity 5" class="step-image step-image-contain">
                     </div>
                 </div>
                 <div class="slider-controls mini-controls">
@@ -390,19 +390,19 @@
     <div class="cards-slider-container">
         <div class="cards-slider images-slider" id="step3Slider">
             <div class="card-slide-image active" data-slide-index="0">
-                <img src="../../images/atlas/16.jpg" alt="Secondary Weak Signal 1" class="step-image">
+                <img src="../../images/atlas/16.jpg" alt="Secondary Weak Signal 1" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="1">
-                <img src="../../images/atlas/17.jpg" alt="Secondary Weak Signal 2" class="step-image">
+                <img src="../../images/atlas/17.jpg" alt="Secondary Weak Signal 2" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="2">
-                <img src="../../images/atlas/18.jpg" alt="Secondary Weak Signal 3" class="step-image">
+                <img src="../../images/atlas/18.jpg" alt="Secondary Weak Signal 3" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="3">
-                <img src="../../images/atlas/19.jpg" alt="Secondary Weak Signal 4" class="step-image">
+                <img src="../../images/atlas/19.jpg" alt="Secondary Weak Signal 4" class="step-image step-image-contain">
             </div>
             <div class="card-slide-image" data-slide-index="4">
-                <img src="../../images/atlas/20.jpg" alt="Secondary Weak Signal 5" class="step-image">
+                <img src="../../images/atlas/20.jpg" alt="Secondary Weak Signal 5" class="step-image step-image-contain">
             </div>
         </div>
         <div class="slider-controls">
@@ -875,6 +875,15 @@
 
 .dot:hover {
     background: #4299e1;
+}
+
+/* Estilos para imágenes que se muestran completas */
+.step-image-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    border-radius: 16px;
 }
 
 /* Responsive */
