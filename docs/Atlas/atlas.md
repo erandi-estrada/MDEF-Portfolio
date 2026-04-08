@@ -253,21 +253,21 @@
 <div class="cards-slider-section step-section">
     <h2 class="cards-slider-title">Step 1: 5 Weak Signals</h2>
     <div class="cards-slider-container">
-        <div class="cards-slider images-slider vertical-slider" id="step1Slider">
+        <div class="cards-slider images-slider auto-height-slider" id="step1Slider">
             <div class="card-slide-image active" data-slide-index="0">
-                <img src="../../images/atlas/1.jpg" alt="Weak Signal 1" class="step-image step-image-vertical">
+                <img src="../../images/atlas/1.jpg" alt="Weak Signal 1" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="1">
-                <img src="../../images/atlas/2.jpg" alt="Weak Signal 2" class="step-image step-image-vertical">
+                <img src="../../images/atlas/2.jpg" alt="Weak Signal 2" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="2">
-                <img src="../../images/atlas/3.jpg" alt="Weak Signal 3" class="step-image step-image-vertical">
+                <img src="../../images/atlas/3.jpg" alt="Weak Signal 3" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="3">
-                <img src="../../images/atlas/4.jpg" alt="Weak Signal 4" class="step-image step-image-vertical">
+                <img src="../../images/atlas/4.jpg" alt="Weak Signal 4" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="4">
-                <img src="../../images/atlas/5.jpg" alt="Weak Signal 5" class="step-image step-image-vertical">
+                <img src="../../images/atlas/5.jpg" alt="Weak Signal 5" class="step-image-full">
             </div>
         </div>
         <div class="slider-controls">
@@ -300,21 +300,21 @@
         <div class="step2-col">
             <h3 class="step2-col-title">5 Random Triggers</h3>
             <div class="cards-slider-container mini-slider">
-                <div class="cards-slider images-slider vertical-slider" id="triggersSlider">
+                <div class="cards-slider images-slider auto-height-slider" id="triggersSlider">
                     <div class="card-slide-image active" data-slide-index="0">
-                        <img src="../../images/atlas/6.jpg" alt="Random Trigger 1" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/6.jpg" alt="Random Trigger 1" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="1">
-                        <img src="../../images/atlas/7.jpg" alt="Random Trigger 2" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/7.jpg" alt="Random Trigger 2" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="2">
-                        <img src="../../images/atlas/8.jpg" alt="Random Trigger 3" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/8.jpg" alt="Random Trigger 3" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="3">
-                        <img src="../../images/atlas/9.jpg" alt="Random Trigger 4" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/9.jpg" alt="Random Trigger 4" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="4">
-                        <img src="../../images/atlas/10.jpg" alt="Random Trigger 5" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/10.jpg" alt="Random Trigger 5" class="step-image-full">
                     </div>
                 </div>
                 <div class="slider-controls mini-controls">
@@ -343,21 +343,21 @@
         <div class="step2-col">
             <h3 class="step2-col-title">5 New Opportunities</h3>
             <div class="cards-slider-container mini-slider">
-                <div class="cards-slider images-slider vertical-slider" id="opportunitiesSlider">
+                <div class="cards-slider images-slider auto-height-slider" id="opportunitiesSlider">
                     <div class="card-slide-image active" data-slide-index="0">
-                        <img src="../../images/atlas/11.jpg" alt="New Opportunity 1" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/11.jpg" alt="New Opportunity 1" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="1">
-                        <img src="../../images/atlas/12.jpg" alt="New Opportunity 2" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/12.jpg" alt="New Opportunity 2" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="2">
-                        <img src="../../images/atlas/13.jpg" alt="New Opportunity 3" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/13.jpg" alt="New Opportunity 3" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="3">
-                        <img src="../../images/atlas/14.jpg" alt="New Opportunity 4" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/14.jpg" alt="New Opportunity 4" class="step-image-full">
                     </div>
                     <div class="card-slide-image" data-slide-index="4">
-                        <img src="../../images/atlas/15.jpg" alt="New Opportunity 5" class="step-image step-image-vertical">
+                        <img src="../../images/atlas/15.jpg" alt="New Opportunity 5" class="step-image-full">
                     </div>
                 </div>
                 <div class="slider-controls mini-controls">
@@ -388,21 +388,21 @@
 <div class="cards-slider-section step-section">
     <h2 class="cards-slider-title">Step 3: 5 Secondary Weak Signals</h2>
     <div class="cards-slider-container">
-        <div class="cards-slider images-slider vertical-slider" id="step3Slider">
+        <div class="cards-slider images-slider auto-height-slider" id="step3Slider">
             <div class="card-slide-image active" data-slide-index="0">
-                <img src="../../images/atlas/16.jpg" alt="Secondary Weak Signal 1" class="step-image step-image-vertical">
+                <img src="../../images/atlas/16.jpg" alt="Secondary Weak Signal 1" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="1">
-                <img src="../../images/atlas/17.jpg" alt="Secondary Weak Signal 2" class="step-image step-image-vertical">
+                <img src="../../images/atlas/17.jpg" alt="Secondary Weak Signal 2" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="2">
-                <img src="../../images/atlas/18.jpg" alt="Secondary Weak Signal 3" class="step-image step-image-vertical">
+                <img src="../../images/atlas/18.jpg" alt="Secondary Weak Signal 3" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="3">
-                <img src="../../images/atlas/19.jpg" alt="Secondary Weak Signal 4" class="step-image step-image-vertical">
+                <img src="../../images/atlas/19.jpg" alt="Secondary Weak Signal 4" class="step-image-full">
             </div>
             <div class="card-slide-image" data-slide-index="4">
-                <img src="../../images/atlas/20.jpg" alt="Secondary Weak Signal 5" class="step-image step-image-vertical">
+                <img src="../../images/atlas/20.jpg" alt="Secondary Weak Signal 5" class="step-image-full">
             </div>
         </div>
         <div class="slider-controls">
@@ -877,19 +877,18 @@
     background: #4299e1;
 }
 
-/* ESTILOS CORREGIDOS PARA IMÁGENES VERTICALES */
-.vertical-slider {
+/* ESTILOS CORREGIDOS PARA IMÁGENES QUE SE MUESTRAN COMPLETAS */
+.auto-height-slider {
     height: auto !important;
-    min-height: 500px;
+    min-height: auto !important;
     background: transparent !important;
     box-shadow: none !important;
+    overflow: visible !important;
 }
 
-.step-image-vertical {
+.step-image-full {
     width: 100%;
     height: auto;
-    max-height: 70vh;
-    object-fit: contain;
     display: block;
     margin: 0 auto;
     border-radius: 16px;
@@ -897,91 +896,29 @@
 }
 
 .card-slide-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
     opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
+    transition: opacity 0.5s ease;
 }
 
 .card-slide-image.active {
     opacity: 1;
-    transform: translateX(0);
+    display: block;
 }
 
 .images-slider {
     position: relative;
-    overflow: hidden;
     border-radius: 16px;
 }
 
-/* Ajustes específicos para Step 2 (mini sliders) */
-.mini-slider .vertical-slider {
-    min-height: 350px;
+/* Ajustes para Step 2 (mini sliders) */
+.mini-slider .step-image-full {
+    max-width: 100%;
 }
 
-.mini-slider .step-image-vertical {
-    max-height: 350px;
-}
-
-/* Responsive para imágenes verticales */
-@media (max-width: 992px) {
-    .vertical-slider {
-        min-height: 400px;
-    }
-    
-    .step-image-vertical {
-        max-height: 60vh;
-    }
-    
-    .mini-slider .vertical-slider {
-        min-height: 280px;
-    }
-    
-    .mini-slider .step-image-vertical {
-        max-height: 280px;
-    }
-}
-
-@media (max-width: 768px) {
-    .vertical-slider {
-        min-height: 350px;
-    }
-    
-    .step-image-vertical {
-        max-height: 50vh;
-    }
-    
-    .mini-slider .vertical-slider {
-        min-height: 250px;
-    }
-    
-    .mini-slider .step-image-vertical {
-        max-height: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .vertical-slider {
-        min-height: 300px;
-    }
-    
-    .mini-slider .vertical-slider {
-        min-height: 220px;
-    }
-    
-    .mini-slider .step-image-vertical {
-        max-height: 220px;
-    }
-}
-
-/* Responsive general */
+/* Responsive */
 @media (max-width: 992px) {
     .two-column-container {
         flex-direction: column;
