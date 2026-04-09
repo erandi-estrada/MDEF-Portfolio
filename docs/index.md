@@ -28,11 +28,16 @@
 
             <!-- Studio -->
             <a href="studio/studio/" class="card">
-                <img src="images/palomas.jpeg" alt="Studio">
+                <img src="images/palomas.jpeg" alt="Studio  I">
                 <h3>Studio</h3>
                 <p>Design, experimentation, and material explorations.</p>
             </a>
-
+<!-- Studio -->
+            <a href="Studio2/studio2/" class="card">
+                <img src="images/studio2.png" alt="Studio  II">
+                <h3>Studio</h3>
+                <p>Design, experimentation, and material explorations.</p>
+            </a>
 <!-- Infrastructure of non-human life -->
 <a href="Gorrion/gorrion/" class="card">
                 <img src="images/Diagrama/Centro.png" alt="Infrastructure of non-human life">
@@ -57,21 +62,14 @@
             <!-- Other Intelligences -->
             <a href="Otherness/Other-intelligences/" class="card">
                 <img src="images/lenguaje.jpg" alt="Other Intelligences"> 
-                <h3>Other Intelligences</h3> 
+                <h3>Other Intelligences I</h3> 
                 <p>Avoid human-centric assumptions to engage with other intelligences.</p> 
             </a>
 
             <a href="Otherness/Other-intelligencesII/" class="card">
                 <img src="images/LLM.png" alt="Other Intelligences"> 
-                <h3>Other Intelligences</h3> 
+                <h3>Other Intelligences II</h3> 
                 <p>Connecting physical computing and AI agents to enable collaborative, generative interactions.</p> 
-            </a>
-
-            <!-- Prosthesis -->
-            <a href="Otherness/Prosthesis" class="card">
-                <img src="images/prosthesis.jpeg" alt="Prosthesis">
-                <h3>Prosthesis</h3>
-                <p>A research on extensions that question what it means to be human in a hybrid world.</p>
             </a>
 
             <!-- Fundamentals for future makers -->
@@ -90,7 +88,7 @@
 
             <!-- Cognitive orgies 1 -->
             <a href="Cognitive/orgies/" class="card">
-                <img src="images/nomadic1.jpeg" alt="Cognitive Orgies">
+                <img src="images/nomadic1.jpeg" alt="Cognitive Orgies I">
                 <h3>Cognitive orgies</h3>
                 <p>Creation of an interventional artifact that seeks to intervene in a situated context and community. </p>
             </a>
@@ -100,6 +98,20 @@
                 <img src="images/orgies.jpeg" alt="Cognitive Orgies II">
                 <h3>Cognitive orgies II</h3>
                 <p>Design of artifact that would comunicate 2 different intelligences. </p>
+            </a>
+
+                <!-- Prosthesis -->
+            <a href="Otherness/Prosthesis" class="card">
+                <img src="images/prosthesis.jpeg" alt="Prosthesis">
+                <h3>Prosthesis</h3>
+                <p>A research on extensions that question what it means to be human in a hybrid world.</p>
+            </a>
+
+                <!-- Circular -->
+            <a href="Circular/Systems" class="card">
+                <img src="images/circular9.jpg" alt="circular">
+                <h3>Circular Systems</h3>
+                <p>Transforming Fab Lab leftovers into new materials.</p>
             </a>
         </div>
     </div>
