@@ -29,13 +29,13 @@
             <!-- Studio -->
             <a href="studio/studio/" class="card">
                 <img src="images/palomas.jpeg" alt="Studio  I">
-                <h3>Studio</h3>
+                <h3>Studio I</h3>
                 <p>Design, experimentation, and material explorations.</p>
             </a>
 <!-- Studio -->
             <a href="Studio2/studio2/" class="card">
                 <img src="images/studio2.png" alt="Studio  II">
-                <h3>Studio</h3>
+                <h3>Studio II</h3>
                 <p>Design, experimentation, and material explorations.</p>
             </a>
 <!-- Infrastructure of non-human life -->
