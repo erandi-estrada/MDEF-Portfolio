@@ -310,6 +310,19 @@ body {
     opacity: 0.9 !important; /* VISIBLE al hover */
 }
 
+/* 12. Cognitive2 (posición 9 y 18) */
+.cards-carousel .card:nth-child(9):hover::before,
+.cards-carousel .card:nth-child(18):hover::before {
+    background: linear-gradient(135deg, rgba(244, 104, 104, 0.959) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
+}
+
+/* 12. Cognitive2 (posición 9 y 18) */
+.cards-carousel .card:nth-child(9):hover::before,
+.cards-carousel .card:nth-child(18):hover::before {
+    background: linear-gradient(135deg, rgba(250, 157, 75, 0.959) 0%, rgba(38, 166, 154, 0.75) 100%) !important;
+    opacity: 0.9 !important; /* VISIBLE al hover */
+}
 /* Asegurar que la imagen se agrande al hacer hover */
 .cards-carousel .card:hover img {
     transform: scale(1.07);
