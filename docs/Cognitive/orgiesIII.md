@@ -9,14 +9,14 @@
 # Body as Landscape
 ### Individual Reflective Documentation
 
-<img src="../../images/Landscape/landscape1.jpg" 
+<img src="../../images/Landscape/landscape1.jpeg" 
      alt="Body as Landscape installation view" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
 
 ## Project Introduction
 
-**Body as Landscape – [Full Group Documentation on Hackster.io](https://www.hackster.io/)**
+**Body as Landscape – [Full Group Documentation on Hackster.io](https://www.hackster.io/549464/body-as-landscape-bfeddf)**
 
 This project explored the relationship between the human body and damaged ecosystems through touch, haptic feedback, sound, and projection. Inspired by the idea that the landscape can be understood as an extension of the body, the installation invited participants to physically interact with wounded environments rather than only observe them.
 
@@ -37,7 +37,7 @@ This documentation is a personal reflection focused on my own learning process, 
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">In that sense, the project became less about building a finished installation and more about discovering how environmental empathy could be translated into physical interaction.</p>
 </div>
 
-<img src="../../images/Landscape/landscape2.jpg" 
+<img src="../../images/Landscape/landscape2.jpeg" 
      alt="Cognitive mapping and landscape-body relationship" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -54,7 +54,7 @@ This documentation is a personal reflection focused on my own learning process, 
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The process made me reflect on how prototyping often involves ethical and creative compromises. Sometimes preserving the emotional clarity of an experience is more important than implementing every technological feature originally imagined.</p>
 </div>
 
-<img src="../../images/Landscape/landscape3.jpg" 
+<img src="../../images/Landscape/landscape3.jpeg" 
      alt="Ethical considerations and collaborative decisions" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -74,11 +74,11 @@ This documentation is a personal reflection focused on my own learning process, 
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-    <img src="../../images/Landscape/landscape4.jpg" 
+    <img src="../../images/Landscape/landscape4.jpeg" 
          alt="Technical prototype and capacitive sensing" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
-    <img src="../../images/Landscape/landscape5.jpg" 
+    <img src="../../images/Landscape/landscape5.jpeg" 
          alt="Installation technical setup" 
          width="100%" 
          style="border-radius: 8px; object-fit: cover;">
@@ -96,10 +96,12 @@ This documentation is a personal reflection focused on my own learning process, 
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">At moments, the project felt held together by improvisation. But I think this is also part of prototyping interactive installations. The final artifact is not only the successful moments, but also the visible traces of experimentation, instability, and adaptation.</p>
 </div>
 
-<img src="../../images/Landscape/landscape6.jpg" 
-     alt="Challenges and failures documentation" 
-     width="100%" 
-     style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
+<video src="../../videos/landscape.mp4" 
+           alt="Installation technical setup" 
+           width="100%" 
+           style="border-radius: 8px; object-fit: cover;"
+           autoplay loop muted playsinline>
+    </video>
 
 ---
 
@@ -121,7 +123,7 @@ This documentation is a personal reflection focused on my own learning process, 
     <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">The long-term goal would be creating immersive environments where environmental care is experienced.</p>
 </div>
 
-<img src="../../images/Landscape/landscape7.jpg" 
+<img src="../../images/Landscape/landscape6.jpeg" 
      alt="Future vision and directions" 
      width="100%" 
      style="border-radius: 8px; margin: 2rem 0; object-fit: cover;">
@@ -188,14 +190,28 @@ This documentation is a personal reflection focused on my own learning process, 
     </div>
     
     <div>
-        <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">System Diagram</h2>
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem;">System Diagram</h2>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
         <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
-            <img src="../../images/Landscape/landscape8.jpg" 
-                 alt="Body as Landscape system diagram" 
+            <img src="../../images/Landscape/circuit_image.png" 
+                 alt="Body as Landscape system diagram 1" 
+                 width="100%" 
+                 style="display: block; object-fit: cover;">
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
+            <img src="../../images/Landscape/circuit_image%20(1).png" 
+                 alt="Body as Landscape system diagram 2" 
+                 width="100%" 
+                 style="display: block; object-fit: cover;">
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.1);">
+            <img src="../../images/Landscape/circuit_image%20(2).png" 
+                 alt="Body as Landscape system diagram 3" 
                  width="100%" 
                  style="display: block; object-fit: cover;">
         </div>
     </div>
+</div>
 </div>
 
 <script>
@@ -204,12 +220,19 @@ let currentSlide = 0;
 
 // Define images - UPDATED with new landscape images
 const slideImages = [
-    "../../images/Landscape/landscape9.jpg",
-    "../../images/Landscape/landscape10.jpg",
-    "../../images/Landscape/landscape11.jpg",
-    "../../images/Landscape/landscape12.jpg",
-    "../../images/Landscape/landscape13.jpg",
-    "../../images/Landscape/landscape14.jpg"
+    "../../images/Landscape/landscape7.jpeg",
+    "../../images/Landscape/landscape8.jpeg",
+    "../../images/Landscape/landscape9.jpeg",
+    "../../images/Landscape/landscape10.jpeg",
+    "../../images/Landscape/landscape11.jpeg",
+    "../../images/Landscape/landscape12.jpeg",
+    "../../images/Landscape/landscape13.jpeg",
+    "../../images/Landscape/landscape14.jpeg",
+    "../../images/Landscape/landscape15.jpeg",
+    "../../images/Landscape/landscape16.jpeg",
+    "../../images/Landscape/landscape17.jpeg",
+    "../../images/Landscape/landscape18.jpeg",
+    "../../images/Landscape/landscape19.jpeg"
 ];
 
 const totalSlides = slideImages.length;
